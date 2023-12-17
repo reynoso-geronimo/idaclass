@@ -65,15 +65,15 @@ const Hero = () => {
       ) : (
         <>
           <div className="flex mt-16">
-            <div className="w-1/2 text-center flex flex-col justify-around items-center">
-              <h2 className="text-5xl font-extrabold mb-4 mx-4 text-indigo-950 ">
-                ¡ESTUDIA, TRABAJA Y EMPRENDE HOY!
+            <div className="w-1/2 text-center flex flex-col justify-around items-center mx-24">
+              <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 ">
+                ESTUDIA <br></br> TRABAJA <br></br> EMPRENDE
               </h2>
               <h2 className="text-md uppercase text-blue-700 font-medium tracking-[3px]	">
                 Alcanza el exito como entrenador Obten una carrera rentable
                 Transforma tu vida con IdaClass
               </h2>
-              <Button size="lg" className='rounded-3xl m-10 font-bold w-44'>Ver todos los cursos</Button>
+              <Button size="lg" className='rounded-3xl m-10 font-bold w-48 h-14'>Ver todos los cursos</Button>
             </div>
             <div className="w-1/2">
               <EmblaCarousel slides={images} options={OPTIONS} />

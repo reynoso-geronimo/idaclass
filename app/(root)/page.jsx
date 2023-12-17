@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <section>
         
-        <div className="grid grid-cols-2 gap-4 m-auto px-10 justify-center text-center text-blue-700 font-medium md:grid-cols-4">
-          <span className="flex flex-col justify-start items-center">
+        <div className="grid grid-cols-2 gap-16 px-10 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
+          <span className="flex flex-col justify-start items-center w-40">
             <Award
               size={72}
               color="#09578f"
@@ -21,7 +21,7 @@ export default function Home() {
             />
             25 años experiencia
           </span>
-          <span className="flex flex-col justify-start items-center">
+          <span className="flex flex-col justify-start items-center w-40">
             <GraduationCap
               size={72}
               color="#09578f"
@@ -30,7 +30,7 @@ export default function Home() {
             />
             +50.000 certificados
           </span>
-          <span className="flex flex-col justify-start items-center">
+          <span className="flex flex-col justify-start items-center w-40">
             <Tv2
               size={72}
               color="#09578f"
@@ -39,7 +39,7 @@ export default function Home() {
             />
             1ra Digital School con estandar de formación
           </span>
-          <span className="flex flex-col justify-start items-center">
+          <span className="flex flex-col justify-start items-center w-40">
             <UserRoundSearch
               size={72}
               color="#09578f"
