@@ -10,10 +10,7 @@ export default function Home() {
     <main>
       <Hero />
       <section>
-        <h2 className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	">
-          Alcanza el exito como entrenador Obten una carrera rentable Transforma
-          tu vida con IdaClass
-        </h2>
+        
         <div className="grid grid-cols-2 gap-4 m-auto px-10 justify-center text-center text-blue-700 font-medium md:grid-cols-4">
           <span className="flex flex-col justify-start items-center">
             <Award

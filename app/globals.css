@@ -73,6 +73,11 @@
     --slide-size: 100%;
   }
 }
+@media (min-width: 1024px) {
+  .embla {
+    --slide-size: 100%;
+  }
+}
 .embla__viewport {
   overflow: hidden;
 }
