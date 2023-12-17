@@ -163,7 +163,7 @@ const preguntas = [
     pregunta: <p>¿ Como accedo a una BecaClass o beneficio exclusivo ?</p>,
     respuesta: (
       <p>
-        daClass Academy creó un <span className="font-bold">Beca Única</span>{" "}
+        IdaClass Academy creó un <span className="font-bold">Beca Única</span>{" "}
         para aquellos que buscan una solución y de forma sencilla poder acceder
         a una ayuda, que le permita hacer más accesible el inicio de su carrera.
         Aquellos interesados deben solicitarlo por Email a
