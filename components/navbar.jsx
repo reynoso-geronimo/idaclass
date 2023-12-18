@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="w-full flex justify-around items-center h-16 mt-2">
-        <Image src={`/idaclass.logo.webp`} alt="logo" width={180} height={100} />
+        <Image src={`/idaclass.logo.webp`} alt="logo" width={180} height={45} />
         <Sheet>
           <SheetTrigger className="lg:hidden">
             <Menu className="h-9 w-9 " />

@@ -52,7 +52,7 @@ const EmblaCarousel = props => {
                   src={image.src}
                   alt={image.alt}
                   width={600}
-                  height={100}
+                  height={300}
                 />
               </div>
             ))}
