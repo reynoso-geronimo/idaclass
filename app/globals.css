@@ -96,6 +96,8 @@
 .embla__slide__curso {
   flex: 0 0 50%;
   min-width: 0;
+  margin-left: 10px;
+  margin-right: 10px;
   position: relative;
 }
 @media (min-width: 768px) {

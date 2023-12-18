@@ -42,7 +42,7 @@ const Cursos = props => {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <section className="bg-slate-200 pb-4 flex flex-col items-center">
+    <section className="bg-slate-200 pb-4">
       <div className="text-center p-6">
         <h2 className="text-2xl text-center font-extrabold  mb-4 mx-4 text-indigo-950 ">
           Elige el curso para tu futuro profesional.
@@ -93,7 +93,11 @@ const Cursos = props => {
           />
         ))}
       </div>
-      <Button size="lg" className='rounded-3xl m-10 font-bold'>Ver todos los cursos</Button>
+  
+       <div className="w-100 flex justify-center">
+       <Button size="lg" className='rounded-3xl m-10 font-bold'>Ver todos los cursos</Button>
+ 
+       </div>
     </section>
   );
 };
