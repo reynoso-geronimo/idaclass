@@ -1,4 +1,4 @@
-import Hero from "@/components/hero";
+import Hero from "@/app/(root)/components/hero";
 import Pasos123 from "./components/pasos123";
 import { Award, GraduationCap, Tv2, UserRoundSearch } from "lucide-react";
 import { YouTubeEmbed } from "@next/third-parties/google";
