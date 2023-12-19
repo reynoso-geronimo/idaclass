@@ -56,15 +56,9 @@ export default function Home() {
           Súmate a la comunidad IdaClass Academy y vive una experiencia de
           aprendizaje transformadora.
         </h2>
-        <div className="flex flex-col items-center md:flex-row md:justify-center gap-4 pt-10">
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-6 pt-10">
           <div className=" w-full max-w-[570px]  m-2 border-2  border-sky-500 shadow-2xl">
-            {/* <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/kfLDLD653zM?si=etYwnK16c_Ito4Wz"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe> */}
+      
             <div>
               <YouTubeEmbed videoid="kfLDLD653zM" />
             </div>
