@@ -1,10 +1,8 @@
-"use client";
-import { useEffect, useState } from "react";
 import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
 
-const OPTIONS = {};
+const OPTIONS ={ loop: true };
 const images = [
   {
     src: "/neurociencia.webp",
@@ -38,7 +36,7 @@ const images = [
 ];
 
 const Hero = () => {
-  const [anchoVentana, setAnchoVentana] = useState(null);
+  /*const [anchoVentana, setAnchoVentana] = useState(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -48,7 +46,7 @@ const Hero = () => {
       return () => window.removeEventListener("resize", manejarCambioTamaño);
     }
   }, []);
-
+*/
   return (
     <div>
      
