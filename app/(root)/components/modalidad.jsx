@@ -1,5 +1,6 @@
 import modalidad1 from "../../../public/modalidad/modalidad1.webp";
 import modalidad2 from "../../../public/modalidad/modalidad2.webp";
+import modalidad3 from "../../../public/modalidad/modalidad3.webp";
 import Carousel from "./ui/carousel";
 const slides = [
   {
@@ -9,6 +10,11 @@ const slides = [
   },
   {
     src:  modalidad2 ,
+    alt: "modalidad",
+    text: "ACA VA UN TEXTO",
+  },
+  {
+    src:  modalidad3 ,
     alt: "modalidad",
     text: "ACA VA UN TEXTO",
   },

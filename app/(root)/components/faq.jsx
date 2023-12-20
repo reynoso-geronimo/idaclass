@@ -176,18 +176,18 @@ const preguntas = [
 
 const Faq = () => {
   return (
-    <section>
+    <section className="flex flex-col items-center">
       <h2 className="text-2xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
         Preguntas frecuentes
       </h2>
       <Accordion
         type="single"
         collapsible
-        className="m-6 border-2 border-sky-950 border-t-0"
+        className="m-6 border-2 border-sky-950 border-t-0 w-[1024px]"
       >
         {preguntas.map((pregunta, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
-            <AccordionTrigger className="text-sm md:text-lg border-t-2 border-sky-950 text-left px-4">
+            <AccordionTrigger className="text-sm md:text-lg border-t-2 border-sky-950 text-left px-4 ">
               {pregunta.pregunta}
             </AccordionTrigger>
             <AccordionContent className="text-xs md:text-base p-2 border-t-[1px] border-sky-950 ">
