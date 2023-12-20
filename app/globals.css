@@ -60,14 +60,14 @@
 
 .embla {
   --slide-spacing: 0rem;
-  --slide-size: 50%;
+  --slide-size: 100%;
   --slide-height: 19rem;
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .embla {
-    --slide-size: 100%;
+    --slide-size: 50%;
   }
 }
 @media (min-width: 1024px) {
@@ -101,6 +101,13 @@
   .embla__slide__curso {
     flex: 0 0 33%;
   }
+}
+.embla__slide__modalidad {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
 }
 .embla__slide__img {
   display: block;

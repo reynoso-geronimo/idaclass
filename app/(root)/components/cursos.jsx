@@ -4,7 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import AutoHeight from "embla-carousel-auto-height";
 import useEmblaCarousel from "embla-carousel-react";
 import { DotButton } from "@/components/ui/EmblaCarouselArrowsDotsButtons";
-import CursoCard from "./cursoCard";
+import CursoCard from "./ui/cursoCard";
 import { Button } from "@/components/ui/button";
 
 const Cursos = props => {

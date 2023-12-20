@@ -36,17 +36,7 @@ const images = [
 ];
 
 const Hero = () => {
-  /*const [anchoVentana, setAnchoVentana] = useState(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setAnchoVentana(window.innerWidth);
-      const manejarCambioTamaño = () => setAnchoVentana(window.innerWidth);
-      window.addEventListener("resize", manejarCambioTamaño);
-      return () => window.removeEventListener("resize", manejarCambioTamaño);
-    }
-  }, []);
-*/
   return (
     <div>
      

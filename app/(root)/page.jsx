@@ -1,10 +1,11 @@
 import Hero from "@/app/(root)/components/hero";
-import Pasos123 from "./components/pasos123";
+import Pasos123 from "./components/ui/pasos123";
 import { Award, GraduationCap, Tv2, UserRoundSearch } from "lucide-react";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import Faq from "./components/faq";
 import Cursos from "./components/cursos";
 import Certificacion from "./components/certificacion";
+import Modalidad from "./components/modalidad";
 
 export default function Home() {
   return (
@@ -95,6 +96,7 @@ export default function Home() {
         </div>
       </section>
       <Cursos />
+      <Modalidad/>
       <Certificacion/>
       <Faq />
     </main>
