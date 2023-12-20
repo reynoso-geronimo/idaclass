@@ -15,7 +15,7 @@ const Certificacion = () => {
         IUYMCA, Certificado IdaClass con autenticación QR + Certificado de 4
         especializaciones.
       </p>
-      <div className="flex flex-col justify-center items-center md:flex-row text-center">
+      <div className="flex flex-col justify-center items-center md:flex-row text-center gap-4">
         <div className="flex flex-col justify-evenly items-center w-full md:w-1/2 max-w-[512px]">
           <div>
             <Image src={medalla} alt="medalla" />
