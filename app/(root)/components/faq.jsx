@@ -183,7 +183,7 @@ const Faq = () => {
       <Accordion
         type="single"
         collapsible
-        className="m-6 border-2 border-sky-950 border-t-0 w-[1024px]"
+        className="m-6 border-2 border-sky-950 border-t-0 max-w-[1024px]"
       >
         {preguntas.map((pregunta, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
