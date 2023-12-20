@@ -105,8 +105,6 @@
 .embla__slide__modalidad {
   flex: 0 0 100%;
   min-width: 0;
-  margin-left: 10px;
-  margin-right: 10px;
   position: relative;
 }
 .embla__slide__img {

@@ -18,6 +18,7 @@ const Carousel = props => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
+
   const scrollTo = useCallback(
     index => emblaApi && emblaApi.scrollTo(index),
     [emblaApi]
