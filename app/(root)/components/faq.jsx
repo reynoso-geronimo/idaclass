@@ -183,14 +183,14 @@ const Faq = () => {
       <Accordion
         type="single"
         collapsible
-        className="m-6 border-2 border-sky-950 border-t-0 max-w-[1024px]"
+        className="m-6 border-2 border-sky-950 border-t-0 w-[90%] max-w-[1024px]"
       >
         {preguntas.map((pregunta, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
             <AccordionTrigger className="text-sm md:text-lg border-t-2 border-sky-950 text-left px-4 ">
               {pregunta.pregunta}
             </AccordionTrigger>
-            <AccordionContent className="text-xs md:text-base p-2 border-t-[1px] border-sky-950 ">
+            <AccordionContent className="text-xs md:text-base p-2 border-t-[1px] border-sky-950 max-w-[1024px]">
               {pregunta.respuesta}
             </AccordionContent>
           </AccordionItem>
