@@ -73,11 +73,11 @@ export default function Home() {
           </ol>
         </div>
       </section>
-      <section>
+      <section className="flex flex-col items-center">
         <h2 className="text-2xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
           3 Pasos para tener una carrera exitosa y rentable.
         </h2>
-        <div className="flex justify-evenly flex-wrap  text-blue-700 font-medium">
+        <div className="flex justify-around flex-wrap  text-blue-700 font-medium w-full max-w-7xl">
           <Pasos123
             paso={`ELIGE`}
             desc={`La capacitación que más te guste para tu futuro profesional`}

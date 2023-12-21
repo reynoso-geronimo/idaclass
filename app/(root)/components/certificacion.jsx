@@ -10,7 +10,7 @@ const Certificacion = () => {
         Obtén la Certificación de mayor reconocimiento del mercado y Aval
         Internacional.
       </h2>
-      <p className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	">
+      <p className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	max-w-[1024px]">
         Accede a la doble Titulación, Certificado de Extensión Universitaria
         IUYMCA, Certificado IdaClass con autenticación QR + Certificado de 4
         especializaciones.
