@@ -17,7 +17,6 @@ const NavBar = () => {
   return (
     <>
       <nav className="w-full flex justify-around items-center h-16 mt-2">
-       
         <Sheet>
           <SheetTrigger className="lg:hidden">
             <Menu className="h-9 w-9 " />
@@ -28,7 +27,7 @@ const NavBar = () => {
           >
             <SheetClose asChild>
               <Link
-                className={`${pathname === "/" ? "text-sky-700" : ""}`}
+                className={`${pathname === "/" && "text-sky-700"}`}
                 href="/"
               >
                 Inicio
@@ -38,7 +37,7 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`${pathname === "/cursos" ? "text-sky-700" : ""}`}
+                className={`${pathname === "/cursos" && "text-sky-700"}`}
               >
                 Cursos
               </Link>
@@ -53,14 +52,21 @@ const NavBar = () => {
             </SheetClose>
           </SheetContent>
         </Sheet>
-        <Image src={`/idaclass.logo.webp`} alt="logo" width={180} height={45} />
+        <Link href="/">
+          {" "}
+          <Image
+            src={`/idaclass.logo.webp`}
+            alt="logo"
+            width={180}
+            height={45}
+          />
+        </Link>
         <div className="hidden lg:flex justify-around gap-8 font-medium	">
           <Link
             href="/"
             className={`${
-              pathname === "/"
-                ? "text-sky-700 underline decoration-2 underline-offset-4"
-                : ""
+              pathname === "/" &&
+              "text-sky-700 underline decoration-2 underline-offset-4"
             }`}
           >
             Inicio
@@ -69,9 +75,8 @@ const NavBar = () => {
           <Link
             href="/cursos"
             className={`${
-              pathname === "/cursos"
-                ? "text-sky-700 underline decoration-2 underline-offset-4"
-                : ""
+              pathname === "/cursos" &&
+              "text-sky-700 underline decoration-2 underline-offset-4"
             }`}
           >
             Cursos
