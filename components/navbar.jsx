@@ -4,7 +4,12 @@ import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 
 const NavBar = () => {
@@ -17,32 +22,59 @@ const NavBar = () => {
           <SheetTrigger className="lg:hidden">
             <Menu className="h-9 w-9 " />
           </SheetTrigger>
-          <SheetContent side={"left"} className="w-72">
-            <div className="flex flex-col gap-4 mt-10 text-sm font-medium">
+          <SheetContent
+            side={"left"}
+            className="w-72 flex flex-col gap-4 mt-10 text-sm font-medium"
+          >
+            <SheetClose asChild>
               <Link
-                className={`link ${pathname === "/" ? "text-sky-700" : ""}`}
+                className={`${pathname === "/" ? "text-sky-700" : ""}`}
                 href="/"
               >
                 Inicio
               </Link>
-              <Separator />
-              <Link href="/cursos">Cursos</Link>
-              <Separator />
+            </SheetClose>
+            <Separator />
+            <SheetClose asChild>
+              <Link
+                href="/cursos"
+                className={`${pathname === "/cursos" ? "text-sky-700" : ""}`}
+              >
+                Cursos
+              </Link>
+            </SheetClose>
+            <Separator />
+            <SheetClose asChild>
               <Link href="/">Blog</Link>
-              <Separator />
+            </SheetClose>
+            <Separator />
+            <SheetClose asChild>
               <Link href="/">Asesorate ya</Link>
-            </div>
+            </SheetClose>
           </SheetContent>
         </Sheet>
         <div className="hidden lg:flex justify-around gap-8 font-medium	">
           <Link
-            className={`link ${pathname === "/" ? "text-sky-700 underline decoration-2 underline-offset-4" : ""}`}
             href="/"
+            className={`${
+              pathname === "/"
+                ? "text-sky-700 underline decoration-2 underline-offset-4"
+                : ""
+            }`}
           >
             Inicio
           </Link>
 
-          <Link href="/cursos">Cursos</Link>
+          <Link
+            href="/cursos"
+            className={`${
+              pathname === "/cursos"
+                ? "text-sky-700 underline decoration-2 underline-offset-4"
+                : ""
+            }`}
+          >
+            Cursos
+          </Link>
 
           <Link href="/">Blog</Link>
 
@@ -52,7 +84,7 @@ const NavBar = () => {
           <Link href="/">Ingresar</Link>
         </Button>
       </nav>
-      <Separator className="hidden lg:block h-2 bg-gray-200"/>
+      <Separator className="hidden lg:block h-2 bg-gray-200" />
     </>
   );
 };
