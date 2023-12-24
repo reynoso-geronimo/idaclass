@@ -26,7 +26,7 @@ const Footer = () => {
       <section className="flex flex-col gap-2">
         <h3 className="text-lg font-bold mt-12 mb-2">Enlaces</h3>
         <Link href="/">Inicio</Link>
-        <Link href="/">Cursos</Link>
+        <Link href="/cursos">Cursos</Link>
         <Link href="/">Blog</Link>
         <Link href="/">Asesorate ya</Link>
       </section>

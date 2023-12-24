@@ -17,14 +17,14 @@ const NavBar = () => {
   return (
     <>
       <nav className="w-full flex justify-around items-center h-16 mt-2">
-        <Image src={`/idaclass.logo.webp`} alt="logo" width={180} height={45} />
+       
         <Sheet>
           <SheetTrigger className="lg:hidden">
             <Menu className="h-9 w-9 " />
           </SheetTrigger>
           <SheetContent
-            side={"left"}
-            className="w-72 flex flex-col gap-4 mt-10 text-sm font-medium"
+            side={"top"}
+            className="w-72 h-[100svh] flex flex-col gap-4 text-base font-medium"
           >
             <SheetClose asChild>
               <Link
@@ -53,6 +53,7 @@ const NavBar = () => {
             </SheetClose>
           </SheetContent>
         </Sheet>
+        <Image src={`/idaclass.logo.webp`} alt="logo" width={180} height={45} />
         <div className="hidden lg:flex justify-around gap-8 font-medium	">
           <Link
             href="/"
