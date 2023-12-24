@@ -16,7 +16,7 @@ const Page = () => {
           className="bg-sky-200 rounded-full p-1 "
         />
       </div>
-      <div className="flex flex-col items-center sm:flex-row sm:justify-center flex-wrap gap-y-8 gap-x-2">
+      <div className="flex flex-col items-center sm:flex-row sm:justify-center flex-wrap gap-y-8 gap-x-2 lg:gap-x-24">
         <ShopCursoCard />
         <ShopCursoCard />
         <ShopCursoCard />

@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const ShopCursoCard = () => {
   return (
-    <Card className={"w-[90%] sm:w-[40%] lg:w-[30%]"}>
+    <Card className={"w-[90%] sm:w-[40%] lg:w-[30%] max-w-[400px]"}>
       <CardContent className={"p-0"}>
         <Image src={cursoImage} alt="curso" />
       </CardContent>
