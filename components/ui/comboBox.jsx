@@ -46,7 +46,7 @@ export function Combobox() {
   const [value, setValue] = React.useState("")
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+    <Popover open={open} onOpenChange={setOpen} align="end">
       <PopoverTrigger asChild>
         <Button
           variant="outline"
