@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { DotButton } from "@/components/ui/EmblaCarouselArrowsDotsButtons";
 import CursoCard from "./ui/cursoCard";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Cursos = props => {
   const { slides, options } = props;
@@ -95,7 +96,7 @@ const Cursos = props => {
       </div>
   
        <div className="w-100 flex justify-center">
-       <Button size="lg" className='rounded-3xl m-10 font-bold'>Ver todos los cursos</Button>
+       <Button size="lg" className='rounded-3xl m-10 font-bold' asChild><Link href='/cursos'>Ver todos los cursos</Link></Button>
  
        </div>
     </section>

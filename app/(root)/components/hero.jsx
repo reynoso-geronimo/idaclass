@@ -1,6 +1,7 @@
 import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
+import Link from "next/link";
 
 const OPTIONS ={ loop: true };
 const images = [
@@ -61,7 +62,7 @@ const Hero = () => {
                 Alcanza el exito como entrenador Obten una carrera rentable
                 Transforma tu vida con IdaClass
               </h2>
-              <Button size="lg" className='rounded-3xl m-10 font-bold w-48 h-14'>Ver todos los cursos</Button>
+              <Button size="lg" className='rounded-3xl m-10 font-bold w-48 h-14' asChild><Link href='/cursos'>Ver todos los cursos</Link></Button>
             </div>
             <div className="w-1/2">
               <EmblaCarousel slides={images} options={OPTIONS} />
