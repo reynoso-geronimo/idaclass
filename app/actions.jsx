@@ -1,4 +1,7 @@
-"use server";
+"use server"
+
+import Curso from "@/models/Curso";
+
 export async function getCursos() {
   try {
     const response = await fetch("http://localhost:1337/api/cursos", {
@@ -10,6 +13,16 @@ export async function getCursos() {
     });
     const data = await response.json();
     
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function getCursosFromDB() {
+  try {
+    const response = await Curso.findAll()
+    const data = response.map(curso => curso.toJSON()); 
+   
     return data;
   } catch (error) {
     console.log(error);

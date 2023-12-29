@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { getCursos } from "../actions";
+import { getCursosFromDB } from "../actions";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const Page = () => {
@@ -24,16 +24,16 @@ const Page = () => {
 
   useEffect(() => {
     const fetchCursos = async () => {
-      const data = await getCursos();
-      setCursos(data.data);
-      setCursosFiltrados(data.data);
+      const data = await getCursosFromDB();
+      setCursos(data);
+      setCursosFiltrados(data);
     };
     fetchCursos();
   }, []);
 
   const applyFilters = () => {
 
-   const filtrados = cursos.filter((curso) =>((curso.attributes.Modalidad === "Online" && showOnline) || (curso.attributes.Modalidad === "Presencial" && showPresencial) || (curso.attributes.Modalidad=== "Hibrido" && showHibrido)))
+   const filtrados = cursos.filter((curso) =>((curso.modalidad === "Online" && showOnline) || (curso.modalidad === "Presencial" && showPresencial) || (curso.modalidad=== "Hibrido" && showHibrido)))
   setCursosFiltrados(filtrados)
   }
 

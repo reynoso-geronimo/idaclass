@@ -15,7 +15,7 @@ const ShopCursoCard = ({ curso }) => {
     <Card className={"w-[90%] sm:w-[40%] lg:w-[40%] max-w-[400px] min-h-[350px] relative"}>
       <CardContent className={"p-0 "}>
         <Image
-          src={`/${curso.attributes.Imagen}`}
+          src={`/${curso.imagen}`}
           alt="curso"
           width={400}
           height={300}
@@ -26,7 +26,7 @@ const ShopCursoCard = ({ curso }) => {
         />
       </CardContent>
       <CardHeader className="p-2">
-        <CardTitle className='h-12 align-text-bottom'>{curso.attributes.Nombre}</CardTitle>
+        <CardTitle className='h-12 align-text-bottom'>{curso.nombre}</CardTitle>
         <CardDescription>
           <span className="flex items-center mb-4">
             <UsersIcon />
@@ -38,12 +38,12 @@ const ShopCursoCard = ({ curso }) => {
               size={42}
               className="bg-sky-700 rounded-full mr-2 shrink-0"
             />
-            <span>{`por idaclassacademy : ${curso.attributes.Modalidad}`}</span>
+            <span>{`por idaclassacademy : ${curso.modalidad}`}</span>
           </span>
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-between items-center px-1 py-2 w-full border-t-2">
-        <span>{`$ ${curso.attributes.Precio}`}</span>
+        <span>{`$ ${curso.precio}`}</span>
         <Button size="sm" className="flex gap-4 items-center">
           <ShoppingCart />
           <p>Añadir</p>
