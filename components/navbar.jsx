@@ -22,7 +22,7 @@ const NavBar = () => {
             <Menu className="h-9 w-9 " />
           </SheetTrigger>
           <SheetContent
-            side={"top"}
+            side={"left"}
             className="w-72 h-[100svh] flex flex-col gap-4 text-base font-medium"
           >
             <SheetClose asChild>

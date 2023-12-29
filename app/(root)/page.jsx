@@ -9,10 +9,9 @@ import Modalidad from "./components/modalidad";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <section>
-        
         <div className="grid grid-cols-2 gap-16 px-10 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
           <span className="flex flex-col justify-start items-center w-40">
             <Award

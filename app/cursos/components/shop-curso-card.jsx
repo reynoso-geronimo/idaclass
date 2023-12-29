@@ -1,4 +1,3 @@
-import cursoImage from "../../../public/funcional.webp";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,14 +10,23 @@ import {
 import { InfoIcon, ShoppingCart, UsersIcon } from "lucide-react";
 import Image from "next/image";
 
-const ShopCursoCard = () => {
+const ShopCursoCard = ({ curso }) => {
   return (
-    <Card className={"w-[90%] sm:w-[40%] lg:w-[30%] max-w-[400px]"}>
-      <CardContent className={"p-0"}>
-        <Image src={cursoImage} alt="curso" />
+    <Card className={"w-[90%] sm:w-[40%] lg:w-[40%] max-w-[400px] min-h-[350px] relative"}>
+      <CardContent className={"p-0 "}>
+        <Image
+          src={`/${curso.attributes.Imagen}`}
+          alt="curso"
+          width={400}
+          height={300}
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        />
       </CardContent>
       <CardHeader className="p-2">
-        <CardTitle>Titulo del Curso</CardTitle>
+        <CardTitle className='h-12 align-text-bottom'>{curso.attributes.Nombre}</CardTitle>
         <CardDescription>
           <span className="flex items-center mb-4">
             <UsersIcon />
@@ -30,15 +38,15 @@ const ShopCursoCard = () => {
               size={42}
               className="bg-sky-700 rounded-full mr-2 shrink-0"
             />
-            <span>por idaclassacademy en ONLINE, PRESENCIAL</span>
+            <span>{`por idaclassacademy : ${curso.attributes.Modalidad}`}</span>
           </span>
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-between items-center px-1 py-2 w-full border-t-2">
-        <span>$90000</span>
-        <Button size="sm" className="flex justify-around">
+        <span>{`$ ${curso.attributes.Precio}`}</span>
+        <Button size="sm" className="flex gap-4 items-center">
           <ShoppingCart />
-          Añadir al carrito
+          <p>Añadir</p>
         </Button>
       </CardFooter>
     </Card>
