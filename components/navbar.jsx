@@ -48,7 +48,7 @@ const NavBar = () => {
             </SheetClose>
             <Separator />
             <SheetClose asChild>
-              <Link href="/">Asesorate ya</Link>
+              <Link href="/asesorate">Asesorate ya</Link>
             </SheetClose>
           </SheetContent>
         </Sheet>
@@ -84,7 +84,7 @@ const NavBar = () => {
 
           <Link href="/">Blog</Link>
 
-          <Link href="/">Asesorate ya</Link>
+          <Link href="/asesorate">Asesorate ya</Link>
         </div>
         <Button asChild className="rounded-3xl">
           <Link href="/">Ingresar</Link>
