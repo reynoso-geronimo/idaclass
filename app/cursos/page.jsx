@@ -1,5 +1,5 @@
 "use client";
-import { Sliders } from "lucide-react";
+import { Loader, Sliders } from "lucide-react";
 import ShopCursoCard from "./components/shop-curso-card";
 import { Combobox } from "@/components/ui/comboBox";
 import {
@@ -21,21 +21,34 @@ const Page = () => {
   const [showHibrido, setShowHibrido] = useState(true);
   const [cursos, setCursos] = useState([]);
   const [cursosFiltrados, setCursosFiltrados] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchCursos = async () => {
-      const data = await getCursosFromDB();
-      setCursos(data);
-      setCursosFiltrados(data);
+      try {
+        setIsLoading(true);
+        const data = await getCursosFromDB();
+        setCursos(data);
+        setCursosFiltrados(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
     };
+
     fetchCursos();
   }, []);
 
   const applyFilters = () => {
-
-   const filtrados = cursos.filter((curso) =>((curso.modalidad === "Online" && showOnline) || (curso.modalidad === "Presencial" && showPresencial) || (curso.modalidad=== "Hibrido" && showHibrido)))
-  setCursosFiltrados(filtrados)
-  }
+    const filtrados = cursos.filter(
+      curso =>
+        (curso.modalidad === "Online" && showOnline) ||
+        (curso.modalidad === "Presencial" && showPresencial) ||
+        (curso.modalidad === "Hibrido" && showHibrido)
+    );
+    setCursosFiltrados(filtrados);
+  };
 
   return (
     <main className="p-6 min-h-[100svh] md:flex items-start">
@@ -79,7 +92,13 @@ const Page = () => {
             >
               Hibrido
             </DropdownMenuCheckboxItem>
-            <Button className="w-full rounded-lg mt-4 text-lg"onClick={applyFilters} disabled={!showHibrido&&!showOnline&&!showPresencial}>Aplicar</Button>
+            <Button
+              className="w-full rounded-lg mt-4 text-lg"
+              onClick={applyFilters}
+              disabled={!showHibrido && !showOnline && !showPresencial}
+            >
+              Aplicar
+            </Button>
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -126,13 +145,30 @@ const Page = () => {
               HIBRIDO
             </label>
           </div>
-          <Button className=" rounded-lg mt-4 text-lg" onClick={applyFilters} disabled={!showHibrido&&!showOnline&&!showPresencial}>Aplicar Filtros</Button>
+          <Button
+            className=" rounded-lg mt-4 text-lg"
+            onClick={applyFilters}
+            disabled={!showHibrido && !showOnline && !showPresencial}
+          >
+            Aplicar Filtros
+          </Button>
         </div>
       </div>
+
       <div className="flex flex-col items-center sm:flex-row justify-evenly w-full flex-wrap gap-y-8 gap-x-2">
-        {cursosFiltrados.map((curso, index) => (
-          <ShopCursoCard key={curso.id + index} curso={curso} />
-        ))}
+        {isLoading ? (
+          <Loader
+            className="animate-spin mt-20"
+            width={72}
+            height={72}
+            role="status"
+            aria-label="Loading data"
+          />
+        ) : (
+          cursosFiltrados?.map((curso, index) => (
+            <ShopCursoCard key={curso.id + index} curso={curso} />
+          ))
+        )}
       </div>
     </main>
   );

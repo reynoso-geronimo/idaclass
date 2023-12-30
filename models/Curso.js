@@ -1,7 +1,7 @@
-const sequelize = require("../lib/sequelize");
-const { DataTypes } = require("sequelize");
+import sequelize  from "../lib/sequelize";
+import { DataTypes }  from "sequelize";
 
-const Curso = sequelize.define("Curso", {
+const Curso = sequelize.define("curso", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -31,4 +31,4 @@ const Curso = sequelize.define("Curso", {
 }, {
     timestamps: false
 })
-module.exports = Curso;
+export default Curso;
