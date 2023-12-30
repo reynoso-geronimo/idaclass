@@ -54,7 +54,7 @@ const NavBar = () => {
             </SheetClose>
             <Separator />
             <SheetClose asChild>
-              <Link href="/">Asesorate ya</Link>
+              <Link href="/asesorate">Asesorate ya</Link>
             </SheetClose>
           </SheetContent>
         </Sheet>
@@ -90,7 +90,7 @@ const NavBar = () => {
 
           <Link href="/">Blog</Link>
 
-          <Link href="/">Asesorate ya</Link>
+          <Link href="/asesorate">Asesorate ya</Link>
         </div>
         {session && session.user ? (
           <Avatar onClick={() => signOut()} className="cursor-pointer">

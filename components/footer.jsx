@@ -29,7 +29,7 @@ const Footer = () => {
         <Link href="/">Inicio</Link>
         <Link href="/cursos">Cursos</Link>
         <Link href="/">Blog</Link>
-        <Link href="/">Asesorate ya</Link>
+        <Link href="/asesorate">Asesorate ya</Link>
       </section>
 
       <section className="w-full mt-6">
