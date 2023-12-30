@@ -58,8 +58,8 @@ const Page = () => {
       <div className="flex w-full justify-around items-center mb-4 flex-wrap gap-y-4 md:hidden">
         <h3 className="text-2xl font-medium">Cursos</h3>
         <DropdownMenu>
-          <DropdownMenuTrigger>
-            <Sliders
+          <DropdownMenuTrigger className="flex items-center gap-x-2 font-medium">
+            Modalidades<Sliders
               color="#09578f"
               size={36}
               className="bg-sky-200 rounded-full p-1 "
@@ -106,9 +106,9 @@ const Page = () => {
           {/* <Combobox /> */}
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block sticky top-28">
         <h2 className="text-2xl font-extrabold mb-4 mx-4 text-indigo-950">
-          CURSOS
+          MODALIDADES
         </h2>
         {/* <Combobox /> */}
         <div className="flex flex-col gap-4 mt-4 mr-6">
