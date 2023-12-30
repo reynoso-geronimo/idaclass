@@ -22,16 +22,15 @@ const handler = NextAuth({
     },
     async signIn({ account, profile, user, credentials }) {
       try {
-
-
+       
         const userExists = await User.findOne({ where: { email: profile.email } });
-        console.log(profile);
+        
 
         if (!userExists) {
           await User.create({
             email: profile.email,
             username: profile.name.replace(" ", "").toLowerCase(),
-
+            provider:account.provider
           });
         }
 

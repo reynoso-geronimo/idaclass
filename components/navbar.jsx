@@ -21,7 +21,7 @@ const NavBar = () => {
 
   const pathname = usePathname();
   return (
-    <header>
+    <header className="sticky top-0 z-50 bg-white">
       <nav className="w-full flex justify-around items-center h-16 mt-2">
         <Sheet>
           <SheetTrigger className="lg:hidden">
@@ -37,6 +37,15 @@ const NavBar = () => {
                 href="/"
               >
                 Inicio
+              </Link>
+            </SheetClose>
+            <Separator />
+            <SheetClose asChild>
+              <Link
+                className={`${pathname === "/nosotros" && "text-sky-700"}`}
+                href="/nosotros"
+              >
+                Nosotros
               </Link>
             </SheetClose>
             <Separator />
@@ -59,7 +68,6 @@ const NavBar = () => {
           </SheetContent>
         </Sheet>
         <Link href="/">
-          {" "}
           <Image
             src={`/idaclass.logo.webp`}
             alt="logo"
@@ -76,6 +84,15 @@ const NavBar = () => {
             }`}
           >
             Inicio
+          </Link>
+          <Link
+            href="/nosotros"
+            className={`${
+              pathname === "/nosotros" &&
+              "text-sky-700 underline decoration-2 underline-offset-4"
+            }`}
+          >
+            Nosotros
           </Link>
 
           <Link
