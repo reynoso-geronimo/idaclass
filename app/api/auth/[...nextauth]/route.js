@@ -1,5 +1,7 @@
+import User from '@/models/User';
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { where } from 'sequelize';
 
 
 const handler = NextAuth({
@@ -10,8 +12,37 @@ const handler = NextAuth({
     })
   ], pages: {
     signIn: '/signin'
+  }, callbacks: {
+    async session({ session }) {
+
+      const sessionUser = await User.findOne({where:{ email: session.user.email }});
+      session.user.id = sessionUser.id.toString();
+
+      return session;
+    },
+    async signIn({ account, profile, user, credentials }) {
+      try {
+
+
+        const userExists = await User.findOne({ where: { email: profile.email } });
+        console.log(profile);
+
+        if (!userExists) {
+          await User.create({
+            email: profile.email,
+            username: profile.name.replace(" ", "").toLowerCase(),
+
+          });
+        }
+
+        return true
+      } catch (error) {
+        console.log("Error checking if user exists: ", error.message);
+        return false
+      }
+    },
   }
- 
+
 }
 )
 
