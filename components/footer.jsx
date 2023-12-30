@@ -12,7 +12,8 @@ const Footer = () => {
           src={`/idaclass.logo.webp`}
           alt="logo"
           width={200}
-          height={100}
+          height={50}
+          
         />
         <p className="mt-6">Plataforma de cursos E-learning</p>
         <p>para la formación de profesionales.</p>
