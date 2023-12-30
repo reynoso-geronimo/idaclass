@@ -9,7 +9,7 @@ export async function getCursos() {
       headers: {
         Authorization: `Bearer ${process.env.PUBLIC_KEY}`,
       },
-      next: { revalidate: 10 },
+      next: { revalidate: 10*60 },
     });
     const data = await response.json();
     

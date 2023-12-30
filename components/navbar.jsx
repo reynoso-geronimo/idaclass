@@ -1,21 +1,27 @@
 "use client";
-import { Separator } from "./ui/separator";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/react";
+
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
-import Link from "next/link";
+import { Separator } from "./ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
+
 
 const NavBar = () => {
+  const { data: session } = useSession();
+
   const pathname = usePathname();
   return (
-    <>
+    <header>
       <nav className="w-full flex justify-around items-center h-16 mt-2">
         <Sheet>
           <SheetTrigger className="lg:hidden">
@@ -86,12 +92,20 @@ const NavBar = () => {
 
           <Link href="/">Asesorate ya</Link>
         </div>
-        <Button asChild className="rounded-3xl">
-          <Link href="/">Ingresar</Link>
-        </Button>
+        {session && session.user ? (
+          <Avatar onClick={() => signOut()} className="cursor-pointer">
+          <AvatarImage src={session.user.image} alt="avatar" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        
+        ) : (
+          <Button className="rounded-3xl" onClick={() => signIn()}>
+            Ingresar
+          </Button>
+        )}
       </nav>
       <Separator className="hidden lg:block h-2 bg-gray-200" />
-    </>
+    </header>
   );
 };
 
