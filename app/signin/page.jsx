@@ -7,9 +7,11 @@ import Image from "next/image";
 
 export default function SignIn() {
   return (
-    
     <main className="flex flex-col items-center relative">
-      <video autoPlay muted loop className="-z-10 object-cover">
+      <video autoPlay muted loop className="-z-10 object-cover sm:hidden">
+        <source src="/videos/bgvideo1.mp4" type="video/mp4" />
+      </video>
+      <video autoPlay muted loop className="-z-10 object-cover hidden sm:block">
         <source src="/videos/bgvideo2.mp4" type="video/mp4" />
       </video>
       <div className="flex flex-col border-2 border-sky-600 absolute top-12 sm:right-52 space-y-4 bg-slate-900 p-6 rounded-lg shadow-lg z-10">
