@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { InfoIcon, ShoppingCart, UsersIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ShopCursoCard = ({ curso }) => {
   return (
@@ -32,6 +33,7 @@ const ShopCursoCard = ({ curso }) => {
             <UsersIcon />
             123123123
           </span>
+          <Link href={`/cursos/${curso.id}`}>
           <span className="flex items-center">
             <InfoIcon
               color="white"
@@ -40,6 +42,7 @@ const ShopCursoCard = ({ curso }) => {
             />
             <span>{`por idaclassacademy : ${curso.modalidad}`}</span>
           </span>
+          </Link>
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-between items-center px-1 py-2 w-full border-t-2">
