@@ -136,7 +136,7 @@ const CursoPage = async ({ params }) => {
         <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
           Contenido del curso
         </h2>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
           {
             <Accordion
               type="single"
