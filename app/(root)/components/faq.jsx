@@ -19,7 +19,7 @@ const preguntas = [
           En IdaClass puedes elegir la modalidad que más se adapte a tus
           necesidades, actualmente ofrecemos:
         </p>
-        <ol className="list-inside list-decimal ml-6">
+        <ol className="list-outside list-decimal ml-6">
           <li>
             <span className="font-bold">
               Modalidad Online (Híbrida Sincrónica):{" "}

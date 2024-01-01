@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 const CursoCard = ({ titulo = "Curso", modalidad = "Modalidad" }) => {
   return (
-    <Card className="border-2 rounded-lg m-2">
+    <Card className="border-2 rounded-lg m-2  hover:-translate-y-2 hover:scale-105 duration-75 ease-in">
       <CardContent className="p-0">
         <Image src={`/funcional.webp`} alt="alt" width={1000} height={700} className="rounded-t-md"/>
       </CardContent>
