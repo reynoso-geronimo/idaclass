@@ -75,7 +75,7 @@ const CursoPage = async ({ params }) => {
         </div>
       </section>
 
-      <section className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
+      <section className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 mb-8">
         <div className="text-white-1 rounded lg:w-[43%] 2xl:w-[51%]">
           <Badge
             variant={"outline"}
@@ -129,8 +129,8 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <div className="flex justify-center">
-        <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl">
-          <YouTubeEmbed videoid="Mgo24SP8-Xs" params="modestbranding=1&rel=0&showinfo=0&controls=0"/>
+        <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl mb-8">
+          <YouTubeEmbed videoid="Mgo24SP8-Xs" params="modestbranding=1&rel=0&showinfo=0&controls=0" />
         </div>
       </div>
       <section>
