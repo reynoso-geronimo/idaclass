@@ -29,7 +29,7 @@ const ShopCursoCard = ({ curso }) => {
               width: "100%",
               height: "auto",
             }}
-            className="cursor-pointer"
+            className="cursor-pointer hover:brightness-110 ease-in duration-75"
           />
         </Link>
       </CardContent>
