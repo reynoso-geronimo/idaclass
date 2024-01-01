@@ -3,7 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Curso from "@/models/Curso";
 import PaginaCurso from "@/models/PaginaCurso";
-import { Calendar, Check, ChevronRight, Clock, Monitor } from "lucide-react";
+import {
+  Calendar,
+  Check,
+  ChevronRight,
+  Clock,
+  Construction,
+  Monitor,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +26,14 @@ const CursoPage = async ({ params }) => {
   ]);
   if (!curso) {
     return <div>Curso no encontrado</div>;
+  }
+  if (!paginaCurso) {
+    return (
+      <div className="flex flex-col items-center">
+        <Construction size={72} className=" rounded-full" fill="#FFFF00"/>
+        <h1 className="text-3xl font-bold">Sitio bajo construccion</h1>
+      </div>
+    );
   }
 
   const { nombre, descripcion, imagen, precio, modalidad, duracion } =
