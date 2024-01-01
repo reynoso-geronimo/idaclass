@@ -36,7 +36,7 @@ const CursoPage = async ({ params }) => {
   console.log();
 
   return (
-    <main className="p-6 ">
+    <main className="p-6 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300">
       <section className="flex flex-col items-center w-full">
         <div className="relative flex flex-col items-center py-17.5 px-4 lg:p-0 lg:w-8/12 lg:m-auto lg:my-20 lg:items-start 2xl:my-37 2xl:w-6/12 2xl:ml-77 3xl:my-47 3xl:w-5/12 3xl:ml-91">
           {/* <Badge className="h-8 w-16 flex justify-center">Curso</Badge> */}
@@ -46,13 +46,13 @@ const CursoPage = async ({ params }) => {
           <div className="flex flex-col items-center lg:flex-row gap-4">
             <Badge
               variant={"outline"}
-              className="justify-center w-60  border-black"
+              className="justify-center w-60  border-black bg-white"
             >
               Modalidad: {modalidad && modalidad}
             </Badge>
             <Badge
               variant={"outline"}
-              className=" justify-center w-52  border-black"
+              className=" justify-center w-52  border-black bg-white"
             >
               Duracion: {duracion && duracion}
             </Badge>
@@ -64,7 +64,8 @@ const CursoPage = async ({ params }) => {
             >
               Comprar
             </Button>
-            <Button asChild
+            <Button
+              asChild
               size="lg"
               variant="outline"
               className="rounded-lg w-[90vw] lg:w-full font-extrabold border-black"
@@ -106,7 +107,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="border rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-sky-700 text-white p-0.5"
             />{" "}
             {check_2}
           </li>
@@ -114,7 +115,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="border rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-sky-700 text-white p-0.5"
             />{" "}
             {check_3}
           </li>
@@ -122,7 +123,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="border rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-sky-700 text-white p-0.5"
             />{" "}
             {check_4}
           </li>
@@ -130,46 +131,57 @@ const CursoPage = async ({ params }) => {
       </section>
       <div className="flex justify-center">
         <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl mb-8">
-          <YouTubeEmbed videoid="Mgo24SP8-Xs" params="modestbranding=1&rel=0&showinfo=0&controls=0" />
+          <YouTubeEmbed
+            videoid="Mgo24SP8-Xs"
+            params="modestbranding=1&rel=0&showinfo=0&controls=0"
+          />
         </div>
       </div>
       <section>
-        <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center" id="contenido-curso">
+        <h2
+          className="text-2xl lg:text-4xl font-bold my-4 text-center"
+          id="contenido-curso"
+        >
           Contenido del curso
         </h2>
-        <div className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
+        <div className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
           {
             <Accordion
               type="single"
               collapsible
-              className="m-6 border-2 border-sky-950 border-t-0 w-[90%] lg:w-1/2"
+              className="m-6 w-full lg:w-1/2 "
             >
               {JSON.parse(modulos).Modulos.map((modulo, index) => (
                 <AccordionItem value={`item-${index + 1}`} key={index}>
-                  <AccordionTrigger className="text-sm md:text-lg border-t-2 border-sky-950 text-left px-4 ">
+                  <AccordionTrigger className="font-bold text-sm md:text-lg bg-gray-300 text-left px-4 ">
                     Modulo: {index + 1}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm p-2">
+                  <AccordionContent className="font-semibold text-sm p-4  bg-gray-200">
                     {modulo}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           }
-          <div className="lg:w-1/2 font-semibold">
-            <h3 className="text-xl lg:text-2xl font-bold my-4">Orientado a:</h3>
-            <p className="flex items-start">
-              <ChevronRight className="text-sky-700 shrink-0" /> Deportistas
-              amateurs, profesionales del Deporte, Salud y Fitness.
-            </p>
-            <p className="flex items-start">
-              <ChevronRight className="text-sky-700 shrink-0" />
-              Estudiantes de carreras afines.
-            </p>
-            <p className="flex items-start">
-              <ChevronRight className="text-sky-700 shrink-0" />
-              Deportistas amateurs, profesionales del Deporte, Salud y Fitness.
-            </p>
+          <div className="w-full lg:w-1/2 font-semibold flex flex-col justify-between border bg-idaclass rounded-xl p-4">
+            <Badge className="text-xl lg:text-2xl font-bold m-4 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
+              Orientado a:
+            </Badge>
+            <div className="text-white">
+              <p className="flex items-start">
+                <ChevronRight className="text-white shrink-0" />
+                Deportistas amateurs, profesionales del Deporte, Salud y Fitness.
+              </p>
+              <p className="flex items-start">
+                <ChevronRight className="text-white shrink-0" />
+                Estudiantes de carreras afines.
+              </p>
+              <p className="flex items-start">
+                <ChevronRight className="text-white shrink-0" />
+                Deportistas amateurs, profesionales del Deporte, Salud y
+                Fitness.
+              </p>
+            </div>
           </div>
         </div>
       </section>

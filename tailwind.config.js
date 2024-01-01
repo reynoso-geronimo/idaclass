@@ -50,6 +50,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        idaclass:"#3a5dae"
       },
       borderRadius: {
         lg: "var(--radius)",
