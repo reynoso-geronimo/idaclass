@@ -7,14 +7,13 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Sheet,
   SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 
 const NavBar = () => {
   const { data: session } = useSession();
@@ -81,7 +80,7 @@ const NavBar = () => {
             className={`${
               pathname === "/" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
-            }`}
+            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Inicio
           </Link>
@@ -90,7 +89,7 @@ const NavBar = () => {
             className={`${
               pathname === "/nosotros" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
-            }`}
+            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Nosotros
           </Link>
@@ -100,21 +99,28 @@ const NavBar = () => {
             className={`${
               pathname === "/cursos" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
-            }`}
+            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Cursos
           </Link>
 
-          <Link href="/">Blog</Link>
+          <Link href="/blog" className={`${
+              pathname === "/blog" &&
+              "text-sky-700 underline decoration-2 underline-offset-4"
+            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+          >Blog</Link>
 
-          <Link href="/asesorate">Asesorate ya</Link>
+          <Link href="/asesorate" className={`${
+              pathname === "/asesorate" &&
+              "text-sky-700 underline decoration-2 underline-offset-4"
+            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+          >Asesorate ya</Link>
         </div>
         {session && session.user ? (
           <Avatar onClick={() => signOut()} className="cursor-pointer">
-          <AvatarImage src={session.user.image} alt="avatar" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-        
+            <AvatarImage src={session.user.image} alt="avatar" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         ) : (
           <Button className="rounded-3xl" onClick={() => signIn()}>
             Ingresar
