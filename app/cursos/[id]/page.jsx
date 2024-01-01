@@ -36,8 +36,8 @@ const CursoPage = async ({ params }) => {
   console.log();
 
   return (
-    <main className="p-6 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300">
-      <section className="flex flex-col items-center w-full">
+    <main>
+      <section className="flex flex-col items-center w-full  bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300">
         <div className="relative flex flex-col items-center py-17.5 px-4 lg:p-0 lg:w-8/12 lg:m-auto lg:my-20 lg:items-start 2xl:my-37 2xl:w-6/12 2xl:ml-77 3xl:my-47 3xl:w-5/12 3xl:ml-91">
           {/* <Badge className="h-8 w-16 flex justify-center">Curso</Badge> */}
           <h1 className="text-2xl lg:text-7xl font-bold my-4">
@@ -76,7 +76,7 @@ const CursoPage = async ({ params }) => {
         </div>
       </section>
 
-      <section className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 mb-8">
+      <section className="flex flex-col px-6 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 mb-8">
         <div className="text-white-1 rounded lg:w-[43%] 2xl:w-[51%]">
           <Badge
             variant={"outline"}
@@ -130,14 +130,14 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <div className="flex justify-center">
-        <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl mb-8">
+        <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl my-8 ">
           <YouTubeEmbed
             videoid="Mgo24SP8-Xs"
             params="modestbranding=1&rel=0&showinfo=0&controls=0"
           />
         </div>
       </div>
-      <section>
+      <section className="  bg-gradient-to-br from-gray-100 via-gray-150 to-gray-100">
         <h2
           className="text-2xl lg:text-4xl font-bold my-4 text-center"
           id="contenido-curso"
