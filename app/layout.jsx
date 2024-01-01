@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children}) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth scroll-pt-20">
       <body className={`${inter.className} min-h-screen flex flex-col justify-between`}>
       <ProviderSession>
         <NavBar />

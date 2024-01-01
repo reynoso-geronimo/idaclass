@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const CursoPage = async ({ params }) => {
   const [curso, paginaCurso] = await Promise.all([
@@ -35,7 +36,7 @@ const CursoPage = async ({ params }) => {
   console.log();
 
   return (
-    <main className="p-6">
+    <main className="p-6 ">
       <section className="flex flex-col items-center w-full">
         <div className="relative flex flex-col items-center py-17.5 px-4 lg:p-0 lg:w-8/12 lg:m-auto lg:my-20 lg:items-start 2xl:my-37 2xl:w-6/12 2xl:ml-77 3xl:my-47 3xl:w-5/12 3xl:ml-91">
           {/* <Badge className="h-8 w-16 flex justify-center">Curso</Badge> */}
@@ -63,12 +64,12 @@ const CursoPage = async ({ params }) => {
             >
               Comprar
             </Button>
-            <Button
+            <Button asChild
               size="lg"
               variant="outline"
               className="rounded-lg w-[90vw] lg:w-full font-extrabold border-black"
             >
-              Ver Programa
+              <Link href={`#contenido-curso`}>Ver Programa</Link>
             </Button>
           </div>
         </div>
@@ -133,7 +134,7 @@ const CursoPage = async ({ params }) => {
         </div>
       </div>
       <section>
-        <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
+        <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center" id="contenido-curso">
           Contenido del curso
         </h2>
         <div className="flex flex-col px-4 py-3 items-start lg:items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
