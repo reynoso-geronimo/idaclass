@@ -68,10 +68,11 @@ const NavBar = () => {
         </Sheet>
         <Link href="/">
           <Image
-            src={`/idaclass.logo.webp`}
+            src={`/assets/idaclass.logo.webp`}
             alt="logo"
             width={180}
             height={45}
+            priority
           />
         </Link>
         <div className="hidden lg:flex justify-around gap-8 font-medium	">

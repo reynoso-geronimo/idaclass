@@ -6,7 +6,7 @@ const Pasos123 = ({imagen,paso,desc}) => {
     <div className=" h-[300px] w-[180px] flex flex-col items-center">
     <div className=" relative top-0 h-[160px] w-[160px]">
       <Image
-        src={`/${imagen}`}
+        src={`/assets/${imagen}`}
         fill={true}
         alt="primer paso"
         sizes="(max-width: 200px) 100vw, (max-width: 200px) 50vw, 33vw"

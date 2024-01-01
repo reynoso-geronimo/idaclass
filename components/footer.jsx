@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-slate-900 w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center pt-16 text-white text-center">
       <section className="flex flex-col items-center">
         <Image
-          src={`/idaclass.logo.webp`}
+          src={`/assets/idaclass.logo.webp`}
           alt="logo"
           width={200}
           height={50}

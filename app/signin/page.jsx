@@ -1,8 +1,8 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
-import GoogleIcon from "../../public/google-icon.svg";
-import InstagramIcon from "../../public/instagram-icon.svg";
+import GoogleIcon from "../../public/assets/google-icon.svg";
+import InstagramIcon from "../../public/assets/instagram-icon.svg";
 import Image from "next/image";
 
 export default function SignIn() {
