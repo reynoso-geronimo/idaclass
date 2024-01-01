@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Curso from "@/models/Curso";
 import PaginaCurso from "@/models/PaginaCurso";
-import { Check, ChevronRight } from "lucide-react";
+import { Calendar, Check, ChevronRight, Clock, Monitor } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -137,20 +137,16 @@ const CursoPage = async ({ params }) => {
           />
         </div>
       </div>
-      <section className="  bg-gradient-to-br from-gray-100 via-gray-150 to-gray-100">
+      <section className="bg-gradient-to-br from-gray-100 via-gray-150 to-gray-100">
         <h2
           className="text-2xl lg:text-4xl font-bold my-4 text-center"
           id="contenido-curso"
         >
           Contenido del curso
         </h2>
-        <div className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 ">
+        <div className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 gap-4">
           {
-            <Accordion
-              type="single"
-              collapsible
-              className="m-6 w-full lg:w-1/2 "
-            >
+            <Accordion type="single" collapsible className="w-full lg:w-2/3">
               {JSON.parse(modulos).Modulos.map((modulo, index) => (
                 <AccordionItem value={`item-${index + 1}`} key={index}>
                   <AccordionTrigger className="font-bold text-sm md:text-lg bg-gray-300 text-left px-4 ">
@@ -170,7 +166,8 @@ const CursoPage = async ({ params }) => {
             <div className="text-white">
               <p className="flex items-start">
                 <ChevronRight className="text-white shrink-0" />
-                Deportistas amateurs, profesionales del Deporte, Salud y Fitness.
+                Deportistas amateurs, profesionales del Deporte, Salud y
+                Fitness.
               </p>
               <p className="flex items-start">
                 <ChevronRight className="text-white shrink-0" />
@@ -178,12 +175,61 @@ const CursoPage = async ({ params }) => {
               </p>
               <p className="flex items-start">
                 <ChevronRight className="text-white shrink-0" />
-                Deportistas amateurs, profesionales del Deporte, Salud y
-                Fitness.
+                Apto para todo público
               </p>
             </div>
           </div>
         </div>
+      </section>
+      <section className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 gap-4">
+        <article className="w-full h-auto flex flex-col items-center border-2 border-idaclass rounded-xl min-h-[300px]">
+          <Badge className="text-lg lg:text-xl font-semibold m-4 justify-center outline outline-2 outline-primary outline-offset-4">
+            Informacion de curasada
+          </Badge>
+          <div className="flex-1 flex flex-col justify-center gap-2">
+            <div className="flex items-center">
+              <Calendar className="text-idaclass mr-4" strokeWidth={3} />
+              <div>
+                <p className="font-semibold">Duracion</p>
+                <p>2 Meses</p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <Clock className="text-idaclass mr-4" strokeWidth={3} />
+              <div>
+                <p className="font-semibold">Dedicación</p>
+                <p>5 horas semanales</p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <Monitor className="text-idaclass mr-4" strokeWidth={3} />
+              <div>
+                <p className="font-semibold">Modalidad de la cursada</p>
+                <p>Online</p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article className="w-full flex flex-col items-center border-2 border-idaclass rounded-xl min-h-[300px]">
+          <h3 className="text-xl lg:text-2xl font-semibold m-4 text-start w-full px-6">
+            Materiales Incluidos
+          </h3>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly">
+            <li>Ebook Nutrición Deportiva</li>
+            <li>
+              Una guía detallada de los alimentos y bebidas sugeridos para cada
+              día.
+            </li>
+            <li>
+              Toda la información para saber qué alimentos incluir en un plan de
+              alimentación saludable.
+            </li>
+            <li>
+              Manual complementario a los contenidos brindados en el curso.
+            </li>
+            <li>Material de consulta rápida.</li>
+          </ul>
+        </article>
       </section>
     </main>
   );
