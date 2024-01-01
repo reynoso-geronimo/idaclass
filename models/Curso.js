@@ -15,6 +15,10 @@ const Curso = sequelize.define("curso", {
         type: DataTypes.STRING,
 
     },
+    duracion: {
+        type: DataTypes.STRING,
+
+    },
     imagen: {
         type: DataTypes.STRING,
 
