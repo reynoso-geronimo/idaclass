@@ -1,7 +1,7 @@
 import User from '@/models/User';
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-import { where } from 'sequelize';
+
 
 
 const handler = NextAuth({
