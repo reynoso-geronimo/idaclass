@@ -24,7 +24,7 @@ const NavBar = () => {
       <nav className="w-full flex justify-around items-center h-16 mt-2">
         <Sheet>
           <SheetTrigger className="lg:hidden">
-            <Menu className="h-9 w-9 " />
+            <Menu className="h-9 w-9 " aria-label="menu-navegacion"/>
           </SheetTrigger>
           <SheetContent
             side={"left"}

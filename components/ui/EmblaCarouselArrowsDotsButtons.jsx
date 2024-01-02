@@ -3,7 +3,7 @@ export const DotButton = props => {
   const { children, ...restProps } = props;
 
   return (
-    <button type="button" {...restProps}>
+    <button type="button" {...restProps} aria-label="navegacion-carrusel">
       {children}
     </button>
   );
