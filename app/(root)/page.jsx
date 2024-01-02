@@ -46,8 +46,8 @@ export default function Home() {
             <li>Logra tu empleo soñado.</li>
             <li>Concreta tus ideas y proyectos.</li>
             <li>Desacaté como profesional y líder.</li>
-            <li>Gana dinero haciendo lo que</li>
-            amas.
+            <li>Gana dinero haciendo lo que amas.</li>
+            
           </ol>
         </div>
       </section>
