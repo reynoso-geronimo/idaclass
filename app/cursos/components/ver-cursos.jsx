@@ -31,7 +31,7 @@ const VerCursos = ({ cursosFromDB }) => {
     setCursosFiltrados(filtrados);
   };
   return (
-    <main className="p-6 lg:px-16 min-h-[100svh] md:flex items-start">
+    <main className="p-6 lg:px-24 min-h-[100svh] md:flex items-start">
       {/* <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 text-center">
         CURSOS
       </h2> */}
