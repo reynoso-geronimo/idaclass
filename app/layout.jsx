@@ -7,12 +7,7 @@ import Footer from "@/components/footer";
 import Loading from "./loading";
 import ProviderSession  from "./providers/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
-<link
-  rel="icon"
-  href="/icon?<generated>"
-  type="image/<generated>"
-  sizes="<generated>"
-/>
+
 export const metadata = {
   title: "IdaClass Academy",
   description:

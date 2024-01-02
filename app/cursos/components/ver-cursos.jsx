@@ -18,12 +18,11 @@ const VerCursos = ({ cursosFromDB }) => {
   const [showPresencial, setShowPresencial] = useState(true);
   const [showOnline, setShowOnline] = useState(true);
   const [showHibrido, setShowHibrido] = useState(true);
-  const [cursos, setCursos] = useState(cursosFromDB);
   const [cursosFiltrados, setCursosFiltrados] = useState(cursosFromDB);
 
 
   const applyFilters = () => {
-    const filtrados = cursos.filter(
+    const filtrados = cursosFromDB.filter(
       curso =>
         (curso.modalidad === "Online" && showOnline) ||
         (curso.modalidad === "Presencial" && showPresencial) ||
@@ -32,7 +31,7 @@ const VerCursos = ({ cursosFromDB }) => {
     setCursosFiltrados(filtrados);
   };
   return (
-    <main className="p-6 min-h-[100svh] md:flex items-start">
+    <main className="p-6 lg:px-16 min-h-[100svh] md:flex items-start">
       {/* <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 text-center">
         CURSOS
       </h2> */}
