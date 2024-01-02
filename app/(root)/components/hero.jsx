@@ -46,10 +46,13 @@ const Hero = () => {
             ¡ESTUDIA, TRABAJA Y EMPRENDE HOY!
           </h2>
           <EmblaCarousel slides={images} options={OPTIONS} />
-          <h2 className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]">
+          <h2 className="mt-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]">
             Alcanza el exito como entrenador Obten una carrera rentable
             Transforma tu vida con IdaClass
           </h2>
+          <div className="flex justify-center w-full">
+          <Button size="lg" className='rounded-lg m-10 font-bold w-48 h-14 border-idaclass border-4' asChild><Link href='/cursos'>Ver todos los cursos</Link></Button>
+          </div>
         </div>
      
         <div className="hidden lg:block">

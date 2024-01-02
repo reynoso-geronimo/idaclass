@@ -1,12 +1,11 @@
+import { YouTubeEmbed } from "@next/third-parties/google";
 import Hero from "@/app/(root)/components/hero";
 import Pasos123 from "./components/ui/pasos123";
-import { Award, GraduationCap, Tv2, UserRoundSearch } from "lucide-react";
-import { YouTubeEmbed } from "@next/third-parties/google";
 import Faq from "./components/faq";
 import Cursos from "./components/cursos";
 import Certificacion from "./components/certificacion";
 import Modalidad from "./components/modalidad";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <main className="overflow-hidden">
@@ -14,39 +13,19 @@ export default function Home() {
       <section>
         <div className="grid grid-cols-2 gap-16 px-10 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
           <span className="flex flex-col justify-start items-center w-40">
-            <Award
-              size={72}
-              color="#09578f"
-              strokeWidth={3}
-              absoluteStrokeWidth
-            />
+          <Image src={'/assets/experiencia.webp'}width={72} height={72} alt="experiencia"/>
             25 años experiencia
           </span>
           <span className="flex flex-col justify-start items-center w-40">
-            <GraduationCap
-              size={72}
-              color="#09578f"
-              strokeWidth={3}
-              absoluteStrokeWidth
-            />
+            <Image src={'/assets/50milcertificados.webp'}width={72} height={72} alt="certificados"/>
             +50.000 certificados
           </span>
           <span className="flex flex-col justify-start items-center w-40">
-            <Tv2
-              size={72}
-              color="#09578f"
-              strokeWidth={3}
-              absoluteStrokeWidth
-            />
+          <Image src={'/assets/estandarformacion.webp'}width={72} height={72} alt="estandarformacion"/>
             1ra Digital School con estandar de formación
           </span>
           <span className="flex flex-col justify-start items-center w-40">
-            <UserRoundSearch
-              size={72}
-              color="#09578f"
-              strokeWidth={3}
-              absoluteStrokeWidth
-            />
+          <Image src={'/assets/empleabilidad.webp'}width={72} height={72} alt="empleabilidad"/>
             80% de empleabilidad
           </span>
         </div>
