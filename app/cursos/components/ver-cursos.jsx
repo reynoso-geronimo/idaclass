@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -20,8 +20,7 @@ const VerCursos = ({ cursosFromDB }) => {
   const [showHibrido, setShowHibrido] = useState(true);
   const [cursosFiltrados, setCursosFiltrados] = useState(cursosFromDB);
 
-
-  const applyFilters = () => {
+  useEffect(() => {
     const filtrados = cursosFromDB.filter(
       curso =>
         (curso.modalidad === "Online" && showOnline) ||
@@ -29,7 +28,17 @@ const VerCursos = ({ cursosFromDB }) => {
         (curso.modalidad === "Hibrido" && showHibrido)
     );
     setCursosFiltrados(filtrados);
-  };
+  }, [cursosFromDB, showHibrido, showOnline, showPresencial]);
+
+  // const applyFilters = () => {
+  //   const filtrados = cursosFromDB.filter(
+  //     curso =>
+  //       (curso.modalidad === "Online" && showOnline) ||
+  //       (curso.modalidad === "Presencial" && showPresencial) ||
+  //       (curso.modalidad === "Hibrido" && showHibrido)
+  //   );
+  //   setCursosFiltrados(filtrados);
+  // };
   return (
     <main className="p-6 lg:px-24 min-h-[100svh] md:flex items-start">
       {/* <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 text-center">
@@ -54,6 +63,7 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showPresencial}
               onCheckedChange={setShowPresencial}
               onSelect={e => e.preventDefault()}
+              disabled={!showHibrido && !showOnline}
             >
               Presencial
             </DropdownMenuCheckboxItem>
@@ -62,6 +72,7 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showOnline}
               onCheckedChange={setShowOnline}
               onSelect={e => e.preventDefault()}
+              disabled={!showHibrido && !showPresencial}
             >
               Online
             </DropdownMenuCheckboxItem>
@@ -70,16 +81,17 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showHibrido}
               onCheckedChange={setShowHibrido}
               onSelect={e => e.preventDefault()}
+              disabled={!showOnline && !showPresencial}
             >
               Hibrido
             </DropdownMenuCheckboxItem>
-            <Button
+            {/* <Button
               className="w-full rounded-lg mt-4 text-lg"
               onClick={applyFilters}
               disabled={!showHibrido && !showOnline && !showPresencial}
             >
               Aplicar
-            </Button>
+            </Button> */}
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -99,6 +111,7 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showOnline}
               onCheckedChange={setShowOnline}
               className="h-8 w-8 rounded-md"
+              disabled={!showHibrido && !showPresencial}
             />
             <label htmlFor="online" className="font-semibold text-lg">
               ONLINE
@@ -110,6 +123,7 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showPresencial}
               onCheckedChange={setShowPresencial}
               className="h-8 w-8 rounded-md"
+              disabled={!showHibrido && !showOnline}
             />
             <label htmlFor="presencial" className="font-semibold text-lg">
               PRESENCIAL
@@ -121,18 +135,19 @@ const VerCursos = ({ cursosFromDB }) => {
               checked={showHibrido}
               onCheckedChange={setShowHibrido}
               className="h-8 w-8 rounded-md"
+              disabled={!showOnline && !showPresencial}
             />
             <label htmlFor="hibrido" className="font-semibold text-lg">
               HIBRIDO
             </label>
           </div>
-          <Button
+          {/* <Button
             className=" rounded-lg mt-4 text-lg"
             onClick={applyFilters}
             disabled={!showHibrido && !showOnline && !showPresencial}
           >
             Aplicar Filtros
-          </Button>
+          </Button> */}
         </div>
       </div>
 
