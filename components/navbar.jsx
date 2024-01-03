@@ -58,7 +58,7 @@ const NavBar = () => {
             </SheetClose>
             <Separator />
             <SheetClose asChild>
-              <Link href="/">Blog</Link>
+              <Link href="/blog">Blog</Link>
             </SheetClose>
             <Separator />
             <SheetClose asChild>
@@ -73,6 +73,7 @@ const NavBar = () => {
             width={180}
             height={45}
             priority
+            className="hover:brightness-125 transition-all ease-in duration-200"
           />
         </Link>
         <div className="hidden lg:flex justify-around gap-8 font-medium	">
