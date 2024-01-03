@@ -39,10 +39,10 @@ const images = [
 const Hero = () => {
 
   return (
-    <div>
+    <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-16">
      
         <div className="lg:hidden">
-          <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px] mt-16 mb-4 mx-4 text-indigo-950 ">
+          <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 ">
             ¡ESTUDIA, TRABAJA Y EMPRENDE HOY!
           </h2>
           <EmblaCarousel slides={images} options={OPTIONS} />
@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
      
         <div className="hidden lg:block">
-          <div className="flex mt-16">
+          <div className="flex">
             <div className="w-1/2 text-center flex flex-col justify-around items-center mx-24">
               <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 ">
                 ESTUDIA <br></br> TRABAJA <br></br> EMPRENDE
