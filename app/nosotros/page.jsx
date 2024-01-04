@@ -172,7 +172,7 @@ const Page = () => {
       </section>
       <section className="flex flex-col text-center sm:ml-auto sm:mr-2">
         <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
-        <p>Ultimas noticias relacionadas al mundo fitness</p>
+        <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>
         <label htmlFor="email">
           Ingresa tu E-Mail
         </label>
