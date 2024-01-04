@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
-      <section className="flex justify-center items-center bg-idaclass w-full">
+      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
         <h1 className="text-4xl font-bold text-white">
           Conoce nuestra Ed Tech
         </h1>
@@ -21,6 +21,7 @@ const Page = () => {
           alt="hero image"
           height={300}
           width={300}
+          className="shrink-1"
         />
       </section>
       <section className="text-white bg-black w-full flex flex-col items-center py-12">
@@ -39,8 +40,9 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={300}
-              width={300}
+              height={220}
+              width={220}
+              className="shrink-1"
             />
             <div className="w-56">
               <h3 className="text-lg font-semibold">Nuestra Historia</h3>
@@ -56,8 +58,9 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={300}
-              width={300}
+              height={220}
+              width={220}
+              className="shrink-1"
             />
             <div className="w-56">
               <h3 className="text-lg font-semibold">Nuestra Presente</h3>
@@ -74,8 +77,9 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={300}
-              width={300}
+              height={220}
+              width={220}
+              className="shrink-1"
             />
             <div className="w-56">
               <h3 className="text-lg font-semibold">Nuestra Futuro</h3>
@@ -89,7 +93,7 @@ const Page = () => {
           </article>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center bg-slate-300 gap-4 py-12">
+      <section className="w-full flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
         <div className="flex flex-wrap justify-center items-center gap-7 w-full">
           <Card className="w-56">
