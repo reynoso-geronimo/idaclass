@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
-        <h1 className="text-4xl font-bold text-white">
+        <h1 className="text-4xl font-bold text-white text-center">
           Conoce nuestra Ed Tech
         </h1>
         <Image
@@ -24,7 +24,7 @@ const Page = () => {
           className="shrink-1"
         />
       </section>
-      <section className="text-white bg-black w-full flex flex-col items-center py-12">
+      <section className="text-white bg-black w-full flex flex-col items-center p-4">
         <div className="text-center max-w-3xl">
           <h2 className="text-2xl font-bold"> Sobre Nosotros</h2>
           <p className="text-lg">
@@ -40,8 +40,8 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={220}
-              width={220}
+              height={200}
+              width={200}
               className="shrink-1"
             />
             <div className="w-56">
@@ -49,8 +49,7 @@ const Page = () => {
               <p className="text-pretty">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora, ducimus
-                perspiciatis nam rem quidem sint accusamus ea ad!
+                distinctio accusantium eos reiciendis tempora.
               </p>
             </div>
           </article>
@@ -58,8 +57,8 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={220}
-              width={220}
+              height={200}
+              width={200}
               className="shrink-1"
             />
             <div className="w-56">
@@ -67,8 +66,7 @@ const Page = () => {
               <p className="text-pretty">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora, ducimus
-                perspiciatis nam rem quidem sint accusamus ea ad!
+                distinctio accusantium eos reiciendis tempora.
               </p>
             </div>
           </article>
@@ -77,17 +75,16 @@ const Page = () => {
             <Image
               src={`/assets/HeroLG.webp`}
               alt="hero image"
-              height={220}
-              width={220}
+              height={200}
+              width={200}
               className="shrink-1"
             />
             <div className="w-56">
-              <h3 className="text-lg font-semibold">Nuestra Futuro</h3>
+              <h3 className="text-lg font-semibold">Nuestro Futuro</h3>
               <p className="text-pretty">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora, ducimus
-                perspiciatis nam rem quidem sint accusamus ea ad!
+                distinctio accusantium eos reiciendis tempora.
               </p>
             </div>
           </article>
@@ -95,7 +92,7 @@ const Page = () => {
       </section>
       <section className="w-full flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
-        <div className="flex flex-wrap justify-center items-center gap-7 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center content-center	">
           <Card className="w-56">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
@@ -173,7 +170,7 @@ const Page = () => {
           LOGO
         </div>
       </section>
-      <section className="flex flex-col text-center ml-auto px-24">
+      <section className="flex flex-col text-center sm:ml-auto sm:mr-2">
         <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
         <p>Ultimas noticias relacionadas al mundo fitness</p>
         <label htmlFor="email">
