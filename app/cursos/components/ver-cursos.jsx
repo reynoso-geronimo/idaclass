@@ -1,7 +1,7 @@
 "use client";
 import { Sliders } from "lucide-react";
 import ShopCursoCard from "./shop-curso-card";
-import { Combobox } from "@/components/ui/comboBox";
+//import { Combobox } from "@/components/ui/comboBox";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const VerCursos = ({ cursosFromDB }) => {
