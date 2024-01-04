@@ -2,68 +2,184 @@ import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
+  // CardDescription,
+  // CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-const cards = [
-  {
-    titulo: "Nuestra Historia",
-    descripcion:
-      "Somos la primera Digital School de Latam con estándar de formación.",
-  },
-  {
-    titulo: "Nuestra Historia",
-    descripcion:
-      "Somos la primera Digital School de Latam con estándar de formación.",
-  },
-  {
-    titulo: "Nuestra Historia",
-    descripcion:
-      "Somos la primera Digital School de Latam con estándar de formación.",
-  },
-  {
-    titulo: "Nuestra Historia",
-    descripcion:
-      "Somos la primera Digital School de Latam con estándar de formación.",
-  },
-];
+import { Button } from "@/components/ui/button";
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center ">
-      <div className="w-full max-w-3xl">
-      {cards.map((card, index) => (
-        <Card 
-          key={index}
-          className={`max-w-sm rounded-xl ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'}`}
-        >
-          <CardHeader>
-            <CardTitle className="text-xl text-center font-bold text-black">
-              {card.titulo}
-            </CardTitle>
-            <CardDescription className="text-center text-blue-700 text-xl">
-              {card.descripcion}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="relative">
+    <main className="w-full flex flex-col items-center">
+      <section className="flex justify-center items-center bg-idaclass w-full">
+        <h1 className="text-4xl font-bold text-white">
+          Conoce nuestra Ed Tech
+        </h1>
+        <Image
+          src={`/assets/HeroLG.webp`}
+          alt="hero image"
+          height={300}
+          width={300}
+        />
+      </section>
+      <section className="text-white bg-black w-full flex flex-col items-center py-12">
+        <div className="text-center max-w-3xl">
+          <h2 className="text-2xl font-bold"> Sobre Nosotros</h2>
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Reprehenderit ad magnam libero corporis repudiandae fuga rerum nisi
+            qui, iusto odit quas eius. Quis, quam ipsam natus adipisci vel
+            assumenda nulla?
+          </p>
+        </div>
+
+        <div className="flex flex-col justify-center items-center w-full max-w-3xl gap-10 pt-12">
+          <article className="flex items-center justify-center mr-auto">
             <Image
-              src="/personaltrainer.webp"
-              alt="curso"
-              width={200}
-              height={150}
-              style={{ width: "100%", height: "100%" }}
+              src={`/assets/HeroLG.webp`}
+              alt="hero image"
+              height={300}
+              width={300}
             />
-          </CardContent>
-        </Card>
-      ))}
-      </div>
+            <div className="w-56">
+              <h3 className="text-lg font-semibold">Nuestra Historia</h3>
+              <p className="text-pretty">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                fugit doloremque, temporibus, numquam quo inventore laudantium
+                distinctio accusantium eos reiciendis tempora, ducimus
+                perspiciatis nam rem quidem sint accusamus ea ad!
+              </p>
+            </div>
+          </article>
+          <article className="flex flex-row-reverse items-center justify-center ml-auto">
+            <Image
+              src={`/assets/HeroLG.webp`}
+              alt="hero image"
+              height={300}
+              width={300}
+            />
+            <div className="w-56">
+              <h3 className="text-lg font-semibold">Nuestra Presente</h3>
+              <p className="text-pretty">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                fugit doloremque, temporibus, numquam quo inventore laudantium
+                distinctio accusantium eos reiciendis tempora, ducimus
+                perspiciatis nam rem quidem sint accusamus ea ad!
+              </p>
+            </div>
+          </article>
+
+          <article className="flex items-center justify-center mr-auto">
+            <Image
+              src={`/assets/HeroLG.webp`}
+              alt="hero image"
+              height={300}
+              width={300}
+            />
+            <div className="w-56">
+              <h3 className="text-lg font-semibold">Nuestra Futuro</h3>
+              <p className="text-pretty">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                fugit doloremque, temporibus, numquam quo inventore laudantium
+                distinctio accusantium eos reiciendis tempora, ducimus
+                perspiciatis nam rem quidem sint accusamus ea ad!
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section className="w-full flex flex-col items-center bg-slate-300 gap-4 py-12">
+        <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
+        <div className="flex flex-wrap justify-center items-center gap-7 w-full">
+          <Card className="w-56">
+            <CardHeader>
+              <CardTitle className="text-xl text-center font-bold text-black">
+                Innovacion
+              </CardTitle>
+              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+            </CardHeader>
+            <CardContent className="text-pretty">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+              delectus adipisci magnam distinctio veniam eligendi ipsam
+              doloremque quia atque.
+            </CardContent>
+          </Card>
+
+          <Card className="w-56">
+            <CardHeader>
+              <CardTitle className="text-xl text-center font-bold text-black">
+                Innovacion
+              </CardTitle>
+              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+            </CardHeader>
+            <CardContent className="text-pretty">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+              delectus adipisci magnam distinctio veniam eligendi ipsam
+              doloremque quia atque.
+            </CardContent>
+          </Card>
+
+          <Card className="w-56">
+            <CardHeader>
+              <CardTitle className="text-xl text-center font-bold text-black">
+                Innovacion
+              </CardTitle>
+              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+            </CardHeader>
+            <CardContent className="text-pretty">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+              delectus adipisci magnam distinctio veniam eligendi ipsam
+              doloremque quia atque.
+            </CardContent>
+          </Card>
+
+          <Card className="w-56">
+            <CardHeader>
+              <CardTitle className="text-xl text-center font-bold text-black">
+                Innovacion
+              </CardTitle>
+              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+            </CardHeader>
+            <CardContent className="text-pretty">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+              delectus adipisci magnam distinctio veniam eligendi ipsam
+              doloremque quia atque.
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      <section className="w-full max-w-6xl flex flex-wrap justify-evenly items-center gap-6 p-12">
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          LOGO
+        </div>
+      </section>
+      <section className="flex flex-col text-center ml-auto px-24">
+        <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
+        <p>Ultimas noticias relacionadas al mundo fitness</p>
+        <label htmlFor="email">
+          Ingresa tu E-Mail
+        </label>
+        <input type="text" placeholder="E-mail" className="border-2 border-idaclass m-4"/>
+        <Button className='mx-4 mb-4'>Suscribirme</Button>
+      </section>
     </main>
   );
 };
 
 export default Page;
-
-
