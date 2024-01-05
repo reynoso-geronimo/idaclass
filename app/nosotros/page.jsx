@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
-        <h1 className="text-4xl font-bold text-white text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
           Conoce nuestra Ed Tech
         </h1>
         <Image
@@ -26,8 +26,8 @@ const Page = () => {
       </section>
       <section className="text-white bg-black w-full flex flex-col items-center p-4">
         <div className="text-center max-w-3xl">
-          <h2 className="text-2xl font-bold"> Sobre Nosotros</h2>
-          <p className="text-lg">
+          <h2 className="text-2xl md:text-3xl font-bold"> Sobre Nosotros</h2>
+          <p className="text-lg md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Reprehenderit ad magnam libero corporis repudiandae fuga rerum nisi
             qui, iusto odit quas eius. Quis, quam ipsam natus adipisci vel
@@ -45,8 +45,10 @@ const Page = () => {
               className="shrink-1"
             />
             <div className="w-56">
-              <h3 className="text-lg font-semibold">Nuestra Historia</h3>
-              <p className="text-pretty">
+              <h3 className="text-lg md:text-xl font-semibold">
+                Nuestra Historia
+              </h3>
+              <p className="text-pretty md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
                 distinctio accusantium eos reiciendis tempora.
@@ -62,8 +64,10 @@ const Page = () => {
               className="shrink-1"
             />
             <div className="w-56">
-              <h3 className="text-lg font-semibold">Nuestra Presente</h3>
-              <p className="text-pretty">
+              <h3 className="text-lg md:text-xl font-semibold">
+                Nuestra Presente
+              </h3>
+              <p className="text-pretty md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
                 distinctio accusantium eos reiciendis tempora.
@@ -80,8 +84,10 @@ const Page = () => {
               className="shrink-1"
             />
             <div className="w-56">
-              <h3 className="text-lg font-semibold">Nuestro Futuro</h3>
-              <p className="text-pretty">
+              <h3 className="text-lg md:text-xl font-semibold">
+                Nuestro Futuro
+              </h3>
+              <p className="text-pretty md:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
                 fugit doloremque, temporibus, numquam quo inventore laudantium
                 distinctio accusantium eos reiciendis tempora.
@@ -150,34 +156,41 @@ const Page = () => {
           </Card>
         </div>
       </section>
-      <section className="w-full max-w-6xl flex flex-wrap justify-evenly items-center gap-6 p-12">
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
-        </div>
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
-        </div>
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
-        </div>
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
-        </div>
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
-        </div>
-        <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
-          LOGO
+      <section className="w-full flex flex-col items-center bg-gray-300 p-12">
+        <h2 className="text-center text-2xl font-bold text-">
+          Nuestros Partners
+        </h2>
+        <div className="w-full max-w-6xl flex flex-wrap justify-evenly items-center gap-6 p-12">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+            LOGO
+          </div>
         </div>
       </section>
       <section className="flex flex-col text-center sm:ml-auto sm:mr-2">
         <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
         <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>
-        <label htmlFor="email">
-          Ingresa tu E-Mail
-        </label>
-        <input type="text" placeholder="E-mail" className="border-2 border-idaclass m-4"/>
-        <Button className='mx-4 mb-4'>Suscribirme</Button>
+        <label htmlFor="email">Ingresa tu E-Mail</label>
+        <input
+          type="text"
+          placeholder="E-mail"
+          className="border-2 border-idaclass m-4"
+        />
+        <Button className="mx-4 mb-4">Suscribirme</Button>
       </section>
     </main>
   );
