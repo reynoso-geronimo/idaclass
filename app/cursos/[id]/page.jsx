@@ -72,7 +72,8 @@ const CursoPage = async ({ params }) => {
               Duracion: {duracion && duracion}
             </Badge>
           </div>
-          <div className="w-full my-8 flex flex-col gap-4 lg:flex-row">
+          <p className="font-semibold text-sm my-4">USD$ {precio && precio}</p>
+          <div className="w-full mb-4 flex flex-col gap-4 lg:flex-row">
             <Button
               size="lg"
               className="rounded-lg w-[90vw] lg:w-full font-extrabold "
