@@ -246,6 +246,21 @@ const CursoPage = async ({ params }) => {
           </ul>
         </article>
       </section>
+      <section className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 gap-4 ">
+      <article className="w-full flex flex-col items-center min-h-[300px] ">
+      <h3 className="text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
+            Perfil del egresado
+          </h3>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            
+          </ul>
+        </article>
+      </section>
     </main>
   );
 };
