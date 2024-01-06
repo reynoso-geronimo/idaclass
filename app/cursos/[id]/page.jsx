@@ -252,7 +252,7 @@ const CursoPage = async ({ params }) => {
       <h3 className="text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
             Perfil del egresado
           </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl">
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl shadow-idaclass">
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
