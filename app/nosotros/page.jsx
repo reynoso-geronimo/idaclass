@@ -24,7 +24,7 @@ const Page = () => {
           className="shrink-1"
         />
       </section>
-      <section className="text-white bg-black w-full flex flex-col items-center p-4">
+      <section className="text-white bg-gray-900 w-full flex flex-col items-center p-4">
         <div className="text-center max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold"> Sobre Nosotros</h2>
           <p className="text-lg md:text-xl">
@@ -96,7 +96,7 @@ const Page = () => {
           </article>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center bg-slate-220 gap-4 py-12">
+      <section className="w-full max-w-3xl flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
         <div className="grid grid-cols-2  gap-2 md:gap-4 lg:grid-cols-4 justify-items-center content-center	">
           <Card className="w-54">
@@ -181,7 +181,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col text-center sm:ml-auto sm:mr-2">
+      <section className="flex flex-col text-center sm:ml-auto sm:mr-24 my-12">
         <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
         <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>
         <label htmlFor="email">Ingresa tu E-Mail</label>

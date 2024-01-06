@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <section>
-        <div className="grid grid-cols-2 gap-16 px-10 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
+      
+        <section className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
           <span className="flex flex-col justify-start items-center w-40">
           <Image src={'/assets/experiencia.webp'}width={72} height={72} alt="experiencia"/>
             25 años experiencia
@@ -28,8 +28,8 @@ export default function Home() {
           <Image src={'/assets/empleabilidad.webp'}width={72} height={72} alt="empleabilidad"/>
             80% de empleabilidad
           </span>
-        </div>
-      </section>
+        </section>
+     
       <section>
         <h2 className="text-3xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
           Súmate a la comunidad IdaClass Academy y vive una experiencia de

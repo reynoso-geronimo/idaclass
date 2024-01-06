@@ -60,7 +60,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block 2xl:px-20 ">
+      <div className="hidden lg:block 2xl:px-[10%]">
         <div className="flex">
           <div className="w-1/2 text-center flex flex-col justify-around items-center mx-24">
             <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 ">
