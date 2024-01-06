@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
           Conoce nuestra Ed Tech
         </h1>
         <Image
@@ -98,57 +98,57 @@ const Page = () => {
       </section>
       <section className="w-full flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center content-center	">
-          <Card className="w-56">
+        <div className="grid grid-cols-2  gap-2 md:gap-4 lg:grid-cols-4 justify-items-center content-center	">
+          <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
                 Innovacion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty">
+            <CardContent className="text-pretty p-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
               delectus adipisci magnam distinctio veniam eligendi ipsam
               doloremque quia atque.
             </CardContent>
           </Card>
 
-          <Card className="w-56">
+          <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
                 Innovacion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty">
+            <CardContent className="text-pretty p-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
               delectus adipisci magnam distinctio veniam eligendi ipsam
               doloremque quia atque.
             </CardContent>
           </Card>
 
-          <Card className="w-56">
+          <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
                 Innovacion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty">
+            <CardContent className="text-pretty p-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
               delectus adipisci magnam distinctio veniam eligendi ipsam
               doloremque quia atque.
             </CardContent>
           </Card>
 
-          <Card className="w-56">
+          <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
                 Innovacion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty">
+            <CardContent className="text-pretty p-4">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
               delectus adipisci magnam distinctio veniam eligendi ipsam
               doloremque quia atque.
@@ -156,27 +156,27 @@ const Page = () => {
           </Card>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center bg-gray-300 p-12">
-        <h2 className="text-center text-2xl font-bold text-">
+      <section className="w-full flex flex-col items-center bg-gray-300 px-4 py-12">
+        <h2 className="text-center text-2xl font-bold mb-6">
           Nuestros Partners
         </h2>
-        <div className="w-full max-w-6xl flex flex-wrap justify-evenly items-center gap-6 p-12">
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+        <div className="w-full max-w-4xl flex flex-wrap justify-evenly items-center gap-6">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl">
+          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
             LOGO
           </div>
         </div>

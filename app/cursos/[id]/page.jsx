@@ -55,7 +55,7 @@ const CursoPage = async ({ params }) => {
       <section className="flex flex-col items-center w-full  bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300">
         <div className="relative flex flex-col items-center py-17.5 px-4 lg:p-0 lg:w-8/12 lg:m-auto lg:my-20 lg:items-start 2xl:my-37 2xl:w-6/12 2xl:ml-77 3xl:my-47 3xl:w-5/12 3xl:ml-91">
           {/* <Badge className="h-8 w-16 flex justify-center">Curso</Badge> */}
-          <h1 className="text-2xl lg:text-7xl font-bold my-4">
+          <h1 className="text-2xl lg:text-7xl font-bold my-4 tracking-tight">
             {nombre && nombre}
           </h1>
           <div className="flex flex-col items-center lg:flex-row gap-4">
