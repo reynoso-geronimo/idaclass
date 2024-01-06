@@ -207,7 +207,7 @@ const CursoPage = async ({ params }) => {
               <Calendar className="text-idaclass mr-4" strokeWidth={3} />
               <div>
                 <p className="font-semibold">Duracion</p>
-                <p>2 Meses</p>
+                <p>{duracion}</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -221,7 +221,7 @@ const CursoPage = async ({ params }) => {
               <Monitor className="text-idaclass mr-4" strokeWidth={3} />
               <div>
                 <p className="font-semibold">Modalidad de la cursada</p>
-                <p>Online</p>
+                <p>{modalidad}</p>
               </div>
             </div>
           </div>
