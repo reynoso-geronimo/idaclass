@@ -1,6 +1,7 @@
 "use server"
 
 import Curso from "@/models/Curso";
+import Blog from "@/models/Blog";
 
 export async function getCursos() {
   try {
@@ -27,4 +28,13 @@ export async function getCursosFromDB() {
   } catch (error) {
     console.log(error);
   }
+}
+export async function getBlogPostFromDb(){
+try {
+  const response = await Blog.findAll()
+  const data = response.map(blog => blog.toJSON());
+  return data
+} catch (error) {
+  console.log(error);
+}
 }
