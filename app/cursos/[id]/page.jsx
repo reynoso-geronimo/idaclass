@@ -55,7 +55,7 @@ const CursoPage = async ({ params }) => {
       <section className="flex flex-col items-center w-full  bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300">
         <div className="relative flex flex-col items-center py-17.5 px-4 lg:p-0 lg:w-8/12 lg:m-auto lg:my-20 lg:items-start 2xl:my-37 2xl:w-6/12 2xl:ml-77 3xl:my-47 3xl:w-5/12 3xl:ml-91">
           {/* <Badge className="h-8 w-16 flex justify-center">Curso</Badge> */}
-          <h1 className="text-2xl lg:text-7xl font-bold my-4">
+          <h1 className="text-2xl lg:text-7xl font-bold my-4 tracking-tight">
             {nombre && nombre}
           </h1>
           <div className="flex flex-col items-center lg:flex-row gap-4">
@@ -72,7 +72,8 @@ const CursoPage = async ({ params }) => {
               Duracion: {duracion && duracion}
             </Badge>
           </div>
-          <div className="w-full my-8 flex flex-col gap-4 lg:flex-row">
+          <p className="font-semibold text-sm my-4">USD$ {precio && precio}</p>
+          <div className="w-full mb-4 flex flex-col gap-4 lg:flex-row">
             <Button
               size="lg"
               className="rounded-lg w-[90vw] lg:w-full font-extrabold "
@@ -206,7 +207,7 @@ const CursoPage = async ({ params }) => {
               <Calendar className="text-idaclass mr-4" strokeWidth={3} />
               <div>
                 <p className="font-semibold">Duracion</p>
-                <p>2 Meses</p>
+                <p>{duracion}</p>
               </div>
             </div>
             <div className="flex items-center">
@@ -220,7 +221,7 @@ const CursoPage = async ({ params }) => {
               <Monitor className="text-idaclass mr-4" strokeWidth={3} />
               <div>
                 <p className="font-semibold">Modalidad de la cursada</p>
-                <p>Online</p>
+                <p>{modalidad}</p>
               </div>
             </div>
           </div>
@@ -243,6 +244,21 @@ const CursoPage = async ({ params }) => {
               Manual complementario a los contenidos brindados en el curso.
             </li>
             <li>Material de consulta rápida.</li>
+          </ul>
+        </article>
+      </section>
+      <section className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 gap-4 ">
+      <article className="w-full flex flex-col items-center min-h-[300px] ">
+      <h3 className="text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
+            Perfil del egresado
+          </h3>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl shadow-idaclass">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            
           </ul>
         </article>
       </section>
