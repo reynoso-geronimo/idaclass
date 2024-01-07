@@ -48,6 +48,7 @@ const postCollection = [
 
  const Page = async () => {
  const blogPost=await getBlogPostFromDb();
+ console.log(blogPost)
   return (
     <main>
    
