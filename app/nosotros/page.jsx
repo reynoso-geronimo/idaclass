@@ -156,7 +156,7 @@ const Page = () => {
           </Card>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center bg-gray-300 px-4 py-12">
+      <section className="w-full flex flex-col items-center space-y-4 bg-gray-300 px-4 min-h-72 py-12">
         <h2 className="text-center text-2xl font-bold mb-6">
           Nuestros Partners
         </h2>
