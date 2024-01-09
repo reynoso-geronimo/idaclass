@@ -49,11 +49,11 @@ const Carousel = props => {
           <div className="embla__container">
             {slides.map((image, index) => (
               <div
-                className="embla__slide__modalidad h-[400px] relative"
+                className="embla__slide__modalidad h-[400px] relative "
                 key={index}
               >
                 <Image
-                  className="embla__slide__img  object-[0px_30%]"
+                  className="embla__slide__img  object-[0px_30%] rounded-xl"
                   src={image.src}
                   alt={image.alt}
                   fill
