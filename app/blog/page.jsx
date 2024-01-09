@@ -49,10 +49,12 @@ const postCollection = [
 const Page = async () => {
   const blogPost = await getBlogPostFromDb();
   console.log(blogPost);
+  console.log(blogPost);
   return (
     <main className="flex flex-col items-center">
       <div className="max-w-7xl p-8 my-8 grid grid-cols-1 md:grid-cols-3 items-center	gap-12">
-        {postCollection.map((item, index) => (
+        {
+        blogPost.map((item, index) => (
           <div
             key={item.id}
             className={`bg-white flex mx-auto p-6 rounded-lg shadow-md max-w-[420px] min-h-[500px] ${
@@ -67,8 +69,8 @@ const Page = async () => {
               }`}
             >
               <Image
-                src={item.image}
-                alt={item.title}
+             src={"/" + item.foto}
+                alt={item.titulo}
                 width={420}
                 height={420}
                 className={`rounded-lg object-cover  ${
@@ -76,9 +78,9 @@ const Page = async () => {
                 }`}
               />
               <div className={` ${index === 0 ? "" : ""}`}>
-                <h2 className="text-xl font-semibold ">{item.title}</h2>
+                <h2 className="text-xl font-semibold ">{item.titulo}</h2>
                 <p className="text-gray-500">Fecha de publicación</p>
-                <p className="text-gray-700">{item.paragraph}</p>
+                <p className="text-gray-700">{item.introduccion}</p>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-6 md:mt-0">
                   Leer más
                 </button>
