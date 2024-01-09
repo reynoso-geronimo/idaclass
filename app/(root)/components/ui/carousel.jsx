@@ -46,14 +46,14 @@ const Carousel = props => {
     <>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container w-[100vw]">
+          <div className="embla__container">
             {slides.map((image, index) => (
               <div
                 className="embla__slide__modalidad h-[400px] relative"
                 key={index}
               >
                 <Image
-                  className="embla__slide__img "
+                  className="embla__slide__img  object-[0px_30%]"
                   src={image.src}
                   alt={image.alt}
                   fill
