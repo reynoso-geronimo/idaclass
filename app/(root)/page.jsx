@@ -1,4 +1,3 @@
-import { YouTubeEmbed } from "@next/third-parties/google";
 import Hero from "@/app/(root)/components/hero";
 import Pasos123 from "./components/ui/pasos123";
 import Faq from "./components/faq";
@@ -6,26 +5,13 @@ import Cursos from "./components/cursos";
 import Certificacion from "./components/certificacion";
 import Modalidad from "./components/modalidad";
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import Ventajas from "@/components/ventajas";
 export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      {/* <div className="flex flex-col items-center h-[80vh] w-full mx-auto max-w-[1920px] m-2 border-2 shadow-2xl p-8">
-        <h1 className="text-center text-3xl md:text-5xl font-extrabold max-w-[800px] md:max-w-[600px] mb-4 text-indigo-950">
-          Conoce Ida Class
-        </h1>
-        <div className="flex flex-col items-center h-[90vh] w-full mx-auto max-w-[1520px] m-2 border-2 shadow-2xl p-8">
-          <YouTubeEmbed videoid="kfLDLD653zM" />
-        </div>
-      </div> */}
+     
       <section className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
         <span className="flex flex-col justify-start items-center w-40">
           <Image
@@ -66,7 +52,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-3xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
+        <h2 className="text-3xl text-center font-extrabold w-full max-w-7xl mt-16 mb-4 mx-auto text-indigo-950 ">
           IdaClass, es la llave para transformar tu pasión por el fitness en una
           carrera exitosa en tiempo record. Nuestra plataforma innovadora está
           diseñada para inspirar y empoderar a la nueva generación de
@@ -109,11 +95,9 @@ export default function Home() {
             imagen={`3.webp`}
           />
         </div>
-        <div className="flex justify-around flex-wrap  text-blue-700 font-medium w-full max-w-7xl">
-      
-        </div>
+        <div className="flex justify-around flex-wrap  text-blue-700 font-medium w-full max-w-7xl"></div>
       </section>
-      <Ventajas/>
+      <Ventajas />
       <Cursos />
       <Modalidad />
       <Certificacion />

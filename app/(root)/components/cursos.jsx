@@ -48,12 +48,15 @@ const Cursos = props => {
         <h2 className="text-3xl text-center font-extrabold  mb-4 mx-4 text-indigo-950 ">
           Descubri como podemos potenciarte
         </h2>
-        <p className="font-semibold text-center text-black text-lg font-normal leading-loose tracking-wide">
-        Cursos, carreras y capacitaciones digitales, hibridas 100% enfocadas en la práctica basandonos en el modelo Learn By Doing .
+        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide">
+          Cursos, carreras y capacitaciones digitales, hibridas 100% enfocadas
+          en la práctica basandonos en el modelo Learn By Doing.
         </p>
         <p className="text-center text-black text-lg font-normal leading-loose tracking-wide ">
-
-         formación y especialización para la industria del deporte , actividad física y fitness. Formamos a entrenadores y especialistas que luego pueden emprender sus propios negocios independientes y/o trabajar luego en instituciones deportivas y gimnasios.
+          Formación y especialización para la industria del deporte, actividad
+          física y fitness. Formamos a entrenadores y especialistas que luego
+          pueden emprender sus propios negocios independientes y/o trabajar
+          luego en instituciones deportivas y gimnasios.
         </p>
       </div>
       <div className="embla">
@@ -92,11 +95,12 @@ const Cursos = props => {
           />
         ))}
       </div>
-  
-       <div className="w-100 flex justify-center">
-       <Button size="lg" className='rounded-3xl m-10 font-bold' asChild><Link href='/cursos'>Ver todos los cursos</Link></Button>
- 
-       </div>
+
+      <div className="w-100 flex justify-center">
+        <Button size="lg" className="rounded-3xl m-10 font-bold" asChild>
+          <Link href="/cursos">Ver todos los cursos</Link>
+        </Button>
+      </div>
     </section>
   );
 };
