@@ -9,7 +9,7 @@ const Page = async () => {
       <div className="max-w-7xl p-8 my-8 grid grid-cols-1 md:grid-cols-3 items-center	gap-12">
         {blogPost.map((item, index) => (
           <div
-            key={item.id}
+            key={item+index}
             className={`bg-white p-6 rounded-lg shadow-md max-w-[420px] min-h-[500px] ${
               index === 0 &&
               "md:col-span-3 md:max-w-full md:w-full  md:min-h-[10px] "
