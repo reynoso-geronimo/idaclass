@@ -14,6 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Ventajas from "@/components/ventajas";
+import Partners from "@/components/partners";
 export default function Home() {
   return (
     <main className="overflow-hidden">
@@ -74,12 +75,7 @@ export default function Home() {
           actividad física.
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-center gap-6 pt-10">
-          {/* <div className=" w-full max-w-[570px]  m-2 border-2  border-sky-500 shadow-2xl">
-      
-            <div>
-              <YouTubeEmbed videoid="kfLDLD653zM" />
-            </div> 
-           </div> */}
+         
           <ol className="list-decimal list-inside flex flex-col justify-center w-full text-center md:text-left text-xl gap-1 md:w-1/2 max-w-[570px]">
             <li>Formate con los mejores profesionales de la industria.</li>
             <li>Concreta tus ideas y proyectos.</li>
@@ -116,7 +112,10 @@ export default function Home() {
       <Ventajas/>
       <Cursos />
       <Modalidad />
+    
       <Certificacion />
+ 
+      <Partners/>
       <Faq />
     </main>
   );

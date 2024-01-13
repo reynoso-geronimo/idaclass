@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Partners from "@/components/partners";
 
 const Page = () => {
   return (
@@ -153,31 +154,7 @@ Vendemos cursos de formación y especialización para la industria del deporte ,
           </Card>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center space-y-4 bg-gray-300 px-4 min-h-72 py-12">
-        <h2 className="text-center text-2xl font-bold mb-6">
-          Nuestros Partners
-        </h2>
-        <div className="w-full max-w-4xl flex flex-wrap justify-evenly items-center gap-6">
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-          <div className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl">
-            LOGO
-          </div>
-        </div>
-      </section>
+     <Partners/>
       <section className="flex flex-col text-center sm:ml-auto sm:mr-24 my-12">
         <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
         <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>

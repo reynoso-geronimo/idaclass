@@ -6,7 +6,8 @@ const slides = [
   {
     src:  modalidad1 ,
     alt: "modalidad",
-    text: "ACA VA UN TEXTO",
+    text: "  aca va un texto  "
+    
   },
   {
     src:  modalidad2 ,

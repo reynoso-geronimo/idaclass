@@ -39,13 +39,13 @@ const ventajasCollection = [
   const Ventajas = async () => {
    
     return (
-      <main className="flex flex-col items-center ">
-        <div className="bg-blue-600 max-w-full w-full p-8 my-4 grid grid-cols-1 md:grid-cols-2 items-center	gap-12">
+      <main className="flex flex-col items-center">
+        <div className=" max-w-full w-full p-8 my-4 grid grid-cols-1 md:grid-cols-2 items-center	gap-12">
           {
          ventajasCollection.map((item, index) => (
-           <Card className="transform hover:scale-105  transition-transform duration-300 ease-in-out max-w-4xl p-8 my-8 mx-auto " key={ventajasCollection.id}>
+           <Card className="text-center border-none transform hover:scale-105  transition-transform duration-300 ease-in-out max-w-4xl p-8 my-8 mx-auto " key={ventajasCollection.id}>
            <CardContent className="p-0">
-         { <Image   src={"/" + item.image} alt="alt" width={400} height={400} className="rounded-t-md  mx-auto"/> } 
+         { <Image src={"/" + item.image} alt="alt" width={400} height={400} className="rounded-t-md  mx-auto"/> } 
       </CardContent>
       <CardHeader>
         <CardTitle>{item.title}</CardTitle>
