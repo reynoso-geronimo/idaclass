@@ -1,12 +1,4 @@
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"; // Ajusta la ruta según tu estructura de carpetas
-  
-  const Partners = () => {
+const Partners = () => {
     const partnerLogos = [
       "LOGO1",
       "LOGO2",
@@ -21,12 +13,12 @@ import {
         <h2 className="text-center text-2xl font-bold mb-6">Nuestros Partners</h2>
         <div className="w-full max-w-4xl flex flex-wrap justify-evenly items-center gap-6">
           {partnerLogos.map((logoText, index) => (
-            <Card
+            <div
               className="bg-gray-700 w-28 h-20 flex justify-center items-center text-white font-extrabold text-xl shadow-2xl"
               key={index}
             >
               {logoText}
-            </Card>
+            </div>
           ))}
         </div>
       </section>

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-     
+
       <section className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
         <span className="flex flex-col justify-start items-center w-40">
           <Image
@@ -62,7 +62,6 @@ export default function Home() {
           actividad física.
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-center gap-6 pt-10">
-         
           <ol className="list-decimal list-inside flex flex-col justify-center w-full text-center md:text-left text-xl gap-1 md:w-1/2 max-w-[570px]">
             <li>Formate con los mejores profesionales de la industria.</li>
             <li>Concreta tus ideas y proyectos.</li>
@@ -97,10 +96,12 @@ export default function Home() {
       <Ventajas />
       <Cursos />
       <Modalidad />
-    
+
       <Certificacion />
- 
-      <Partners/>
+
+      <div className="mt-12">
+      <Partners />
+      </div>
       <Faq />
     </main>
   );
