@@ -10,15 +10,15 @@ const Page = async () => {
         {blogPost.map((item, index) => (
           <div
             key={item.id}
-            className={`bg-white flex mx-auto p-6 rounded-lg shadow-md max-w-[420px] min-h-[500px] ${
+            className={`bg-white p-6 rounded-lg shadow-md max-w-[420px] min-h-[500px] ${
               index === 0
                 ? "md:col-span-3 md:max-w-full md:w-full  md:min-h-[10px] "
                 : ""
             }`}
           >
             <div
-              className={`w-full flex flex-col justify-start space-y-6 h-full  ${
-                index === 0 ? "md:flex-row md:gap-x-12 md:items-start" : ""
+              className={`w-full flex flex-col justify-start gap-y-6 h-full  ${
+                index === 0 ? "md:flex-row md:gap-x-12 md:items-center" : ""
               }`}
             >
               <Image
