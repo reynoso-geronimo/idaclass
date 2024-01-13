@@ -22,7 +22,7 @@ const Page = async () => {
               }`}
             >
               <Image
-             src={"/" + item.foto}
+                src={"/" + item.foto}
                 alt={item.titulo}
                 width={420}
                 height={420}
@@ -39,10 +39,13 @@ const Page = async () => {
                     year: "numeric",
                   })}
                 </p>
-                <p className="text-gray-700">{item.introduccion}</p>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-6 md:mt-0">
-                  Leer más
-                </button>
+                <p
+                  className={`text-gray-700 line-clamp-6 ${
+                    index === 0 ? "md:line-clamp-[8]" : ""
+                  }`}
+                >
+                  {item.introduccion}
+                </p>
               </div>
             </div>
           </div>
