@@ -41,34 +41,34 @@ const ventajasCollection = [
 
 const Ventajas = async () => {
   return (
-    <main className="flex flex-col items-center">
-      <div className=" max-w-full w-full p-8 my-4 grid grid-cols-1 md:grid-cols-2 items-center	gap-12">
+    <section className="flex flex-col items-center">
+      <div className=" max-w-7xl w-full p-8 my-4 grid grid-cols-1 md:grid-cols-2 items-center	gap-12">
         {ventajasCollection.map((item, index) => (
           <Card
-            className="text-center border-none transform hover:scale-105  transition-transform duration-300 ease-in-out max-w-4xl p-8 my-8 mx-auto "
-            key={ventajasCollection.id+index}
+            className="text-center border-none transform hover:scale-105  transition-transform duration-300 ease-in-out max-w-4xl p-0  mx-auto h-full"
+            key={ventajasCollection.id + index}
           >
-            <CardContent className="p-0">
+            <CardContent className="p-0 mb-4">
               {
                 <Image
                   src={"/" + item.image}
                   alt="alt"
                   width={400}
                   height={400}
-                  className="rounded-t-md  mx-auto"
+                  className="rounded-t-md mx-auto"
                 />
               }
             </CardContent>
-            <CardHeader>
+            <CardHeader className="p-0">
               <CardTitle>{item.title}</CardTitle>
-              <CardDescription className="text-blue-800 text-xl">
+              <CardDescription className="text-blue-800 text-xl ">
                 {item.paragraph}
               </CardDescription>
             </CardHeader>
           </Card>
         ))}
       </div>
-    </main>
+    </section>
   );
 };
 
