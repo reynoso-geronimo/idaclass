@@ -1,4 +1,4 @@
-import TodosCuros from "./components/ver-cursos";
+import TodosCuros from "./_components/ver-cursos";
 import { getCursosFromDB } from "../actions";
 
 const Page = async () => {

@@ -1,13 +1,14 @@
-import Hero from "@/app/(root)/components/hero";
-import Pasos123 from "./components/ui/pasos123";
-import Faq from "./components/faq";
-import Cursos from "./components/cursos";
-import Certificacion from "./components/certificacion";
-import Modalidad from "./components/modalidad";
 import Image from "next/image";
 
+import Hero from "./_components/hero";
+import Pasos123 from "./_components/ui/pasos123";
 import Ventajas from "@/components/ventajas";
+import Cursos from "./_components/cursos";
+import Modalidad from "./_components/modalidad";
+import Certificacion from "./_components/certificacion";
 import Partners from "@/components/partners";
+import Faq from "./_components/faq";
+
 export default function Home() {
   return (
     <main className="overflow-hidden">
