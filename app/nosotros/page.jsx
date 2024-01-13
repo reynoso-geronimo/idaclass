@@ -28,7 +28,7 @@ const Page = () => {
         <div className="text-center max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold"> Sobre Nosotros</h2>
           <p className="text-lg md:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Lddddorem ipsum dolor sit amet, consectetur adipisicing elit.
             Reprehenderit ad magnam libero corporis repudiandae fuga rerum nisi
             qui, iusto odit quas eius. Quis, quam ipsam natus adipisci vel
             assumenda nulla?
@@ -49,9 +49,7 @@ const Page = () => {
                 Nuestra Historia
               </h3>
               <p className="text-pretty md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora.
+              IDACLASS, es fundada en Octubre 2021 en Florida, EE.UU., por , Julio Alghilante Argentino, residente en Buenos Aires . Cabe destacar que Julio, inició este negocio en forma presencial en Argentina hace más de 20 años, llegando a tener 40.000 alumnos distribuidos principalmente en Argentina, Uruguay y Bolivia. Producto de la pandemia, el negocio se vió fuertemente afectado y fue entonces que se fundó una nueva compañía en USA con el objetivo de una revolución Digital para la empresa misma buscando innovar en tecnología ,servicio y expandirnos asi a todo Latino America.
               </p>
             </div>
           </article>
@@ -68,9 +66,10 @@ const Page = () => {
                 Nuestra Presente
               </h3>
               <p className="text-pretty md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora.
+              Esta nueva compañía, Edtech para el deporte y la actividad física, propone virtualizar el negocio y vender online a todo Hispanoamérica.
+
+Vendemos cursos de formación y especialización para la industria del deporte , actividad física y fitness. Formamos a entrenadores y especialistas que luego pueden emprender sus propios negocios independientes y/o trabajar luego en instituciones deportivas y gimnasios.
+
               </p>
             </div>
           </article>
@@ -88,9 +87,7 @@ const Page = () => {
                 Nuestro Futuro
               </h3>
               <p className="text-pretty md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                fugit doloremque, temporibus, numquam quo inventore laudantium
-                distinctio accusantium eos reiciendis tempora.
+              En el horizonte de IdaClass LLC, vislumbramos un futuro vibrante y prometedor, marcado por nuestra incansable dedicación a transformar la educación y la formación en el ámbito del deporte y la actividad física en Hispanoamérica.
               </p>
             </div>
           </article>

@@ -64,11 +64,10 @@ const Hero = () => {
         <div className="flex">
           <div className="w-1/2 text-center flex flex-col justify-around items-center mx-24">
             <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 ">
-              ESTUDIA <br></br> TRABAJA <br></br> EMPRENDE
+Unete a la revolucion educativa de la industria Sport Fitness
             </h2>
             <h2 className="text-lg uppercase text-blue-700 font-medium tracking-[3px]	 max-w-[768px]">
-              Alcanza el exito como entrenador Obten una carrera rentable
-              Transforma tu vida con IdaClass
+            Transforma tu Pasion,Despierta tu Potencial ,Conviertete en un lider dentro de la industria .
             </h2>
             <Button
               size="lg"

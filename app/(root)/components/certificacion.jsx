@@ -7,7 +7,7 @@ const Certificacion = () => {
   return (
     <section className="flex flex-col items-center py-2">
       <h2 className="text-3xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
-        Obtén la Certificación de mayor reconocimiento del mercado y Aval
+        Obtén nuestra Certificación con amplio reconocimiento en el mercado y Aval
         Internacional.
       </h2>
       <p className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	max-w-[1024px]">

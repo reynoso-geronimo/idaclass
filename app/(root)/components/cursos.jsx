@@ -45,17 +45,15 @@ const Cursos = props => {
   return (
     <section className="bg-slate-200 pb-4">
       <div className="text-center p-6">
-        <h2 className="text-2xl text-center font-extrabold  mb-4 mx-4 text-indigo-950 ">
-          Elige el curso para tu futuro profesional.
+        <h2 className="text-3xl text-center font-extrabold  mb-4 mx-4 text-indigo-950 ">
+          Descubri como podemos potenciarte
         </h2>
-        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide">
-          Somos la propuesta más completa del mercado. Con nuestra formación
-          integral, eliges 1 curso te llevas 4, lo que te permitirá
-          diferenciarte en el mercado laboral.
+        <p className="font-semibold text-center text-black text-lg font-normal leading-loose tracking-wide">
+        Cursos, carreras y capacitaciones digitales, hibridas 100% enfocadas en la práctica basandonos en el modelo Learn By Doing .
         </p>
-        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide">
-          Nuestros cursos incluyen: Marketing personal, Herramientas de
-          liderazgo, Comunicación Asertiva, Ventas y Redes Sociales.
+        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide ">
+
+         formación y especialización para la industria del deporte , actividad física y fitness. Formamos a entrenadores y especialistas que luego pueden emprender sus propios negocios independientes y/o trabajar luego en instituciones deportivas y gimnasios.
         </p>
       </div>
       <div className="embla">
