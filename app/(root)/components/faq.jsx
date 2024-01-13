@@ -160,10 +160,10 @@ const preguntas = [
     respuesta: <p>Tienes acceso al curso de por vida.</p>,
   },
   {
-    pregunta: <p>¿ Como accedo a una BecaClass o beneficio exclusivo ?</p>,
+    pregunta: <p>¿ Como accedo a una BecaClass o beneficio exclusivo?</p>,
     respuesta: (
       <p>
-        IdaClass Academy creó un <span className="font-bold">Beca Única</span>{" "}
+        IdaClass Academy creó un <span className="font-bold">Beca Única </span>
         para aquellos que buscan una solución y de forma sencilla poder acceder
         a una ayuda, que le permita hacer más accesible el inicio de su carrera.
         Aquellos interesados deben solicitarlo por Email a
@@ -183,14 +183,14 @@ const Faq = () => {
       <Accordion
         type="single"
         collapsible
-        className="m-6 border-2 border-sky-950 border-t-0 w-[90%] max-w-[1024px]"
+        className="m-6 w-[90%] max-w-[1024px]"
       >
         {preguntas.map((pregunta, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
-            <AccordionTrigger className="text-sm md:text-lg border-t-2 border-sky-950 text-left px-4 ">
+            <AccordionTrigger className="text-sm md:text-lg  text-left px-4 ">
               {pregunta.pregunta}
             </AccordionTrigger>
-            <AccordionContent className="text-xs md:text-base p-2 border-t-[1px] border-sky-950 max-w-[1024px]">
+            <AccordionContent className="text-xs md:text-base p-2  max-w-[1024px]">
               {pregunta.respuesta}
             </AccordionContent>
           </AccordionItem>

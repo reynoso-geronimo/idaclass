@@ -2,6 +2,7 @@ import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
+import Introvideo from "./introvideo";
 
 const OPTIONS = { loop: true };
 const images = [
@@ -82,6 +83,9 @@ Unete a la revolucion educativa de la industria Sport Fitness
           </div>
         </div>
         <Separator className="my-4 bg-gray-200" />
+      </div>
+      <div className="pb-4">
+      <Introvideo />
       </div>
     </div>
   );
