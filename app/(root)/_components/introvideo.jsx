@@ -13,7 +13,7 @@ const Introvideo = () => {
         <DialogTrigger className="text-idaclass flex text-2xl font-bold items-center gap-2">
           <YoutubeIcon size={40}/> Conoce Idaclass
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="pt-12 bg-zinc-800 bg-opacity-95 border-none">
         <YouTubeEmbed videoid="kfLDLD653zM"/>
          
         </DialogContent>
