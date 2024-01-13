@@ -175,6 +175,7 @@ const Page = () => {
         <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>
         <label htmlFor="email">Ingresa tu E-Mail</label>
         <input
+          id="email"
           type="text"
           placeholder="E-mail"
           className="border-2 border-idaclass m-4"
