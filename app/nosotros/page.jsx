@@ -57,7 +57,7 @@ const Page = () => {
         <div className="flex flex-col justify-center items-center w-full max-w-4xl gap-y-20 p-6">
           {articles.map((article, index) => (
             <article
-              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center "
+              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
               key={index}
             >
               <Image
