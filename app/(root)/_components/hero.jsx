@@ -41,13 +41,13 @@ const Hero = () => {
   return (
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-16">
       <div className="lg:hidden">
-        <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 ">
-          ¡ESTUDIA, TRABAJA Y EMPRENDE HOY!
+        <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter">
+          Unete a la revolucion educativa de la industria Sport Fitness
         </h2>
         <EmblaCarousel slides={images} options={OPTIONS} />
         <h2 className="mt-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]">
-          Alcanza el exito como entrenador Obten una carrera rentable Transforma
-          tu vida con IdaClass
+          Transforma tu Pasion,Despierta tu Potencial, Conviertete en un lider
+          dentro de la industria.
         </h2>
         <div className="flex justify-center w-full">
           <Button
