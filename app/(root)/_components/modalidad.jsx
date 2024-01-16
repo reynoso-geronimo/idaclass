@@ -6,18 +6,18 @@ const slides = [
   {
     src:  modalidad1 ,
     alt: "modalidad",
-    text: "  aca va un texto   "
+    text: "Desarrolla tu futuro"
     
   },
   {
     src:  modalidad2 ,
     alt: "modalidad",
-    text: "ACA VA UN TEXTO",
+    text: "Aprende haciendo",
   },
   {
     src:  modalidad3 ,
     alt: "modalidad",
-    text: "ACA VA UN TEXTO",
+    text: "Expertos internacionales",
   },
 ];
 

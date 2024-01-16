@@ -10,7 +10,7 @@ const Partners = () => {
   
     return (
       <section className="w-full flex flex-col items-center space-y-4 bg-gray-300 px-4 min-h-72 py-12">
-        <h2 className="text-center text-2xl font-bold mb-6">Nuestros Partners</h2>
+        <h2 className="text-center text-2xl font-bold mb-6">Nos avalan</h2>
         <div className="w-full max-w-4xl flex flex-wrap justify-evenly items-center gap-6">
           {partnerLogos.map((logoText, index) => (
             <div

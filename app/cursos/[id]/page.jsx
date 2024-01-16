@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
 const CursoPage = async ({ params }) => {
   const [curso, paginaCurso] = await Promise.all([
@@ -30,7 +31,7 @@ const CursoPage = async ({ params }) => {
   if (!paginaCurso) {
     return (
       <div className="flex flex-col items-center">
-        <Construction size={72} className=" rounded-full" fill="#FFFF00"/>
+        <Construction size={72} className=" rounded-full" fill="#FFFF00" />
         <h1 className="text-3xl font-bold">Sitio bajo construccion</h1>
       </div>
     );
@@ -124,7 +125,7 @@ const CursoPage = async ({ params }) => {
               size={24}
               strokeWidth={4}
               className="rounded-full bg-sky-700 text-white p-0.5"
-            />{" "}
+            />
             {check_2}
           </li>
           <li className="flex items-center">
@@ -132,7 +133,7 @@ const CursoPage = async ({ params }) => {
               size={24}
               strokeWidth={4}
               className="rounded-full bg-sky-700 text-white p-0.5"
-            />{" "}
+            />
             {check_3}
           </li>
           <li className="flex items-center">
@@ -140,7 +141,7 @@ const CursoPage = async ({ params }) => {
               size={24}
               strokeWidth={4}
               className="rounded-full bg-sky-700 text-white p-0.5"
-            />{" "}
+            />
             {check_4}
           </li>
         </ul>
@@ -248,8 +249,8 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       <section className="flex flex-col px-4 py-3 items-center lg:flex-row lg:py-16 lg:justify-evenly lg:max-w-7xl lg:m-auto xl:px-27 2xl:max-w-8xl 3xl:max-w-8x5l 2xl:px-36 gap-4 ">
-      <article className="w-full flex flex-col items-center min-h-[300px] ">
-      <h3 className="text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
+        <article className="w-full flex flex-col items-center min-h-[300px] ">
+          <h3 className="text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
             Perfil del egresado
           </h3>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl shadow-idaclass">
@@ -258,9 +259,17 @@ const CursoPage = async ({ params }) => {
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            
           </ul>
         </article>
+      </section>
+      {/* modalidades y pago */}
+      <section>
+        <h1 className="text-center font-bold text-xl uppercase py-12">Elige la modalidad que mas se adapte a ti</h1>
+        <div className="flex flex-wrap items-center justify-center gap-12 mb-12">
+          <TarjetaModalidad />
+          <TarjetaModalidad />
+          <TarjetaModalidad />
+        </div>
       </section>
     </main>
   );

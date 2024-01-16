@@ -45,12 +45,11 @@ const Cursos = props => {
   return (
     <section className="bg-slate-200 pb-4">
       <div className="text-center p-6">
-        <h2 className="text-3xl text-center font-extrabold  mb-4 mx-4 text-indigo-950 ">
-          Descubri como podemos potenciarte
+        <h2 className="text-3xl text-left font-extrabold  mb-4 mx-4 text-indigo-950 ">
+          Soluciones personalizadas para tu exito
         </h2>
         <p className="text-center text-black text-lg font-normal leading-loose tracking-wide">
-          Cursos, carreras y capacitaciones digitales, hibridas 100% enfocadas
-          en la práctica basandonos en el modelo Learn By Doing.
+         01 Acompañamiento Personalizado/ Docentes de clase mundial 
         </p>
         <p className="text-center text-black text-lg font-normal leading-loose tracking-wide ">
           Formación y especialización para la industria del deporte, actividad
