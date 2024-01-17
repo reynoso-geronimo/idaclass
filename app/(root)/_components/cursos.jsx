@@ -1,4 +1,10 @@
 "use client";
+
+import { Roboto_Mono } from "next/font/google";
+const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+});
 import { useState, useEffect, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import AutoHeight from "embla-carousel-auto-height";
@@ -44,58 +50,75 @@ const Cursos = props => {
 
   return (
     <section className="bg-slate-200 p-6">
-      <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col gap-4 max-w-2xl items-center mx-auto my-14">
         <h2 className="text-5xl text-left font-extrabold  mb-4  text-indigo-950 tracking-tighter">
           Soluciones personalizadas para tu exito
         </h2>
-        <div className="flex items-center gap-2">
-          <div className="text-left text-black text-6xl font-bold ">01</div>
-          <div className="text-left leading-tight">
-            <h4 className="font-bold">
+
+        <div className="sm:flex items-center gap-4">
+          <span className={roboto_mono.className}>
+            <span className="font-extrabold text-5xl min-w-[70px] tracking-titracking-tighter ">
+              01
+            </span>
+          </span>
+          <div>
+            <h5 className="font-bold">
               Acompañamiento Personalizado/ Docentes de clase mundial:
-            </h4>
+            </h5>
             <p>
               Nuestro equipo de trainer educativos y expertos internacionales te
-              guiarán en cada paso de tu carrera , como alumno, como profesional
+              guiarán en cada paso de tu carrera, como alumno, como profesional
               o emprendedor para alcances tus metas con exito
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="text-left text-black text-6xl font-bold ">02</div>
-          <div className="text-left leading-tight">
-            <h4 className="font-bold">
+
+        <div className="sm:flex items-center gap-4">
+          <span className={roboto_mono.className}>
+            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter  ">
+              02
+            </span>
+          </span>
+          <div>
+            <h5 className="font-bold">
               Certificado Profesional y Aval Universitario:
-            </h4>
+            </h5>
             <p>
               Alcanza tus objetivos y certifica tus conocimientos con nuestro
               certificado profesional respaldado por un aval universitario.
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="text-left text-black text-6xl font-bold ">03</div>
-          <div className="text-left leading-tight">
-            <h4 className="font-bold">
-              Acompañamiento Personalizado/ Docentes de clase mundial:
-            </h4>
+
+        <div className="sm:flex items-center gap-4">
+          <span className={roboto_mono.className}>
+            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
+              03
+            </span>
+          </span>
+          <div>
+            <h5 className="font-bold">IdaClass Hub nuestra comunidad:</h5>
             <p>
-              Nuestro equipo de trainer educativos y expertos internacionales te
-              guiarán en cada paso de tu carrera , como alumno, como profesional
-              o emprendedor para alcances tus metas con exito
+              Se parte de Learn Knowledge Hub (centro de conocimiento y
+              aprendizaje) tu espacio para conectar con pares, profesionales,
+              mentores para ampliar tu red y compartir experiencia de alto valor
+              para tu desarrollo profesional
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="text-left text-black text-6xl font-bold ">04</div>
-          <div className="text-left leading-tight">
-            <h4 className="font-bold">
-              Acompañamiento Personalizado/ Docentes de clase mundial:
-            </h4>
+
+        <div className="sm:flex items-center gap-4">
+          <span className={roboto_mono.className}>
+            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
+              04
+            </span>
+          </span>
+          <div>
+            <h5 className="font-bold">Ida Jobs bolsa de laboral:</h5>
             <p>
-              Nuestro equipo de trainer educativos y expertos internacionales te
-              guiarán en cada paso de tu carrera , como alumno, como profesional
-              o emprendedor para alcances tus metas con exito
+              Estamos comprometidos a ayudarte a que encuentres nuevas
+              oportunidades laborales conectando con gimnasios , centro
+              deportivos y personas en búsqueda de profesionales certificados
             </p>
           </div>
         </div>
