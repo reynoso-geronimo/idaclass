@@ -43,20 +43,62 @@ const Cursos = props => {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <section className="bg-slate-200 pb-4">
-      <div className="text-center p-6">
-        <h2 className="text-3xl text-left font-extrabold  mb-4 mx-4 text-indigo-950 ">
+    <section className="bg-slate-200 p-6">
+      <div className="flex flex-col gap-4 ">
+        <h2 className="text-5xl text-left font-extrabold  mb-4  text-indigo-950 tracking-tighter">
           Soluciones personalizadas para tu exito
         </h2>
-        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide">
-         01 Acompañamiento Personalizado/ Docentes de clase mundial 
-        </p>
-        <p className="text-center text-black text-lg font-normal leading-loose tracking-wide ">
-          Formación y especialización para la industria del deporte, actividad
-          física y fitness. Formamos a entrenadores y especialistas que luego
-          pueden emprender sus propios negocios independientes y/o trabajar
-          luego en instituciones deportivas y gimnasios.
-        </p>
+        <div className="flex items-center gap-2">
+          <div className="text-left text-black text-6xl font-bold ">01</div>
+          <div className="text-left leading-tight">
+            <h4 className="font-bold">
+              Acompañamiento Personalizado/ Docentes de clase mundial:
+            </h4>
+            <p>
+              Nuestro equipo de trainer educativos y expertos internacionales te
+              guiarán en cada paso de tu carrera , como alumno, como profesional
+              o emprendedor para alcances tus metas con exito
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="text-left text-black text-6xl font-bold ">02</div>
+          <div className="text-left leading-tight">
+            <h4 className="font-bold">
+              Certificado Profesional y Aval Universitario:
+            </h4>
+            <p>
+              Alcanza tus objetivos y certifica tus conocimientos con nuestro
+              certificado profesional respaldado por un aval universitario.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="text-left text-black text-6xl font-bold ">03</div>
+          <div className="text-left leading-tight">
+            <h4 className="font-bold">
+              Acompañamiento Personalizado/ Docentes de clase mundial:
+            </h4>
+            <p>
+              Nuestro equipo de trainer educativos y expertos internacionales te
+              guiarán en cada paso de tu carrera , como alumno, como profesional
+              o emprendedor para alcances tus metas con exito
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="text-left text-black text-6xl font-bold ">04</div>
+          <div className="text-left leading-tight">
+            <h4 className="font-bold">
+              Acompañamiento Personalizado/ Docentes de clase mundial:
+            </h4>
+            <p>
+              Nuestro equipo de trainer educativos y expertos internacionales te
+              guiarán en cada paso de tu carrera , como alumno, como profesional
+              o emprendedor para alcances tus metas con exito
+            </p>
+          </div>
+        </div>
       </div>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
