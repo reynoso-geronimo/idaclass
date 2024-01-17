@@ -45,7 +45,7 @@ const Hero = () => {
           Unete a la revolucion educativa de la industria Sport Fitness
         </h2>
         <EmblaCarousel slides={images} options={OPTIONS} />
-        <h2 className="mt-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]">
+        <h2 className="mt-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px] ">
           Transforma tu Pasion,Despierta tu Potencial, Conviertete en un lider
           dentro de la industria.
         </h2>
