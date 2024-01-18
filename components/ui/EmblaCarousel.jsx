@@ -62,12 +62,12 @@ const EmblaCarousel = props => {
         </div>
       </div>
 
-      <div className="embla__dots">
+      <div className="embla__dots h-5 ">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
             onClick={() => scrollTo(index)}
-            className={"embla__dot".concat(
+            className={"embla__dot  animate-in fade-in-0 duration-1000".concat(
               index === selectedIndex ? " embla__dot--selected" : ""
             )}
           />
