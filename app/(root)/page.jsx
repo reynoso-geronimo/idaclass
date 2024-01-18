@@ -7,6 +7,7 @@ import Modalidad from "./_components/modalidad";
 import Certificacion from "./_components/certificacion";
 import Partners from "@/components/partners";
 import Faq from "./_components/faq";
+import Soluciones from "./_components/soluciones";
 
 export default function Home() {
   return (
@@ -62,6 +63,7 @@ export default function Home() {
       </section>
       
       <Ventajas />
+      <Soluciones/>
       <Cursos />
       <Modalidad />
 
