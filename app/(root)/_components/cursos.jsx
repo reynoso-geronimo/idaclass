@@ -1,10 +1,4 @@
 "use client";
-
-import { Roboto_Mono } from "next/font/google";
-const roboto_mono = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
 import { useState, useEffect, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import AutoHeight from "embla-carousel-auto-height";
@@ -56,10 +50,10 @@ const Cursos = props => {
         </h2>
 
         <div className="sm:flex items-center gap-4">
-          <span className={roboto_mono.className}>
+         
             <span className="font-extrabold text-5xl min-w-[70px] tracking-titracking-tighter ">
               01
-            </span>
+            
           </span>
           <div>
             <h5 className="font-bold">
@@ -74,10 +68,10 @@ const Cursos = props => {
         </div>
 
         <div className="sm:flex items-center gap-4">
-          <span className={roboto_mono.className}>
+         
             <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter  ">
               02
-            </span>
+            
           </span>
           <div>
             <h5 className="font-bold">
@@ -91,10 +85,10 @@ const Cursos = props => {
         </div>
 
         <div className="sm:flex items-center gap-4">
-          <span className={roboto_mono.className}>
+         
             <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
               03
-            </span>
+            
           </span>
           <div>
             <h5 className="font-bold">IdaClass Hub nuestra comunidad:</h5>
@@ -108,10 +102,10 @@ const Cursos = props => {
         </div>
 
         <div className="sm:flex items-center gap-4">
-          <span className={roboto_mono.className}>
+         
             <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
               04
-            </span>
+            
           </span>
           <div>
             <h5 className="font-bold">Ida Jobs bolsa de laboral:</h5>
