@@ -44,22 +44,20 @@ const Cursos = props => {
 
   return (
     <section className="bg-slate-200 p-6">
-      <div className="flex flex-col gap-4 max-w-2xl items-center mx-auto my-14">
+      <div className="flex flex-col gap-4 max-w-2xl items-center mx-auto my-14 min-h-[500px]">
         <h2 className="text-5xl text-left font-extrabold  mb-4  text-indigo-950 tracking-tighter">
           Soluciones personalizadas para tu exito
         </h2>
 
-        <div className="sm:flex items-center gap-4">
-         
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-titracking-tighter ">
-              01
-            
+        <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px]">
+          <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
+            01
           </span>
           <div>
-            <h5 className="font-bold">
+            <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
               Acompañamiento Personalizado/ Docentes de clase mundial:
             </h5>
-            <p>
+            <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
               Nuestro equipo de trainer educativos y expertos internacionales te
               guiarán en cada paso de tu carrera, como alumno, como profesional
               o emprendedor para alcances tus metas con exito
@@ -67,32 +65,28 @@ const Cursos = props => {
           </div>
         </div>
 
-        <div className="sm:flex items-center gap-4">
-         
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter  ">
-              02
-            
+        <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px]">
+          <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
+            02
           </span>
           <div>
-            <h5 className="font-bold">
+            <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
               Certificado Profesional y Aval Universitario:
             </h5>
-            <p>
+            <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
               Alcanza tus objetivos y certifica tus conocimientos con nuestro
               certificado profesional respaldado por un aval universitario.
             </p>
           </div>
         </div>
 
-        <div className="sm:flex items-center gap-4">
-         
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
-              03
-            
+        <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px]">
+          <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
+            03
           </span>
           <div>
-            <h5 className="font-bold">IdaClass Hub nuestra comunidad:</h5>
-            <p>
+            <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">IdaClass Hub nuestra comunidad:</h5>
+            <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
               Se parte de Learn Knowledge Hub (centro de conocimiento y
               aprendizaje) tu espacio para conectar con pares, profesionales,
               mentores para ampliar tu red y compartir experiencia de alto valor
@@ -101,15 +95,13 @@ const Cursos = props => {
           </div>
         </div>
 
-        <div className="sm:flex items-center gap-4">
-         
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter">
-              04
-            
+        <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px]">
+          <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
+            04
           </span>
           <div>
-            <h5 className="font-bold">Ida Jobs bolsa de laboral:</h5>
-            <p>
+            <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">Ida Jobs bolsa de laboral:</h5>
+            <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
               Estamos comprometidos a ayudarte a que encuentres nuevas
               oportunidades laborales conectando con gimnasios , centro
               deportivos y personas en búsqueda de profesionales certificados
