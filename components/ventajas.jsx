@@ -59,8 +59,8 @@ const Ventajas = async () => {
 {/* hacer seccion nosotros */}
 
 
-<main className="w-full flex flex-col items-center">
-      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
+<main className="w-full flex flex-col items-center ">
+      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
          Ventajas De Estudiar Con Nosotros
         </h1>
@@ -72,14 +72,20 @@ const Ventajas = async () => {
           className="shrink-1"
         />
       </section>
-      <section className="text-white bg-gray-900 w-full flex flex-col items-center px-4 pb-12">
+
+      {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
+
+      <section className="text-white   bg-zinc-900 w-full flex flex-col items-center px-4 pb-12 bg-zinc-800">
        
 
-        <div className="flex flex-col justify-center items-center w-full max-w-4xl gap-y-20 p-6">
-          {ventajasCollection.map((article, index) => (
+    
+
+
+        <div className="flex flex-col justify-center items-center w-full max-w-7xl gap-y-20 p-6">
+         
             <article
-              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
-              key={index}
+              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-48"
+          
             >
               <Image
                 src={`/funcional.webp`}
@@ -90,16 +96,90 @@ const Ventajas = async () => {
               />
               <div className="md:w-1/2">
                 <h3 className="text-lg md:text-xl font-semibold">
-                  {article.title}
+                Aprende Haciendo
                 </h3>
-                <p className="text-pretty md:text-lg">{article.paragraph}</p>
+                <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
               </div>
             </article>
-          ))}
+
+
+
+            
+  
         </div>
+
+ {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
+
+
+
+         
+         <article
+           className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
+       
+         >
+           <Image
+             src={`/funcional.webp`}
+             alt="hero image"
+             height={100}
+             width={100}
+             className="w-full md:w-1/2 rounded-lg"
+           />
+           <div className="md:w-1/2">
+             <h3 className="text-lg md:text-xl font-semibold">
+         titulossssssss
+             </h3>
+             <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
+           </div>
+         </article>
+
+        {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
+        <div className="flex flex-col justify-center items-center w-full max-w-7xl mx-8 gap-y-20 p-6">
+        <article
+              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-64"
+          
+            >
+              <Image
+                src={`/funcional.webp`}
+                alt="hero image"
+                height={200}
+                width={200}
+                className="w-full md:w-1/2 rounded-lg"
+              />
+              <div className="md:w-1/2">
+                <h3 className="text-lg md:text-xl font-semibold">
+            titulossssssss
+                </h3>
+                <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
+              </div>
+            </article>
+            </div>
+
+         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
+       
+         <article className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4">
+  <div className="md:w-1/2 md:order-2">
+    <h3 className="text-lg md:text-xl font-semibold">titulossssssss</h3>
+    <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
+  </div>
+  
+  <Image
+    src={`/funcional.webp`}
+    alt="hero image"
+    height={100}
+    width={100}
+    className="w-full md:w-1/2 rounded-lg md:order-1"
+  />
+</article>
+
+
+
+
+         
+
+  
       </section>
     
-      
+  
     </main>
    
     </>
