@@ -56,53 +56,51 @@ const Ventajas = async () => {
 
  return (
 <>
+{/* hacer seccion nosotros */}
 
-<section className="flex flex-col items-center bg-blue-100 h-[650px]">
-<h1 className="mt[50px] text-5xl text-left font-extrabold  mb-4  text-indigo-950 tracking-tighter"> ventajas de estudiar con nosotros</h1>
-  <Carousel className="w-auto mx-auto ">
-   
-    <CarouselContent >
-    
-      {ventajasCollection.map((item, index) => (
-        <CarouselItem key={index}>
+
+<main className="w-full flex flex-col items-center">
+      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
+         Ventajas De Estudiar Con Nosotros
+        </h1>
+        <Image
+          src={`/assets/HeroLG.webp`}
+          alt="hero image"
+          height={300}
+          width={300}
+          className="shrink-1"
+        />
+      </section>
+      <section className="text-white bg-gray-900 w-full flex flex-col items-center px-4 pb-12">
        
-          <div className="p-8 mx-auto">
-         
-            <Card
-              className=" bg-blue-100 text-center border-none transform hover:scale-105 transition-transform duration-300 ease-in-out max-w-6xl p-4 mx-auto h-[450px]"
-              key={ventajasCollection.id + index}
+
+        <div className="flex flex-col justify-center items-center w-full max-w-4xl gap-y-20 p-6">
+          {ventajasCollection.map((article, index) => (
+            <article
+              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
+              key={index}
             >
-            
-              {/* <CardContent className="p-0 mb-4">
-              
-                <Image
-                  src={"/" + item.image}
-                  alt="alt"
-                  width={400}
-                  height={400}
-                  className="rounded-t-md mx-auto"
-                />
-              </CardContent> */}
-            
-              <CardHeader className="p-0">
-                <CardTitle className="">{item.title}</CardTitle>
-                <CardDescription className="text-blue-800 text-xl">
-                  {item.paragraph}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </CarouselItem>
-      ))}
-    </CarouselContent>
-   
-    <CarouselPrevious />
+              <Image
+                src={`/funcional.webp`}
+                alt="hero image"
+                height={200}
+                width={200}
+                className="w-full md:w-1/2 rounded-lg"
+              />
+              <div className="md:w-1/2">
+                <h3 className="text-lg md:text-xl font-semibold">
+                  {article.title}
+                </h3>
+                <p className="text-pretty md:text-lg">{article.paragraph}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     
-
-    <CarouselNext />
-  </Carousel>
-</section>
-
+      
+    </main>
    
     </>
 
