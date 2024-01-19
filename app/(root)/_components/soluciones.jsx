@@ -1,11 +1,11 @@
 const Soluciones = () => {
   return (
     <section
-      className="h-[800px] bg-black text-white bg-no-repeat bg-[50%] "
-      style={{ backgroundImage: `url("/assets/bg-soluciones.jpg")` }}
+      className=" h-[800px] bg-zinc-800 text-white bg-no-repeat bg-[50%] bg-[length:_1400px] transform scale-x-[-1]"
+      style={{ backgroundImage: `url("/assets/bg-soluciones2.jpg")` }}
     >
-      <div className="backdrop-brightness-50 h-full">
-        <div className="flex flex-col justify-center gap-4 h-full  container">
+      <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
+        <div className="flex flex-col justify-center gap-4 h-full container">
           <h2 className="text-5xl text-left font-extrabold  mb-4 tracking-tighter">
             Soluciones personalizadas para tu exito
           </h2>
