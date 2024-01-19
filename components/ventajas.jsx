@@ -60,22 +60,16 @@ const Ventajas = async () => {
 
 
 <main className="w-full flex flex-col items-center ">
-      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4 ">
+      <section className="flex flex-wrap justify-center items-center  bg-zinc-900  w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
-         Ventajas De Estudiar Con Nosotros
+         Como es nuestro innovador modelo de capacitacion
         </h1>
-        <Image
-          src={`/assets/HeroLG.webp`}
-          alt="hero image"
-          height={300}
-          width={300}
-          className="shrink-1"
-        />
+      
       </section>
 
       {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
-      <section className="text-white   bg-zinc-900 w-full flex flex-col items-center px-4 pb-12 bg-zinc-800">
+      <section className="text-white    w-full flex flex-col items-center px-4 pb-12 bg-zinc-800">
        
 
     
@@ -84,7 +78,7 @@ const Ventajas = async () => {
         <div className="flex flex-col justify-center items-center w-full max-w-7xl gap-y-20 p-6">
          
             <article
-              className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-48"
+              className=" bg-zinc-800  flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-48"
           
             >
               <Image
@@ -129,6 +123,10 @@ const Ventajas = async () => {
          titulossssssss
              </h3>
              <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
+             <h3 className="text-lg md:text-xl font-semibold">
+         titulossssssss
+             </h3>
+             <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
            </div>
          </article>
 
@@ -156,7 +154,7 @@ const Ventajas = async () => {
 
          {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
        
-         <article className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4">
+         {/* <article className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4">
   <div className="md:w-1/2 md:order-2">
     <h3 className="text-lg md:text-xl font-semibold">titulossssssss</h3>
     <p className="text-pretty md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus impedit perspiciatis in tempore quod corrupti neque. Dicta blanditiis, dolorem commodi, eum beatae laboriosam incidunt veritatis, rerum magni magnam pariatur ex.</p>
@@ -169,7 +167,7 @@ const Ventajas = async () => {
     width={100}
     className="w-full md:w-1/2 rounded-lg md:order-1"
   />
-</article>
+</article> */}
 
 
 
