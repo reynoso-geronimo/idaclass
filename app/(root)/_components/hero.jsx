@@ -42,7 +42,7 @@ const Hero = () => {
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-16">
       <div className="lg:hidden">
         <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
-          Unete a la revolucion educativa de la industria Sport Fitness
+          Unete a la revolucion educativa Sport Fitness
         </h2>
         <EmblaCarousel slides={images} options={OPTIONS} />
         <h2 className="mt-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px] ">
@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="flex">
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-              Unete a la revolucion educativa de la industria Sport Fitness
+              Unete a la revolucion educativa Sport Fitness
             </h2>
             <h2 className="text-lg uppercase text-blue-700 font-medium tracking-[3px]	 max-w-[768px]">
               Transforma tu Pasion,Despierta tu Potencial, Conviertete en un

@@ -1,94 +1,73 @@
-"use client";
-import { useState, useEffect, useCallback } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import AutoHeight from "embla-carousel-auto-height";
-import useEmblaCarousel from "embla-carousel-react";
-import { DotButton } from "@/components/ui/EmblaCarouselArrowsDotsButtons";
-import CursoCard from "./ui/cursoCard";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
-const Cursos = props => {
-  const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    options,
-    [Autoplay()],
-    [AutoHeight()]
-  );
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState([]);
 
-  const scrollTo = useCallback(
-    index => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
-  );
 
-  const onInit = useCallback(emblaApi => {
-    setScrollSnaps(emblaApi.scrollSnapList());
-  }, []);
-
-  const onSelect = useCallback(emblaApi => {
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    onInit(emblaApi);
-    onSelect(emblaApi);
-    emblaApi.on("reInit", onInit);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
-  }, [emblaApi, onInit, onSelect]);
+const cursos = () => {
+  const  cursos=[
+    {
+      title: "Programación Web",
+      subtitle: "Aprende a programar páginas web increíbles desde cero",
+      image: "https://source.unsplash.com/random/150x150",
+      hours: 15,
+      days: 1.5,
+      turn: "Noche",
+    },
+    {
+      title: "Data Analytics",
+      subtitle: "Capacítate para utilizar cualquier volumen de datos",
+      image: "https://source.unsplash.com/random/150x150",
+      hours: 10,
+      days: 1,
+      turn: "Noche",
+    },
+    {
+      title: "Data Science",
+      subtitle: "Adéntrate en la aplicación de modelos de aprendizaje automático",
+      image: "https://source.unsplash.com/random/150x150",
+      hours: 10,
+      days: 1,
+      turn: "Noche",
+    },
+    {
+      title: "IA para Negocios",
+      subtitle: "Aprenderás las principales características de las aplicaciones de Inteligencia Artificial en los negocios",
+      image: "https://source.unsplash.com/random/150x150",
+      hours: 10,
+      days: 1,
+      turn: "Noche",
+    },
+  ];
 
   return (
-    <section className="bg-slate-200 p-6">
-  
-      <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container">
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-            <div className="embla__slide__curso">
-              <CursoCard />
-            </div>
-          </div>
+    <div className="flex flex-wrap justify-between  my-4 mx-2">
+    {cursos.map((curso, index) => (
+      <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4  my-4 mx-2"> 
+        <div className="bg-gray-200 shadow-sm rounded-md p-4">
+          <img
+            className="h-36 w-full object-cover"
+            src={curso.image}
+            alt="Imagen del curso"
+          />
+          <h3 className="text-xl font-semibold text-gray-800">
+            {curso.title}
+          </h3>
+          <p className="text-base text-gray-600">
+            {curso.subtitle}
+          </p>
+          <p className="text-sm text-gray-500">
+            {curso.hours} horas, {curso.days} días, {curso.turn}
+          </p>
+          <a
+            href=""
+            className="block text-center text-blue-500 hover:text-blue-700"
+          >
+            Ver más
+          </a>
         </div>
       </div>
-
-      <div className="embla__dots">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={"embla__dot".concat(
-              index === selectedIndex ? " embla__dot--selected" : ""
-            )}
-          />
-        ))}
-      </div>
-
-      <div className="w-100 flex justify-center">
-        <Button size="lg" className="rounded-3xl m-10 font-bold" asChild>
-          <Link href="/cursos">Ver todos los cursos</Link>
-        </Button>
-      </div>
-    </section>
+    ))}
+  </div>
   );
 };
 
-export default Cursos;
+export default cursos;
