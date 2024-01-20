@@ -1,3 +1,28 @@
+import { ChevronDown } from "lucide-react";
+
+const soluciones = [
+  {
+    titulo: "Acompañamiento Personalizado/ Docentes de clase mundial:",
+    texto:
+      "Nuestro equipo de trainer educativos y expertos internacionales te guiarán en cada paso de tu carrera, como alumno, como profesional o emprendedor para alcances tus metas con exito",
+  },
+  {
+    titulo: "Certificado Profesional y Aval Universitario:",
+    texto:
+      "Alcanza tus objetivos y certifica tus conocimientos con nuestro certificado profesional respaldado por un aval universitario.",
+  },
+  {
+    titulo: "IdaClass Hub nuestra comunidad:",
+    texto:
+      "Se parte de Learn Knowledge Hub (centro de conocimiento y aprendizaje) tu espacio para conectar con pares, profesionales, mentores para ampliar tu red y compartir experiencia de alto valor para tu desarrollo profesional",
+  },
+  {
+    titulo: "Ida Jobs bolsa de laboral:",
+    texto:
+      "Estamos comprometidos a ayudarte a que encuentres nuevas oportunidades laborales conectando con gimnasios , centro deportivos y personas en búsqueda de profesionales certificados",
+  },
+];
+
 const Soluciones = () => {
   return (
     <section
@@ -10,69 +35,24 @@ const Soluciones = () => {
             Soluciones personalizadas para tu exito
           </h2>
 
-          <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px] max-w-2xl ">
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
-              01
-            </span>
-            <div>
-              <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
-                Acompañamiento Personalizado/ Docentes de clase mundial:
-              </h5>
-              <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
-                Nuestro equipo de trainer educativos y expertos internacionales
-                te guiarán en cada paso de tu carrera, como alumno, como
-                profesional o emprendedor para alcances tus metas con exito
-              </p>
+          {soluciones.map((solucion, index) => (
+            <div
+              className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px] max-w-2xl relative"
+              key={index + solucion.titulo}
+            >
+              <span className="flex items-center font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:drop-shadow-[0_0_10px_rgba(100,100,255,1)] transition-all duration-1000 group-hover:text-sky-300 hover:animate-none">
+                0{index + 1}  <span className="animate-bounce ml-4 group-hover:opacity-0 transition-all duration-1000 sm:hidden"><ChevronDown/></span>
+              </span>
+              <div>
+                <h5 className="flex items-center font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
+                  {solucion.titulo}   <span className="ml-4 group-hover:opacity-0 transition-all duration-1000 hidden sm:block sm:absolute right-[0%]"><ChevronDown/></span>
+                </h5>
+                <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
+                  {solucion.texto}
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px] max-w-2xl">
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
-              02
-            </span>
-            <div>
-              <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
-                Certificado Profesional y Aval Universitario:
-              </h5>
-              <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
-                Alcanza tus objetivos y certifica tus conocimientos con nuestro
-                certificado profesional respaldado por un aval universitario.
-              </p>
-            </div>
-          </div>
-
-          <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px] max-w-2xl">
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
-              03
-            </span>
-            <div>
-              <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
-                IdaClass Hub nuestra comunidad:
-              </h5>
-              <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
-                Se parte de Learn Knowledge Hub (centro de conocimiento y
-                aprendizaje) tu espacio para conectar con pares, profesionales,
-                mentores para ampliar tu red y compartir experiencia de alto
-                valor para tu desarrollo profesional
-              </p>
-            </div>
-          </div>
-
-          <div className="sm:flex items-center gap-4 group min-h-[100px] md:max-h-[100px] max-w-2xl">
-            <span className="font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:text-emerald-400">
-              04
-            </span>
-            <div>
-              <h5 className="font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
-                Ida Jobs bolsa de laboral:
-              </h5>
-              <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
-                Estamos comprometidos a ayudarte a que encuentres nuevas
-                oportunidades laborales conectando con gimnasios , centro
-                deportivos y personas en búsqueda de profesionales certificados
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
