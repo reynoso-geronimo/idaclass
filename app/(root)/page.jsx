@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Hero from "./_components/hero";
-import Ventajas from "@/components/ventajas";
+import Ventajas from "@/app/(root)/_components/ventajas";
 import Cursos from "./_components/cursos";
 import Modalidad from "./_components/modalidad";
 import Certificacion from "./_components/certificacion";

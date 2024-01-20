@@ -27,7 +27,7 @@ const Soluciones = () => {
               <div>
                 <h5 className="flex items-center font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
                   {solucion.titulo}
-                  <span className="ml-4 group-hover:opacity-0 transition-all duration-1000 hidden sm:block sm:absolute -right-4">
+                  <span className="ml-4 py-12 group-hover:opacity-0 transition-all duration-1000 hidden sm:block sm:absolute -right-4">
                     <ChevronDown size={32} />
                   </span>
                 </h5>
