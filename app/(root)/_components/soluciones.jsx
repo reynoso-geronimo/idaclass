@@ -1,27 +1,5 @@
 import { ChevronDown } from "lucide-react";
-
-const soluciones = [
-  {
-    titulo: "Acompañamiento Personalizado/ Docentes de clase mundial:",
-    texto:
-      "Nuestro equipo de trainer educativos y expertos internacionales te guiarán en cada paso de tu carrera, como alumno, como profesional o emprendedor para alcances tus metas con exito",
-  },
-  {
-    titulo: "Certificado Profesional y Aval Universitario:",
-    texto:
-      "Alcanza tus objetivos y certifica tus conocimientos con nuestro certificado profesional respaldado por un aval universitario.",
-  },
-  {
-    titulo: "IdaClass Hub nuestra comunidad:",
-    texto:
-      "Se parte de Learn Knowledge Hub (centro de conocimiento y aprendizaje) tu espacio para conectar con pares, profesionales, mentores para ampliar tu red y compartir experiencia de alto valor para tu desarrollo profesional",
-  },
-  {
-    titulo: "Ida Jobs bolsa de laboral:",
-    texto:
-      "Estamos comprometidos a ayudarte a que encuentres nuevas oportunidades laborales conectando con gimnasios , centro deportivos y personas en búsqueda de profesionales certificados",
-  },
-];
+import { soluciones } from "../../../lib/constants.js";
 
 const Soluciones = () => {
   return (
@@ -41,13 +19,19 @@ const Soluciones = () => {
               key={index + solucion.titulo}
             >
               <span className="flex items-center font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 group-hover:drop-shadow-[0_0_10px_rgba(100,100,255,1)] transition-all duration-1000 group-hover:text-sky-300 hover:animate-none">
-                0{index + 1}  <span className="animate-bounce ml-4 group-hover:opacity-0 transition-all duration-1000 sm:hidden"><ChevronDown/></span>
+                0{index + 1}
+                <span className="animate-bounce ml-4 group-hover:opacity-0 transition-all duration-1000 sm:hidden">
+                  <ChevronDown />
+                </span>
               </span>
               <div>
                 <h5 className="flex items-center font-bold sm:text-2xl group-hover:text-base transition-all duration-1000">
-                  {solucion.titulo}   <span className="ml-4 group-hover:opacity-0 transition-all duration-1000 hidden sm:block sm:absolute -right-4"><ChevronDown size={32}/></span>
+                  {solucion.titulo}
+                  <span className="ml-4 group-hover:opacity-0 transition-all duration-1000 hidden sm:block sm:absolute -right-4">
+                    <ChevronDown size={32} />
+                  </span>
                 </h5>
-                <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40">
+                <p className="max-h-0 overflow-hidden transition-all duration-1000 ease-in-out group-hover:max-h-40 sm:text-md">
                   {solucion.texto}
                 </p>
               </div>
