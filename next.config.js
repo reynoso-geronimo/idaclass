@@ -2,7 +2,16 @@
 const nextConfig = {
     experimental: {
         serverComponentsExternalPackages: ['sequelize'],
-    }
+    },
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'source.unsplash.com',
+           
+          },
+        ],
+      },
 
 }
 
