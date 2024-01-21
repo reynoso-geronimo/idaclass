@@ -78,8 +78,15 @@ const Hero = () => {
             </Button>
           </div>
           <div className="w-1/2 relative">
-            <EmblaCarousel slides={images} options={OPTIONS} />
-            
+            {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
+            <video
+              autoPlay
+              muted
+              loop
+              className="-z-10 object-cover hidden sm:block"
+            >
+              <source src="/videos/bgvideo2.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
         <Separator className="my-4 bg-gray-200" />
