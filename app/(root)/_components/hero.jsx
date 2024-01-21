@@ -84,8 +84,9 @@ const Hero = () => {
               muted
               loop
               className="-z-10 object-cover hidden sm:block"
+              playsInline
             >
-              <source src="/videos/bgvideo2.mp4" type="video/mp4" />
+              <source src="/videos/video(2160p).mp4" type="video/mp4" />
             </video>
           </div>
         </div>
