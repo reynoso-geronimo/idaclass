@@ -73,7 +73,7 @@ const EmblaCarousel = props => {
           />
         ))}
       </div>
-      <div className="relative z-50 bottom-[70px] lg:bottom-[17%] translate-x-[50%] right-[50%] h-0">
+      <div className="relative  bottom-[70px] lg:bottom-[17%] translate-x-[50%] right-[50%] h-0">
         <Introvideo />
       </div>
     </>

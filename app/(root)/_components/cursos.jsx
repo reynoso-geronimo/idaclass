@@ -47,7 +47,8 @@ const cursos = () => {
       {cursos.map((curso, index) => (
         <article
           key={index}
-          className="max-w-72 bg-gray-200 shadow-sm rounded-md h-[650px] flex flex-col justify-self-center sm:odd:justify-self-end sm:even:justify-self-start odd:lg:justify-self-center even:lg:justify-self-center" 
+          className="max-w-72 bg-gray-200 shadow-sm rounded-md h-[650px] flex flex-col justify-evenly
+          justify-self-center sm:odd:justify-self-end sm:even:justify-self-start odd:lg:justify-self-center even:lg:justify-self-center"
         >
           <Image
             className="h-36 w-full object-cover"
@@ -56,24 +57,30 @@ const cursos = () => {
             height={100}
             alt="Imagen del curso"
           />
-          <h3 className="text-xl font-semibold text-gray-800 pt-8 pb-6 px-4">{curso.title}</h3>
-          <p className="text-base text-gray-600 mb-12 h-[10%]  px-4">{curso.subtitle}</p>
-          <Button asChild size="lg" className="mb-12 px-4 w-[85%] mx-auto rounded-lg">
+          <h3 className="text-xl font-semibold pt-8 pb-6 px-4">
+            {curso.title}
+          </h3>
+          <p className="text-base h-[150px] px-4">{curso.subtitle}</p>
+          <Button
+            asChild
+            size="lg"
+            className="mb-4 px-4 w-[84%] mx-auto rounded-lg"
+          >
             <Link href="/" className="w-full">
               Ver mas
             </Link>
           </Button>
           <Separator className="mb-4 bg-black " />
           <div className="flex flex-col gap-4 p-4">
-            <p className="text-sm text-gray-500 flex items-center">
-              <Check color="#3a5dae" /> 
+            <p className="text-sm flex items-center gap-1">
+              <Check color="#3a5dae" />
               Duracion del curso
             </p>
-            <p className="text-sm text-gray-500 flex items-center">
+            <p className="text-sm flex items-center gap-1">
               <Check color="#3a5dae" />
               Dedicacion de horas semanales
             </p>
-            <p className="text-sm text-gray-500 flex items-center">
+            <p className="text-sm flex items-center gap-1">
               <Check color="#3a5dae" />
               Franja horaria
             </p>

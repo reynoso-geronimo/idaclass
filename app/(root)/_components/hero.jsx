@@ -2,6 +2,7 @@ import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
+import Introvideo from "./introvideo";
 
 const OPTIONS = { loop: true };
 const images = [
@@ -88,6 +89,9 @@ const Hero = () => {
             >
               <source src="/videos/video(2160p).mp4" type="video/mp4" />
             </video>
+            <div className="relative bottom-[70px]  lg:bottom-[10%] translate-x-[50%] right-[50%] h-0">
+              <Introvideo />
+            </div>
           </div>
         </div>
         <Separator className="my-4 bg-gray-200" />
