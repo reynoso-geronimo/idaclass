@@ -5,6 +5,7 @@ import AutoHeight from "embla-carousel-auto-height";
 import useEmblaCarousel from "embla-carousel-react";
 import { DotButton } from "./EmblaCarouselArrowsDotsButtons";
 import Image from "next/image";
+import Introvideo from "@/app/(root)/_components/introvideo";
 
 const EmblaCarousel = props => {
   const { slides, options } = props;
@@ -61,7 +62,6 @@ const EmblaCarousel = props => {
           </div>
         </div>
       </div>
-
       <div className="embla__dots h-5 ">
         {scrollSnaps.map((_, index) => (
           <DotButton
@@ -72,6 +72,9 @@ const EmblaCarousel = props => {
             )}
           />
         ))}
+      </div>
+      <div className="relative z-50 bottom-[70px] lg:bottom-[17%] translate-x-[50%] right-[50%] h-0">
+        <Introvideo />
       </div>
     </>
   );
