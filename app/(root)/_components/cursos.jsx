@@ -43,11 +43,11 @@ const cursos = () => {
   ];
 
   return (
-    <section className="flex flex-wrap justify-center container gap-4 my-12 ">
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 container gap-4 xl:gap-0 my-12">
       {cursos.map((curso, index) => (
         <article
           key={index}
-          className="w-72 bg-gray-200 shadow-sm rounded-md p-4 h-[650px]" 
+          className="max-w-72 bg-gray-200 shadow-sm rounded-md h-[650px] flex flex-col justify-self-center sm:odd:justify-self-end sm:even:justify-self-start odd:lg:justify-self-center even:lg:justify-self-center" 
         >
           <Image
             className="h-36 w-full object-cover"
@@ -56,17 +56,17 @@ const cursos = () => {
             height={100}
             alt="Imagen del curso"
           />
-          <h3 className="text-xl font-semibold text-gray-800 pt-8 pb-6">{curso.title}</h3>
-          <p className="text-base text-gray-600 mb-12 h-[10%]">{curso.subtitle}</p>
-          <Button asChild size="lg" className="mb-12">
+          <h3 className="text-xl font-semibold text-gray-800 pt-8 pb-6 px-4">{curso.title}</h3>
+          <p className="text-base text-gray-600 mb-12 h-[10%]  px-4">{curso.subtitle}</p>
+          <Button asChild size="lg" className="mb-12 px-4 w-[85%] mx-auto rounded-lg">
             <Link href="/" className="w-full">
               Ver mas
             </Link>
           </Button>
-          <Separator className="mb-4 bg-white " />
-          <div className="flex flex-col gap-4 py-4">
+          <Separator className="mb-4 bg-black " />
+          <div className="flex flex-col gap-4 p-4">
             <p className="text-sm text-gray-500 flex items-center">
-              <Check color="#3a5dae" />
+              <Check color="#3a5dae" /> 
               Duracion del curso
             </p>
             <p className="text-sm text-gray-500 flex items-center">
