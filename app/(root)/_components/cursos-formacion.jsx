@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const cursos = () => {
+const CursosFormacion = () => {
   const cursos = [
     {
       title: "Programación Web",
@@ -43,7 +43,9 @@ const cursos = () => {
   ];
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 container gap-4 xl:gap-0 my-12">
+    <section className=" container my-12">
+     <h2 className="text-3xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">Cursos de formacion</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-0"> 
       {cursos.map((curso, index) => (
         <article
           key={index}
@@ -64,7 +66,7 @@ const cursos = () => {
           <Button
             asChild
             size="lg"
-            className="mb-4 px-4 w-[84%] mx-auto rounded-lg"
+            className="mb-4 px-4 w-[83%] mx-auto rounded-lg"
           >
             <Link href="/" className="w-full">
               Ver mas
@@ -87,8 +89,9 @@ const cursos = () => {
           </div>
         </article>
       ))}
+      </div>
     </section>
   );
 };
 
-export default cursos;
+export default CursosFormacion;
