@@ -67,9 +67,9 @@ const CursosFormacion = () => {
           <Button
             asChild
             size="lg"
-            className="mb-4 px-4 w-[83%] mx-auto rounded-lg"
+            className="mb-4 px-4 w-[85%] mx-auto rounded-lg"
           >
-            <Link href="/" className="w-full">
+            <Link href="/" >
               Ver mas
             </Link>
           </Button>
