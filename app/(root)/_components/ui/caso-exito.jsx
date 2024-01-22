@@ -1,9 +1,17 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CasoExito = ({ experiencia, avatar, nombre, carrera, linkedin }) => {
+const CasoExito = ({
+  experiencia,
+  avatar,
+  nombre,
+  carrera,
+  linkedin,
+  pais,
+}) => {
   return (
     <div className="bg-gray-800 py-4 pr-8 pl-16 rounded-lg text-white flex flex-col">
       <Quote className="transform -rotate-180 -translate-x-12" />
@@ -18,7 +26,15 @@ const CasoExito = ({ experiencia, avatar, nombre, carrera, linkedin }) => {
           <AvatarFallback className="text-black">PP</AvatarFallback>
         </Avatar>
         <div>
-          <h3 className="text-bold">{nombre ? nombre : "Perez Con Pan"}</h3>
+          <h3 className="text-bold flex items-center gap-1">
+          <Image
+              src={`https://flagcdn.com/${pais?pais:"ar"}.svg`}
+              width={26}
+              height={24}
+              alt="Ukraine"
+            ></Image>
+            {nombre ? nombre : "Perez Con Pan"}
+          </h3>
           <p className="text-sm font-light text-gray-200">
             {carrera ? carrera : "Preparador Fisico"}
           </p>

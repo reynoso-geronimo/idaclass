@@ -10,6 +10,11 @@ const nextConfig = {
             hostname: 'source.unsplash.com',
            
           },
+          {
+            protocol: 'https',
+            hostname: 'flagcdn.com',
+           
+          },
         ],
       },
 
