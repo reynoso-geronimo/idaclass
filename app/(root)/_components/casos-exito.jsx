@@ -1,15 +1,16 @@
 import React from "react";
 import CasoExito from "./ui/caso-exito";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CasosExito = () => {
   return (
     <section className="container">
-      <h1>Mas de 10000000 Estudiantes nos recomiendan</h1>
+      <TituloSeccion className={"text-left"}>Mas de 10000000 Estudiantes nos recomiendan</TituloSeccion>
       <div className="grid grid-cols-2 gap-4">
-      <CasoExito/>
-      <CasoExito/>
-      <CasoExito/>
-      <CasoExito/>
+        <CasoExito />
+        <CasoExito />
+        <CasoExito />
+        <CasoExito />
       </div>
     </section>
   );

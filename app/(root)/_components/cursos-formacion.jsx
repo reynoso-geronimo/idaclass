@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,7 +45,7 @@ const CursosFormacion = () => {
 
   return (
     <section className=" container my-12">
-     <h2 className="text-3xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">Cursos de formacion</h2>
+     <TituloSeccion>Cursos de formacion</TituloSeccion>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-0"> 
       {cursos.map((curso, index) => (
         <article

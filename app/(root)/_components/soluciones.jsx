@@ -9,9 +9,9 @@ const Soluciones = () => {
     >
       <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
         <div className="flex flex-col justify-center gap-4 h-full container">
-          <h2 className="text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter">
+          <h3 className="text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400">
             Soluciones personalizadas para tu exito
-          </h2>
+          </h3>
 
           {soluciones.map((solucion, index) => (
             <div

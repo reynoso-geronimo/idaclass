@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const preguntas = [
   {
@@ -177,9 +178,7 @@ const preguntas = [
 const Faq = () => {
   return (
     <section className="flex flex-col items-center">
-      <h2 className="text-2xl text-center font-extrabold w-[full] mt-16 mb-4 mx-4 text-indigo-950 ">
-        Preguntas frecuentes
-      </h2>
+      <TituloSeccion> Preguntas frecuentes</TituloSeccion>
       <Accordion
         type="single"
         collapsible
