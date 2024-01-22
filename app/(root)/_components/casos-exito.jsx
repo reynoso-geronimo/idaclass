@@ -6,7 +6,7 @@ const CasosExito = () => {
   return (
     <section className="container">
       <TituloSeccion className={"text-left"}>Mas de 10000000 Estudiantes nos recomiendan</TituloSeccion>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
         <CasoExito />
         <CasoExito />
         <CasoExito />
