@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 import {
@@ -14,6 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useInView } from "react-intersection-observer";
 
 const ventajasCollection = [
   {
@@ -46,7 +48,19 @@ const ventajasCollection = [
   },
 ];
 
-const Ventajas = async () => {
+const Ventajas = () => {
+  const [ref1, inView1, entry1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-200px 0px",
+  });
+  const [ref2, inView2, entry2] = useInView({
+    triggerOnce: true,
+    rootMargin: "-200px 0px",
+  });
+  const [ref3, inView3, entry3] = useInView({
+    triggerOnce: true,
+    rootMargin: "-200px 0px",
+  });
   return (
     <section className="w-full flex flex-col items-center gap-y-12 container py-20">
       {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
@@ -57,7 +71,12 @@ const Ventajas = async () => {
 
       {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
-      <article className="  flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly">
+      <article
+        ref={ref1}
+        className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly transition-all duration-1000 ${
+          inView1 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Image
           src={`/funcional.webp`}
           alt="hero image"
@@ -80,7 +99,12 @@ const Ventajas = async () => {
 
       {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
-      <article className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4">
+      <article
+        ref={ref2}
+        className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4  transition-all duration-1000 ${
+          inView2 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="w-full md:w-3/4 rounded-lg relative aspect-square">
           <Image
             src={`/funcional.webp`}
@@ -93,7 +117,7 @@ const Ventajas = async () => {
           />
         </div>
         <div className="md:w-1/2 flex flex-col justify-center gap-12">
-          <div >
+          <div>
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
               Programas de estudios innovadores
             </h3>
@@ -104,7 +128,7 @@ const Ventajas = async () => {
               empleabilidad o hacer despegar tu propio proyecto
             </p>
           </div>
-          <div >
+          <div>
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
               SkillClass - Tu Herramienta Exclusiva
             </h3>
@@ -120,7 +144,12 @@ const Ventajas = async () => {
 
       {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
-      <article className="  flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly">
+      <article
+        ref={ref3}
+        className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly  transition-all duration-1000	${
+          inView3 ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Image
           src={`/funcional.webp`}
           alt="hero image"
