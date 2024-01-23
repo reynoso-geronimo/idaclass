@@ -5,14 +5,12 @@ import CountUp from "react-countup";
 
 const Intro = () => {
   return (
-    <section>
-      <div>
-        <TituloSeccion>
-          IdaClass, es la llave para transformar tu pasión por el fitness en una
-          carrera exitosa en tiempo record.
-        </TituloSeccion>
-      </div>
-      <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-medium md:flex md:justify-center ">
+    <section className="container">
+      <TituloSeccion>
+        IdaClass, es la llave para transformar tu pasión por el fitness en una
+        carrera exitosa en tiempo record.
+      </TituloSeccion>
+      <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-semibold md:flex md:justify-center ">
         <span className="flex flex-col justify-start items-center w-40">
           <Image
             src={"/assets/experiencia.webp"}
@@ -21,10 +19,16 @@ const Intro = () => {
             alt="experiencia"
           />
           <span>
-            <CountUp end={25} duration={2.75} /> años de experiencia
+            <CountUp
+              end={25}
+              duration={3.75}
+              enableScrollSpy={true}
+              suffix=" "
+            />
+            años de experiencia
           </span>
         </span>
-        <span className="flex flex-col justify-start items-center w-40">
+        <span className={`flex flex-col justify-start items-center w-40`}>
           <Image
             src={"/assets/50milcertificados.webp"}
             width={72}
@@ -32,7 +36,13 @@ const Intro = () => {
             alt="certificados"
           />
           <span>
-            +<CountUp end={50000} duration={2.75} separator="." />{" "}
+            <CountUp
+              end={50000}
+              duration={3.75}
+              separator="."
+              enableScrollSpy={true}
+              prefix="+"
+            />
           </span>
           certificados
         </span>
@@ -53,7 +63,8 @@ const Intro = () => {
             alt="empleabilidad"
           />
           <span>
-            <CountUp end={80} duration={2.75} />% de empleabilidad
+            <CountUp end={80} duration={3.75} enableScrollSpy={true} />% de
+            empleabilidad
           </span>
         </span>
       </div>
