@@ -104,7 +104,7 @@ const Ventajas = () => {
               }}
             />
           </div>
-          <div className="md:w-1/2 flex flex-col justify-center gap-12">
+          <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
                 Programas de estudios innovadores

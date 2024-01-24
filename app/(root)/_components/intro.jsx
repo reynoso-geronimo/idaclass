@@ -23,6 +23,7 @@ const Intro = () => {
               end={25}
               duration={3.75}
               enableScrollSpy={true}
+              scrollSpyOnce={true}
               suffix=" "
             />
             años de experiencia
@@ -41,6 +42,7 @@ const Intro = () => {
               duration={3.75}
               separator="."
               enableScrollSpy={true}
+              scrollSpyOnce={true}
               prefix="+"
             />
           </span>
@@ -63,7 +65,7 @@ const Intro = () => {
             alt="empleabilidad"
           />
           <span>
-            <CountUp end={80} duration={3.75} enableScrollSpy={true} />% de
+            <CountUp end={80} duration={3.75} enableScrollSpy={true} scrollSpyOnce={true}/>% de
             empleabilidad
           </span>
         </span>

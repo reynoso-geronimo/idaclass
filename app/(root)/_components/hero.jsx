@@ -67,7 +67,7 @@ const Hero = () => {
           <Introvideo />
         </div>
 
-        <h2 className="mt-12 mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px] ">
+        <h2 className="mt-12 mx-8 text-center text-md text-blue-700 font-semibold leading-6 tracking-[4px] ">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h2>
@@ -90,7 +90,7 @@ const Hero = () => {
               <span className="text-blue-700">revolucion educativa</span> Sport
               Fitness
             </h2>
-            <h2 className="text-lg text-blue-700 font-medium tracking-[3px]	 max-w-[768px]">
+            <h2 className="text-lg text-blue-700 font-semibold tracking-[3px]	 max-w-[768px]">
               Transforma tu pasion, despierta tu potencial, conviertete en un
               profesional con nuestros cursos.
             </h2>
