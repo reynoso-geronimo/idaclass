@@ -16,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useInView } from "react-intersection-observer";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const ventajasCollection = [
   {
@@ -62,7 +63,13 @@ const Ventajas = () => {
     rootMargin: "-200px 0px",
   });
   return (
-    <section className="w-full flex flex-col items-center gap-y-12 container py-20">
+    <>
+    <TituloSeccion>
+    Conoce nuestro modelo y sus ventajas
+  </TituloSeccion>
+    <section className="w-full flex flex-col items-center gap-6 md:gap-y-12 container py-20">
+     
+      
       {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -78,10 +85,10 @@ const Ventajas = () => {
         }`}
       >
         <Image
-          src={`/funcional.webp`}
+          src={`/aprendehaciendo.jpg`}
           alt="hero image"
-          height={200}
-          width={200}
+          height={500}
+          width={500}
           className="w-full md:w-2/5 rounded-lg"
         />
         <div className="md:w-2/5">
@@ -89,10 +96,9 @@ const Ventajas = () => {
             Aprende Haciendo
           </h3>
           <p className="text-pretty md:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            impedit perspiciatis in tempore quod corrupti neque. Dicta
-            blanditiis, dolorem commodi, eum beatae laboriosam incidunt
-            veritatis, rerum magni magnam pariatur ex.
+            Avanza con Learning by Doing el metodo probado y eficaz basado en
+            experiencia practica y desarrollo de proyectos que te permite llevar
+            a la practica los conocimientos aprendidos desde el primer dia.
           </p>
         </div>
       </article>
@@ -105,14 +111,14 @@ const Ventajas = () => {
           inView2 ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="w-full md:w-3/4 rounded-lg relative aspect-square">
+        <div className="w-full md:w-7/8 rounded-lg relative aspect-video">
           <Image
-            src={`/funcional.webp`}
+            src={`/programas.jpg`}
             alt="hero image"
             fill
             sizes="(min-width: 808px) 50vw, 100vw"
             style={{
-              objectFit: "contain", // cover, contain, none
+              objectFit: "cover", // cover, contain, none
             }}
           />
         </div>
@@ -124,8 +130,8 @@ const Ventajas = () => {
             <p className="text-pretty md:text-lg">
               Creamos programas integrales con standard de formacion
               internacional, que reflejan las ultimas tendencias en
-              entrenamiento ,las ciencias aplicadas para que logreas
-              empleabilidad o hacer despegar tu propio proyecto
+              entrenamiento, las ciencias aplicadas para que logreas
+              empleabilidad o hacer despegar tu propio proyecto.
             </p>
           </div>
           <div>
@@ -151,7 +157,7 @@ const Ventajas = () => {
         }`}
       >
         <Image
-          src={`/funcional.webp`}
+          src={`/innovamos.jpg`}
           alt="hero image"
           height={200}
           width={200}
@@ -169,6 +175,7 @@ const Ventajas = () => {
         </div>
       </article>
     </section>
+    </>
   );
 };
 

@@ -5,9 +5,9 @@ import CountUp from "react-countup";
 
 const Intro = () => {
   return (
-    <section className="container">
-      <TituloSeccion>
-        IdaClass, es la llave para transformar tu pasión por el fitness en una
+    <section className="">
+      <TituloSeccion className={"container"}>
+        Somos la llave para transformar tu pasión por el fitness en una
         carrera exitosa en tiempo record.
       </TituloSeccion>
       <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-semibold md:flex md:justify-center ">
@@ -68,6 +68,7 @@ const Intro = () => {
           </span>
         </span>
       </div>
+      
     </section>
   );
 };

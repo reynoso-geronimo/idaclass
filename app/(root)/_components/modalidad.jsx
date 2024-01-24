@@ -26,28 +26,7 @@ const slides = [
 const Modalidad = () => {
   return (
     <>
-      <section>
-        <Tabs
-          defaultValue="online"
-          className="w-[400px] h-[500px] m-auto border-idaclass border-2 text-white bg-idaclass text-center"
-        >
-          <TabsList className="flex w-full">
-            <TabsTrigger value="online" className="w-1/2">
-              Online
-            </TabsTrigger>
-            <TabsTrigger value="presencial" className="w-1/2">
-              Presencial
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="online">
-            Make changes to your online here.
-          </TabsContent>
-          <TabsContent value="presencial">
-            Change your presencial here.
-          </TabsContent>
-        </Tabs>
-      </section>
-
+    
       <section className="text-center flex flex-col items-center w-full">
         <TituloSeccion>
           ¿Cómo es nuestro innovador modelo de capacitación?
