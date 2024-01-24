@@ -156,13 +156,13 @@ const Hero = () => {
                 className="basis-1/3 sm:basis-1/6 md:basis-1/6"
               >
                 <div>
-                  <div className="flex aspect-square items-center justify-center px-2">
+                  <div className="flex aspect-square items-center justify-center px-2 relative">
                     <Image
                       src={`/partners${partner.src}`}
                       width={120}
                       height={120}
                       alt="logo"
-                      className="grayscale rounded-xl"
+                      className="grayscale rounded-xl cover"
                     ></Image>
                   </div>
                 </div>
