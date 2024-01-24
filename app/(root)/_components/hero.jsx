@@ -1,11 +1,12 @@
 "use client";
-import EmblaCarousel from "../../../components/ui/EmblaCarousel";
+//import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import Introvideo from "./introvideo";
 import Partners from "./ui/partners";
-
+import { Suspense } from "react";
+/*
 const OPTIONS = { loop: true };
 const images = [
   {
@@ -38,24 +39,22 @@ const images = [
     alt: "personal trainer",
   },
 ];
+*/
 
 const Hero = () => {
   return (
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-16">
       <div className="lg:hidden">
         <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
-          Unete a la <span className="text-blue-700">revolucion educativa</span> Sport Fitness
+          Unete a la <span className="text-blue-700">revolucion educativa</span>{" "}
+          Sport Fitness
         </h2>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-        <video
-              autoPlay
-              muted
-              loop
-              className="-z-10 object-cover"
-              playsInline
-            >
-              <source src="/videos/idaclass.mp4" type="video/mp4" />
-            </video>
+        <Suspense fallback={<p className="aspect-video bg-black w-full">Cargando video...</p>}>
+          <video autoPlay muted loop className="-z-10 object-cover aspect-video" playsInline>
+            <source src="/videos/idaclass.mp4" type="video/mp4" />
+          </video>
+        </Suspense>
         <h2 className="mt-12 mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px] ">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
