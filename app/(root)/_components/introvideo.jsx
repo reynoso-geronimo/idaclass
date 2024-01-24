@@ -10,7 +10,7 @@ const Introvideo = () => {
   return (
     <div className="flex w-full justify-center ">
       <Dialog>
-        <DialogTrigger className="text-idaclass px-2 rounded-2xl flex text-2xl font-bold items-center gap-2  bg-white">
+        <DialogTrigger className="text-idaclass px-2 rounded-t-2xl flex text-2xl font-bold items-center gap-2  bg-white">
           <YoutubeIcon size={40}/> Conoce Idaclass
         </DialogTrigger>
         <DialogContent className="pt-12 bg-zinc-800 bg-opacity-95 border-none">

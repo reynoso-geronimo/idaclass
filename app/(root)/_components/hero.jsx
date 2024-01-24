@@ -63,7 +63,7 @@ const Hero = () => {
           </video>
         </div>
 
-        <div className="relative bottom-[45px] translate-x-[50%] right-[50%] h-0">
+        <div className="relative bottom-[39px] translate-x-[50%] right-[50%] h-0">
           <Introvideo />
         </div>
 
@@ -115,7 +115,7 @@ const Hero = () => {
                 <source src="/videos/idaclass.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="relative bottom-[70px] lg:bottom-[10%] translate-x-[50%] right-[50%] h-0">
+            <div className="relative lg:bottom-[39px] translate-x-[50%] right-[50%] h-0">
               <Introvideo />
             </div>
           </div>
