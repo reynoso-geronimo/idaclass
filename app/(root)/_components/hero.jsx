@@ -50,14 +50,23 @@ const Hero = () => {
           Sport Fitness
         </h2>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-        <Suspense fallback={<p className="aspect-video bg-black w-full">Cargando video...</p>}>
-          <video autoPlay muted loop className="-z-10 object-cover aspect-video" playsInline>
+
+        <div className="bg-black w-fuill aspect-video">
+          <video
+            autoPlay
+            muted
+            loop
+            className="-z-10 object-cover aspect-video"
+            playsInline
+          >
             <source src="/videos/idaclass.mp4" type="video/mp4" />
           </video>
-          <div className="relative bottom-[45px] translate-x-[50%] right-[50%] h-0">
-              <Introvideo />
-            </div>
-        </Suspense>
+        </div>
+
+        <div className="relative bottom-[45px] translate-x-[50%] right-[50%] h-0">
+          <Introvideo />
+        </div>
+
         <h2 className="mt-12 mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px] ">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
@@ -95,15 +104,17 @@ const Hero = () => {
           </div>
           <div className="w-1/2 relative">
             {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-            <video
-              autoPlay
-              muted
-              loop
-              className="-z-10 object-cover hidden sm:block rounded-md"
-              playsInline
-            >
-              <source src="/videos/idaclass.mp4" type="video/mp4" />
-            </video>
+            <div className="bg-black w-fuill aspect-video">
+              <video
+                autoPlay
+                muted
+                loop
+                className="-z-10 object-cover hidden sm:block rounded-md"
+                playsInline
+              >
+                <source src="/videos/idaclass.mp4" type="video/mp4" />
+              </video>
+            </div>
             <div className="relative bottom-[70px] lg:bottom-[10%] translate-x-[50%] right-[50%] h-0">
               <Introvideo />
             </div>
