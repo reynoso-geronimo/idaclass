@@ -43,7 +43,7 @@ const images = [
 
 const Hero = () => {
   return (
-    <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-16">
+    <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:pt-12">
       <div className="lg:hidden">
         <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
           Unete a la <span className="text-blue-700">revolucion educativa</span>{" "}
@@ -83,7 +83,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block 2xl:px-[10%]">
-        <div className="flex">
+        <div className="flex mb-4">
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
               Unete a la{" "}
