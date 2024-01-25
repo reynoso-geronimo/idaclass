@@ -3,7 +3,6 @@ import modalidad1 from "../../../public/modalidad/modalidad1.webp";
 import modalidad2 from "../../../public/modalidad/modalidad2.webp";
 import modalidad3 from "../../../public/modalidad/modalidad3.webp";
 import Carousel from "./ui/carousel";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const slides = [
   {
@@ -29,12 +28,10 @@ const Modalidad = () => {
     
       <section className="text-center flex flex-col items-center w-full">
         <TituloSeccion>
-          ¿Cómo es nuestro innovador modelo de capacitación?
+          Programa de educacion continua
         </TituloSeccion>
-        <p className="mx-8 mb-12 px-6 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px] max-w-[1024px]">
-          Es un revolucionario método de aprendizaje, creado para el desarrollo
-          de habilidades actuales, que te lleva a cumplir tus metas
-          profesionales con éxito.
+        <p className="mx-8 mb-12 px-6 text-center text-md font-semibold  text-blue-700 leading-6 tracking-[4px] max-w-[1024px]">
+          Lleva tu carrera a otro nivel con los cursos de especializacion on demand a tu ritmo.
         </p>
 
         <Carousel slides={slides} />

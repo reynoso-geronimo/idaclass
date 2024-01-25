@@ -31,6 +31,30 @@ const partners = [
     src: "/NeurofitRosario.jpg",
     alt: "logo",
   },
+  {
+    src: "/Aletic.png",
+    alt: "logo",
+  },
+  {
+    src: "/GimnasioST.jpg",
+    alt: "logo",
+  },
+  {
+    src: "/Graciela.jpeg",
+    alt: "logo",
+  },
+  {
+    src: "/gymPeru.png",
+    alt: "logo",
+  },
+  {
+    src: "/LogoB2Peru.png",
+    alt: "logo",
+  },
+  {
+    src: "/NeurofitRosario.jpg",
+    alt: "logo",
+  },
 ];
 
 const Partners = () => {
@@ -41,7 +65,7 @@ const Partners = () => {
           align: "start",
           loop: true,
         }}
-        className="mx-4"
+        className="mx-4 max-w-5xl"
         plugins={[
           Autoplay({
             delay: 2000,
@@ -61,7 +85,7 @@ const Partners = () => {
                     width={120}
                     height={120}
                     alt="logo"
-                    className="grayscale rounded-xl cover"
+                    className=" rounded-xl cover"
                   ></Image>
                 </div>
               </div>
