@@ -5,7 +5,7 @@ import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import Introvideo from "./introvideo";
 import Partners from "./ui/partners";
-import { Suspense } from "react";
+
 /*
 const OPTIONS = { loop: true };
 const images = [
@@ -51,7 +51,7 @@ const Hero = () => {
         </h2>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="bg-black w-fuill aspect-video">
+        <div className="bg-black w-fuill aspect-video mb-4 z-10">
           <video
             autoPlay
             muted
@@ -63,11 +63,11 @@ const Hero = () => {
           </video>
         </div>
 
-        <div className="relative bottom-[39px] translate-x-[50%] right-[50%] h-0">
+        
           <Introvideo />
-        </div>
+       
 
-        <h2 className="mt-12 mx-8 text-center text-md text-blue-700 font-semibold leading-6 tracking-[4px] ">
+        <h2 className="mt-4 mx-8 text-center text-md text-blue-700 font-semibold leading-6 tracking-[4px] ">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h2>
@@ -102,22 +102,21 @@ const Hero = () => {
               <Link href="/cursos">Ver todos los cursos</Link>
             </Button>
           </div>
-          <div className="w-1/2 relative">
+          <div className="w-1/2 gap-2 flex flex-col">
             {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-            <div className="bg-black w-fuill aspect-video">
+            <div className="bg-black w-fuill aspect-video z-10">
               <video
                 autoPlay
                 muted
                 loop
-                className="-z-10 object-cover hidden sm:block rounded-md"
+                className=" object-cover hidden sm:block rounded-md "
                 playsInline
               >
                 <source src="/videos/idaclass.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="relative lg:bottom-[39px] translate-x-[50%] right-[50%] h-0">
-              <Introvideo />
-            </div>
+
+            <Introvideo />
           </div>
         </div>
       </div>
