@@ -8,36 +8,36 @@ import Link from "next/link";
 const CursosFormacion = () => {
   const cursos = [
     {
-      title: "Programación Web",
-      subtitle: "Aprende a programar páginas web increíbles desde cero",
+      title: "PERSONAL TRAINER",
+      subtitle: "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativas.",
       image: "https://source.unsplash.com/random/150x150",
-      hours: 15,
+      hours:  590 + "  horas",
       days: 1.5,
       turn: "Noche",
     },
     {
-      title: "Data Analytics",
-      subtitle: "Capacítate para utilizar cualquier volumen de datos",
+      title: "FUNDAMENTOS DE NUTRICION",
+      subtitle: "lorem Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
       image: "https://source.unsplash.com/random/150x150",
-      hours: 10,
+      hours:  590 + "  horas",
       days: 1,
       turn: "Noche",
     },
     {
-      title: "Data Science",
+      title: "FUNCIONTAL HIT",
       subtitle:
-        "Adéntrate en la aplicación de modelos de aprendizaje automático",
+        "AdéntFórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
       image: "https://source.unsplash.com/random/150x150",
-      hours: 10,
+      hours:  590 + "  horas",
       days: 1,
       turn: "Noche",
     },
     {
-      title: "IA para Negocios",
+      title: "BIOMECANICA FITNESS",
       subtitle:
-        "Aprenderás las principales características de las aplicaciones de Inteligencia Artificial en los negocios",
+        "AFórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativaia Artificial en los negocios",
       image: "https://source.unsplash.com/random/150x150",
-      hours: 10,
+      hours: 590 + "  horas",
       days: 1,
       turn: "Noche",
     },
@@ -77,7 +77,7 @@ const CursosFormacion = () => {
           <div className="flex flex-col gap-4 p-4">
             <p className="text-sm flex items-center gap-1">
               <Check color="#3a5dae" />
-              Duracion del curso
+              {curso.hours}
             </p>
             <p className="text-sm flex items-center gap-1">
               <Check color="#3a5dae" />
