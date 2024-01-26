@@ -4,15 +4,11 @@ import Autoplay from "embla-carousel-autoplay";
 import AutoHeight from "embla-carousel-auto-height";
 import useEmblaCarousel from "embla-carousel-react";
 import { DotButton } from "./EmblaCarouselArrowsDotsButtons";
-import Image from "next/image";
-import Introvideo from "@/app/(root)/_components/introvideo";
 
 const EmblaCarousel = props => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    options,
-    [Autoplay()],
-    [AutoHeight()]
+    options
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -42,26 +38,18 @@ const EmblaCarousel = props => {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <>
-      <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <div className="embla__container">
-            {slides.map((image, index) => (
-              <div className="embla__slide" key={index}>
-                <Image
-                  className="embla__slide__img"
-                  src={image.src}
-                  alt={image.alt}
-                  width={600}
-                  height={300}
-                  priority
-                  quality={50}
-                />
-              </div>
-            ))}
-          </div>
+    <div className="embla container">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((slide, index) => (
+            <div className="embla__slide" key={index}>
+             
+             {slide}
+            </div>
+          ))}
         </div>
       </div>
+      
       <div className="embla__dots h-5 ">
         {scrollSnaps.map((_, index) => (
           <DotButton
@@ -73,10 +61,7 @@ const EmblaCarousel = props => {
           />
         ))}
       </div>
-      <div className="relative  bottom-[70px] lg:bottom-[17%] translate-x-[50%] right-[50%] h-0">
-        <Introvideo />
-      </div>
-    </>
+    </div>
   );
 };
 
