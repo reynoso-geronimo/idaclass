@@ -107,6 +107,9 @@
   flex:0 0 20%
  } 
 }
+.embla__viewport {
+  overflow: hidden;
+}
 .embla__slide__modalidad {
   flex: 0 0 100%;
   min-width: 0;
