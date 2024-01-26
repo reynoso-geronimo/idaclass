@@ -31,7 +31,7 @@ const CasoExito = ({
               src={`https://flagcdn.com/${pais?pais:"ar"}.svg`}
               width={26}
               height={24}
-              alt="Ukraine"
+              alt="ar"
             ></Image>
             {nombre ? nombre : "Perez Con Pan"}
           </h3>

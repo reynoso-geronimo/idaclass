@@ -8,6 +8,7 @@ import Faq from "./_components/faq";
 import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
 import CasosExito from "./_components/casos-exito";
+import Banderas from "./_components/banderas";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Intro/>
       <Ventajas />
+      <Banderas/>
       <Soluciones/>
       <CursosFormacion />
       <Modalidad />
