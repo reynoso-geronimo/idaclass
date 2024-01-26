@@ -64,11 +64,13 @@ const Partners = () => {
         opts={{
           align: "start",
           loop: true,
+          duration:6000,
+          watchDrag:false
         }}
         className="mx-4 max-w-5xl"
         plugins={[
           Autoplay({
-            delay: 2000,
+            delay: 0,
           }),
         ]}
       >
