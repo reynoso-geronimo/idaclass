@@ -48,15 +48,16 @@ const CursosFormacion = () => {
 
   const OPTIONS = { align: "start" };
   return (
-    <section className="  my-12">
+    <section className="my-12">
       <TituloSeccion>Cursos de formacion</TituloSeccion>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-0"></div>
+      <div className="max-w-2xl mx-auto lg:max-w-full">
       <EmblaCarousel
         options={OPTIONS}
         slides={cursos.map((curso, index) => (
           <CursoFormacionCard key={index} curso={curso} index={index} />
         ))}
       />
+      </div>
     </section>
   );
 };
