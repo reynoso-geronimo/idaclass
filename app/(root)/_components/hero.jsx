@@ -21,7 +21,7 @@ const Hero = () => {
             loop
             className="-z-10 object-cover aspect-video"
             playsInline
-            preload={true}
+            preload={"auto"}
           >
             <source src="/videos/idaclass.mp4" type="video/mp4" />
           </video>
@@ -73,6 +73,7 @@ const Hero = () => {
                 loop
                 className=" object-cover hidden sm:block rounded-md "
                 playsInline
+                preload="auto"
               >
                 <source src="/videos/idaclass.mp4" type="video/mp4" />
               </video>
