@@ -21,7 +21,7 @@ export default function RootLayout({ children}) {
       <body className={`${inter.className} min-h-screen flex flex-col justify-between`}>
       <ProviderSession>
         <NavBar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+       {children}
         <Footer />
         </ProviderSession>
       </body>
