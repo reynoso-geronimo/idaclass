@@ -1,45 +1,8 @@
-"use client";
-//import EmblaCarousel from "../../../components/ui/EmblaCarousel";
 import { Separator } from "../../../components/ui/separator";
 import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import Introvideo from "./introvideo";
 import Partners from "./ui/partners";
-
-/*
-const OPTIONS = { loop: true };
-const images = [
-  {
-    src: "/neurociencia.webp",
-    alt: "neurociencia del deporte",
-  },
-  {
-    src: "/prepfisico.webp",
-    alt: "preparador fisico",
-  },
-  // ...
-  {
-    src: "/nutriciondeportiva.webp",
-    alt: "nutricion deportiva",
-  },
-  {
-    src: "/funcional.webp",
-    alt: "funcional",
-  },
-  {
-    src: "/funcionalcrosshiit.webp",
-    alt: "funcional cross hiit",
-  },
-  {
-    src: "/instructormusculacion.webp",
-    alt: "instructor musculacion",
-  },
-  {
-    src: "/personaltrainer.webp",
-    alt: "personal trainer",
-  },
-];
-*/
 
 const Hero = () => {
   return (
@@ -63,9 +26,7 @@ const Hero = () => {
           </video>
         </div>
 
-        
-          <Introvideo />
-       
+        <Introvideo />
 
         <h2 className="mt-4 mx-8 text-center text-md text-blue-700 font-semibold leading-6 tracking-[4px] ">
           Transforma tu pasion, despierta tu potencial, conviertete en un
