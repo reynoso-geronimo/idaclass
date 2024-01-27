@@ -1,10 +1,5 @@
 import EmblaCarousel from "@/components/ui/EmblaCarousel";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { Check } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import CursoFormacionCard from "./ui/curso-formacion-card";
 
 const CursosFormacion = () => {
@@ -12,7 +7,7 @@ const CursosFormacion = () => {
     {
       title: "Programación Web",
       descripcion: "Aprende a programar páginas web increíbles desde cero",
-      image: "https://source.unsplash.com/random/150x150",
+      image: "/cursosFormacion/cursoimg1.jps",
       hours: 15,
       days: 1.5,
       turn: "Noche",
