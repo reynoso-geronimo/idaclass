@@ -30,16 +30,14 @@ const Banderas = () => {
       >
         <CarouselContent>
           {paises.map(pais => (
-            <CarouselItem key={pais} className="basis-1/7 ">
-              <div className="relative h-24 w-24 border-2 rounded-full">
+            <CarouselItem key={pais} className="basis-1/14 ">
+              <div className="relative h-[50px] aspect-video ">
                 <Image
                   src={`https://flagcdn.com/h240/${pais}.webp`}
                   fill
                   alt={pais}
-                  className=" rounded-full "
-                  style={{
-                    objectFit: 'fill', // cover, contain, none
-                  }}
+                  className="h-[50px] aspect-video border-[1px] border-gray-200"
+                  
                 ></Image>
               </div>
             </CarouselItem>
