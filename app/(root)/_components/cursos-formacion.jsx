@@ -7,7 +7,7 @@ const CursosFormacion = () => {
     {
       title: "Programación Web",
       descripcion: "Aprende a programar páginas web increíbles desde cero",
-      image: "/cursosFormacion/cursoimg1.jps",
+      image: "/cursosFormacion/cursoimg1.jpg",
       hours: 15,
       days: 1.5,
       turn: "Noche",
