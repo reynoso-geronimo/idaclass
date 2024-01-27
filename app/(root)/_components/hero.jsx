@@ -21,6 +21,7 @@ const Hero = () => {
             loop
             className="-z-10 object-cover aspect-video"
             playsInline
+            preload={true}
           >
             <source src="/videos/idaclass.mp4" type="video/mp4" />
           </video>
