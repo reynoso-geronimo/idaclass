@@ -11,7 +11,7 @@ const paises = ["ar", "py", "bo", "uy", "cl", "pe", "ec", "co","mx","cr","ni","s
 
 const Banderas = () => {
   return (
-    <section className=" flex justify-center items-center h-40 container">
+    <section className=" flex justify-center items-center h-40 ">
       <Carousel
         opts={{
           align: "start",
