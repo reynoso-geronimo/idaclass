@@ -41,7 +41,7 @@ const Ventajas = () => {
   });
   const [ref2, inView2, entry2] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px 0px",
+    rootMargin: "-200px 0px",
   });
   const [ref3, inView3, entry3] = useInView({
     triggerOnce: true,
