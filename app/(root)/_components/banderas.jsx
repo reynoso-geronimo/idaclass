@@ -24,13 +24,13 @@ const Banderas = () => {
             delay: 0,
           }),
         ]}
-        className="mx-4 max-w-5xl container"
+        className="mx-4 max-w-6xl container"
        
         
       >
         <CarouselContent>
           {paises.map(pais => (
-            <CarouselItem key={pais} className="basis-1/14 ">
+            <CarouselItem key={pais} className="basis-1/8 ">
               <div className="relative h-[50px] aspect-video ">
                 <Image
                   src={`https://flagcdn.com/h240/${pais}.webp`}
