@@ -9,6 +9,7 @@ import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
 import CasosExito from "./_components/casos-exito";
 import Banderas from "./_components/banderas";
+import EquipoProfesional from "./_components/equipo-profesional";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Partners />
       </div>
       <Faq />
+      <EquipoProfesional/>
     </main>
   );
 }
