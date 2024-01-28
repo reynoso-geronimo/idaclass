@@ -23,7 +23,7 @@ const Soluciones = () => {
               key={index + solucion.titulo}
               onMouseEnter={()=>setActivo(index)}
             >
-              <span className={`flex items-center font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 ${activo==index&&` drop-shadow-[0_0_10px_rgba(100,100,255,1)] transition-all duration-1000  text-sky-300`} `}>
+              <span className={`flex items-center font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 transition-all duration-1000 ${activo==index&&` drop-shadow-[0_0_10px_rgba(100,100,255,1)]  text-sky-300`} `}>
                 0{index + 1}
                 <span className={`animate-bounce ml-4 transition-all duration-1000 sm:hidden ${activo==index&&`opacity-0`}`}>
                   <ChevronDown />
