@@ -15,7 +15,7 @@ const CasoExito = ({
   return (
     <div className="bg-gray-800 py-4 pr-8 pl-16 rounded-lg text-white flex flex-col">
       <Quote className="transform -rotate-180 -translate-x-12" />
-      <p className="text-xs leading-6 ">
+      <p className="text-xs leading-6 italic">
         {experiencia
           ? experiencia
           : "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
