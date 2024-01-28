@@ -26,7 +26,7 @@ const EquipoProfesional = () => {
               stopOnInteraction:false
             }),
           ]}
-          className="mx-4 "
+          className="mx-1 sm:mx-4 "
         >
           <CarouselContent className="-mt-1 h-[300px]">
             {Array.from({ length: 5 }).map((_, index) => (
@@ -55,11 +55,11 @@ const EquipoProfesional = () => {
           plugins={[
             Autoplay({
               delay: 0,
-              stopOnInteraction:true,
+              stopOnInteraction:false,
               
             }),
           ]}
-          className="mx-4 "
+          className="mx-1 sm:mx-4 "
         >
           <CarouselContent className="-mt-1 h-[300px]">
             {Array.from({ length: 5 }).map((_, index) => (
@@ -88,11 +88,11 @@ const EquipoProfesional = () => {
           plugins={[
             Autoplay({
               delay: 0,
-              stopOnInteraction:true,
+              stopOnInteraction:false,
               
             }),
           ]}
-          className="mx-4 "
+          className="mx-1 sm:mx-4 "
         >
           <CarouselContent className="-mt-1 h-[300px]">
             {Array.from({ length: 5 }).map((_, index) => (
