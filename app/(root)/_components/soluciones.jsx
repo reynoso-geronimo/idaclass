@@ -2,10 +2,14 @@
 import { ChevronDown } from "lucide-react";
 import { soluciones } from "../../../lib/constants.js";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Soluciones = () => {
   const [activo, setActivo] = useState();
-
+  const [ref, inView, entry] = useInView({
+    triggerOnce: true,
+   
+  });
   return (
     <section
       className=" h-[800px] bg-zinc-800 text-white bg-no-repeat bg-[50%] bg-[length:_1400px] transform scale-x-[-1]"
@@ -13,8 +17,9 @@ const Soluciones = () => {
     >
       <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
         <div className="flex flex-col justify-center gap-4 h-full container">
-          <h3 className="text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400">
-            Soluciones personalizadas para tu exito
+          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`} max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400`}>
+           <span> Soluciones personalizadas </span>
+           <span>para tu exito</span>
           </h3>
 
           {soluciones.map((solucion, index) => (
