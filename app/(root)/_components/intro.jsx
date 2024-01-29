@@ -7,29 +7,31 @@ const Intro = () => {
   return (
     <section className="">
       <TituloSeccion className={"container"}>
-        Somos la llave para transformar tu pasión por el fitness en una
-        carrera exitosa en tiempo record.
+        Somos la llave para transformar tu pasión por el fitness en una carrera
+        exitosa en tiempo record.
       </TituloSeccion>
       <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-semibold md:flex md:justify-center ">
-        <span className="flex flex-col justify-start items-center w-40">
+        <div className="flex flex-col items-center justify-between w-40">
           <Image
             src={"/assets/experiencia.webp"}
             width={72}
             height={72}
             alt="experiencia"
           />
-          <span>
+          <span >
             <CountUp
               end={25}
               duration={3.75}
               enableScrollSpy={true}
               scrollSpyOnce={true}
               suffix=" "
+              className="text-2xl"
             />
-            años de experiencia
           </span>
-        </span>
-        <span className={`flex flex-col justify-start items-center w-40`}>
+          <p className="leading-4">Años de</p>
+          <p className="leading-4">experiencia</p>
+        </div>
+        <div className="flex flex-col items-center justify-between w-40">
           <Image
             src={"/assets/50milcertificados.webp"}
             width={72}
@@ -44,11 +46,12 @@ const Intro = () => {
               enableScrollSpy={true}
               scrollSpyOnce={true}
               prefix="+"
+              className="text-2xl pb-20"
             />
           </span>
           certificados
-        </span>
-        <span className="flex flex-col justify-start items-center w-40">
+        </div>
+        <div className="flex flex-col items-center justify-between w-40 leading-5">
           <Image
             src={"/assets/estandarformacion.webp"}
             width={72}
@@ -56,8 +59,8 @@ const Intro = () => {
             alt="estandarformacion"
           />
           1ra Digital School con estandar de formación
-        </span>
-        <span className="flex flex-col justify-start items-center w-40">
+        </div>
+        <div className="flex flex-col items-center justify-between w-40">
           <Image
             src={"/assets/empleabilidad.webp"}
             width={72}
@@ -65,12 +68,18 @@ const Intro = () => {
             alt="empleabilidad"
           />
           <span>
-            <CountUp end={80} duration={3.75} enableScrollSpy={true} scrollSpyOnce={true}/>% de
-            empleabilidad
+            <CountUp
+              end={80}
+              duration={3.75}
+              enableScrollSpy={true}
+              scrollSpyOnce={true}
+              suffix="%"
+              className="text-2xl pb-20"
+            />
           </span>
-        </span>
+          <span>de empleabilidad</span>
+        </div>
       </div>
-      
     </section>
   );
 };
