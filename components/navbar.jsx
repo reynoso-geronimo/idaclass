@@ -110,7 +110,7 @@ const NavBar = () => {
               pathname === "/blog" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
             } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >Comunidad Ida Class</Link>
+          >Comunidad IdaClass</Link>
 
           <Link href="/asesorate" className={`${
               pathname === "/asesorate" &&

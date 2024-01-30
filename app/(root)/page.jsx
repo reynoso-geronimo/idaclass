@@ -22,12 +22,12 @@ export default function Home() {
       <CursosFormacion />
       <Modalidad />
       <Certificacion />
+      <EquipoProfesional/>
       <CasosExito/>
       <div className="mt-12">
       <Partners />
       </div>
       <Faq />
-      <EquipoProfesional/>
     </main>
   );
 }

@@ -45,13 +45,17 @@ const CursosFormacion = () => {
   return (
     <section className="my-12">
       <TituloSeccion>Cursos de formacion</TituloSeccion>
+      <h2 className="text-center font-bold text-xl text-gray-700 ">Sé el Entrenador del Futuro hoy mismo</h2>
+      <h2 className="text-center font-bold text-xl text-gray-700 mb-4">
+        Forja tu camino en el mundo del Sport fitness
+      </h2>
       <div className="max-w-2xl mx-auto lg:max-w-full">
-      <EmblaCarousel
-        options={OPTIONS}
-        slides={cursos.map((curso, index) => (
-          <CursoFormacionCard key={index} curso={curso} index={index} />
-        ))}
-      />
+        <EmblaCarousel
+          options={OPTIONS}
+          slides={cursos.map((curso, index) => (
+            <CursoFormacionCard key={index} curso={curso} index={index} />
+          ))}
+        />
       </div>
     </section>
   );

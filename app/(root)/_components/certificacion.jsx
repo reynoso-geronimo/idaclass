@@ -11,7 +11,7 @@ const Certificacion = () => {
         Obtén nuestra Certificación con amplio reconocimiento en el mercado y
         Aval Internacional.
       </TituloSeccion>
-      <p className="my-12 mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	max-w-[1024px]">
+      <p className="my-12 mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px]	max-w-[1024px]">
         Accede a la doble Titulación, Certificado de Extensión Universitaria
         IUYMCA, Certificado IdaClass con autenticación QR + Certificado de 4
         especializaciones.
@@ -25,11 +25,11 @@ const Certificacion = () => {
           <TituloSeccion className="mb-4 mt-0">
             Sello de calidad en formación profesional
           </TituloSeccion>
-          <p className="mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	">
+          <p className="mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px]	">
             1ra Digital School de Latam con estándar de formación. 1ra Digital
             School con normas de código y éticas profesional.
           </p>
-          <p className="mx-8 text-center text-md uppercase text-blue-700 font-medium leading-6 tracking-[4px]	">
+          <p className="mx-8 text-center text-md text-blue-700 font-medium leading-6 tracking-[4px]	">
             Nuestros partners educativos nos avalan.
           </p>
         </div>

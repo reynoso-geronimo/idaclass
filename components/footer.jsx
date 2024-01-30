@@ -29,7 +29,7 @@ const Footer = () => {
         <Link href="/">Inicio</Link>
         <Link href="/nosotros">Nosotros</Link>
         <Link href="/cursos">Cursos</Link>
-        <Link href="/">Blog</Link>
+        <Link href="/">Comunidad IdaClassw</Link>
         <Link href="/asesorate">Asesorate ya</Link>
       </section>
 

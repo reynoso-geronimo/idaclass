@@ -18,7 +18,7 @@ const CursoFormacionCard = ({ curso, index }) => {
           fill
           alt="Imagen del curso"
         />
-        <h3 className="z-10 text-base font-semibold px-2 relative bottom-1 uppercase text-white  bg-idaclass w-[55%] border border-1 border-black -translate-x-3 ">
+        <h3 className="flex items-center px-2 z-10 text-base font-semibold h-12 relative bottom-1 uppercase text-white  bg-idaclass w-[55%] border border-1 border-black -translate-x-3">
           {curso.title}
         </h3>
         <TriangleRight

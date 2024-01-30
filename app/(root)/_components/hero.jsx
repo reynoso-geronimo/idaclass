@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex justify-center w-full">
           <Button
             size="lg"
-            className="rounded-xl m-10 font-bold w-48 h-14 border-4"
+            className="rounded-2xl m-10 font-bold w-48 h-10"
             asChild
           >
             <Link href="/cursos">Ver todos los cursos</Link>
@@ -58,7 +58,7 @@ const Hero = () => {
             </h2>
             <Button
               size="lg"
-              className="rounded-3xl m-10 font-bold w-48 h-14"
+              className="rounded-2xl m-10 font-bold w-48 h-10"
               asChild
             >
               <Link href="/cursos">Ver todos los cursos</Link>
@@ -84,7 +84,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="text-xl font-bold text-center container">
-        Idaclass junto a empresas destacadas del Sport Fitness de LATAM.
+        IdaClass junto a empresas destacadas del Sport Fitness de LATAM.
       </div>
       <Partners />
       <Separator className=" bg-gray-200" />
