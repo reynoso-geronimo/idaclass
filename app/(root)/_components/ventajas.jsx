@@ -74,13 +74,11 @@ const Ventajas = () => {
           />
           <div className="md:w-2/5">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-              Aprende Haciendo
+            Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg">
-              Avanza con Learning by Doing el metodo probado y eficaz basado en
-              experiencia practica y desarrollo de proyectos que te permite
-              llevar a la practica los conocimientos aprendidos desde el primer
-              dia.
+            Aprende en un entorno virtual interactivo y multimodal de manera  simple y efectiva.    Clases en vivo con expertos, videolecciones, contenido interactivo, autoevaluaciones acompañado por un equipo de tutores.
+
             </p>
           </div>
         </article>
@@ -107,24 +105,20 @@ const Ventajas = () => {
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-                Programas de estudios innovadores
+              Programas de estudios modernos
               </h3>
               <p className="text-pretty md:text-lg">
-                Creamos programas integrales con standard de formacion
-                internacional, que reflejan las ultimas tendencias en
-                entrenamiento, las ciencias aplicadas para que logreas
-                empleabilidad o hacer despegar tu propio proyecto.
+              Accede a programas integrales con standard de formación internacional, que reflejan las ultimas tendencias en entrenamiento, las ciencias aplicadas para que logres empleabilidad o para llevar a delante tu emprendimiento de forma exitosa
+
               </p>
             </div>
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-                SkillClass - Tu Herramienta Exclusiva
+              Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg">
-                Domina el arte de construir tu marca,ofrecer y vender tus
-                servicios y comunicar efectivamente tus proyectos
-                personales.SkillClass es el complemento necesario para
-                garantizar tu exito.
+
+                Avanza con Learning by Doing el método probado y eficaz basado en experiencia practica Lleva a la práctica los conocimientos de forma rápida y eficiente desde el primer día, para alcanzar tus objetivos.
               </p>
             </div>
           </div>
@@ -147,12 +141,11 @@ const Ventajas = () => {
           />
           <div className="md:w-2/5">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-              Innovamos en la forma de aprender
+            SkillClass - Tu Herramienta Exclusiva
             </h3>
             <p className="text-pretty md:text-lg">
-              Rompemos los moldes tradicionales con un enfoque innovador.
-              Aprende en un entorno virtual interactio, simple e intuitivo con
-              metodos que despiertan tu creatividad y facilitan tu aprendizaje
+            Dominá el arte de construir tu marca, ofrecer y vender servicios, comunicándote efectivamente. SkillClass es el complemento necesario para garantizar que logres tus objetivos con éxito.
+
             </p>
           </div>
         </article>
