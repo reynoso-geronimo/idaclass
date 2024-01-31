@@ -15,14 +15,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
 const NavBar = () => {
   const { data: session } = useSession();
 
@@ -104,37 +104,33 @@ const NavBar = () => {
             Nosotros
           </Link>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger className="outline-none hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
-              Cursos
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[100vw] flex justify-around">
-              <div>
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
-              </div>
-              <div>
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
-              </div>
-              <div>
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Menubar className="border-none outline-none hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
+            <MenubarMenu>
+              <MenubarTrigger>Cursos</MenubarTrigger>
+              <MenubarContent className="w-[100vw] flex justify-center gap-x-44">
+                <div>
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
+                    Titulo
+                  </h5>
+                  <MenubarSeparator />
+                  <MenubarItem>New Tab</MenubarItem>
+                  <MenubarItem>New Window</MenubarItem>
+                  <MenubarItem>Share</MenubarItem>
+                  <MenubarItem>Print</MenubarItem>
+                </div>
+                <div>
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
+                    Titulo
+                  </h5>
+                  <MenubarSeparator />
+                  <MenubarItem>New Tab</MenubarItem>
+                  <MenubarItem>New Window</MenubarItem>
+                  <MenubarItem>Share</MenubarItem>
+                  <MenubarItem>Print</MenubarItem>
+                </div>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
 
           <Link
             href="/blog"
