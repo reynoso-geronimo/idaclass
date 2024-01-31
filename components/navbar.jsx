@@ -107,7 +107,7 @@ const NavBar = () => {
           <Menubar className="border-none outline-none hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
             <MenubarMenu>
               <MenubarTrigger>Cursos</MenubarTrigger>
-              <MenubarContent className="w-[100vw] flex justify-center gap-x-44">
+              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4">
                 <div>
                   <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
                     Titulo
