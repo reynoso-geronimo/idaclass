@@ -14,6 +14,14 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const NavBar = () => {
   const { data: session } = useSession();
@@ -24,7 +32,7 @@ const NavBar = () => {
       <nav className="w-full flex justify-around items-center h-16 mt-2">
         <Sheet>
           <SheetTrigger className="lg:hidden">
-            <Menu className="h-9 w-9 " aria-label="menu-navegacion"/>
+            <Menu className="h-9 w-9 " aria-label="menu-navegacion" />
           </SheetTrigger>
           <SheetContent
             side={"left"}
@@ -96,27 +104,57 @@ const NavBar = () => {
             Nosotros
           </Link>
 
-          <Link
-            href="/cursos"
-            className={`${
-              pathname === "/cursos" &&
-              "text-sky-700 underline decoration-2 underline-offset-4"
-            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >
-            Cursos
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className=" hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
+              Cursos
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-[100vw] flex justify-around">
+              <div>
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+                <DropdownMenuItem>Billing</DropdownMenuItem>
+                <DropdownMenuItem>Team</DropdownMenuItem>
+                <DropdownMenuItem>Subscription</DropdownMenuItem>
+              </div>
+              <div>
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+                <DropdownMenuItem>Billing</DropdownMenuItem>
+                <DropdownMenuItem>Team</DropdownMenuItem>
+                <DropdownMenuItem>Subscription</DropdownMenuItem>
+              </div>
+              <div>
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+                <DropdownMenuItem>Billing</DropdownMenuItem>
+                <DropdownMenuItem>Team</DropdownMenuItem>
+                <DropdownMenuItem>Subscription</DropdownMenuItem>
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
-          <Link href="/blog" className={`${
+          <Link
+            href="/blog"
+            className={`${
               pathname === "/blog" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
             } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >Comunidad IdaClass</Link>
+          >
+            Comunidad IdaClass
+          </Link>
 
-          <Link href="/asesorate" className={`${
+          <Link
+            href="/asesorate"
+            className={`${
               pathname === "/asesorate" &&
               "text-sky-700 underline decoration-2 underline-offset-4"
             } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >Asesorate ya</Link>
+          >
+            Asesorate ya
+          </Link>
         </div>
         {session && session.user ? (
           <Avatar onClick={() => signOut()} className="cursor-pointer">
