@@ -110,7 +110,7 @@ const NavBar = () => {
               <MenubarContent className="w-[100vw] flex justify-center gap-x-44">
                 <div>
                   <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
-                    Titulo
+                  Cursos de formacion
                   </h5>
                   <MenubarSeparator />
                   <MenubarItem>New Tab</MenubarItem>
@@ -120,7 +120,7 @@ const NavBar = () => {
                 </div>
                 <div>
                   <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
-                    Titulo
+                    Cursos ON DEMAND
                   </h5>
                   <MenubarSeparator />
                   <MenubarItem>New Tab</MenubarItem>
