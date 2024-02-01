@@ -15,9 +15,9 @@ const Soluciones = () => {
       className=" h-[800px] bg-zinc-800 text-white bg-no-repeat bg-[50%] bg-[length:_1400px] transform scale-x-[-1]"
       style={{ backgroundImage: `url("/assets/bg-soluciones2.jpg")` }}
     >
-      <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
+      <div className="backdrop-brightness-50 h-full pt-14 transform scale-x-[-1] ">
         <div className="flex flex-col justify-center gap-4 h-full container relative sm:top-10">
-          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`}  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400 absolute top-10 sm:top-0`}>
+          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`}  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400 absolute -top-8 sm:-top-12`}>
            <span> Soluciones personalizadas </span>
            <span>para tu exito</span>
           </h3>
