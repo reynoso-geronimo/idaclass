@@ -8,9 +8,9 @@ import Autoplay from "embla-carousel-autoplay";
 import Herramienta from "./ui/herramienta";
 
 const carrusel1 = [
-  <h1 className="text-xl sm:text-2xl font-bold">Auto <br /> evaluaciones</h1>,
+  <h1 className="text-xl sm:text-2xl font-bold" key={1}>Auto <br />Evaluaciones</h1>,
   `Imagen `,
-  <h1 className="text-xl sm:text-2xl font-bold">
+  <h1 className="text-xl sm:text-2xl font-bold" key={2}>
     Contenido
     <br /> Interactivo
   </h1>,
@@ -18,20 +18,20 @@ const carrusel1 = [
 ];
 
 const carrusel2 = [
-  <h1 className="text-xl sm:text-2xl font-bold">
+  <h1 className="text-xl sm:text-2xl font-bold" key={3}>
   Grupo <br />de  <br />estudio 
 </h1>,
  `imagen1`,
-  <h1 className="text-xl sm:text-2xl font-bold">
+  <h1 className="text-xl sm:text-2xl font-bold" key={4}>
    Tutores
   </h1>,
 
 ];
 
 const carrusel3 = [
-  <h1 className="text-xl sm:text-2xl font-bold">Clases <br /> en <br /> Vivo</h1>,
+  <h1 className="text-xl sm:text-2xl font-bold" key={4}>Clases <br /> en <br /> Vivo</h1>,
   `Imagen `,
-  <h1 className="text-xl sm:text-2xl font-bold">
+  <h1 className="text-xl sm:text-2xl font-bold" key={5}>
    Video <br /> Lecciones
   </h1>,
   `Imagen2`,
