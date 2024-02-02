@@ -149,7 +149,7 @@ const Herramientas = () => {
             align: "end",
             loop: true,
             duration: 6000,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
@@ -178,7 +178,7 @@ const Herramientas = () => {
             align: "end",
             loop: true,
             duration: 6000,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
@@ -207,7 +207,7 @@ const Herramientas = () => {
             align: "end",
             loop: true,
             duration: 6000,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
