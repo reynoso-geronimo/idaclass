@@ -1,18 +1,12 @@
-
-import { children } from "react";
-
-
-const Herramienta = ({ rotar = false , contenido}) => {
+const Herramienta = ({ rotar = false, contenido }) => {
   return (
-    <div
+    <h6
       className={`${
         rotar && `transform rotate-180`
-      }  h-44 flex flex-col items-center justify-evenly border-2 bg-idaclass px-2 text-white text-center`}
+      } h-28 flex flex-col items-center justify-center  bg-idaclass  text-white text-center text-base sm:text-2xl font-bold `}
     >
-      
       {contenido}
-      
-    </div>
+    </h6>
   );
 };
 
