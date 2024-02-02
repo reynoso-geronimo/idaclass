@@ -53,7 +53,8 @@ module.exports = {
         idaclass:"#3a5dae",
         idaclass2:"#74d1ea",
         idaclass3:"#1fb3e5",
-        idaclass4:"#0085ca"
+        idaclass4:"#0085ca",
+        idaclassGray:"#A59C94"
       },
       borderRadius: {
         lg: "var(--radius)",

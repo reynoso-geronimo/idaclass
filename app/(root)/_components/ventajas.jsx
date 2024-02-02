@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
+import Partners from "./ui/partners";
+import EquipoProfesional from "./equipo-profesional";
+import Herramientas from "./herramientas";
 
 const ventajasCollection = [
   {
@@ -65,13 +68,7 @@ const Ventajas = () => {
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={`/aprendehaciendo.jpg`}
-            alt="hero image"
-            height={500}
-            width={500}
-            className="w-full md:w-2/5 rounded-lg"
-          />
+          <Herramientas/>
           <div className="md:w-2/5">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
             Innovación en la enseñanza
