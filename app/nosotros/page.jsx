@@ -72,52 +72,44 @@ const Page = () => {
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty p-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-              delectus adipisci magnam distinctio veniam eligendi ipsam
-              doloremque quia atque.
+            <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
+            Abrazamos la tecnología y la innovación en la educación, proporcionando un ambiente de aprendizaje virtual dinámico y accesible. 
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-                Innovacion
+              Calidad Educativa
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty p-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-              delectus adipisci magnam distinctio veniam eligendi ipsam
-              doloremque quia atque.
+            <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
+            Nos comprometemos a ofrecer programas de formación de la más alta calidad, respaldados por profesionales expertos y actualizados en las últimas tendencias y avances en el ámbito deportivo y de la actividad física.
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-                Innovacion
+              Empoderamiento: 
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty p-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-              delectus adipisci magnam distinctio veniam eligendi ipsam
-              doloremque quia atque.
+            <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
+            Nuestra misión es empoderar a nuestros graduados para que se conviertan en líderes exitosos en la industria del deporte. Facilitamos el emprendimiento y la independencia, fomentando la creatividad y la autogestión
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-                Innovacion
+            Colaboracion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
-            <CardContent className="text-pretty p-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-              delectus adipisci magnam distinctio veniam eligendi ipsam
-              doloremque quia atque.
+            <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass ">
+            Valoramos la colaboración y la construcción de una comunidad sólida. Facilitamos la conexión entre estudiantes, profesores, profesionales y expertos en el campo, creando una red de apoyo que se extiende más allá de las fronteras.
             </CardContent>
           </Card>
         </div>
