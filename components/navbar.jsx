@@ -162,23 +162,23 @@ const NavBar = () => {
                   <h5 className="relative flex cursor-default items-center rounded-sm  py-1.5 text-base font-medium outline-none text-idaclass">
                     Titulo
                   </h5>
-                  <MenubarSeparator />
-                  <MenubarItem>New Tab</MenubarItem>
-                  <MenubarItem>New Window</MenubarItem>
-                  <MenubarItem>Share</MenubarItem>
-                  <MenubarItem>Print</MenubarItem>
+                  <MenubarSeparator  />
+                  <MenubarItem className="text-xl">ppersonal trainter</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
                 </div>
                 <div>
-                  <h5 className="relative flex cursor-default items-center rounded-sm  py-1.5 text-base font-medium outline-none text-idaclass">
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
                     Titulo
                   </h5>
                   <MenubarSeparator />
-                  <MenubarItem>New Tab</MenubarItem>
-                  <MenubarItem>New Window</MenubarItem>
-                  <MenubarItem>Share</MenubarItem>
-                  <MenubarItem>Print</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter </MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
+                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
                 </div>
-              </MenubarContent>
+              </MenubarContent> 
             </MenubarMenu>
           </Menubar>
 
