@@ -64,7 +64,7 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly transition-all duration-1000 ${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -86,7 +86,7 @@ const Ventajas = () => {
 
         <article
           ref={ref2}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4  transition-all duration-1000 ${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -132,7 +132,7 @@ const Ventajas = () => {
 
         <article
           ref={ref3}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly  transition-all duration-1000	${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000	${
             inView3 ? "opacity-100" : "opacity-0"
           }`}
         >
