@@ -11,8 +11,6 @@ import { Button } from "@/components/ui/button";
 import Partners from "@/components/partners";
 import { sobreNosotros } from "@/lib/constants";
 
-
-
 const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
@@ -62,7 +60,7 @@ const Page = () => {
           ))}
         </div>
       </section>
-      <section className="w-full max-w-4xl flex flex-col items-center bg-slate-220 gap-4 pñoñx-4 py-12">
+      <section className="container flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
         <div className="grid grid-cols-2  gap-2 md:gap-4 lg:grid-cols-4 justify-items-center content-center	">
           <Card className="w-54">
@@ -73,43 +71,54 @@ const Page = () => {
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
-            Abrazamos la tecnología y la innovación en la educación, proporcionando un ambiente de aprendizaje virtual dinámico y accesible. 
+              Abrazamos la tecnología y la innovación en la educación,
+              proporcionando un ambiente de aprendizaje virtual dinámico y
+              accesible.
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-              Calidad Educativa
+                Calidad Educativa
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
-            Nos comprometemos a ofrecer programas de formación de la más alta calidad, respaldados por profesionales expertos y actualizados en las últimas tendencias y avances en el ámbito deportivo y de la actividad física.
+              Nos comprometemos a ofrecer programas de formación de la más alta
+              calidad, respaldados por profesionales expertos y actualizados en
+              las últimas tendencias y avances en el ámbito deportivo y de la
+              actividad física.
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-              Empoderamiento: 
+                Empoderamiento:
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
-            Nuestra misión es empoderar a nuestros graduados para que se conviertan en líderes exitosos en la industria del deporte. Facilitamos el emprendimiento y la independencia, fomentando la creatividad y la autogestión
+              Nuestra misión es empoderar a nuestros graduados para que se
+              conviertan en líderes exitosos en la industria del deporte.
+              Facilitamos el emprendimiento y la independencia, fomentando la
+              creatividad y la autogestión
             </CardContent>
           </Card>
 
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold text-black">
-            Colaboracion
+                Colaboracion
               </CardTitle>
               {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass ">
-            Valoramos la colaboración y la construcción de una comunidad sólida. Facilitamos la conexión entre estudiantes, profesores, profesionales y expertos en el campo, creando una red de apoyo que se extiende más allá de las fronteras.
+              Valoramos la colaboración y la construcción de una comunidad
+              sólida. Facilitamos la conexión entre estudiantes, profesores,
+              profesionales y expertos en el campo, creando una red de apoyo que
+              se extiende más allá de las fronteras.
             </CardContent>
           </Card>
         </div>
