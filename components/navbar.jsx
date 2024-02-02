@@ -20,7 +20,6 @@ import {
   MenubarItem,
   MenubarMenu,
   MenubarSeparator,
-  MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
 const NavBar = () => {
@@ -40,7 +39,7 @@ const NavBar = () => {
           >
             <SheetClose asChild>
               <Link
-                className={`${pathname === "/" && "text-sky-700"}`}
+                className={`${pathname === "/" && "text-sky-700"} `}
                 href="/"
               >
                 Inicio
@@ -49,28 +48,79 @@ const NavBar = () => {
             <Separator />
             <SheetClose asChild>
               <Link
-                className={`${pathname === "/nosotros" && "text-sky-700"}`}
+                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/nosotros" && "text-sky-700"} `}
                 href="/nosotros"
               >
                 Nosotros
               </Link>
             </SheetClose>
             <Separator />
+            <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclassGray">
+              Cursos de formacion
+            </h1>
             <SheetClose asChild>
               <Link
                 href="/cursos"
                 className={`${pathname === "/cursos" && "text-sky-700"}`}
               >
-                Cursos
+                Cursos de formacion 1
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/cursos"
+                className={`${pathname === "/cursos" && "text-sky-700"} `}
+              >
+                Cursos de formacion 2
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/cursos"
+                className={`${pathname === "/cursos" && "text-sky-700"} `}
+              >
+                Cursos de formacion 3
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/cursos"
+                className={`${pathname === "/cursos" && "text-sky-700"} `}
+              >
+                Cursos de formacion 4
               </Link>
             </SheetClose>
             <Separator />
             <SheetClose asChild>
-              <Link href="/blog">Blog</Link>
+              <Link
+                href="/cursos-on-demand"
+                className={`border-l-2 border-idaclass4 pl-2 ${
+                  pathname === "/cursos-on-demand" && "text-sky-700"
+                } `}
+              >
+                Cursos on demand
+              </Link>
+            </SheetClose>
+
+            <SheetClose asChild>
+              <Link
+                href="/blog"
+                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/blog" && "text-sky-700"} `}
+              >
+                Comunidad IdaClass
+              </Link>
             </SheetClose>
             <Separator />
             <SheetClose asChild>
-              <Link href="/asesorate">Asesorate ya</Link>
+              <Link
+                href="/asesorate"
+                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/asesorate" && "text-sky-700"} `}
+              >
+                Asesorate ya
+              </Link>
             </SheetClose>
           </SheetContent>
         </Sheet>
@@ -106,11 +156,11 @@ const NavBar = () => {
 
           <Menubar className="border-none outline-none hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
             <MenubarMenu>
-              <MenubarTrigger>¿ que ofrecemos?</MenubarTrigger>
-              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-blue-500 ">
-                <div className="text-white" >
-                  <h5 className="text-white relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
-                  Cursos de formacion
+              <MenubarTrigger>Cursos</MenubarTrigger>
+              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4">
+                <div>
+                  <h5 className="relative flex cursor-default items-center rounded-sm  py-1.5 text-base font-medium outline-none text-idaclass">
+                    Titulo
                   </h5>
                   <MenubarSeparator  />
                   <MenubarItem className="text-xl">ppersonal trainter</MenubarItem>
@@ -118,9 +168,9 @@ const NavBar = () => {
                   <MenubarItem className="text-xl">personal trainter</MenubarItem>
                   <MenubarItem className="text-xl">personal trainter</MenubarItem>
                 </div>
-                <div className="text-white ">
-                  <h5 className="text-white relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
-                    Cursos ON DEMAND
+                <div>
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
+                    Titulo
                   </h5>
                   <MenubarSeparator />
                   <MenubarItem className="text-xl">personal trainter </MenubarItem>

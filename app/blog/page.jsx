@@ -14,9 +14,9 @@ const Page = async () => {
  
   <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4"> 
  
-  Ida Class Jobs</button>
+  idaClass Jobs</button>
   
-  <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">Ida Class Conecta</button>
+  <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">idaClass Conecta</button>
   
   <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">Discord</button>
 </div>

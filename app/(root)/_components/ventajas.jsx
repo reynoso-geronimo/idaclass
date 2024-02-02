@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
+import Partners from "./ui/partners";
+import EquipoProfesional from "./equipo-profesional";
+import Herramientas from "./ui/herramientas";
 
 const ventajasCollection = [
   {
@@ -61,24 +64,20 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly transition-all duration-1000 ${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={`/aprendehaciendo.jpg`}
-            alt="hero image"
-            height={500}
-            width={500}
-            className="w-full md:w-2/5 rounded-lg"
-          />
+          <Herramientas />
           <div className="md:w-2/5">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-            Innovación en la enseñanza
+              Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg">
-            Aprende en un entorno virtual interactivo y multimodal de manera  simple y efectiva.    Clases en vivo con expertos, videolecciones, contenido interactivo, autoevaluaciones acompañado por un equipo de tutores.
-
+              Aprende en un entorno virtual interactivo y multimodal de manera
+              simple y efectiva. Clases en vivo con expertos, videolecciones,
+              contenido interactivo, autoevaluaciones acompañado por un equipo
+              de tutores.
             </p>
           </div>
         </article>
@@ -87,7 +86,7 @@ const Ventajas = () => {
 
         <article
           ref={ref2}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4  transition-all duration-1000 ${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -105,20 +104,25 @@ const Ventajas = () => {
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-              Programas de estudios modernos
+                Programas de estudios modernos
               </h3>
               <p className="text-pretty md:text-lg">
-              Accede a programas integrales con standard de formación internacional, que reflejan las ultimas tendencias en entrenamiento, las ciencias aplicadas para que logres empleabilidad o para llevar a delante tu emprendimiento de forma exitosa
-
+                Accede a programas integrales con standard de formación
+                internacional, que reflejan las ultimas tendencias en
+                entrenamiento, las ciencias aplicadas para que logres
+                empleabilidad o para llevar a delante tu emprendimiento de forma
+                exitosa
               </p>
             </div>
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-              Aprender haciendo
+                Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg">
-
-                Avanza con Learning by Doing el método probado y eficaz basado en experiencia practica Lleva a la práctica los conocimientos de forma rápida y eficiente desde el primer día, para alcanzar tus objetivos.
+                Avanza con Learning by Doing el método probado y eficaz basado
+                en experiencia practica Lleva a la práctica los conocimientos de
+                forma rápida y eficiente desde el primer día, para alcanzar tus
+                objetivos.
               </p>
             </div>
           </div>
@@ -128,7 +132,7 @@ const Ventajas = () => {
 
         <article
           ref={ref3}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly  transition-all duration-1000	${
+          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000	${
             inView3 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -141,11 +145,12 @@ const Ventajas = () => {
           />
           <div className="md:w-2/5">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
-            SkillClass - Tu Herramienta Exclusiva
+              SkillClass - Tu Herramienta Exclusiva
             </h3>
             <p className="text-pretty md:text-lg">
-            Dominá el arte de construir tu marca, ofrecer y vender servicios, comunicándote efectivamente. SkillClass es el complemento necesario para garantizar que logres tus objetivos con éxito.
-
+              Dominá el arte de construir tu marca, ofrecer y vender servicios,
+              comunicándote efectivamente. SkillClass es el complemento
+              necesario para garantizar que logres tus objetivos con éxito.
             </p>
           </div>
         </article>
