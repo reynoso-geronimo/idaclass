@@ -34,9 +34,10 @@ const Banderas = () => {
               <div className="relative h-[50px] aspect-video ">
                 <Image
                   src={`https://flagcdn.com/h240/${pais}.webp`}
-                  fill
+                 fill
                   alt={pais}
-                  className="h-[50px] aspect-video border-[1px] border-gray-200"
+                  sizes="90px"
+                  className="border-[1px] border-gray-200"
                   
                 ></Image>
               </div>

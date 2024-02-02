@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import AutoHeight from "embla-carousel-auto-height";
 import useEmblaCarousel from "embla-carousel-react";
 
 import Image from "next/image";
@@ -12,7 +11,7 @@ const Carousel = props => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     options,
     [Autoplay()],
-    [AutoHeight()]
+    
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);

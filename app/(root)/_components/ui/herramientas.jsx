@@ -19,11 +19,12 @@ const carrusel1 = [
     key={`carrusel1_1`}
   />,
 
-  <div className="relative w-full h-52" key={`sarasa`}>
+  <div className="relative w-full h-52 " key={`sarasa`}>
     <Image
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
@@ -45,6 +46,7 @@ const carrusel1 = [
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
@@ -70,6 +72,7 @@ const carrusel2 = [
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
@@ -88,6 +91,7 @@ const carrusel2 = [
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
@@ -112,6 +116,7 @@ const carrusel3 = [
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
@@ -132,6 +137,7 @@ const carrusel3 = [
       src={"/equipo.jpg"}
       key={`sarasa`}
       fill
+      sizes="(max-width: 600px) 33vw (max-width: 1200px) 16vw"
       style={{
         objectFit: "cover", // cover, contain, none
       }}
