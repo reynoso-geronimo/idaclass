@@ -5,7 +5,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 const CasosExito = () => {
   return (
     <section className="container">
-      <TituloSeccion className={"text-left"}>Mas de 10000000 Estudiantes nos recomiendan</TituloSeccion>
+      <TituloSeccion className={""}>Casos de exito de nuestros estudiantes</TituloSeccion>
       <div className="grid md:grid-cols-2 gap-4">
         <CasoExito />
         <CasoExito />

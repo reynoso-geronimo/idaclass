@@ -18,13 +18,13 @@ const CursoFormacionCard = ({ curso, index }) => {
           fill
           alt="Imagen del curso"
         />
-        <h3 className="flex items-center px-2 z-10 text-base font-semibold h-12 relative bottom-1 uppercase text-white  bg-idaclass w-[55%] border border-1 border-black -translate-x-3">
-          {curso.title}
+        <h3 className="text-center z-10 text-base font-semibold relative -top-28 uppercase text-white  bg-idaclass w-[40%] border border-1 border-black -translate-x-3">
+          {curso.title} &#128293;
         </h3>
         <TriangleRight
           size={50}
           strokeWidth={0}
-          className="-z-10 absolute transform rotate-45 -translate-x-[11px] translate-y-6 "
+          className="-z-10 absolute transform rotate-45 -translate-x-[11px] -translate-y-[85px] "
           fill="black"
         />
       </div>

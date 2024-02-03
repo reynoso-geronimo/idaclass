@@ -11,7 +11,7 @@ import { ChevronRight } from "lucide-react";
 
 const TarjetaModalidad = ({ modalidad, precio, duracion }) => {
   return (
-    <Card className="w-56 text-center bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-sky-400 to-indigo-900 text-white ">
+    <Card className="w-56 text-center bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-idaclass3 to-indigo-900 text-white ">
       <CardHeader>
         <CardTitle className="bg-emerald-400 font-extrabold relative -top-10 p-2 rounded-tl-3xl rounded-br-3xl">
           {modalidad || "ONLINE"}

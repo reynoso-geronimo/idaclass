@@ -14,7 +14,7 @@ export default function SignIn() {
       <video autoPlay muted loop className="-z-10 object-cover hidden sm:block">
         <source src="/videos/bgvideo2.mp4" type="video/mp4" />
       </video>
-      <div className="flex flex-col border-2 border-sky-600 absolute top-12 sm:right-52 space-y-4 bg-slate-900 p-6 rounded-lg shadow-lg z-10">
+      <div className="flex flex-col border-2 border-idaclass3 absolute top-12 sm:right-52 space-y-4 bg-slate-900 p-6 rounded-lg shadow-lg z-10">
         <Button
           onClick={() =>
             signIn("google", { callbackUrl: window.location.origin })

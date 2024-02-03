@@ -39,7 +39,7 @@ const NavBar = () => {
           >
             <SheetClose asChild>
               <Link
-                className={`${pathname === "/" && "text-sky-700"} `}
+                className={`${pathname === "/" && "text-idaclass4"} `}
                 href="/"
               >
                 Inicio
@@ -48,7 +48,9 @@ const NavBar = () => {
             <Separator />
             <SheetClose asChild>
               <Link
-                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/nosotros" && "text-sky-700"} `}
+                className={`border-l-2 border-idaclass4 pl-2 ${
+                  pathname === "/nosotros" && "text-idaclass4"
+                } `}
                 href="/nosotros"
               >
                 Nosotros
@@ -61,7 +63,7 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`${pathname === "/cursos" && "text-sky-700"}`}
+                className={`${pathname === "/cursos" && "text-idaclass4"}`}
               >
                 Cursos de formacion 1
               </Link>
@@ -70,7 +72,7 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`${pathname === "/cursos" && "text-sky-700"} `}
+                className={`${pathname === "/cursos" && "text-idaclass4"} `}
               >
                 Cursos de formacion 2
               </Link>
@@ -79,7 +81,7 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`${pathname === "/cursos" && "text-sky-700"} `}
+                className={`${pathname === "/cursos" && "text-idaclass4"} `}
               >
                 Cursos de formacion 3
               </Link>
@@ -88,7 +90,7 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`${pathname === "/cursos" && "text-sky-700"} `}
+                className={`${pathname === "/cursos" && "text-idaclass4"} `}
               >
                 Cursos de formacion 4
               </Link>
@@ -98,7 +100,7 @@ const NavBar = () => {
               <Link
                 href="/cursos-on-demand"
                 className={`border-l-2 border-idaclass4 pl-2 ${
-                  pathname === "/cursos-on-demand" && "text-sky-700"
+                  pathname === "/cursos-on-demand" && "text-idaclass4"
                 } `}
               >
                 Cursos on demand
@@ -108,7 +110,9 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/blog"
-                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/blog" && "text-sky-700"} `}
+                className={`border-l-2 border-idaclass4 pl-2 ${
+                  pathname === "/blog" && "text-idaclass4"
+                } `}
               >
                 Comunidad IdaClass
               </Link>
@@ -117,7 +121,9 @@ const NavBar = () => {
             <SheetClose asChild>
               <Link
                 href="/asesorate"
-                className={`border-l-2 border-idaclass4 pl-2 ${pathname === "/asesorate" && "text-sky-700"} `}
+                className={`border-l-2 border-idaclass4 pl-2 ${
+                  pathname === "/asesorate" && "text-idaclass4"
+                } `}
               >
                 Asesorate ya
               </Link>
@@ -139,8 +145,8 @@ const NavBar = () => {
             href="/"
             className={`${
               pathname === "/" &&
-              "text-sky-700 underline decoration-2 underline-offset-4"
-            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              "text-idaclass4 underline decoration-2 underline-offset-4"
+            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Inicio
           </Link>
@@ -148,37 +154,56 @@ const NavBar = () => {
             href="/nosotros"
             className={`${
               pathname === "/nosotros" &&
-              "text-sky-700 underline decoration-2 underline-offset-4"
-            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              "text-idaclass4 underline decoration-2 underline-offset-4"
+            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Nosotros
           </Link>
 
-          <Menubar className="border-none outline-none hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]">
+          <Menubar className="border-none outline-none hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]">
             <MenubarMenu>
               <MenubarTrigger>Cursos</MenubarTrigger>
-              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4">
+              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
                 <div>
-                  <h5 className="relative flex cursor-default items-center rounded-sm  py-1.5 text-base font-medium outline-none text-idaclass">
-                    Titulo
-                  </h5>
-                  <MenubarSeparator  />
-                  <MenubarItem className="text-xl">ppersonal trainter</MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
-                </div>
-                <div>
-                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 py-1.5 text-base font-medium outline-none text-idaclass">
-                    Titulo
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                    Cursos de Formacion
                   </h5>
                   <MenubarSeparator />
-                  <MenubarItem className="text-xl">personal trainter </MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
-                  <MenubarItem className="text-xl">personal trainter</MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
                 </div>
-              </MenubarContent> 
+                <div>
+                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                    Cursos on demand
+                  </h5>
+                  <MenubarSeparator />
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter{" "}
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem className="text-xl font-medium">
+                    Personal trainter
+                  </MenubarItem>
+                  <MenubarItem >
+                    <Button size="sm" className="rounded-xl text-sm font-bold">Ver todos los cursos </Button>
+                  </MenubarItem>
+                </div>
+              </MenubarContent>
             </MenubarMenu>
           </Menubar>
 
@@ -186,8 +211,8 @@ const NavBar = () => {
             href="/blog"
             className={`${
               pathname === "/blog" &&
-              "text-sky-700 underline decoration-2 underline-offset-4"
-            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              "text-idaclass4 underline decoration-2 underline-offset-4"
+            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Comunidad IdaClass
           </Link>
@@ -196,8 +221,8 @@ const NavBar = () => {
             href="/asesorate"
             className={`${
               pathname === "/asesorate" &&
-              "text-sky-700 underline decoration-2 underline-offset-4"
-            } hover:text-sky-700 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-sky-700 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              "text-idaclass4 underline decoration-2 underline-offset-4"
+            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
           >
             Asesorate ya
           </Link>

@@ -17,7 +17,7 @@ const Soluciones = () => {
     >
       <div className="backdrop-brightness-50 h-full pt-14 transform scale-x-[-1] ">
         <div className="flex flex-col justify-center gap-4 h-full container relative sm:top-10">
-          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`}  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-sky-400 absolute -top-8 sm:-top-12`}>
+          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`}  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3 absolute -top-8 sm:-top-12`}>
            <span> Soluciones personalizadas </span>
            <span>para tu exito</span>
           </h3>
@@ -31,7 +31,7 @@ const Soluciones = () => {
               <span
                 className={`flex items-center font-extrabold text-5xl min-w-[70px] tracking-tighter font-mono scale-y-125 transition-all duration-1000 ${
                   activo == index &&
-                  ` drop-shadow-[0_0_10px_rgba(100,100,255,1)]  text-sky-300`
+                  ` drop-shadow-[0_0_10px_rgba(100,100,255,1)]  text-idaclass2`
                 } `}
               >
                 0{index + 1}

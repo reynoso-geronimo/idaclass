@@ -9,7 +9,7 @@ const Hero = () => {
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:pt-12">
       <div className="lg:hidden">
         <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
-          Unete a la <span className="text-blue-700">revolucion educativa</span>{" "}
+          Unete a la <span className="text-idaclass">revolucion educativa</span>{" "}
           Sport Fitness
         </h2>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
@@ -29,7 +29,7 @@ const Hero = () => {
 
         <Introvideo />
 
-        <h2 className="mt-4 mx-8 text-center text-md text-blue-700 font-semibold leading-6 tracking-[4px] ">
+        <h2 className="mt-4 mx-8 text-center text-md font-semibold leading-6 text-xl tracking-wide">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h2>
@@ -48,11 +48,11 @@ const Hero = () => {
         <div className="flex mb-4">
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-6xl font-extrabold mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-              Unete a la{" "}
-              <span className="text-blue-700">revolucion educativa</span> Sport
+              Unete a la
+              <span className="text-idaclass"> revolucion educativa</span> Sport
               Fitness
             </h2>
-            <h2 className="text-lg text-blue-700 font-semibold tracking-[3px]	 max-w-[768px]">
+            <h2 className="text-lg text-idaclass font-semibold 	 max-w-[768px]">
               Transforma tu pasion, despierta tu potencial, conviertete en un
               profesional con nuestros cursos.
             </h2>

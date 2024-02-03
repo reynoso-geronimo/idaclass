@@ -10,7 +10,7 @@ const Intro = () => {
         Somos la llave para transformar tu pasión por el fitness en una carrera
         exitosa en tiempo record.
       </TituloSeccion>
-      <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-blue-700 font-semibold md:flex md:justify-center ">
+      <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-idaclass font-semibold md:flex md:justify-center ">
         <div className="flex flex-col items-center justify-between w-40">
           <Image
             src={"/assets/experiencia.webp"}

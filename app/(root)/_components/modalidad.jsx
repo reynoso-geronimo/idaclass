@@ -30,7 +30,7 @@ const Modalidad = () => {
         <TituloSeccion>
           Programa de educacion continua
         </TituloSeccion>
-        <p className="mx-8 mb-12 px-6 text-center text-md font-semibold  text-blue-700 leading-6 tracking-[4px] max-w-[1024px]">
+        <p className="mx-8 mb-12 px-6 text-center text-md font-semibold  text-idaclass leading-6 tracking-[4px] max-w-[1024px]">
           Lleva tu carrera a otro nivel con los cursos de especializacion on demand a tu ritmo.
         </p>
 

@@ -46,7 +46,7 @@ const ShopCursoCard = ({ curso }) => {
                     <InfoIcon
                       color="white"
                       size={42}
-                      className="bg-sky-700 rounded-full mr-2 shrink-0 hover:bg-sky-500 duration-75 ease-in"
+                      className="bg-idaclass4 rounded-full mr-2 shrink-0 hover:bg-idaclass3 duration-75 ease-in"
                     />
                  
 

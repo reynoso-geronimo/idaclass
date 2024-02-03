@@ -52,7 +52,7 @@ const VerCursos = ({ cursosFromDB }) => {
             <Sliders
               color="#09578f"
               size={36}
-              className="bg-sky-200 rounded-full p-1 "
+              className="bg-idaclass2 rounded-full p-1 "
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent>

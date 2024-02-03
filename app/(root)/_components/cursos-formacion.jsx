@@ -5,7 +5,7 @@ import CursoFormacionCard from "./ui/curso-formacion-card";
 const CursosFormacion = () => {
   const cursos = [
     {
-      title: "Programación Web",
+      title: "70% Off",
       descripcion: "Aprende a programar páginas web increíbles desde cero",
       image: "/cursosFormacion/cursoimg1.jpg",
       hours: 15,
@@ -13,7 +13,7 @@ const CursosFormacion = () => {
       turn: "Noche",
     },
     {
-      title: "FUNDAMENTOS DE NUTRICION",
+      title: "70% Off",
       descripcion:
         "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
       image: "https://source.unsplash.com/random/150x150",
@@ -22,7 +22,7 @@ const CursosFormacion = () => {
       turn: "Noche",
     },
     {
-      title: "FUNCIONTAL HIT",
+      title: "70% Off",
       descripcion:
         "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
       image: "https://source.unsplash.com/random/150x150",
@@ -31,7 +31,7 @@ const CursosFormacion = () => {
       turn: "Noche",
     },
     {
-      title: "BIOMECANICA FITNESS",
+      title: "70% Off",
       descripcion:
         "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativaia Artificial en los negocios",
       image: "https://source.unsplash.com/random/150x150",

@@ -42,7 +42,7 @@ const CasoExito = ({
       </div>
       <Link
         href={linkedin ? linkedin : "/"}
-        className="text-sky-500 font-bold ml-auto"
+        className="text-idaclass3 font-bold ml-auto"
       >
         Ver Linkedin
       </Link>

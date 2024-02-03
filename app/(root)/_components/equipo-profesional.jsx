@@ -7,10 +7,13 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Profesional from "./ui/profesional";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const EquipoProfesional = () => {
   return (
-    <section className="container flex justify-center mt-2 bg-slate-500 ">
+    <section >
+      <TituloSeccion>Nuestro equipo de trabajo</TituloSeccion>
+      <div className="container flex justify-center mt-2">
       <div >
         <Carousel
           opts={{
@@ -108,6 +111,7 @@ const EquipoProfesional = () => {
       </div>
 
       {/* TERCER CARRUSEL */}
+      </div>
     </section>
   );
 };

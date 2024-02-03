@@ -2,8 +2,6 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import Partners from "./ui/partners";
-import EquipoProfesional from "./equipo-profesional";
 import Herramientas from "./ui/herramientas";
 
 const ventajasCollection = [
@@ -70,10 +68,10 @@ const Ventajas = () => {
         >
           <Herramientas />
           <div className="md:w-2/5">
-            <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
+            <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
-            <p className="text-pretty md:text-lg">
+            <p className="text-pretty md:text-lg font-semibold ">
               Aprende en un entorno virtual interactivo y multimodal de manera
               simple y efectiva. Clases en vivo con expertos, videolecciones,
               contenido interactivo, autoevaluaciones acompañado por un equipo
@@ -103,10 +101,10 @@ const Ventajas = () => {
           </div>
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
-              <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
+              <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
                 Programas de estudios modernos
               </h3>
-              <p className="text-pretty md:text-lg">
+              <p className="text-pretty md:text-lg font-semibold">
                 Accede a programas integrales con standard de formación
                 internacional, que reflejan las ultimas tendencias en
                 entrenamiento, las ciencias aplicadas para que logres
@@ -115,10 +113,10 @@ const Ventajas = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
+              <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
-              <p className="text-pretty md:text-lg">
+              <p className="text-pretty md:text-lg font-semibold">
                 Avanza con Learning by Doing el método probado y eficaz basado
                 en experiencia practica Lleva a la práctica los conocimientos de
                 forma rápida y eficiente desde el primer día, para alcanzar tus
@@ -144,10 +142,10 @@ const Ventajas = () => {
             className="w-full md:w-2/5 rounded-lg"
           />
           <div className="md:w-2/5">
-            <h3 className="text-lg md:text-4xl  font-extrabold   text-indigo-950 tracking-tight">
+            <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
               SkillClass - Tu Herramienta Exclusiva
             </h3>
-            <p className="text-pretty md:text-lg">
+            <p className="text-pretty md:text-lg font-semibold">
               Dominá el arte de construir tu marca, ofrecer y vender servicios,
               comunicándote efectivamente. SkillClass es el complemento
               necesario para garantizar que logres tus objetivos con éxito.

@@ -116,7 +116,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="border rounded-full bg-sky-700 text-white p-0.5"
+              className="border rounded-full bg-idaclass4 text-white p-0.5"
             />
             {check_1}
           </li>
@@ -124,7 +124,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-idaclass4 text-white p-0.5"
             />
             {check_2}
           </li>
@@ -132,7 +132,7 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-idaclass4 text-white p-0.5"
             />
             {check_3}
           </li>
@@ -140,14 +140,14 @@ const CursoPage = async ({ params }) => {
             <Check
               size={24}
               strokeWidth={4}
-              className="rounded-full bg-sky-700 text-white p-0.5"
+              className="rounded-full bg-idaclass4 text-white p-0.5"
             />
             {check_4}
           </li>
         </ul>
       </section>
       <div className="flex justify-center">
-        <div className=" w-full max-w-[720px] border-2  border-sky-500 shadow-2xl my-8 ">
+        <div className=" w-full max-w-[720px] border-2  border-idaclass4 shadow-2xl my-8 ">
           <YouTubeEmbed
             videoid="Mgo24SP8-Xs"
             params="modestbranding=1&rel=0&showinfo=0&controls=0"

@@ -6,19 +6,19 @@ const Page = async () => {
 
   return (
     <main className="flex flex-col items-center  ">
-      <h1 className="text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-blue-500">Bienvenido a la comunidad fitness mas grande de Latino America 
+      <h1 className="text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass">Bienvenido a la comunidad fitness mas grande de Latino America 
    
       </h1>
   
     <div className="h-10 flex justify-center  mt-4 w-full items-center">
  
-  <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4"> 
+  <button className="bg-idaclass text-white font-bold py-3 px-6 rounded-full shadow-md mr-4"> 
  
   idaClass Jobs</button>
   
-  <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">idaClass Conecta</button>
+  <button className="bg-idaclass text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">idaClass Conecta</button>
   
-  <button className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">Discord</button>
+  <button className="bg-idaclass text-white font-bold py-3 px-6 rounded-full shadow-md mr-4">Discord</button>
 </div>
       <div className="max-w-7xl p-8 my-8 grid grid-cols-1 md:grid-cols-3 items-center	gap-12">
         {blogPost.map((item, index) => (

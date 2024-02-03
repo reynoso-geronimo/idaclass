@@ -68,7 +68,7 @@ const Page = () => {
               <CardTitle className="text-xl text-center font-bold text-black">
                 Innovacion
               </CardTitle>
-              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+              {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
               Abrazamos la tecnología y la innovación en la educación,
@@ -82,7 +82,7 @@ const Page = () => {
               <CardTitle className="text-xl text-center font-bold text-black">
                 Calidad Educativa
               </CardTitle>
-              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+              {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
               Nos comprometemos a ofrecer programas de formación de la más alta
@@ -97,7 +97,7 @@ const Page = () => {
               <CardTitle className="text-xl text-center font-bold text-black">
                 Empoderamiento:
               </CardTitle>
-              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+              {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass">
               Nuestra misión es empoderar a nuestros graduados para que se
@@ -112,7 +112,7 @@ const Page = () => {
               <CardTitle className="text-xl text-center font-bold text-black">
                 Colaboracion
               </CardTitle>
-              {/* <CardDescription className="text-center text-blue-700 text-xl"></CardDescription> */}
+              {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>
             <CardContent className="text-pretty md:text-lg p-4 font-bold text-idaclass ">
               Valoramos la colaboración y la construcción de una comunidad
