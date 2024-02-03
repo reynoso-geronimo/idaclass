@@ -46,7 +46,7 @@ const Soluciones = () => {
               <div>
                 <h5
                   className={`flex items-center font-bold sm:text-2xl transition-all duration-1000 ${
-                    activo == index && `sm:text-base`
+                    activo == index && `sm:text-xl`
                   }`}
                 >
                   {solucion.titulo}
@@ -59,7 +59,7 @@ const Soluciones = () => {
                   </span>
                 </h5>
                 <p
-                  className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-md  ${
+                  className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg ${
                     activo == index && `max-h-40`
                   }`}
                 >

@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <Intro/>
       <Ventajas />
-      <Banderas/>
+      {/* <Banderas/> */}
       <Soluciones/>
       <CursosFormacion />
       <Modalidad />
