@@ -8,7 +8,6 @@ const Soluciones = () => {
   const [activo, setActivo] = useState();
   const [ref, inView, entry] = useInView({
     triggerOnce: true,
-   
   });
   return (
     <section
@@ -17,9 +16,14 @@ const Soluciones = () => {
     >
       <div className="backdrop-brightness-50 h-full pt-14 transform scale-x-[-1] ">
         <div className="flex flex-col justify-center gap-4 h-full container relative sm:top-10">
-          <h3 ref={ref} className={`${ inView?`reveal-text`:`opacity-0`}  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3 absolute -top-8 sm:-top-12`}>
-           <span> Soluciones personalizadas </span>
-           <span>para tu exito</span>
+          <h3
+            ref={ref}
+            className={`${
+              inView ? `reveal-text` : `opacity-0`
+            }  max-w-2xl text-2xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3 absolute -top-8 sm:-top-12`}
+          >
+            <span> Soluciones personalizadas </span>
+            <span>para tu exito</span>
           </h3>
 
           {soluciones.map((solucion, index) => (
@@ -59,7 +63,7 @@ const Soluciones = () => {
                   </span>
                 </h5>
                 <p
-                  className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg ${
+                  className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg leading-5 sm:leading-7 ${
                     activo == index && `max-h-40`
                   }`}
                 >
