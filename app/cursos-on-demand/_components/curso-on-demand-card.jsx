@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Clock, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,9 +34,10 @@ const CursoOnDemand = ({ curso }) => {
           />
         </Link>
       </CardContent>
-      <CardHeader className="p-2">
+      <CardHeader className="">
         {/* <CardTitle className="h-12 align-text-bottom">{curso.nombre}</CardTitle> */}
         <CardDescription>{curso.descripcion}</CardDescription>
+        <Separator/>
         <span className="flex gap-2">
           <GraduationCap /> Docente: Perez con Pan{" "}
         </span>
