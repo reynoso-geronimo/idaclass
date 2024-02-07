@@ -63,9 +63,7 @@ const Page = async () => {
             value="categoria1"
             className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
           >
-            <div className="flex flex-col items-center sm:flex-row justify-evenly w-full flex-wrap gap-y-8 gap-x-2">
-              categoria1
-            </div>
+            categoria1
           </TabsTrigger>
           <TabsTrigger
             value="categoria2"
@@ -104,9 +102,9 @@ const Page = async () => {
             categoria7
           </TabsTrigger>
         </TabsList>
-      <Separator className="my-4"/>
+        <Separator className="my-4" />
         <TabsContent value="categoria1">
-          <div className="flex flex-col items-center sm:flex-row justify-evenly flex-wrap gap-y-8 gap-x-2 container">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container gap-4 justify-center">
             {cursos?.map((curso, index) => (
               <CursoOnDemand key={curso.id + index} curso={curso} />
             ))}

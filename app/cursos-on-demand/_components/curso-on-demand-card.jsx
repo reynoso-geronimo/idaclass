@@ -16,7 +16,7 @@ const CursoOnDemand = ({ curso }) => {
   return (
     <Card
       className={
-        "w-[90%] sm:w-[40%] lg:w-[40%] max-w-[400px] min-h-[350px] relative"
+        " max-w-[400px] min-h-[350px] relative"
       }
     >
       <CardContent className={"p-0 "}>
