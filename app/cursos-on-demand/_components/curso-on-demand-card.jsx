@@ -39,7 +39,7 @@ const CursoOnDemand = ({ curso }) => {
         <CardDescription>{curso.descripcion}</CardDescription>
         <Separator/>
         <span className="flex gap-2">
-          <GraduationCap /> Docente: Perez con Pan{" "}
+          <GraduationCap /> Docente: DIego Maradona{" "}
         </span>
         <span className="flex gap-2">
           <Clock /> {curso.horas ? curso.horas : "150 "} Horas
