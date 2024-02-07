@@ -36,6 +36,7 @@ const EquipoProfesional = () => {
               <CarouselItem key={index} className="pt-1 basis-1/3">
                 <div className="p-1h-[100px]">
                   <Profesional />
+          
                   
                 </div>
               </CarouselItem>
@@ -102,7 +103,7 @@ const EquipoProfesional = () => {
               <CarouselItem key={index} className="pt-1 basis-1/3">
                 <div className="p-1h-[100px]">
                   <Profesional />
-                  
+                
                 </div>
               </CarouselItem>
             ))}

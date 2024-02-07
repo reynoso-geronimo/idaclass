@@ -1,7 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 
+
+
 const Profesional = ({ rotar = false }) => {
+
   return (
     <div
       className={`${
@@ -17,6 +20,7 @@ const Profesional = ({ rotar = false }) => {
       <Link href="/" className="text-sm sm:text-base">
         Linkedin
       </Link>
+      
     </div>
   );
 };
