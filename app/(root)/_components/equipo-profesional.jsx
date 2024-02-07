@@ -7,19 +7,30 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Profesional from "./ui/profesional";
+import { profesionales } from "@/lib/constants";
 import TituloSeccion from "@/components/ui/titulo-seccion";
+
+
+const arrayLength = profesionales.length;
+console.log(arrayLength/3);
+const tercio = Math.floor(arrayLength / 3);
+
+const primerTercio = profesionales.slice(0, tercio);
+const segundoTercio = profesionales.slice(tercio, tercio * 2); 
+const tercertercio = profesionales.slice(tercio * 2);
+console.log(primerTercio.length, segundoTercio.length, tercertercio.length);
 
 const EquipoProfesional = () => {
   return (
-    <section >
+    <section  className="container">
       <TituloSeccion>Nuestro equipo de trabajo</TituloSeccion>
-      <div className="container flex justify-center mt-2">
-      <div >
+      <div className=" flex justify-center mt-2">
+      <div  className="w-1/3">
         <Carousel
           opts={{
             align: "end",
             loop: true,
-            duration: 6000,
+            duration: 5000,
             watchDrag: true,
           }}
           orientation="vertical"
@@ -31,11 +42,11 @@ const EquipoProfesional = () => {
           ]}
           className="mx-1 sm:mx-4 "
         >
-          <CarouselContent className="-mt-1 h-[300px]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="pt-1 basis-1/3">
+          <CarouselContent className="-mt-1 h-[400px]">
+            {primerTercio.map((profesional, index) => (
+              <CarouselItem key={index} className={`pt-1 basis-1/6`}>
                 <div className="p-1h-[100px]">
-                  <Profesional />
+                  <Profesional profesional={profesional}/>
           
                   
                 </div>
@@ -47,12 +58,12 @@ const EquipoProfesional = () => {
 
       {/* PRIMER CARRUSEL */}
 
-      <div className="rotate-180">
+      <div className="rotate-180 w-1/3">
         <Carousel
           opts={{
             align: "end",
             loop: true,
-            duration: 6000,
+            duration: 5000,
             watchDrag: true,
           }}
           orientation="vertical"
@@ -65,11 +76,11 @@ const EquipoProfesional = () => {
           ]}
           className="mx-1 sm:mx-4 "
         >
-          <CarouselContent className="-mt-1 h-[300px]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="pt-1 basis-1/3">
+          <CarouselContent className="-mt-1 h-[400px]">
+            {segundoTercio.map((profesional, index) => (
+              <CarouselItem key={index} className={`pt-1 basis-1/6`}>
                 <div className="p-1h-[100px]">
-                  <Profesional rotar={true}/>
+                  <Profesional rotar={true} profesional={profesional}/>
                   
                 </div>
               </CarouselItem>
@@ -80,12 +91,12 @@ const EquipoProfesional = () => {
 
       {/* SEGUNDO CARRUESEL */}
 
-      <div>
+      <div className="w-1/3">
         <Carousel
           opts={{
-            align: "end",
+            align: "center",
             loop: true,
-            duration: 6000,
+            duration: 6500,
             watchDrag: true,
           }}
           orientation="vertical"
@@ -98,11 +109,11 @@ const EquipoProfesional = () => {
           ]}
           className="mx-1 sm:mx-4 "
         >
-          <CarouselContent className="-mt-1 h-[300px]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="pt-1 basis-1/3">
+          <CarouselContent className="-mt-1 h-[400px]">
+            {tercertercio.map((profesional, index) => (
+              <CarouselItem key={index} className={`pt-1 basis-1/6`}>
                 <div className="p-1h-[100px]">
-                  <Profesional />
+                  <Profesional profesional={profesional}/>
                 
                 </div>
               </CarouselItem>
