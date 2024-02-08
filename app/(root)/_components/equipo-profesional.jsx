@@ -31,7 +31,7 @@ const EquipoProfesional = () => {
             align: "end",
             loop: true,
             duration: 5000,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
@@ -40,7 +40,7 @@ const EquipoProfesional = () => {
               stopOnInteraction:false
             }),
           ]}
-          className="mx-1 sm:mx-4 "
+          className="mx-1"
         >
           <CarouselContent className="-mt-1 h-[400px]">
             {primerTercio.map((profesional, index) => (
@@ -64,7 +64,7 @@ const EquipoProfesional = () => {
             align: "end",
             loop: true,
             duration: 5000,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
@@ -74,7 +74,7 @@ const EquipoProfesional = () => {
               
             }),
           ]}
-          className="mx-1 sm:mx-4 "
+          className="mx-1"
         >
           <CarouselContent className="-mt-1 h-[400px]">
             {segundoTercio.map((profesional, index) => (
@@ -97,7 +97,7 @@ const EquipoProfesional = () => {
             align: "center",
             loop: true,
             duration: 6500,
-            watchDrag: true,
+            watchDrag: false,
           }}
           orientation="vertical"
           plugins={[
@@ -107,7 +107,7 @@ const EquipoProfesional = () => {
               
             }),
           ]}
-          className="mx-1 sm:mx-4 "
+          className="mx-1"
         >
           <CarouselContent className="-mt-1 h-[400px]">
             {tercertercio.map((profesional, index) => (
