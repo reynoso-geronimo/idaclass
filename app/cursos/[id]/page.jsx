@@ -49,7 +49,7 @@ const CursoPage = async ({ params }) => {
     check_4,
     modulos,
   } = paginaCurso.toJSON();
-  console.log();
+
 
   return (
     <main>

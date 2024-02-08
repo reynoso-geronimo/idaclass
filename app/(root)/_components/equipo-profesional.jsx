@@ -12,13 +12,13 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 
 
 const arrayLength = profesionales.length;
-console.log(arrayLength/3);
+
 const tercio = Math.floor(arrayLength / 3);
 
 const primerTercio = profesionales.slice(0, tercio);
 const segundoTercio = profesionales.slice(tercio, tercio * 2); 
 const tercertercio = profesionales.slice(tercio * 2);
-console.log(primerTercio.length, segundoTercio.length, tercertercio.length);
+
 
 const EquipoProfesional = () => {
   return (
