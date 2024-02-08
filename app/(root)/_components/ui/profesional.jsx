@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Link from "next/link";
+// import Link from "next/link";
 
 const Profesional = ({ rotar = false, profesional }) => {
   return (
@@ -14,13 +14,13 @@ const Profesional = ({ rotar = false, profesional }) => {
       </Avatar>
       <div className="bg-idaclass w-full p-2 rounded-2xl border-2 border-idaclass2">
         <p className="text-sm sm:text-base font-bold">{profesional?.nombre}</p>
-        <p className="text-xs sm:text-sm text-gray-200 ">
+        <p className="text-xs sm:text-sm text-gray-200 font-medium">
           {profesional?.titulo}
         </p>
       </div>
-      <Link href="/" className="text-sm sm:text-base text-white font-bold">
+      {/* <Link href="/" className="text-sm sm:text-base text-white font-bold">
         Linkedin
-      </Link>
+      </Link> */}
     </div>
   );
 };
