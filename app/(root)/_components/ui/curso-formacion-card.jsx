@@ -24,7 +24,7 @@ const CursoFormacionCard = ({ curso, index }) => {
         <TriangleRight
           size={50}
           strokeWidth={0}
-          className="-z-10 absolute transform rotate-45 -translate-x-[11px] -translate-y-[85px] "
+          className="-z-10 absolute transform rotate-[30deg] -translate-x-[11px] -translate-y-[91px] "
           fill="black"
         />
       </div>
