@@ -89,15 +89,14 @@ const CursoPage = async ({ params }) => {
 
             <p className="font-medium">{descripcion}</p>
 
-            <p className="font-semibold text-sm my-4">
+            <div className="font-semibold text-sm my-4">
               <Badge className={`bg-red-500`}>Online</Badge>{" "}
               <Badge>On Demand</Badge>
-            </p>
-            <div className="mb-4 flex justify-center lg:justify-start gap-4 w-full">
-              <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
-                Inscribirme ahora
-              </Button>
             </div>
+
+            <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
+              Inscribirme ahora
+            </Button>
           </div>
 
           <div className="flex justify-center items-center lg:w-1/2">
@@ -250,44 +249,41 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       <Separator />
-      <section className="flex justify-center gap-4 container">
-        <div>
+      <section className="flex flex-col md:flex-row justify-center gap-4 container">
+        <article className="w-full">
           <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
             Bono extra
           </h3>
-          <article className="container w-full">
-            <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            </ul>
-          </article>
-        </div>
-        <div>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+          </ul>
+        </article>
+
+        <article className="w-full">
           <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
             Potencia tu empleabilidad o emprende
           </h3>
-          <article className="container w-full">
-            <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            </ul>
-          </article>
-        </div>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+          </ul>
+        </article>
       </section>
       {/* modalidades y pago */}
       <Separator />
       <section>
-        <h1 className="text-center font-bold text-xl my-4">
+        <h1 className="text-center font-bold text-xl my-4 container">
           Elige la modalidad que mas se adapte a ti
         </h1>
 
-        <Carousel className="container max-w-sm">
+        <Carousel className="mx-auto max-w-[270px] sm:max-w-[80vw] ">
           <CarouselContent className="-ml-1">
             {Array.from({ length: 3 }).map((_, index) => (
               <CarouselItem
@@ -299,8 +295,8 @@ const CursoPage = async ({ params }) => {
             ))}
           </CarouselContent>
           <div className="lg:hidden">
-            <CarouselPrevious className="bg-idaclass text-white" />
-            <CarouselNext />
+            <CarouselPrevious className="bg-idaclass text-white hover:bg-idaclass -left-4" />
+            <CarouselNext className="bg-idaclass text-white  hover:bg-idaclass -right-4" />
           </div>
         </Carousel>
       </section>
