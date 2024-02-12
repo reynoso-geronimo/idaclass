@@ -4,6 +4,13 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import PaginaCurso from "@/models/PaginaCurso";
 import Curso from "@/models/Curso";
@@ -15,6 +22,8 @@ import {
   Clock,
   Construction,
   Monitor,
+  Phone,
+  Plus,
 } from "lucide-react";
 import {
   Accordion,
@@ -27,6 +36,9 @@ import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
 import cert1 from "../../../public/certi/cert1.webp";
 import cert2 from "../../../public/certi/cert2.webp";
+import Introvideo from "@/app/(root)/_components/introvideo";
+import TituloSeccion from "@/components/ui/titulo-seccion";
+import CasoExito from "@/app/(root)/_components/ui/caso-exito";
 
 const CursoPage = async ({ params }) => {
   const [curso, paginaCurso] = await Promise.all([
@@ -67,8 +79,9 @@ const CursoPage = async ({ params }) => {
 
   return (
     <main className="flex flex-col gap-6">
+      <div className="text-center bg-emerald-300 py-4">Promocion </div>
       <section className="bg-idaclass text-white">
-        <div className="container py-2 lg:py-0 flex flex-col lg:flex-row justify-evenly gap-8">
+        <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8">
           <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
             <h1 className="text-2xl lg:text-5xl font-bold my-4 tracking-tight">
               {nombre && nombre}
@@ -77,29 +90,25 @@ const CursoPage = async ({ params }) => {
             <p className="font-medium">{descripcion}</p>
 
             <p className="font-semibold text-sm my-4">
-              USD$ {precio && precio}
+              <Badge className={`bg-red-500`}>Online</Badge>{" "}
+              <Badge>On Demand</Badge>
             </p>
-            <div className="mb-4 flex gap-4 w-full">
+            <div className="mb-4 flex justify-center lg:justify-start gap-4 w-full">
               <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
-                Comprar
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="rounded-lg  font-extrabold border-black text-black w-1/2"
-              >
-                <Link href={`#contenido-curso`}>Ver Programa</Link>
+                Inscribirme ahora
               </Button>
             </div>
           </div>
 
           <div className="flex justify-center items-center lg:w-1/2">
-            <div className=" w-full  max-w-2xl">
+            <div className=" w-full max-w-2xl">
               <YouTubeEmbed
                 videoid="Mgo24SP8-Xs"
                 params="modestbranding=1&rel=0&showinfo=0&controls=0"
               />
+              <div className="mt-12">
+                <Introvideo />
+              </div>
             </div>
           </div>
         </div>
@@ -145,8 +154,8 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <Separator />
-      <section className="container flex flex-col items-stretch lg:flex-row gap-4">
-        <article className="w-full lg:w-1/2 p-8 flex flex-col items-center border-2 border-idaclass rounded-xl ">
+      <section className="container flex flex-col items-stretch lg:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
+        <article className="w-full lg:w-1/2 p-8 flex flex-col items-center  ">
           <Badge className="text-lg lg:text-xl font-semibold m-4 justify-center outline outline-2 outline-primary outline-offset-4">
             Certifica tus conocimientos
           </Badge>
@@ -158,21 +167,13 @@ const CursoPage = async ({ params }) => {
             obcaecati commodi.
           </p>
         </article>
-        <article className="mx-auto my-auto w-full lg:w-1/3">
-          <div className="bg-idaclass4 w-full">
-            <Image
-              src={cert1}
-              alt="certificado"
-              className="rounded-3xl p-2 mx-auto"
-            />
+        <article className="flex mx-auto my-auto w-full lg:w-2/3 gap-2">
+          <div className="w-full">
+            <Image src={cert1} alt="certificado" className=" mx-auto" />
           </div>
-          {/* <div>
-            <Image
-              src={cert2}
-              alt="certificado"
-              className="shadow-2xl border-2 border-slate-400 "
-            />
-          </div> */}
+          <div className="w-full">
+            <Image src={cert2} alt="certificado" className="mx-auto" />
+          </div>
         </article>
       </section>
       <Separator />
@@ -183,26 +184,28 @@ const CursoPage = async ({ params }) => {
         >
           Contenido del curso
         </h2>
-        <div className="container flex flex-col items-stretch lg:flex-row gap-4">
+        <p className="text-center">Subtitulo</p>
+        <div className="container flex flex-col items-center md:flex-row gap-4">
           {
-            <Accordion type="single" collapsible className="w-full lg:w-1/2">
-              {JSON.parse(modulos).Modulos.map((modulo, index) => (
+            <Accordion type="single" collapsible className="w-full md:w-1/2">
+              {Array.from({ length: 4 }).map((_, index) => (
                 <AccordionItem value={`item-${index + 1}`} key={index}>
-                  <AccordionTrigger className="font-bold text-sm md:text-lg bg-gray-300 text-left px-4 ">
+                  <AccordionTrigger className="font-bold text-sm md:text-2xl  text-left px-4 ">
                     Modulo: {index + 1}
                   </AccordionTrigger>
                   <AccordionContent className="font-semibold text-sm p-4  bg-gray-200">
-                    {modulo}
+                    Modulo
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           }
-          <div className="mx-auto w-full lg:w-1/3 font-semibold flex flex-col justify-between border bg-idaclass rounded-xl p-4">
-            <Badge className="text-xl font-bold m-4 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
+          <Plus size={72} />
+          <div className="mx-auto w-full md:w-1/3 font-medium flex flex-col justify-between border bg-idaclass rounded-xl p-4">
+            <Badge className="text-lg text-center font-semibold m-2 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
               Modulo especial: SkillClass
             </Badge>
-            <div className="text-white flex flex-1 flex-col justify-around">
+            <div className="text-white flex flex-1 flex-col justify-around items-center">
               <p className="flex items-center">
                 <ChevronRight className="text-white shrink-0" />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -247,30 +250,90 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       <Separator />
-      <section >
+      <section className="flex justify-center gap-4 container">
+        <div>
           <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
-            Perfil del egresado
+            Bono extra
           </h3>
-        <article className="container w-full lg:w-1/3">
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl shadow-idaclass">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-          </ul>
-        </article>
+          <article className="container w-full">
+            <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
+            Potencia tu empleabilidad o emprende
+          </h3>
+          <article className="container w-full">
+            <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            </ul>
+          </article>
+        </div>
       </section>
       {/* modalidades y pago */}
       <Separator />
       <section>
-        <h1 className="text-center font-bold text-xl uppercase py-12">
+        <h1 className="text-center font-bold text-xl my-4">
           Elige la modalidad que mas se adapte a ti
         </h1>
-        <div className="flex flex-wrap items-center justify-center gap-12 mb-12">
-          <TarjetaModalidad />
-          <TarjetaModalidad />
-          <TarjetaModalidad />
+
+        <Carousel className="container max-w-sm">
+          <CarouselContent className="-ml-1">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-1 sm:basis-1/2 lg:basis-1/3"
+              >
+                <TarjetaModalidad />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="lg:hidden">
+            <CarouselPrevious className="bg-idaclass text-white" />
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </section>
+
+      <section className="container flex flex-col items-stretch lg:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
+        <article className="w-full lg:w-1/2 p-8 flex flex-col items-start  ">
+          <TituloSeccion className="text-left p-0 m-0">
+            Necesitas ayuda o tienes alguna pregunta?
+          </TituloSeccion>
+          <p className="font-bold">
+            Nuestros especialistas estan disponibles para escucharte y despejar
+            todas tus dudas
+          </p>
+          <Button size="lg" className="bg-green-500 flex gap-4">
+            <Phone className="border-2 border-white rounded-full p-0.5 " />{" "}
+            Hablanos por Whatsapp
+          </Button>
+        </article>
+        <article className="flex mx-auto my-auto w-full lg:w-1/3 gap-2">
+          <div className="w-full">
+            <Image src={cert2} alt="certificado" className="mx-auto" />
+          </div>
+        </article>
+      </section>
+      <section className="container">
+        <TituloSeccion className={""}>
+          Casos de exito de nuestros estudiantes
+        </TituloSeccion>
+        <div className="grid md:grid-cols-2 gap-4">
+          <CasoExito />
+          <CasoExito />
+          <CasoExito />
+          <CasoExito />
         </div>
       </section>
     </main>
