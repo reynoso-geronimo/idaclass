@@ -22,7 +22,7 @@ const tercertercio = profesionales.slice(tercio * 2);
 
 const EquipoProfesional = () => {
   return (
-    <section  className="container">
+    <section  className="container w-full lg:w-1/2">
       <TituloSeccion>Nuestro equipo de trabajo</TituloSeccion>
       <div className=" flex justify-center mt-2">
       <div  className="w-1/3">

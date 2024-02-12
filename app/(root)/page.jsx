@@ -10,22 +10,26 @@ import Intro from "./_components/intro";
 import CasosExito from "./_components/casos-exito";
 import Banderas from "./_components/banderas";
 import EquipoProfesional from "./_components/equipo-profesional";
+import Beca from "./_components/beca";
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <Intro/>
+      <Intro />
       <Ventajas />
       {/* <Banderas/> */}
-      <Soluciones/>
+      <Soluciones />
       <CursosFormacion />
       <Modalidad />
       <Certificacion />
-      <EquipoProfesional/>
-      <CasosExito/>
+      <div className="flex flex-col lg:flex-row">
+        <EquipoProfesional />
+        <Beca/>
+      </div>
+      <CasosExito />
       <div className="mt-12">
-      <Partners />
+        <Partners />
       </div>
       <Faq />
     </main>
