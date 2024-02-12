@@ -301,7 +301,7 @@ const CursoPage = async ({ params }) => {
         </Carousel>
       </section>
 
-      <section className="container flex flex-col items-stretch lg:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
+      <section className="container flex flex-col items-stretch sm:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
         <article className="w-full lg:w-1/2 p-8 flex flex-col items-start  ">
           <TituloSeccion className="text-left p-0 m-0">
             Necesitas ayuda o tienes alguna pregunta?
