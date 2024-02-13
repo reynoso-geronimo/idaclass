@@ -323,7 +323,7 @@ const CursoPage = async ({ params }) => {
             </div>
           </Button>
         </article>
-        <article className="mx-auto my-auto w-full lg:w-1/3 mb-4 lg:mb-0">
+        <article className="w-full flex items-center mx-auto lg:w-1/3 mb-4 lg:mb-0">
           
             <Image src={cert2} alt="certificado" className="mx-auto" />
     
