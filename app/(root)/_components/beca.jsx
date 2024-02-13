@@ -21,6 +21,7 @@ const Beca = () => {
           width={950}
           height={400}
           className="border border-black"
+          alt="beca"
         />
 
         <div className="text-center grid grid-cols-2 font-bold">

@@ -200,8 +200,8 @@ const NavBar = () => {
                     Personal trainter
                   </MenubarItem>
                   <MenubarItem className="p-0 mx-2">
-                    <Button size="sm" className="rounded-xl text-sm font-bold">
-                      Ver todos los cursos{" "}
+                    <Button size="sm" className="rounded-xl text-sm font-bold" asChild>
+                     <Link href="/cursos"> Ver todos los cursos</Link>
                     </Button>
                   </MenubarItem>
                 </div>
