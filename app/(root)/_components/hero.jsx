@@ -14,7 +14,7 @@ const Hero = () => {
         </h2>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="bg-black w-fuill aspect-video mb-4 z-10">
+        <div className="bg-black aspect-video mb-4 z-10">
           <video
             autoPlay
             muted
@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
           <div className="w-1/2 gap-2 flex flex-col">
             {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-            <div className="bg-black w-fuill aspect-video z-10">
+            <div className="bg-black aspect-video z-10">
               <video
                 autoPlay
                 muted
