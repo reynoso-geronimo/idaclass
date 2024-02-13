@@ -65,7 +65,7 @@ const Page = () => {
         <div className="grid grid-cols-2  gap-2 md:gap-4 lg:grid-cols-4 justify-items-center content-center	">
           <Card className="w-54">
             <CardHeader>
-              <CardTitle className="text-xl text-center font-bold text-black">
+              <CardTitle className="text-xl text-center font-bold">
                 Innovacion
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
@@ -79,7 +79,7 @@ const Page = () => {
 
           <Card className="w-54">
             <CardHeader>
-              <CardTitle className="text-xl text-center font-bold text-black">
+              <CardTitle className="text-xl text-center font-bold">
                 Calidad Educativa
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
@@ -94,7 +94,7 @@ const Page = () => {
 
           <Card className="w-54">
             <CardHeader>
-              <CardTitle className="text-xl text-center font-bold text-black">
+              <CardTitle className="text-xl text-center font-bold">
                 Empoderamiento:
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
@@ -109,7 +109,7 @@ const Page = () => {
 
           <Card className="w-54">
             <CardHeader>
-              <CardTitle className="text-xl text-center font-bold text-black">
+              <CardTitle className="text-xl text-center font-bold">
                 Colaboracion
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
