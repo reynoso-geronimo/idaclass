@@ -11,12 +11,14 @@ import { ChevronRight } from "lucide-react";
 
 const TarjetaModalidad = ({ modalidad, precio, duracion }) => {
   return (
-    <Card className="w-56 text-center bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-idaclass3 to-indigo-900 text-white ">
+    <Card className="mx-auto w-52 mt-4 mb-12 text-center bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-idaclass3 to-indigo-900 text-white ">
       <CardHeader>
         <CardTitle className="bg-emerald-400 font-extrabold relative -top-10 p-2 rounded-tl-3xl rounded-br-3xl">
           {modalidad || "ONLINE"}
         </CardTitle>
-        <CardDescription className="font-bold text-white text-lg">$ {precio || "PRECIO"}</CardDescription>
+        <CardDescription className="font-bold text-white text-lg">
+          $ {precio || "PRECIO"}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <p>
@@ -24,7 +26,7 @@ const TarjetaModalidad = ({ modalidad, precio, duracion }) => {
           solo pago.
         </p>
       </CardContent>
-      <CardFooter className="flex justify-center"> 
+      <CardFooter className="flex justify-center">
         <Button size="lg" className="bg-fuchsia-500 text-white m-auto">
           Comprar ahora <ChevronRight />
         </Button>

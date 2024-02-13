@@ -8,13 +8,26 @@ const Hero = () => {
   return (
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:pt-12">
       <div className="lg:hidden">
-        <h2 className="text-3xl md:text-5xl font-extrabold max-w-[340px] md:max-w-[600px]  mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
+        <h2 className="text-3xl text-center md:text-5xl font-extrabold mb-4 mx-4 text-indigo-950 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
           Unete a la <span className="text-idaclass">revolucion educativa</span>{" "}
           Sport Fitness
         </h2>
+        <h2 className="mt-4 mx-8 text-center text-md font-semibold leading-6 text-xl tracking-wide">
+          Transforma tu pasion, despierta tu potencial, conviertete en un
+          profesional con nuestros cursos.
+        </h2>
+        <div className="flex justify-center w-full">
+          <Button
+            size="lg"
+            className="rounded-2xl m-4 font-bold w-48 h-10"
+            asChild
+          >
+            <Link href="/cursos">Ver todos los cursos</Link>
+          </Button>
+        </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="bg-black w-fuill aspect-video mb-4 z-10">
+        <div className="bg-black aspect-video mb-4 z-10">
           <video
             autoPlay
             muted
@@ -29,19 +42,7 @@ const Hero = () => {
 
         <Introvideo />
 
-        <h2 className="mt-4 mx-8 text-center text-md font-semibold leading-6 text-xl tracking-wide">
-          Transforma tu pasion, despierta tu potencial, conviertete en un
-          profesional con nuestros cursos.
-        </h2>
-        <div className="flex justify-center w-full">
-          <Button
-            size="lg"
-            className="rounded-2xl m-10 font-bold w-48 h-10"
-            asChild
-          >
-            <Link href="/cursos">Ver todos los cursos</Link>
-          </Button>
-        </div>
+        
       </div>
 
       <div className="hidden lg:block 2xl:px-[10%]">
@@ -66,7 +67,7 @@ const Hero = () => {
           </div>
           <div className="w-1/2 gap-2 flex flex-col">
             {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-            <div className="bg-black w-fuill aspect-video z-10">
+            <div className="bg-black aspect-video z-10">
               <video
                 autoPlay
                 muted
