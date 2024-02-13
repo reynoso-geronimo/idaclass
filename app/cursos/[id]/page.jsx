@@ -283,7 +283,7 @@ const CursoPage = async ({ params }) => {
           Elige la modalidad que mas se adapte a ti
         </h1>
 
-        <Carousel className="mx-auto max-w-[270px] sm:max-w-[80vw] ">
+        <Carousel className="mx-auto max-w-[270px] sm:max-w-[70vw] ">
           <CarouselContent className="-ml-1">
             {Array.from({ length: 3 }).map((_, index) => (
               <CarouselItem
@@ -295,8 +295,8 @@ const CursoPage = async ({ params }) => {
             ))}
           </CarouselContent>
           <div className="lg:hidden">
-            <CarouselPrevious className="bg-idaclass4 text-white hover:bg-idaclass3 -left-4 h-10 w-10" />
-            <CarouselNext className="bg-idaclass4 text-white  hover:bg-idaclass3 -right-4  h-10 w-10" />
+            <CarouselPrevious className="bg-idaclass4 text-white hover:bg-idaclass3 -left-4 sm:-left-12 h-10 w-10" />
+            <CarouselNext className="bg-idaclass4 text-white  hover:bg-idaclass3 -right-4 sm:-right-12 h-10 w-10" />
           </div>
         </Carousel>
       </section>
@@ -323,10 +323,10 @@ const CursoPage = async ({ params }) => {
             </div>
           </Button>
         </article>
-        <article className="flex mx-auto my-auto w-full lg:w-1/3 gap-2">
-          <div className="w-full">
+        <article className="mx-auto my-auto w-full lg:w-1/3 mb-4 lg:mb-0">
+          
             <Image src={cert2} alt="certificado" className="mx-auto" />
-          </div>
+    
         </article>
       </section>
       <section className="container">
