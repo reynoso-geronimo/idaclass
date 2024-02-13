@@ -98,9 +98,9 @@ const NavBar = () => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="/cursos-on-demand"
+                href="/cursos"
                 className={`border-l-2 border-idaclass4 pl-2 ${
-                  pathname === "/cursos-on-demand" && "text-idaclass4"
+                  pathname === "/cursos" && "text-idaclass4"
                 } `}
               >
                 Cursos on Demand
