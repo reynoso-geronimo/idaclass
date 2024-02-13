@@ -6,7 +6,7 @@ const Beca = () => {
   return (
     <section className="w-full lg:w-1/2   container ">
       <div className="w-[90%]  mx-auto">
-        <TituloSeccion className={`mt-0`}>
+        <TituloSeccion className={``}>
           Accede a nuestras Becas educativas !
         </TituloSeccion>
         <p className="font-bold">
@@ -14,7 +14,7 @@ const Beca = () => {
           Latinoamérica. Para eso, te ofrecemos una beca del 70% para que puedas
           capacitarte y crecer profesionalmente.
         </p>
-        <TituloSeccion className={`mt-0`}>Requisitos</TituloSeccion>
+        <TituloSeccion className={``}>Requisitos</TituloSeccion>
 
         <Image
           src={"/img/beca.png"}

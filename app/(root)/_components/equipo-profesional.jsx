@@ -23,7 +23,7 @@ const tercertercio = profesionales.slice(tercio * 2);
 const EquipoProfesional = () => {
   return (
     <section  className="container w-full lg:w-1/2">
-      <TituloSeccion className={`mt-0`}>Nuestro equipo de trabajo</TituloSeccion>
+      <TituloSeccion className={``}>Nuestro equipo de trabajo</TituloSeccion>
       <div className=" flex justify-center mt-2">
       <div  className="w-1/3">
         <Carousel
