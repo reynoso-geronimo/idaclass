@@ -27,15 +27,15 @@ const NavBar = () => {
 
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 bg-white">
-      <nav className="w-full flex justify-around items-center h-16 mt-2">
+    <header className="sticky top-0 z-50 bg-blue-950 text-white">
+      <nav className="w-full flex justify-between items-center h-16 container font-semibold">
         <Sheet>
-          <SheetTrigger className="lg:hidden">
-            <Menu className="h-9 w-9 " aria-label="menu-navegacion" />
+          <SheetTrigger className="lg:hidden w-24">
+            <Menu className="h-9 w-9" aria-label="menu-navegacion" />
           </SheetTrigger>
           <SheetContent
             side={"left"}
-            className="w-72 h-[100svh] flex flex-col gap-4 text-base font-medium"
+            className="w-72 h-[100svh] flex flex-col gap-4 text-base font-semibold"
           >
             <SheetClose asChild>
               <Link
@@ -140,107 +140,114 @@ const NavBar = () => {
             className="hover:brightness-125 transition-all ease-in duration-200"
           />
         </Link>
-        <div className="hidden lg:flex justify-around gap-8 font-medium	">
-          <Link
-            href="/"
-            className={`${
-              pathname === "/" &&
-              "text-idaclass4 underline decoration-2 underline-offset-4"
-            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >
-            Inicio
-          </Link>
-          <Link
-            href="/nosotros"
-            className={`${
-              pathname === "/nosotros" &&
-              "text-idaclass4 underline decoration-2 underline-offset-4"
-            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >
-            Nosotros
-          </Link>
+        <div className="flex items-center justify-end gap-12">
+          <div className="hidden lg:flex justify-around gap-8">
+            <Link
+              href="/"
+              className={`${
+                pathname === "/" &&
+                "text-idaclass4 underline decoration-2 underline-offset-4"
+              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+            >
+              Inicio
+            </Link>
+            <Link
+              href="/nosotros"
+              className={`${
+                pathname === "/nosotros" &&
+                "text-idaclass4 underline decoration-2 underline-offset-4"
+              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+            >
+              Nosotros
+            </Link>
 
-          <Menubar className="border-none outline-none hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]">
-            <MenubarMenu>
-              <MenubarTrigger>Cursos</MenubarTrigger>
-              <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
-                <div>
-                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
-                    Cursos de Formacion
-                  </h5>
-                  <MenubarSeparator />
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                </div>
-                <div>
-                  <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
-                    Cursos on demand
-                  </h5>
-                  <MenubarSeparator />
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter{" "}
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="text-xl font-medium">
-                    Personal trainter
-                  </MenubarItem>
-                  <MenubarItem className="p-0 mx-2">
-                    <Button size="sm" className="rounded-xl text-sm font-bold" asChild>
-                     <Link href="/cursos"> Ver todos los cursos</Link>
-                    </Button>
-                  </MenubarItem>
-                </div>
-              </MenubarContent>
-            </MenubarMenu>
-          </Menubar>
+            <Menubar className="border-none outline-none hover:text-idaclass4 bg-transparent relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]">
+              <MenubarMenu>
+                <MenubarTrigger>Cursos</MenubarTrigger>
+                <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
+                  <div>
+                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                      Cursos de Formacion
+                    </h5>
+                    <MenubarSeparator />
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                  </div>
+                  <div>
+                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                      Cursos on demand
+                    </h5>
+                    <MenubarSeparator />
+                    <MenubarItem className="text-xl">
+                      Personal trainter{""}
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="text-xl">
+                      Personal trainter
+                    </MenubarItem>
+                    <MenubarItem className="p-0 mx-2">
+                      <Button
+                        size="sm"
+                        className="rounded-xl text-sm font-bold"
+                        asChild
+                      >
+                        <Link href="/cursos"> Ver todos los cursos</Link>
+                      </Button>
+                    </MenubarItem>
+                  </div>
+                </MenubarContent>
+              </MenubarMenu>
+            </Menubar>
 
-          <Link
-            href="/blog"
-            className={`${
-              pathname === "/blog" &&
-              "text-idaclass4 underline decoration-2 underline-offset-4"
-            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >
-            Comunidad IdaClass
-          </Link>
+            <Link
+              href="/blog"
+              className={`${
+                pathname === "/blog" &&
+                "text-idaclass4 underline decoration-2 underline-offset-4"
+              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+            >
+              Comunidad IdaClass
+            </Link>
 
-          <Link
-            href="/asesorate"
-            className={`${
-              pathname === "/asesorate" &&
-              "text-idaclass4 underline decoration-2 underline-offset-4"
-            } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
-          >
-            Asesorate ya
-          </Link>
+            <Link
+              href="/asesorate"
+              className={`${
+                pathname === "/asesorate" &&
+                "text-idaclass4 underline decoration-2 underline-offset-4"
+              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+            >
+              Asesorate ya
+            </Link>
+          </div>
+          <div className="w-24 flex justify-end">
+            {session && session.user ? (
+              <Avatar onClick={() => signOut()} className="cursor-pointer">
+                <AvatarImage src={session.user.image} alt="avatar" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            ) : (
+              <Button className="rounded-3xl" onClick={() => signIn()}>
+                Ingresar
+              </Button>
+            )}
+          </div>
         </div>
-        {session && session.user ? (
-          <Avatar onClick={() => signOut()} className="cursor-pointer">
-            <AvatarImage src={session.user.image} alt="avatar" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        ) : (
-          <Button className="rounded-3xl" onClick={() => signIn()}>
-            Ingresar
-          </Button>
-        )}
       </nav>
-      <Separator className="hidden lg:block h-2 bg-gray-200" />
     </header>
   );
 };

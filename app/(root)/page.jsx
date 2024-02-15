@@ -25,7 +25,7 @@ export default function Home() {
       <Certificacion />
       <div className="flex flex-col lg:flex-row">
         <EquipoProfesional />
-        <Beca/>
+        <Beca />
       </div>
       <CasosExito />
       <div className="mt-12">
