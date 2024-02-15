@@ -20,7 +20,7 @@ const Soluciones = () => {
             ref={ref}
             className={`${
               inView ? `reveal-text` : `opacity-0`
-            }  max-w-2xl text-4xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+            }  text-3xl sm:text-4xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
             <span> Potenciamos tu empleabilidad </span>
           </h3>
@@ -76,7 +76,7 @@ const Soluciones = () => {
             ref={ref}
             className={`${
               inView ? `reveal-text` : `opacity-0`
-            }  text-4xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+            }  text-3xl sm:text-4xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
             <span>Impulsamos tu emprendimiento</span>
           </h3>
