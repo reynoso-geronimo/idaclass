@@ -11,8 +11,8 @@ import {
 
 const Intro = () => {
   return (
-    <section className="container bg-slate-900 text-white py-8 gap-4 lg:gap-12 flex flex-col lg:flex-row items-center justify-end ">
-      <div className="w-full lg:w-1/3 text-center lg:text-left">
+    <section className="container lg:px-0 w-full mx-auto bg-slate-900 text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-end ">
+      <div className="w-full lg:w-auto text-center lg:text-left">
         <h2 className="font-semibold text-3xl lg:max-w-sm">
           Ofrecemos la mejor solución probada para tu futuro{" "}
           <p className="whitespace-nowrap inline">
@@ -23,13 +23,13 @@ const Intro = () => {
             />
           </p>
         </h2>
-        <p className="text-sm py-2">
+        <p className="text-sm py-2 lg:max-w-sm">
           Somos la llave para transformar tu pasion <br /> en una carrera
           exitosa en tiempo record.
         </p>
       </div>
-      <div className="w-2/3 lg:w-1/2">
-        <Carousel className="w-[95%]">
+      <div className="w-full lg:w-1/2">
+        <Carousel className="w-[100%]">
           <CarouselContent className="-ml-1">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="pl-1 basis-[40%]">
@@ -45,8 +45,8 @@ const Intro = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-idaclass4 border-0" />
-          <CarouselNext className=" bg-idaclass4 border-0" />
+          <CarouselPrevious className="bg-idaclass4 border-0 left-2" />
+          <CarouselNext className=" bg-idaclass4 border-0 right-2" />
         </Carousel>
       </div>
     </section>
