@@ -20,13 +20,12 @@ const Soluciones = () => {
             ref={ref}
             className={`${
               inView ? `reveal-text` : `opacity-0`
-            }  max-w-2xl text-2xl sm:text-3xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+            }  max-w-2xl text-4xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
-            <span> Soluciones personalizadas </span>
-            <span>para tu exito</span>
+            <span> Potenciamos tu empleabilidad </span>
           </h3>
 
-          {soluciones1.map((solucion) => (
+          {soluciones1.map(solucion => (
             <div key={solucion.id + solucion.titulo}>
               <div
                 className="sm:flex items-center gap-4 min-h-[100px] md:max-h-[100px] max-w-2xl relative"
@@ -77,13 +76,13 @@ const Soluciones = () => {
             ref={ref}
             className={`${
               inView ? `reveal-text` : `opacity-0`
-            }  max-w-2xl text-2xl sm:text-3xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+            }  max-w-2xl text-4xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
-            <span> Soluciones personalizadas </span>
-            <span>para tu exito</span>
+            <span> Impulsamos tu emprendimiento</span>
+           
           </h3>
 
-          {soluciones2.map((solucion) => (
+          {soluciones2.map(solucion => (
             <div key={solucion.id + solucion.titulo}>
               <div
                 className="sm:flex items-center gap-4 min-h-[100px] md:max-h-[100px] max-w-2xl relative"
