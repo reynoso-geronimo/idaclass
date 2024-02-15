@@ -15,7 +15,7 @@ const Soluciones = () => {
       style={{ backgroundImage: `url("/assets/bg-soluciones2.jpg")` }}
     >
       <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
-        <div className="flex flex-col justify-around h-full container relative">
+        <div className="flex flex-col justify-around h-full container relative lg:py-6">
           <h3
             ref={ref}
             className={`${
