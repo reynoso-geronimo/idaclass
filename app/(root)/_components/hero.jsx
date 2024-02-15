@@ -8,14 +8,16 @@ const Hero = () => {
   return (
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:py-12">
       <div className="lg:hidden">
-        <h2 className="text-3xl text-center md:text-5xl font-extrabold mb-4 mx-4 tracking-tighter animate-in slide-in-from-right fade-in-0 duration-1000">
-          Unete a la <span className="text-idaclass">revolucion educativa</span>{" "}
-          Sport Fitness
+        <h2 className="px-2 text-center text-3xl font-bold animate-in slide-in-from-right fade-in-25 duration-1000">
+          Unete a la revolucion educativa{" "} <br />
+          <span className="relative before:absolute before:left-0 before:bottom-1.5 before:h-2.5 before:z-1 before:w-full before:bg-idaclass4">
+            <span className="relative px-0.5">Sport Fitness</span>
+          </span>
         </h2>
-        <h2 className="mt-4 mx-8 text-center text-md font-semibold leading-6 text-xl tracking-wide">
-          Transforma tu pasion, despierta tu potencial, conviertete en un
-          profesional con nuestros cursos.
-        </h2>
+        <h3 className="px-2 text-base font-semibold text-center">
+          Transforma tu pasion, despierta tu potencial,
+         conviertete en un profesional con nuestros cursos.
+        </h3>
         <div className="flex justify-center w-full">
           <Button
             size="lg"
@@ -39,8 +41,9 @@ const Hero = () => {
             <source src="/videos/idaclass.mp4" type="video/mp4" />
           </video>
         </div>
-
-        <Introvideo />
+        <div className=" w-full flex justify-center items-center h-10">
+          <Introvideo />
+        </div>
       </div>
 
       <div className="hidden lg:block container">
