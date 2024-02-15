@@ -78,7 +78,7 @@ const Soluciones = () => {
               inView ? `reveal-text` : `opacity-0`
             }  max-w-2xl text-4xl sm:text-5xl text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
-            <span> Impulsamos tu emprendimiento</span>
+            <span>Impulsamos tu emprendimiento</span>
            
           </h3>
 
