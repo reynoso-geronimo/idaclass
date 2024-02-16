@@ -6,7 +6,7 @@ import Partners from "./ui/partners";
 
 const Hero = () => {
   return (
-    <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:py-12">
+    <div className="pt-8 lg:py-12">
       <div className="lg:hidden">
         <h2 className="px-2 text-center text-3xl font-bold animate-in slide-in-from-right fade-in-25 duration-1000">
           Unete a la revolucion educativa{" "} <br />

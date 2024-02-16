@@ -6,7 +6,10 @@ import { useInView } from "react-intersection-observer";
 
 const Soluciones = () => {
   const [activo, setActivo] = useState();
-  const [ref, inView, entry] = useInView({
+  const [ref1, inView1, entry1] = useInView({
+    triggerOnce: true,
+  });
+  const [ref2, inView2, entry2] = useInView({
     triggerOnce: true,
   });
   return (
@@ -17,10 +20,10 @@ const Soluciones = () => {
       <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
         <div className="flex flex-col justify-around h-full container relative lg:py-6">
           <h3
-            ref={ref}
+            ref={ref1}
             className={`${
-              inView ? `reveal-text` : `opacity-0`
-            }  text-3xl sm:text-[40px] text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+              inView1 ? `reveal-text` : `opacity-0`
+            } max-w-xl text-3xl sm:text-[40px] text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
             <span> Potenciamos tu empleabilidad </span>
           </h3>
@@ -73,10 +76,10 @@ const Soluciones = () => {
             </div>
           ))}
           <h3
-            ref={ref}
+            ref={ref2}
             className={`${
-              inView ? `reveal-text` : `opacity-0`
-            }  text-3xl sm:text-[40px] text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
+              inView2 ? `reveal-text` : `opacity-0`
+            } max-w-xl text-3xl sm:text-[40px] text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
             <span>Impulsamos tu emprendimiento</span>
           </h3>
