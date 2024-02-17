@@ -23,10 +23,10 @@ export default function Home() {
       <CursosFormacion />
       <Modalidad />
       <Certificacion />
-      <div className="flex flex-col lg:flex-row">
-        <EquipoProfesional />
-        <Beca />
-      </div>
+
+      <EquipoProfesional />
+      <Beca />
+
       <CasosExito />
       <div className="mt-12">
         <Partners />
