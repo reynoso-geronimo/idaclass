@@ -33,11 +33,10 @@ const EquipoProfesional = () => {
   }, []);
 
   return (
-    <section className="container lg:px-0 bg-slate-900 text-white  gap-12 flex flex-row items-center justify-end relative">
-      <div className="w-1/2 lg:py-12">
+    <section className="container lg:px-0 bg-slate-900 text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative">
+      <div className="w-full lg:w-1/2 lg:py-12">
         <Carousel
-          className="w-full "
-          orientation={direction}
+          className="w-full"
           opts={{
             align: "end",
             loop: true,
@@ -48,21 +47,21 @@ const EquipoProfesional = () => {
             }),
           ]}
         >
-          <CarouselContent className="-ml-1 h-[500px] lg:h-full">
+          <CarouselContent className="-ml-1 lg:h-full ">
             {profesionales.map((profesional, index) => (
-              <CarouselItem key={index} className="pl-1 basis-[39%]">
+              <CarouselItem key={index} className="pl-1 basis-1/8">
                 <div className="p-1">
                   <Profesional profesional={profesional} />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-idaclass4 border-0 left-2 max-lg:hidden" />
-          <CarouselNext className=" bg-idaclass4 border-0 right-2  max-lg:hidden" />
+          <CarouselPrevious className="bg-idaclass4 border-0 left-2" />
+          <CarouselNext className=" bg-idaclass4 border-0 right-2 " />
         </Carousel>
       </div>
-      <div className="w-full lg:w-1/2 text-center flex justify-center container relative">
-        <div className="absolute left-[180px] top-[39%]">
+      <div className="w-full lg:w-1/2 text-center flex justify-end lg:justify-center items-center relative  max-lg:overflow-hidden max-lg:h-52">
+        <div className="absolute left-[180px] top-[39%] max-lg:rotate-[-90deg]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22.769"

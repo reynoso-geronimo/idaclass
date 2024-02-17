@@ -4,33 +4,18 @@ import React from "react";
 
 const Beca = () => {
   return (
-    <section className="w-full lg:w-1/2   container ">
+    <section className="w-full container ">
       <div className="w-[90%]  mx-auto">
-        <TituloSeccion className={``}>
-          Accede a nuestras Becas educativas !
+        <TituloSeccion className={`mb-2`}>
+          Obten tu Beca<span className="text-idaclass4">Class</span>
         </TituloSeccion>
-        <p className="font-bold">
-          Nuestra misión es democratizar la educación de calidad en
-          Latinoamérica. Para eso, te ofrecemos una beca del 70% para que puedas
-          capacitarte y crecer profesionalmente.
-        </p>
-        <TituloSeccion className={``}>Requisitos</TituloSeccion>
-
-        <Image
-          src={"/img/beca.png"}
-          width={950}
-          height={400}
-          className="border border-black"
-          alt="beca"
-        />
-
-        <div className="text-center grid grid-cols-2 font-bold">
-          <ol>requisito </ol>
-          <ol>requisito </ol>
-          <ol>requisito </ol>
-          <ol>requisito </ol>
-          <ol>requisito </ol>
-          <ol>requisito </ol>
+        <h3 className="font-bold mb-2">
+          Se parte de nuestra de la comunidad Classera y accede a nuestras Becas
+          exclusivas beneficios y descuentos.
+        </h3>
+        <div className="flex gap-4">
+          <div className="bg-black w-1/2 aspect-square"></div>
+          <div className="bg-black w-1/2 aspect-square"></div>
         </div>
       </div>
     </section>

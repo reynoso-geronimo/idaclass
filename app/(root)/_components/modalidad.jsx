@@ -27,12 +27,12 @@ const Modalidad = () => {
     <>
     
       <section className="text-center flex flex-col items-center w-full">
-        <TituloSeccion>
+        <TituloSeccion className={`mb-2`}>
           Programa de educacion continua
         </TituloSeccion>
-        <p className="mx-8 mb-12 px-6 text-center text-md font-semibold  text-idaclass leading-6 tracking-[4px] max-w-[1024px]">
+        <h3 className="text-center font-bold text-xl text-gray-700 max-w-md mb-4 ">
           Lleva tu carrera a otro nivel con los cursos de especializacion on demand a tu ritmo.
-        </p>
+        </h3>
 
         <Carousel slides={slides} />
       </section>

@@ -79,23 +79,24 @@ const Ventajas = () => {
             <p className="text-pretty md:text-lg font-semibold ">
               Aprende en un entorno virtual interactivo y multimodal <br />{" "}
               simple y efectivo.
-               {/* <ul>
+              </p>
+               <ul>
                 <li className="flex items-center">
-                  <ArrowBigRight fill="" /> Clases en vivo{" "}
-                  <ArrowBigRight fill="" /> Videolecciones
+                  <ArrowBigRight fill="black" /> Clases en vivo{" "}
+                  <ArrowBigRight fill="black" /> Videolecciones
                 </li>
 
                 <li className="flex items-center">
-                  <ArrowBigRight fill="" /> Contenido interactivo{" "}
-                  <ArrowBigRight fill="" /> Autoevaluaciones
+                  <ArrowBigRight fill="black" /> Contenido interactivo{" "}
+                  <ArrowBigRight fill="black" /> Autoevaluaciones
                 </li>
 
                 <li className="flex items-center">
-                  <ArrowBigRight fill="" /> Equipo de tutores{" "}
-                  <ArrowBigRight fill="" /> Trabajo en equipo{" "}
+                  <ArrowBigRight fill="black" /> Equipo de tutores{" "}
+                  <ArrowBigRight fill="black" /> Trabajo en equipo{" "}
                 </li>
-              </ul>  */}
-            </p>
+              </ul>  
+            
           </div>
         </article>
 
@@ -140,19 +141,19 @@ const Ventajas = () => {
                 práctica Aprende y aplica de forma rápida y eficiente desde el
                 primer día.
               </p>
-              {/* <ul className="flex flex-col gap-4 py-2 font-medium">
+             <ul className="flex flex-col gap-4 py-2 font-medium">
                 <li className="flex">
-                  <ArrowBigRight fill /> Practica real con alumnos
+                  <ArrowBigRight fill="black" /> Practica real con alumnos
                 </li>
                 <li className="flex">
-                  <ArrowBigRight fill />
+                  <ArrowBigRight fill="black" />
                   Trabajos en equipo
                 </li>
                 <li className="flex">
-                  <ArrowBigRight fill />
+                  <ArrowBigRight fill="black" />
                   Desarrolla tus proyectos
                 </li>
-              </ul> */}
+              </ul> 
             </div>
           </div>
         </article>
