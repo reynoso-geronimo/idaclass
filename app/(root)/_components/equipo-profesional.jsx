@@ -1,5 +1,6 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
+import { useState, useEffect } from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -13,11 +14,30 @@ import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
 
 const EquipoProfesional = () => {
+  const [direction, setDirection] = useState("horizontal");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setDirection("vertical");
+      } else {
+        setDirection("horizontal");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="container lg:px-0 bg-slate-900 text-white  gap-12 flex flex-row items-center justify-end relative">
-      <div className="w-full lg:w-1/2 py-12">
+      <div className="w-1/2 lg:py-12">
         <Carousel
-          className="w-full"
+          className="w-full "
+          orientation={direction}
           opts={{
             align: "end",
             loop: true,
@@ -28,7 +48,7 @@ const EquipoProfesional = () => {
             }),
           ]}
         >
-          <CarouselContent className="-ml-1">
+          <CarouselContent className="-ml-1 h-[500px] lg:h-full">
             {profesionales.map((profesional, index) => (
               <CarouselItem key={index} className="pl-1 basis-[39%]">
                 <div className="p-1">
@@ -37,8 +57,8 @@ const EquipoProfesional = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-idaclass4 border-0 left-2" />
-          <CarouselNext className=" bg-idaclass4 border-0 right-2" />
+          <CarouselPrevious className="bg-idaclass4 border-0 left-2 max-lg:hidden" />
+          <CarouselNext className=" bg-idaclass4 border-0 right-2  max-lg:hidden" />
         </Carousel>
       </div>
       <div className="w-full lg:w-1/2 text-center flex justify-center container relative">
@@ -62,8 +82,8 @@ const EquipoProfesional = () => {
         </div>
 
         <h2 className="font-semibold text-3xl lg:max-w-sm z-10">
-          Conoce a nuestro <br />
-          equipo de trabajo
+          Conoce al equipo <br />
+          que te guiara al éxito
         </h2>
       </div>
     </section>
