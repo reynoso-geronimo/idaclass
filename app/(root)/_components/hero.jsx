@@ -3,20 +3,21 @@ import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import Introvideo from "./introvideo";
 import Partners from "./ui/partners";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
   return (
     <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:py-12">
       <div className="lg:hidden">
         <h2 className="px-2 text-center text-3xl font-bold animate-in slide-in-from-right fade-in-25 duration-1000">
-          Unete a la revolucion educativa{" "} <br />
+          Unete a la revolucion educativa <br />
           <span className="relative before:absolute before:left-0 before:bottom-1.5 before:h-2.5 before:z-1 before:w-full before:bg-idaclass4">
             <span className="relative px-0.5">Sport Fitness</span>
           </span>
         </h2>
         <h3 className="px-2 text-base font-semibold text-center">
-          Transforma tu pasion, despierta tu potencial,
-         conviertete en un profesional con nuestros cursos.
+          Transforma tu pasion, despierta tu potencial, conviertete en un
+          profesional con nuestros cursos.
         </h3>
         <div className="flex justify-center w-full">
           <Button
@@ -29,18 +30,12 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="bg-black aspect-video z-10">
-          <video
-            autoPlay
-            muted
-            loop
-            className="-z-10 object-cover aspect-video"
-            playsInline
-            preload={"auto"}
-          >
-            <source src="/videos/idaclass.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <Card>
+          <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
+            <span className="text-2xl font-semibold text-white">Imagen</span>
+          </CardContent>
+        </Card>
+
         <div className="w-full flex justify-center py-4">
           <Introvideo />
         </div>
@@ -71,21 +66,13 @@ const Hero = () => {
               <Introvideo />
             </div>
           </div>
-          <div className="w-1/2 gap-2 flex flex-col">
-            {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-            <div className="bg-black aspect-video z-10">
-              <video
-                autoPlay
-                muted
-                loop
-                className=" object-cover hidden sm:block rounded-md "
-                playsInline
-                preload="auto"
-              >
-                <source src="/videos/idaclass.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
+
+          {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
+          <Card className="w-1/2 z-10">
+            <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
+              <span className="text-2xl font-semibold text-white">Imagen</span>
+            </CardContent>
+          </Card>
         </div>
       </div>
       {/* <div className="text-xl font-bold text-center container">
