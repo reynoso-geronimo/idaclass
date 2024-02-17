@@ -22,12 +22,14 @@ import {
   MenubarSeparator,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import Promobar from "./promobar";
 const NavBar = () => {
   const { data: session } = useSession();
 
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 bg-blue-950 text-white">
+      <Promobar/>
       <nav className="w-full flex justify-between items-center h-16 container font-semibold">
         <Sheet>
           <SheetTrigger className="lg:hidden w-24">
