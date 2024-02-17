@@ -1,3 +1,4 @@
+"use client";
 import { ArrowUp, Dot, Minus } from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Intro = () => {
   return (
@@ -28,28 +30,39 @@ const Intro = () => {
           exitosa en tiempo record.
         </p>
         <div className="flex text-idaclass lg:absolute bottom-6 -translate-x-[27px] lg:left-[33px]">
-        <Minus className=" rotate-45 scale-x-[300%]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
-        <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] z-10" />
-        <Dot className="translate-x-[0px] translate-y-[16px] scale-150 text-idaclass drop-shadow-[0_0_3px_rgba(100,200,255,01)]" />
-      </div>
+          <Minus className=" rotate-45 scale-x-[300%]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] max-sm:hidden" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px]" />
+          <Minus className="scale-x-[200%] translate-x-[7px] translate-y-[16px] z-10" />
+          <Dot className="translate-x-[0px] translate-y-[16px] scale-150 text-idaclass drop-shadow-[0_0_3px_rgba(100,200,255,01)]" />
+        </div>
       </div>
       <div className="w-full lg:w-1/2">
-        <Carousel className="w-[100%]">
+        <Carousel
+          className="w-[100%]"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+        >
           <CarouselContent className="-ml-1">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="pl-1 basis-[40%]">
