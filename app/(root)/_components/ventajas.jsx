@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Herramientas from "./ui/herramientas";
+import { ArrowBigRight } from "lucide-react";
 
 const ventajasCollection = [
   {
@@ -51,7 +52,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-6 md:gap-y-12 container py-20">
+      <section className="w-full flex flex-col items-center gap-6 md:gap-y-12 container pb-20">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -62,20 +63,38 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Herramientas />
-          <div className="md:w-2/5">
+          {/* <Herramientas /> */}
+          <div className="bg-black text-white w-2/5 h-52 text-center font-bold text-2xl flex items-center justify-center">
+            {" "}
+            Imagen{" "}
+          </div>
+          <div className="md:w-1/2">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg font-semibold ">
-              Aprende en un entorno virtual interactivo y multimodal de manera
-              simple y efectiva. Clases en vivo con expertos, videolecciones,
-              contenido interactivo, autoevaluaciones acompañado por un equipo
-              de tutores.
+              Aprende en un entorno virtual interactivo y multimodal <br />{" "}
+              simple y efectivo.
+               {/* <ul>
+                <li className="flex items-center">
+                  <ArrowBigRight fill="" /> Clases en vivo{" "}
+                  <ArrowBigRight fill="" /> Videolecciones
+                </li>
+
+                <li className="flex items-center">
+                  <ArrowBigRight fill="" /> Contenido interactivo{" "}
+                  <ArrowBigRight fill="" /> Autoevaluaciones
+                </li>
+
+                <li className="flex items-center">
+                  <ArrowBigRight fill="" /> Equipo de tutores{" "}
+                  <ArrowBigRight fill="" /> Trabajo en equipo{" "}
+                </li>
+              </ul>  */}
             </p>
           </div>
         </article>
@@ -88,47 +107,59 @@ const Ventajas = () => {
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-full md:w-7/8 rounded-lg relative aspect-video">
+          <div className="w-full md:w-7/8 rounded-lg relative aspect-video text-white text-center">
+            <h2 className=" z-10 text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight mb-4">
+              Eleva tus habilidades con SkillClass
+            </h2>
+            <h4 className="text-pretty md:text-lg font-semibold ">
+              <span className="text-idaclass4">Bono especial</span> 4 cursos
+              extras para asegurar tu éxito
+            </h4>
+            <p className="absolute bottom-4 translate-x-[50%] right-[50%]">
+              Marketing - venta - liderazgo - comunicacion
+            </p>
+            <p className="text-2xl absolute translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]">IMAGEN</p>
             <Image
-              src={`/programas.jpg`}
-              alt="hero image"
+              src={`/`}
+              alt=""
               fill
               sizes="(min-width: 808px) 50vw, 100vw"
               style={{
                 objectFit: "cover", // cover, contain, none
               }}
+              className="-z-10 bg-black"
             />
           </div>
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
               <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
-                Programas de estudios modernos
-              </h3>
-              <p className="text-pretty md:text-lg font-semibold">
-                Accede a programas integrales con standard de formación
-                internacional, que reflejan las ultimas tendencias en
-                entrenamiento, las ciencias aplicadas para que logres
-                empleabilidad o para llevar a delante tu emprendimiento de forma
-                exitosa
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg font-semibold">
-                Avanza con Learning by Doing el método probado y eficaz basado
-                en experiencia practica Lleva a la práctica los conocimientos de
-                forma rápida y eficiente desde el primer día, para alcanzar tus
-                objetivos.
+                Avanza con Learning by Doing el método basado en experiencia
+                práctica Aprende y aplica de forma rápida y eficiente desde el
+                primer día.
               </p>
+              {/* <ul className="flex flex-col gap-4 py-2 font-medium">
+                <li className="flex">
+                  <ArrowBigRight fill /> Practica real con alumnos
+                </li>
+                <li className="flex">
+                  <ArrowBigRight fill />
+                  Trabajos en equipo
+                </li>
+                <li className="flex">
+                  <ArrowBigRight fill />
+                  Desarrolla tus proyectos
+                </li>
+              </ul> */}
             </div>
           </div>
         </article>
 
         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
-        <article
+        {/* <article
           ref={ref3}
           className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000	${
             inView3 ? "opacity-100" : "opacity-0"
@@ -151,7 +182,7 @@ const Ventajas = () => {
               necesario para garantizar que logres tus objetivos con éxito.
             </p>
           </div>
-        </article>
+        </article> */}
       </section>
     </>
   );
