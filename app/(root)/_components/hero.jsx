@@ -7,15 +7,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Hero = () => {
   return (
-    <div className=" bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 pt-8 lg:py-12">
+    <div className=" pt-8 lg:py-12">
       <div className="lg:hidden">
-        <h2 className="px-2 text-center text-3xl font-bold animate-in slide-in-from-right fade-in-25 duration-1000">
-          Unete a la revolucion educativa <br />
-          <span className="relative before:absolute before:left-0 before:bottom-1.5 before:h-2.5 before:z-1 before:w-full before:bg-idaclass4">
-            <span className="relative px-0.5">Sport Fitness</span>
-          </span>
+        <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+          Unete a la{" "}
+          <span className="text-idaclass"> revolucion educativa</span> Sport
+          Fitness
         </h2>
-        <h3 className="px-2 text-base font-semibold text-center">
+        <h3 className="mx-auto max-w-lg px-2 text-base font-semibold text-center">
           Transforma tu pasion, despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h3>
@@ -42,18 +41,16 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:block container">
-        <div className="flex mb-4 gap-8 ml-[15%]">
-          <div className="w-1/2 flex flex-col gap-4">
-            <h2 className="text-3xl font-bold animate-in slide-in-from-right fade-in-25 duration-1000">
-              Unete a la revolucion <br />
-              educativa{" "}
-              <span className="relative before:absolute before:left-0 before:bottom-1.5 before:h-2.5 before:z-1 before:w-full before:bg-idaclass4">
-                <span className="relative px-0.5">Sport Fitness</span>
-              </span>
+        <div className="flex mb-4 gap-4">
+          <div className="w-1/2 text-center flex flex-col justify-around items-center mx-16">
+            <h2 className="text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+              Unete a la
+              <span className="text-idaclass"> revolucion educativa</span> Sport
+              Fitness
             </h2>
-            <h2 className="text-base font-semibold">
-              Transforma tu pasion, despierta tu potencial,
-              <br /> conviertete en un profesional con nuestros cursos.
+            <h2 className="text-xl font-semibold max-w-[768px] mb-4">
+              Transforma tu pasion, despierta tu potencial, conviertete en un
+              profesional con nuestros cursos.
             </h2>
             <Button
               size="lg"
