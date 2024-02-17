@@ -14,7 +14,7 @@ import Profesional from "./ui/profesional";
 
 const EquipoProfesional = () => {
   return (
-    <section className="container lg:px-0 bg-slate-900 text-white  gap-12 flex flex-col lg:flex-row items-center justify-end relative">
+    <section className="container lg:px-0 bg-slate-900 text-white  gap-12 flex flex-row items-center justify-end relative">
       <div className="w-full lg:w-1/2 py-12">
         <Carousel
           className="w-full"
@@ -32,7 +32,7 @@ const EquipoProfesional = () => {
             {profesionales.map((profesional, index) => (
               <CarouselItem key={index} className="pl-1 basis-[39%]">
                 <div className="p-1">
-                 <Profesional profesional={profesional}/>
+                  <Profesional profesional={profesional} />
                 </div>
               </CarouselItem>
             ))}
