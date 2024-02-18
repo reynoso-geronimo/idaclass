@@ -45,7 +45,9 @@ const CursosFormacion = () => {
   return (
     <section className="my-12">
       <TituloSeccion className={`mb-0`}>Cursos de formacion</TituloSeccion>
-      <h2 className="text-center font-bold text-xl text-gray-700 ">Sé parte de la nueva generacion de entrenadores</h2>
+      <h2 className="text-center font-bold text-xl text-gray-700 ">
+        Sé parte de la nueva generacion de entrenadores
+      </h2>
       <h2 className="text-center font-bold text-xl text-gray-700 mb-4">
         Forja tu camino en el mundo del Sport fitness
       </h2>

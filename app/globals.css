@@ -136,10 +136,11 @@
 .embla__buttons {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1.6rem;
 }
 .embla__button {
   z-index: 1;

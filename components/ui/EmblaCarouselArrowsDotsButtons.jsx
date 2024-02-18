@@ -1,4 +1,3 @@
-
 export const DotButton = props => {
   const { children, ...restProps } = props;
 
@@ -14,7 +13,7 @@ export const PrevButton = props => {
 
   return (
     <button
-      className="embla__button embla__button--prev"
+      className="embla__button embla__button--prev md:-translate-x-[50%]"
       type="button"
       {...restProps}
     >
@@ -34,7 +33,7 @@ export const NextButton = props => {
 
   return (
     <button
-      className="embla__button embla__button--next"
+      className="embla__button embla__button--next md:translate-x-[50%]"
       type="button"
       {...restProps}
     >
