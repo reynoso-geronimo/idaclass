@@ -14,12 +14,8 @@ import Link from "next/link";
 
 const CursoOnDemand = ({ curso }) => {
   return (
-    <Card
-      className={
-        " max-w-[400px] min-h-[350px] relative"
-      }
-    >
-      <CardContent className={"p-0 "}>
+    <Card className={" max-w-[400px] min-h-[350px] relative grid grid-row-4"}>
+      <CardContent className={"p-0"}>
         <Link href={`/cursos/${curso.id}`}>
           <Image
             src={`/${curso.imagen}`}
@@ -34,10 +30,10 @@ const CursoOnDemand = ({ curso }) => {
           />
         </Link>
       </CardContent>
-      <CardHeader className="">
+      <CardHeader className="flex justify-between">
         {/* <CardTitle className="h-12 align-text-bottom">{curso.nombre}</CardTitle> */}
         <CardDescription>{curso.descripcion}</CardDescription>
-        <Separator/>
+        <Separator />
         <span className="flex gap-2">
           <GraduationCap /> Docente: DIego Maradona{" "}
         </span>
@@ -45,7 +41,7 @@ const CursoOnDemand = ({ curso }) => {
           <Clock /> {curso.horas ? curso.horas : "150 "} Horas
         </span>
       </CardHeader>
-      <CardFooter>
+      <CardFooter className="self-end">
         <Button size="sm" className="w-full font-bold">
           Ver Curso
         </Button>
