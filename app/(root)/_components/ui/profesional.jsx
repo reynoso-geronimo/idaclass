@@ -7,7 +7,7 @@ const Profesional = ({ profesional }) => {
     <div className="w-60 aspect-square bg-idaclass text-center rounded-3xl flex flex-col justify-between mx-">
       <div className="h-[70%] relative">
         <Image
-          src={`/${profesional.imagen}`}
+          src={`/equipo-profesional/${profesional.imagen}`}
           fill
           alt={profesional.nombre}
           className="object-cover rounded-t-3xl"
