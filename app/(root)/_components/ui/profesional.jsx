@@ -5,12 +5,12 @@ import Image from "next/image";
 const Profesional = ({ profesional }) => {
   return (
     <div className="w-60 aspect-square bg-idaclass text-center rounded-3xl flex flex-col justify-between mx-">
-      <div className="h-[70%] relative">
+      <div className="h-[75%] relative">
         <Image
           src={`/equipo-profesional/${profesional.imagen}`}
           fill
           alt={profesional.nombre}
-          className="object-cover rounded-t-3xl"
+          className="object-cover object-top rounded-t-3xl"
         />
       </div>
       <div className="flex-1 bg-idaclass4 overflow-hidden z-10 rounded-b-3xl p-2">
