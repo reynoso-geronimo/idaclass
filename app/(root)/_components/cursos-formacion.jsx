@@ -43,15 +43,15 @@ const CursosFormacion = () => {
 
   const OPTIONS = { align: "start" };
   return (
-    <section className="my-12 ">
+    <section className="my-12 container">
       <TituloSeccion className={`mb-0`}>Cursos de formacion</TituloSeccion>
-      <h2 className="text-center font-bold text-xl text-gray-700 ">
+      <h2 className="text-center font-bold text-xl">
         Sé parte de la nueva generacion de entrenadores
       </h2>
-      <h2 className="text-center font-bold text-xl text-gray-700 mb-4">
+      <h2 className="text-center font-bold text-xl mb-4">
         Forja tu camino en el mundo del Sport fitness
       </h2>
-      <div className="max-w-2xl mx-auto container lg:max-w-full">
+      <div className="max-w-2xl mx-auto  lg:max-w-full">
         <EmblaCarousel
           options={OPTIONS}
           slides={cursos.map((curso, index) => (
