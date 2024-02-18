@@ -68,28 +68,28 @@ const Ventajas = () => {
           <div className="bg-black text-white w-full md:w-2/5 h-52 text-center font-bold text-2xl flex items-center justify-center">
             Imagen
           </div>
-          <div className="md:w-1/2">
-            <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
+          <div className="w-full md:w-1/2">
+            <h3 className="text-lg md:text-4xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg font-semibold ">
-              Aprende en un entorno virtual interactivo y multimodal <br />{" "}
+              Aprende en un entorno virtual interactivo y multimodal <br />
               simple y efectivo.
             </p>
-            <ul>
+            <ul className="flex flex-col gap-4 py-2 font-medium">
               <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Clases en vivo{" "}
+                <ArrowBigRight fill="black" /> Clases en vivo
                 <ArrowBigRight fill="black" /> Videolecciones
               </li>
 
               <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Contenido interactivo{" "}
+                <ArrowBigRight fill="black" /> Contenido interactivo
                 <ArrowBigRight fill="black" /> Autoevaluaciones
               </li>
 
               <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Equipo de tutores{" "}
-                <ArrowBigRight fill="black" /> Trabajo en equipo{" "}
+                <ArrowBigRight fill="black" /> Equipo de tutores
+                <ArrowBigRight fill="black" /> Trabajo en equipo
               </li>
             </ul>
           </div>
