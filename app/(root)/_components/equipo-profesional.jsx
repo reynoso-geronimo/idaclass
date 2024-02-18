@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import {
   Carousel,
@@ -14,23 +14,23 @@ import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
 
 const EquipoProfesional = () => {
-  const [direction, setDirection] = useState("horizontal");
+  // const [direction, setDirection] = useState("horizontal");
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 1024) {
-        setDirection("vertical");
-      } else {
-        setDirection("horizontal");
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 1024) {
+  //       setDirection("vertical");
+  //     } else {
+  //       setDirection("horizontal");
+  //     }
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    handleResize();
+  //   handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <section className="container lg:px-0 bg-slate-900 text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative">
