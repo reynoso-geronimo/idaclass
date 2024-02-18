@@ -43,12 +43,12 @@ const CursosFormacion = () => {
 
   const OPTIONS = { align: "start" };
   return (
-    <section className="my-12 container">
-      <TituloSeccion className={`mb-0`}>Cursos de formacion</TituloSeccion>
-      <h2 className="text-center font-bold text-xl">
+    <section className="my-12 sm:container">
+      <TituloSeccion className={`mb-0 px-2`}>Cursos de formacion</TituloSeccion>
+      <h2 className="text-center font-bold text-xl px-2">
         Sé parte de la nueva generacion de entrenadores
       </h2>
-      <h2 className="text-center font-bold text-xl mb-4">
+      <h2 className="text-center font-bold text-xl mb-4 px-2">
         Forja tu camino en el mundo del Sport fitness
       </h2>
       <div className="max-w-2xl mx-auto  lg:max-w-full">
