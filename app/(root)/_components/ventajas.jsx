@@ -37,18 +37,15 @@ const ventajasCollection = [
 ];
 
 const Ventajas = () => {
-  const [ref1, inView1, entry1] = useInView({
+  const [ref1, inView1] = useInView({
     triggerOnce: true,
     rootMargin: "-200px 0px",
   });
-  const [ref2, inView2, entry2] = useInView({
+  const [ref2, inView2] = useInView({
     triggerOnce: true,
     rootMargin: "-200px 0px",
   });
-  const [ref3, inView3, entry3] = useInView({
-    triggerOnce: true,
-    rootMargin: "-200px 0px",
-  });
+
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
@@ -68,9 +65,8 @@ const Ventajas = () => {
           }`}
         >
           {/* <Herramientas /> */}
-          <div className="bg-black text-white w-2/5 h-52 text-center font-bold text-2xl flex items-center justify-center">
-            {" "}
-            Imagen{" "}
+          <div className="bg-black text-white w-full md:w-2/5 h-52 text-center font-bold text-2xl flex items-center justify-center">
+            Imagen
           </div>
           <div className="md:w-1/2">
             <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
@@ -79,24 +75,23 @@ const Ventajas = () => {
             <p className="text-pretty md:text-lg font-semibold ">
               Aprende en un entorno virtual interactivo y multimodal <br />{" "}
               simple y efectivo.
-              </p>
-               <ul>
-                <li className="flex items-center">
-                  <ArrowBigRight fill="black" /> Clases en vivo{" "}
-                  <ArrowBigRight fill="black" /> Videolecciones
-                </li>
+            </p>
+            <ul>
+              <li className="flex items-center">
+                <ArrowBigRight fill="black" /> Clases en vivo{" "}
+                <ArrowBigRight fill="black" /> Videolecciones
+              </li>
 
-                <li className="flex items-center">
-                  <ArrowBigRight fill="black" /> Contenido interactivo{" "}
-                  <ArrowBigRight fill="black" /> Autoevaluaciones
-                </li>
+              <li className="flex items-center">
+                <ArrowBigRight fill="black" /> Contenido interactivo{" "}
+                <ArrowBigRight fill="black" /> Autoevaluaciones
+              </li>
 
-                <li className="flex items-center">
-                  <ArrowBigRight fill="black" /> Equipo de tutores{" "}
-                  <ArrowBigRight fill="black" /> Trabajo en equipo{" "}
-                </li>
-              </ul>  
-            
+              <li className="flex items-center">
+                <ArrowBigRight fill="black" /> Equipo de tutores{" "}
+                <ArrowBigRight fill="black" /> Trabajo en equipo{" "}
+              </li>
+            </ul>
           </div>
         </article>
 
@@ -119,7 +114,9 @@ const Ventajas = () => {
             <p className="absolute bottom-4 translate-x-[50%] right-[50%]">
               Marketing - venta - liderazgo - comunicacion
             </p>
-            <p className="text-2xl absolute translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]">IMAGEN</p>
+            <p className="text-2xl absolute translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]">
+              IMAGEN
+            </p>
             <Image
               src={`/`}
               alt=""
@@ -141,7 +138,7 @@ const Ventajas = () => {
                 práctica Aprende y aplica de forma rápida y eficiente desde el
                 primer día.
               </p>
-             <ul className="flex flex-col gap-4 py-2 font-medium">
+              <ul className="flex flex-col gap-4 py-2 font-medium">
                 <li className="flex">
                   <ArrowBigRight fill="black" /> Practica real con alumnos
                 </li>
@@ -153,7 +150,7 @@ const Ventajas = () => {
                   <ArrowBigRight fill="black" />
                   Desarrolla tus proyectos
                 </li>
-              </ul> 
+              </ul>
             </div>
           </div>
         </article>
