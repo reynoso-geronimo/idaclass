@@ -35,7 +35,7 @@ import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
 import cert1 from "../../../public/certi/cert1.webp";
 import cert2 from "../../../public/certi/cert2.webp";
-import Introvideo from "@/app/(root)/_components/introvideo";
+import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import CasoExito from "@/app/(root)/_components/ui/caso-exito";
 
@@ -98,16 +98,16 @@ const CursoPage = async ({ params }) => {
             </Button>
           </div>
 
-          <div className="flex justify-center items-center lg:w-1/2">
-            <div className=" w-full max-w-2xl">
-              <YouTubeEmbed
-                videoid="Mgo24SP8-Xs"
-                params="modestbranding=1&rel=0&showinfo=0&controls=0"
-              />
-              <div className="mt-12">
-                <Introvideo />
-              </div>
+          <div className="flex flex-col items-center justify-center items-center lg:w-1/2">
+            <div className=" w-full max-w-2xl bg-black relative aspect-video">
+              <Image src={`/${imagen}`} fill alt="imagen curso"></Image>
             </div>
+
+            <Introvideo
+              className={`mx-auto text-white mt-4`}
+              texto="Ver resumen"
+              videoid="Mgo24SP8-Xs"
+            />
           </div>
         </div>
       </section>
@@ -337,7 +337,7 @@ const CursoPage = async ({ params }) => {
           <CasoExito />
         </div>
       </section>
-      <Separator/>
+      <Separator />
     </main>
   );
 };

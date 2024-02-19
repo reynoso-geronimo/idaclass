@@ -1,9 +1,7 @@
-import { Separator } from "../../../components/ui/separator";
-import { Button } from "../../../components/ui/button";
 import Link from "next/link";
-import Introvideo from "./introvideo";
-import Partners from "./ui/partners";
 import { Card, CardContent } from "@/components/ui/card";
+import Introvideo from "@/components/ui/introvideo";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
