@@ -5,35 +5,45 @@ import CursoFormacionCard from "./ui/curso-formacion-card";
 const CursosFormacion = () => {
   const cursos = [
     {
-      title: "70% Off",
-      descripcion: "Aprende a programar páginas web increíbles desde cero",
+      descuento: "70% Off",
+      titulo: "Preparador Fisico",
+      descripcion: "Contiene 2 modulos, 6 unidades",
       image: "/cursosFormacion/cursoimg1.jpg",
       hours: 15,
       days: 1.5,
       turn: "Noche",
     },
     {
-      title: "70% Off",
-      descripcion:
-        "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
+      descuento: "70% Off",
+      titulo: "Personal Trainer",
+      descripcion: "Contiene 2 modulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
       turn: "Noche",
     },
     {
-      title: "70% Off",
-      descripcion:
-        "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativa",
+      descuento: "70% Off",
+      titulo: "Instructor de Musculacion",
+      descripcion: "Contiene 2 modulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
       turn: "Noche",
     },
     {
-      title: "70% Off",
-      descripcion:
-        "Fórmate como Personal Trainer con los mejores docentes con un modelo híbrido que contempla clases online, actividades presenciales y un set de herramientas educativaia Artificial en los negocios",
+      descuento: "70% Off",
+      titulo: "Gestion de Gimnasio",
+      descripcion: "Contiene 2 modulos, 6 unidades",
+      image: "https://source.unsplash.com/random/150x150",
+      hours: 590 + "  horas",
+      days: 1,
+      turn: "Noche",
+    },
+    {
+      descuento: "70% Off",
+      titulo: "Nutricion Deportiva",
+      descripcion: "Contiene 2 modulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,

@@ -59,7 +59,7 @@ const EmblaCarousel = props => {
           ))}
         </div>
       </div>
-      <div className="embla__buttons xl:hidden">
+      <div className="embla__buttons">
         <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
         <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
       </div>
