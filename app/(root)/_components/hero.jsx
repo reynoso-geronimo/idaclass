@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const Hero = () => {
   return (
     <div className=" pt-8 lg:py-12">
-      <div className="lg:hidden">
+      <div className="lg:hidden container">
         <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
           Unete a la{" "}
           <span className="text-idaclass"> revolucion educativa</span> Sport
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <Card>
+        <Card className="border-none">
           <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
             <span className="text-2xl font-semibold text-white">Imagen</span>
           </CardContent>
