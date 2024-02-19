@@ -69,27 +69,39 @@ const Ventajas = () => {
             Imagen
           </div>
           <div className="w-full md:w-1/2">
-            <h3 className="text-2xl md:text-3xl font-extrabold  text-idaclass tracking-tight">
+            <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
-            <p className="text-pretty md:text-lg font-semibold ">
+            <p className="text-pretty md:text-lg font-semibold text-center md:text-left">
               Aprende en un entorno virtual interactivo y multimodal <br />
               simple y efectivo.
             </p>
-            <ul className="flex flex-col gap-4 py-2 font-medium">
-              <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Clases en vivo
-                <ArrowBigRight fill="black" /> Videolecciones
+            <ul className="grid grid-cols-2 font-medium justify-items-center md:justify-items-start gap-x-2">
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Clases en vivo
+              </li>
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Videolecciones
               </li>
 
-              <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Contenido interactivo
-                <ArrowBigRight fill="black" /> Autoevaluaciones
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Contenido interactivo
+              </li>
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Autoevaluaciones
               </li>
 
-              <li className="flex items-center">
-                <ArrowBigRight fill="black" /> Equipo de tutores
-                <ArrowBigRight fill="black" /> Trabajo en equipo
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Equipo de tutores
+              </li>
+              <li className="w-full max-w-48">
+                <ArrowBigRight fill="black" className="inline" />
+                Trabajo en equipo
               </li>
             </ul>
           </div>
