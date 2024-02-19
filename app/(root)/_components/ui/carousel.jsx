@@ -8,15 +8,10 @@ import { DotButton } from "@/components/ui/EmblaCarouselArrowsDotsButtons";
 
 const Carousel = props => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    options,
-    [Autoplay()],
-    
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
-
 
   const scrollTo = useCallback(
     index => emblaApi && emblaApi.scrollTo(index),
@@ -43,23 +38,20 @@ const Carousel = props => {
 
   return (
     <>
-      <div className="embla">
+      <div className="embla container">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             {slides.map((image, index) => (
-              <div
-                className="embla__slide__modalidad h-[400px] relative "
-                key={index}
-              >
+              <div className="embla__slide__modalidad relative" key={index}>
                 <Image
-                  className="embla__slide__img  object-[0px_30%] rounded-xl"
+                  className="object-[50%_30%] object-cover h-[400px] -z-10"
                   src={image.src}
                   alt={image.alt}
-                  fill
-                  style={{ objectFit: "cover" }}
                 />
                 {image?.text && (
-                  <p className={`relative z-50 -bottom-48 text-white font-extrabold text-5xl`}>
+                  <p
+                    className={`z-50 absolute text-center bottom-[30%] container text-white font-extrabold text-5xl`}
+                  >
                     {image.text}
                   </p>
                 )}

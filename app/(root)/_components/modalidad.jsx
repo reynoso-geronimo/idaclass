@@ -27,10 +27,10 @@ const Modalidad = () => {
     <>
     
       <section className="text-center flex flex-col items-center w-full">
-        <TituloSeccion className={`mb-2`}>
+        <TituloSeccion className={`mb-2 px-2`}>
           Programa de educacion continua
         </TituloSeccion>
-        <h3 className="text-center font-bold text-xl text-gray-700 max-w-md mb-4 ">
+        <h3 className="text-center font-bold text-xl text-gray-700 max-w-md mb-4 px-2">
           Lleva tu carrera a otro nivel con los cursos de especializacion on demand a tu ritmo.
         </h3>
 
