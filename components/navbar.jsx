@@ -165,7 +165,14 @@ const NavBar = () => {
 
             <Menubar className="border-none outline-none hover:text-idaclass4 bg-transparent relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]">
               <MenubarMenu>
-                <MenubarTrigger>Cursos</MenubarTrigger>
+                <MenubarTrigger
+                  className={`${
+                    pathname === "/cursos" &&
+                    "text-idaclass4 underline decoration-2 underline-offset-4"
+                  }`}
+                >
+                  Cursos
+                </MenubarTrigger>
                 <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
                   <div>
                     <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
@@ -202,7 +209,10 @@ const NavBar = () => {
                     <MenubarItem className="text-xl">
                       Personal trainter
                     </MenubarItem>
-                    <MenubarItem className="p-0 mx-2">
+                    <MenubarItem
+                      className="p-0 mx-2 hover:bg-primary hover:cursor-pointer"
+                      asChild
+                    >
                       <Button
                         size="sm"
                         className="rounded-xl text-sm font-bold"
