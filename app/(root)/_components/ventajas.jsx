@@ -69,7 +69,7 @@ const Ventajas = () => {
             Imagen
           </div>
           <div className="w-full md:w-1/2">
-            <h3 className="text-lg md:text-4xl font-extrabold  text-idaclass tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg font-semibold ">
@@ -104,9 +104,9 @@ const Ventajas = () => {
           }`}
         >
           <div className="w-full md:w-7/8 rounded-lg relative aspect-video text-white text-center">
-            <h2 className=" z-10 text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight mb-4">
+            <h3 className="text-2xl md:text-3xl  font-extrabold   text-idaclass tracking-tight mb-4">
               Eleva tus habilidades con SkillClass
-            </h2>
+            </h3>
             <h4 className="text-pretty md:text-lg font-semibold ">
               <span className="text-idaclass4">Bono especial</span> 4 cursos
               extras para asegurar tu éxito
@@ -130,7 +130,7 @@ const Ventajas = () => {
           </div>
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
-              <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
+              <h3 className="text-2xl  md:text-3xl  font-extrabold   text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg font-semibold">
@@ -171,7 +171,7 @@ const Ventajas = () => {
             className="w-full md:w-2/5 rounded-lg"
           />
           <div className="md:w-2/5">
-            <h3 className="text-lg md:text-4xl  font-extrabold   text-idaclass tracking-tight">
+            <h3 className="text-lg md:text-3xl  font-extrabold   text-idaclass tracking-tight">
               SkillClass - Tu Herramienta Exclusiva
             </h3>
             <p className="text-pretty md:text-lg font-semibold">
