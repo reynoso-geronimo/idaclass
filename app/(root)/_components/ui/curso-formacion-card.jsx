@@ -9,7 +9,7 @@ const CursoFormacionCard = ({ curso, index }) => {
   return (
     <article
       key={index}
-      className="w-72 mx-auto bg-gray-200 rounded-md h-[650px] grid border border-1 border-gray-400"
+      className="w-[320px] mx-auto bg-gray-200 rounded-md h-[650px] grid border border-1 border-gray-400"
     >
       <div className="relative h-36 flex flex-col justify-end">
         <Image
@@ -29,31 +29,31 @@ const CursoFormacionCard = ({ curso, index }) => {
         />
       </div>
       <h3 className="px-2 font-bold text-2xl text-center">{curso.titulo}</h3>
-      <p className="text-sm px-2 z-10">{curso.descripcion}</p>
+      <p className="px-2 z-10">{curso.descripcion}</p>
       <div className="flex flex-col gap-1 px-2">
-        <p className="text-sm flex items-center gap-1">
+        <p className=" flex items-center gap-1">
           <Dot color="#3a5dae" />
         </p>
-        <p className="text-sm flex items-center gap-1">
+        <p className=" flex items-center gap-1">
           <Dot color="#3a5dae" />
           {curso.hours}
         </p>
-        <p className="text-sm flex items-center gap-1">
+        <p className=" flex items-center gap-1">
           <Dot color="#3a5dae" />
           Fuera de clase
         </p>
-        <p className="text-sm flex items-center gap-1">
+        <p className=" flex items-center gap-1">
           <Dot color="#3a5dae" />
           Franja horaria
         </p>
       </div>
-      <div className="text-xs px-2 ml-2">
+      <div className="text-smpx-2 ml-2">
         <span className="flex items-center">
           <Clock className="inline mr-1" size={16} />
-          40 Semanas / 2 clases semanales de 2 h
+          40 Semanas / 2 clases Sem. de 2 h
         </span>
       </div>
-      <div className="p-4 text-sm flex flex-col gap-2">
+      <div className="p-4 flex flex-col gap-2">
         <p>
           Plan Standard{" "}
           <span className="line-through decoration-2">U$D 162 USD</span>
