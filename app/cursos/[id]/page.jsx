@@ -98,7 +98,7 @@ const CursoPage = async ({ params }) => {
             </Button>
           </div>
 
-          <div className="flex flex-col items-center justify-center items-center lg:w-1/2">
+          <div className="flex flex-col items-center justify-center lg:w-1/2">
             <div className=" w-full max-w-2xl bg-black relative aspect-video">
               <Image src={`/${imagen}`} fill alt="imagen curso"></Image>
             </div>
