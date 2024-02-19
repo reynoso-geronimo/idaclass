@@ -9,11 +9,11 @@ const CursoFormacionCard = ({ curso, index }) => {
   return (
     <article
       key={index}
-      className="w-[320px] mx-auto bg-gray-200 rounded-md h-[650px] grid border border-1 border-gray-400"
+      className="w-[320px] mx-auto bg-gray-200 rounded-2xl h-[650px] grid border border-1 border-gray-400"
     >
       <div className="relative h-36 flex flex-col justify-end">
         <Image
-          className="object-cover z-10"
+          className="object-cover z-10 rounded-t-2xl"
           src={curso.image}
           fill
           alt="Imagen del curso"
