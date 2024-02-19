@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
 
           {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <Card className="w-1/2 z-10">
+          <Card className="w-1/2 z-10 border-none">
             <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
               <span className="text-2xl font-semibold text-white">Imagen</span>
             </CardContent>
