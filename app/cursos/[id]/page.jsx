@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { YouTubeEmbed } from "@next/third-parties/google";
 
@@ -79,7 +78,7 @@ const CursoPage = async ({ params }) => {
 
   return (
     <main className="flex flex-col gap-6">
-      <div className="text-center bg-emerald-300 py-4">Promocion </div>
+      {/* <div className="text-center bg-emerald-300 py-4">Promocion </div> */}
       <section className="bg-idaclass text-white">
         <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8">
           <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
@@ -324,9 +323,7 @@ const CursoPage = async ({ params }) => {
           </Button>
         </article>
         <article className="w-full flex items-center mx-auto lg:w-1/3 mb-4 lg:mb-0">
-          
-            <Image src={cert2} alt="certificado" className="mx-auto" />
-    
+          <Image src={cert2} alt="certificado" className="mx-auto" />
         </article>
       </section>
       <section className="container">
@@ -340,6 +337,7 @@ const CursoPage = async ({ params }) => {
           <CasoExito />
         </div>
       </section>
+      <Separator/>
     </main>
   );
 };

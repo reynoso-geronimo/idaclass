@@ -35,15 +35,15 @@ const CursoOnDemand = ({ curso }) => {
         <CardDescription>{curso.descripcion}</CardDescription>
         <Separator />
         <span className="flex gap-2">
-          <GraduationCap /> Docente: DIego Maradona{" "}
+          <GraduationCap /> Docente: Diego Maradona
         </span>
         <span className="flex gap-2">
           <Clock /> {curso.horas ? curso.horas : "150 "} Horas
         </span>
       </CardHeader>
       <CardFooter className="self-end">
-        <Button size="sm" className="w-full font-bold">
-          Ver Curso
+        <Button size="sm" className="w-full font-bold" asChild>
+          <Link href={`/cursos/${curso.id}`}>Ver Curso</Link>
         </Button>
       </CardFooter>
     </Card>
