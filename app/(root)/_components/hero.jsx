@@ -48,7 +48,7 @@ const Hero = () => {
               <span className="text-idaclass"> revolucion educativa</span> Sport
               Fitness
             </h2>
-            <h2 className="text-xl font-semibold max-w-[768px] mb-4">
+            <h2 className="text-lg xl:text-xl font-semibold max-w-[768px] mb-4">
               Transforma tu pasion, despierta tu potencial, conviertete en un
               profesional con nuestros cursos.
             </h2>
@@ -65,8 +65,8 @@ const Hero = () => {
           </div>
 
           {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <Card className="w-1/2 z-10 border-none">
-            <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
+          <Card className="w-1/2 z-10 border-none flex items-center justify-center">
+            <CardContent className="w-full flex aspect-video items-center justify-center p-6 bg-black">
               <span className="text-2xl font-semibold text-white">Imagen</span>
             </CardContent>
           </Card>
