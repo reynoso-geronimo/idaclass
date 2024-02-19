@@ -13,7 +13,7 @@ const Hero = () => {
           Fitness
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-base font-semibold text-center">
-          Transforma tu pasion, despierta tu potencial, conviertete en un
+          Despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h3>
         <div className="flex justify-center w-full">
@@ -47,7 +47,7 @@ const Hero = () => {
               Fitness
             </h2>
             <h2 className="text-lg xl:text-xl font-semibold max-w-[768px] mb-4">
-              Transforma tu pasion, despierta tu potencial, conviertete en un
+              Despierta tu potencial, conviertete en un
               profesional con nuestros cursos.
             </h2>
             <Button

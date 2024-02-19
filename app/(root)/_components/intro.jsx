@@ -13,7 +13,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const Intro = () => {
   return (
-    <section className="container lg:px-0 bg-slate-900 text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-end relative">
+    <section className="container lg:px-0 bg-black text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-end relative">
       <div className="w-full lg:w-auto text-center lg:text-left">
         <h2 className="font-semibold text-3xl lg:max-w-sm">
           Ofrecemos la mejor solución probada para tu futuro{" "}
