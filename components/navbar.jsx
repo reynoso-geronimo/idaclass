@@ -28,9 +28,9 @@ const NavBar = () => {
 
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 bg-blue-950 text-white">
-      <Promobar/>
-      <nav className="w-full flex justify-between items-center h-16 container font-semibold">
+    <header className="sticky top-0 z-50 bg-slate-900 text-white">
+      <Promobar />
+      <nav className="w-full flex justify-between items-center h-16  container max-sm:px-1 font-semibold">
         <Sheet>
           <SheetTrigger className="lg:hidden w-24">
             <Menu className="h-9 w-9" aria-label="menu-navegacion" />
