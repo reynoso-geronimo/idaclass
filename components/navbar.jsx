@@ -59,7 +59,7 @@ const NavBar = () => {
               </Link>
             </SheetClose>
             <Separator />
-            <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclassGray">
+            <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclass">
               Cursos de formacion
             </h1>
             <SheetClose asChild>
