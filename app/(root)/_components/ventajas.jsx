@@ -72,7 +72,7 @@ const Ventajas = () => {
             <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
-            <p className="text-pretty md:text-lg font-semibold text-center md:text-left">
+            <p className="text-pretty md:text-lg font-semibold text-center md:text-left ">
               Aprende en un entorno virtual interactivo y multimodal <br />
               simple y efectivo.
             </p>

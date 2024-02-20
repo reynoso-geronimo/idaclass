@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <div className=" pt-8 lg:py-12">
-      <div className="lg:hidden container">
+      <div className="md:hidden container">
         <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
           Unete a la{" "}
           <span className="text-idaclass"> revolucion educativa</span> Sport
           Fitness
         </h2>
-        <h3 className="mx-auto max-w-lg px-2 text-base font-semibold text-center">
+        <h3 className="mx-auto max-w-lg px-2 font-semibold text-pretty  text-center">
           Despierta tu potencial, conviertete en un
           profesional con nuestros cursos.
         </h3>
@@ -38,10 +38,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block container">
+      <div className="hidden md:block container">
         <div className="flex mb-4 gap-4">
           <div className="w-1/2 text-center flex flex-col justify-around items-center mx-16">
-            <h2 className="text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
               Unete a la
               <span className="text-idaclass"> revolucion educativa</span> Sport
               Fitness
