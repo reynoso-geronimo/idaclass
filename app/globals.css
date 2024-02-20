@@ -72,10 +72,10 @@
 }
 @media (min-width: 1024px) {
   .embla {
-    --slide-size: 33%;
+    --slide-size: 33.33333333333%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
   .embla {
     --slide-size: 25%;
   }
