@@ -29,7 +29,7 @@ const CursoFormacionCard = ({ curso, index }) => {
         />
       </div>
       <h3 className="px-2 font-bold text-2xl text-center">{curso.titulo}</h3>
-      <p className="px-2 z-10">{curso.descripcion}</p>
+      <p className="px-4 z-10">{curso.descripcion}</p>
       <div className="flex flex-col gap-1 px-2">
         <p className=" flex items-center gap-1">
           <Dot color="#3a5dae" />
@@ -47,7 +47,7 @@ const CursoFormacionCard = ({ curso, index }) => {
           Franja horaria
         </p>
       </div>
-      <div className="text-smpx-2 ml-2">
+      <div className="px-2 ml-2">
         <span className="flex items-center">
           <Clock className="inline mr-1" size={16} />
           40 Semanas / 2 clases Sem. de 2 h
