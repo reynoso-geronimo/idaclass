@@ -90,7 +90,7 @@ const CursoPage = async ({ params }) => {
 
             <div className="font-semibold text-sm my-4">
               <Badge className={`bg-red-500`}>Online</Badge>{" "}
-              <Badge>On Demand</Badge>
+              <Badge>Prescencial</Badge>
             </div>
 
             <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
