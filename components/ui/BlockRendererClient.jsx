@@ -9,7 +9,7 @@ export default function BlockRendererClient({ content }) {
     <BlocksRenderer
       content={content}
       blocks={{
-        paragraph: ({ children }) => <p className="my-4">{children}</p>,
+        paragraph: ({ children }) => <p className="my-4 text-lg">{children}</p>,
         image: ({ image }) => {
           console.log(image);
           return (
