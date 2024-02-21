@@ -1,6 +1,7 @@
 "use server"
 
 import Curso from "@/models/Curso";
+import CursosFormacion from "@/models/CursoFormacion";
 import Blog from "@/models/Blog";
 
 export async function getCursos() {
@@ -22,6 +23,16 @@ export async function getCursos() {
 export async function getCursosFromDB() {
   try {
     const response = await Curso.findAll()
+    const data = response.map(curso => curso.toJSON()); 
+   
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function getCursosFormacionFromDB() {
+  try {
+    const response = await CursosFormacion.findAll()
     const data = response.map(curso => curso.toJSON()); 
    
     return data;

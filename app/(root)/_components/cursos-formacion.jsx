@@ -1,8 +1,10 @@
 import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import CursoFormacionCard from "./ui/curso-formacion-card";
+import { getCursosFormacionFromDB } from "@/app/actions";
 
-const CursosFormacion = () => {
+const CursosFormacion = async () => {
+  const cursosFormacion = await getCursosFormacionFromDB()
   const cursos = [
     {
       descuento: "70% Off",
@@ -64,7 +66,7 @@ const CursosFormacion = () => {
       <div className="max-w-2xl mx-auto  lg:max-w-full">
         <EmblaCarousel
           options={OPTIONS}
-          slides={cursos.map((curso, index) => (
+          slides={cursosFormacion.map((curso, index) => (
             <CursoFormacionCard key={index} curso={curso} index={index} />
           ))}
         />
