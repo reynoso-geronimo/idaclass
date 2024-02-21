@@ -1,5 +1,5 @@
-import sequelize  from "../lib/sequelize";
-import { DataTypes }  from "sequelize";
+import sequelize from "../lib/sequelize";
+import { DataTypes } from "sequelize";
 
 const Blog = sequelize.define("blogs", {
     id: {
@@ -11,26 +11,25 @@ const Blog = sequelize.define("blogs", {
         type: DataTypes.STRING,
 
     },
-   introduccion: {
+    introduccion: {
         type: DataTypes.STRING,
 
     },
-foto: {
+    foto: {
         type: DataTypes.STRING,
 
     },
-   cuerpo: {
-        type: DataTypes.TEXT('long') ,
+    cuerpo: {
+        type: DataTypes.TEXT('long'),
 
     }
 
 }, {
     timestamps: true,
     createdAt: "created_at",
-    updatedAt:"updated_at"
-}
-, {
+    updatedAt: "updated_at",
     freezeTableName: true
-  }
+}
+
 )
 export default Blog;
