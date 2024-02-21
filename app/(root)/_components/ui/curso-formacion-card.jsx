@@ -5,13 +5,10 @@ import Link from "next/link";
 import React from "react";
 
 const CursoFormacionCard = ({ curso, index }) => {
-  const modulos = (JSON.parse(curso.modulos));
-  console.log(Object.keys(modulos[1]))
- 
   return (
     <article
       key={index}
-      className="w-[315px] mx-auto bg-gray-200 rounded-2xl h-[650px] grid border border-1 border-gray-400"
+      className="w-[315px] mx-auto bg-gray-200 rounded-2xl h-[650px] flex flex-col justify-between border border-1 border-gray-400"
     >
       <div className="relative h-36 flex flex-col justify-end">
         <Image
@@ -33,12 +30,13 @@ const CursoFormacionCard = ({ curso, index }) => {
       <h3 className="px-2 font-bold text-2xl text-center">{curso.nombre}</h3>
       <p className="px-4 z-10">{curso.contenido}</p>
       <div className="flex flex-col gap-1 px-2">
-        {JSON.parse(curso.modulos).map(modulo => (
-          <p key={index} className=" flex items-center gap-1">
-            <Dot color="#3a5dae" />
-            {modulo.titulo}
-          </p>
-        ))}
+        {curso.modulos &&
+          JSON.parse(curso.modulos).map(modulo => (
+            <p key={index} className=" flex items-center gap-1">
+              <Dot color="#3a5dae" />
+              {modulo.titulo}
+            </p>
+          ))}
       </div>
       <div className="px-2 ml-2">
         <span className="flex items-center">
@@ -54,14 +52,14 @@ const CursoFormacionCard = ({ curso, index }) => {
         <p>BecaClass + 70 % OFF U$D 486 USD</p>
         <p className="font-medium">Desde 3 Cuotas de</p>
         <p className=" text-2xl font-bold mb-0	">U$D 162 USD</p>
+        <Button
+          asChild
+          size="lg"
+          className="my-4 px-2 w-[100%] mx-auto rounded-lg text-xl"
+        >
+          <Link href={`/curso-formacion/${curso.nombre}`}>Ver Curso</Link>
+        </Button>
       </div>
-      <Button
-        asChild
-        size="lg"
-        className="mb-4 px-2 w-[85%] mx-auto rounded-lg text-xl"
-      >
-        <Link href={`/curso-formacion/${curso.nombre}`}>Ver Curso</Link>
-      </Button>
     </article>
   );
 };
