@@ -70,7 +70,7 @@ const CursoPage = async ({ params }) => {
       <section className="bg-idaclass text-white">
         <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8">
           <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
-            <h1 className="text-2xl lg:text-5xl font-bold my-4 tracking-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold my-4 tracking-tight">
               {nombre}
             </h1>
 
