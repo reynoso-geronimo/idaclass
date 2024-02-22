@@ -23,10 +23,11 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import Promobar from "./promobar";
-const NavBar = () => {
+
+const NavBar = ({ cursosFormacion }) => {
   const { data: session } = useSession();
 
-  const pathname = usePathname();
+  const pathname = usePathname().replace(/%20/g, " ");
   return (
     <header className="sticky top-0 z-50 bg-black text-white">
       <Promobar />
@@ -62,42 +63,20 @@ const NavBar = () => {
             <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclass">
               Cursos de formacion
             </h1>
-            <SheetClose asChild>
-              <Link
-                href="/cursos"
-                className={`${pathname === "/cursos" && "text-idaclass4"}`}
-              >
-                Cursos de formacion 1
-              </Link>
-            </SheetClose>
+            {cursosFormacion.map((cursoFormacion, index) => (
+              <SheetClose asChild key={index}>
+                <Link
+                  href={`/curso-formacion/${cursoFormacion.nombre}`}
+                  className={`${
+                    pathname === `/curso-formacion/${cursoFormacion.nombre}` &&
+                    "text-idaclass4"
+                  }`}
+                >
+                  {cursoFormacion.nombre}
+                </Link>
+              </SheetClose>
+            ))}
 
-            <SheetClose asChild>
-              <Link
-                href="/cursos"
-                className={`${pathname === "/cursos" && "text-idaclass4"} `}
-              >
-                Cursos de formacion 2
-              </Link>
-            </SheetClose>
-
-            <SheetClose asChild>
-              <Link
-                href="/cursos"
-                className={`${pathname === "/cursos" && "text-idaclass4"} `}
-              >
-                Cursos de formacion 3
-              </Link>
-            </SheetClose>
-
-            <SheetClose asChild>
-              <Link
-                href="/cursos"
-                className={`${pathname === "/cursos" && "text-idaclass4"} `}
-              >
-                Cursos de formacion 4
-              </Link>
-            </SheetClose>
-            <Separator />
             <SheetClose asChild>
               <Link
                 href="/cursos"
@@ -167,7 +146,8 @@ const NavBar = () => {
               <MenubarMenu>
                 <MenubarTrigger
                   className={`${
-                    pathname === "/cursos" &&
+                    (pathname.includes("curso-formacion") ||
+                      pathname.includes("cursos")) &&
                     "text-idaclass4 underline decoration-2 underline-offset-4"
                   }`}
                 >
@@ -175,30 +155,32 @@ const NavBar = () => {
                 </MenubarTrigger>
                 <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
                   <div>
-                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-bold text-idaclass  border-l-4 border-idaclass4">
                       Cursos de Formacion
                     </h5>
                     <MenubarSeparator />
-                    <MenubarItem className="text-xl">
-                      Personal trainter
-                    </MenubarItem>
-                    <MenubarItem className="text-xl">
-                      Personal trainter
-                    </MenubarItem>
-                    <MenubarItem className="text-xl">
-                      Personal trainter
-                    </MenubarItem>
-                    <MenubarItem className="text-xl">
-                      Personal trainter
-                    </MenubarItem>
+                    {cursosFormacion.map((cursoFormacion, index) => (
+                      <MenubarItem className="text-xl" key={index} asChild>
+                        <Link
+                          href={`/curso-formacion/${cursoFormacion.nombre}`}
+                          className={`${
+                            pathname ===
+                              `/curso-formacion/${cursoFormacion.nombre}` &&
+                            `text-idaclass4`
+                          } hover:cursor-pointer font-medium`}
+                        >
+                          {cursoFormacion.nombre}
+                        </Link>
+                      </MenubarItem>
+                    ))}
                   </div>
                   <div>
-                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-lg font-bold text-idaclass  border-l-4 border-idaclass4">
+                    <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-bold text-idaclass  border-l-4 border-idaclass4">
                       Cursos on demand
                     </h5>
                     <MenubarSeparator />
                     <MenubarItem className="text-xl">
-                      Personal trainter{""}
+                      Personal trainter
                     </MenubarItem>
                     <MenubarItem className="text-xl">
                       Personal trainter

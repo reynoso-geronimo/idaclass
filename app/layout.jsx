@@ -12,12 +12,14 @@ export const metadata = {
     
 };
 
-export default function RootLayout({ children}) {
+import { getCursosFormacionFromDB } from "@/app/actions";
+export default async function RootLayout({ children}) {
+  const cursosFormacion = await getCursosFormacionFromDB()
   return (
     <html lang="en" className="scroll-smooth scroll-pt-20">
       <body className={`${inter.className} min-h-screen flex flex-col justify-between`}>
       <ProviderSession>
-        <NavBar />
+        <NavBar cursosFormacion={cursosFormacion}/>
        {children}
         <Footer />
         </ProviderSession>
