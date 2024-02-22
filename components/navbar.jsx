@@ -160,14 +160,18 @@ const NavBar = ({ cursosFormacion }) => {
                     </h5>
                     <MenubarSeparator />
                     {cursosFormacion.map((cursoFormacion, index) => (
-                      <MenubarItem className="text-xl" key={index} asChild>
+                      <MenubarItem
+                        className="text-xl focus:bg-idaclass4 focus:text-white transition-all"
+                        key={index}
+                        asChild
+                      >
                         <Link
                           href={`/curso-formacion/${cursoFormacion.nombre}`}
                           className={`${
                             pathname ===
                               `/curso-formacion/${cursoFormacion.nombre}` &&
                             `text-idaclass4`
-                          } hover:cursor-pointer font-medium`}
+                          } hover:cursor-pointer font-medium `}
                         >
                           {cursoFormacion.nombre}
                         </Link>
