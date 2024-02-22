@@ -65,8 +65,13 @@ const Ventajas = () => {
           }`}
         >
           {/* <Herramientas /> */}
-          <div className="bg-black text-white w-full md:w-2/5 h-52 text-center font-bold text-2xl flex items-center justify-center">
-            Imagen
+          <div className="w-full md:w-1/2 aspect-video relative">
+            <Image
+              src={`/home/IdaClass Web Img 2.1.jpg`}
+              alt="Bienvenido"
+              fill
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div className="w-full md:w-1/2">
             <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">

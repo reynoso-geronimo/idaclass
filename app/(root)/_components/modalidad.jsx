@@ -1,5 +1,5 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import modalidad1 from "../../../public/modalidad/modalidad1.webp";
+import modalidad1 from "../../../public/modalidad/IdaClass Web Img 6.2.jpg";
 import modalidad2 from "../../../public/modalidad/modalidad2.webp";
 import modalidad3 from "../../../public/modalidad/modalidad3.webp";
 import Carousel from "./ui/carousel";
@@ -8,7 +8,7 @@ const slides = [
   {
     src: modalidad1,
     alt: "modalidad",
-    text: "Desarrolla tu futuro",
+    // text: "Desarrolla tu futuro",
   },
   {
     src: modalidad2,

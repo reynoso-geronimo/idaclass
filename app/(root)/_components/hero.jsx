@@ -2,19 +2,20 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import Introvideo from "@/components/ui/introvideo";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className=" pt-8 lg:py-12">
-      <div className="md:hidden container">
+      <div className="lg:hidden container px-0">
         <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
           Unete a la{" "}
           <span className="text-idaclass"> revolucion educativa</span> Sport
           Fitness
         </h2>
         <h3 className="mx-auto max-w-lg px-2 font-semibold text-pretty  text-center">
-          Despierta tu potencial, conviertete en un
-          profesional con nuestros cursos.
+          Despierta tu potencial, conviertete en un profesional con nuestros
+          cursos.
         </h3>
         <div className="flex justify-center w-full">
           <Button
@@ -28,8 +29,12 @@ const Hero = () => {
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
         <Card className="border-none">
-          <CardContent className="flex aspect-video items-center justify-center p-6 bg-black">
-            <span className="text-2xl font-semibold text-white">Imagen</span>
+          <CardContent className="flex aspect-video relative">
+            <Image
+              src={`/home/IdaClass Web Img 1.1.jpg`}
+              alt="Bienvenido"
+              fill
+            />
           </CardContent>
         </Card>
 
@@ -38,17 +43,17 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden md:block container">
+      <div className="hidden lg:block container px-0">
         <div className="flex mb-4 gap-4">
-          <div className="w-1/2 text-center flex flex-col justify-around items-center mx-16">
+          <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
               Unete a la
               <span className="text-idaclass"> revolucion educativa</span> Sport
               Fitness
             </h2>
             <h2 className="text-lg xl:text-xl font-semibold max-w-[768px] mb-4">
-              Despierta tu potencial, conviertete en un
-              profesional con nuestros cursos.
+              Despierta tu potencial, conviertete en un profesional con nuestros
+              cursos.
             </h2>
             <Button
               size="lg"
@@ -63,9 +68,13 @@ const Hero = () => {
           </div>
 
           {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <Card className="w-1/2 z-10 border-none flex items-center justify-center">
-            <CardContent className="w-full flex aspect-video items-center justify-center p-6 bg-black">
-              <span className="text-2xl font-semibold text-white">Imagen</span>
+          <Card className="w-3/5 z-10 border-none flex items-center justify-center">
+            <CardContent className="w-full aspect-video relative">
+              <Image
+                src={`/home/IdaClass Web Img 1.2.jpg`}
+                alt="Bienvenido"
+                fill
+              />
             </CardContent>
           </Card>
         </div>
