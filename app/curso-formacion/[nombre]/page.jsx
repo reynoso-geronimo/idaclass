@@ -34,6 +34,73 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import CasoExito from "@/app/(root)/_components/ui/caso-exito";
 import CursosFormacion from "@/models/CursoFormacion";
 
+const contenido = [
+  {
+    titulo: "Storytelling para tu marca",
+    unidades: [
+      {
+        titulo: "Conceptos básicos",
+        contenido: [
+          "Proceso de comunicación",
+          "Comunicación asertiva",
+          "Empatía para comunicar",
+        ],
+      },
+      {
+        titulo: "Comunicación verbal",
+        contenido: [
+          "El mensaje verbal: estructura",
+          "Copywriting y Storytelling: diferencias y consejos",
+        ],
+      },
+      {
+        titulo: "Estrategias de storytelling",
+        contenido: [
+          "8 pasos para armar tu propia historia",
+          "El Viaje del Héroe",
+          "Método Self-Us-Now",
+        ],
+      },
+      {
+        titulo: "Storytelling aplicado a tu marca",
+        contenido: [
+          "Ejercicio de FODA para tu marca personal",
+          "El autorretrato para una comunicación efectiva",
+        ],
+      },
+    ],
+  },
+  {
+    titulo: "Comunicación Asertiva",
+    unidades: [
+      {
+        titulo: "Unidad 1",
+        contenido: [
+          "El proceso de comunicación y sus elementos fundamentales",
+          "Comunicación asertiva y empatía para comunicar",
+          "Empatía",
+          "Emociones, comunicación y decisión",
+        ],
+      },
+      {
+        titulo: "Unidad 2",
+        contenido: [
+          "PNL y los sistemas representacionales",
+          "La comunicación no verbal",
+        ],
+      },
+      {
+        titulo: "Unidad 3",
+        contenido: ["El mensaje", "Círculo Dorado"],
+      },
+      {
+        titulo: "Unidad 4",
+        contenido: ["Conocer la marca para comunicarla"],
+      },
+    ],
+  },
+];
+
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
   const curso = await CursosFormacion.findOne({
@@ -42,14 +109,6 @@ const CursoPage = async ({ params }) => {
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-  // if (!paginaCurso) {
-  //   return (
-  //     <div className="flex flex-col items-center">
-  //       <Construction size={72} className=" rounded-full" fill="#FFFF00" />
-  //       <h1 className="text-3xl font-bold">Sitio bajo construccion</h1>
-  //     </div>
-  //   );
-  // }
 
   const {
     nombre,
@@ -77,8 +136,7 @@ const CursoPage = async ({ params }) => {
             <p className="font-medium">{descripcion}</p>
 
             <div className="font-semibold text-sm my-4">
-              <Badge className={`bg-red-500`}>Online</Badge>{" "}
-              <Badge>Prescencial</Badge>
+              <Badge className={`bg-red-500`}>{modalidades}</Badge>{" "}
             </div>
 
             <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
@@ -119,23 +177,23 @@ const CursoPage = async ({ params }) => {
         </div>
 
         <ul className="flex flex-col font-bold lg:text-2xl gap-4 lg:w-1/3">
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-2 shrink-0">
             <Calendar className="text-idaclass" strokeWidth={3} />
             Duracion: {duracion}
           </li>
           <li className="flex items-center gap-2">
-            <Monitor className="text-idaclass" strokeWidth={3} />
+            <Monitor className="text-idaclass shrink-0" strokeWidth={3} />
             Modalidad: {modalidades}
           </li>
           <li className="flex items-center gap-2">
-            <Clock className="text-idaclass" strokeWidth={3} />
+            <Clock className="text-idaclass shrink-0" strokeWidth={3} />
             Dedicacion: {dedicacion}
           </li>
           <li className="flex items-center gap-2">
             <Check
               size={24}
               strokeWidth={4}
-              className="rounded-full bg-idaclass4 text-white p-0.5"
+              className="rounded-full bg-idaclass4 text-white p-0.5 shrink-0"
             />
             Frecuencia: {frecuencia}
           </li>
@@ -166,50 +224,96 @@ const CursoPage = async ({ params }) => {
       </section>
       <Separator />
       <section className="bg-gradient-to-br from-gray-100 via-gray-150 to-gray-100">
-        <h2
-          className="text-2xl lg:text-4xl font-bold my-4 text-center"
-          id="contenido-curso"
-        >
+        <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
           Contenido del curso
         </h2>
-        <p className="text-center">Subtitulo</p>
-        <div className="container flex flex-col items-center md:flex-row gap-4">
-          {
-            <Accordion type="single" collapsible className="w-full md:w-1/2">
-              {JSON.parse(curso.modulos).map((modulo, index) => (
-                <AccordionItem value={`item-${index + 1}`} key={index}>
-                  <AccordionTrigger className="font-bold text-sm md:text-2xl  text-left px-4 ">
-                    Modulo: {modulo.titulo}
-                  </AccordionTrigger>
-                  <AccordionContent className="font-semibold text-sm p-4  bg-gray-200">
-                    {modulo.contenido}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          }
-          <Plus size={72} />
-          <div className="mx-auto w-full md:w-1/3 font-medium flex flex-col justify-between border bg-idaclass rounded-xl p-4">
+        <p className="text-center my-4">Subtitulo</p>
+
+        <div className="container flex flex-col items-center md:items-start md:flex-row gap-4">
+          <Accordion type="single" collapsible className="w-full md:w-1/2">
+            {JSON.parse(curso.modulos).map((modulo, index) => (
+              <AccordionItem value={`item-${index + 1}`} key={index}>
+                <AccordionTrigger className="font-bold text-sm md:text-xl  text-left px-4 ">
+                  {modulo.titulo}
+                </AccordionTrigger>
+                <AccordionContent className="font-semibold text-sm p-4  bg-gray-200">
+                  {modulo.contenido.map((item, index) => (
+                    <p key={index} className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      {item}
+                    </p>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <Plus size={72} className="md:mt-[12%]" />
+          <div className="mx-auto w-full md:w-1/3 font-medium flex flex-col justify-between border bg-idaclass rounded-xl p-4 text-white">
             <Badge className="text-lg text-center font-semibold m-2 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
               Modulo especial: SkillClass
             </Badge>
-            <div className="text-white flex flex-1 flex-col justify-around items-center">
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+            {contenido.map((item, index) => (
+              <div key={item + index} className="my-4">
+                <h3 className="text-center font-bold">{item.titulo}</h3>
+                <Accordion type="single" collapsible className="w-full ">
+                  {item.unidades.map((unidad, i) => (
+                    <AccordionItem
+                      value={unidad}
+                      key={unidad.titulo + i}
+                      className="m-0"
+                    >
+                      <AccordionTrigger className="font-bold text-sm  text-left px-4 py-1 ">
+                        {unidad.titulo}
+                      </AccordionTrigger>
+                      <AccordionContent className="font-semibold text-sm p-4">
+                        {unidad.contenido.map((item, j) => (
+                          <p key={j} className="flex items-center mb-4">
+                            <ChevronRight className="text-black shrink-0" />
+                            {item}
+                          </p>
+                        ))}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            ))}
+
+            <div className="my-4">
+              <h3 className="text-center font-bold">
+                Marketing y Ventas: <br /> ¿CÓMO CONSEGUIR CLIENTES PARA TUS
+                SERVICIOS DE FITNESS Y DEPORTE?
+              </h3>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value={`x`}>
+                  <AccordionTrigger className="font-bold text-sm  text-left px-4 ">
+                    MÉTODO AVC
+                  </AccordionTrigger>
+                  <AccordionContent className="font-semibold text-sm p-4">
+                    <p className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      Estrategia
+                    </p>
+                    <p className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      Plan de medios
+                    </p>
+                    <p className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      Calendario / Editorial
+                    </p>
+                    <p className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      Plan de Comunicación
+                    </p>
+                    <p className="flex items-center mb-4">
+                      <ChevronRight className="text-black shrink-0" />
+                      Client Journey
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>
