@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/carousel";
 
 import {
+  BookOpenCheck,
   Calendar,
-  Check,
   ChevronRight,
   Clock,
   Construction,
@@ -186,15 +186,11 @@ const CursoPage = async ({ params }) => {
             Modalidad: {modalidades}
           </li>
           <li className="flex items-center gap-2">
-            <Clock className="text-idaclass shrink-0" strokeWidth={3} />
+            <BookOpenCheck className="text-idaclass shrink-0" strokeWidth={3} />
             Dedicacion: {dedicacion}
           </li>
           <li className="flex items-center gap-2">
-            <Check
-              size={24}
-              strokeWidth={4}
-              className="rounded-full bg-idaclass4 text-white p-0.5 shrink-0"
-            />
+            <Clock className="text-idaclass shrink-0" strokeWidth={3} />
             Frecuencia: {frecuencia}
           </li>
         </ul>
