@@ -67,7 +67,7 @@ const CursosFormacion = async () => {
         <EmblaCarousel
           options={OPTIONS}
           slides={cursosFormacion.map((curso, index) => (
-            <CursoFormacionCard key={index} curso={curso} index={index} />
+            <CursoFormacionCard key={index} curso={curso}  />
           ))}
         />
       </div>
