@@ -34,7 +34,7 @@ const EquipoProfesional = () => {
   // }, []);
 
   return (
-    <section className="container px-0 lg:px-0 bg-slate-900 text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative overflow-hidden">
+    <section className="container px-0 lg:px-0 bg-black text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative overflow-hidden">
       <div className="w-full lg:w-1/2 lg:py-12 px-8 lg:px-0">
         <Carousel
           className="w-full "
