@@ -13,7 +13,7 @@ const Beca = () => {
           Se parte de nuestra de la comunidad Classera y accede a nuestras Becas
           exclusivas beneficios y descuentos.
         </h3>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="bg-black w-1/2 aspect-square"></div>
           <div className="bg-black w-1/2 aspect-square"></div>
         </div>

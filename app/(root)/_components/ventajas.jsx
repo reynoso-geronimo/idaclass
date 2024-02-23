@@ -2,39 +2,7 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import Herramientas from "./ui/herramientas";
 import { ArrowBigRight } from "lucide-react";
-
-const ventajasCollection = [
-  {
-    id: 1,
-    title: "Aprende Haciendo",
-    image: "assets/funcionalcrosshiit.webp",
-    paragraph:
-      "Avanza con Learn By Doing metodo probado y eficaz basado en la experiencia practica te permite llevar a la practica los conocimientos aprendidos desde el primer dia ",
-  },
-  {
-    id: 2,
-    title: "Programas de estudios innovadores",
-    image: "assets/funcionalcrosshiit.webp",
-    paragraph:
-      "Creamos programas integrales con standard de formacion internacional, que reflejan las ultimas tendencias en entrenamiento,las ciencias aplicadas para que logreas empleabilidad o hacer despegar tu propio proyecto",
-  },
-  {
-    id: 3,
-    title: "SkillClass - Tu Herramienta Exclusiva",
-    image: "assets/funcionalcrosshiit.webp",
-    paragraph:
-      "Domina el arte de construir tu marca,ofrecer y vender tus servicios y comunicar efectivamente tus proyectos personales.SkillClass es el complemento necesario para garantizar tu exito.",
-  },
-  {
-    id: 4,
-    title: "Innovamos en la forma de aprender",
-    image: "assets/funcionalcrosshiit.webp",
-    paragraph:
-      "Rompemos los moldes tradicionales con un enfoque innovador.Aprende en un entorno virtual interactio, simple e intuitivo con metodos que despiertan tu creatividad y facilitan tu aprendizaje",
-  },
-];
 
 const Ventajas = () => {
   const [ref1, inView1] = useInView({
@@ -147,7 +115,7 @@ const Ventajas = () => {
           </div>
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
-              <h3 className="text-2xl  md:text-3xl  font-extrabold   text-idaclass tracking-tight">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg font-semibold">
