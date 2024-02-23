@@ -27,8 +27,8 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="flex aspect-video relative">
-          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill />
+        <div className="flex aspect-square relative">
+          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain" />
         </div>
 
         <div className="w-full flex justify-center py-4">
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block container px-0">
+      <div className="hidden lg:block container px-0 overflow-hidden">
         <div className="flex mb-4 gap-4">
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
@@ -61,12 +61,13 @@ const Hero = () => {
           </div>
 
           {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <div className="w-3/5 z-10 aspect-video relative">
+          <div className="w-3/5 z-10 aspect-video relative m-8">
             <Image
               src={`/home/IdaClass Web Img 1.2.jpg`}
               alt="Bienvenido"
               fill
               style={{objectFit:"contain"}}
+              className="scale-125 translate-x-8"
             />
           </div>
         </div>
