@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import linea from "../../../public/assets/Línea img 2.png";
+import linea from "../../../public/assets/Línea img 3.png";
 
 const Intro = () => {
   return (
@@ -32,7 +32,11 @@ const Intro = () => {
           exitosa en tiempo record.
         </p>
         <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">
-        <Image src={linea} alt="linea" className="absolute -translate-x-[8%] -translate-y-[40%]" />
+          <Image
+            src={linea}
+            alt="linea"
+            className="absolute -translate-x-[8%] -translate-y-[55%] scale-[150%] "
+          />
         </div>
       </div>
       <div className="w-full lg:w-1/2">
