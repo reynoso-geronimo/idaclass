@@ -13,6 +13,12 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import linea from "../../../public/assets/Línea img 3.png";
 
+const areas = [
+  {src:`/home/areas/entrenamiento.jpeg`, area:"Entrenamiento"},
+  {src:`/home/areas/desarolloprofesional.jpeg`, area:"Desarrollo Profesional"},
+  {src:`/home/areas/gimnasio.jpeg`, area:"Gimnasio"},
+  {src:`/home/areas/nutricion.jpg`, area:"Nutricion"}
+]
 const Intro = () => {
   return (
     <section className="container lg:px-0 bg-black text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
@@ -53,14 +59,13 @@ const Intro = () => {
           ]}
         >
           <CarouselContent className="-ml-1">
-            {Array.from({ length: 5 }).map((_, index) => (
+            {areas.map((area, index) => (
               <CarouselItem key={index} className="pl-1 basis-[40%]">
                 <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-video items-center justify-center p-6">
-                      <span className="text-2xl font-semibold">
-                        {index + 1}
-                      </span>
+                  <Card className="border-none">
+                    <CardContent className="flex aspect-video items-center justify-center p-6 relative">
+                      <Image src={area.src} fill className="object-cover object-top" alt={area.area} />
+                      
                     </CardContent>
                   </Card>
                 </div>
