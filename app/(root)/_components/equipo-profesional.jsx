@@ -89,7 +89,7 @@ const EquipoProfesional = () => {
           <Image
             src={linea}
             alt="linea"
-            className="absolute -right-10 -top-10 scale-150"
+            className="absolute -right-44 lg:-right-10 -top-10 scale-150"
           />
         </div>
       </div>
