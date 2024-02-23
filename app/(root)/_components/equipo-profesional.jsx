@@ -12,7 +12,8 @@ import Autoplay from "embla-carousel-autoplay";
 
 import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
-
+import linea from "../../../public/assets/Línea img 2.png";
+import Image from "next/image";
 const EquipoProfesional = () => {
   // const [direction, setDirection] = useState("horizontal");
 
@@ -33,10 +34,10 @@ const EquipoProfesional = () => {
   // }, []);
 
   return (
-    <section className="container lg:px-0 bg-slate-900 text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative">
-      <div className="w-full lg:w-1/2 lg:py-12">
+    <section className="container px-0 lg:px-0 bg-slate-900 text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row items-center justify-end relative overflow-hidden">
+      <div className="w-full lg:w-1/2 lg:py-12 px-8">
         <Carousel
-          className="w-full"
+          className="w-full "
           opts={{
             align: "end",
             loop: true,
@@ -80,10 +81,17 @@ const EquipoProfesional = () => {
           </svg>
         </div>
 
-        <h2 className="font-semibold text-3xl lg:max-w-sm z-10">
+        <h2 className="font-semibold text-3xl lg:max-w-sm z-10 px-8">
           Conoce al equipo <br />
           que te guiara al éxito
         </h2>
+        <div className="absolute w-full">
+          <Image
+            src={linea}
+            alt="linea"
+            className="absolute -right-10 top-0 -scale-x-100"
+          />
+        </div>
       </div>
     </section>
   );
