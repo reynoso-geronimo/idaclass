@@ -57,8 +57,8 @@ const EquipoProfesional = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-idaclass4 border-0 left-2" />
-          <CarouselNext className=" bg-idaclass4 border-0 right-2 " />
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2 " />
         </Carousel>
       </div>
       <div className="w-full lg:w-1/2 text-center flex justify-end lg:justify-center items-center relative  max-lg:overflow-hidden max-lg:h-52">

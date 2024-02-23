@@ -67,8 +67,8 @@ const Intro = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="bg-idaclass4 border-0 left-2" />
-          <CarouselNext className=" bg-idaclass4 border-0 right-2" />
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
         </Carousel>
       </div>
     </section>

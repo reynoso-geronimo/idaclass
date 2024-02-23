@@ -384,8 +384,8 @@ const CursoPage = async ({ params }) => {
             ))}
           </CarouselContent>
           <div className="lg:hidden">
-            <CarouselPrevious className="bg-idaclass4 text-white hover:bg-idaclass3 -left-4 sm:-left-12 h-10 w-10" />
-            <CarouselNext className="bg-idaclass4 text-white  hover:bg-idaclass3 -right-4 sm:-right-12 h-10 w-10" />
+            <CarouselPrevious className="-left-4 sm:-left-12 h-10 w-10" />
+            <CarouselNext className="-right-4 sm:-right-12 h-10 w-10" />
           </div>
         </Carousel>
       </section>
