@@ -3,26 +3,22 @@ import { ChevronDown } from "lucide-react";
 import { soluciones1, soluciones2 } from "../../../lib/constants.js";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image.js";
 
 const Soluciones = () => {
   const [activo, setActivo] = useState();
-  const [ref1, inView1] = useInView({
+  const [ref1, inView1, entry1] = useInView({
     triggerOnce: true,
   });
-  const [ref2, inView2] = useInView({
+  const [ref2, inView2, entry2] = useInView({
     triggerOnce: true,
   });
   return (
-    <section className=" h-[800px] bg-zinc-950 text-white  relative ">
-      <Image
-        src={`/home/IdaClass Web Img 4.1.jpg`}
-        fill
-        alt="img-bg"
-        className="object-cover lg:object-contain"
-      />
-      <div className="backdrop-brightness-50 h-full ">
-        <div className="flex flex-col justify-around h-full container max-w-[940px] relative">
+    <section
+      className=" h-[800px] bg-zinc-800 text-white bg-no-repeat bg-[50%] bg-[length:_1400px] transform scale-x-[-1]"
+      style={{ backgroundImage: `url("/assets/bg-soluciones2.jpg")` }}
+    >
+      <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
+        <div className="flex flex-col justify-around h-full container relative lg:py-6">
           <h3
             ref={ref1}
             className={`${
