@@ -2,6 +2,7 @@ import Link from "next/link";
 import Introvideo from "@/components/ui/introvideo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import linea from "../../../public/assets/Línea img 1.png";
 
 const Hero = () => {
   return (
@@ -28,9 +29,16 @@ const Hero = () => {
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
         <div className="flex aspect-square relative">
-          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain" />
+          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain sm:px-12" />
+          
         </div>
-
+        <div className="w-full h-0 relative">
+          <Image
+            src={linea}
+            alt="linea"
+            className="scale-150 absolute -right-24 -top-32 sm:-top-48 z-10 "
+          />
+        </div>
         <div className="w-full flex justify-center py-4">
           <Introvideo />
         </div>
