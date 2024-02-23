@@ -29,7 +29,7 @@ const Hero = () => {
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
         <div className="flex aspect-square relative">
-          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain sm:px-12" />
+          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain sm:px-[10%]" />
           
         </div>
         <div className="w-full h-0 relative">
