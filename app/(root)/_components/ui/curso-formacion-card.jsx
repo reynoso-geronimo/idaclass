@@ -6,7 +6,7 @@ import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
   return (
-    <article className="w-[315px] mx-auto bg-gray-200 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-400">
+    <article className="w-[315px] mx-auto bg-gray-200 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-400 text-xs sm:text-sm">
       <div className="relative h-36 flex flex-col justify-end">
         <Image
           className="object-cover z-10 rounded-t-2xl"
@@ -26,7 +26,7 @@ const CursoFormacionCard = ({ curso }) => {
       </div>
       <h3 className="px-2 font-bold text-2xl text-center">{curso.nombre}</h3>
       <p className="px-4 z-10">{curso.contenido}</p>
-      <div className="flex flex-col gap-1 px-2">
+      <div className="flex flex-col gap-1 px-2 ">
         {curso.modulos &&
           JSON.parse(curso.modulos).map((modulo, index) => (
             <p key={index} className=" flex items-center gap-1">
