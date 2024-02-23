@@ -45,11 +45,10 @@ const Ventajas = () => {
             <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
-            <p className="text-pretty md:text-lg font-semibold text-center md:text-left ">
-              Aprende en un entorno virtual interactivo y multimodal <br />
-              simple y efectivo.
+            <p className="text-pretty md:text-lg text-center md:text-left mb-4">
+              Aprende en un entorno virtual interactivo multimodal simple y efectivo.
             </p>
-            <ul className="grid grid-cols-2 font-medium justify-items-center md:justify-items-start gap-x-2">
+            <ul className="grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
               <li className="w-full max-w-48">
                 <ArrowBigRight fill="black" className="inline" />
                 Clases en vivo
