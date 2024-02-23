@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
 import Introvideo from "@/components/ui/introvideo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -28,15 +27,9 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <Card className="border-none">
-          <CardContent className="flex aspect-video relative">
-            <Image
-              src={`/home/IdaClass Web Img 1.1.jpg`}
-              alt="Bienvenido"
-              fill
-            />
-          </CardContent>
-        </Card>
+        <div className="flex aspect-video relative">
+          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill />
+        </div>
 
         <div className="w-full flex justify-center py-4">
           <Introvideo />
@@ -68,15 +61,14 @@ const Hero = () => {
           </div>
 
           {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <Card className="w-3/5 z-10 border-none flex items-center justify-center">
-            <CardContent className="w-full aspect-video relative">
-              <Image
-                src={`/home/IdaClass Web Img 1.2.jpg`}
-                alt="Bienvenido"
-                fill
-              />
-            </CardContent>
-          </Card>
+          <div className="w-3/5 z-10 aspect-video relative">
+            <Image
+              src={`/home/IdaClass Web Img 1.2.jpg`}
+              alt="Bienvenido"
+              fill
+              style={{objectFit:"contain"}}
+            />
+          </div>
         </div>
       </div>
       {/* <div className="text-xl font-bold text-center container">
