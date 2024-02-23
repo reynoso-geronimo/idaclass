@@ -91,7 +91,7 @@ const Ventajas = () => {
             <h3 className="text-2xl md:text-3xl  font-extrabold   text-idaclass tracking-tight mb-4">
               Eleva tus habilidades con SkillClass
             </h3>
-            <h4 className="text-pretty md:text-lg font-semibold ">
+            <h4 className="text-pretty md:text-lg">
               <span className="text-idaclass4">Bono especial</span> 4 cursos
               extras para asegurar tu éxito
             </h4>
@@ -117,12 +117,12 @@ const Ventajas = () => {
               <h3 className="text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
-              <p className="text-pretty md:text-lg font-semibold">
+              <p className="text-pretty md:text-lg ">
                 Avanza con Learning by Doing el método basado en experiencia
                 práctica Aprende y aplica de forma rápida y eficiente desde el
                 primer día.
               </p>
-              <ul className="flex flex-col gap-4 py-2 font-medium">
+              <ul className="flex flex-col gap-4 py-2 ">
                 <li className="flex">
                   <ArrowBigRight fill="black" /> Practica real con alumnos
                 </li>

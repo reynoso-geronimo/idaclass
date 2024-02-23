@@ -13,7 +13,7 @@ const Hero = () => {
           <span className="text-idaclass"> revolucion educativa</span> Sport
           Fitness
         </h2>
-        <h3 className="mx-auto max-w-lg px-2 font-semibold text-pretty  text-center">
+        <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
           Despierta tu potencial, conviertete en un profesional con nuestros
           cursos.
         </h3>
@@ -52,7 +52,7 @@ const Hero = () => {
               <span className="text-idaclass"> revolucion educativa</span> Sport
               Fitness
             </h2>
-            <h2 className="text-lg xl:text-xl font-semibold max-w-[768px] mb-4">
+            <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
               Despierta tu potencial, conviertete en un profesional con nuestros
               cursos.
             </h2>
