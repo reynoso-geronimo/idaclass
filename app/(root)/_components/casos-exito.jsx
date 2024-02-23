@@ -11,7 +11,7 @@ import {
 
 const CasosExito = () => {
   return (
-    <section className="px-12 container">
+    <section className="container">
       <TituloSeccion className={"mb-0"}>Historias que inspiran</TituloSeccion>
       <h3 className="text-center font-medium text-xl text-pretty my-2">
         Se uno de nuestros casos de exito
@@ -38,8 +38,8 @@ const CasosExito = () => {
             <CasoExito />
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="xl:hidden" />
-        <CarouselNext className="xl:hidden" />
+        <CarouselPrevious className="xl:hidden -left-2" />
+        <CarouselNext className="xl:hidden -right-2" />
       </Carousel>
       {/* <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto justify-items-center"></div> */}
     </section>
