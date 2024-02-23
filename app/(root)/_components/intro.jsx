@@ -51,6 +51,7 @@ const Intro = () => {
           opts={{
             align: "start",
             loop: true,
+            watchDrag:false
           }}
           plugins={[
             Autoplay({
