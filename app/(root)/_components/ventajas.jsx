@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { ArrowBigRight } from "lucide-react";
+import { Dot } from "lucide-react";
 
 const Ventajas = () => {
   const [ref1, inView1] = useInView({
@@ -46,33 +46,33 @@ const Ventajas = () => {
               Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg text-center md:text-left mb-4">
-              Aprende en un entorno virtual interactivo multimodal simple y efectivo.
+              Aprende en un entorno virtual interactivo <br/> multimodal simple y efectivo.
             </p>
             <ul className="grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
+                <Dot fill="black" className="inline" />
                 Clases en vivo
               </li>
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
-                Videolecciones
+                <Dot fill="black" className="inline" />
+                Video lecciones
               </li>
 
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
+                <Dot fill="black" className="inline" />
                 Contenido interactivo
               </li>
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
+                <Dot fill="black" className="inline" />
                 Autoevaluaciones
               </li>
 
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
+                <Dot fill="black" className="inline" />
                 Equipo de tutores
               </li>
               <li className="w-full max-w-48">
-                <ArrowBigRight fill="black" className="inline" />
+                <Dot fill="black" className="inline" />
                 Trabajo en equipo
               </li>
             </ul>
@@ -124,14 +124,14 @@ const Ventajas = () => {
               </p>
               <ul className="flex flex-col gap-4 py-2 ">
                 <li className="flex">
-                  <ArrowBigRight fill="black" /> Practica real con alumnos
+                  <Dot fill="black" /> Practica real con alumnos
                 </li>
                 <li className="flex">
-                  <ArrowBigRight fill="black" />
+                  <Dot fill="black" />
                   Trabajos en equipo
                 </li>
                 <li className="flex">
-                  <ArrowBigRight fill="black" />
+                  <Dot fill="black" />
                   Desarrolla tus proyectos
                 </li>
               </ul>
