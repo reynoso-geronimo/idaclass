@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProviderSession  from "./providers/SessionProvider";
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {
   title: "IdaClass Academy",
@@ -17,7 +17,7 @@ export default async function RootLayout({ children}) {
   const cursosFormacion = await getCursosFormacionFromDB()
   return (
     <html lang="en" className="scroll-smooth scroll-pt-20">
-      <body className={`${inter.className} min-h-screen flex flex-col justify-between`}>
+      <body className={`${raleway.className} min-h-screen flex flex-col justify-between`}>
       <ProviderSession>
         <NavBar cursosFormacion={cursosFormacion}/>
        {children}
