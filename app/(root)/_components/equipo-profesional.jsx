@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
-import linea from "../../../public/assets/Línea img 2.png";
+import linea from "../../../public/assets/Línea img 1.png";
 import Image from "next/image";
 const EquipoProfesional = () => {
   // const [direction, setDirection] = useState("horizontal");
@@ -89,7 +89,7 @@ const EquipoProfesional = () => {
           <Image
             src={linea}
             alt="linea"
-            className="absolute -right-10 top-0 -scale-x-100"
+            className="absolute -right-10 -top-10 scale-125"
           />
         </div>
       </div>
