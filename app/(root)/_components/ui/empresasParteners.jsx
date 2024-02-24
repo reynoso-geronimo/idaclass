@@ -54,7 +54,7 @@ const EmpresasPartners = () => {
           {partners.map((partner, index) => (
             <CarouselItem key={index} className="pl-1 basis-1/8">
               <div className="p-1">
-                <div className="flex aspect-square items-center justify-center  relative w-24">
+                <div className="flex aspect-square items-center justify-center  relative w-20 sm:w-24">
                   <Image
                     src={`/empresasPartners${partner.src}`}
                     width={120}
