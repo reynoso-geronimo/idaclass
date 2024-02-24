@@ -74,7 +74,7 @@ const Ventajas = () => {
 
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Mat. interactivo
+                Trabajo en equipo
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
@@ -87,7 +87,8 @@ const Ventajas = () => {
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Trabajo en equipo
+                
+                Material interactivo
               </li>
             </ul>
           </div>
