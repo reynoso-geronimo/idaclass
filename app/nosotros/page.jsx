@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Partners from "@/components/partners";
+import Partners from "@/components/partnersEducativos";
 import { sobreNosotros } from "@/lib/constants";
 
 const Page = () => {

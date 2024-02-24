@@ -10,6 +10,8 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 import TituloSeccion from "./ui/titulo-seccion";
+import { TypewriterEffect } from "./ui/typewriter-effect";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const partners = [
   {
@@ -75,14 +77,17 @@ const partners = [
     alt: "ViloGymVicente",
   },
 ];
+
+const words = `Nuestros Partners en educacion`;
+
 const PartnersEducativos = () => {
   return (
     <section className="container lg:px-0  text-white py-8 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
-      <div className="w-full lg:w-auto ">
-        <TituloSeccion className={`text-idaclass4 lg:text-left lg:pr-4`}>
-          Nuestros Partners
-          <br /> en educacion
-        </TituloSeccion>
+      <div className="w-full lg:w-auto">
+        <TextGenerateEffect
+          words={words}
+          className={`text-idaclass4 mx-auto lg:text-left lg:pr-4 text-4xl text-center font-extrabold tracking-tight max-w-[350px]`}
+        />
       </div>
       <Carousel
         className="w-full lg:w-2/3"
