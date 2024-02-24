@@ -17,10 +17,7 @@ const partners = [
     src: "/Aletic.png",
     alt: "logo",
   },
-  {
-    src: "/GimnasioST.jpg",
-    alt: "logo",
-  },
+  
   {
     src: "/Graciela.jpeg",
     alt: "logo",
@@ -38,10 +35,7 @@ const partners = [
     src: "/Aletic.png",
     alt: "logo",
   },
-  {
-    src: "/GimnasioST.jpg",
-    alt: "logo",
-  },
+  
   {
     src: "/Graciela.jpeg",
     alt: "logo",
