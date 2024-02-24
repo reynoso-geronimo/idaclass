@@ -8,9 +8,6 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-
-import TituloSeccion from "./ui/titulo-seccion";
-import { TypewriterEffect } from "./ui/typewriter-effect";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const partners = [
