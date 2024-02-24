@@ -60,28 +60,29 @@ const Ventajas = () => {
               Aprende en un entorno virtual interactivo <br /> multimodal simple
               y efectivo.
             </p>
-            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
+            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center md:justify-items-start gap-x-0 text-sm sm:text-base">
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Clases en vivo
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Video lecciones
+                Equipo de tutores
+                
               </li>
 
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Contenido interactivo
+                Mat. Interactivo
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Autoe&shy;valuaciones
               </li>
-
+              
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Equipo de tutores
+                Video lecciones
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
