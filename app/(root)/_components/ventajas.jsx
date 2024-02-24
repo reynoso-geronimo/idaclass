@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Dot } from "lucide-react";
+import linea from "../../../public/assets/Línea img 1.png";
 
 const Ventajas = () => {
   const [ref1, inView1] = useInView({
@@ -17,7 +18,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-6 md:gap-y-12 container pb-20">
+      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container pb-20">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -28,7 +29,7 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={` w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`pb-12 overflow-hidden relative w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -73,7 +74,7 @@ const Ventajas = () => {
 
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Mat. Interactivo
+                Mat. interactivo
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
@@ -90,6 +91,13 @@ const Ventajas = () => {
               </li>
             </ul>
           </div>
+         
+          <Image
+            src={linea}
+            alt="linea"
+            className="absolute -right-44 lg:-right-10 -bottom-12 scale-150"
+          />
+       
         </article>
 
         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
