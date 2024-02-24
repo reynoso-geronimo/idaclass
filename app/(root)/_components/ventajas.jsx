@@ -28,12 +28,12 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={`w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={` w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
           {/* <Herramientas /> */}
-          <div className="w-full md:w-1/2 aspect-video relative">
+          <div className="w-full md:w-1/2 aspect-video relative ">
             <Image
               src={`/home/IdaClass Web Img 2.1.jpg`}
               alt="Bienvenido"
@@ -41,7 +41,18 @@ const Ventajas = () => {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 relative overflow-hidden">
+            <div className="absolute right-6 lg:right-[35%] bottom-8 rotate-[90deg]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22.769"
+                height="14.821"
+                className="fill-idaclass scale-[1100%] opacity-35 -z-10"
+              >
+                <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
+              </svg>
+            </div>
+
             <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
@@ -49,7 +60,7 @@ const Ventajas = () => {
               Aprende en un entorno virtual interactivo <br /> multimodal simple
               y efectivo.
             </p>
-            <ul className="grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
+            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Clases en vivo
