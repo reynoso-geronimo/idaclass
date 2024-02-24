@@ -18,7 +18,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container pb-20">
+      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container pb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -69,7 +69,6 @@ const Ventajas = () => {
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Equipo de tutores
-                
               </li>
 
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
@@ -80,32 +79,30 @@ const Ventajas = () => {
                 <Dot fill="black " className="shrink-0" />
                 Autoe&shy;valuaciones
               </li>
-              
+
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Video lecciones
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                
                 Material interactivo
               </li>
             </ul>
           </div>
-         
+
           <Image
             src={linea}
             alt="linea"
             className="absolute -right-44 lg:-right-10 -bottom-12 scale-150"
           />
-       
         </article>
 
         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
         <article
           ref={ref2}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`relative flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -136,7 +133,7 @@ const Ventajas = () => {
           </div>
           <div className="md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12">
             <div>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
+              <h3 className="text-left md:text-left text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
                 Aprender haciendo
               </h3>
               <p className="text-pretty md:text-lg ">
@@ -144,7 +141,7 @@ const Ventajas = () => {
                 práctica Aprende y aplica de forma rápida y eficiente desde el
                 primer día.
               </p>
-              <ul className="flex flex-col gap-4 py-2 ">
+              <ul className="flex flex-col py-2 text-sm sm:text-base">
                 <li className="flex">
                   <Dot fill="black" /> Practica real con alumnos
                 </li>
@@ -158,6 +155,11 @@ const Ventajas = () => {
                 </li>
               </ul>
             </div>
+            <Image
+            src={linea}
+            alt="linea"
+            className="md:hidden absolute -right-44 -bottom-16 scale-150"
+          />
           </div>
         </article>
 
