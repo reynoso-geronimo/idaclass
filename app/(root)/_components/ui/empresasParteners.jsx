@@ -57,8 +57,8 @@ const EmpresasPartners = () => {
                 <div className="flex aspect-square items-center justify-center  relative w-20 sm:w-24">
                   <Image
                     src={`/empresasPartners${partner.src}`}
-                    width={120}
-                    height={120}
+                    width={96}
+                    height={96}
                     alt="logo"
                     className=" rounded-xl cover"
                   ></Image>
