@@ -14,7 +14,7 @@ import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
 import linea from "../../../public/assets/Línea img 1.png";
 import Image from "next/image";
-const EquipoProfesional = () => {
+const EquipoProfesional = ({titulo=" Conoce al equipo", titulo2="que te guiara al éxito", titulo3}) => {
   // const [direction, setDirection] = useState("horizontal");
 
   // useEffect(() => {
@@ -82,8 +82,8 @@ const EquipoProfesional = () => {
         </div>
 
         <h2 className="font-semibold text-3xl lg:max-w-sm z-10 px-8">
-          Conoce al equipo <br />
-          que te guiara al éxito
+         {titulo} <br /> {titulo2} <br /> {titulo3}
+          
         </h2>
         <div className="absolute w-full">
           <Image
