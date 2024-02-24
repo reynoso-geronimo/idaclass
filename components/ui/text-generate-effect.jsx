@@ -5,7 +5,9 @@ import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({ words, className }) => {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
+  const isInView = useInView(scope,{
+    margin:"0px 0px -90px 0px"
+  });
   let wordsArray = words.split(" ");
   useEffect(() => {
     if (isInView) {
