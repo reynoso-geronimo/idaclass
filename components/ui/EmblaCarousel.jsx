@@ -53,15 +53,15 @@ const EmblaCarousel = props => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
-            <div className="embla__slide" key={index}>
+            <div className="embla__slide" key={index} aria-roledescription="slide">
               {slide}
             </div>
           ))}
         </div>
       </div>
       <div className="embla__buttons">
-        <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-        <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+        <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled}   />
+        <NextButton onClick={scrollNext} disabled={nextBtnDisabled}   />
       </div>
       <div className="embla__dots h-5 ">
         {scrollSnaps.map((_, index) => (

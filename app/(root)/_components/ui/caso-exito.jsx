@@ -16,7 +16,7 @@ const CasoExito = ({
       <div className="flex gap-1">
         <Quote className="transform -rotate-180" />
         <Avatar>
-          <AvatarImage src={`https://flagcdn.com/${pais ? pais : "ar"}.svg`} />
+          <AvatarImage src={`https://flagcdn.com/${pais ? pais : "ar"}.svg`} alt={pais}/>
           <AvatarFallback className="text-black">PP</AvatarFallback>
         </Avatar>
         <div>

@@ -14,6 +14,7 @@ export const PrevButton = props => {
   return (
     <button
       className="embla__button embla__button--prev md:-translate-x-[100%]"
+      aria-label="previous-slide"
       type="button"
       {...restProps}
     >
@@ -35,6 +36,7 @@ export const NextButton = props => {
     <button
       className="embla__button embla__button--next md:translate-x-[100%]"
       type="button"
+      aria-label="previous-slide"
       {...restProps}
     >
       <svg className="embla__button__svg" viewBox="0 0 532 532">
