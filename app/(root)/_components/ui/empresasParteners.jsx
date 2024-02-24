@@ -36,12 +36,13 @@ const partners = [
 
 const EmpresasPartners = () => {
   return (
-    <div className="container max-w-4xl flex justify-center grayscale">
+    <div className="container max-w-[720px] flex justify-center grayscale pb-4">
       <Carousel
         className="w-full "
         opts={{
           align: "center",
           loop: true,
+          watchDrag: false,
         }}
         plugins={[
           Autoplay({
@@ -53,7 +54,7 @@ const EmpresasPartners = () => {
           {partners.map((partner, index) => (
             <CarouselItem key={index} className="pl-1 basis-1/8">
               <div className="p-1">
-                <div className="flex aspect-square items-center justify-center  relative w-32">
+                <div className="flex aspect-square items-center justify-center  relative w-24">
                   <Image
                     src={`/empresasPartners${partner.src}`}
                     width={120}
