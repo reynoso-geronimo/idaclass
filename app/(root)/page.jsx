@@ -11,11 +11,13 @@ import CasosExito from "./_components/casos-exito";
 import Banderas from "./_components/banderas";
 import EquipoProfesional from "./_components/equipo-profesional";
 import Beca from "./_components/beca";
+import EmpresasPartners from "./_components/ui/empresasParteners";
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
+      <EmpresasPartners/>
       <Intro />
       <Ventajas />
       {/* <Banderas/> */}

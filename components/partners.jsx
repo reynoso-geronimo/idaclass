@@ -11,13 +11,12 @@ import Image from "next/image";
 
 import TituloSeccion from "./ui/titulo-seccion";
 
-
 const partners = [
   {
     src: "/Aletic.png",
     alt: "logo",
   },
-  
+
   {
     src: "/Graciela.jpeg",
     alt: "logo",
@@ -32,10 +31,23 @@ const partners = [
     alt: "logo",
   },
   {
+    src: "/ENERGYM.jpg",
+    alt: "Energym",
+  },
+  {
+    src: "/fitzone.png",
+    alt: "fitzone",
+  },
+  ,
+  {
+    src: "/ViloGymVicente.jpg",
+    alt: "ViloGymVicente",
+  },
+  {
     src: "/Aletic.png",
     alt: "logo",
   },
-  
+
   {
     src: "/Graciela.jpeg",
     alt: "logo",
@@ -44,18 +56,32 @@ const partners = [
     src: "/gymPeru.png",
     alt: "logo",
   },
-  
+
   {
     src: "/NeurofitRosario.jpg",
     alt: "logo",
   },
+  {
+    src: "/ENERGYM.jpg",
+    alt: "Energym",
+  },
+  {
+    src: "/fitzone.png",
+    alt: "fitzone",
+  },
+  ,
+  {
+    src: "/ViloGymVicente.jpg",
+    alt: "ViloGymVicente",
+  },
 ];
 const PartnersEducativos = () => {
   return (
-    <section className="container lg:px-0 bg-black text-white py-8 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
+    <section className="container lg:px-0  text-white py-8 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
       <div className="w-full lg:w-auto ">
         <TituloSeccion className={`text-idaclass4 lg:text-left lg:pr-4`}>
-          Nuestros Partners<br/> en educacion
+          Nuestros Partners
+          <br /> en educacion
         </TituloSeccion>
 
         {/* <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">
@@ -82,7 +108,10 @@ const PartnersEducativos = () => {
         >
           <CarouselContent className="-ml-1">
             {partners.map((partner, index) => (
-              <CarouselItem key={index} className="pl-1 basis-[37%] sm:basis-[20%]">
+              <CarouselItem
+                key={index}
+                className="pl-1 basis-[37%] sm:basis-[20%]"
+              >
                 <div className="p-1">
                   <div className="rounded-xl bg-none">
                     <div className="flex aspect-square items-center justify-center p-6 relative bg-white rounded-xl">
