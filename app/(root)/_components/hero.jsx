@@ -28,19 +28,20 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="flex aspect-square relative">
+        <div className="max-w-2xl mx-auto aspect-square relative">
           <Image
             src={`/home/IdaClass Web Img 1.1.jpg`}
             alt="Bienvenido"
             fill
-            className="object-contain sm:px-[10%]"
+            sizes="100vw"
+            className="object-contain"
           />
         </div>
         <div className="w-full h-0 relative">
           <Image
             src={linea}
             alt="linea"
-            className="scale-150 absolute -right-24 -top-32 sm:-top-48 z-10 "
+            className="scale-150 absolute -right-24 -top-32 sm:-top-40 z-10 "
           />
         </div>
         <div className="w-full flex justify-center py-4">
@@ -78,6 +79,7 @@ const Hero = () => {
               src={`/home/IdaClass Web Img 1.2.jpg`}
               alt="Bienvenido"
               fill
+              sizes="50vw"
               style={{ objectFit: "contain" }}
               className="scale-125 translate-x-8"
             />

@@ -68,6 +68,7 @@ const Intro = () => {
                       <Image
                         src={area.src}
                         fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw , 20vw"
                         className="object-cover object-top rounded-xl"
                         alt={area.area}
                       />

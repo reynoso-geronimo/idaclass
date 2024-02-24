@@ -39,6 +39,7 @@ const Ventajas = () => {
               src={`/home/IdaClass Web Img 2.1.jpg`}
               alt="Bienvenido"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{ objectFit: "contain" }}
             />
           </div>
