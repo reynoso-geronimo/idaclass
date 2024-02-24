@@ -4,7 +4,7 @@ import CursoFormacionCard from "./ui/curso-formacion-card";
 import { getCursosFormacionFromDB } from "@/app/actions";
 
 const CursosFormacion = async () => {
-  const cursosFormacion = await getCursosFormacionFromDB()
+  const cursosFormacion = await getCursosFormacionFromDB();
   const cursos = [
     {
       descuento: "70% Off",
@@ -57,17 +57,16 @@ const CursosFormacion = async () => {
   return (
     <section className="my-12 sm:container">
       <TituloSeccion className={`mb-0 px-2`}>Cursos de formacion</TituloSeccion>
-      <h2 className="text-center text-xl px-2">
+      <h2 className="text-center text-xl px-2 mb-4">
         Sé parte de la nueva generacion de entrenadores
-      </h2>
-      <h2 className="text-center text-xl mb-4 px-2">
+        <br />
         Forja tu camino en el mundo del Sport fitness
       </h2>
       <div className="max-w-2xl mx-auto  lg:max-w-full">
         <EmblaCarousel
           options={OPTIONS}
           slides={cursosFormacion.map((curso, index) => (
-            <CursoFormacionCard key={index} curso={curso}  />
+            <CursoFormacionCard key={index} curso={curso} />
           ))}
         />
       </div>

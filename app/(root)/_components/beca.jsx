@@ -5,7 +5,7 @@ import React from "react";
 const Beca = () => {
   return (
     <section className="w-full container ">
-      <div className="w-[90%]  mx-auto">
+    
         <TituloSeccion className={`mb-2`}>
           Obten tu Beca<span className="text-idaclass4">Class</span>
         </TituloSeccion>
@@ -17,7 +17,7 @@ const Beca = () => {
           <div className="bg-black w-1/2 aspect-square"></div>
           <div className="bg-black w-1/2 aspect-square"></div>
         </div>
-      </div>
+     
     </section>
   );
 };

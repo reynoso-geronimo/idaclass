@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <EmpresasPartners/>
+      <EmpresasPartners />
       <Intro />
       <Ventajas />
       {/* <Banderas/> */}
@@ -30,9 +30,9 @@ export default function Home() {
       <Beca />
 
       <CasosExito />
-      <div className="mt-12">
-        <Partners />
-      </div>
+
+      <Partners />
+
       <Faq />
     </main>
   );

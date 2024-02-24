@@ -83,54 +83,40 @@ const PartnersEducativos = () => {
           Nuestros Partners
           <br /> en educacion
         </TituloSeccion>
-
-        {/* <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">
-          <Image
-            src={linea}
-            alt="linea"
-            className="absolute -translate-x-[8%] -translate-y-[55%] scale-[150%] "
-          />
-        </div> */}
       </div>
-      <div className="w-full lg:w-2/3">
-        <Carousel
-          className="w-[100%]"
-          opts={{
-            align: "start",
-            loop: true,
-            watchDrag: false,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 3000,
-            }),
-          ]}
-        >
-          <CarouselContent className="-ml-1">
-            {partners.map((partner, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-1 basis-[37%] sm:basis-[20%]"
-              >
-                <div className="p-1">
-                  <div className="rounded-xl bg-none">
-                    <div className="flex aspect-square items-center justify-center p-6 relative bg-white rounded-xl">
-                      <Image
-                        src={`/partners${partner.src}`}
-                        fill
-                        className="object-contain object-center rounded-xl"
-                        alt={partner.src}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          {/* <CarouselPrevious className="left-2" />
+      <Carousel
+        className="w-full lg:w-2/3"
+        opts={{
+          align: "start",
+          loop: true,
+          watchDrag: false,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+      >
+        <CarouselContent className="-ml-1">
+          {partners.map((partner, index) => (
+            <CarouselItem
+              key={index}
+              className="pl-1 basis-[37%] sm:basis-[20%]"
+            >
+              <div className="flex aspect-square items-center justify-center p-6 relative bg-white rounded-xl">
+                <Image
+                  src={`/partners${partner.src}`}
+                  fill
+                  className="object-contain object-center rounded-xl"
+                  alt={partner.src}
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        {/* <CarouselPrevious className="left-2" />
           <CarouselNext className="right-2" /> */}
-        </Carousel>
-      </div>
+      </Carousel>
     </section>
   );
 };

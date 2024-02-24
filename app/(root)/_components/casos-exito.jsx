@@ -24,21 +24,21 @@ const CasosExito = () => {
         }}
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/9 xl:basis-1/4">
+          <CarouselItem className="basis-1/9 lg:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 xl:basis-1/4">
+          <CarouselItem className="basis-1/9 lg:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 xl:basis-1/4">
+          <CarouselItem className="basis-1/9 lg:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 xl:basis-1/4">
+          <CarouselItem className="basis-1/9 lg:basis-1/4">
             <CasoExito />
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="xl:hidden -left-2" />
-        <CarouselNext className="xl:hidden -right-2" />
+        <CarouselPrevious className="lg:hidden left-0.5" />
+        <CarouselNext className="lg:hidden right-0.5" />
       </Carousel>
       {/* <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto justify-items-center"></div> */}
     </section>

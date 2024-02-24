@@ -29,8 +29,12 @@ const Hero = () => {
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
         <div className="flex aspect-square relative">
-          <Image src={`/home/IdaClass Web Img 1.1.jpg`} alt="Bienvenido" fill  className="object-contain sm:px-[10%]" />
-          
+          <Image
+            src={`/home/IdaClass Web Img 1.1.jpg`}
+            alt="Bienvenido"
+            fill
+            className="object-contain sm:px-[10%]"
+          />
         </div>
         <div className="w-full h-0 relative">
           <Image
@@ -49,8 +53,8 @@ const Hero = () => {
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
               Unete a la
-              <span className="text-idaclass4"> revolucion educativa</span> Sport
-              Fitness
+              <span className="text-idaclass4"> revolucion educativa</span>{" "}
+              Sport Fitness
             </h2>
             <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
               Despierta tu potencial, conviertete en un profesional con nuestros
@@ -74,7 +78,7 @@ const Hero = () => {
               src={`/home/IdaClass Web Img 1.2.jpg`}
               alt="Bienvenido"
               fill
-              style={{objectFit:"contain"}}
+              style={{ objectFit: "contain" }}
               className="scale-125 translate-x-8"
             />
           </div>

@@ -13,14 +13,14 @@ const CasoExito = ({
 }) => {
   return (
     <div className="bg-gray-800 container px-4 mx-auto py-2 text-white flex flex-col justify-around rounded-3xl max-w-60 aspect-square">
-      <div className="flex gap-4">
+      <div className="flex gap-1">
         <Quote className="transform -rotate-180" />
         <Avatar>
           <AvatarImage src={`https://flagcdn.com/${pais ? pais : "ar"}.svg`} />
           <AvatarFallback className="text-black">PP</AvatarFallback>
         </Avatar>
         <div>
-          <h3 className="text-bold flex items-center gap-1">
+          <h3 className="text-bold flex items-center gap-1 text-sm">
             {nombre ? nombre : "Perez Con Pan"}
           </h3>
           <p className="text-xs font-light text-gray-200">
