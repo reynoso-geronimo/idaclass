@@ -47,7 +47,7 @@ const Ventajas = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.769"
                 height="14.821"
-                className="fill-idaclass scale-[1100%] opacity-35 -z-10"
+                className="fill-idaclass scale-[900%] lg:scale-[1200%] opacity-35 -z-10"
               >
                 <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
               </svg>
