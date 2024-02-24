@@ -18,23 +18,22 @@ const CasosExito = () => {
       </h3>
 
       <Carousel
-        className="container"
         opts={{
           align: "center",
           loop: true,
         }}
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/9">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
         </CarouselContent>
