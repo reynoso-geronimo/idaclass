@@ -259,7 +259,7 @@ const CursoPage = async ({ params }) => {
         </div>
       </section>
       <Separator />
-      <EquipoProfesional titulo="Conoce al equipo de " titulo2="trainers educativos " titulo3="que te guiara al exito"/>
+      <EquipoProfesional titulo="Conoce al equipo de " titulo2="Trainers Educativos " titulo2Class="text-idaclass4"  titulo3="que te guiara al exito"/>
       <Separator />
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
         <article className="w-full">

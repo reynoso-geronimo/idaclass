@@ -14,7 +14,7 @@ import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
 import linea from "../../../public/assets/Línea img 1.png";
 import Image from "next/image";
-const EquipoProfesional = ({titulo=" Conoce al equipo", titulo2="que te guiara al éxito", titulo3}) => {
+const EquipoProfesional = ({titulo=" Conoce al equipo", titulo2="que te guiara al éxito",titulo2Class="", titulo3}) => {
   // const [direction, setDirection] = useState("horizontal");
 
   // useEffect(() => {
@@ -61,7 +61,7 @@ const EquipoProfesional = ({titulo=" Conoce al equipo", titulo2="que te guiara a
           <CarouselNext className="right-2 " />
         </Carousel>
       </div>
-      <div className="w-full lg:w-1/2 text-center flex justify-end lg:justify-center items-center relative  max-lg:overflow-hidden max-lg:h-52">
+      <div className="w-full lg:w-1/2 text-center flex justify-end lg:justify-end items-center relative  max-lg:overflow-hidden max-lg:h-52">
         <div className="absolute left-[180px] top-[39%] max-lg:rotate-[-90deg]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const EquipoProfesional = ({titulo=" Conoce al equipo", titulo2="que te guiara a
         </div>
 
         <h2 className="font-semibold text-3xl lg:max-w-sm z-10 px-8">
-         {titulo} <br /> {titulo2} <br /> {titulo3}
+         {titulo} <br /> <span className={titulo2Class}>{titulo2}</span> <br /> {titulo3}
           
         </h2>
         <div className="absolute w-full">
