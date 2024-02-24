@@ -33,6 +33,7 @@ const Hero = () => {
             src={`/home/IdaClass Web Img 1.1.jpg`}
             alt="Bienvenido"
             fill
+            priority={true}
             sizes="100vw"
             className="object-contain"
           />
@@ -79,6 +80,7 @@ const Hero = () => {
               src={`/home/IdaClass Web Img 1.2.jpg`}
               alt="Bienvenido"
               fill
+              priority={true}
               sizes="50vw"
               style={{ objectFit: "contain" }}
               className="scale-125 translate-x-8"
