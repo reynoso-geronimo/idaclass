@@ -159,7 +159,7 @@ const Ventajas = () => {
             <Image
             src={linea}
             alt="linea"
-            className="md:hidden absolute -right-44 -bottom-16 scale-150"
+            className="md:hidden absolute -right-44 -bottom-20 scale-150"
           />
           </div>
         </article>
