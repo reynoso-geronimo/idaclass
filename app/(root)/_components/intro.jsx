@@ -63,9 +63,9 @@ const Intro = () => {
             {areas.map((area, index) => (
               <CarouselItem key={index} className="pl-1 basis-[40%]">
                 <div className="p-1">
-                  <Card className="border-none">
+                  <Card className="border-none rounded-xl">
                     <CardContent className="flex aspect-video items-center justify-center p-6 relative">
-                      <Image src={area.src} fill className="object-cover object-top" alt={area.area} />
+                      <Image src={area.src} fill className="object-cover object-top rounded-xl" alt={area.area} />
                       
                     </CardContent>
                   </Card>
