@@ -8,8 +8,7 @@ const Certificacion = () => {
   return (
     <section className="flex flex-col items-center py-12 bg-gradient-to-r from-white via-sky-50 to-sky-100">
       <TituloSeccion className={`container mt-0`}>
-        Obtén nuestra Certificación con amplio reconocimiento en el mercado y
-        Aval Internacional.
+       Certifica tus conocimientos
       </TituloSeccion>
       <p className="mb-12 text-center text-lg leading-6 container">
         Accede a la doble Titulación, Certificado de Extensión Universitaria
