@@ -46,33 +46,34 @@ const Ventajas = () => {
               Innovación en la enseñanza
             </h3>
             <p className="text-pretty md:text-lg text-center md:text-left mb-4">
-              Aprende en un entorno virtual interactivo <br/> multimodal simple y efectivo.
+              Aprende en un entorno virtual interactivo <br /> multimodal simple
+              y efectivo.
             </p>
             <ul className="grid grid-cols-2 justify-items-center md:justify-items-start gap-x-2">
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
                 Clases en vivo
               </li>
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
                 Video lecciones
               </li>
 
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
                 Contenido interactivo
               </li>
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
-                Autoevaluaciones
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
+                Autoe&shy;valuaciones
               </li>
 
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
                 Equipo de tutores
               </li>
-              <li className="w-full max-w-48">
-                <Dot fill="black" className="inline" />
+              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
                 Trabajo en equipo
               </li>
             </ul>
