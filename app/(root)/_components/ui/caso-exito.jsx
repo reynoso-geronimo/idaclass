@@ -13,7 +13,7 @@ const CasoExito = ({
   pais,
 }) => {
   return (
-    <div className="bg-gray-800 container mx-0 py-2 text-white flex flex-col justify-around rounded-3xl max-w-72 aspect-square">
+    <div className="bg-gray-800 container mx-auto py-2 text-white flex flex-col justify-around rounded-3xl max-w-72 aspect-square">
       <div className="flex gap-4">
         <Quote className="transform -rotate-180" />
         <Avatar>
