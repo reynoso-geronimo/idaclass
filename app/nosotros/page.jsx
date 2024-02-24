@@ -29,8 +29,8 @@ const Page = () => {
       </section>
   
 
-        <section className="text-white bg-gray-900 w-full flex flex-col items-center px-4 pb-12 pr-24">
-        <TracingBeam className={"left-12"}>
+        <section className="text-white bg-gray-900 w-full flex flex-col items-center px-4 pb-12 ">
+        <TracingBeam className={""}>
           <div className="text-center max-w-3xl py-12">
             <h2 className="text-2xl md:text-3xl font-bold"> Sobre Nosotros</h2>
             <p className="text-lg md:text-xl">
