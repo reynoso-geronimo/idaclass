@@ -61,7 +61,7 @@ const Intro = () => {
         >
           <CarouselContent className="-ml-1">
             {areas.map((area, index) => (
-              <CarouselItem key={index} className="pl-1 basis-[40%]">
+              <CarouselItem key={index} className="pl-1 basis-[45%]">
                 <div className="p-1">
                   <Card className="border-none rounded-xl">
                     <CardContent className="flex aspect-video items-center justify-center p-6 relative">
