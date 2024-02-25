@@ -37,7 +37,7 @@ import EquipoProfesional from "@/app/(root)/_components/equipo-profesional";
 
 const contenido = [
   {
-    titulo: "Habilidades para el exito profesional",
+    titulo: "Habilidades para el éxito profesional",
     unidades: [
       {
         titulo: "Marketing y ventas",
@@ -55,7 +55,7 @@ const contenido = [
         ],
       },
       {
-        titulo: "Lidreazgo",
+        titulo: "Liderazgo",
         contenido: [
           "8 pasos para armar tu propia historia",
           "El Viaje del Héroe",
@@ -319,7 +319,7 @@ const CursoPage = async ({ params }) => {
             Necesitas ayuda o tienes alguna pregunta?
           </TituloSeccion>
           <p className="font-bold my-4">
-            Nuestros especialistas estan disponibles para escucharte y despejar
+            Nuestros especialistas están disponibles para escucharte y despejar
             todas tus dudas
           </p>
           <Button size="lg" className="bg-green-500 px-4">
@@ -331,7 +331,7 @@ const CursoPage = async ({ params }) => {
                   fill="white"
                 ></path>
               </svg>
-              Hablanos por Whatsapp
+              Háblanos por Whatsapp
             </div>
           </Button>
         </article>
@@ -341,7 +341,7 @@ const CursoPage = async ({ params }) => {
       </section>
       <section className="container">
         <TituloSeccion className={""}>
-          Casos de exito de nuestros estudiantes
+          Casos de éxito de nuestros estudiantes
         </TituloSeccion>
         <div className="flex flex-wrap justify-center items-center  gap-4">
           <CasoExito />

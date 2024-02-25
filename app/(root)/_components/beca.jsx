@@ -7,7 +7,7 @@ const Beca = () => {
     <section className="w-full container ">
     
         <TituloSeccion className={`mb-2`}>
-          Obten tu Beca<span className="text-idaclass4">Class</span>
+          Obtén tu Beca<span className="text-idaclass4">Class</span>
         </TituloSeccion>
         <h3 className="mb-2 text-pretty text-center">
           Se parte de nuestra de la comunidad Classera y accede a nuestras Becas

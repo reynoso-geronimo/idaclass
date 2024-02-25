@@ -78,7 +78,7 @@ const Ventajas = () => {
               </li>
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Autoe&shy;valuaciones
+                Auto&shy;evaluaciones
               </li>
 
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
@@ -116,7 +116,7 @@ const Ventajas = () => {
               extras para asegurar tu éxito
             </h4>
             <p className="absolute bottom-4 translate-x-[50%] right-[50%]">
-              Marketing - venta - liderazgo - comunicacion
+              Marketing - Venta - Liderazgo - Comunicación
             </p>
             <p className="text-2xl absolute translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]">
               IMAGEN

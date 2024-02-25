@@ -14,7 +14,7 @@ const CasosExito = () => {
     <section className="container">
       <TituloSeccion className={"mb-0"}>Historias que inspiran</TituloSeccion>
       <h3 className="text-center text-pretty my-2">
-        Se uno de nuestros casos de exito
+        Se uno de nuestros casos de éxito
       </h3>
 
       <Carousel

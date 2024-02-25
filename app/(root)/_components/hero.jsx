@@ -10,11 +10,11 @@ const Hero = () => {
       <div className="lg:hidden container px-0">
         <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
           Unete a la{" "}
-          <span className="text-idaclass4"> revolucion educativa</span> Sport
+          <span className="text-idaclass4"> revolución educativa</span> Sport
           Fitness
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
-          Despierta tu potencial, conviertete en un profesional con nuestros
+          Despierta tu potencial, conviértete en un profesional con nuestros
           cursos.
         </h3>
         <div className="flex justify-center w-full">
@@ -55,11 +55,11 @@ const Hero = () => {
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
               Unete a la
-              <span className="text-idaclass4"> revolucion educativa</span>{" "}
+              <span className="text-idaclass4"> revolución educativa</span>{" "}
               Sport Fitness
             </h2>
             <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
-              Despierta tu potencial, conviertete en un profesional con nuestros
+              Despierta tu potencial, conviértete en un profesional con nuestros
               cursos.
             </h2>
             <Button

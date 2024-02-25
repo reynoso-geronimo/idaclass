@@ -34,7 +34,7 @@ const Intro = () => {
           </p>
         </h2>
         <p className="text-sm py-2 lg:max-w-sm">
-          Somos la llave para transformar tu pasion <br /> en una carrera
+          Somos la llave para transformar tu pasión <br /> en una carrera
           exitosa en tiempo record.
         </p>
         <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">

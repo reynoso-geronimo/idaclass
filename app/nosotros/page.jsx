@@ -76,7 +76,7 @@ const Page = () => {
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold">
-                Innovacion
+                Innovación
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>
@@ -120,7 +120,7 @@ const Page = () => {
           <Card className="w-54">
             <CardHeader>
               <CardTitle className="text-xl text-center font-bold">
-                Colaboracion
+                Colaboración
               </CardTitle>
               {/* <CardDescription className="text-center text-idaclass text-xl"></CardDescription> */}
             </CardHeader>

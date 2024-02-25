@@ -58,7 +58,7 @@ const Intro = () => {
             height={72}
             alt="estandarformacion"
           />
-          1ra Digital School con estandar de formación
+          1ra Digital School con estándar de formación
         </div>
         <div className="flex flex-col items-center justify-between w-40">
           <Image

@@ -25,7 +25,7 @@ const Page = async () => {
               className="lg:hidden uppercase font-bold text-lg"
             >
               <DropdownMenuTrigger>
-                Categorias <ChevronDown />
+                Categorías <ChevronDown />
               </DropdownMenuTrigger>
             </Button>
             <DropdownMenuContent>

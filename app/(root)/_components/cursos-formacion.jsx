@@ -8,8 +8,8 @@ const CursosFormacion = async () => {
   const cursos = [
     {
       descuento: "70% Off",
-      titulo: "Preparador Fisico",
-      descripcion: "Contiene 2 modulos, 6 unidades",
+      titulo: "Preparador Físico",
+      descripcion: "Contiene 2 módulos, 6 unidades",
       image: "/cursosFormacion/cursoimg1.jpg",
       hours: 15,
       days: 1.5,
@@ -18,7 +18,7 @@ const CursosFormacion = async () => {
     {
       descuento: "70% Off",
       titulo: "Personal Trainer",
-      descripcion: "Contiene 2 modulos, 6 unidades",
+      descripcion: "Contiene 2 módulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
@@ -26,8 +26,8 @@ const CursosFormacion = async () => {
     },
     {
       descuento: "70% Off",
-      titulo: "Instructor de Musculacion",
-      descripcion: "Contiene 2 modulos, 6 unidades",
+      titulo: "Instructor de Musculación",
+      descripcion: "Contiene 2 módulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
@@ -36,7 +36,7 @@ const CursosFormacion = async () => {
     {
       descuento: "70% Off",
       titulo: "Gestion de Gimnasio",
-      descripcion: "Contiene 2 modulos, 6 unidades",
+      descripcion: "Contiene 2 módulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
@@ -44,8 +44,8 @@ const CursosFormacion = async () => {
     },
     {
       descuento: "70% Off",
-      titulo: "Nutricion Deportiva",
-      descripcion: "Contiene 2 modulos, 6 unidades",
+      titulo: "Nutrición Deportiva",
+      descripcion: "Contiene 2 módulos, 6 unidades",
       image: "https://source.unsplash.com/random/150x150",
       hours: 590 + "  horas",
       days: 1,
@@ -56,9 +56,9 @@ const CursosFormacion = async () => {
   const OPTIONS = { align: "start" };
   return (
     <section className="my-12 sm:container">
-      <TituloSeccion className={`mb-0 px-2`}>Cursos de formacion</TituloSeccion>
+      <TituloSeccion className={`mb-0 px-2`}>Cursos de formación</TituloSeccion>
       <h2 className="text-center text-xl px-2 mb-4">
-        Sé parte de la nueva generacion de entrenadores
+        Sé parte de la nueva generación de entrenadores
         <br />
         Forja tu camino en el mundo del Sport fitness
       </h2>
