@@ -11,22 +11,15 @@ import { Button } from "@/components/ui/button";
 import Partners from "@/components/partnersEducativos";
 import { sobreNosotros } from "@/lib/constants";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import { HeroParallaxNosotros } from "./hero";
 
 const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
-      <section className="flex flex-wrap justify-center items-center bg-idaclass w-full p-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
-          Conoce nuestra Ed Tech
-        </h1>
-        <Image
-          src={`/assets/HeroLG.webp`}
-          alt="hero image"
-          height={300}
-          width={300}
-          className="shrink-1"
-        />
+      <section className="container">
+      <HeroParallaxNosotros/>
       </section>
+      
       <section className=" bg-gray-900 w-full overflow-hidden">
         <TracingBeam className={""}>
           <div className="text-white flex flex-col items-center px-4 my-12 ">
