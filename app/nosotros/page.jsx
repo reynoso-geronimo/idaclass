@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import Partners from "@/components/partnersEducativos";
 import { sobreNosotros } from "@/lib/constants";
 import { TracingBeam } from "@/components/ui/tracing-beam";
-import { HeroParallaxNosotros } from "./hero";
+import { HeroParallaxNosotros } from "./_components/hero";
 
 const Page = () => {
   return (
@@ -25,7 +25,6 @@ const Page = () => {
           <div className="text-white flex flex-col items-center px-4 my-12 ">
             <div className="text-center">
               <h2 className="text-2xl md:text-3xl font-bold">
-                {" "}
                 Sobre Nosotros
               </h2>
               <p className="text-lg md:text-xl">
