@@ -8,8 +8,9 @@ const Beca = () => {
   return (
     <section className="w-full container mt-12">
       <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center">
-        <article className="w-full flex flex-col items-start  p-8 border-2 border-black rounded-3xl">
-          <TituloSeccion className="text-left p-0 m-0">
+        <article className="w-full flex items-start  p-8 border-2 border-black rounded-3xl">
+         <div className="flex flex-col">
+         <TituloSeccion className="text-left p-0 m-0">
             Necesitas ayuda  <br /> o tienes alguna <br /> pregunta?
           </TituloSeccion>
           <p className="font-bold my-4">
@@ -28,6 +29,7 @@ const Beca = () => {
               Háblanos por Whatsapp
             </div>
           </Button>
+         </div>
         </article>
         <div className="bg-black w-full text-white text-center p-8 overflow-hidden rounded-3xl">
           <TituloSeccion className={"mb-4"}>
