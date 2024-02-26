@@ -9,7 +9,7 @@ const Hero = () => {
     <div className=" py-8 lg:py-12">
       <div className="lg:hidden container px-0">
         <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-          Unete a la{" "}
+          Únete a la{" "}
           <span className="text-idaclass4"> revolución educativa</span> Sport
           Fitness
         </h2>
@@ -25,7 +25,6 @@ const Hero = () => {
           >
             <Link href="/cursos">Ver todos los cursos</Link>
           </Button>
-         
         </div>
         <div className="w-full flex justify-center">
           <Introvideo />
@@ -49,14 +48,13 @@ const Hero = () => {
             className="scale-150 absolute -right-24 -top-32 sm:-top-40 z-10 "
           />
         </div>
-       
       </div>
 
       <div className="hidden lg:block container px-0 overflow-hidden">
         <div className="flex mb-4 gap-4">
           <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-              Unete a la
+              Únete a la
               <span className="text-idaclass4"> revolución educativa</span>{" "}
               Sport Fitness
             </h2>
