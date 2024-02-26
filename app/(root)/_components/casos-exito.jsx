@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const CasosExito = () => {
@@ -37,8 +35,7 @@ const CasosExito = () => {
             <CasoExito />
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="lg:hidden left-0.5" />
-        <CarouselNext className="lg:hidden right-0.5" />
+        
       </Carousel>
       {/* <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto justify-items-center"></div> */}
     </section>
