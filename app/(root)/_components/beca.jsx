@@ -7,8 +7,8 @@ const Beca = () => {
   return (
     <section className="w-full container mt-12">
       <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center">
-        <article className="w-full flex justify-between items-stretch gap-1 p-4 pr-2 border-2 border-black rounded-3xl">
-          <div className="flex flex-col w-3/5">
+        <article className="w-full flex justify-around items-stretch gap-1 p-4 pr-2 border-2 border-black rounded-3xl">
+          <div className="flex flex-col w-1/2">
             <TituloSeccion className="text-left text-2xl lg:text-3xl p-0 m-0">
               Necesitas ayuda <br /> o tienes alguna <br /> pregunta?
             </TituloSeccion>
@@ -29,7 +29,7 @@ const Beca = () => {
               </div>
             </Button>
           </div>
-          <div className="flex w-2/5  relative">
+          <div className="flex w-1/2  relative">
             <Image
               src={`/assets/asistencia.jpg`}
               alt="asistencia"
