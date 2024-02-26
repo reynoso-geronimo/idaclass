@@ -156,7 +156,7 @@ const NavBar = ({ cursosFormacion }) => {
                 <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
                   <div>
                     <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-bold text-idaclass  border-l-4 border-idaclass4">
-                      Cursos de Formacion
+                      Cursos de Formación
                     </h5>
                     <MenubarSeparator />
                     {cursosFormacion.map((cursoFormacion, index) => (
