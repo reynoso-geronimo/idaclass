@@ -61,7 +61,7 @@ const NavBar = ({ cursosFormacion }) => {
             </SheetClose>
             <Separator />
             <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclass">
-              Cursos de formacion
+              Cursos de formación
             </h1>
             {cursosFormacion.map((cursoFormacion, index) => (
               <SheetClose asChild key={index}>
@@ -106,7 +106,7 @@ const NavBar = ({ cursosFormacion }) => {
                   pathname === "/asesorate" && "text-idaclass4"
                 } `}
               >
-                Asesorate ya
+                Asesórate ya
               </Link>
             </SheetClose>
           </SheetContent>
@@ -184,16 +184,16 @@ const NavBar = ({ cursosFormacion }) => {
                     </h5>
                     <MenubarSeparator />
                     <MenubarItem className="text-xl">
-                      Personal trainter
+                      Personal trainer
                     </MenubarItem>
                     <MenubarItem className="text-xl">
-                      Personal trainter
+                      Personal trainer
                     </MenubarItem>
                     <MenubarItem className="text-xl">
-                      Personal trainter
+                      Personal trainer
                     </MenubarItem>
                     <MenubarItem className="text-xl">
-                      Personal trainter
+                      Personal trainer
                     </MenubarItem>
                     <MenubarItem
                       className="p-0 mx-2 hover:bg-primary hover:cursor-pointer"
@@ -229,7 +229,7 @@ const NavBar = ({ cursosFormacion }) => {
                 "text-idaclass4 underline decoration-2 underline-offset-4"
               } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >
-              Asesorate ya
+              Asesórate ya
             </Link>
           </div>
           <div className="w-24 flex justify-end">
