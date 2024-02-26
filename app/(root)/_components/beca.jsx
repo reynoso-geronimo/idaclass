@@ -44,7 +44,7 @@ const Beca = () => {
             %
           </TituloSeccion>
           <h4 className="text-pretty md:text-lg">Impulsa tu futuro</h4>
-          <p className="my-6 relative z-50 opacity-100 text-white">
+          <p className="my-6 relative z-10 opacity-100 text-white">
             &quot;Nuestra misión es abrir las puertas a la educación en
             Latinoamérica Facilitamos el acceso a la educación de calidad de una
             forma simple y accesible . Accede ahora a la BecaClass del 40% y
