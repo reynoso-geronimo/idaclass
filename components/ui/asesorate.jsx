@@ -6,7 +6,7 @@ const Asesorate = () => {
   return (
     <article className="w-full flex justify-around items-stretch gap-1 p-4 pr-2 border-2 border-black rounded-3xl">
       <div className="flex flex-col justify-evenly w-1/2 shrink-0">
-        <TituloSeccion className="text-left text-2xl lg:text-3xl p-0 m-0">
+        <TituloSeccion className="text-left text-2xl lg:text-3xl p-0 m-0 relative min-w-52 z-10">
           Necesitas ayuda <br /> o tienes alguna <br /> pregunta?
         </TituloSeccion>
         <p className="my-4 text-sm lg:text-base">
