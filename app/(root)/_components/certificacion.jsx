@@ -41,13 +41,13 @@ const Certificacion = () => {
           <p className="mb-12 text-center text-lg leading-6 container">
             Nuestros partners educativos nos avalan.
           </p>
-          <div className="flex w-full items-stretch justify-evenly">
+          <div className="flex container items-stretch justify-evenly">
             {partners.map((partner, index) => (
               <Image
                 key={index}
                 src={`/empresasPartners${partner.src}`}
-                width={200}
-                height={200}
+                width={160}
+                height={160}
                 alt="logo"
                 className=" rounded-xl object-contain aspect-video"
               ></Image>
