@@ -16,7 +16,7 @@ const Asesorate = () => {
         <div className="relative z-10 shrink-0">
           <Button
             size="default"
-            className="bg-green-500 px-2 max-w-52 text-sm "
+            className="bg-green-500 px-2 w-56"
           >
             <div className="flex  items-center gap-1">
               <svg viewBox="0 0 32 32" className="h-8 w-8">
