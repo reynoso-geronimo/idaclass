@@ -10,7 +10,7 @@ const Beca = () => {
      <Asesorate/>
         <div className="bg-black w-full text-white text-center p-8 overflow-hidden rounded-3xl">
           <TituloSeccion className={"mb-4"}>
-            Obten tu Beca<span className="inline text-idaclass4">Class</span> 40
+            Obtén tu Beca<span className="inline text-idaclass4">Class</span> 40
             %
           </TituloSeccion>
           <h4 className="text-pretty md:text-lg">Impulsa tu futuro</h4>
