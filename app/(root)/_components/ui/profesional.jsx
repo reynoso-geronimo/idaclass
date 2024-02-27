@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Profesional = ({ profesional }) => {
   return (
-    <div className="w-60 aspect-square bg-idaclass text-center rounded-3xl flex flex-col justify-between mx-">
+    <div className="w-60 aspect-square bg-idaclass text-center rounded-3xl flex flex-col justify-between">
       <div className="h-[75%] relative">
         <Image
           src={`/equipo-profesional/${profesional.imagen}`}
