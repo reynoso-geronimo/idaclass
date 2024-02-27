@@ -22,16 +22,16 @@ const CasosExito = () => {
         }}
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/9 lg:basis-1/4">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 lg:basis-1/4">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 lg:basis-1/4">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
-          <CarouselItem className="basis-1/9 lg:basis-1/4">
+          <CarouselItem className="basis-1/9 xl:basis-1/4">
             <CasoExito />
           </CarouselItem>
         </CarouselContent>
