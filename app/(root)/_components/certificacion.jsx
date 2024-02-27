@@ -3,12 +3,22 @@ import cert1 from "../../../public/certi/cert1.webp";
 import cert2 from "../../../public/certi/cert2.webp";
 import medalla from "../../../public/certi/Medalla.webp";
 import Image from "next/image";
+const partners = [
+  {
+    src: "/COALICIONUNIVERSIDADESYMCA.jpg",
+    alt: "logo",
+  },
+  {
+    src: "/Logo_instituto-leyenda-red.png",
+    alt: "logo",
+  },
+];
 
 const Certificacion = () => {
   return (
     <section className="flex flex-col items-center py-12 bg-gradient-to-r from-white via-sky-50 to-sky-100">
       <TituloSeccion className={`container mt-0`}>
-       Certifica tus conocimientos
+        Certifica tus conocimientos
       </TituloSeccion>
       <p className="mb-12 text-center text-lg leading-6 container">
         Accede a la doble Titulación, Certificado de Extensión Universitaria
@@ -31,6 +41,18 @@ const Certificacion = () => {
           <p className="mb-12 text-center text-lg leading-6 container">
             Nuestros partners educativos nos avalan.
           </p>
+          <div className="flex w-full items-stretch justify-evenly">
+            {partners.map((partner, index) => (
+              <Image
+                key={index}
+                src={`/empresasPartners${partner.src}`}
+                width={200}
+                height={200}
+                alt="logo"
+                className=" rounded-xl object-contain aspect-video"
+              ></Image>
+            ))}
+          </div>
         </div>
 
         <div className="w-full md:w-1/2 max-w-[512px] flex flex-col justify-evenly gap-2 px-4">
