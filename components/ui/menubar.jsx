@@ -28,7 +28,7 @@ Menubar.displayName = MenubarPrimitive.Root.displayName;
 const MenubarTrigger = React.forwardRef(({ className, ...props }, ref) => (
   <MenubarPrimitive.Trigger
     ref={ref}
-    className={cn("", className)}
+    className={cn("[&[data-state=open]>svg]:rotate-90 transition-all", className)}
     {...props}
   />
 ));

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -151,7 +151,10 @@ const NavBar = ({ cursosFormacion }) => {
                     "text-idaclass4 underline decoration-2 underline-offset-4"
                   }`}
                 >
-                  Cursos
+                  Cursos{" "}
+                  <ChevronDown
+                    className={`inline transition-transform duration-200`}
+                  />
                 </MenubarTrigger>
                 <MenubarContent className="w-[100vw] flex justify-center gap-x-44 mt-4 bg-gray-200">
                   <div>
@@ -217,7 +220,7 @@ const NavBar = ({ cursosFormacion }) => {
               className={`${
                 pathname === "/comunidad/blog" &&
                 "text-idaclass4 underline decoration-2 underline-offset-4"
-              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              } hover:text-idaclass4 border-b-2`}
             >
               Comunidad IdaClass
             </Link>
