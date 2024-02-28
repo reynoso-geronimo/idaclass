@@ -3,6 +3,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import React from "react";
 import EmpresasPartners from "../(root)/_components/empresasParteners";
+import Faq from "../(root)/_components/faq";
 
 const Page = () => {
   return (
@@ -25,11 +26,11 @@ const Page = () => {
             Te invitamos a ser parte de esta revolución y transformar tus
             aspiraciones en logros tangibles
           </p>
-          <Introvideo texto="Conoce como funciona la comunidad"/>
+          <Introvideo texto="Conoce como funciona la comunidad" />
         </div>
         <div className="bg-black w-full text-center text-white">Imagen</div>
       </section>
-      <EmpresasPartners/>
+      <EmpresasPartners />
       <section className="flex container justify-around gap-12">
         <div className=" container border-2 border-black">
           <Image
@@ -80,12 +81,17 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="container mb-12">
-        <TituloSeccion>
-          Ida<span className="text-idaclass4">Class</span> Hub
+      <section className="container my-12">
+        <div className="container w-full flex bg-red-300 gap-12">
+          <div className="w-1/2 aspect-video bg-black">video</div>
+          <div className="w-1/2 bg-emerald-200 aspect-video"> Formulario</div>
+        </div>
+        <TituloSeccion className={`mb-0`}>
+          Accede a contenido exclusivo
         </TituloSeccion>
-        <div className="flex justify-evenly">
-          <article className="w-1/4 border-2 border-black">
+        <h4 className="text-center mb-12">Subtitulo</h4>
+        <div className="grid grid-cols-4 gap-12">
+          <article className="border-2 border-black">
             <Image
               src={``}
               width={520}
@@ -101,7 +107,7 @@ const Page = () => {
               <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
             </div>
           </article>
-          <article className="w-1/4 border-2 border-black">
+          <article className="border-2 border-black">
             <Image
               src={``}
               width={520}
@@ -117,7 +123,7 @@ const Page = () => {
               <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
             </div>
           </article>
-          <article className="w-1/4 border-2 border-black">
+          <article className="border-2 border-black">
             <Image
               src={``}
               width={520}
@@ -133,13 +139,30 @@ const Page = () => {
               <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
             </div>
           </article>
-          <article>
-            <TituloSeccion className={`border-l-4 border-black`}>
+          <div className="bg-red-500 row-span-2">
+            <TituloSeccion
+              className={`text-left border-l-4 border-black mb-0 text-3xl`}
+            >
               Noti<span className="text-idaclass4 ">Class</span>
             </TituloSeccion>
-            <h5></h5>
-          </article>
+            <TituloSeccion
+              className={`text-left border-l-4 border-black mb-0 text-3xl`}
+            >
+              Agenda
+            </TituloSeccion>
+          </div>
+          <div className=" col-span-3 bg-emerald-400 flex gap-4 container py-2">
+            <div className="w-1/2 bg-blue-500 aspect-video">Proximo Evento</div>
+            <div className="w-1/2 bg-blue-500 aspect-video"></div>
+          </div>
         </div>
+      </section>
+
+      <section>
+        <TituloSeccion className={`border-black mb-0`}>
+          Acerca de la comunidad
+        </TituloSeccion>
+        <Faq />
       </section>
     </main>
   );
