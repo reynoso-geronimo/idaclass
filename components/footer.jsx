@@ -6,7 +6,7 @@ import { FacebookIcon, InstagramIcon, YoutubeIcon } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center pt-16 text-white text-center">
+    <footer className="bg-black w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center pt-8 pb-2 text-white text-center">
       <section className="flex flex-col items-center">
         <Image
           src={`/assets/idaclass.logo.webp`}
@@ -29,8 +29,8 @@ const Footer = () => {
         <Link href="/">Inicio</Link>
         <Link href="/nosotros">Nosotros</Link>
         <Link href="/cursos">Cursos</Link>
-        <Link href="/">Comunidad IdaClassw</Link>
-        <Link href="/asesorate">Asesorate ya</Link>
+        <Link href="/">Comunidad IdaClass</Link>
+        <Link href="/asesorate">Asesórate ya</Link>
       </section>
 
       <section className="w-full mt-6">
