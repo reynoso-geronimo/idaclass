@@ -126,8 +126,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Link
               href="/"
               className={`${
-                pathname === "/" &&
-                "text-idaclass4 underline decoration-2 underline-offset-4"
+                pathname === "/" && "after:w-[100%] text-idaclass4"
               } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >
               Inicio
@@ -135,23 +134,22 @@ const NavBar = ({ cursosFormacion }) => {
             <Link
               href="/nosotros"
               className={`${
-                pathname === "/nosotros" &&
-                "text-idaclass4 underline decoration-2 underline-offset-4"
+                pathname === "/nosotros" && "after:w-[100%] text-idaclass4"
               } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >
               Nosotros
             </Link>
 
-            <Menubar className="border-none outline-none hover:text-idaclass4 bg-transparent relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]">
+            <Menubar className="border-none outline-none bg-transparent">
               <MenubarMenu>
                 <MenubarTrigger
-                  className={`${
+                  className={`hover:text-idaclass4  relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%] ${
                     (pathname.includes("curso-formacion") ||
                       pathname.includes("cursos")) &&
-                    "text-idaclass4 underline decoration-2 underline-offset-4"
-                  }`}
+                    "after:w-[100%] text-idaclass4"
+                  }  `}
                 >
-                  Cursos{" "}
+                  Cursos
                   <ChevronDown
                     className={`inline transition-transform duration-200`}
                   />
@@ -219,8 +217,8 @@ const NavBar = ({ cursosFormacion }) => {
               href="/comunidad/blog"
               className={`${
                 pathname === "/comunidad/blog" &&
-                "text-idaclass4 underline decoration-2 underline-offset-4"
-              } hover:text-idaclass4 border-b-2`}
+                "after:w-[100%] text-idaclass4"
+              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >
               Comunidad IdaClass
             </Link>
@@ -228,8 +226,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Link
               href="/asesorate"
               className={`${
-                pathname === "/asesorate" &&
-                "text-idaclass4 underline decoration-2 underline-offset-4"
+                pathname === "/asesorate" && "after:w-[100%] text-idaclass4"
               } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >
               Asesórate ya
