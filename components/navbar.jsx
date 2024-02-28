@@ -90,9 +90,9 @@ const NavBar = ({ cursosFormacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="/blog"
+                href="/comunidad/blog"
                 className={`border-l-2 border-idaclass4 pl-2 ${
-                  pathname === "/blog" && "text-idaclass4"
+                  pathname === "/comunidad/blog" && "text-idaclass4"
                 } `}
               >
                 Comunidad IdaClass
@@ -213,9 +213,9 @@ const NavBar = ({ cursosFormacion }) => {
             </Menubar>
 
             <Link
-              href="/blog"
+              href="/comunidad/blog"
               className={`${
-                pathname === "/blog" &&
+                pathname === "/comunidad/blog" &&
                 "text-idaclass4 underline decoration-2 underline-offset-4"
               } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
             >

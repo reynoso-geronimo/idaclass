@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getBlogPostFromDb } from "../actions";
+import { getBlogPostFromDb } from "../../actions";
 import Link from "next/link";
 
 const Page = async () => {
