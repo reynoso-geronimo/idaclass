@@ -83,7 +83,7 @@ const Hero = () => {
               priority={true}
               sizes="50vw"
               style={{ objectFit: "contain" }}
-              className="scale-125 translate-x-8"
+              className="scale-125"
             />
           </div>
         </div>
