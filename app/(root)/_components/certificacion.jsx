@@ -36,7 +36,7 @@ const Certificacion = () => {
           </div>
           <Image src={medalla} alt="certificado" className="w-1/5" />
         </div>
-        <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mx-4">
+        <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8">
           <h5 className="text-2xl text-idaclass3 font-semibold">
             Accede a la doble titulación
           </h5>
@@ -60,10 +60,10 @@ const Certificacion = () => {
               <Image
                 key={index}
                 src={`/empresasPartners${partner.src}`}
-                width={200}
-                height={200}
+                width={190}
+                height={190}
                 alt="logo"
-                className=" rounded-xl object-contain aspect-video bg-white"
+                className=" rounded-xl object-contain aspect-video p-2 bg-white"
               ></Image>
             ))}
           </div>
