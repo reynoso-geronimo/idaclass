@@ -10,14 +10,13 @@ const Beca = () => {
      <Asesorate/>
         <div className="bg-black w-full text-white text-center p-8 overflow-hidden rounded-3xl">
           <TituloSeccion className={"mb-4"}>
-            Obtén tu Beca<span className="inline text-idaclass4">Class</span> 40
-            %
+            Obtén tu Beca<span className="inline text-idaclass4">Class</span> 40%
           </TituloSeccion>
           <h4 className="text-pretty md:text-lg">Impulsa tu futuro</h4>
           <p className="my-6 relative z-10 opacity-100 text-white">
             &quot;Nuestra misión es abrir las puertas a la educación en
             Latinoamérica Facilitamos el acceso a la educación de calidad de una
-            forma simple y accesible . Accede ahora a la BecaClass del 40% y
+            forma simple y accesible. Accede ahora a la BecaClass del 40% y
             avanza hacia tus metas profesionales con IdaClass.&quot;
           </p>
 
