@@ -14,7 +14,7 @@ const Soluciones = () => {
   });
   return (
     <section
-      className=" h-[800px] bg-black text-white bg-no-repeat lg:bg-[50%] bg-[85%] bg-[length:_1400px]"
+      className=" h-[800px] bg-black text-white bg-no-repeat lg:bg-[50%] bg-[85%] bg-[length:_1200px]"
       style={{ backgroundImage: `url("/assets/bg-soluciones3.jpg")` }}
     >
       <div className="backdrop-brightness-50 h-full ">
