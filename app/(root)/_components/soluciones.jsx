@@ -14,10 +14,10 @@ const Soluciones = () => {
   });
   return (
     <section
-      className=" h-[800px] bg-zinc-800 text-white bg-no-repeat bg-[50%] bg-[length:_1400px] transform scale-x-[-1]"
-      style={{ backgroundImage: `url("/assets/bg-soluciones2.jpg")` }}
+      className=" h-[800px] bg-black text-white bg-no-repeat lg:bg-[50%] bg-[85%] bg-[length:_1400px]"
+      style={{ backgroundImage: `url("/assets/bg-soluciones3.jpg")` }}
     >
-      <div className="backdrop-brightness-50 h-full transform scale-x-[-1] ">
+      <div className="backdrop-brightness-50 h-full ">
         <div className="flex flex-col justify-around h-full container relative lg:py-6">
           <h3
             ref={ref1}
