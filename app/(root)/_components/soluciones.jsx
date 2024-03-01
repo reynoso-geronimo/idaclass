@@ -1,21 +1,32 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 import { soluciones1, soluciones2 } from "../../../lib/constants.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Soluciones = () => {
   const [activo, setActivo] = useState();
-  const [ref1, inView1, entry1] = useInView({
+  const [ref1, inView1] = useInView({
     triggerOnce: true,
   });
-  const [ref2, inView2, entry2] = useInView({
+  const [ref2, inView2] = useInView({
     triggerOnce: true,
   });
+
+  const [bgImage, setBgImage] = useState("");
+
+  useEffect(() => {
+    setBgImage(
+      window.innerWidth >= 1024
+        ? `url("/assets/bg-soluciones3.jpg")`
+        : `url("/assets/bg-soluciones4.jpg")`
+    );
+  }, []);
+
   return (
     <section
       className=" h-[800px] bg-black text-white bg-no-repeat lg:bg-[50%] bg-[85%] bg-[length:_1200px]"
-      style={{ backgroundImage: `url("/assets/bg-soluciones3.jpg")` }}
+      style={{ backgroundImage: `${bgImage}` }}
     >
       <div className="backdrop-brightness-50 h-full ">
         <div className="flex flex-col justify-around h-full container relative lg:py-6">
