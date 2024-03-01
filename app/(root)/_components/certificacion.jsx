@@ -16,7 +16,7 @@ const partners = [
 
 const Certificacion = () => {
   return (
-    <section className="my-12">
+    <section className="my-12 relative">
       <TituloSeccion>Certifica tus conocimientos</TituloSeccion>
       <div className="container w-full px-0 relative text-white min-h-[310px] lg:min-h-[600px]">
         <Image src={cert1} alt="certificado" className="object-cover" fill />
@@ -35,7 +35,7 @@ const Certificacion = () => {
               1ra con normas de código y ética profesional
             </p>
           </div>
-          <Image src={medalla} alt="certificado" className="w-56 lg:w-1/5" />
+          <Image src={medalla} alt="certificado" className="hidden lg:block lg:w-1/5" />
         </div>
         <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
           <h5 className="text-2xl text-idaclass3 font-semibold">
@@ -65,7 +65,7 @@ const Certificacion = () => {
                 height={190}
                 alt="logo"
                 className=" rounded-xl object-contain aspect-video p-2 bg-white"
-              ></Image>
+              />
             ))}
           </div>
         </div>
@@ -98,20 +98,22 @@ const Certificacion = () => {
           <Dot className="inline" color="black" />
           Certificado de 4 especializaciones
         </p>
-        <h5 className="text-2xl text-idaclass3 font-semibold mt-12 mb-4 text-center">
-          Nos avalan
-        </h5>
-        <div className="flex gap-2 justify-center">
-          {partners.map((partner, index) => (
-            <Image
-              key={index}
-              src={`/empresasPartners${partner.src}`}
-              width={150}
-              height={150}
-              alt="logo"
-              className=" rounded-xl object-contain aspect-video p-2 bg-white"
-            ></Image>
-          ))}
+        <div className="max-lg:absolute top-24 sm:top-[50px] right-10">
+          <h5 className="text-2xl text-idaclass3 font-semibold lg:mt-12 my-4 text-center">
+            Nos avalan
+          </h5>
+          <div className="flex flex-col lg:flex-row gap-2 justify-center ">
+            {partners.map((partner, index) => (
+              <Image
+                key={index}
+                src={`/empresasPartners${partner.src}`}
+                width={150}
+                height={150}
+                alt="logo"
+                className=" rounded-xl object-contain aspect-video p-2 bg-white"
+              ></Image>
+            ))}
+          </div>
         </div>
       </div>
     </section>
