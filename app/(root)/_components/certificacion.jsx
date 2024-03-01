@@ -21,7 +21,23 @@ const Certificacion = () => {
       <TituloSeccion>Certifica tus conocimientos</TituloSeccion>
       <div className="container w-full px-0 relative text-white min-h-[310px] lg:min-h-[600px]">
         <Image src={cert1} alt="certificado" className="object-cover" fill />
-
+        <div className="absolute -top-2 right-10 z-10 lg:hidden">
+          <h5 className="text-2xl text-idaclass3 font-semibold lg:mt-12 my-4 text-center">
+            Nos avalan
+          </h5>
+          <div className="flex flex-col gap-2 justify-center ">
+            {partners.map((partner, index) => (
+              <Image
+                key={index}
+                src={`/empresasPartners${partner.src}`}
+                width={120}
+                height={120}
+                alt="logo"
+                className=" rounded-xl object-contain aspect-video p-2 bg-white"
+              ></Image>
+            ))}
+          </div>
+        </div>
         <div className="absolute w-full top-0 right-0 flex justify-end text-white ">
           <div className="flex flex-col justify-center max-lg:hidden">
             <h5 className="text-2xl text-idaclass3 font-semibold">
@@ -39,7 +55,7 @@ const Certificacion = () => {
           <Image
             src={medalla}
             alt="certificado"
-            className="hidden lg:block lg:w-1/5"
+            className="w-40 lg:w-1/5 max-lg:absolute top-[180px] right-[32px]"
           />
         </div>
         <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
@@ -103,30 +119,14 @@ const Certificacion = () => {
           <Dot className="inline" color="black" />
           Certificado de 4 especializaciones
         </p>
-        <div className="max-lg:absolute top-24 sm:top-[50px] right-10">
-          <h5 className="text-2xl text-idaclass3 font-semibold lg:mt-12 my-4 text-center">
-            Nos avalan
-          </h5>
-          <div className="flex flex-col lg:flex-row gap-2 justify-center ">
-            {partners.map((partner, index) => (
-              <Image
-                key={index}
-                src={`/empresasPartners${partner.src}`}
-                width={150}
-                height={150}
-                alt="logo"
-                className=" rounded-xl object-contain aspect-video p-2 bg-white"
-              ></Image>
-            ))}
-          </div>
-        </div>
+
         <div className="relative w-full">
-            <Image
-              src={linea}
-              alt="linea"
-              className="absolute -right-10 -bottom-8 scale-150"
-            />
-          </div>
+          <Image
+            src={linea}
+            alt="linea"
+            className="absolute -right-10 -bottom-8 scale-150"
+          />
+        </div>
       </div>
     </section>
   );
