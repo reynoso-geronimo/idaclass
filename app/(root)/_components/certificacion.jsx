@@ -1,6 +1,7 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import cert1 from "../../../public/certi/diplomas.jpg";
 import medalla from "../../../public/certi/SelloCalidad.png";
+import linea from "../../../public/assets/Línea img 4.png";
 import Image from "next/image";
 import { Dot } from "lucide-react";
 const partners = [
@@ -35,7 +36,11 @@ const Certificacion = () => {
               1ra con normas de código y ética profesional
             </p>
           </div>
-          <Image src={medalla} alt="certificado" className="hidden lg:block lg:w-1/5" />
+          <Image
+            src={medalla}
+            alt="certificado"
+            className="hidden lg:block lg:w-1/5"
+          />
         </div>
         <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
           <h5 className="text-2xl text-idaclass3 font-semibold">
@@ -71,7 +76,7 @@ const Certificacion = () => {
         </div>
       </div>
 
-      <div className="container lg:hidden">
+      <div className="container lg:hidden mt-4">
         <h5 className="text-2xl text-idaclass3 font-semibold text-center">
           Calidad en formación profesional
         </h5>
@@ -115,6 +120,13 @@ const Certificacion = () => {
             ))}
           </div>
         </div>
+        <div className="relative w-full">
+            <Image
+              src={linea}
+              alt="linea"
+              className="absolute -right-10 -bottom-8 scale-150"
+            />
+          </div>
       </div>
     </section>
   );
