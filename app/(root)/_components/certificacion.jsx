@@ -19,15 +19,16 @@ const Certificacion = () => {
     <section className="my-12 hidden lg:block ">
       <TituloSeccion>Certifica tus conocimientos</TituloSeccion>
       <div className="container w-full px-0 relative text-white min-h-[600px]">
-        <Image src={cert1} alt="certificado" className="object-cover" fill/>
+        <Image src={cert1} alt="certificado" className="object-cover" fill />
 
         <div className="absolute w-full top-0 right-0 flex justify-end text-white">
           <div className="flex flex-col justify-center">
-          <h5 className="text-2xl text-idaclass3 font-semibold">
-           Calidad en formación profesional
-          </h5>
+            <h5 className="text-2xl text-idaclass3 font-semibold">
+              Calidad en formación profesional
+            </h5>
             <p>
-              <Dot className="inline" color="white" />1ra Digital School con estándar de formación
+              <Dot className="inline" color="white" />
+              1ra Digital School con estándar de formación
             </p>
             <p>
               <Dot className="inline" color="white" />

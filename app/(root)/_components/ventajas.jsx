@@ -18,7 +18,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container">
+      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container md:mb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
