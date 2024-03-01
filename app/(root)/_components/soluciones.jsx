@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { soluciones1, soluciones2 } from "../../../lib/constants.js";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image.js";
 
 const Soluciones = () => {
   const [activo, setActivo] = useState();
@@ -25,9 +26,11 @@ const Soluciones = () => {
 
   return (
     <section
-      className=" h-[800px] bg-black text-white bg-no-repeat lg:bg-[33%] bg-[85%] bg-[length:_1185px]"
-      style={{ backgroundImage: `${bgImage}` }}
+      className=" h-[800px] bg-black text-white relative"
+      
     >
+      <Image alt="" src="/assets/bg-soluciones3.jpg" layout="fill" quality={30} sizes="50vw" className="object-[33%] object-contain max-lg:hidden"/>
+      <Image alt="" src="/assets/bg-soluciones4.jpg" layout="fill" quality={30} sizes="50vw" className="object-[90%] object-cover lg:hidden"/>
       <div className="backdrop-brightness-50 h-full ">
         <div className="flex flex-col justify-around h-full container relative lg:py-6">
           <h3
