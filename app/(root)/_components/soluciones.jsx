@@ -22,7 +22,7 @@ const Soluciones = () => {
       <Image alt="" src="/assets/bg-soluciones3.jpg" layout="fill" quality={30} sizes="50vw" className="object-[33%] object-contain max-lg:hidden"/>
       <Image alt="" src="/assets/bg-soluciones4.jpg" layout="fill" quality={30} sizes="50vw" className="object-[90%] object-cover lg:hidden"/>
       <div className="backdrop-brightness-50 h-full ">
-        <div className="flex flex-col justify-around h-full container relative lg:py-6">
+        <div className="flex flex-col justify-around h-full container relative py-6">
           <h3
             ref={ref1}
             className={`${
