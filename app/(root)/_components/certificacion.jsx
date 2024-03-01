@@ -76,7 +76,7 @@ const Certificacion = () => {
         </div>
       </div>
 
-      <div className="container lg:hidden mt-4">
+      <div className="container lg:hidden mt-4 text-xs">
         <h5 className="text-2xl text-idaclass3 font-semibold text-center">
           Calidad en formación profesional
         </h5>
