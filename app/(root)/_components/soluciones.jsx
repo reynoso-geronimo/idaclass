@@ -1,7 +1,7 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 import { soluciones1, soluciones2 } from "../../../lib/constants.js";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image.js";
 
@@ -13,16 +13,6 @@ const Soluciones = () => {
   const [ref2, inView2] = useInView({
     triggerOnce: true,
   });
-
-  const [bgImage, setBgImage] = useState("");
-
-  useEffect(() => {
-    setBgImage(
-      window.innerWidth >= 1024
-        ? `url("/assets/bg-soluciones3.jpg")`
-        : `url("/assets/bg-soluciones4.jpg")`
-    );
-  }, []);
 
   return (
     <section
