@@ -24,19 +24,17 @@ const slides = [
 
 const Modalidad = () => {
   return (
-    <>
-    
-      <section className="text-center flex flex-col items-center w-full">
-        <TituloSeccion className={`mb-2 px-2`}>
-          Programa de educación continua
-        </TituloSeccion>
-        <h3 className="text-center text-xl text-gray-700 max-w-md mb-4 px-2">
-          Lleva tu carrera a otro nivel con los cursos de especialización on demand a tu ritmo.
-        </h3>
+    <section className="text-center flex flex-col items-center w-full">
+      <TituloSeccion className={`mb-2 px-2`}>
+        Programa de educación continua
+      </TituloSeccion>
+      <h3 className="text-center text-xl text-gray-700 max-w-md mb-4 px-2">
+        Lleva tu carrera a otro nivel con los cursos de especialización on
+        demand a tu ritmo.
+      </h3>
 
-        <Carousel slides={slides} />
-      </section>
-    </>
+      <Carousel slides={slides} />
+    </section>
   );
 };
 

@@ -7,10 +7,11 @@ const Beca = () => {
   return (
     <section className="w-full container mt-12">
       <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center">
-     <Asesorate/>
+        <Asesorate />
         <div className="w-full text-center p-8 overflow-hidden rounded-3xl border-2 border-black">
           <TituloSeccion className={"mb-4"}>
-            Obtén tu Beca<span className="inline text-idaclass4">Class</span> 40%
+            Obtén tu Beca<span className="inline text-idaclass4">Class</span>{" "}
+            40%
           </TituloSeccion>
           <h4 className="text-pretty md:text-lg">Impulsa tu futuro</h4>
           <p className="my-6 relative z-10 opacity-100 ">

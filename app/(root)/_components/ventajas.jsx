@@ -132,35 +132,34 @@ const Ventajas = () => {
               className="-z-10 bg-black"
             />
           </div>
-          <div className="pb-12 md:w-4/5 lg:w-1/2 flex flex-col justify-center gap-12 relative overflow-hidden">
-            <div>
-              <h3 className="text-left md:text-left text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
-                Aprender haciendo
-              </h3>
-              <p className="text-pretty md:text-lg ">
-                Avanza con Learning by Doing el método basado en experiencia
-                práctica Aprende y aplica de forma rápida y eficiente desde el
-                primer día.
-              </p>
-              <ul className="flex flex-col py-2 text-sm sm:text-base">
-                <li className="flex">
-                  <Dot fill="black" /> Practica real con alumnos
-                </li>
-                <li className="flex">
-                  <Dot fill="black" />
-                  Trabajos en equipo
-                </li>
-                <li className="flex">
-                  <Dot fill="black" />
-                  Desarrolla tus proyectos
-                </li>
-              </ul>
-            </div>
+          <div className="pb-12 md:w-4/5 lg:w-1/2 relative overflow-hidden">
+            <h3 className="text-left md:text-left text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
+              Aprender haciendo
+            </h3>
+            <p className="text-pretty md:text-lg ">
+              Avanza con Learning by Doing el método basado en experiencia
+              práctica Aprende y aplica de forma rápida y eficiente desde el
+              primer día.
+            </p>
+            <ul className="flex flex-col py-2 text-sm sm:text-base">
+              <li className="flex">
+                <Dot fill="black" /> Practica real con alumnos
+              </li>
+              <li className="flex">
+                <Dot fill="black" />
+                Trabajos en equipo
+              </li>
+              <li className="flex">
+                <Dot fill="black" />
+                Desarrolla tus proyectos
+              </li>
+            </ul>
+
             <Image
-            src={linea}
-            alt="linea"
-            className="md:hidden absolute -right-44 -bottom-6 scale-150"
-          />
+              src={linea}
+              alt="linea"
+              className="md:hidden absolute -right-44 -bottom-6 scale-150"
+            />
           </div>
         </article>
 

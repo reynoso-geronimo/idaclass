@@ -50,42 +50,36 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block container px-0 overflow-hidden">
-        <div className="flex mb-4 gap-4">
-          <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-              Únete a la
-              <span className="text-idaclass4"> revolución educativa</span>{" "}
-              Sport Fitness
-            </h2>
-            <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
-              Despierta tu potencial, conviértete en un profesional con nuestros
-              cursos.
-            </h2>
-            <Button
-              size="lg"
-              className="rounded-2xl font-bold w-48 h-10"
-              asChild
-            >
-              <Link href="/asesorate">Ver todos los cursos</Link>
-            </Button>
-            <div className=" w-48 flex justify-center font-bold h-10">
-              <Introvideo />
-            </div>
+      <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
+        <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+            Únete a la
+            <span className="text-idaclass4"> revolución educativa</span> Sport
+            Fitness
+          </h2>
+          <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
+            Despierta tu potencial, conviértete en un profesional con nuestros
+            cursos.
+          </h2>
+          <Button size="lg" className="rounded-2xl font-bold w-48 h-10" asChild>
+            <Link href="/asesorate">Ver todos los cursos</Link>
+          </Button>
+          <div className=" w-48 flex justify-center font-bold h-10">
+            <Introvideo />
           </div>
+        </div>
 
-          {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-          <div className="w-3/5 z-10 aspect-video relative m-8">
-            <Image
-              src={`/home/IdaClass Web Img 1.2.jpg`}
-              alt="Bienvenido"
-              fill
-              priority={true}
-              sizes="50vw"
-              style={{ objectFit: "contain" }}
-              className="scale-125"
-            />
-          </div>
+        {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
+        <div className="w-3/5 z-10 aspect-video relative m-8">
+          <Image
+            src={`/home/IdaClass Web Img 1.2.jpg`}
+            alt="Bienvenido"
+            fill
+            priority={true}
+            sizes="50vw"
+            style={{ objectFit: "contain" }}
+            className="scale-125"
+          />
         </div>
       </div>
       {/* <div className="text-xl font-bold text-center container">

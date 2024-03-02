@@ -59,7 +59,7 @@ const EmpresasPartners = () => {
                 height={96}
                 alt="logo"
                 className=" rounded-xl cover"
-              ></Image>
+              />
             </div>
           </CarouselItem>
         ))}
