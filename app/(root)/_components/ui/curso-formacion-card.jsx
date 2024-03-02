@@ -6,7 +6,7 @@ import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
   return (
-    <article className="w-[265px] mx-auto bg-gray-200 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-400 text-xs sm:text-sm">
+    <article className="w-[265px] mx-auto bg-gray-100 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-900 text-xs sm:text-sm">
       <div className="relative h-36 flex flex-col justify-end">
         <Image
           className="object-cover z-10 rounded-t-2xl"
