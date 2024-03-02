@@ -62,8 +62,8 @@ const Intro = () => {
           <CarouselContent className="-ml-1">
             {areas.map((area, index) => (
               <CarouselItem key={index} className="pl-1 basis-[45%]">
-                <div className="p-1">
-                  <div className="rounded-xl bg-none">
+               
+                  <div className="rounded-xl bg-none p-1">
                     <div className="flex aspect-video items-center justify-center p-6 relative">
                       <Image
                         src={area.src}
@@ -71,10 +71,9 @@ const Intro = () => {
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw , 20vw"
                         className="object-cover object-top rounded-xl"
                         alt={area.area}
-                        quality={40}
                       />
                     </div>
-                  </div>
+                 
                 </div>
               </CarouselItem>
             ))}
