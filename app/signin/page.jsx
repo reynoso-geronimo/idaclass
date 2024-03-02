@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 import GoogleIcon from "../../public/assets/google-icon.svg";
 import Image from "next/image";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function SignIn() {
   return (
-    <main className="flex flex-col items-center relative">
-      <div className="flex flex-col border-2 border-idaclass33 space-y-4 bg-slate-900 p-6 rounded-lg shadow-lg z-10">
+    <main className="flex-1 w-full bg-neutral-950 relative flex flex-col items-center justify-center">
+
+      <div className="flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 p-6 rounded-lg shadow-lg z-10">
         <Button
           onClick={() =>
             signIn("google", { callbackUrl: window.location.origin })
@@ -27,6 +29,7 @@ export default function SignIn() {
         </Button>
         
       </div>
+      <BackgroundBeams/>
     </main>
   );
 }
