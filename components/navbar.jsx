@@ -24,6 +24,9 @@ import {
 } from "@/components/ui/menubar";
 import Promobar from "./promobar";
 
+const classEscritorio =
+  "hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]";
+
 const NavBar = ({ cursosFormacion }) => {
   const { data: session } = useSession();
 
@@ -127,7 +130,7 @@ const NavBar = ({ cursosFormacion }) => {
               href="/"
               className={`${
                 pathname === "/" && "after:w-[100%] text-idaclass4"
-              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              } ${classEscritorio}`}
             >
               Inicio
             </Link>
@@ -135,7 +138,7 @@ const NavBar = ({ cursosFormacion }) => {
               href="/nosotros"
               className={`${
                 pathname === "/nosotros" && "after:w-[100%] text-idaclass4"
-              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              } ${classEscritorio}`}
             >
               Nosotros
             </Link>
@@ -143,7 +146,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Menubar className="border-none outline-none bg-transparent">
               <MenubarMenu>
                 <MenubarTrigger
-                  className={`hover:text-idaclass4  relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%] ${
+                  className={`${classEscritorio} ${
                     (pathname.includes("curso-formacion") ||
                       pathname.includes("cursos")) &&
                     "after:w-[100%] text-idaclass4"
@@ -154,7 +157,10 @@ const NavBar = ({ cursosFormacion }) => {
                     className={`inline transition-transform duration-200`}
                   />
                 </MenubarTrigger>
-                <MenubarContent align="center" className="px-12 pb-4 border-none rounded-b-xl flex justify-center gap-x-44 mt-[11px] bg-gray-100">
+                <MenubarContent
+                  align="center"
+                  className="px-12 pb-4 border-none rounded-b-xl flex justify-center gap-x-44 mt-[11px] bg-gray-100"
+                >
                   <div>
                     <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-bold text-idaclass  border-l-4 border-idaclass4">
                       Cursos de Formación
@@ -218,7 +224,7 @@ const NavBar = ({ cursosFormacion }) => {
               className={`${
                 pathname === "/comunidad/blog" &&
                 "after:w-[100%] text-idaclass4"
-              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              } ${classEscritorio}`}
             >
               Comunidad IdaClass
             </Link>
@@ -227,7 +233,7 @@ const NavBar = ({ cursosFormacion }) => {
               href="/asesorate"
               className={`${
                 pathname === "/asesorate" && "after:w-[100%] text-idaclass4"
-              } hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5  after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]`}
+              } ${classEscritorio}`}
             >
               Asesórate ya
             </Link>
