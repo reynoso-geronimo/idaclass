@@ -18,7 +18,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container md:mb-12">
+      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container mb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -103,7 +103,7 @@ const Ventajas = () => {
 
         <article
           ref={ref2}
-          className={`relative flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`relative flex flex-col-reverse md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >

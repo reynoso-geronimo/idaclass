@@ -55,7 +55,7 @@ const Certificacion = () => {
           <Image
             src={medalla}
             alt="certificado"
-            className="w-40 lg:w-1/5 max-lg:absolute top-[180px] right-[32px]"
+            className="w-36 lg:w-1/5 max-lg:absolute top-[190px] right-[38px]"
           />
         </div>
         <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
