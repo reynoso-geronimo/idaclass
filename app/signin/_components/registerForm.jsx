@@ -11,9 +11,16 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-const formSchema = z.object({
-  email: z.string().email({ message: "Ingresa un Email valido" }),
-});
+const formSchema = z
+  .object({
+    email: z.string().email({ message: "Ingresa un Email valido" }),
+    password: z.string(),
+    confirm: z.string(),
+  })
+  .refine(data => data.password === data.confirm, {
+    message: "Contraseña no coincide",
+    path: ["confirm"], // path of error
+  });
 // 2. Define a submit handler.
 function onSubmit(values) {
   // Do something with the form values.
@@ -28,7 +35,7 @@ const RegisterForm = () => {
       apellido: "",
       email: "",
       password: "",
-      passwordConfirm: "",
+      confirm: "",
     },
   });
 
@@ -43,7 +50,7 @@ const RegisterForm = () => {
               <FormItem>
                 <FormLabel className="text-white">Nombre</FormLabel>
                 <FormControl>
-                  <Input placeholder="nombre" {...field} />
+                  <Input placeholder="Nombre" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -52,12 +59,12 @@ const RegisterForm = () => {
           />
           <FormField
             control={form.control}
-            name="apellid"
+            name="apellido"
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-white">Apellido</FormLabel>
                 <FormControl>
-                  <Input placeholder="apellido" {...field} />
+                  <Input placeholder="Apellido" {...field} />
                 </FormControl>
 
                 <FormMessage />
@@ -72,7 +79,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel className="text-white">Email</FormLabel>
               <FormControl>
-                <Input placeholder="email" {...field} />
+                <Input placeholder="Email" type="email" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -86,7 +93,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel className="text-white">Contraseña</FormLabel>
               <FormControl>
-                <Input placeholder="*******" {...field} />
+                <Input placeholder="*******" type="password" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -95,10 +102,10 @@ const RegisterForm = () => {
         />
         <FormField
           control={form.control}
-          name="passwordConfirm"
+          name="confirm"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Repite tu contraseña</FormLabel>
+              <FormLabel className="text-white" type="password">Repite tu contraseña</FormLabel>
               <FormControl>
                 <Input placeholder="*******" {...field} />
               </FormControl>
