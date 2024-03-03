@@ -159,7 +159,7 @@ const NavBar = ({ cursosFormacion }) => {
                 </MenubarTrigger>
                 <MenubarContent
                   align="center"
-                  className="px-12 pb-4 border-none rounded-b-xl flex justify-center gap-x-44 mt-[11px] bg-gray-100"
+                  className="px-12 pb-4 border-none rounded-b-xl flex justify-center gap-x-44 mt-[11px] bg-black text-white"
                 >
                   <div>
                     <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-bold text-idaclass  border-l-4 border-idaclass4">
