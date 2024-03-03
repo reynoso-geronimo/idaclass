@@ -5,13 +5,26 @@ import GoogleIcon from "../../public/assets/google-icon.svg";
 import Image from "next/image";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import RegisterForm from "./_components/registerForm";
+import LoginForm from "./_components/loginForm";
 
 export default function SignIn() {
   return (
-    <main className="flex-1 w-full bg-neutral-950 relative flex flex-col items-center justify-center py-12">
+    <main className="min-h-[645px] w-full bg-neutral-950 relative flex flex-col justify-start py-12">
       <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 rounded-lg shadow-lg z-10 max-w-md">
-        <RegisterForm />
+        <Tabs defaultValue="login" className="w-[400px]">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="login">Ingresar</TabsTrigger>
+            <TabsTrigger value="registro">Crear cuenta</TabsTrigger>
+          </TabsList>
+          <TabsContent value="login">
+            <LoginForm />
+          </TabsContent>
+          <TabsContent value="registro">
+            <RegisterForm />
+          </TabsContent>
+        </Tabs>
         <Separator />
         <Button
           onClick={() =>
