@@ -107,29 +107,36 @@ const Ventajas = () => {
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-full md:w-7/8 rounded-lg relative aspect-video text-white text-center">
+          <div className="w-full md:w-7/8 rounded-lg relative aspect-video text-white text-center overflow-hidden">
             <h3 className="text-2xl md:text-3xl  font-extrabold   text-idaclass tracking-tight mb-4">
               Eleva tus habilidades con SkillClass
             </h3>
-            <h4 className="text-pretty md:text-lg">
-              <span className="text-idaclass4">Bono especial</span> 4 cursos
-              extras para asegurar tu éxito
-            </h4>
-            <p className="absolute bottom-4 translate-x-[50%] right-[50%]">
-              Marketing - Venta - Liderazgo - Comunicación
-            </p>
-            <p className="text-2xl absolute translate-x-[50%] translate-y-[50%] top-[50%] right-[50%]">
-              IMAGEN
-            </p>
+
+            <div className="flex text-left flex-col gap-0 absolute rounded-2xl text-xs lg:text-lg text-idaclass font-bold bottom-[50%]  right-[5%] w-[45%]">
+              <p className="h-4"><Dot className="inline"/>Marketing</p>
+              <p className="h-4"><Dot className="inline"/>Venta </p>
+              <p className="h-4"><Dot className="inline"/>Comunicacion</p>
+              <p className="h-4"><Dot className="inline"/>Lidreazgo</p>
+            </div>
+            <div className="absolute right-8 bottom-[60%] rotate-[90deg]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22.769"
+                height="14.821"
+                className="fill-idaclass scale-[900%] lg:scale-[1200%] opacity-35 -z-10"
+              >
+                <path d="M10.212 12.007 7.645 9.414h8v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
+              </svg>
+            </div>
             <Image
-              src={`/`}
+              src={`/home/IdaClass Web Img 4.jpg`}
               alt=""
               fill
               sizes="(min-width: 808px) 50vw, 100vw"
               style={{
                 objectFit: "cover", // cover, contain, none
               }}
-              className="-z-10 bg-black"
+              className="-z-10"
             />
           </div>
           <div className="pb-12 md:w-4/5 lg:w-1/2 relative overflow-hidden">
