@@ -13,7 +13,7 @@ export default function SignIn() {
   return (
     <main className="min-h-[645px] w-full bg-neutral-950 relative flex flex-col justify-start py-12">
       <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 rounded-lg shadow-lg z-10 max-w-md">
-        <Tabs defaultValue="login" className="w-[400px]">
+        <Tabs defaultValue="login">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="login">Ingresar</TabsTrigger>
             <TabsTrigger value="registro">Crear cuenta</TabsTrigger>
