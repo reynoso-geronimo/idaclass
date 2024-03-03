@@ -112,7 +112,7 @@ const Ventajas = () => {
               Eleva tus habilidades con SkillClass
             </h3>
 
-            <div className="grid grid-cols-2 lg:grid-cols-1 lg:gap-2 xl:gap-4 absolute rounded-2xl text-xs lg:text-lg text-idaclass font-bold bottom-[50%] left-[47%] lg:left-[50%] w-[225px]">
+            <div className="grid grid-cols-2 lg:grid-cols-1 lg:gap-2 xl:gap-4 absolute rounded-2xl text-xs sm:text-base lg:text-lg text-idaclass font-bold bottom-[50%] max-sm:right-[0%] sm:left-[50%] w-[225px] sm:w-[280px]">
               <p className="h-4 justify-self-start"><Dot className="inline"/>Marketing</p>
               <p className="h-4 justify-self-start"><Dot className="inline"/>Venta </p>
               <p className="h-4 justify-self-start"><Dot className="inline"/>Comunicacion</p>
