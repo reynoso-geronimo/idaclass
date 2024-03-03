@@ -11,8 +11,8 @@ import LoginForm from "./_components/loginForm";
 
 export default function SignIn() {
   return (
-    <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12 container">
-      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 rounded-lg shadow-lg z-10 max-w-md">
+    <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12">
+      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
         <Tabs defaultValue="login">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="login">Ingresar</TabsTrigger>
