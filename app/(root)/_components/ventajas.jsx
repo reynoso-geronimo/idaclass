@@ -18,9 +18,9 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-10 md:gap-y-12 container mb-12">
+      <section className="w-full flex flex-col items-center gap-10 lg:gap-y-12 container mb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
-        <h1 className="text-4xl md:text-5xl font-bold text-center tracking-tight">
+        <h1 className="text-4xl lg:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
         </h1>
       </section> */}
@@ -29,12 +29,12 @@ const Ventajas = () => {
 
         <article
           ref={ref1}
-          className={`pb-12 overflow-hidden relative w-full flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`pb-12 overflow-hidden relative w-full flex flex-col lg:flex-row even:lg:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
           {/* <Herramientas /> */}
-          <div className="w-full md:w-1/2 aspect-video relative ">
+          <div className="w-full lg:w-1/2 aspect-video relative ">
             <Image
               src={`/home/IdaClass Web Img 2.1.jpg`}
               alt="Bienvenido"
@@ -43,7 +43,7 @@ const Ventajas = () => {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="w-full md:w-1/2 relative overflow-hidden">
+          <div className="w-full lg:w-1/2 relative overflow-hidden">
             <div className="absolute right-6 lg:right-[35%] bottom-8 rotate-[90deg]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,14 +55,14 @@ const Ventajas = () => {
               </svg>
             </div>
 
-            <h3 className="text-2xl text-center md:text-left md:text-3xl font-extrabold  text-idaclass tracking-tight">
+            <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight">
               Innovación en la enseñanza
             </h3>
-            <p className="text-pretty md:text-lg text-center md:text-left mb-4">
+            <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
               Aprende en un entorno virtual interactivo <br /> multimodal simple
               y efectivo.
             </p>
-            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center md:justify-items-start gap-x-0 text-sm sm:text-base">
+            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 text-sm sm:text-base">
               <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Clases en vivo
@@ -103,22 +103,22 @@ const Ventajas = () => {
 
         <article
           ref={ref2}
-          className={`relative flex flex-col-reverse md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`relative flex flex-col-reverse lg:flex-row even:lg:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-full md:w-7/8 rounded-lg relative aspect-video text-white text-center overflow-hidden">
-            <h3 className="text-2xl md:text-3xl  font-extrabold   text-idaclass tracking-tight mb-4">
+          <div className="w-full lg:w-7/8 rounded-lg relative aspect-video text-white text-center overflow-hidden">
+            <h3 className="text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
               Eleva tus habilidades con SkillClass
             </h3>
 
-            <div className="flex text-left flex-col gap-0 absolute rounded-2xl text-xs lg:text-lg text-idaclass font-bold bottom-[50%]  right-[5%] w-[45%]">
-              <p className="h-4"><Dot className="inline"/>Marketing</p>
-              <p className="h-4"><Dot className="inline"/>Venta </p>
-              <p className="h-4"><Dot className="inline"/>Comunicacion</p>
-              <p className="h-4"><Dot className="inline"/>Lidreazgo</p>
+            <div className="grid grid-cols-2 lg:grid-cols-1 lg:gap-2 xl:gap-4 absolute rounded-2xl text-xs lg:text-lg text-idaclass font-bold bottom-[50%] left-[47%] lg:left-[50%] w-[225px]">
+              <p className="h-4 justify-self-start"><Dot className="inline"/>Marketing</p>
+              <p className="h-4 justify-self-start"><Dot className="inline"/>Venta </p>
+              <p className="h-4 justify-self-start"><Dot className="inline"/>Comunicacion</p>
+              <p className="h-4 justify-self-start"><Dot className="inline"/>Lidreazgo</p>
             </div>
-            <div className="absolute right-8 bottom-[60%] rotate-[90deg]">
+            <div className="absolute right-4 lg:right-20 bottom-[55%] rotate-[90deg]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.769"
@@ -139,11 +139,11 @@ const Ventajas = () => {
               className="-z-10 rounded-2xl"
             />
           </div>
-          <div className="pb-12 md:w-4/5 lg:w-1/2 relative overflow-hidden">
-            <h3 className="text-left md:text-left text-2xl md:text-3xl font-extrabold text-idaclass tracking-tight">
+          <div className="pb-12 lg:w-4/5 relative overflow-hidden">
+            <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight">
               Aprender haciendo
             </h3>
-            <p className="text-pretty md:text-lg ">
+            <p className="text-pretty lg:text-lg ">
               Avanza con Learning by Doing el método basado en experiencia
               práctica Aprende y aplica de forma rápida y eficiente desde el
               primer día.
@@ -165,7 +165,7 @@ const Ventajas = () => {
             <Image
               src={linea}
               alt="linea"
-              className="md:hidden absolute -right-44 -bottom-6 scale-150"
+              className="lg:hidden absolute -right-44 -bottom-6 scale-150"
             />
           </div>
         </article>
@@ -174,7 +174,7 @@ const Ventajas = () => {
 
         {/* <article
           ref={ref3}
-          className={`flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000	${
+          className={`flex flex-col lg:flex-row even:lg:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000	${
             inView3 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -183,13 +183,13 @@ const Ventajas = () => {
             alt="hero image"
             height={200}
             width={200}
-            className="w-full md:w-2/5 rounded-lg"
+            className="w-full lg:w-2/5 rounded-lg"
           />
-          <div className="md:w-2/5">
-            <h3 className="text-lg md:text-3xl  font-extrabold   text-idaclass tracking-tight">
+          <div className="lg:w-2/5">
+            <h3 className="text-lg lg:text-3xl  font-extrabold   text-idaclass tracking-tight">
               SkillClass - Tu Herramienta Exclusiva
             </h3>
-            <p className="text-pretty md:text-lg font-semibold">
+            <p className="text-pretty lg:text-lg font-semibold">
               Dominá el arte de construir tu marca, ofrecer y vender servicios,
               comunicándote efectivamente. SkillClass es el complemento
               necesario para garantizar que logres tus objetivos con éxito.
