@@ -109,7 +109,7 @@ const RegisterForm = () => {
                 Repite tu contraseña
               </FormLabel>
               <FormControl>
-                <Input placeholder="*******" {...field} />
+                <Input placeholder="*******" type="password" {...field} />
               </FormControl>
 
               <FormMessage />
