@@ -42,7 +42,7 @@ const RegisterForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 ">
-        <div className="flex space-x-4">
+        <div className="flex max-sm:flex-col max-sm:space-y-4 sm:space-x-4">
           <FormField
             control={form.control}
             name="nombre"
@@ -105,7 +105,9 @@ const RegisterForm = () => {
           name="confirm"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white" type="password">Repite tu contraseña</FormLabel>
+              <FormLabel className="text-white" type="password">
+                Repite tu contraseña
+              </FormLabel>
               <FormControl>
                 <Input placeholder="*******" {...field} />
               </FormControl>
