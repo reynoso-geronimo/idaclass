@@ -7,10 +7,10 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-const CasosExito = () => {
+const CasosExito = ({titulo="Historias que inspiran"}) => {
   return (
     <section className="container">
-      <TituloSeccion className={"mb-0"}>Historias que inspiran</TituloSeccion>
+      <TituloSeccion className={"mb-0"}>{titulo}</TituloSeccion>
       <h3 className="text-center text-pretty my-2">
         Se uno de nuestros casos de éxito
       </h3>

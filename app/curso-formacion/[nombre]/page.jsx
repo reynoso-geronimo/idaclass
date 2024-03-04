@@ -10,11 +10,13 @@ import {
 } from "@/components/ui/carousel";
 
 import {
+  ArrowUp,
   BookOpenCheck,
   Calendar,
   ChevronRight,
   Clock,
   Construction,
+  Dot,
   Monitor,
   Plus,
 } from "lucide-react";
@@ -35,7 +37,9 @@ import CasoExito from "@/app/(root)/_components/ui/caso-exito";
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/app/(root)/_components/equipo-profesional";
 import Asesorate from "@/components/ui/asesorate";
-
+import Certificacion from "./_components/certificacion";
+import CasosExito from "@/app/(root)/_components/casos-exito";
+import linea from "../../../public/assets/Línea img 4.png";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -72,6 +76,16 @@ const contenido = [
       },
     ],
   },
+];
+
+const areas = [
+  { src: `/home/areas/entrenamiento.jpeg`, area: "Entrenamiento" },
+  {
+    src: `/home/areas/desarolloprofesional.jpeg`,
+    area: "Desarrollo Profesional",
+  },
+  { src: `/home/areas/gimnasio.jpeg`, area: "Gimnasio" },
+  { src: `/home/areas/nutricion.jpg`, area: "Nutricion" },
 ];
 
 const CursoPage = async ({ params }) => {
@@ -169,27 +183,7 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <Separator />
-      <section className="container flex flex-col items-stretch lg:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
-        <article className="w-full lg:w-1/2 p-8 flex flex-col items-center  ">
-          <Badge className="text-lg lg:text-xl font-semibold m-4 justify-center outline outline-2 outline-primary outline-offset-4">
-            Certifica tus conocimientos
-          </Badge>
-          <p className="my-auto py-2 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            consequatur quae, error facilis sapiente impedit ut. Amet velit ab
-            illo dignissimos animi, dolorem impedit optio? Est inventore quos
-            obcaecati commodi.
-          </p>
-        </article>
-        <article className="flex mx-auto my-auto w-full lg:w-2/3 gap-2">
-          <div className="w-full">
-            <Image src={cert1} alt="certificado" className=" mx-auto" />
-          </div>
-          <div className="w-full">
-            <Image src={cert2} alt="certificado" className="mx-auto" />
-          </div>
-        </article>
-      </section>
+      <Certificacion />
       <Separator />
       <section>
         <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
@@ -267,12 +261,9 @@ const CursoPage = async ({ params }) => {
       />
       <Separator />
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
-        <article className="w-full">
-          <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
-            Bono extra
-          </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+        <article className="w-full rounded-2xl border border-black">
+          <TituloSeccion className={`my-1 text-3xl`}>Bono extra</TituloSeccion>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
@@ -280,17 +271,24 @@ const CursoPage = async ({ params }) => {
           </ul>
         </article>
 
-        <article className="w-full">
-          <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
+        <article className="w-full rounded-2xl border border-black overflow-hidden">
+          <TituloSeccion className={`my-1 text-3xl`}>
             Potencia tu empleabilidad o emprende
-          </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+          </TituloSeccion>
+          <h3 className="text-center">Accede a recursos y herramientas para tu exito</h3>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
+            <li>Bolsa de trabajo</li>
+            <li>Pasantias</li>
+            <li>Red de Networking</li>
+            <li>Eventos con expertos internacionales</li>
           </ul>
+          <div className="relative w-full">
+          <Image
+            src={linea}
+            alt="linea"
+            className="relative -right-[60%] bottom-0 scale-150"
+          />
+        </div>
         </article>
       </section>
       {/* modalidades y pago */}
@@ -317,7 +315,6 @@ const CursoPage = async ({ params }) => {
           </div>
         </Carousel>
       </section>
-
       <section className="container flex flex-col items-stretch sm:flex-row gap-4">
         <Asesorate />
         <article className="w-full flex items-center mx-auto mb-4 lg:mb-0">
@@ -325,15 +322,10 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       <section className="container">
-        <TituloSeccion className={""}>
+        {/* <TituloSeccion className={""}>
           Casos de éxito de nuestros estudiantes
-        </TituloSeccion>
-        <div className="flex flex-wrap justify-center items-center  gap-4">
-          <CasoExito />
-          <CasoExito />
-          <CasoExito />
-          <CasoExito />
-        </div>
+        </TituloSeccion> */}
+        <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
       </section>
       <Separator />
     </main>
