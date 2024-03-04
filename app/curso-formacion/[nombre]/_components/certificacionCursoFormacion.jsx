@@ -20,7 +20,7 @@ const areas = [
   { src: `/empresasPartners/Logo_instituto-leyenda-red.png` },
   
 ];
-const Certificacion = () => {
+const CertificacionCursoFormacion = () => {
   return (
     <section className="container lg:px-0 bg-black text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-center relative overflow-hidden">
       <div className="w-full lg:w-1/3 text-center lg:text-left">
@@ -91,4 +91,4 @@ const Certificacion = () => {
   );
 };
 
-export default Certificacion;
+export default CertificacionCursoFormacion;

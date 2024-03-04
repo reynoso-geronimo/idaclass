@@ -29,17 +29,17 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
-import cert1 from "../../../public/certi/cert1.webp";
 import cert2 from "../../../public/certi/cert2.webp";
 import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import CasoExito from "@/app/(root)/_components/ui/caso-exito";
+
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/app/(root)/_components/equipo-profesional";
 import Asesorate from "@/components/ui/asesorate";
-import Certificacion from "./_components/certificacion";
+
 import CasosExito from "@/app/(root)/_components/casos-exito";
 import linea from "../../../public/assets/Línea img 4.png";
+import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -183,7 +183,7 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <Separator />
-      <Certificacion />
+      <CertificacionCursoFormacion />
       <Separator />
       <section>
         <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
@@ -275,7 +275,9 @@ const CursoPage = async ({ params }) => {
           <TituloSeccion className={`my-1 text-3xl`}>
             Potencia tu empleabilidad o emprende
           </TituloSeccion>
-          <h3 className="text-center">Accede a recursos y herramientas para tu exito</h3>
+          <h3 className="text-center">
+            Accede a recursos y herramientas para tu exito
+          </h3>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
             <li>Bolsa de trabajo</li>
             <li>Pasantias</li>
@@ -283,12 +285,12 @@ const CursoPage = async ({ params }) => {
             <li>Eventos con expertos internacionales</li>
           </ul>
           <div className="relative w-full">
-          <Image
-            src={linea}
-            alt="linea"
-            className="relative -right-[60%] bottom-0 scale-150"
-          />
-        </div>
+            <Image
+              src={linea}
+              alt="linea"
+              className="relative -right-[60%] bottom-0 scale-150"
+            />
+          </div>
         </article>
       </section>
       {/* modalidades y pago */}
