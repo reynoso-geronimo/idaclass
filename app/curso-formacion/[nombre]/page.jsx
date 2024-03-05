@@ -40,6 +40,8 @@ import Asesorate from "@/components/ui/asesorate";
 import CasosExito from "@/app/(root)/_components/casos-exito";
 import linea from "../../../public/assets/Línea img 4.png";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
+import Link from "next/link";
+import Beca from "@/app/(root)/_components/beca";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -123,7 +125,7 @@ const CursoPage = async ({ params }) => {
             <p className="font-medium">{descripcion}</p>
 
             <div className="font-semibold text-sm my-4">
-              <Badge className={`bg-red-500`}>{modalidades}</Badge>{" "}
+              <Badge className={`bg-red-500`}>{modalidades}</Badge>
             </div>
 
             <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
@@ -214,7 +216,7 @@ const CursoPage = async ({ params }) => {
 
           <div className="mx-auto w-full md:w-1/3 font-medium flex flex-col justify-between border  rounded-xl p-4">
             <Badge className="text-lg text-center font-semibold m-2 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
-              Modulo especial
+              Bono Extra
             </Badge>
             <Image
               src={`/assets/SkillClass.jpg`}
@@ -264,10 +266,10 @@ const CursoPage = async ({ params }) => {
         <article className="w-full rounded-2xl border border-black">
           <TituloSeccion className={`my-1 text-3xl`}>Bono extra</TituloSeccion>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </article>
 
@@ -295,17 +297,17 @@ const CursoPage = async ({ params }) => {
       </section>
       {/* modalidades y pago */}
       <Separator />
-      <section>
-        <h1 className="text-center font-bold text-xl my-4 container">
+      <section id="inscripcion" className="pt-6">
+        <h1 className="text-center font-bold text-xl pb-4 container">
           Elige la modalidad que mas se adapte a ti
         </h1>
 
         <Carousel className="mx-auto max-w-[270px] sm:max-w-[70vw] ">
           <CarouselContent className="-ml-1">
-            {Array.from({ length: 3 }).map((_, index) => (
+            {Array.from({ length: 2 }).map((_, index) => (
               <CarouselItem
                 key={index}
-                className="pl-1 sm:basis-1/2 lg:basis-1/3"
+                className="pl-1 sm:basis-1/2 lg:basis-1/2"
               >
                 <TarjetaModalidad />
               </CarouselItem>
@@ -318,10 +320,8 @@ const CursoPage = async ({ params }) => {
         </Carousel>
       </section>
       <section className="container flex flex-col items-stretch sm:flex-row gap-4">
-        <Asesorate />
-        <article className="w-full flex items-center mx-auto mb-4 lg:mb-0">
-          <Image src={cert2} alt="certificado" className="mx-auto" />
-        </article>
+        
+        <Beca/>
       </section>
       <section className="container">
         {/* <TituloSeccion className={""}>
@@ -330,6 +330,60 @@ const CursoPage = async ({ params }) => {
         <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
       </section>
       <Separator />
+      <section className="container my-12 ">
+        <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
+        <div className="flex justify-center gap-4">
+          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
+            <Image
+              src={`/cursosFormacion/${imagen}`}
+              alt=""
+              width={300}
+              height={300}
+            />
+            <p className="font-bold">{nombre}</p>
+            <Button className="w-full text-lg">Ver curso</Button>
+          </article>
+          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
+            <Image
+              src={`/cursosFormacion/${imagen}`}
+              alt=""
+              width={300}
+              height={300}
+            />
+            <p className="font-bold">{nombre}</p>
+            <Button className="w-full text-lg">Ver curso</Button>
+          </article>
+          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
+            <Image
+              src={`/cursosFormacion/${imagen}`}
+              alt=""
+              width={300}
+              height={300}
+            />
+            <p className="font-bold">{nombre}</p>
+            <Button className="w-full text-lg">Ver curso</Button>
+          </article>
+          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
+            <Image
+              src={`/cursosFormacion/${imagen}`}
+              alt=""
+              width={300}
+              height={300}
+            />
+            <p className="font-bold">{nombre}</p>
+            <Button className="w-full text-lg">Ver curso</Button>
+          </article>
+        </div>
+      </section>
+      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-50 flex justify-around items-center gap-2">
+        <p className="text-white">+ de 50.0000 certificados otorgados </p>
+       <div className="flex gap-12">
+       <Link asChild href="#inscripcion"><Button>Inscribirme ahora</Button></Link>
+        <div className="">
+          <Image src={`/assets/whatsapp-svgrepo-com.svg`} height={40} width={40} alt="asesorate"/>
+        </div>
+       </div>
+      </div>
     </main>
   );
 };
