@@ -42,10 +42,8 @@ const Page = () => {
           />
           <h4>IdaClass Jobs - Bolsa de trabajo y pasantías</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-            deserunt ducimus harum officia sunt, similique ipsum nihil eos,
-            maxime, placeat animi quidem ullam sit reiciendis officiis quia
-            fugit? Recusandae, sit?
+          Descubre oportunidades emocionantes para dar el siguiente paso en tu carrera. 
+          Desde puestos de trabajo hasta experiencias de pasantías, conectamos talento con las mejores oportunidades del sector
           </p>
         </div>
         <div className=" container border-2 border-black">
@@ -56,12 +54,10 @@ const Page = () => {
             alt=""
             className="bg-black mx-auto"
           />
-          <h4>IdaClass Jobs - Bolsa de trabajo y pasantías</h4>
+          <h4> IDAclass Hub - </h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-            deserunt ducimus harum officia sunt, similique ipsum nihil eos,
-            maxime, placeat animi quidem ullam sit reiciendis officiis quia
-            fugit? Recusandae, sit?
+          mundo de conocimiento con nuestro Hub. Encuentra blogs, notas de interés y contenido exclusivo que te mantendrán 
+          a la vanguardia de las últimas tendencias y desarrollos en el ámbito del SportFitness
           </p>
         </div>
         <div className=" container border-2 border-black">
@@ -72,12 +68,11 @@ const Page = () => {
             alt=""
             className="bg-black mx-auto"
           />
-          <h4>IdaClass Jobs - Bolsa de trabajo y pasantías</h4>
+          <h4> IDAclass Conecta Networking:</h4>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-            deserunt ducimus harum officia sunt, similique ipsum nihil eos,
-            maxime, placeat animi quidem ullam sit reiciendis officiis quia
-            fugit? Recusandae, sit?
+         
+Establece conexiones significativas con expertos, líderes, mentores y profesionales de la industria. 
+Participa en webinars emocionantes que te brindarán insights valiosos y perspectivas inspiradoras.
           </p>
         </div>
       </section>
