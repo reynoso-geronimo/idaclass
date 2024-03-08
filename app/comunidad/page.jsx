@@ -79,7 +79,10 @@ Participa en webinars emocionantes que te brindarán insights valiosos y perspec
       <section className="container my-12">
         <div className="container w-full flex bg-red-300 gap-12">
           <div className="w-1/2 aspect-video bg-black">video</div>
-          <div className="w-1/2 bg-emerald-200 aspect-video"> Formulario</div>
+          <div className="w-1/2 bg-emerald-200 aspect-video"> 
+          
+         <h1>formulario</h1>
+          </div>
         </div>
         <TituloSeccion className={`mb-0`}>
           Accede a contenido exclusivo
