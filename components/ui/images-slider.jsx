@@ -3,6 +3,8 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { Button } from "./button";
+import Link from "next/link";
 
 export const ImagesSlider = ({
   images,
@@ -18,13 +20,13 @@ export const ImagesSlider = ({
   const [loadedImages, setLoadedImages] = useState([]);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex(prevIndex =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
     );
   };
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex(prevIndex =>
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
@@ -35,7 +37,7 @@ export const ImagesSlider = ({
 
   const loadImages = () => {
     setLoading(true);
-    const loadPromises = images.map((image) => {
+    const loadPromises = images.map(image => {
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.src = image;
@@ -45,14 +47,14 @@ export const ImagesSlider = ({
     });
 
     Promise.all(loadPromises)
-      .then((loadedImages) => {
+      .then(loadedImages => {
         setLoadedImages(loadedImages);
         setLoading(false);
       })
-      .catch((error) => console.error("Failed to load images", error));
+      .catch(error => console.error("Failed to load images", error));
   };
   useEffect(() => {
-    const handleKeyDown = (event) => {
+    const handleKeyDown = event => {
       if (event.key === "ArrowRight") {
         handleNext();
       } else if (event.key === "ArrowLeft") {
@@ -123,9 +125,7 @@ export const ImagesSlider = ({
     >
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
-        <div
-          className={cn("absolute inset-0  z-40", overlayClassName)}
-        />
+        <div className={cn("absolute inset-0  z-40", overlayClassName)} />
       )}
 
       {areImagesLoaded && (
@@ -137,10 +137,37 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center"
+            className="image h-full w-full absolute inset-0 object-contain object-center"
           />
-     
         </AnimatePresence>
+      )}
+      {currentIndex === 1 && (
+        <motion.div
+          key={currentIndex}
+          initial="initial"
+          animate="visible"
+          exit={direction === "up" ? "upExit" : "downExit"}
+          variants={slideVariants}
+          className="text-white z-10 absolute right-0 top-[20%] w-1/2 text-center"
+        >
+          <h3 className="text-idaclass3 text-4xl font-bold">
+            CURSOS ON DEMAND
+          </h3>
+          <h3 className="text-idaclass3 text-2xl font-bold">
+            Lleva tu carrera al siguiente nivel!!!!
+          </h3>
+
+          <ul className="list-inside list-disc my-2">
+            <li>Estudia a tu ritmo </li>
+            <li>Expertos internacionales </li>
+            <li>Elije tu area de especializacion</li>
+          </ul>
+          <Link asChild href={"/cursos"}>
+            <Button variants="lg" className="rounded-lg mt-4">
+              Ver todos los cursos
+            </Button>
+          </Link>
+        </motion.div>
       )}
     </div>
   );

@@ -8,11 +8,11 @@ const Modalidad=()=> {
   const images = [
     "./modalidad/IdaClass Web Img 6.2.jpg",
     "./modalidad/IdaClass Web Img 7.jpg",
-    "./modalidad/modalidad3.webp",
+   
     
   ];
   return (
-    <ImagesSlider className="h-[400px] container" images={images}>
+    <ImagesSlider className="h-[400px] container" images={images} overlay={false}>
       <motion.div
         initial={{
           opacity: 0,
