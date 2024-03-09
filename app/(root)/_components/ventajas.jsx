@@ -108,10 +108,13 @@ const Ventajas = () => {
           }`}
         >
           <div className="w-full lg:w-7/8 text-center">
-            <h3 className="text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
+            <h3 className="text-2xl lg:text-3xl lg:text-right font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
               Eleva tus habilidades con SkillClass
             </h3>
             <div className="w-full relative aspect-video">
+              <div className="absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10 flex justify-center items-center">
+                <p className="text-sm sm:text-lg text-pretty leading-[17px]">Suma las habilidades necesarias para el exito</p>
+              </div>
               <Image
                 src={`/home/IdaClass Web Img 4.jpg`}
                 alt=""
