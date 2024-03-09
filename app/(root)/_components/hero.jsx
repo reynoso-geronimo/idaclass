@@ -14,8 +14,7 @@ const Hero = () => {
           Fitness
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
-          Despierta tu potencial, conviértete en un profesional con nuestros
-          cursos.
+        Con nuestros cursos, innovamos combinando teoria  y práctica para potenciar tu éxito en emprendimiento y empleabilidad.
         </h3>
         <div className="flex justify-center w-full">
           <Button
@@ -52,14 +51,13 @@ const Hero = () => {
 
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
         <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl  font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
             Únete a la
             <span className="text-idaclass4"> revolución educativa</span> Sport
             Fitness
           </h2>
           <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
-            Despierta tu potencial, conviértete en un profesional con nuestros
-            cursos.
+          Con nuestros cursos, innovamos combinando teoria  y práctica para potenciar tu éxito en emprendimiento y empleabilidad.
           </h2>
           <Button size="lg" className="rounded-2xl font-bold w-48 h-10" asChild>
             <Link href="/asesorate">Ver todos los cursos</Link>
