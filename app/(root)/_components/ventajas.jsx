@@ -107,37 +107,22 @@ const Ventajas = () => {
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-full lg:w-7/8 rounded-lg relative aspect-video text-white text-center overflow-hidden">
+          <div className="w-full lg:w-7/8 text-center">
             <h3 className="text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
               Eleva tus habilidades con SkillClass
             </h3>
-
-            <div className="grid grid-cols-2 lg:grid-cols-1 lg:gap-2 xl:gap-4 absolute rounded-2xl text-xs sm:text-base lg:text-lg text-idaclass font-bold bottom-[50%] max-sm:right-[0%] sm:left-[50%] w-[225px] sm:w-[280px]">
-              <p className="h-4 justify-self-start"><Dot className="inline"/>Marketing</p>
-              <p className="h-4 justify-self-start"><Dot className="inline"/>Venta </p>
-              <p className="h-4 justify-self-start"><Dot className="inline"/>Comunicacion</p>
-              <p className="h-4 justify-self-start"><Dot className="inline"/>Lidreazgo</p>
+            <div className="w-full relative aspect-video">
+              <Image
+                src={`/home/IdaClass Web Img 4.jpg`}
+                alt=""
+                fill
+                sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: "cover", // cover, contain, none
+                }}
+                className="-z-10 rounded-2xl"
+              />
             </div>
-            <div className="absolute right-4 lg:right-20 bottom-[55%] rotate-[90deg]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22.769"
-                height="14.821"
-                className="fill-idaclass scale-[900%] lg:scale-[1200%] opacity-35 -z-10"
-              >
-                <path d="M10.212 12.007 7.645 9.414h8v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
-              </svg>
-            </div>
-            <Image
-              src={`/home/IdaClass Web Img 4.jpg`}
-              alt=""
-              fill
-              sizes="(min-width: 808px) 50vw, 100vw"
-              style={{
-                objectFit: "cover", // cover, contain, none
-              }}
-              className="-z-10 rounded-2xl"
-            />
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
             <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight">
