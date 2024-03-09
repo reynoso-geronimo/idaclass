@@ -1,41 +1,41 @@
-import TituloSeccion from "@/components/ui/titulo-seccion";
-import modalidad1 from "../../../public/modalidad/IdaClass Web Img 6.2.jpg";
-import modalidad2 from "../../../public/modalidad/IdaClass Web Img 7.jpg";
-import modalidad3 from "../../../public/modalidad/modalidad3.webp";
-import Carousel from "./ui/carousel";
+"use client";
+import { ImagesSlider } from "@/components/ui/images-slider";
+import { motion } from "framer-motion";
+import React from "react";
 
-const slides = [
-  {
-    src: modalidad1,
-    alt: "modalidad",
-    // text: "Desarrolla tu futuro",
-  },
-  {
-    src: modalidad2,
-    alt: "modalidad",
-    //text: "Aprende haciendo",
-  },
-  {
-    src: modalidad3,
-    alt: "modalidad",
-    text: "Expertos internacionales",
-  },
-];
 
-const Modalidad = () => {
+const Modalidad=()=> {
+  const images = [
+    "./modalidad/IdaClass Web Img 6.2.jpg",
+    "./modalidad/IdaClass Web Img 7.jpg",
+    "./modalidad/modalidad3.webp",
+    
+  ];
   return (
-    <section className="text-center flex flex-col items-center w-full">
-      <TituloSeccion className={`mb-2 px-2`}>
-        Programa de educación continua
-      </TituloSeccion>
-      <h3 className="text-center text-xl text-gray-700 max-w-md mb-4 px-2">
-        Lleva tu carrera a otro nivel con los cursos de especialización on
-        demand a tu ritmo.
-      </h3>
-
-      <Carousel slides={slides} />
-    </section>
+    <ImagesSlider className="h-[400px] container" images={images}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className="z-50 flex flex-col justify-center items-center"
+      >
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          {/* The hero section slideshow <br /> nobody asked for */}
+        </motion.p>
+        {/* <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+          <span>Join now →</span>
+          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+        </button> */}
+      </motion.div>
+    </ImagesSlider>
   );
-};
-
+}
 export default Modalidad;
