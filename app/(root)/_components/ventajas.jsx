@@ -112,8 +112,11 @@ const Ventajas = () => {
               Eleva tus habilidades con SkillClass
             </h3>
             <div className="w-full relative aspect-video">
-              <div className="absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10 flex justify-center items-center">
-                <p className="text-sm sm:text-lg text-pretty leading-[17px]">Suma las habilidades necesarias para el exito</p>
+              <div className="max-lg:hidden absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10">
+                <p className="text-lg">
+                  Suma las habilidades necesarias para cumplir todas tus metas y
+                  objetivos profesionales con exito.
+                </p>
               </div>
               <Image
                 src={`/home/IdaClass Web Img 4.jpg`}
@@ -125,6 +128,12 @@ const Ventajas = () => {
                 }}
                 className="-z-10 rounded-2xl"
               />
+            </div>
+            <div className="lg:hidden my-4">
+              <p className="text-lg">
+                Suma las habilidades necesarias para cumplir todas tus metas y
+                objetivos profesionales con exito.
+              </p>
             </div>
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
