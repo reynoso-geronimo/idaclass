@@ -93,7 +93,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="/comunidad/blog"
+                href="/comunidad"
                 className={`border-l-2 border-idaclass4 pl-2 ${
                   pathname === "/comunidad/blog" && "text-idaclass4"
                 } `}
@@ -220,7 +220,7 @@ const NavBar = ({ cursosFormacion }) => {
             </Menubar>
 
             <Link
-              href="/comunidad/blog"
+              href="/comunidad"
               className={`${
                 pathname === "/comunidad/blog" &&
                 "after:w-[100%] text-idaclass4"
