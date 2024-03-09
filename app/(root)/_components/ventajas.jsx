@@ -129,7 +129,7 @@ const Ventajas = () => {
                 className="-z-10 rounded-2xl"
               />
             </div>
-            <div className="lg:hidden my-4">
+            <div className="lg:hidden my-4 container max-w-2xl">
               <p className="text-lg">
                 Suma las habilidades necesarias para cumplir todas tus metas y
                 objetivos profesionales con exito.
