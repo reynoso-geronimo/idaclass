@@ -99,7 +99,37 @@ export const ImagesSlider = ({
       opacity: 1,
       y: "-150%",
       transition: {
+        duration: 0.5,
+      },
+    },
+    downExit: {
+      opacity: 1,
+      y: "150%",
+      transition: {
         duration: 1,
+      },
+    },
+  };
+  const slideVariants2 = {
+    initial: {
+      scale: 0,
+      opacity: 0,
+      rotateX: 45,
+    },
+    visible: {
+      scale: 1,
+      rotateX: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.645, 0.045, 0.355, 1.0],
+      },
+    },
+    upExit: {
+      opacity: 1,
+      y: "-250%",
+      transition: {
+        duration: 0.5,
       },
     },
     downExit: {
@@ -141,15 +171,16 @@ export const ImagesSlider = ({
           />
         </AnimatePresence>
       )}
-      {currentIndex === 1 && (
+      <AnimatePresence>
         <motion.div
           key={currentIndex}
           initial="initial"
           animate="visible"
           exit={direction === "up" ? "upExit" : "downExit"}
-          variants={slideVariants}
-          className="text-white z-10 absolute right-0 top-[20%] w-1/2 text-center"
-        >
+          variants={slideVariants2}
+          className="text-white  absolute right-0 top-[20%] w-1/2 text-center"
+          >
+          {currentIndex === 1 && (<>
           <h3 className="text-idaclass3 text-4xl font-bold">
             CURSOS ON DEMAND
           </h3>
@@ -167,8 +198,10 @@ export const ImagesSlider = ({
               Ver todos los cursos
             </Button>
           </Link>
+          </>
+        )}
         </motion.div>
-      )}
+        </AnimatePresence>
     </div>
   );
 };
