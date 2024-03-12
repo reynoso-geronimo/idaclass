@@ -282,7 +282,16 @@ const CursoPage = async ({ params }) => {
       <Separator />
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
         <article className="w-full rounded-2xl border border-black">
-          <TituloSeccion className={`my-1 text-3xl`}>Bono extra</TituloSeccion>
+          <TituloSeccion className={`my-1 text-3xl`}>Requisitos</TituloSeccion>
+          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
+            <li>Mayor de 18 años o 16 con autorizacion de mayor responsable</li>
+            <li>Completar formulario de inscripción</li>
+            <li>Apto médico (solo modalidad presencial).</li>
+            <li>Certificado de escolaridad secundaria completa (solamente aquellas personas que deseen adquirir la Extensión Universitaria que proporciona IUYMCA).</li>
+          </ul>
+        </article>
+        <article className="w-full rounded-2xl border border-black">
+          <TituloSeccion className={`my-1 text-3xl`}>A quien va dirigido</TituloSeccion>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
             <li></li>
             <li></li>
@@ -312,12 +321,13 @@ const CursoPage = async ({ params }) => {
             />
           </div>
         </article>
+        
       </section>
       {/* modalidades y pago */}
       <Separator />
       <section id="inscripcion" className="pt-6 container">
         <div className="flex max-lg:flex-col gap-4 justify-center items-center lg:items-stretch">
-          <div className={"w-full max-w-lg lg:w-1/3 lg:text-left"}>
+          <div className={"w-full max-w-md lg:w-1/3 lg:text-left"}>
             <TituloSeccion className={"text-left"}>
               Elige la modalidad que mas se adapte a ti
             </TituloSeccion>

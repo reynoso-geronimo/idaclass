@@ -10,12 +10,14 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ChevronRight, MonitorPlay, Users } from "lucide-react";
+import Image from "next/image";
+import linea from "../../../../public/assets/Línea img 4.png";
 
 const TarjetaModalidad = ({ modalidad }) => {
   return (
-    <Card className="border border-black w-full max-w-lg lg:w-1/3 flex flex-col justify-between">
-      <CardHeader>
-        <CardTitle className="font-extrabold">
+    <Card className="border border-black w-full max-w-sm lg:w-1/3 flex flex-col justify-between overflow-hidden">
+      <CardHeader className="pb-0 h-[160px]">
+        <CardTitle className="font-extrabold ">
           <Badge>Incluye BecaClass</Badge>
           {modalidad === "ONLINE" ? (
             <p>
@@ -31,6 +33,13 @@ const TarjetaModalidad = ({ modalidad }) => {
               Modalidad Presencial
             </p>
           )}
+          <div className="relative w-full">
+            <Image
+              src={linea}
+              alt="linea"
+              className={`relative  bottom-0  ${modalidad==="ONLINE"?"-scale-150 -left-[40%]":"scale-150 -right-[60%]"}`}
+            />
+          </div>
         </CardTitle>
         <CardDescription className="font-bold text-white text-lg"></CardDescription>
       </CardHeader>
