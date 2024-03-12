@@ -273,34 +273,35 @@ const CursoPage = async ({ params }) => {
         </div>
       </section>
       <Separator />
-      <EquipoProfesional
-        titulo="Conoce al equipo de "
-        titulo2="Trainers Educativos "
-        titulo2Class="text-idaclass4"
-        titulo3="que te guiara al exito"
-      />
-      <Separator />
+
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
-        <article className="w-full rounded-2xl border border-black">
+        <article className="w-full rounded-2xl overflow-hidden">
           <TituloSeccion className={`my-1 text-3xl`}>Requisitos</TituloSeccion>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
             <li>Mayor de 18 años o 16 con autorizacion de mayor responsable</li>
             <li>Completar formulario de inscripción</li>
             <li>Apto médico (solo modalidad presencial).</li>
-            <li>Certificado de escolaridad secundaria completa (solamente aquellas personas que deseen adquirir la Extensión Universitaria que proporciona IUYMCA).</li>
+            <li>
+              Certificado de escolaridad secundaria completa (solamente aquellas
+              personas que deseen adquirir la Extensión Universitaria que
+              proporciona IUYMCA).
+            </li>
           </ul>
         </article>
-        <article className="w-full rounded-2xl border border-black">
-          <TituloSeccion className={`my-1 text-3xl`}>A quien va dirigido</TituloSeccion>
+        <article className="w-full rounded-2xl overflow-hidden">
+          <TituloSeccion className={`my-1 text-3xl`}>
+            A quien va dirigido
+          </TituloSeccion>
           <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Público en general, sin conocimientos previos.</li>
+            <li>Estudiantes de carreras afines.</li>
+            <li>
+              Deportistas amateurs, profesionales del Deporte, Salud y Fitness.
+            </li>
           </ul>
         </article>
 
-        <article className="w-full rounded-2xl border border-black overflow-hidden">
+        <article className="w-full rounded-2xl overflow-hidden">
           <TituloSeccion className={`my-1 text-3xl`}>
             Potencia tu empleabilidad o emprende
           </TituloSeccion>
@@ -321,7 +322,6 @@ const CursoPage = async ({ params }) => {
             />
           </div>
         </article>
-        
       </section>
       {/* modalidades y pago */}
       <Separator />
@@ -332,10 +332,15 @@ const CursoPage = async ({ params }) => {
               Elige la modalidad que mas se adapte a ti
             </TituloSeccion>
             <p>
-             Elige a la modalidad que mas se adapte a tus necesidades e intereses. <br />
-             En el caso de elegir modalidad presencial consultar o ver las sedes disponibles.
+              Elige a la modalidad que mas se adapte a tus necesidades e
+              intereses. <br />
+              En el caso de elegir modalidad presencial consultar o ver las
+              sedes disponibles.
             </p>
-            <Button size={"sm"}><MapPin/>Ver sedes disponibles </Button>
+            <Button size={"sm"}>
+              <MapPin />
+              Ver sedes disponibles{" "}
+            </Button>
           </div>
           <TarjetaModalidad modalidad={"ONLINE"} />
           <TarjetaModalidad />
@@ -344,12 +349,19 @@ const CursoPage = async ({ params }) => {
       <section className="container flex flex-col items-stretch sm:flex-row gap-4">
         <Beca />
       </section>
-      <section className="container">
-        {/* <TituloSeccion className={""}>
+      <EquipoProfesional
+        titulo="Conoce al equipo de "
+        titulo2="Trainers Educativos "
+        titulo2Class="text-idaclass4"
+        titulo3="que te guiara al exito"
+      />
+      <Separator />
+
+      {/* <TituloSeccion className={""}>
           Casos de éxito de nuestros estudiantes
         </TituloSeccion> */}
-        <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
-      </section>
+      <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
+
       <Separator />
       <section className="container my-12 ">
         <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
