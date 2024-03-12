@@ -10,6 +10,7 @@ import {
   Clock,
   Construction,
   Dot,
+  MapPin,
   Monitor,
   Plus,
 } from "lucide-react";
@@ -315,12 +316,19 @@ const CursoPage = async ({ params }) => {
       {/* modalidades y pago */}
       <Separator />
       <section id="inscripcion" className="pt-6 container">
-        <h1 className="text-center font-bold text-xl pb-4 container">
-          Elige la modalidad que mas se adapte a ti
-        </h1>
-        <div className="flex max-sm:flex-col gap-4 justify-evenly items-center">
-        <TarjetaModalidad modalidad={"ONLINE"}/>
-        <TarjetaModalidad/>
+        <div className="flex max-lg:flex-col gap-4 justify-center items-center lg:items-stretch">
+          <div className={"w-full max-w-lg lg:w-1/3 lg:text-left"}>
+            <TituloSeccion className={"text-left"}>
+              Elige la modalidad que mas se adapte a ti
+            </TituloSeccion>
+            <p>
+             Elige a la modalidad que mas se adapte a tus necesidades e intereses. <br />
+             En el caso de elegir modalidad presencial consultar o ver las sedes disponibles.
+            </p>
+            <Button size={"sm"}><MapPin/>Ver sedes disponibles </Button>
+          </div>
+          <TarjetaModalidad modalidad={"ONLINE"} />
+          <TarjetaModalidad />
         </div>
       </section>
       <section className="container flex flex-col items-stretch sm:flex-row gap-4">
