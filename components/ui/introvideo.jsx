@@ -8,7 +8,7 @@ const Introvideo = ({videoid = "kfLDLD653zM",texto = "Conoce IdaClass",className
     <Dialog>
       <DialogTrigger
         className={cn(
-          "rounded-2xl font-bold flex items-center gap-2 text-idaclass4",
+          "rounded-2xl font-bold flex items-center gap-2 text-idaclass4 hover:scale-125 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] transition-all ",
           className
         )}
       >

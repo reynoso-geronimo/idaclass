@@ -1,3 +1,5 @@
+import Modalidad from "@/app/(root)/_components/modalidad";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,28 +9,41 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ChevronRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { ChevronRight, MonitorPlay, Users } from "lucide-react";
 
-const TarjetaModalidad = ({ modalidad, precio, duracion }) => {
+const TarjetaModalidad = ({ modalidad }) => {
   return (
-    <Card className="mx-auto w-52 mt-4 mb-12 text-center bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-idaclass3 to-indigo-900 text-white ">
+    <Card className="border border-black w-[24rem]">
       <CardHeader>
-        <CardTitle className="bg-emerald-400 font-extrabold relative -top-10 p-2 rounded-tl-3xl rounded-br-3xl">
-          {modalidad || "ONLINE"}
+        <CardTitle className="font-extrabold">
+          <Badge>Incluye BecaClass</Badge>
+          {modalidad === "ONLINE" ? (
+            <p>
+              <MonitorPlay
+                size={30}
+                className="inline stroke-emerald-800 my-4"
+              />
+              Modalidad ONLINE
+            </p>
+          ) : (
+            <p>
+              <Users size={30} className="inline stroke-red-800 my-4" />
+              Modalidad Presencial
+            </p>
+          )}
         </CardTitle>
-        <CardDescription className="font-bold text-white text-lg">
-          $ {precio || "PRECIO"}
-        </CardDescription>
+        <CardDescription className="font-bold text-white text-lg"></CardDescription>
       </CardHeader>
       <CardContent>
-        <p>
-          {duracion || "XX"} pagos sin interes al mes, 20% de descuento en un
-          solo pago.
-        </p>
+        <p></p>
       </CardContent>
-      <CardFooter className="flex justify-center">
-        <Button size="lg" className="bg-fuchsia-500 text-white m-auto">
-          Comprar ahora <ChevronRight />
+
+      <CardFooter className="flex flex-col">
+        <Separator className="mb-2 bg-black" />
+        <Button size="lg" className="text-white">
+          Inscribirme ahora
+          <ChevronRight />
         </Button>
       </CardFooter>
     </Card>

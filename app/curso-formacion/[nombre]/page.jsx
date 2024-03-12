@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 import {
   ArrowUp,
@@ -29,13 +22,11 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
-import cert2 from "../../../public/certi/cert2.webp";
 import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/app/(root)/_components/equipo-profesional";
-import Asesorate from "@/components/ui/asesorate";
 
 import CasosExito from "@/app/(root)/_components/casos-exito";
 import linea from "../../../public/assets/Línea img 4.png";
@@ -78,16 +69,6 @@ const contenido = [
       },
     ],
   },
-];
-
-const areas = [
-  { src: `/home/areas/entrenamiento.jpeg`, area: "Entrenamiento" },
-  {
-    src: `/home/areas/desarolloprofesional.jpeg`,
-    area: "Desarrollo Profesional",
-  },
-  { src: `/home/areas/gimnasio.jpeg`, area: "Gimnasio" },
-  { src: `/home/areas/nutricion.jpg`, area: "Nutricion" },
 ];
 
 const CursoPage = async ({ params }) => {
@@ -183,6 +164,42 @@ const CursoPage = async ({ params }) => {
             Frecuencia: {frecuencia}
           </li>
         </ul>
+      </section>
+      <Separator />
+      <section className="container bg-emerald-300 min-h-[20rem]">
+        <article className="w-1/2">
+          <TituloSeccion className="text-left">
+            Objetivos del curso
+          </TituloSeccion>
+          <p>
+            El egresado del curso de Preparador Físico Deportivo se distingue
+            como un profesional certificado y altamente capacitado en el ámbito
+            del rendimiento deportivo. Con un profundo entendimiento de los
+            fundamentos teóricos y prácticos de la preparación física, estará
+            preparado para trabajar con deportistas de diversas edades y niveles
+            de rendimiento, desde amateurs hasta atletas de élite. Poseerá
+            habilidades para diseñar programas de entrenamiento adaptados a las
+            necesidades individuales de cada deportista, integrando
+            conocimientos sobre fisiología del ejercicio, biomecánica y
+            nutrición deportiva
+          </p>
+          <TituloSeccion className="text-left">
+            Perfil del egresado
+          </TituloSeccion>
+          <p>
+            El egresado del curso de Preparador Físico Deportivo se distingue
+            como un profesional certificado y altamente capacitado en el ámbito
+            del rendimiento deportivo. Con un profundo entendimiento de los
+            fundamentos teóricos y prácticos de la preparación física, estará
+            preparado para trabajar con deportistas de diversas edades y niveles
+            de rendimiento, desde amateurs hasta atletas de élite. Poseerá
+            habilidades para diseñar programas de entrenamiento adaptados a las
+            necesidades individuales de cada deportista, integrando
+            conocimientos sobre fisiología del ejercicio, biomecánica y
+            nutrición deportiva
+          </p>
+        </article>
+        <article></article>
       </section>
       <Separator />
       <CertificacionCursoFormacion />
@@ -297,31 +314,17 @@ const CursoPage = async ({ params }) => {
       </section>
       {/* modalidades y pago */}
       <Separator />
-      <section id="inscripcion" className="pt-6">
+      <section id="inscripcion" className="pt-6 container">
         <h1 className="text-center font-bold text-xl pb-4 container">
           Elige la modalidad que mas se adapte a ti
         </h1>
-
-        <Carousel className="mx-auto max-w-[270px] sm:max-w-[70vw] ">
-          <CarouselContent className="-ml-1">
-            {Array.from({ length: 2 }).map((_, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-1 sm:basis-1/2 lg:basis-1/2"
-              >
-                <TarjetaModalidad />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="lg:hidden">
-            <CarouselPrevious className="-left-4 sm:-left-12 h-10 w-10" />
-            <CarouselNext className="-right-4 sm:-right-12 h-10 w-10" />
-          </div>
-        </Carousel>
+        <div className="flex max-sm:flex-col gap-4 justify-evenly items-center">
+        <TarjetaModalidad modalidad={"ONLINE"}/>
+        <TarjetaModalidad/>
+        </div>
       </section>
       <section className="container flex flex-col items-stretch sm:flex-row gap-4">
-        
-        <Beca/>
+        <Beca />
       </section>
       <section className="container">
         {/* <TituloSeccion className={""}>
@@ -377,12 +380,19 @@ const CursoPage = async ({ params }) => {
       </section>
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-50 flex justify-around items-center gap-2">
         <p className="text-white">+ de 50.0000 certificados otorgados </p>
-       <div className="flex gap-12">
-       <Link asChild href="#inscripcion"><Button>Inscribirme ahora</Button></Link>
-        <div className="">
-          <Image src={`/assets/whatsapp-svgrepo-com.svg`} height={40} width={40} alt="asesorate"/>
+        <div className="flex gap-12">
+          <Link asChild href="#inscripcion">
+            <Button>Inscribirme ahora</Button>
+          </Link>
+          <div className="">
+            <Image
+              src={`/assets/whatsapp-svgrepo-com.svg`}
+              height={40}
+              width={40}
+              alt="asesorate"
+            />
+          </div>
         </div>
-       </div>
       </div>
     </main>
   );

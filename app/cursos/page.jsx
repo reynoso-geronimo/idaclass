@@ -11,14 +11,23 @@ import { ChevronDown } from "lucide-react";
 import { getCursosFromDB } from "../actions";
 import CursoOnDemand from "./_components/curso-on-demand-card";
 import { Separator } from "@/components/ui/separator";
-
+import { YouTubeEmbed } from '@next/third-parties/google'
 const Page = async () => {
   const cursos = await getCursosFromDB();
   return (
     <main className="bg-gray-200">
-      <Tabs defaultValue="categoria1" className="flex-1  mt-4 lg:mt-0">
+      <header className="grid grid-cols-2 container gap-4">
+        <div className=" bg-orange-400 h-[16rem] col-span-2">ACA UN TITULO</div>
+        
+
+        <div className=" bg-red-400 ">ACA UN TITULO</div>
+        <div className=" bg-black ">
+        <YouTubeEmbed videoid="ogfYd705cRs" params="controls=0" className="h-[10rem]"/>
+        </div>
+      </header>
+      <Tabs defaultValue="categoria1" className="flex-1  mt-4 lg:mt-0 container">
         <DropdownMenu>
-          <div className="w-full flex justify-center ">
+          <div className="w-full flex justify-center">
             <Button
               asChild
               size="sm"
