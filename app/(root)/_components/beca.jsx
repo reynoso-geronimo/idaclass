@@ -5,8 +5,8 @@ import Asesorate from "@/components/ui/asesorate";
 
 const Beca = () => {
   return (
-    <section className="w-full container mt-12">
-      <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center">
+    <section className="container lg:px-0 mt-12">
+      <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-between">
         <Asesorate />
         <div className="w-full text-center p-8 overflow-hidden rounded-3xl border-2 border-black">
           <TituloSeccion className={"mb-4"}>
