@@ -9,7 +9,7 @@ const Asesorate = () => {
         <TituloSeccion className="text-left text-lg sm:text-3xl p-0 m-0 relative z-10">
           Necesitas ayuda <br /> o tienes alguna <br /> pregunta?
         </TituloSeccion>
-        <p className="my-4 text-sm lg:text-base z-10 text-balanced">
+        <p className="my-4 text-sm sm:text-base z-10 text-balanced">
           Nuestros asesores están disponibles para escucharte y
           despejar todas tus dudas
         </p>
