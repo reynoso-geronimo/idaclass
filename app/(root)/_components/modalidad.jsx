@@ -41,7 +41,7 @@ const Modalidad=()=> {
         </button>  */}
       </motion.div>
     </ImagesSlider>
-    <ImagesSlider className="min-h-[600px] container lg:hidden" images={imagesCelular} overlay={false}>
+    <ImagesSlider className="min-h-[400px] container lg:hidden" images={imagesCelular} overlay={false}>
       <motion.div
         initial={{
           opacity: 0,
