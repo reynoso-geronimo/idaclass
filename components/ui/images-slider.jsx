@@ -176,32 +176,51 @@ export const ImagesSlider = ({
           key={currentIndex}
           initial="initial"
           animate="visible"
-          exit={direction === "up" ? "upExit" : "downExit"}
-          variants={slideVariants2}
-          className="text-white absolute right-0 top-[20%] w-1/2 text-center max-lg:hidden"
-          >
-          {currentIndex === 1 && (<>
-          <h3 className="text-idaclass3 text-4xl font-bold">
-            CURSOS ON DEMAND
-          </h3>
-          <h3 className="text-idaclass3 text-2xl font-bold">
-            Lleva tu carrera al siguiente nivel!!!!
-          </h3>
-
-          <ul className="list-inside list-disc my-2">
-            <li>Estudia a tu ritmo </li>
-            <li>Expertos internacionales </li>
-            <li>Elije tu area de especializacion</li>
-          </ul>
+          //exit={direction === "up" ? "upExit" : "downExit"}
+          variants={slideVariants}
+          className="text-white absolute bottom-10 text-center lg:hidden z-10"
+        >
           <Link href={"/cursos"}>
-            <Button variants="lg" className="rounded-lg mt-4">
-              Ver todos los cursos
+            <Button className={"h-12 w-[80vw]  text-lg"}>
+              {currentIndex === 0 && "Impulsa tu carrera hoy mismo"}
+              {currentIndex === 1 && "Elige tu curso"}
+              {currentIndex === 2 && "Ver todos los cursos"}
             </Button>
           </Link>
-          </>
-        )}
         </motion.div>
-        </AnimatePresence>
+      </AnimatePresence>
+      <AnimatePresence>
+        <motion.div
+          key={currentIndex}
+          initial="initial"
+          animate="visible"
+          exit={direction === "up" ? "upExit" : "downExit"}
+          variants={slideVariants2}
+          className="text-white absolute lg:right-0 top-[10%] lg:top-[20%] w-1/2 text-center"
+        >
+          {currentIndex === 1 && (
+            <>
+              <h3 className="text-idaclass3 text-4xl font-bold">
+                CURSOS ON DEMAND
+              </h3>
+              <h3 className="text-idaclass3 text-2xl font-bold">
+                Lleva tu carrera al siguiente nivel!!!!
+              </h3>
+
+              <ul className="list-inside list-disc my-2">
+                <li>Estudia a tu ritmo </li>
+                <li>Expertos internacionales </li>
+                <li>Elije tu area de especializacion</li>
+              </ul>
+              <Link href={"/cursos"} className="max-lg:hidden">
+                <Button variants="lg" className="rounded-lg mt-4">
+                  Ver todos los cursos
+                </Button>
+              </Link>
+            </>
+          )}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

@@ -11,8 +11,9 @@ const Modalidad=()=> {
     "./modalidad/IdaClass Web Img 7.jpg",
   ];
   const imagesCelular =[
-    "./modalidad/IdaClass Web Img 9.jpg",
     "./modalidad/IdaClass Web Img 8.jpg",
+    "./modalidad/IdaClass Web Img 10.jpg",
+    "./modalidad/IdaClass Web Img 9.jpg",
   
   ]
   return (
