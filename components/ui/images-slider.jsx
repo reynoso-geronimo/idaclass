@@ -203,9 +203,9 @@ export const ImagesSlider = ({
               <h3 className="text-idaclass3 text-4xl font-bold">
                 CURSOS ON DEMAND
               </h3>
-              <h3 className="text-idaclass3 text-2xl font-bold">
+              {/* <h3 className="text-idaclass3 text-2xl font-bold">
                 Lleva tu carrera al siguiente nivel!!!!
-              </h3>
+              </h3> */}
 
               <ul className="list-inside list-disc my-2">
                 <li>Estudia a tu ritmo </li>
