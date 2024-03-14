@@ -167,7 +167,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-contain object-center"
+            className="image h-full w-full absolute inset-0 object-cover lg:object-contain object-center"
           />
         </AnimatePresence>
       )}
@@ -178,7 +178,7 @@ export const ImagesSlider = ({
           animate="visible"
           exit={direction === "up" ? "upExit" : "downExit"}
           variants={slideVariants2}
-          className="text-white  absolute right-0 top-[20%] w-1/2 text-center"
+          className="text-white absolute right-0 top-[20%] w-1/2 text-center max-lg:hidden"
           >
           {currentIndex === 1 && (<>
           <h3 className="text-idaclass3 text-4xl font-bold">
@@ -193,7 +193,7 @@ export const ImagesSlider = ({
             <li>Expertos internacionales </li>
             <li>Elije tu area de especializacion</li>
           </ul>
-          <Link asChild href={"/cursos"}>
+          <Link href={"/cursos"}>
             <Button variants="lg" className="rounded-lg mt-4">
               Ver todos los cursos
             </Button>
