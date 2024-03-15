@@ -120,8 +120,10 @@ const CursoPage = async ({ params }) => {
           >
             Acerca de este curso
           </Badge>
+          
           <Separator />
           <ul className="text-sm font-semibold flex flex-col gap-2 mb-8">
+          
             <li>{descripcionuno && descripcionuno}</li>
             <li>{descripciondos && descripciondos}</li>
             <li>{descripciontres && descripciontres}</li>

@@ -17,7 +17,7 @@ const CasoExito = ({
         <Quote className="transform -rotate-180" />
         <Avatar>
           <AvatarImage
-            src={`https://flagcdn.com/${pais ? pais : "ar"}.svg`}
+            src={`https://flagcdn.com/${pais !=undefined ? pais : "ar"}.svg`}
             alt={`${pais ? pais : "argentina"}`}
           />
           <AvatarFallback className="text-black">PP</AvatarFallback>

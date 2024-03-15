@@ -141,6 +141,7 @@ const CursoPage = async ({ params }) => {
           >
             Acerca de este curso
           </Badge>
+          
 
           <p className="text-sm font-semibold flex flex-col gap-2 mb-8">
             {acerca}
