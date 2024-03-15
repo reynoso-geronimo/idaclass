@@ -30,7 +30,7 @@ const Footer = () => {
         <Link href="/nosotros">Nosotros</Link>
         <Link href="/cursos">Cursos</Link>
         <Link href="/comunidad">Comunidad IdaClass</Link>
-        <Link href="/asesorate">Asesórate ya</Link>
+        <Link href="https://wa.me/+5491135872204">Asesórate ya</Link>
       </section>
 
       <section className="w-full mt-6">

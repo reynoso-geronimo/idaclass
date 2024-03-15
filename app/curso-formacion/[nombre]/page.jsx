@@ -415,6 +415,7 @@ const CursoPage = async ({ params }) => {
           <Link asChild href="#inscripcion">
             <Button>Inscribirme ahora</Button>
           </Link>
+          <Link href="https://wa.me/+5491135872204">
           <div className="">
             <Image
               src={`/assets/whatsapp-svgrepo-com.svg`}
@@ -423,6 +424,7 @@ const CursoPage = async ({ params }) => {
               alt="asesorate"
             />
           </div>
+          </Link>
         </div>
       </div>
     </main>

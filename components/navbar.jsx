@@ -104,7 +104,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="/asesorate"
+                href="https://wa.me/+5491135872204"
                 className={`border-l-2 border-idaclass4 pl-2 ${
                   pathname === "/asesorate" && "text-idaclass4"
                 } `}
@@ -230,7 +230,7 @@ const NavBar = ({ cursosFormacion }) => {
             </Link>
 
             <Link
-              href="/asesorate"
+              href="https://wa.me/+5491135872204"
               className={`${
                 pathname === "/asesorate" && "after:w-[100%] text-idaclass4"
               } ${classEscritorio} fill-green-500 hover:fill-idaclass4`}
