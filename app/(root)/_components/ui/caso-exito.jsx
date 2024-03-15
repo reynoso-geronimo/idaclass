@@ -12,15 +12,15 @@ const CasoExito = ({
   pais,
 }) => {
   return (
-    <div className="bg-gray-800 container px-4 mx-auto py-2 text-white flex flex-col justify-around rounded-3xl max-w-60 lg:max-w-72 aspect-square">
+    <div className="bg-gray-800 container px-4 mx-auto py-4 text-white flex flex-col justify-between rounded-3xl max-w-72 lg:max-w-80 aspect-square">
       <div className="flex gap-1">
         <Quote className="transform -rotate-180" />
         <Avatar>
           <AvatarImage
-            src={`https://flagcdn.com/${pais !=undefined ? pais : "ar"}.svg`}
+            src={`https://flagcdn.com/${pais}.svg`}
             alt={`${pais ? pais : "argentina"}`}
           />
-          <AvatarFallback className="text-black">PP</AvatarFallback>
+          <AvatarFallback className="text-black">{pais}</AvatarFallback>
         </Avatar>
         <div>
           <h3 className="text-bold flex items-center gap-1 text-sm lg:text-base">
@@ -41,7 +41,7 @@ const CasoExito = ({
         href={linkedin ? linkedin : "/"}
         className="text-idaclass3 font-bold ml-auto"
       >
-        Ver Linkedin
+        Ver Perfil
       </Link>
     </div>
   );
