@@ -4,6 +4,9 @@ import Image from "next/image";
 import React from "react";
 import EmpresasPartners from "../(root)/_components/empresasParteners";
 import Faq from "../(root)/_components/faq";
+import { getBlogPostFromDb } from "../actions";
+
+const blogPost = await getBlogPostFromDb(3);
 
 const Page = () => {
   return (
@@ -42,8 +45,9 @@ const Page = () => {
           />
           <h4>IdaClass Jobs - Bolsa de trabajo y pasantías</h4>
           <p>
-          Descubre oportunidades emocionantes para dar el siguiente paso en tu carrera. 
-          Desde puestos de trabajo hasta experiencias de pasantías, conectamos talento con las mejores oportunidades del sector
+            Descubre oportunidades emocionantes para dar el siguiente paso en tu
+            carrera. Desde puestos de trabajo hasta experiencias de pasantías,
+            conectamos talento con las mejores oportunidades del sector
           </p>
         </div>
         <div className=" container border-2 border-black">
@@ -56,8 +60,9 @@ const Page = () => {
           />
           <h4> IDAclass Hub - </h4>
           <p>
-          mundo de conocimiento con nuestro Hub. Encuentra blogs, notas de interés y contenido exclusivo que te mantendrán 
-          a la vanguardia de las últimas tendencias y desarrollos en el ámbito del SportFitness
+            mundo de conocimiento con nuestro Hub. Encuentra blogs, notas de
+            interés y contenido exclusivo que te mantendrán a la vanguardia de
+            las últimas tendencias y desarrollos en el ámbito del SportFitness
           </p>
         </div>
         <div className=" container border-2 border-black">
@@ -70,18 +75,17 @@ const Page = () => {
           />
           <h4> IDAclass Conecta Networking:</h4>
           <p>
-         
-Establece conexiones significativas con expertos, líderes, mentores y profesionales de la industria. 
-Participa en webinars emocionantes que te brindarán insights valiosos y perspectivas inspiradoras.
+            Establece conexiones significativas con expertos, líderes, mentores
+            y profesionales de la industria. Participa en webinars emocionantes
+            que te brindarán insights valiosos y perspectivas inspiradoras.
           </p>
         </div>
       </section>
       <section className="container my-12">
         <div className="container w-full flex bg-red-300 gap-12">
           <div className="w-1/2 aspect-video bg-black">video</div>
-          <div className="w-1/2 bg-emerald-200 aspect-video"> 
-          
-         <h1>formulario</h1>
+          <div className="w-1/2 bg-emerald-200 aspect-video">
+            <h1>formulario</h1>
           </div>
         </div>
         <TituloSeccion className={`mb-0`}>
@@ -89,54 +93,22 @@ Participa en webinars emocionantes que te brindarán insights valiosos y perspec
         </TituloSeccion>
         <h4 className="text-center mb-12">Subtitulo</h4>
         <div className="grid grid-cols-4 gap-12">
-          <article className="border-2 border-black">
-            <Image
-              src={``}
-              width={520}
-              height={520}
-              alt="Imagen de Blog"
-              className="bg-black aspect-video mx-auto text-white"
-            />
-            <div className="container">
-              <h5 className="text-bold">
-                El poder de las emociones en la actividad física y el deporte:
-                Explorando su influencia en los resultados.
-              </h5>
-              <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
-            </div>
-          </article>
-          <article className="border-2 border-black">
-            <Image
-              src={``}
-              width={520}
-              height={520}
-              alt="Imagen de Blog"
-              className="bg-black aspect-video mx-auto text-white"
-            />
-            <div className="container">
-              <h5 className="text-bold">
-                El poder de las emociones en la actividad física y el deporte:
-                Explorando su influencia en los resultados.
-              </h5>
-              <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
-            </div>
-          </article>
-          <article className="border-2 border-black">
-            <Image
-              src={``}
-              width={520}
-              height={520}
-              alt="Imagen de Blog"
-              className="bg-black aspect-video mx-auto text-white"
-            />
-            <div className="container">
-              <h5 className="text-bold">
-                El poder de las emociones en la actividad física y el deporte:
-                Explorando su influencia en los resultados.
-              </h5>
-              <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
-            </div>
-          </article>
+          {blogPost.map((post, index) => (
+            <article className="border-2 border-black" key={index}>
+              <Image
+                src={"/blog/" + post.foto}
+                width={520}
+                height={520}
+                alt="Imagen de Blog"
+                className="bg-black aspect-video mx-auto text-white"
+              />
+              <div className="container">
+                <h5 className="text-bold">{post.titulo}</h5>
+                <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
+              </div>
+            </article>
+          ))}
+
           <div className="bg-red-500 row-span-2">
             <TituloSeccion
               className={`text-left border-l-4 border-black mb-0 text-3xl`}

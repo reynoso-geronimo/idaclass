@@ -31,6 +31,7 @@ export async function getCursosFromDB() {
   }
 }
 export async function getCursosFormacionFromDB() {
+  
   try {
     const response = await CursosFormacion.findAll()
     const data = response.map(curso => curso.toJSON()); 
@@ -40,9 +41,10 @@ export async function getCursosFormacionFromDB() {
     console.log(error);
   }
 }
-export async function getBlogPostFromDb(){
+export async function getBlogPostFromDb(limit){
+  console.log(limit);
 try {
-  const response = await Blog.findAll()
+  const response = await Blog.findAll({ limit: limit })
   const data = response.map(blog => blog.toJSON());
   return data
 } catch (error) {
