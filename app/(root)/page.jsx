@@ -8,11 +8,12 @@ import Faq from "./_components/faq";
 import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
 import CasosExito from "./_components/casos-exito";
-import Banderas from "./_components/banderas";
 import EquipoProfesional from "./_components/equipo-profesional";
 import Beca from "./_components/beca";
 import EmpresasPartners from "./_components/empresasParteners";
+import dynamic from "next/dynamic";
 
+const DynamicModalidad=dynamic(()=>import("./_components/modalidad"),{ssr:false})
 export default function Home() {
   return (
     <main className="overflow-hidden">
@@ -23,7 +24,7 @@ export default function Home() {
       {/* <Banderas/> */}
       <Soluciones />
       <CursosFormacion />
-      <Modalidad />
+      <DynamicModalidad />
       <Certificacion />
 
       <EquipoProfesional />
