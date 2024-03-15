@@ -196,7 +196,7 @@ export const ImagesSlider = ({
           animate="visible"
           exit={direction === "up" ? "upExit" : "downExit"}
           variants={slideVariants2}
-          className="text-white absolute lg:right-0 top-[10%] lg:top-[20%] w-1/2 text-center"
+          className="text-white absolute lg:right-0 top-[10%] lg:top-[20%] lg:w-1/2 text-center"
         >
           {currentIndex === 1 && (
             <>
