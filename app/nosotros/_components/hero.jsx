@@ -82,12 +82,12 @@ export const products = [
     title: "Invoker Labs",
     link: "https://invoker.lol",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    "/nosotros/13.jpeg",
   },
   {
     title: "E Free Invoice",
     link: "https://efreeinvoice.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    "/nosotros/14.jpeg",
   },
 ];

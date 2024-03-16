@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import TituloSeccion from "./titulo-seccion";
 
 export const HeroParallax = ({
   products,
@@ -98,12 +99,12 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-5xl md:text-7xl font-bold dark:text-white">
-        Conoce Nuestra <br /> EdTech
+      <h1 className="text-5xl md:text-7xl font-bold dark:text-white relative z-10">
+        Conoce Nuestra  <span className="text-idaclass">ED</span><span className="text-idaclass4">Tech</span>
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Error recusandae iste atque ipsum magnam sit labore, ea laudantium veniam aperiam maxime ducimus possimus! Eveniet quo recusandae voluptatem corrupti, temporibus dolorum!
-      </p>
+      <TituloSeccion className="text-left text-black">
+      Se parte de la revolución educativa Sport Fitness
+      </TituloSeccion>
     </div>
   );
 };
@@ -128,7 +129,7 @@ export const ProductCard = ({ product, translate }) => {
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-contain object-left-top absolute h-full w-full inset-0"
+          className="object-contain object-center-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>

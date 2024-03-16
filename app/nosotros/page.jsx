@@ -7,6 +7,7 @@ import { sobreNosotros } from "@/lib/constants";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { HeroParallaxNosotros } from "./_components/hero";
 import { HoverEffect } from "@/components/ui/card-hover";
+import Count from "./_components/count";
 
 export const valores = [
   {
@@ -16,21 +17,21 @@ export const valores = [
       // link: "https://netflix.com",
   },
   {
-    title: "Calidad Educativa",
+    title: "Emprendedurismo",
     description:
-      "Nos comprometemos a ofrecer programas de formación de la más alta calidad, respaldados por profesionales expertos y actualizados en las últimas tendencias y avances en el ámbito deportivo y de la actividad física.",
+    "Fomentamos el espíritu emprendedor en cada uno de nuestros estudiantes. En IdaClass, creemos en el poder de la innovación y la creatividad para transformar el mundo del fitness y el bienestar. ¡Sé valiente, sé audaz, sé emprendedor!",
     // link: "https://netflix.com",
   },
   {
-    title: "Empoderamiento",
+    title: "Liderazgo",
     description:
-      "Nuestra misión es empoderar a nuestros graduados para que se conviertan en líderes exitosos en la industria del deporte. Facilitamos el emprendimiento y la independencia, fomentando la creatividad y la autogestión.",
+    "En IdaClass, fomentamos el liderazgo en todos los niveles. Nos esforzamos por inspirar a nuestros estudiantes a convertirse en líderes en sus campos, capacitándolos con las habilidades y la confianza necesarias para liderar con éxito en el mundo del fitness y el bienestar."
     // link: "https://google.com",
   },
   {
-    title: "Colaboración",
+    title: "Inclusión",
     description:
-      "Valoramos la colaboración y la construcción de una comunidad sólida. Facilitamos la conexión entre estudiantes, profesores, profesionales y expertos en el campo, creando una red de apoyo que se extiende más allá de las fronteras.",
+    "La inclusión es un pilar fundamental de nuestra comunidad en IdaClass. Nos comprometemos a crear un ambiente acogedor y diverso donde cada persona se sienta valorada y respetada. Celebramos la diversidad en todas sus formas y promovemos la igualdad de oportunidades para todos.",
     // link: "https://meta.com",
   },
  
@@ -43,7 +44,7 @@ const Page = () => {
       <section className="container">
       <HeroParallaxNosotros/>
       </section>
-      
+      <Count/>
       <section className=" bg-gray-900 w-full overflow-hidden">
         <TracingBeam className={""}>
           <div className="text-white flex flex-col items-center px-4 my-12 ">
@@ -52,10 +53,7 @@ const Page = () => {
                 Sobre Nosotros
               </h2>
               <p className="text-lg md:text-xl">
-                Lddddorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit ad magnam libero corporis repudiandae fuga rerum
-                nisi qui, iusto odit quas eius. Quis, quam ipsam natus adipisci
-                vel assumenda nulla?
+              Somos IdaClass, la Edtech líder en la industria del Sport Fitness y el Bienestar Humano. Nos dedicamos a proporcionar educación libre, de calidad y global, utilizando un innovador modelo educativo, una moderna plataforma digital y contenidos pedagógicos de alta calidad para el nuevo mundo.
               </p>
             </div>
 
@@ -66,7 +64,7 @@ const Page = () => {
                   key={index}
                 >
                   <Image
-                    src={`/funcional.webp`}
+                    src={article.image}
                     alt="hero image"
                     height={200}
                     width={200}
