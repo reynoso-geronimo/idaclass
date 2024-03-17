@@ -3,7 +3,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import React from "react";
 import EmpresasPartners from "../../components/empresasParteners";
-import Faq from "../(root)/_components/faq";
+import Faq from "../(home)/_components/faq";
 import { getBlogPostFromDb } from "../actions";
 
 const blogPost = await getBlogPostFromDb(3);
