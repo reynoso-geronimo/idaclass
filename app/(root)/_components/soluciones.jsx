@@ -47,7 +47,7 @@ const Soluciones = () => {
                   0{solucion.id + 1}
                   <span
                     className={`animate-bounce ml-4 transition-all duration-1000 sm:hidden ${
-                      activo == solucion.titulo && `opacity-0`
+                      activo == solucion.id && `opacity-0`
                     }`}
                   >
                     <ChevronDown />
