@@ -41,9 +41,9 @@ export const valores = [
 const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
-      <section className="">
+      
       <HeroParallaxNosotros/>
-      </section>
+     
       <Count/>
       <section className=" bg-gray-900 w-full overflow-hidden">
         <TracingBeam className={""}>
@@ -57,7 +57,7 @@ const Page = () => {
               </p>
             </div> */}
 
-            <div className="flex flex-col justify-center items-center w-full gap-y-20 p-6">
+            <div className="flex flex-col justify-center items-center w-full gap-y-20 p-12">
               {sobreNosotros.map((article, index) => (
                 <article
                   className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"

@@ -59,7 +59,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full max-w-4xl mx-auto h-full", className)}
     >
-      <div className="absolute -left-20 top-3">
+      <div className="absolute -left-2 lg:-left-20 top-3">
         <motion.div
           transition={{
             duration: 0.2,
@@ -91,7 +91,7 @@ export const TracingBeam = ({
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
           height={svgHeight} // Set the SVG height
-          className=" ml-4 hidden lg:block"
+          className=" ml-4 block"
           aria-hidden="true"
         >
           <motion.path
