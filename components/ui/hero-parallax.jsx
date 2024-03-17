@@ -20,7 +20,7 @@ export const HeroParallax = ({
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["-150px start", "end start"],
   });
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
