@@ -37,7 +37,7 @@ import cert1 from "../../../public/certi/cert1.webp";
 import cert2 from "../../../public/certi/cert2.webp";
 import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import CasoExito from "@/app/(root)/_components/ui/caso-exito";
+import CasoExito from "@/components/ui/caso-exito";
 
 const CursoPage = async ({ params }) => {
   const [curso, paginaCurso] = await Promise.all([

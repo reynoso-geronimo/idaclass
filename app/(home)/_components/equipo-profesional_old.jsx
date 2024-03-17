@@ -5,7 +5,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Profesional from "./ui/profesional";
+import Profesional from "../../../components/ui/profesional";
 import { profesionales } from "@/lib/constants";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 

@@ -1,19 +1,18 @@
 import Hero from "./_components/hero";
-import Ventajas from "@/app/(root)/_components/ventajas";
 import CursosFormacion from "./_components/cursos-formacion";
-import Modalidad from "./_components/modalidad";
 import Certificacion from "./_components/certificacion";
 import PartnersEducativos from "@/components/partnersEducativos";
 import Faq from "./_components/faq";
 import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
-import CasosExito from "./_components/casos-exito";
-import EquipoProfesional from "./_components/equipo-profesional";
-import Beca from "./_components/beca";
-import EmpresasPartners from "./_components/empresasParteners";
+import CasosExito from "../../components/casos-exito";
+import EquipoProfesional from "../../components/equipo-profesional";
+import Beca from "../../components/beca";
+import EmpresasPartners from "../../components/empresasParteners";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Ventajas from "./_components/ventajas";
 
 const DynamicModalidad = dynamic(() => import("./_components/modalidad"), {
   ssr: false,

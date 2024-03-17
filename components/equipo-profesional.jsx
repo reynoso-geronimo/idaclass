@@ -12,7 +12,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 import { profesionales } from "@/lib/constants";
 import Profesional from "./ui/profesional";
-import linea from "../../../public/assets/Línea img 1.png";
+import linea from "../public/assets/Línea img 1.png";
 import Image from "next/image";
 const EquipoProfesional = ({
   titulo = " Conoce al equipo",

@@ -27,13 +27,13 @@ import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
 import CursosFormacion from "@/models/CursoFormacion";
-import EquipoProfesional from "@/app/(root)/_components/equipo-profesional";
+import EquipoProfesional from "@/components/equipo-profesional";
 
-import CasosExito from "@/app/(root)/_components/casos-exito";
+import CasosExito from "@/components/casos-exito";
 import linea from "../../../public/assets/Línea img 4.png";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
-import Beca from "@/app/(root)/_components/beca";
+import Beca from "@/components/beca";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",

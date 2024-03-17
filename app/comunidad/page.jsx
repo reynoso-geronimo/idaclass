@@ -2,7 +2,7 @@ import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import React from "react";
-import EmpresasPartners from "../(root)/_components/empresasParteners";
+import EmpresasPartners from "../../components/empresasParteners";
 import Faq from "../(root)/_components/faq";
 import { getBlogPostFromDb } from "../actions";
 
