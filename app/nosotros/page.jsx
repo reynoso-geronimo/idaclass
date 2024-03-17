@@ -40,7 +40,7 @@ const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <section className="max-w-full">
-        {" "}
+
         <HeroParallaxNosotros />
       </section>
       <Count />
@@ -56,7 +56,7 @@ const Page = () => {
               </p>
             </div> */}
 
-            <div className="flex flex-col justify-center items-center w-full gap-y-20 p-12">
+            <div className="flex flex-col justify-center items-center w-full gap-y-20 p-12 min-[1500px]: md:min-[1100px]:">
               {sobreNosotros.map((article, index) => (
                 <article
                   className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
