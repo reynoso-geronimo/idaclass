@@ -48,14 +48,14 @@ const Page = () => {
       <section className=" bg-gray-900 w-full overflow-hidden">
         <TracingBeam className={""}>
           <div className="text-white flex flex-col items-center px-4 my-12 ">
-            <div className="text-center">
+            {/* <div className="text-center">
               <h2 className="text-2xl md:text-3xl font-bold">
                 Sobre Nosotros
               </h2>
               <p className="text-lg md:text-xl">
               Somos IdaClass, la Edtech líder en la industria del Sport Fitness y el Bienestar Humano. Nos dedicamos a proporcionar educación libre, de calidad y global, utilizando un innovador modelo educativo, una moderna plataforma digital y contenidos pedagógicos de alta calidad para el nuevo mundo.
               </p>
-            </div>
+            </div> */}
 
             <div className="flex flex-col justify-center items-center w-full gap-y-20 p-6">
               {sobreNosotros.map((article, index) => (
