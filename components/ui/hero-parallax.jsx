@@ -119,7 +119,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[12rem] lg:w-[24rem] relative flex-shrink-0"
+      className="group/product h-72 w-[12rem] lg:w-[24rem] relative flex-shrink-0"
     >
       {/* <Link
         href={product.link}

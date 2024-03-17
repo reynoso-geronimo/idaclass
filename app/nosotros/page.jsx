@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -14,37 +14,36 @@ export const valores = [
     title: "Innovación",
     description:
       "Abrazamos la tecnología y la innovación en la educación, proporcionando un ambiente de aprendizaje virtual dinámico y accesible.",
-      // link: "https://netflix.com",
+    // link: "https://netflix.com",
   },
   {
     title: "Emprendedurismo",
     description:
-    "Fomentamos el espíritu emprendedor en cada uno de nuestros estudiantes. En IdaClass, creemos en el poder de la innovación y la creatividad para transformar el mundo del fitness y el bienestar. ¡Sé valiente, sé audaz, sé emprendedor!",
+      "Fomentamos el espíritu emprendedor en cada uno de nuestros estudiantes. En IdaClass, creemos en el poder de la innovación y la creatividad para transformar el mundo del fitness y el bienestar. ¡Sé valiente, sé audaz, sé emprendedor!",
     // link: "https://netflix.com",
   },
   {
     title: "Liderazgo",
     description:
-    "En IdaClass, fomentamos el liderazgo en todos los niveles. Nos esforzamos por inspirar a nuestros estudiantes a convertirse en líderes en sus campos, capacitándolos con las habilidades y la confianza necesarias para liderar con éxito en el mundo del fitness y el bienestar."
+      "En IdaClass, fomentamos el liderazgo en todos los niveles. Nos esforzamos por inspirar a nuestros estudiantes a convertirse en líderes en sus campos, capacitándolos con las habilidades y la confianza necesarias para liderar con éxito en el mundo del fitness y el bienestar.",
     // link: "https://google.com",
   },
   {
     title: "Inclusión",
     description:
-    "La inclusión es un pilar fundamental de nuestra comunidad en IdaClass. Nos comprometemos a crear un ambiente acogedor y diverso donde cada persona se sienta valorada y respetada. Celebramos la diversidad en todas sus formas y promovemos la igualdad de oportunidades para todos.",
+      "La inclusión es un pilar fundamental de nuestra comunidad en IdaClass. Nos comprometemos a crear un ambiente acogedor y diverso donde cada persona se sienta valorada y respetada. Celebramos la diversidad en todas sus formas y promovemos la igualdad de oportunidades para todos.",
     // link: "https://meta.com",
   },
- 
 ];
-
 
 const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
-      
-      <HeroParallaxNosotros/>
-     
-      <Count/>
+      <section className="container">
+        {" "}
+        <HeroParallaxNosotros />
+      </section>
+      <Count />
       <section className=" bg-gray-900 w-full overflow-hidden">
         <TracingBeam className={""}>
           <div className="text-white flex flex-col items-center px-4 my-12 ">
@@ -87,7 +86,6 @@ const Page = () => {
       <section className="container flex flex-col items-center bg-slate-220 gap-4 py-12">
         <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
         <HoverEffect items={valores} />
-        
       </section>
       <Partners />
       <section className="flex flex-col text-center sm:ml-auto sm:mr-24 my-12">
