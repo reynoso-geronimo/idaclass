@@ -92,24 +92,34 @@ const Page = () => {
           Accede a contenido exclusivo
         </TituloSeccion>
         <h4 className="text-center mb-12">Subtitulo</h4>
-        <div className="grid grid-cols-4 gap-12">
-          {blogPost.map((post, index) => (
-            <article className="border-2 border-black" key={index}>
-              <Image
-                src={"/blog/" + post.foto}
-                width={520}
-                height={520}
-                alt="Imagen de Blog"
-                className="bg-black aspect-video mx-auto text-white"
-              />
-              <div className="container">
-                <h5 className="text-bold">{post.titulo}</h5>
-                <p className="text-idaclass3 font-bold text-right">Leer Mas</p>
-              </div>
-            </article>
-          ))}
+        <div className="w-full flex justify-between gap-12">
+          <div className="w-4/5 grid grid-cols-3 gap-12">
+            {blogPost.map((post, index) => (
+              <article className="border-2 border-black" key={index}>
+                <Image
+                  src={"/blog/" + post.foto}
+                  width={520}
+                  height={520}
+                  alt="Imagen de Blog"
+                  className="bg-black aspect-video mx-auto text-white"
+                />
+                <div className="container">
+                  <h5 className="text-bold">{post.titulo}</h5>
+                  <p className="text-idaclass3 font-bold text-right">
+                    Leer Mas
+                  </p>
+                </div>
+              </article>
+            ))}
 
-          <div className="bg-red-500 row-span-2">
+            <div className=" col-span-3 bg-emerald-400 flex gap-4 container py-2">
+              <div className="w-1/2 bg-blue-500 aspect-video">
+                Proximo Evento
+              </div>
+              <div className="w-1/2 bg-blue-500 aspect-video"></div>
+            </div>
+          </div>
+          <div className="bg-red-500 w-1/5">
             <TituloSeccion
               className={`text-left border-l-4 border-black mb-0 text-3xl`}
             >
@@ -120,10 +130,6 @@ const Page = () => {
             >
               Agenda
             </TituloSeccion>
-          </div>
-          <div className=" col-span-3 bg-emerald-400 flex gap-4 container py-2">
-            <div className="w-1/2 bg-blue-500 aspect-video">Proximo Evento</div>
-            <div className="w-1/2 bg-blue-500 aspect-video"></div>
           </div>
         </div>
       </section>
