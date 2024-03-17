@@ -90,4 +90,11 @@ export const products = [
     thumbnail:
     "/nosotros/14.jpeg",
   },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+    "/nosotros/1.jpeg",
+  },
+  
 ];
