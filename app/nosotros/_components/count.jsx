@@ -5,8 +5,8 @@ import CountUp from "react-countup";
 
 const Count = () => {
   return (
-    <section className="mb-12">
-      <TituloSeccion className={"container text-pretty"}>
+    <section className="mb-12 container">
+      <TituloSeccion className={"text-pretty"}>
         Somos la llave para transformar tu pasión por el fitness en una carrera
         exitosa.
       </TituloSeccion>

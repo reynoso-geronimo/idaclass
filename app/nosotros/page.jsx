@@ -40,7 +40,6 @@ const Page = () => {
   return (
     <main className="w-full flex flex-col items-center">
       <section className="max-w-full">
-
         <HeroParallaxNosotros />
       </section>
       <Count />
