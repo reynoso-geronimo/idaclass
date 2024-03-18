@@ -1,7 +1,7 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import linea from "../public/assets/Línea img 4.png";
-import Asesorate from "@/components/ui/asesorate";
+import Asesorate from "@/components/asesorate";
 
 const Beca = () => {
   return (

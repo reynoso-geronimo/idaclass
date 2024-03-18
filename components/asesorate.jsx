@@ -1,6 +1,6 @@
 import Image from "next/image";
-import TituloSeccion from "./titulo-seccion";
-import { Button } from "./button";
+import TituloSeccion from "./ui/titulo-seccion";
+import { Button } from "./ui/button";
 import Link from "next/link";
 
 const Asesorate = () => {

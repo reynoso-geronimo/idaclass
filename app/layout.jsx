@@ -13,6 +13,7 @@ export const metadata = {
 };
 
 import { getCursosFormacionFromDB } from "@/app/actions";
+import Contacto from "@/components/contacto";
 export default async function RootLayout({ children}) {
   const cursosFormacion = await getCursosFormacionFromDB()
   return (
@@ -21,6 +22,7 @@ export default async function RootLayout({ children}) {
       <ProviderSession>
         <NavBar cursosFormacion={cursosFormacion}/>
        {children}
+       <Contacto/>
         <Footer />
         </ProviderSession>
       </body>
