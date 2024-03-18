@@ -4,14 +4,14 @@ const Contacto = () => {
   return (
     <Link
       href="https://wa.me/+5491135872204"
-      className="sticky bottom-4 ml-auto mr-2 z-20 lg:hidden"
+      className="sticky bottom-0 h-0 -translate-y-16 ml-auto mr-2 z-50 lg:hidden "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="70"
-        height="70"
+        width="50"
+        height="50"
         viewBox="0 0 48 48"
       >
         <path
