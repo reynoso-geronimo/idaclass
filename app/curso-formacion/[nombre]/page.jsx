@@ -148,7 +148,7 @@ const CursoPage = async ({ params }) => {
           </p>
         </div>
 
-        <ul className="flex flex-col font-bold lg:text-2xl gap-4 lg:w-1/3">
+        <ul className="flex flex-col font-bold lg:text-xl gap-4 lg:w-1/3">
           <li className="flex items-center gap-2 shrink-0">
             <Calendar className="text-idaclass" strokeWidth={3} />
             Duracion: {duracion}

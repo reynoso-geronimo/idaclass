@@ -22,7 +22,7 @@ const areas = [
 ];
 const CertificacionCursoFormacion = () => {
   return (
-    <section className="container lg:px-0 bg-black text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-center relative overflow-hidden">
+    <section className="container lg:px-0 rounded-2xl py-8 gap-12 flex flex-col lg:flex-row items-center justify-center relative overflow-hidden bg-gray-100">
       <div className="w-full lg:w-1/3 text-center lg:text-left">
         <h2 className="font-semibold text-3xl lg:max-w-sm text-idaclass4">
           Certifica tus Conocimientos
@@ -32,13 +32,13 @@ const CertificacionCursoFormacion = () => {
             Accede a la doble titulación
           </span>
           <br />
-          <Dot className="stroke-white inline" />
+          <Dot className=" inline" />
           Certificado de Extensión Universitaria IUYMCA
           <br />
-          <Dot className="stroke-white inline" />
+          <Dot className=" inline" />
           Certificado IdaClass con autenticación QR
           <br />
-          <Dot className="stroke-white inline" />
+          <Dot className=" inline" />
           <span className="font-semibold decoration-white underline">
             Extra
           </span>{" "}
@@ -68,9 +68,9 @@ const CertificacionCursoFormacion = () => {
         >
           <CarouselContent className="-ml-1">
             {areas.map((area, index) => (
-              <CarouselItem key={index} className="pl-1 basis-[101%] last:bg-white last:px-4">
+              <CarouselItem key={index} className="pl-1 basis-[100%] last:bg-white last:px-4">
                 <div className="rounded-xl bg-none p-1">
-                  <div className="flex items-center justify-center relative h-52 rounded-xl ">
+                  <div className="flex items-center justify-center relative h-52">
                     <Image
                       src={area.src}
                       fill
