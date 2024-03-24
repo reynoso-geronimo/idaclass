@@ -97,8 +97,8 @@ const CursoPage = async ({ params }) => {
   return (
     <main className="flex flex-col gap-6">
       {/* <div className="text-center bg-emerald-300 py-4">Promocion </div> */}
-      <section className="bg-idaclass text-white">
-        <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8">
+      <section className="relative">
+        <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8 ">
           <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
             <h1 className="text-4xl lg:text-5xl font-bold my-4 tracking-tight">
               {nombre}
@@ -116,7 +116,7 @@ const CursoPage = async ({ params }) => {
           </div>
 
           <div className="flex flex-col items-center justify-center lg:w-1/2">
-            <div className=" w-full max-w-2xl bg-black relative aspect-video">
+            <div className=" w-full max-w-2xl bg-black relative aspect-video rounded-2xl overflow-hidden">
               <Image
                 src={`/cursosFormacion/${imagen}`}
                 fill
@@ -125,12 +125,13 @@ const CursoPage = async ({ params }) => {
             </div>
 
             <Introvideo
-              className={`mx-auto text-white mt-4`}
+              className={`mx-auto mt-4`}
               texto="Ver resumen"
               videoid={videoid}
             />
           </div>
         </div>
+        
       </section>
       <Separator />
       <section className="container flex flex-col items-start lg:flex-row lg:items-center lg:justify-between">
@@ -167,7 +168,8 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <Separator />
-      <section className="container bg-emerald-300 min-h-[20rem]">
+      <section className="container min-h-[20rem] relative ">
+          <Image src="/cursosFormacion/androide.jpg" fill className="object-contain object-right -z-10 " alt=""/> 
         <article className="w-1/2">
           <TituloSeccion className="text-left">
             Objetivos del curso
@@ -346,9 +348,9 @@ const CursoPage = async ({ params }) => {
           <TarjetaModalidad />
         </div>
       </section>
-     
-        <Beca />
-     <Separator/>
+
+      <Beca />
+      <Separator />
       <EquipoProfesional
         titulo="Conoce al equipo de "
         titulo2="Trainers Educativos "
