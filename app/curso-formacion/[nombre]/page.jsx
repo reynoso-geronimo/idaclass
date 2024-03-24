@@ -34,6 +34,7 @@ import linea from "../../../public/assets/Línea img 4.png";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
 import Beca from "@/components/beca";
+import LineaConectar from "@/components/ui/lineaConectar";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -113,6 +114,7 @@ const CursoPage = async ({ params }) => {
             <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
               Inscribirme ahora
             </Button>
+            <LineaConectar dir="left" className={`mt-12`}/>
           </div>
 
           <div className="flex flex-col items-center justify-center lg:w-1/2">
@@ -131,7 +133,6 @@ const CursoPage = async ({ params }) => {
             />
           </div>
         </div>
-        
       </section>
       <Separator />
       <section className="container flex flex-col items-start lg:flex-row lg:items-center lg:justify-between">
@@ -168,8 +169,33 @@ const CursoPage = async ({ params }) => {
         </ul>
       </section>
       <Separator />
-      <section className="container min-h-[20rem] relative ">
-          <Image src="/cursosFormacion/androide.jpg" fill className="object-contain object-right -z-10 " alt=""/> 
+      <section className="container min-h-[20rem] relative overflow-hidden">
+        <div className="absolute right-12 top-[50%] rotate-[90deg]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22.769"
+            height="14.821"
+            className="fill-idaclass scale-[1700%] opacity-30"
+          >
+            <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22.769"
+            height="14.821"
+            className="fill-idaclass4 scale-[600%] -translate-x-6 -translate-y-[36px] opacity-70"
+          >
+            <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
+          </svg>
+        </div>
+
+        <Image
+          src="/cursosFormacion/androide2.jpg"
+          fill
+          className="object-contain object-right -z-10 "
+          alt=""
+        />
+
         <article className="w-1/2">
           <TituloSeccion className="text-left">
             Objetivos del curso
@@ -410,7 +436,7 @@ const CursoPage = async ({ params }) => {
           </article>
         </div>
       </section>
-      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-50 flex justify-around items-center gap-2">
+      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
         </p>

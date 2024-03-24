@@ -4,7 +4,7 @@ const Contacto = () => {
   return (
     <Link
       href="https://wa.me/+5491135872204"
-      className="sticky bottom-0 h-0 -translate-y-16 ml-auto mr-2 z-50 lg:hidden "
+      className="sticky bottom-0 h-0 -translate-y-16 ml-auto mr-2 z-30 lg:hidden "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

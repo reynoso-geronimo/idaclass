@@ -32,9 +32,9 @@ const NavBar = ({ cursosFormacion }) => {
 
   const pathname = usePathname().replace(/%20/g, " ");
   return (
-    <header className="sticky top-0 z-50 bg-black text-white">
+    <header className="sticky top-0 z-40 bg-black text-white">
       <Promobar />
-      <nav className="w-full flex justify-between items-center h-16  container max-sm:px-1 font-semibold">
+      <nav className="w-full flex justify-between items-center h-16 container max-sm:px-1 font-semibold">
         <Sheet>
           <SheetTrigger className="lg:hidden w-24">
             <Menu className="h-9 w-9" aria-label="menu-navegacion" />
