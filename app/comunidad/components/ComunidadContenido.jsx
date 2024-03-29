@@ -8,11 +8,15 @@ const blogPost = await getBlogPostFromDb(3);
 const ComunidadContenido = () => {
   return (
     <section className="container">
-      <TituloSeccion className={`mb-0`}>
+      <TituloSeccion className={`mb-0 px-0`}>
         Accede a contenido exclusivo
       </TituloSeccion>
-      <h4 className="text-center mb-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, esse! Ratione a eius quidem animi quam eos fuga officia dolore odit, ipsam earum debitis rem praesentium vero libero ipsa quaerat?</h4>
-      <div className="w-full flex justify-between gap-12">
+      <h4 className="text-center mb-12">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, esse!
+        Ratione a eius quidem animi quam eos fuga officia dolore odit, ipsam
+        earum debitis rem praesentium vero libero ipsa quaerat?
+      </h4>
+      <div className="w-full flex max-lg:flex-col justify-between gap-12">
         <div className="">
           {/* BLOGPOSTS */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
@@ -44,11 +48,13 @@ const ComunidadContenido = () => {
             ))}
           </div>
           {/* FIN BLOGPOSTS */}
+          {/* EVENTOs */}
 
-          <div className="bg-emerald-400 flex gap-4 container py-2">
-            <div className="w-1/2 bg-blue-500 aspect-video">Proximo Evento</div>
-            <div className="w-1/2 bg-blue-500 aspect-video"></div>
+          <div className="bg-emerald-400 flex max-lg:flex-col gap-4 py-2">
+            <div className="w-full lg:w-1/2 bg-blue-500 aspect-video">Proximo Evento</div>
+            <div className="w-full lg:w-1/2 bg-blue-500 aspect-video"></div>
           </div>
+        {/* FIN EVENTOS */}
         </div>
 
         {/* SIDEBAR */}
@@ -62,12 +68,27 @@ const ComunidadContenido = () => {
               Noti
               <span className="text-idaclass3 ">Class</span>
             </h2>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo de la noticia</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo de la noticia</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo de la noticia</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
-           
- 
-            
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo de la noticia</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo de la noticia</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo de la noticia</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
           </div>
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2
@@ -80,9 +101,27 @@ const ComunidadContenido = () => {
               />
               Agenda de <span className="text-idaclass3">&#160; Eventos</span>
             </h2>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo del evento</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo del evento</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full"><h4>Titulo del evento</h4> <Link href={"/"} className="text-center leading-4 text-idaclass3">SEGUIR <br />LEYENDO</Link></article>
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo del evento</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo del evento</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
+            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
+              <h4>Titulo del evento</h4>{" "}
+              <Link href={"/"} className="text-center leading-4 text-idaclass3">
+                SEGUIR <br />
+                LEYENDO
+              </Link>
+            </article>
           </div>
         </div>
 

@@ -6,11 +6,10 @@ import Image from "next/image";
 const ComunidadHero = () => {
   return (
     <section className="bg-black">
-      <div className="flex flex-col lg:flex-row container items-stretch pt-6 pb-4 text-white relative z-10  max-lg:h-[40rem]">
+      <div className="flex flex-col lg:flex-row container items-stretch pt-6 pb-4 text-white relative z-10  max-lg:h-[45rem]">
         <div className="w-full flex flex-col max-lg:items-center max-lg:text-center">
           <TituloSeccion className={`lg:text-left mb-2 p-0 ml-0`}>
-            ¡Sumate a la
-            <br />
+            ¡Sumate a la <br className="max-lg:hidden" />
             Comunidad <span className="text-idaclass3">Class</span>
             <span className="text-idaclass4">era!</span>
           </TituloSeccion>
@@ -43,10 +42,12 @@ const ComunidadHero = () => {
           className="object-cover -z-10 max-lg:hidden"
           alt=""
         />
-        <Image src={"/comunidad/HeaderMobile.png"}
+        <Image
+          src={"/comunidad/HeaderMobile.png"}
           fill
           className="object-cover object-bottom -z-10 lg:hidden"
-          alt=""/>
+          alt=""
+        />
       </div>
     </section>
   );
