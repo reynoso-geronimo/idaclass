@@ -61,7 +61,7 @@ const ComunidadContenido = () => {
 
         {/* SIDEBAR */}
 
-        <div className="bg-black lg:w-3/12  rounded-3xl overflow-hidden flex flex-col min-h-[650px]">
+        <div className="bg-black lg:w-3/12  rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px]">
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2
               className={`text-center py-2 my-0 text-2xl bg-idaclass flex items-center justify-center`}
@@ -93,7 +93,7 @@ const ComunidadContenido = () => {
                 strokeWidth={2.5}
                 size={26}
               />
-              Agenda de <span className="text-idaclass3">&#160; Eventos</span>
+              Agenda de <span className="text-idaclass3">&#160;Eventos</span>
             </h2>
             <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
               <h4>Titulo del evento</h4>{" "}
