@@ -4,7 +4,12 @@ import { ArrowRight, CalendarClock, Newspaper } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-const blogPost = await getBlogPostFromDb(3);
+import Eventos from "./eventos";
+const blogPost = await getBlogPostFromDb(6);
+
+const firstRow = blogPost.slice(0, 3);
+const secondRow = blogPost.slice(3, 6);
+
 const ComunidadContenido = () => {
   return (
     <section className="container">
@@ -16,13 +21,13 @@ const ComunidadContenido = () => {
         Ratione a eius quidem animi quam eos fuga officia dolore odit, ipsam
         earum debitis rem praesentium vero libero ipsa quaerat?
       </h4>
-      <div className="w-full flex max-lg:flex-col justify-between gap-12">
-        <div className="">
+      <div className="w-full flex max-lg:flex-col justify-between items-stretch gap-12">
+        <div className="lg:w-9/12">
           {/* BLOGPOSTS */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
-            {blogPost.map((post, index) => (
+            {firstRow.map((post, index) => (
               <article
-                className=" rounded-b-2xl rounded-t-3xl overflow-hidden"
+                className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[520px] mx-auto"
                 key={index}
               >
                 <Image
@@ -50,16 +55,13 @@ const ComunidadContenido = () => {
           {/* FIN BLOGPOSTS */}
           {/* EVENTOs */}
 
-          <div className="bg-emerald-400 flex max-lg:flex-col gap-4 py-2">
-            <div className="w-full lg:w-1/2 bg-blue-500 aspect-video">Proximo Evento</div>
-            <div className="w-full lg:w-1/2 bg-blue-500 aspect-video"></div>
-          </div>
-        {/* FIN EVENTOS */}
+          <Eventos />
+          {/* FIN EVENTOS */}
         </div>
 
         {/* SIDEBAR */}
 
-        <div className="bg-black min-w-80 rounded-3xl overflow-hidden flex flex-col">
+        <div className="bg-black lg:w-3/12  rounded-3xl overflow-hidden flex flex-col min-h-[650px]">
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2
               className={`text-center py-2 my-0 text-2xl bg-idaclass flex items-center justify-center`}
@@ -68,27 +70,19 @@ const ComunidadContenido = () => {
               Noti
               <span className="text-idaclass3 ">Class</span>
             </h2>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo de la noticia</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo de la noticia</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo de la noticia</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
+            {secondRow.map(((post,index) => (
+                <article key={index} className="border-b border-gray-500 flex justify-between items-center p-4 h-full gap-10 overflow-hidden">
+                  <h4 className="line-clamp-[4]">{post.titulo}</h4>
+                  <Link
+                    href={`comunidad/blog/${post.id}`}
+                    className="text-center leading-4 text-idaclass3"
+                  >
+                    SEGUIR <br />
+                    LEYENDO
+                  </Link>
+                </article>
+              ))
+            )}
           </div>
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2

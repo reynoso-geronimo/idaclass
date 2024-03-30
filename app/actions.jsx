@@ -42,7 +42,7 @@ export async function getCursosFormacionFromDB() {
   }
 }
 export async function getBlogPostFromDb(limit){
-  console.log(limit);
+  
 try {
   const response = await Blog.findAll({ limit: limit })
   const data = response.map(blog => blog.toJSON());
