@@ -21,8 +21,8 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
         iure.
       </p>
 
-      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-4">
-        <Accordion type="single" collapsible className="lg:w-1/2">
+      <div className="flex flex-col items-center lg:items-stretch lg:flex-row gap-4">
+        <Accordion type="single" collapsible className="lg:w-[40%]">
           {JSON.parse(modulos).map((modulo, index) => (
             <AccordionItem value={`item-${index + 1}`} key={index}>
               <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 ">

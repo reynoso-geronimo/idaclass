@@ -47,7 +47,7 @@ const contenido = [
 ];
 const SkillClass = () => {
   return (
-    <section className="relative w-full lg:w-1/2 max-lg:px-0 flex flex-col justify-stretch items-center lg:items-start lg:rounded-3xl overflow-hidden p-12">
+    <section className="relative w-full lg:w-[60%] max-lg:px-0 flex flex-col justify-stretch items-center lg:items-start lg:rounded-3xl overflow-hidden p-12">
      {/* //!!CORREGIR IMAGEN */}
       <Image
         src="/cursosFormacion/SkillClassMobile.png"
