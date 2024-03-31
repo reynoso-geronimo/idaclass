@@ -3,41 +3,31 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Dot } from "lucide-react";
+
 import Image from "next/image";
-import linea from "../../../../public/assets/Línea img 3.png";
+
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
-const areas = [
-  { src: `/certi/cert1.webp` },
-  {
-    src: `/certi/cert2.webp`,
-  },
-  { src: `/certi/SelloCalidad.png` },
-  { src: `/empresasPartners/Logo_instituto-leyenda-red.png` },
-];
 const CertificacionCursoFormacion = () => {
   return (
     <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
-      <div className="w-full lg:w-1/3">
+      <div className="w-full lg:w-[25%]">
         <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
           Certifica tus Conocimientos
         </TituloSeccion>
         <h3 className="text-center lg:text-left font-bold text-lg lg:text-xl text-idaclass4 mb-4">
-          Accede a la doble <br className="max-lg:hidden"/> titulación
+          Accede a la doble <br className="max-lg:hidden" /> titulación
         </h3>
       </div>
-      <div className="w-full lg:w-2/3 relative">
+      <div className="w-full lg:w-[75%] relative">
         <Carousel
           className="w-[100%]"
           opts={{
             align: "center",
             loop: true,
-            watchDrag: false,
+            watchDrag: true,
           }}
           plugins={[
             Autoplay({
@@ -46,15 +36,60 @@ const CertificacionCursoFormacion = () => {
           ]}
         >
           <CarouselContent className="-ml-1">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <CarouselItem key={index} className="basis-2/3 lg:basis-1/3">
-                <div className="p-1">
-                  <div className="flex aspect-video items-center justify-center p-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white">
-                    <span className="text-4xl font-semibold">{index + 1}</span>
-                  </div>
+            <CarouselItem className="basis-2/3 lg:basis-1/3">
+              <div className="p-1">
+                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                  <Image
+                    src={"/cursosFormacion/Ribbon.svg"}
+                    height={50}
+                    width={50}
+                    alt="certificado"
+                    className="absolute top-6 right-6"
+                  />
+                  <span className="text-xl font-medium ">
+                    Certificado <br /> de Extensión <br /> Universitaria IUYMCA
+                  </span>
+                {/* MODAL TRIGGER */}
+                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
-              </CarouselItem>
-            ))}
+              </div>
+            </CarouselItem>
+            <CarouselItem className="basis-2/3 lg:basis-1/3">
+              <div className="p-1">
+                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                  <Image
+                    src={"/cursosFormacion/Ribbon.svg"}
+                    height={50}
+                    width={50}
+                    alt="certificado"
+                    className="absolute top-6 right-6"
+                  />
+                  <span className="text-xl font-medium ">
+                    Certificado <br /> IdaClass con  <br /> autenticación QR
+                  </span>
+                {/* MODAL TRIGGER */}
+                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                </div>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="basis-2/3 lg:basis-1/3">
+              <div className="p-1">
+                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                  <Image
+                    src={"/cursosFormacion/Ribbon.svg"}
+                    height={50}
+                    width={50}
+                    alt="certificado"
+                    className="absolute top-6 right-6"
+                  />
+                  <span className="text-xl font-medium ">
+                  Extra Certificado de <br /> 4 especializaciones <br />
+                  </span>
+                {/* MODAL TRIGGER */}
+                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                </div>
+              </div>
+            </CarouselItem>
           </CarouselContent>
           {/* <CarouselPrevious className="left-2" />
       <CarouselNext className="right-2" /> */}
