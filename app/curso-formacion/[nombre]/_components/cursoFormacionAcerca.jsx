@@ -14,7 +14,7 @@ const CursoFormacionAcerca = ({
   nombre,
 }) => {
   return (
-    <section className="container flex flex-col items-center">
+    <section className="container flex flex-col items-center pt-6">
       <div className="grid grid-cols-2 gap-y-8 text-center lg:flex lg:justify-center lg:gap-4">
         <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
           <Calendar className="text-idaclass" strokeWidth={3} />

@@ -2,18 +2,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import {
-  ArrowUp,
-  BookOpenCheck,
-  Calendar,
-  ChevronRight,
-  Clock,
-  Construction,
-  Dot,
-  MapPin,
-  Monitor,
-  Plus,
-} from "lucide-react";
+import { ChevronRight, MapPin, Plus } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
-import Introvideo from "@/components/ui/introvideo";
+
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
 import CursosFormacion from "@/models/CursoFormacion";
@@ -37,6 +26,7 @@ import Beca from "@/components/beca";
 import LineaConectar from "@/components/ui/lineaConectar";
 import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
+import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -98,8 +88,7 @@ const CursoPage = async ({ params }) => {
   } = curso.toJSON();
 
   return (
-    <main className="flex flex-col gap-6">
-
+    <main className="flex flex-col">
       <CursoFormacionHeader
         nombre={nombre}
         descripcion={descripcion}
@@ -107,73 +96,20 @@ const CursoPage = async ({ params }) => {
         modalidades={modalidades}
         videoid={videoid}
       />
-      <Separator />
-      <CursoFormacionAcerca duracion={duracion} dedicacion={dedicacion} acerca={acerca} frecuencia={frecuencia}  modalidades={modalidades}  nombre={nombre}/>
-      <Separator />
-      <section className="container min-h-[20rem] relative overflow-hidden">
-        <div className="absolute right-12 top-[50%] rotate-[90deg]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22.769"
-            height="14.821"
-            className="fill-idaclass scale-[1700%] opacity-30"
-          >
-            <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22.769"
-            height="14.821"
-            className="fill-idaclass4 scale-[600%] -translate-x-6 -translate-y-[36px] opacity-70"
-          >
-            <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
-          </svg>
-        </div>
-
-        <Image
-          src="/cursosFormacion/androide2.jpg"
-          fill
-          className="object-contain object-right -z-10 "
-          alt=""
-        />
-
-        <article className="w-1/2">
-          <TituloSeccion className="text-left">
-            Objetivos del curso
-          </TituloSeccion>
-          <p>
-            El egresado del curso de Preparador Físico Deportivo se distingue
-            como un profesional certificado y altamente capacitado en el ámbito
-            del rendimiento deportivo. Con un profundo entendimiento de los
-            fundamentos teóricos y prácticos de la preparación física, estará
-            preparado para trabajar con deportistas de diversas edades y niveles
-            de rendimiento, desde amateurs hasta atletas de élite. Poseerá
-            habilidades para diseñar programas de entrenamiento adaptados a las
-            necesidades individuales de cada deportista, integrando
-            conocimientos sobre fisiología del ejercicio, biomecánica y
-            nutrición deportiva
-          </p>
-          <TituloSeccion className="text-left">
-            Perfil del egresado
-          </TituloSeccion>
-          <p>
-            El egresado del curso de Preparador Físico Deportivo se distingue
-            como un profesional certificado y altamente capacitado en el ámbito
-            del rendimiento deportivo. Con un profundo entendimiento de los
-            fundamentos teóricos y prácticos de la preparación física, estará
-            preparado para trabajar con deportistas de diversas edades y niveles
-            de rendimiento, desde amateurs hasta atletas de élite. Poseerá
-            habilidades para diseñar programas de entrenamiento adaptados a las
-            necesidades individuales de cada deportista, integrando
-            conocimientos sobre fisiología del ejercicio, biomecánica y
-            nutrición deportiva
-          </p>
-        </article>
-        <article></article>
-      </section>
-      <Separator />
+     
+      <CursoFormacionAcerca
+        duracion={duracion}
+        dedicacion={dedicacion}
+        acerca={acerca}
+        frecuencia={frecuencia}
+        modalidades={modalidades}
+        nombre={nombre}
+      />
+      <Separator className="my-6"/>
+      <CursoFormacionObjetivos />
+      <Separator className="my-6"/>
       <CertificacionCursoFormacion />
-      <Separator />
+      <Separator className="my-6"/>
       <section>
         <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
           Contenido del curso
@@ -241,7 +177,7 @@ const CursoPage = async ({ params }) => {
           </div>
         </div>
       </section>
-      <Separator />
+      <Separator className="my-6"/>
 
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
         <article className="w-full rounded-2xl overflow-hidden">
@@ -293,7 +229,7 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       {/* modalidades y pago */}
-      <Separator />
+      <Separator className="my-6"/>
       <section id="inscripcion" className="pt-6 container">
         <div className="flex max-lg:flex-col gap-4 justify-center items-center lg:items-stretch">
           <div className={"w-full max-w-md lg:w-1/3 lg:text-left"}>
@@ -317,7 +253,7 @@ const CursoPage = async ({ params }) => {
       </section>
 
       <Beca />
-      <Separator />
+      <Separator className="my-6"/>
       <EquipoProfesional
         titulo="Conoce al equipo de "
         titulo2="Trainers Educativos "
@@ -331,7 +267,7 @@ const CursoPage = async ({ params }) => {
         </TituloSeccion> */}
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
-      <Separator />
+      <Separator className="my-6"/>
       <section className="container my-12 ">
         <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
         <div className="flex justify-center gap-4">

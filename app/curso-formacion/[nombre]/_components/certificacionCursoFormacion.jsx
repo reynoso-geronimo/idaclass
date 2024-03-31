@@ -10,6 +10,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Dot } from "lucide-react";
 import Image from "next/image";
 import linea from "../../../../public/assets/Línea img 3.png";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const areas = [
   { src: `/certi/cert1.webp` },
@@ -18,39 +19,15 @@ const areas = [
   },
   { src: `/certi/SelloCalidad.png` },
   { src: `/empresasPartners/Logo_instituto-leyenda-red.png` },
-  
 ];
 const CertificacionCursoFormacion = () => {
   return (
-    <section className="container lg:px-0 rounded-2xl py-8 gap-12 flex flex-col lg:flex-row items-center justify-center relative overflow-hidden bg-gray-100">
-      <div className="w-full lg:w-1/3 text-center lg:text-left">
-        <h2 className="font-semibold text-3xl lg:max-w-sm text-idaclass4">
+    <section className="container bg-gray-100">
+      <div className="w-full lg:w-1/3 text-center lg:text-left ">
+        <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1">
           Certifica tus Conocimientos
-        </h2>
-        <p className="text-sm py-2 lg:max-w-sm">
-          <span className="font-semibold text-base">
-            Accede a la doble titulación
-          </span>
-          <br />
-          <Dot className=" inline" />
-          Certificado de Extensión Universitaria IUYMCA
-          <br />
-          <Dot className=" inline" />
-          Certificado IdaClass con autenticación QR
-          <br />
-          <Dot className=" inline" />
-          <span className="font-semibold decoration-white underline">
-            Extra
-          </span>{" "}
-          Certificado de 4 especializaciones
-        </p>
-        <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">
-          <Image
-            src={linea}
-            alt="linea"
-            className="absolute -translate-x-[8%] -translate-y-[55%] scale-[150%] "
-          />
-        </div>
+        </TituloSeccion>
+        <h3 className="text-center font-bold text-lg text-idaclass4">Accede a la doble titulación</h3>
       </div>
       <div className="w-full lg:w-1/3 relative">
         <Carousel
@@ -68,7 +45,10 @@ const CertificacionCursoFormacion = () => {
         >
           <CarouselContent className="-ml-1">
             {areas.map((area, index) => (
-              <CarouselItem key={index} className="pl-1 basis-[100%] last:bg-white last:px-4">
+              <CarouselItem
+                key={index}
+                className="pl-1 basis-[100%] last:bg-white last:px-4"
+              >
                 <div className="rounded-xl bg-none p-1">
                   <div className="flex items-center justify-center relative h-52">
                     <Image
