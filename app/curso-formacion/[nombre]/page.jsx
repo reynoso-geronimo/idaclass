@@ -35,6 +35,8 @@ import CertificacionCursoFormacion from "./_components/certificacionCursoFormaci
 import Link from "next/link";
 import Beca from "@/components/beca";
 import LineaConectar from "@/components/ui/lineaConectar";
+import CursoFormacionHeader from "./_components/cursoFormacionHeader";
+import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 const contenido = [
   {
     titulo: "Habilidades para el éxito profesional",
@@ -97,77 +99,16 @@ const CursoPage = async ({ params }) => {
 
   return (
     <main className="flex flex-col gap-6">
-      {/* <div className="text-center bg-emerald-300 py-4">Promocion </div> */}
-      <section className="relative">
-        <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8 ">
-          <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl font-bold my-4 tracking-tight">
-              {nombre}
-            </h1>
 
-            <p className="font-medium">{descripcion}</p>
-
-            <div className="font-semibold text-sm my-4">
-              <Badge className={`bg-red-500`}>{modalidades}</Badge>
-            </div>
-
-            <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
-              Inscribirme ahora
-            </Button>
-            <LineaConectar dir="left" className={`mt-12`}/>
-          </div>
-
-          <div className="flex flex-col items-center justify-center lg:w-1/2">
-            <div className=" w-full max-w-2xl bg-black relative aspect-video rounded-2xl overflow-hidden">
-              <Image
-                src={`/cursosFormacion/${imagen}`}
-                fill
-                alt="imagen curso"
-              ></Image>
-            </div>
-
-            <Introvideo
-              className={`mx-auto mt-4`}
-              texto="Ver resumen"
-              videoid={videoid}
-            />
-          </div>
-        </div>
-      </section>
+      <CursoFormacionHeader
+        nombre={nombre}
+        descripcion={descripcion}
+        imagen={imagen}
+        modalidades={modalidades}
+        videoid={videoid}
+      />
       <Separator />
-      <section className="container flex flex-col items-start lg:flex-row lg:items-center lg:justify-between">
-        <div className="text-white-1 rounded lg:w-1/2">
-          <Badge
-            variant={"outline"}
-            className="text-base font-bold justify-center border-black h-8 mb-8"
-          >
-            Acerca de este curso
-          </Badge>
-
-          <p className="text-sm font-semibold flex flex-col gap-2 mb-8">
-            {acerca}
-          </p>
-        </div>
-
-        <ul className="flex flex-col font-bold lg:text-xl gap-4 lg:w-1/3">
-          <li className="flex items-center gap-2 shrink-0">
-            <Calendar className="text-idaclass" strokeWidth={3} />
-            Duracion: {duracion}
-          </li>
-          <li className="flex items-center gap-2">
-            <Monitor className="text-idaclass shrink-0" strokeWidth={3} />
-            Modalidad: {modalidades}
-          </li>
-          <li className="flex items-center gap-2">
-            <BookOpenCheck className="text-idaclass shrink-0" strokeWidth={3} />
-            Dedicacion: {dedicacion}
-          </li>
-          <li className="flex items-center gap-2">
-            <Clock className="text-idaclass shrink-0" strokeWidth={3} />
-            Frecuencia: {frecuencia}
-          </li>
-        </ul>
-      </section>
+      <CursoFormacionAcerca duracion={duracion} dedicacion={dedicacion} acerca={acerca} frecuencia={frecuencia}  modalidades={modalidades}  nombre={nombre}/>
       <Separator />
       <section className="container min-h-[20rem] relative overflow-hidden">
         <div className="absolute right-12 top-[50%] rotate-[90deg]">
