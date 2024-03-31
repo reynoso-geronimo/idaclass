@@ -22,18 +22,20 @@ const areas = [
 ];
 const CertificacionCursoFormacion = () => {
   return (
-    <section className="container bg-gray-100">
-      <div className="w-full lg:w-1/3 text-center lg:text-left ">
-        <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1">
+    <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
+      <div className="w-full lg:w-1/3">
+        <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
           Certifica tus Conocimientos
         </TituloSeccion>
-        <h3 className="text-center font-bold text-lg text-idaclass4">Accede a la doble titulación</h3>
+        <h3 className="text-center lg:text-left font-bold text-lg lg:text-xl text-idaclass4 mb-4">
+          Accede a la doble <br className="max-lg:hidden"/> titulación
+        </h3>
       </div>
-      <div className="w-full lg:w-1/3 relative">
+      <div className="w-full lg:w-2/3 relative">
         <Carousel
           className="w-[100%]"
           opts={{
-            align: "start",
+            align: "center",
             loop: true,
             watchDrag: false,
           }}
@@ -44,20 +46,11 @@ const CertificacionCursoFormacion = () => {
           ]}
         >
           <CarouselContent className="-ml-1">
-            {areas.map((area, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-1 basis-[100%] last:bg-white last:px-4"
-              >
-                <div className="rounded-xl bg-none p-1">
-                  <div className="flex items-center justify-center relative h-52">
-                    <Image
-                      src={area.src}
-                      fill
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw , 20vw"
-                      className="object-scale-down rounded-xl"
-                      alt={""}
-                    />
+            {Array.from({ length: 3 }).map((_, index) => (
+              <CarouselItem key={index} className="basis-2/3 lg:basis-1/3">
+                <div className="p-1">
+                  <div className="flex aspect-video items-center justify-center p-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white">
+                    <span className="text-4xl font-semibold">{index + 1}</span>
                   </div>
                 </div>
               </CarouselItem>

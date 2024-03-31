@@ -12,7 +12,6 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
-
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
 import CursosFormacion from "@/models/CursoFormacion";
@@ -96,7 +95,7 @@ const CursoPage = async ({ params }) => {
         modalidades={modalidades}
         videoid={videoid}
       />
-     
+
       <CursoFormacionAcerca
         duracion={duracion}
         dedicacion={dedicacion}
@@ -105,11 +104,11 @@ const CursoPage = async ({ params }) => {
         modalidades={modalidades}
         nombre={nombre}
       />
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <CursoFormacionObjetivos />
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <CertificacionCursoFormacion />
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <section>
         <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
           Contenido del curso
@@ -177,7 +176,7 @@ const CursoPage = async ({ params }) => {
           </div>
         </div>
       </section>
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
 
       <section className="flex flex-col md:flex-row justify-center gap-4 container">
         <article className="w-full rounded-2xl overflow-hidden">
@@ -229,7 +228,7 @@ const CursoPage = async ({ params }) => {
         </article>
       </section>
       {/* modalidades y pago */}
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <section id="inscripcion" className="pt-6 container">
         <div className="flex max-lg:flex-col gap-4 justify-center items-center lg:items-stretch">
           <div className={"w-full max-w-md lg:w-1/3 lg:text-left"}>
@@ -253,7 +252,7 @@ const CursoPage = async ({ params }) => {
       </section>
 
       <Beca />
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de "
         titulo2="Trainers Educativos "
@@ -267,7 +266,7 @@ const CursoPage = async ({ params }) => {
         </TituloSeccion> */}
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
-      <Separator className="my-6"/>
+      <Separator className="my-6" />
       <section className="container my-12 ">
         <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
         <div className="flex justify-center gap-4">
