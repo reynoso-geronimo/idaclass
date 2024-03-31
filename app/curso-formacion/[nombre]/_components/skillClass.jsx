@@ -47,14 +47,14 @@ const contenido = [
 ];
 const SkillClass = () => {
   return (
-    <section className="relative w-full lg:w-[60%] max-lg:px-0 flex flex-col justify-stretch items-center lg:items-start lg:rounded-3xl overflow-hidden p-12">
+    <section className="relative w-full lg:w-[50%] max-lg:px-0 flex flex-col justify-stretch items-center  lg:rounded-3xl overflow-hidden p-12 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57]">
      {/* //!!CORREGIR IMAGEN */}
-      <Image
+      {/* <Image
         src="/cursosFormacion/SkillClassMobile.png"
         fill
         alt="SkillClass"
         className="object-cover -z-10"
-      />
+      /> */}
       
       <Badge className="text-lg text-center font-semibold justify-center bg-idaclass w-[26rem]">
         BONO EXTRA
