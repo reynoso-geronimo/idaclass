@@ -11,7 +11,7 @@ const CursoFormacionObjetivos = () => {
           height={1000}
           width={1000}
           alt=""
-          className="w-full object-contain -translate-y-12 lg:w-1/3"
+          className="w-full object-contain -translate-y-6 lg:w-1/3"
         />
         <article className="container text-white pb-8">
           <h3
