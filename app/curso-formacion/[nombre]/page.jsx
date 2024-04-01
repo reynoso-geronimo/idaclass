@@ -1,18 +1,11 @@
-
 import { Button } from "@/components/ui/button";
-
 import { ChevronRight, MapPin, Plus } from "lucide-react";
-
 import { Separator } from "@/components/ui/separator";
 import TarjetaModalidad from "./_components/tarjeta-modalidad";
-
 import TituloSeccion from "@/components/ui/titulo-seccion";
-
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/components/equipo-profesional";
-
 import CasosExito from "@/components/casos-exito";
-import linea from "../../../public/assets/Línea img 4.png";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
 import Beca from "@/components/beca";
@@ -21,6 +14,8 @@ import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
 import Image from "next/image";
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
+import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
+import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 
 
 const CursoPage = async ({ params }) => {
@@ -71,78 +66,10 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionContenidoCurso modulos={curso.modulos} />
       <Separator className="my-6" />
 
-      <section className="flex flex-col md:flex-row justify-center gap-4 container">
-        <article className="w-full rounded-2xl overflow-hidden">
-          <TituloSeccion className={`my-1 text-3xl`}>Requisitos</TituloSeccion>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
-            <li>Mayor de 18 años o 16 con autorizacion de mayor responsable</li>
-            <li>Completar formulario de inscripción</li>
-            <li>Apto médico (solo modalidad presencial).</li>
-            <li>
-              Certificado de escolaridad secundaria completa (solamente aquellas
-              personas que deseen adquirir la Extensión Universitaria que
-              proporciona IUYMCA).
-            </li>
-          </ul>
-        </article>
-        <article className="w-full rounded-2xl overflow-hidden">
-          <TituloSeccion className={`my-1 text-3xl`}>
-            A quien va dirigido
-          </TituloSeccion>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
-            <li>Público en general, sin conocimientos previos.</li>
-            <li>Estudiantes de carreras afines.</li>
-            <li>
-              Deportistas amateurs, profesionales del Deporte, Salud y Fitness.
-            </li>
-          </ul>
-        </article>
-
-        <article className="w-full rounded-2xl overflow-hidden">
-          <TituloSeccion className={`my-1 text-3xl`}>
-            Potencia tu empleabilidad o emprende
-          </TituloSeccion>
-          <h3 className="text-center">
-            Accede a recursos y herramientas para tu exito
-          </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly container py-4">
-            <li>Bolsa de trabajo</li>
-            <li>Pasantias</li>
-            <li>Red de Networking</li>
-            <li>Eventos con expertos internacionales</li>
-          </ul>
-          <div className="relative w-full">
-            <Image
-              src={linea}
-              alt="linea"
-              className="relative -right-[60%] bottom-0 scale-150"
-            />
-          </div>
-        </article>
-      </section>
+      <CursoFormacionRequisitos/>
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <section id="inscripcion" className="pt-6 container">
-        <div className="flex max-lg:flex-col gap-4 justify-center items-center lg:items-stretch">
-          <div className={"w-full max-w-md lg:w-1/3 lg:text-left"}>
-            <TituloSeccion className={"text-left"}>
-              Elige la modalidad que mas se adapte a ti
-            </TituloSeccion>
-            <p>
-              Elige a la modalidad que mas se adapte a tus necesidades e
-              intereses. <br />
-              En el caso de elegir modalidad presencial consultar o ver las
-              sedes disponibles.
-            </p>
-            <Button size={"sm"}>
-              <MapPin />
-              Ver sedes disponibles{" "}
-            </Button>
-          </div>
-          <TarjetaModalidad modalidad={"ONLINE"} />
-          <TarjetaModalidad />
-        </div>
-      </section>
+      <CursoFormacionModalidades/>
 
       <Beca />
       <Separator className="my-6" />
@@ -210,7 +137,7 @@ const CursoPage = async ({ params }) => {
           + de 50.0000 certificados otorgados{" "}
         </p>
         <div className="flex gap-12 items-center">
-          <Link asChild href="#inscripcion">
+          <Link href="#inscripcion">
             <Button>Inscribirme ahora</Button>
           </Link>
           <Link href="https://wa.me/+5491135872204">
