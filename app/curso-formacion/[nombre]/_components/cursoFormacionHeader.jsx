@@ -35,7 +35,7 @@ const CursoFormacionHeader = ({
         </div>
       </div>
       <Image
-        src={headerMobile ? headerMobile : `/cursosFormacion/HeaderMobile.png`}
+        src={headerMobile ? headerMobile : `/cursosFormacion/headerMobile.png`}
         fill
         sizes="100vw"
         className="object-cover -z-10 object-top lg:hidden"
