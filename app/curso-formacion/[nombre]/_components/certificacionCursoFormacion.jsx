@@ -38,7 +38,7 @@ const CertificacionCursoFormacion = () => {
           <CarouselContent className="-ml-1">
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="p-1">
-                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
@@ -46,17 +46,17 @@ const CertificacionCursoFormacion = () => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <span className="text-xl font-medium ">
+                  <div className="text-xl font-medium">
                     Certificado <br /> de Extensión <br /> Universitaria IUYMCA
-                  </span>
-                {/* MODAL TRIGGER */}
-                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  </div>
+                  {/* MODAL TRIGGER */}
+                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="p-1">
-                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
@@ -65,16 +65,16 @@ const CertificacionCursoFormacion = () => {
                     className="absolute top-6 right-6"
                   />
                   <span className="text-xl font-medium ">
-                    Certificado <br /> IdaClass con  <br /> autenticación QR
+                    Certificado <br /> IdaClass con <br /> autenticación QR
                   </span>
-                {/* MODAL TRIGGER */}
-                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  {/* MODAL TRIGGER */}
+                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="p-1">
-                <div className="flex flex-col justify-end gap-2 aspect-video py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
@@ -83,10 +83,10 @@ const CertificacionCursoFormacion = () => {
                     className="absolute top-6 right-6"
                   />
                   <span className="text-xl font-medium ">
-                  Extra Certificado de <br /> 4 especializaciones <br />
+                    Extra Certificado de <br /> 4 especializaciones <br />
                   </span>
-                {/* MODAL TRIGGER */}
-                <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  {/* MODAL TRIGGER */}
+                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
