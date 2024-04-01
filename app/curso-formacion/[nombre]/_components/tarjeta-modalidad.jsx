@@ -13,7 +13,7 @@ import Image from "next/image";
 const TarjetaModalidad = ({ modalidad }) => {
   return (
     <div
-      className={`relative w-full lg:w-[31%] flex justify-center pb-14 ${
+      className={`relative w-full lg:w-[410px] flex justify-center pb-14 ${
         modalidad === "ONLINE" ? "pt-[35rem]" : "pt-[20rem]"
       } lg:pt-28`}
     >

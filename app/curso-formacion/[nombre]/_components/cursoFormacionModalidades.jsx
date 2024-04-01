@@ -12,7 +12,7 @@ const CursoFormacionModalidades = () => {
           src={"/cursosFormacion/modalidadesbg.png"}
           fill
           alt=""
-          className="max-lg:hidden"
+          className="max-lg:hidden object-cover object-right"
         />
         <div className={"w-full max-w-md lg:max-w-full  absolute top-4  z-10"}>
           <TituloSeccion
