@@ -12,14 +12,22 @@ import Image from "next/image";
 
 const TarjetaModalidad = ({ modalidad }) => {
   return (
-    <div className={`relative w-full flex justify-center pb-14 ${modalidad==="ONLINE"?"pt-[35rem]":"pt-[20rem]"}`}>
+    <div
+      className={`relative w-full lg:w-[31%] flex justify-center pb-14 ${
+        modalidad === "ONLINE" ? "pt-[35rem]" : "pt-[20rem]"
+      } lg:pt-28`}
+    >
       <Image
-        src={modalidad==="ONLINE"?"/cursosFormacion/Online.png":"/cursosFormacion/Presencial.png"}
+        src={
+          modalidad === "ONLINE"
+            ? "/cursosFormacion/Online.png"
+            : "/cursosFormacion/Presencial.png"
+        }
         fill
-        className="-z-10 object-cover object-top"
+        className="-z-10 object-cover object-top lg:hidden"
         alt=""
       />
-      <Card className="border border-black w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-2">
+      <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-4">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
             <p className="bg-idaclass text-white py-2 text-center w-full text-lg">
@@ -38,7 +46,7 @@ const TarjetaModalidad = ({ modalidad }) => {
 
         <CardContent className="px-0">
           {modalidad === "ONLINE" ? (
-            <ul className="list-disc list-inside pb-6 text-sm px-6">
+            <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
               <li>Clases online en vivo (2h. semanales)</li>
               <li>Grabación de las clases en vivo</li>
               <li>Tutorias con staff trainer educativos</li>
@@ -50,7 +58,7 @@ const TarjetaModalidad = ({ modalidad }) => {
               <li>Acceso a webinars con expertos</li>
             </ul>
           ) : (
-            <ul className="list-disc list-inside pb-6 text-sm px-6">
+            <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
               <li>Clases presenciales (3h. cada 15 dias)</li>
               <li>Tutorias con staff trainer educativos</li>
               <li>Video resumenes y materiales descargable</li>
@@ -73,11 +81,20 @@ const TarjetaModalidad = ({ modalidad }) => {
             U$D 162 USD
           </p>
         </CardContent>
-        <CardFooter className="flex flex-col ">
+        <CardFooter className="flex flex-col gap-2">
           <Button size="lg" className="text-white rounded-2xl w-[90%]">
             <ArrowRight className="mr-2" />
             INSCRIBIRME AHORA
           </Button>
+          {modalidad !== "ONLINE" && (
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[90%]"
+            >
+              CONSULTAR SEDES
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </div>
