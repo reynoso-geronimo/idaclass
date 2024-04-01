@@ -81,8 +81,8 @@ const TarjetaModalidad = ({ modalidad }) => {
             U$D 162 USD
           </p>
         </CardContent>
-        <CardFooter className="flex flex-col gap-2">
-          <Button size="lg" className="text-white rounded-2xl w-[90%]">
+        <CardFooter className="flex gap-2">
+          <Button size="lg" className={`${modalidad==="ONLINE"?"w-[100%]":"lg:w-[50%]"} rounded-2xl `}>
             <ArrowRight className="mr-2" />
             INSCRIBIRME AHORA
           </Button>
@@ -90,7 +90,7 @@ const TarjetaModalidad = ({ modalidad }) => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[90%]"
+              className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[100%] lg:w-[50%]"
             >
               CONSULTAR SEDES
             </Button>
