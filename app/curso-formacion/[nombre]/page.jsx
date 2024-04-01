@@ -16,6 +16,7 @@ import Image from "next/image";
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
+import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
 
 
 const CursoPage = async ({ params }) => {
@@ -74,8 +75,8 @@ const CursoPage = async ({ params }) => {
       <Beca />
       <Separator className="my-6" />
       <EquipoProfesional
-        titulo="Conoce al equipo de "
-        titulo2="Trainers Educativos "
+        titulo="Conoce al equipo de"
+        titulo2="Trainers Educativos"
         titulo2Class="text-idaclass4"
         titulo3="que te guiara al exito"
       />
@@ -87,51 +88,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-      <section className="container my-12 ">
-        <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
-        <div className="flex justify-center gap-4">
-          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
-            <Image
-              src={`/cursosFormacion/${imagen}`}
-              alt=""
-              width={300}
-              height={300}
-            />
-            <p className="font-bold">{nombre}</p>
-            <Button className="w-full text-lg">Ver curso</Button>
-          </article>
-          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
-            <Image
-              src={`/cursosFormacion/${imagen}`}
-              alt=""
-              width={300}
-              height={300}
-            />
-            <p className="font-bold">{nombre}</p>
-            <Button className="w-full text-lg">Ver curso</Button>
-          </article>
-          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
-            <Image
-              src={`/cursosFormacion/${imagen}`}
-              alt=""
-              width={300}
-              height={300}
-            />
-            <p className="font-bold">{nombre}</p>
-            <Button className="w-full text-lg">Ver curso</Button>
-          </article>
-          <article className="w-1/5 border-2 border-black rounded-2xl flex flex-col items-center overflow-hidden">
-            <Image
-              src={`/cursosFormacion/${imagen}`}
-              alt=""
-              width={300}
-              height={300}
-            />
-            <p className="font-bold">{nombre}</p>
-            <Button className="w-full text-lg">Ver curso</Button>
-          </article>
-        </div>
-      </section>
+     <CursoFormacionOtrosCursos cursoActual={nombreParseado}/>
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}

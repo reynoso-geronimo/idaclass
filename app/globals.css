@@ -68,6 +68,8 @@
 .embla__container {
   backface-visibility: hidden;
   display: flex;
+  /*!! OJO CON EL JUSTIFY PUEDE ROMPER TODO DEFAULT NO EXISTE LA REGLA */
+  justify-content: space-evenly;
   align-items: flex-start;
   touch-action: pan-y;
   margin-left: calc(var(--slide-spacing) * -1);
