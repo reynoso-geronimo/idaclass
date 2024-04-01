@@ -2,54 +2,51 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import linea from "../public/assets/Línea img 4.png";
 import Asesorate from "@/components/asesorate";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const Beca = () => {
   return (
-    <section className="container lg:px-0 mt-12">
-      <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-between">
+    <section className="container mt-12">
+      <div className="flex flex-col lg:flex-row gap-4 justify-between">
         <Asesorate />
-        <div className="w-full text-center p-8 overflow-hidden rounded-3xl border-2 border-black">
-          <TituloSeccion className={"mb-4"}>
-            Obtén tu Beca<span className="inline text-idaclass4">Class</span>{" "}
-            40%
-          </TituloSeccion>
-          <h4 className="text-pretty md:text-lg">Impulsa tu futuro</h4>
-          <p className="my-6 relative z-10 opacity-100 ">
-            &quot;Nuestra misión es abrir las puertas a la educación en
-            Latinoamérica Facilitamos el acceso a la educación de calidad de una
-            forma simple y accesible. Accede ahora a la BecaClass del 40% y
-            avanza hacia tus metas profesionales con IdaClass.&quot;
+        <article className="w-full lg:w-1/2 flex flex-col justify-end lg:justify-between lg:items-end relative aspect-[9/13] lg:aspect-auto max-lg:max-w-md container py-8 text-white">
+          <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem]">
+            Obtén tu <br /> BecaClass 40%
+          </h3>
+          <p className="my-4 text-sm sm:text-base z-10 text-balanced w-[16rem]">
+            Nuestra misión es abrir las puertas a la educación en Latinoamérica.
+            Facilitamos el acceso a la educación de calidad de una forma simple
+            y accesible. Accedé ahora a la BecaClass del 40% y avanzá hacia tus
+            metas profesionales con IdaClass.
           </p>
 
-          <div className="w-full relative">
-            <div className="absolute right-12 -top-12 rotate-[90deg]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22.769"
-                height="14.821"
-                className="fill-idaclass scale-[1700%] opacity-30"
-              >
-                <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22.769"
-                height="14.821"
-                className="fill-idaclass4 scale-[600%] -translate-x-6 -translate-y-[36px] opacity-70"
-              >
-                <path d="M10.212 12.007 7.645 9.414h10v-4H7.62l2.585-2.586L7.377 0 0 7.378l7.37 7.443 2.842-2.814z" />
-              </svg>
-            </div>
-          </div>
+          <Button
+            size="default"
+            className="px-2 w-full z-10 rounded-2xl lg:w-[16rem]"
+            asChild
+          >
+            <Link href="https://wa.me/+5491135872204">
+              <div className="flex  items-center gap-1">
+                <ArrowRight /> IMPULSA TU FUTURO
+              </div>
+            </Link>
+          </Button>
 
-          <div className="relative w-full">
-            <Image
-              src={linea}
-              alt="linea"
-              className="absolute -right-10 -bottom-4 scale-150"
-            />
-          </div>
-        </div>
+          <Image
+            src={`/assets/becaMobile.png`}
+            alt="beca"
+            fill
+            className="object-cover -z-10 rounded-3xl lg:hidden object-top"
+          />
+          <Image
+            src={`/assets/becaWeb.png`}
+            alt="beca"
+            fill
+            className="object-cover -z-10 rounded-3xl max-lg:hidden"
+          />
+        </article>
       </div>
     </section>
   );
