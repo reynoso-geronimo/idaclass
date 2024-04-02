@@ -54,7 +54,7 @@ const TarjetaModalidad = ({ modalidad }) => {
               <li>Contenido teorico interactivo</li>
               <li>Autoevaluaciones</li>
               <li>Doble titulacion bonificada</li>
-              <li>4 cursos complementarios (skillClass)</li>
+              <li>4 cursos complementarios (SkillClass)</li>
               <li>Acceso a webinars con expertos</li>
             </ul>
           ) : (
