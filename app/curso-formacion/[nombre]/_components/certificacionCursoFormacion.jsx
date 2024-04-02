@@ -35,9 +35,9 @@ const CertificacionCursoFormacion = () => {
             }),
           ]}
         >
-          <CarouselContent className="-ml-1">
+          <CarouselContent className="">
             <CarouselItem className="basis-2/3 lg:basis-1/3">
-              <div className="p-1">
+              <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
@@ -55,7 +55,7 @@ const CertificacionCursoFormacion = () => {
               </div>
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
-              <div className="p-1">
+              <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
@@ -73,7 +73,7 @@ const CertificacionCursoFormacion = () => {
               </div>
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
-              <div className="p-1">
+              <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
