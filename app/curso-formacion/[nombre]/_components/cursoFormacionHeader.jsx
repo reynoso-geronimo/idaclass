@@ -37,13 +37,17 @@ const CursoFormacionHeader = ({
       <Image
         src={headerMobile ? headerMobile : `/cursosFormacion/headerMobile.png`}
         fill
+        quality={60}
+        priority
         sizes="100vw"
         className="object-cover -z-10 object-top lg:hidden"
         alt=""
       />
-       <Image
+      <Image
         src={headerWeb ? headerWeb : `/cursosFormacion/headerWeb.png`}
         fill
+        quality={60}
+        priority
         sizes="100vw"
         className="object-cover -z-10 object-rigth-top max-lg:hidden"
         alt=""
