@@ -12,7 +12,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CertificacionCursoFormacion = () => {
   return (
-    <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
+    <section className="bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
       <div className="w-full lg:w-[25%]">
         <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
           Certifica tus Conocimientos
@@ -46,11 +46,11 @@ const CertificacionCursoFormacion = () => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <div className="text-xl font-medium">
+                  <div className="lg:text-xl font-medium">
                     Certificado <br /> de Extensión <br /> Universitaria IUYMCA
                   </div>
                   {/* MODAL TRIGGER */}
-                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
@@ -64,11 +64,11 @@ const CertificacionCursoFormacion = () => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <span className="text-xl font-medium ">
+                  <span className="lg:text-xl font-medium ">
                     Certificado <br /> IdaClass con <br /> autenticación QR
                   </span>
                   {/* MODAL TRIGGER */}
-                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
@@ -82,11 +82,11 @@ const CertificacionCursoFormacion = () => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <span className="text-xl font-medium ">
+                  <span className="lg:text-xl font-medium ">
                     Extra Certificado de <br /> 4 especializaciones <br />
                   </span>
                   {/* MODAL TRIGGER */}
-                  <p className="text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
                 </div>
               </div>
             </CarouselItem>
