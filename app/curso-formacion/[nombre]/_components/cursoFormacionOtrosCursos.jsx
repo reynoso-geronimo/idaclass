@@ -35,12 +35,12 @@ const cursos = [
 const OPTIONS = { align: "center" };
 
 const CursoFormacionOtrosCursos = ({cursoActual}) => {
-  console.log(cursoActual);
+  
   const cursoFiltrado = cursos.filter(curso => curso.titulo !== cursoActual)
 
   return (
     <section className="container my-12 ">
-      <h1>{cursoActual}</h1>
+      
       <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
       <div className="flex justify-center gap-4">
         <EmblaCarousel
