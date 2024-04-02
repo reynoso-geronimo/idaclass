@@ -12,7 +12,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CertificacionCursoFormacion = () => {
   return (
-    <section className="bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
+    <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
       <div className="w-full lg:w-[25%]">
         <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
           Certifica tus Conocimientos
@@ -38,7 +38,7 @@ const CertificacionCursoFormacion = () => {
           <CarouselContent className="">
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="">
-                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
@@ -56,7 +56,7 @@ const CertificacionCursoFormacion = () => {
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="">
-                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
@@ -74,7 +74,7 @@ const CertificacionCursoFormacion = () => {
             </CarouselItem>
             <CarouselItem className="basis-2/3 lg:basis-1/3">
               <div className="">
-                <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
+                <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
                     src={"/cursosFormacion/Ribbon.svg"}
                     height={50}
