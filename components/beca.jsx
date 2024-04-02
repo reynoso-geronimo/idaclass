@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 
 const Beca = () => {
   return (
-    <section className="container mt-12 2xl:px-0">
+    <section className="container mt-12">
       <div className="flex flex-col lg:flex-row gap-4 justify-between">
         <Asesorate />
         <article className="w-full lg:w-1/2 flex flex-col justify-end lg:justify-between lg:items-end relative aspect-[9/13] lg:aspect-auto max-lg:max-w-md container py-8 text-white">
