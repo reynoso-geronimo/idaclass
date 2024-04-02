@@ -122,7 +122,7 @@
 }
 .embla__button {
   z-index: 1;
-  color: var(--background-site);
+  color: #1fb3e5;
   display: flex;
   align-items: center;
   justify-content: center;
