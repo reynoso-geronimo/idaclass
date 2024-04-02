@@ -9,7 +9,7 @@ const cursos = [
   {
     titulo: "Preparador Fisico",
     descripcion: "Contiene 2 módulos, 6 unidades",
-    imagen: "/cursosFormacion/cursoimg1.jpg",
+    imagen: "/cursosFormacion/cursos/PersonalTrainer.png",
   },
   {
     titulo: "Personal Trainer",
@@ -19,17 +19,17 @@ const cursos = [
   {
     titulo: "Instructor de Musculación",
     descripcion: "Contiene 2 módulos, 6 unidades",
-    imagen: "https://source.unsplash.com/random/150x150",
+    imagen: "/cursosFormacion/cursos/InstructorDeMusculacion.png",
   },
   {
     titulo: "Gestion de Gimnasio",
     descripcion: "Contiene 2 módulos, 6 unidades",
-    imagen: "https://source.unsplash.com/random/150x150",
+    imagen: "/cursosFormacion/cursos/GestionGimnasios.png",
   },
   {
     titulo: "Nutrición Deportiva",
     descripcion: "Contiene 2 módulos, 6 unidades",
-    imagen: "https://source.unsplash.com/random/150x150",
+    imagen: "/cursosFormacion/cursos/NutricionDeportiva.png",
   },
 ];
 const OPTIONS = { align: "center" };
@@ -56,7 +56,7 @@ const CursoFormacionOtrosCursos = ({cursoActual}) => {
 
 const CursoCard = ({curso}) => (
   
-  <article className="rounded-2xl flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 border-red-700 gap-6 mx-2">
+  <article className="rounded-2xl flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 gap-6 mx-2">
     <Image
       src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
       alt=""
