@@ -81,7 +81,7 @@ const TarjetaModalidad = ({ modalidad }) => {
             U$D 162 USD
           </p>
         </CardContent>
-        <CardFooter className="flex gap-2">
+        <CardFooter className="flex max-xl:flex-col gap-2">
           <Button size="lg" className={`${modalidad==="ONLINE"?"w-[100%]":"lg:w-[50%]"} rounded-2xl `}>
             <ArrowRight className="mr-2" />
             INSCRIBIRME AHORA
