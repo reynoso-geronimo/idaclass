@@ -68,12 +68,17 @@
 .embla__container {
   backface-visibility: hidden;
   display: flex;
-  /*!! OJO CON EL JUSTIFY PUEDE ROMPER TODO DEFAULT NO EXISTE LA REGLA */
-  justify-content: space-evenly;
   align-items: flex-start;
   touch-action: pan-y;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+@media (min-width: 1024px) {
+  /*!! OJO CON EL JUSTIFY PUEDE ROMPER TODO DEFAULT NO EXISTE LA REGLA */
+  .embla__container {
+    justify-content: space-evenly;
+  }
+}
+
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
