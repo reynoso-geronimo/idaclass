@@ -39,6 +39,7 @@ const CursoPage = async ({ params }) => {
     modalidades,
     duracion,
     dedicacion,
+    modulos
   } = curso.toJSON();
 
   return (
@@ -64,7 +65,7 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CertificacionCursoFormacion />
       <Separator className="my-6" />
-      <CursoFormacionContenidoCurso modulos={curso.modulos} />
+      <CursoFormacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
 
       <CursoFormacionRequisitos/>

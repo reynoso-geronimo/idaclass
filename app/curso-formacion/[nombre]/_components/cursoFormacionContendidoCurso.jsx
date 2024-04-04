@@ -11,6 +11,9 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import SkillClass from "./skillClass";
 
 const CursoFormacionContenidoCurso = ({ modulos }) => {
+  const contenido = JSON.parse(modulos)
+  console.log(contenido)
+ 
   return (
     <section className="lg:container">
       <TituloSeccion>Contenido del curso</TituloSeccion>
@@ -22,7 +25,7 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
       </p> */}
 
       <div className="flex  flex-col items-center lg:items-start lg:flex-row gap-4">
-        <Accordion type="single" collapsible className="lg:w-[50%] px-8">
+        {contenido!==null?(<Accordion type="single" collapsible className="lg:w-[50%] px-8">
           {JSON.parse(modulos).map((modulo, index) => (
             <AccordionItem value={`item-${index + 1}`} key={index}>
               <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 ">
@@ -38,7 +41,7 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
               </AccordionContent>
             </AccordionItem>
           ))}
-        </Accordion>
+        </Accordion>):""}
         <SkillClass />
       </div>
     </section>

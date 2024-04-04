@@ -12,7 +12,10 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     descripcion: {
         type: DataTypes.TEXT
     },
-    acerca: {
+    acerca_titulo: {
+        type: DataTypes.TEXT
+    },
+    acerca_subtitulo: {
         type: DataTypes.TEXT
     },
     imagen: {
