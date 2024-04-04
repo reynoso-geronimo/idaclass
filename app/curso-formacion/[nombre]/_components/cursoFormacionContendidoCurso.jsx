@@ -14,12 +14,12 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
   return (
     <section className="lg:container">
       <TituloSeccion>Contenido del curso</TituloSeccion>
-      <p className="text-center my-4 container">
+      {/* <p className="text-center my-4 container">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ea
         possimus, magnam autem quas eos iusto minima animi tempora commodi.
         Voluptatibus magni earum voluptas natus quidem minima doloremque illum
         iure.
-      </p>
+      </p> */}
 
       <div className="flex  flex-col items-center lg:items-start lg:flex-row gap-4">
         <Accordion type="single" collapsible className="lg:w-[50%] px-8">

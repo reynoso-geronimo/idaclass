@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
-
 import Image from "next/image";
-import React from "react";
 
 const CursoFormacionHeader = ({
   nombre,
   descripcion,
   modalidades,
-  imagen,
   videoid,
-  headerMobile,
-  headerWeb,
+  
 }) => {
   return (
     <section className="relative lg:container text-white">
@@ -35,7 +31,7 @@ const CursoFormacionHeader = ({
         </div>
       </div>
       <Image
-        src={headerMobile ? headerMobile : `/cursosFormacion/headerMobile.png`}
+        src={`/cursosFormacion/cursos/headers/${nombre}Mobile.png`}
         fill
         quality={60}
         priority
@@ -44,7 +40,7 @@ const CursoFormacionHeader = ({
         alt=""
       />
       <Image
-        src={headerWeb ? headerWeb : `/cursosFormacion/headerWeb.png`}
+       src={`/cursosFormacion/cursos/headers/${nombre}Web.png`}
         fill
         quality={60}
         priority
