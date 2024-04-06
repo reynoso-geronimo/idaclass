@@ -68,7 +68,7 @@ const CursosOnDemandCaracteristicas = () => {
         Características{" "}
         <span className="text-idaclass4 max-lg:block">On Demand</span>
       </TituloSeccion>
-      <div className="grid grid-cols-4 max-lg:hidden">
+      <div className="grid grid-cols-4 gap-x-6 gap-y-6 max-lg:hidden">
         {caracteristicas.map(caracteristica => (
           <Caracteristica key={caracteristica.titulo} {...caracteristica} />
         ))}
@@ -82,7 +82,7 @@ export const Caracteristica = ({
   titulo = "Titulo",
   texto = "Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
 }) => (
-  <article className="mx-auto h-[250px] container py-3 w-[280px] bg-gray-100 rounded-3xl text-center flex flex-col justify-evenly items-center gap-3">
+  <article className="mx-auto h-[250px] container py-3 w-[280px] lg:w-full bg-gray-100 rounded-3xl text-center flex flex-col justify-evenly items-center gap-3">
     <Image src={img} alt={titulo} width={64} height={64} />
     <h3 className="text-idaclass text-xl font-bold">{titulo}</h3>
     <p className="text-sm text-pretty">{texto}</p>
