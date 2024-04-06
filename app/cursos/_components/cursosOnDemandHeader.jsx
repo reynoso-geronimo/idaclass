@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import headerWeb from "../../../public/cursosOnDemand/headerWeb.png";
+import headerWeb from "../../../public/cursosOnDemand/HeaderWeb.png";
 import headerMobile from "../../../public/cursosOnDemand/HeaderMobile.png";
 import vectorWeb from "../../../public/cursosOnDemand/VectorWeb.svg";
 import vectorMobile from "../../../public/cursosOnDemand/VectorMobile.svg";

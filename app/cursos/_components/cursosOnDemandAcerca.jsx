@@ -1,7 +1,7 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
-import imgAcerca from "../../../public/cursosOnDemand/acerca.png";
-import imgAcercaMobile from "../../../public/cursosOnDemand/acercaMobile.png";
+import imgAcerca from "../../../public/cursosOnDemand/Acerca.png";
+import imgAcercaMobile from "../../../public/cursosOnDemand/AcercaMobile.png";
 import blur from "../../../public/cursosOnDemand/blur.png";
 const CursosOnDemandAcerca = () => {
   return (
