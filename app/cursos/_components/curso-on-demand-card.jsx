@@ -14,35 +14,29 @@ import Link from "next/link";
 
 const CursoOnDemand = ({ curso }) => {
   return (
-    <Card className={" max-w-[400px] min-h-[350px] relative grid grid-row-4"}>
-      <CardContent className={"p-0"}>
-        <Link href={`/cursos/${curso.id}`}>
-          <Image
-            src={`/${curso.imagen}`}
-            alt="curso"
-            width={400}
-            height={300}
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-            className="cursor-pointer hover:brightness-110 ease-in duration-75"
-          />
-        </Link>
-      </CardContent>
-      <CardHeader className="flex justify-between">
+    <Card className={"min-h-[450px] relative flex flex-col justify-end text-white pt-20 rounded-3xl overflow-hidden"}>
+      <Image
+        src={`/${curso.imagen}`}
+        alt="curso"
+        fill
+        className="object-cover"
+      />
+      <CardTitle className="text-white z-10 p-6 pb-0">{curso.nombre ? curso.nombre : "150 "}</CardTitle>
+      <CardHeader className="flex justify-between z-10 ">
         {/* <CardTitle className="h-12 align-text-bottom">{curso.nombre}</CardTitle> */}
-        <CardDescription>{curso.descripcion}</CardDescription>
+        <CardDescription className="text-white ">{curso.descripcion}</CardDescription>
         <Separator />
         <span className="flex gap-2">
-          <GraduationCap /> Docente: Diego Maradona
+          <GraduationCap /> <span className="font-bold">Docente:</span> Diego Maradona
         </span>
+        <Separator />
         <span className="flex gap-2">
           <Clock /> {curso.horas ? curso.horas : "150 "} Horas
         </span>
+        <Separator />
       </CardHeader>
-      <CardFooter className="self-end">
-        <Button size="sm" className="w-full font-bold" asChild>
+      <CardFooter className="z-10">
+        <Button size="sm" className="w-full font-bold rounded-2xl" asChild>
           <Link href={`/cursos/${curso.id}`}>Ver Curso</Link>
         </Button>
       </CardFooter>

@@ -11,21 +11,22 @@ import { ChevronDown } from "lucide-react";
 import { getCursosFromDB } from "../actions";
 import CursoOnDemand from "./_components/curso-on-demand-card";
 import { Separator } from "@/components/ui/separator";
-import { YouTubeEmbed } from '@next/third-parties/google'
+import { YouTubeEmbed } from "@next/third-parties/google";
+import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
+import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
+import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
+
 const Page = async () => {
   const cursos = await getCursosFromDB();
   return (
-    <main className="bg-gray-200">
-      <header className="grid grid-cols-2 container gap-4">
-        <div className=" bg-orange-400 h-[16rem] col-span-2">ACA UN TITULO</div>
-        
-
-        <div className=" bg-red-400 ">ACA UN TITULO</div>
-        <div className=" bg-black ">
-        <YouTubeEmbed videoid="ogfYd705cRs" params="controls=0" className="h-[10rem]"/>
-        </div>
-      </header>
-      <Tabs defaultValue="categoria1" className="flex-1  mt-4 lg:mt-0 container">
+    <main>
+      <CursosOnDemandHeader />
+      <CursosOnDemandCaracteristicas/>
+      <CursosOnDemandAcerca/>
+      <Tabs
+        defaultValue="categoria1"
+        className="flex-1  mt-4 lg:mt-0 container"
+      >
         <DropdownMenu>
           <div className="w-full flex justify-center">
             <Button
@@ -113,7 +114,7 @@ const Page = async () => {
         </TabsList>
         <Separator className="my-4" />
         <TabsContent value="categoria1">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container gap-4 justify-center">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container gap-4 justify-center px-0">
             {cursos?.map((curso, index) => (
               <CursoOnDemand key={curso.id + index} curso={curso} />
             ))}
