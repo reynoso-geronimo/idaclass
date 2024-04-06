@@ -21,11 +21,11 @@ const Page = async () => {
   return (
     <main>
       <CursosOnDemandHeader />
-      <CursosOnDemandCaracteristicas/>
-      <CursosOnDemandAcerca/>
+      <CursosOnDemandCaracteristicas />
+      <CursosOnDemandAcerca />
       <Tabs
         defaultValue="categoria1"
-        className="flex-1  mt-4 lg:mt-0 container"
+        className="flex-1  mt-4 lg:mt-0 max-w-[1400px] mx-auto"
       >
         <DropdownMenu>
           <div className="w-full flex justify-center">
@@ -68,7 +68,7 @@ const Page = async () => {
           </div>
         </DropdownMenu>
 
-        <TabsList className="hidden lg:flex w-full justify-around bg-idaclassGray2 pt-8 pb-6">
+        <TabsList className="hidden  lg:flex w-full justify-around bg-idaclassGray2 pt-8 pb-6">
           <TabsTrigger
             value="categoria1"
             className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
