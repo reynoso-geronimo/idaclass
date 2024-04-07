@@ -55,7 +55,7 @@ const caracteristicas = [
 const OPTIONS = { align: "center" };
 const CursosOnDemandCaracteristicas = () => {
   return (
-    <section className="container">
+    <section className="container mb-8">
       <div className="lg:hidden">
         <EmblaCarousel
           options={OPTIONS}
@@ -66,7 +66,7 @@ const CursosOnDemandCaracteristicas = () => {
       </div>
       <TituloSeccion className={"lg:my-12"}>
         Características{" "}
-        <span className="text-idaclass4 max-lg:block">On Demand</span>
+        <span className="text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text max-lg:block">On Demand</span>
       </TituloSeccion>
       <div className="grid grid-cols-4 gap-x-6 gap-y-6 max-lg:hidden">
         {caracteristicas.map(caracteristica => (

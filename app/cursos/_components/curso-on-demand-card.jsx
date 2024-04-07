@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const CursoOnDemand = ({ curso }) => {
   return (
-    <Card className={"min-h-[450px] relative flex flex-col justify-end text-white pt-20 rounded-3xl overflow-hidden"}>
+    <Card className={"min-h-[550px] mx-2 relative flex flex-col justify-end text-white rounded-3xl overflow-hidden"}>
       <Image
         src={`/${curso.imagen}`}
         alt="curso"

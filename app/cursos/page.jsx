@@ -15,6 +15,8 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
 import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
 import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
+import TituloSeccion from "@/components/ui/titulo-seccion";
+import EmblaCarousel from "@/components/ui/EmblaCarousel";
 
 const Page = async () => {
   const cursos = await getCursosFromDB();
@@ -32,14 +34,14 @@ const Page = async () => {
             <Button
               asChild
               size="sm"
-              className="lg:hidden uppercase font-bold text-lg"
+              className="lg:hidden uppercase font-bold text-lg rounded-3xl"
             >
               <DropdownMenuTrigger>
                 Categorías <ChevronDown />
               </DropdownMenuTrigger>
             </Button>
             <DropdownMenuContent>
-              <TabsList className="flex flex-col h-full bg-gray-300 text-idaclass">
+              <TabsList className="flex flex-col h-full bg-gray-100 text-idaclass">
                 <div className="flex flex-col h-full">
                   <TabsTrigger value="categoria1">
                     <DropdownMenuItem>categoria1</DropdownMenuItem>
@@ -68,76 +70,81 @@ const Page = async () => {
           </div>
         </DropdownMenu>
 
-        <TabsList className="hidden  lg:flex w-full justify-around bg-idaclassGray2 pt-8 pb-6">
+        <TabsList className="hidden  lg:flex w-full justify-around bg-gray-100 pt-8 pb-6">
           <TabsTrigger
             value="categoria1"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria1
           </TabsTrigger>
           <TabsTrigger
             value="categoria2"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria2
           </TabsTrigger>
           <TabsTrigger
             value="categoria3"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria3
           </TabsTrigger>
           <TabsTrigger
             value="categoria4"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria4
           </TabsTrigger>
           <TabsTrigger
             value="categoria5"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria5
           </TabsTrigger>
           <TabsTrigger
             value="categoria6"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria6
           </TabsTrigger>
           <TabsTrigger
             value="categoria7"
-            className="uppercase data-[state=active]:bg-idaclass bg-idaclass4 text-white data-[state=active]:text-white data-[state=active]:font-extrabold"
+            className="uppercase font-bold text-idaclass3 bg-white data-[state=active]:bg-idaclass3 data-[state=active]:text-white data-[state=active]:font-extrabold rounded-3xl border-idaclass3 border"
           >
             categoria7
           </TabsTrigger>
         </TabsList>
         <Separator className="my-4" />
-        <TabsContent value="categoria1">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 container gap-4 justify-center px-0">
-            {cursos?.map((curso, index) => (
-              <CursoOnDemand key={curso.id + index} curso={curso} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="categoria2">
-          Make changes to your categoria2 here.
-        </TabsContent>
-        <TabsContent value="categoria3">
-          Make changes to your categoria3 here.
-        </TabsContent>
-        <TabsContent value="categoria4">
-          Make changes to your categoria4 here.
-        </TabsContent>
-        <TabsContent value="categoria5">
-          Make changes to your categoria5 here.
-        </TabsContent>
-        <TabsContent value="categoria6">
-          Make changes to your categoria6 here.
-        </TabsContent>
-        <TabsContent value="categoria7">
-          Make changes to your categoria7 here.
-        </TabsContent>
+        <div className="container">
+          <TabsContent value="categoria1">
+            <TituloSeccion>CATEGORIA1</TituloSeccion>
+            <div className="">
+              <EmblaCarousel
+                slides={cursos?.map((curso, index) => (
+                  <CursoOnDemand key={curso.id + index} curso={curso} />
+                ))}
+              />
+            </div>
+          </TabsContent>
+          <TabsContent value="categoria2">
+            Make changes to your categoria2 here.
+          </TabsContent>
+          <TabsContent value="categoria3">
+            Make changes to your categoria3 here.
+          </TabsContent>
+          <TabsContent value="categoria4">
+            Make changes to your categoria4 here.
+          </TabsContent>
+          <TabsContent value="categoria5">
+            Make changes to your categoria5 here.
+          </TabsContent>
+          <TabsContent value="categoria6">
+            Make changes to your categoria6 here.
+          </TabsContent>
+          <TabsContent value="categoria7">
+            Make changes to your categoria7 here.
+          </TabsContent>
+        </div>
       </Tabs>
     </main>
   );
