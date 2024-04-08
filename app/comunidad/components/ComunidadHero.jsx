@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ComunidadHero = () => {
   return (
-    <section className="bg-black">
+    <section className="">
       <div className="flex flex-col lg:flex-row container items-stretch pt-6 pb-4 text-white relative z-10  max-lg:h-[45rem]">
         <div className="w-full flex flex-col max-lg:items-center max-lg:text-center">
           <TituloSeccion className={`lg:text-left mb-2 p-0 ml-0`}>
