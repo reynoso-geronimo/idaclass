@@ -5,53 +5,7 @@ import { getCursosFormacionFromDB } from "@/app/actions";
 
 const CursosFormacion = async () => {
   const cursosFormacion = await getCursosFormacionFromDB();
-  const cursos = [
-    {
-      descuento: "70% Off",
-      titulo: "Preparador Físico",
-      descripcion: "Contiene 2 módulos, 6 unidades",
-      image: "/cursosFormacion/cursoimg1.jpg",
-      hours: 15,
-      days: 1.5,
-      turn: "Noche",
-    },
-    {
-      descuento: "70% Off",
-      titulo: "Personal Trainer",
-      descripcion: "Contiene 2 módulos, 6 unidades",
-      image: "https://source.unsplash.com/random/150x150",
-      hours: 590 + "  horas",
-      days: 1,
-      turn: "Noche",
-    },
-    {
-      descuento: "70% Off",
-      titulo: "Instructor de Musculación",
-      descripcion: "Contiene 2 módulos, 6 unidades",
-      image: "https://source.unsplash.com/random/150x150",
-      hours: 590 + "  horas",
-      days: 1,
-      turn: "Noche",
-    },
-    {
-      descuento: "70% Off",
-      titulo: "Gestion de Gimnasio",
-      descripcion: "Contiene 2 módulos, 6 unidades",
-      image: "https://source.unsplash.com/random/150x150",
-      hours: 590 + "  horas",
-      days: 1,
-      turn: "Noche",
-    },
-    {
-      descuento: "70% Off",
-      titulo: "Nutrición Deportiva",
-      descripcion: "Contiene 2 módulos, 6 unidades",
-      image: "https://source.unsplash.com/random/150x150",
-      hours: 590 + "  horas",
-      days: 1,
-      turn: "Noche",
-    },
-  ];
+  
 
   const OPTIONS = { align: "start" };
   return (

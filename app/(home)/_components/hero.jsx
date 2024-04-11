@@ -14,7 +14,8 @@ const Hero = () => {
           Fitness
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
-        Con nuestros cursos, innovamos combinando teoria  y práctica para potenciar tu éxito en emprendimiento y empleabilidad.
+          Con nuestros cursos, innovamos combinando teoria y práctica para
+          potenciar tu éxito en emprendimiento y empleabilidad.
         </h3>
         <div className="flex justify-center w-full">
           <Button
@@ -30,34 +31,29 @@ const Hero = () => {
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
-        <div className="max-w-2xl mx-auto aspect-square relative">
+        <div className="w-full relative ">
           <Image
-            src={`/home/IdaClass Web Img 1.1.jpg`}
+            src={`/home/HeaderMobile.png`}
             alt="Bienvenido"
-            fill
+            width={500}
+            height={500}
             priority={true}
             sizes="100vw"
-            className="object-contain"
-          />
-        </div>
-        <div className="w-full h-0 relative">
-          <Image
-            src={linea}
-            alt="linea"
-            className="scale-150 absolute -right-24 -top-32 sm:-top-40 z-10 "
+            className="object-contain mx-auto"
           />
         </div>
       </div>
 
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
-        <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16">
+        <div className="w-2/5 text-center flex flex-col justify-around items-center mx-16 pt-16">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
             Únete a la
             <span className="text-idaclass4"> revolución educativa</span> Sport
             Fitness
           </h2>
           <h2 className="text-lg xl:text-xl max-w-[768px] mb-4">
-          Con nuestros cursos, innovamos combinando teoria  y práctica para potenciar tu éxito en emprendimiento y empleabilidad.
+            Con nuestros cursos, innovamos combinando teoria y práctica para
+            potenciar tu éxito en emprendimiento y empleabilidad.
           </h2>
           <Button size="lg" className="rounded-2xl font-bold w-48 h-10" asChild>
             <Link href="/cursos">Ver todos los cursos</Link>
@@ -68,15 +64,15 @@ const Hero = () => {
         </div>
 
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-        <div className="w-3/5 z-10 aspect-video relative m-8">
+        <div className="w-3/5 z-10 aspect-video relative">
           <Image
-            src={`/home/IdaClass Web Img 1.2.jpg`}
+            src={`/home/HeaderWeb.png`}
             alt="Bienvenido"
             fill
             priority={true}
             sizes="50vw"
-            style={{ objectFit: "contain" }}
-            className="scale-125"
+            
+            className=" object-contain"
           />
         </div>
       </div>

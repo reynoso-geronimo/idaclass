@@ -36,7 +36,7 @@ const Ventajas = () => {
           {/* <Herramientas /> */}
           <div className="w-full lg:w-1/2 aspect-video relative ">
             <Image
-              src={`/home/IdaClass Web Img 2.1.jpg`}
+              src={`/home/Innovacion.png`}
               alt="Bienvenido"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

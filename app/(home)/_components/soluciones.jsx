@@ -19,9 +19,9 @@ const Soluciones = () => {
       className=" h-[800px] bg-black text-white relative"
       
     >
-      <Image alt="" src="/assets/bg-soluciones3.jpg" fill quality={50} sizes="50vw" className="object-[33%] object-contain max-lg:hidden"/>
-      <Image alt="" src="/assets/bg-soluciones4.jpg" fill quality={70} sizes="100vw" className="object-[90%] object-cover lg:hidden"/>
-      <div className="backdrop-brightness-50 h-full ">
+      <Image alt="" src="/assets/bg-soluciones.png" fill quality={50} sizes="50vw" className="object-contain max-lg:hidden"/>
+      <Image alt="" src="/assets/bg-solucionesMobile.png" fill quality={70} sizes="100vw" className="object-cover lg:hidden"/>
+      <div className=" h-full ">
         <div className="flex flex-col justify-around h-full container relative py-6">
           <h3
             ref={ref1}

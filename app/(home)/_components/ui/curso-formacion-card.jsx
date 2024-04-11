@@ -10,7 +10,7 @@ const CursoFormacionCard = ({ curso }) => {
       <div className="relative h-36 flex flex-col justify-end">
         <Image
           className="object-cover z-10 rounded-t-2xl"
-          src={`/cursosFormacion/${curso.imagen}`}
+          src={`/cursosFormacion/cursos/homeCard/${curso.imagen}`}
           fill
           alt="Imagen del curso"
         />
