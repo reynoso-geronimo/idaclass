@@ -2,10 +2,11 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 import imgAcerca from "../../../public/cursosOnDemand/Acerca.png";
 import imgAcercaMobile from "../../../public/cursosOnDemand/AcercaMobile.png";
-import blur from "../../../public/cursosOnDemand/blur.png";
+import AcercaBg from "../../../public/cursosOnDemand/AcercaBg.png";
 const CursosOnDemandAcerca = () => {
   return (
-    <section className="mx-auto max-w-[1400px] relative bg-gradient-to-b from-[#0088CA] to-[#1FB3E5] text-white flex flex-col lg:flex-row">
+    <section className="mx-auto max-w-[1400px] relative text-white flex flex-col lg:flex-row">
+      <Image src={AcercaBg} alt="Acerca fondo" className="absolute -z-10 w-full h-full object-cover" />
       <div className="lg:w-1/2 container">
         <TituloSeccion className={" lg:text-left text-white px-0 mx-0"}>
           Todos nuestros Cursos On Demand
