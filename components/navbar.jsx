@@ -47,7 +47,7 @@ const NavBar = ({ cursosFormacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                className={`border-l-2 border-idaclass4 pl-2 ${
+                className={`border-l-2 rounded-none border-idaclass4 pl-2 ${
                   pathname === "/nosotros" && "text-idaclass4"
                 } `}
                 href="/nosotros"
@@ -56,7 +56,7 @@ const NavBar = ({ cursosFormacion }) => {
               </Link>
             </SheetClose>
             <Separator />
-            <h1 className="border-l-2 border-idaclass4 pl-2  text-idaclass">
+            <h1 className="border-l-2 rounded-none border-idaclass4 pl-2  text-idaclass">
               Cursos de formación
             </h1>
             {cursosFormacion.map((cursoFormacion, index) => (
@@ -76,7 +76,7 @@ const NavBar = ({ cursosFormacion }) => {
             <SheetClose asChild>
               <Link
                 href="/cursos"
-                className={`border-l-2 border-idaclass4 pl-2 ${
+                className={`border-l-2 rounded-none border-idaclass4 pl-2 ${
                   pathname === "/cursos" && "text-idaclass4"
                 } `}
               >
@@ -87,7 +87,7 @@ const NavBar = ({ cursosFormacion }) => {
             <SheetClose asChild>
               <Link
                 href="/comunidad"
-                className={`border-l-2 border-idaclass4 pl-2 ${
+                className={`border-l-2 rounded-none border-idaclass4 pl-2 ${
                   pathname === "/comunidad/blog" && "text-idaclass4"
                 } `}
               >
@@ -98,7 +98,7 @@ const NavBar = ({ cursosFormacion }) => {
             <SheetClose asChild>
               <Link
                 href="https://wa.me/+5491135872204"
-                className={`border-l-2 border-idaclass4 pl-2 ${
+                className={`border-l-2 rounded-none border-idaclass4 pl-2 ${
                   pathname === "/asesorate" && "text-idaclass4"
                 } `}
               >
