@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check, ChevronRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 export const ImagesSlider = ({
   images,
