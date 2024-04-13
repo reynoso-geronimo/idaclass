@@ -46,7 +46,7 @@ const CursosOnDemandHeader = () => {
         src={headerMobile}
         alt=""
         fill
-        className="object-cover sm:hidden -z-10"
+        className="object-cover object-top sm:hidden -z-10"
         placeholder="blur"
       />
     </header>
