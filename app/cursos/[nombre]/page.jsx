@@ -1,59 +1,59 @@
-import Image from "next/image";
-import { YouTubeEmbed } from "@next/third-parties/google";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-import PaginaCurso from "@/models/PaginaCurso";
-import Curso from "@/models/Curso";
-
-import {
-  Calendar,
-  Check,
-  ChevronRight,
-  Clock,
-  Construction,
-  Monitor,
-  Phone,
-  Plus,
-} from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Separator } from "@/components/ui/separator";
-import TarjetaModalidad from "./_components/tarjeta-modalidad";
 
-import cert1 from "../../../public/certi/cert1.webp";
-import cert2 from "../../../public/certi/cert2.webp";
-import Introvideo from "@/components/ui/introvideo";
-import TituloSeccion from "@/components/ui/titulo-seccion";
-import CasoExito from "@/components/ui/caso-exito";
+import EquipoProfesional from "@/components/equipo-profesional";
+import CasosExito from "@/components/casos-exito";
+import CertificacionCursoOnDemand from "./_components/certificacionCursoOnDemand";
+import Link from "next/link";
+import Beca from "@/components/beca";
+import CursoOnDemandHeader from "./_components/cursoOnDemandHeader";
+import CursoOnDemandAcerca from "./_components/cursoOnDemand";
+import CursoOnDemandObjetivos from "./_components/cursoOnDemandObjetivos";
+import CursoOnDemandContenidoCurso from "./_components/cursoOnDemandContendidoCurso";
+import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
+import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
+import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
+
 
 const CursoPage = async ({ params }) => {
-  const [curso, paginaCurso] = await Promise.all([
-    Curso.findByPk(params.id),
-    PaginaCurso.findOne({ where: { curso: params.id } }),
-  ]);
+  const nombreParseado = params.nombre.replace(/%20/g, " ");
+
+  /* //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
+  const curso = await CursosFormacion.findOne({
+    where: { nombre: nombreParseado },
+  });
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-  if (!paginaCurso) {
-    return (
-      <div className="flex flex-col items-center">
-        <Construction size={72} className=" rounded-full" fill="#FFFF00" />
-        <h1 className="text-3xl font-bold">Sitio bajo construccion</h1>
-      </div>
-    );
+
+
+  const {
+    nombre,
+    descripcion,
+    imagen,
+    precio,
+    frecuencia,
+    videoid,
+    acerca,
+    modalidades,
+    duracion,
+    dedicacion,
+    modulos
+  } = curso.toJSON();
+  */ 
+  const cursoRelleno = {
+    nombre: "Envejecimiento Activo",
+    descripcion: "Descripción del curso", 
+    imagen: "/path/to/imagen.jpg",
+    precio: 99.99,
+    frecuencia: "2 veces por semana",
+    videoid: "abc123",
+    acerca: "Acerca del curso...",
+    modalidades: "Modalidad Virtual | Curso Asincrónico",
+    duracion: "4 semanas",
+    dedicacion: "10 horas por semana", 
+    modulos: null
+    
   }
 
   const {
@@ -61,285 +61,108 @@ const CursoPage = async ({ params }) => {
     descripcion,
     imagen,
     precio,
-    modalidad,
+    frecuencia,
+    videoid,
+    acerca,
+    modalidades,
     duracion,
     dedicacion,
-  } = curso.toJSON();
-  const {
-    descripcionuno,
-    descripciondos,
-    descripciontres,
-    check_1,
-    check_2,
-    check_3,
-    check_4,
-    modulos,
-  } = paginaCurso.toJSON();
+    modulos
+  } = cursoRelleno
 
   return (
-    <main className="flex flex-col gap-6">
-      {/* <div className="text-center bg-emerald-300 py-4">Promocion </div> */}
-      <section className="bg-idaclass text-white">
-        <div className="container py-12  flex flex-col lg:flex-row justify-evenly gap-8">
-          <div className="flex flex-col items-center lg:items-start  lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl font-bold my-4 tracking-tight">
-              {nombre && nombre}
-            </h1>
+    <main className="flex flex-col">
+      <CursoOnDemandHeader
+        nombre={nombre}
+        descripcion={descripcion}
+        imagen={imagen}
+        modalidades={modalidades}
+        videoid={videoid}
+      />
 
-            <p className="font-medium">{descripcion}</p>
+      <CursoOnDemandAcerca
+        duracion={duracion}
+        dedicacion={dedicacion}
+        acerca={acerca}
+        frecuencia={frecuencia}
+        modalidades={modalidades}
+        nombre={nombre}
+      />
+      <Separator className="my-6" />
+      <CursoOnDemandObjetivos />
+      <Separator className="my-6" />
+      <CertificacionCursoOnDemand />
+      <Separator className="my-6" />
+      <CursoOnDemandContenidoCurso modulos={modulos} />
+      <Separator className="my-6" />
 
-            <div className="font-semibold text-sm my-4">
-              <Badge className={`bg-red-500`}>Online</Badge>{" "}
-              <Badge>Prescencial</Badge>
-            </div>
-
-            <Button size="lg" className="rounded-lg  font-extrabold  w-1/2">
-              Inscribirme ahora
-            </Button>
-          </div>
-
-          <div className="flex flex-col items-center justify-center lg:w-1/2">
-            <div className=" w-full max-w-2xl bg-black relative aspect-video">
-              <Image src={`/${imagen}`} fill alt="imagen curso"></Image>
-            </div>
-
-            <Introvideo
-              className={`mx-auto text-white mt-4`}
-              texto="Ver resumen"
-              videoid="Mgo24SP8-Xs"
-            />
-          </div>
-        </div>
-      </section>
-      <Separator />
-      <section className="container flex flex-col items-start lg:flex-row lg:items-center lg:justify-between">
-        <div className="text-white-1 rounded lg:w-1/2">
-          <Badge
-            variant={"outline"}
-            className="text-base font-bold justify-center border-black h-8 mb-8"
-          >
-            Acerca de este curso
-          </Badge>
-          
-          <Separator />
-          <ul className="text-sm font-semibold flex flex-col gap-2 mb-8">
-          
-            <li>{descripcionuno && descripcionuno}</li>
-            <li>{descripciondos && descripciondos}</li>
-            <li>{descripciontres && descripciontres}</li>
-          </ul>
-        </div>
-
-        <ul className="flex flex-col font-bold lg:text-2xl gap-4 lg:w-1/3">
-          <li className="flex items-center gap-2">
-            <Calendar className="text-idaclass" strokeWidth={3} />
-            Duracion: {duracion}
-          </li>
-          <li className="flex items-center gap-2">
-            <Monitor className="text-idaclass" strokeWidth={3} />
-            Modalidad: {modalidad}
-          </li>
-          <li className="flex items-center gap-2">
-            <Clock className="text-idaclass" strokeWidth={3} />
-            Dedicacion: {dedicacion && dedicacion}
-          </li>
-          <li className="flex items-center gap-2">
-            <Check
-              size={24}
-              strokeWidth={4}
-              className="rounded-full bg-idaclass4 text-white p-0.5"
-            />
-            {check_4}
-          </li>
-        </ul>
-      </section>
-      <Separator />
-      <section className="container flex flex-col items-stretch lg:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
-        <article className="w-full lg:w-1/2 p-8 flex flex-col items-center  ">
-          <Badge className="text-lg lg:text-xl font-semibold m-4 justify-center outline outline-2 outline-primary outline-offset-4">
-            Certifica tus conocimientos
-          </Badge>
-
-          <p className="my-auto py-2 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            consequatur quae, error facilis sapiente impedit ut. Amet velit ab
-            illo dignissimos animi, dolorem impedit optio? Est inventore quos
-            obcaecati commodi.
-          </p>
-        </article>
-        <article className="flex mx-auto my-auto w-full lg:w-2/3 gap-2">
-          <div className="w-full">
-            <Image src={cert1} alt="certificado" className=" mx-auto" />
-          </div>
-          <div className="w-full">
-            <Image src={cert2} alt="certificado" className="mx-auto" />
-          </div>
-        </article>
-      </section>
-      <Separator />
-      <section className="bg-gradient-to-br from-gray-100 via-gray-150 to-gray-100">
-        <h2
-          className="text-2xl lg:text-4xl font-bold my-4 text-center"
-          id="contenido-curso"
-        >
-          Contenido del curso
-        </h2>
-        <p className="text-center">Subtitulo</p>
-        <div className="container flex flex-col items-center md:flex-row gap-4">
-          {
-            <Accordion type="single" collapsible className="w-full md:w-1/2">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <AccordionItem value={`item-${index + 1}`} key={index}>
-                  <AccordionTrigger className="font-bold text-sm md:text-2xl  text-left px-4 ">
-                    Modulo: {index + 1}
-                  </AccordionTrigger>
-                  <AccordionContent className="font-semibold text-sm p-4  bg-gray-200">
-                    Modulo
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          }
-          <Plus size={72} />
-          <div className="mx-auto w-full md:w-1/3 font-medium flex flex-col justify-between border bg-idaclass rounded-xl p-4">
-            <Badge className="text-lg text-center font-semibold m-2 justify-center bg-indigo-900  outline outline-2 outline-offset-4">
-              Modulo especial: SkillClass
-            </Badge>
-            <div className="text-white flex flex-1 flex-col justify-around items-center">
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="flex items-center">
-                <ChevronRight className="text-white shrink-0" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Separator />
-      <section className="container">
-        <h2 className="text-2xl lg:text-4xl font-bold my-4 text-center">
-          Trainers educativos que te acompañaran
-        </h2>
-        <article className="flex flex-wrap justify-around">
-          <div className="bg-black text-white text-xl font-bold p-4">
-            Trainer
-          </div>
-          <div className="bg-black text-white text-xl font-bold p-4">
-            Trainer
-          </div>
-          <div className="bg-black text-white text-xl font-bold p-4">
-            Trainer
-          </div>
-          <div className="bg-black text-white text-xl font-bold p-4">
-            Trainer
-          </div>
-          <div className="bg-black text-white text-xl font-bold p-4">
-            Trainer
-          </div>
-        </article>
-      </section>
-      <Separator />
-      <section className="flex flex-col md:flex-row justify-center gap-4 container">
-        <article className="w-full">
-          <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
-            Bono extra
-          </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-          </ul>
-        </article>
-
-        <article className="w-full">
-          <h3 className="text-center text-lg lg:text-xl font-bold m-4 underline decoration-idaclass decoration-4 underline-offset-8">
-            Potencia tu empleabilidad o emprende
-          </h3>
-          <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly shadow-2xl p-14 rounded-3xl border border-idaclassGray2">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit</li>
-          </ul>
-        </article>
-      </section>
+      <CursoOnDemandRequisitos/>
       {/* modalidades y pago */}
+      <Separator className="my-6" />
+      <CursoOnDemandModalidades/>
+
+      <Beca />
+      <Separator className="my-6" />
+      <EquipoProfesional
+        titulo="Conoce al equipo de"
+        titulo2="Trainers Educativos"
+        titulo2Class="text-idaclass4"
+        titulo3="que te guiara al exito"
+      />
       <Separator />
-      <section>
-        <h1 className="text-center font-bold text-xl my-4 container">
-          Elige la modalidad que mas se adapte a ti
-        </h1>
 
-        <Carousel className="mx-auto max-w-[270px] sm:max-w-[70vw] ">
-          <CarouselContent className="-ml-1">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-1 sm:basis-1/2 lg:basis-1/3"
+      {/* <TituloSeccion className={""}>
+          Casos de éxito de nuestros estudiantes
+        </TituloSeccion> */}
+      <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
+
+      <Separator className="my-6" />
+     <CursoOnDemandOtrosCursos cursoActual={nombreParseado}/>
+      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
+        <p className="text-white max-sm:text-xs">
+          + de 50.0000 certificados otorgados{" "}
+        </p>
+        <div className="flex gap-12 items-center">
+          <Link href="#inscripcion">
+            <Button>Inscribirme ahora</Button>
+          </Link>
+          <Link href="https://wa.me/+5491135872204">
+            <div className="max-lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="50"
+                height="50"
+                viewBox="0 0 48 48"
               >
-                <TarjetaModalidad />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="lg:hidden">
-            <CarouselPrevious className=" -left-4 sm:-left-12 h-10 w-10" />
-            <CarouselNext className=" -right-4 sm:-right-12 h-10 w-10" />
-          </div>
-        </Carousel>
-      </section>
-
-      <section className="container flex flex-col items-stretch sm:flex-row gap-4 border-2 bg-idaclassGray2 border-idaclass rounded-xl">
-        <article className="w-full lg:w-1/2 p-8 flex flex-col items-start  ">
-          <TituloSeccion className="text-left p-0 m-0">
-            Necesitas ayuda o tienes alguna pregunta?
-          </TituloSeccion>
-          <p className="font-bold my-4">
-            Nuestros especialistas estan disponibles para escucharte y despejar
-            todas tus dudas
-          </p>
-          <Button size="lg" className="bg-green-500 px-4">
-            <div className="flex  items-center gap-4">
-              <svg viewBox="0 0 32 32" className="h-8 w-8">
                 <path
-                  d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                  fill="#fff"
+                  d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                ></path>
+                <path
+                  fill="#cfd8dc"
+                  d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                ></path>
+                <path
+                  fill="#40c351"
+                  d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                ></path>
+                <path
+                  fill="#fff"
                   fillRule="evenodd"
-                  fill="white"
+                  d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                  clipRule="evenodd"
                 ></path>
               </svg>
-              Hablanos por Whatsapp
             </div>
-          </Button>
-        </article>
-        <article className="w-full flex items-center mx-auto lg:w-1/3 mb-4 lg:mb-0">
-          <Image src={cert2} alt="certificado" className="mx-auto" />
-        </article>
-      </section>
-      <section className="container">
-        <TituloSeccion className={""}>
-          Casos de exito de nuestros estudiantes
-        </TituloSeccion>
-        <div className="grid md:grid-cols-2 gap-4">
-          <CasoExito />
-          <CasoExito />
-          <CasoExito />
-          <CasoExito />
+          </Link>
         </div>
-      </section>
-      <Separator />
+      </div>
     </main>
   );
 };
