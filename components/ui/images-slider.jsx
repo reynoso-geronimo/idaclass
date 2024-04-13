@@ -3,8 +3,8 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Button } from "./button";
 import Link from "next/link";
+import { ArrowRight, Check, ChevronRight } from "lucide-react";
 
 export const ImagesSlider = ({
   images,
@@ -167,28 +167,11 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover lg:object-contain object-center"
+            className="image h-full w-1/2 absolute inset-0 object-contain object-bottom"
           />
         </AnimatePresence>
       )}
-      <AnimatePresence>
-        <motion.div
-          key={currentIndex}
-          initial="initial"
-          animate="visible"
-          //exit={direction === "up" ? "upExit" : "downExit"}
-          variants={slideVariants}
-          className="text-white absolute bottom-10 text-center lg:hidden z-10"
-        >
-          <Link href={"/cursos"}>
-            <Button className={"h-12 w-[80vw]  text-lg"}>
-              {currentIndex === 0 && "Impulsa tu carrera hoy mismo"}
-              {currentIndex === 1 && "Elige tu curso"}
-              {currentIndex === 2 && "Ver todos los cursos"}
-            </Button>
-          </Link>
-        </motion.div>
-      </AnimatePresence>
+
       <AnimatePresence>
         <motion.div
           key={currentIndex}
@@ -196,29 +179,89 @@ export const ImagesSlider = ({
           animate="visible"
           exit={direction === "up" ? "upExit" : "downExit"}
           variants={slideVariants2}
-          className="text-white absolute lg:right-0 top-[15%] lg:top-[20%] lg:w-1/2 text-center container"
+          className="text-white absolute right-0 w-1/2 container flex flex-col justify-between space-y-10 pl-36"
         >
-          {currentIndex === 1 && (
-            <>
-              <h3 className="text-idaclass3 text-4xl font-bold">
-                CURSOS ON DEMAND
-              </h3>
-              {/* <h3 className="text-idaclass3 text-2xl font-bold">
+          <h4 className="text-orange-500 font-bold italic text-lg">
+            Modalidad Virtual | Cursos Asincrónicos
+          </h4>
+
+          <div className="relative">
+            <img
+              src="/home/CursosOnDemand/flechitas.svg"
+              width={90}
+              height={120}
+              alt="Cursos On Demand"
+              className="absolute -left-28"
+            />
+
+            <h3 className="inline text-5xl font-extrabold text-left my-4">
+              {currentIndex === 0 ? "CURSOS" : "Especializate"} <br />
+              <span className="text-idaclass4">
+                {currentIndex === 0 ? "On Demand" : "con Nosotros"}
+              </span>
+            </h3>
+          </div>
+          {/* <h3 className="text-idaclass3 text-2xl font-bold">
                 Lleva tu carrera al siguiente nivel!!!!
               </h3> */}
-
-              <ul className="list-inside list-disc my-2">
-                <li>Estudia a tu ritmo </li>
-                <li>Expertos internacionales </li>
-                <li>Elije tu area de especializacion</li>
-              </ul>
-              <Link href={"/cursos"} className="max-lg:hidden">
-                <Button variants="lg" className="rounded-lg mt-4">
-                  Ver todos los cursos
-                </Button>
-              </Link>
-            </>
+          {currentIndex === 0 ? (
+            <div className="space-y-2 font-semibold text-lg">
+              <p>
+                <Check
+                  className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
+                  strokeWidth={2.5}
+                  size={22}
+                />
+                Aprende a tu ritmo
+              </p>
+              <p>
+                <Check
+                  className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
+                  strokeWidth={2.5}
+                  size={22}
+                />
+                Alcanza tus metas
+              </p>
+              <p>
+                <Check
+                  className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
+                  strokeWidth={2.5}
+                  size={22}
+                />
+                Llevá tu carrera a otro nivel
+              </p>
+              <p>
+                <Check
+                  className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
+                  strokeWidth={2.5}
+                  size={22}
+                />
+                Convertite en un especialista
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-2 font-semibold">
+              <p className="text-lg">
+                Dominá las habilidades que <br /> necesitás para destacar en tu{" "}
+                <br /> campo con nuestros programas <br /> de especialización.
+              </p>
+            </div>
           )}
+          <div className="mt-5 relative">
+            <Link
+              href={"/cursos"}
+              className="flex items-center bg-idaclass4 py-0.5 px-2 rounded-xl font-bold text-xs w-40"
+            >
+              <ArrowRight className="mr-2" /> ELEGÍ TU CURSO
+            </Link>
+            <img
+              src="/home/CursosOnDemand/linearecta.png"
+              width={400}
+              height={100}
+              alt="Cursos On Demand"
+              className="absolute scale-125 left-60 bottom-3"
+            />
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>

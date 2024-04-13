@@ -33,7 +33,6 @@ const CursoFormacionHeader = ({
       <Image
         src={`/cursosFormacion/cursos/headers/${nombre}Mobile.png`}
         fill
-        quality={60}
         priority
         sizes="100vw"
         className="object-cover -z-10 object-top lg:hidden"
@@ -42,7 +41,6 @@ const CursoFormacionHeader = ({
       <Image
        src={`/cursosFormacion/cursos/headers/${nombre}Web.png`}
         fill
-        quality={60}
         priority
         sizes="100vw"
         className="object-cover -z-10 object-rigth-top max-lg:hidden"

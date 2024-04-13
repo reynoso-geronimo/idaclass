@@ -14,7 +14,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Ventajas from "./_components/ventajas";
 
-const DynamicModalidad = dynamic(() => import("./_components/modalidad"), {
+const DynamicCursosOnDemand = dynamic(() => import("./_components/cursos-on-demand"), {
   ssr: false,
   loading: () => (
     <div className="text-white pt-[15%] lg:pt-12 container text-center bg-black h-[400px]">
@@ -43,7 +43,7 @@ export default function Home() {
       {/* <Banderas/> */}
       <Soluciones />
       <CursosFormacion />
-      <DynamicModalidad />
+      <DynamicCursosOnDemand />
       <Certificacion />
 
       <EquipoProfesional />
