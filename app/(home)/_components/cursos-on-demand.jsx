@@ -10,7 +10,7 @@ import React from "react";
 const CursosOnDemand = () => {
   const images = [
     "./home/CursosOnDemand/Img1.png",
-    "./modalidad/IdaClass Web Img 7.jpg",
+    "./home/CursosOnDemand/Img2.png",
   ];
 
   //!! ESTO ESTA MAL NO SER HARAGAN Y ARREGLAR
