@@ -75,7 +75,7 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                     >
                       <Image
                         alt={cursoFormacion.nombre}
-                        src={`/cursosFormacion/${cursoFormacion.imagen}`}
+                        src={`/cursosFormacion/cursos/homeCard/${cursoFormacion.imagen}`}
                         width={104}
                         height={64}
                       />
