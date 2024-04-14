@@ -9,7 +9,7 @@ const CursoFormacionCard = ({ curso }) => {
     <article className="w-[265px] mx-auto bg-gray-100 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-900 text-xs sm:text-sm">
       <div className="relative h-36 flex flex-col justify-end">
         <Image
-          className="object-cover z-10 rounded-t-2xl"
+          className="object-cover rounded-t-2xl"
           src={`/cursosFormacion/cursos/homeCard/${curso.imagen}`}
           fill
           alt="Imagen del curso"
@@ -30,7 +30,7 @@ const CursoFormacionCard = ({ curso }) => {
         {curso.modulos &&
           JSON.parse(curso.modulos).map((modulo, index) => (
             <p key={index} className=" flex items-center gap-1">
-              <Dot color="#3a5dae" className="shrink-0"/>
+              <Dot color="#3a5dae" className="shrink-0" />
               {modulo.titulo}
             </p>
           ))}
