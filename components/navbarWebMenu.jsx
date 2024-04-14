@@ -110,7 +110,7 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                     </Link>
                   </MenubarItem>
                 ))}
-
+{/* 
                 <MenubarItem
                   className="p-4 hover:bg-primary hover:cursor-pointer"
                   asChild
@@ -125,7 +125,7 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                       VER TODOS LOS CURSOS ON DEMAND
                     </Link>
                   </Button>
-                </MenubarItem>
+                </MenubarItem> */}
               </div>
             </div>
           </MenubarContent>
