@@ -8,6 +8,7 @@ import {
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { categoriasOnDemand } from "@/lib/constants";
 
 const classEscritorio =
   "hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]";
@@ -55,7 +56,7 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                 Cursos de Formación
               </h5>
               <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
-              Modalidades: Online sincronico | Presencial
+                Modalidades: Online sincronico | Presencial
               </p>
               <div className="grid mr-6">
                 {cursosFormacion.map((cursoFormacion, index) => (
@@ -86,50 +87,29 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                 Cursos on demand
               </h5>
               <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
-              Modalidad: Online asincronico
+                Modalidad: Online asincronico
               </p>
-              <div className="flex flex-col justify-start gap-6">
-                <MenubarItem
-                  className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all"
-                  asChild
-                >
-                  <Link
-                    href={`/`}
-                    className={`flex  gap-4 ${
-                      pathname === `/cursos-on-demand` && `text-idaclass2`
-                    } hover:cursor-pointer  `}
+              <div className="flex flex-col justify-evenly">
+                {categoriasOnDemand.map((categoriaOnDemand, index) => (
+                  <MenubarItem
+                    key={index}
+                    className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all"
+                    asChild
                   >
-                    <div>
-                      <p className="flex items-center gap-2">
-                        PLACEHOLDER{" "}
-                        <span className="py-1 px-3 font-normal text-xs bg-idaclass rounded-3xl text-white">
-                          CATEGORIA
-                        </span>
-                      </p>
-                    </div>
-                  </Link>
-                </MenubarItem>
-
-                <MenubarItem
-                  className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all"
-                  asChild
-                >
-                  <Link
-                    href={`/`}
-                    className={`flex  gap-4 ${
-                      pathname === `/cursos-on-demand` && `text-idaclass2`
-                    } hover:cursor-pointer  `}
-                  >
-                    <div>
-                      <p className="flex items-center gap-2">
-                        PLACEHOLDER{" "}
-                        <span className="py-1 px-3 font-normal text-xs bg-idaclass rounded-3xl text-white">
-                          CATEGORIA
-                        </span>
-                      </p>
-                    </div>
-                  </Link>
-                </MenubarItem>
+                    <Link
+                      href={`/`}
+                      className={`flex  gap-4 ${
+                        pathname === `/cursos-on-demand` && `text-idaclass2`
+                      } hover:cursor-pointer  `}
+                    >
+                      <div>
+                        <p className="flex items-center gap-2">
+                          <span className="text-white">Categoria</span>{categoriaOnDemand}
+                        </p>
+                      </div>
+                    </Link>
+                  </MenubarItem>
+                ))}
 
                 <MenubarItem
                   className="p-4 hover:bg-primary hover:cursor-pointer"
