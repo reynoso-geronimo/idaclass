@@ -15,7 +15,7 @@ const classEscritorio =
 
 const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
   return (
-    <div className="hidden lg:flex justify-around items-center gap-8">
+    <div className="hidden lg:flex justify-around items-stretch gap-8">
       <Link
         href="/"
         className={`${
@@ -82,14 +82,14 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
               </div>
             </div>
 
-            <div className="pl-8 ">
+            <div className="pl-8 flex flex-col">
               <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-extrabold text-white">
                 Cursos on demand
               </h5>
               <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
                 Modalidad: Online asincronico
               </p>
-              <div className="flex flex-col justify-evenly">
+              <div className="flex flex-col justify-between flex-1">
                 {categoriasOnDemand.map((categoriaOnDemand, index) => (
                   <MenubarItem
                     key={index}
