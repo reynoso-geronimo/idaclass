@@ -35,7 +35,7 @@ const CursoFormacionHeader = ({
             width={60}
             className="bg-white rounded-full"
           />
-          <div>
+          <div className="pr-2">
             <h2 className="font-bold text-lg">Prof. Relleno Emeritus</h2>
             <p className="font-medium text-sm">Vendedor de humo</p>
           </div>
