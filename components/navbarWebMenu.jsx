@@ -1,8 +1,16 @@
 import {
   Menubar,
+  MenubarCheckboxItem,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -84,33 +92,42 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
 
             <div className="pl-8 flex flex-col">
               <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-extrabold text-white">
-                Cursos on demand
+                Cursos Especializados
               </h5>
               <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
                 Modalidad: Online asincronico
               </p>
               <div className="flex flex-col justify-between flex-1">
                 {categoriasOnDemand.map((categoriaOnDemand, index) => (
-                  <MenubarItem
-                    key={index}
-                    className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all"
-                    asChild
-                  >
-                    <Link
-                      href={`/`}
-                      className={`flex  gap-4 ${
-                        pathname === `/cursos-on-demand` && `text-idaclass2`
-                      } hover:cursor-pointer  `}
-                    >
-                      <div>
-                        <p className="flex items-center gap-2">
-                          <span className="text-white">Categoria</span>{categoriaOnDemand}
-                        </p>
-                      </div>
-                    </Link>
-                  </MenubarItem>
+                  <MenubarSub key={index}>
+                  <MenubarSubTrigger className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                    <span className="text-white">Categoria &nbsp; </span>
+                    {categoriaOnDemand}
+                  </MenubarSubTrigger>
+                  <MenubarSubContent className="bg-black text-white font-bold ">
+                    <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                      CURSO 1
+                    </MenubarItem>
+                    <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                      CURSO 2
+                    </MenubarItem>
+                    <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                      CURSO 3
+                    </MenubarItem>
+                    <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                      CURSO 4
+                    </MenubarItem>
+                    <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
+                      CURSO 5
+                    </MenubarItem>
+                  </MenubarSubContent>
+                </MenubarSub>
                 ))}
-{/* 
+                {/* Nuevo codigo */}
+
+                
+                {/* fin nuevo dogio */}
+                <MenubarSeparator />
                 <MenubarItem
                   className="p-4 hover:bg-primary hover:cursor-pointer"
                   asChild
@@ -125,7 +142,7 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                       VER TODOS LOS CURSOS ON DEMAND
                     </Link>
                   </Button>
-                </MenubarItem> */}
+                </MenubarItem>
               </div>
             </div>
           </MenubarContent>
