@@ -24,7 +24,7 @@ const NavBar = ({ cursosFormacion }) => {
   const pathname = usePathname().replace(/%20/g, " ");
   return (
     <header className="sticky top-0 z-40 bg-black text-white">
-      <Promobar />
+      {/* <Promobar /> */}
       <nav className="w-full flex justify-between items-center h-16 container max-sm:px-1 font-semibold">
         <Sheet>
           <SheetTrigger className="lg:hidden w-24">
