@@ -12,14 +12,15 @@ import { Clock, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CursoOnDemand = ({ curso }) => {
+const CursoOnDemandCard = ({ curso }) => {
   return (
     <Card className={"min-h-[550px] mx-2 relative flex flex-col justify-end text-white rounded-3xl overflow-hidden"}>
       <Image
-        src={`/${curso.imagen}`}
+        // src={`/${curso.imagen}`}
+        src={"/"}
         alt="curso"
         fill
-        className="object-cover"
+        className="object-cover bg-black"
       />
       <CardTitle className="text-white z-10 p-6 pb-0">{curso.nombre ? curso.nombre : "150 "}</CardTitle>
       <CardHeader className="flex justify-between z-10 ">
@@ -44,4 +45,4 @@ const CursoOnDemand = ({ curso }) => {
   );
 };
 
-export default CursoOnDemand;
+export default CursoOnDemandCard;

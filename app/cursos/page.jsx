@@ -1,31 +1,28 @@
 "use server";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
-import { getCursosFromDB } from "../actions";
-import CursoOnDemand from "./_components/curso-on-demand-card";
-import { Separator } from "@/components/ui/separator";
-import { YouTubeEmbed } from "@next/third-parties/google";
+
 import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
 import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
 import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
-import TituloSeccion from "@/components/ui/titulo-seccion";
-import EmblaCarousel from "@/components/ui/EmblaCarousel";
+import CursosOnDemandCategoriaBar from "./_components/cursosOnDemandCategoriaBar";
+import CursosOnDemandCategorias from "./_components/CursosOnDemandCategorias";
+
+import { categoriasOnDemand } from "@/lib/constants";
+import { getCursosFromDB } from "../actions";
 
 const Page = async () => {
-  const cursos = await getCursosFromDB();
+  const cursos = await getCursosFromDB()
   return (
     <main>
       <CursosOnDemandHeader />
       <CursosOnDemandCaracteristicas />
       <CursosOnDemandAcerca />
-      <Tabs
+      <CursosOnDemandCategoriaBar categoriasOnDemand={categoriasOnDemand} />
+      {categoriasOnDemand.map((categoriaOnDemand, index) => (
+        <CursosOnDemandCategorias key={index} categoria={categoriaOnDemand} cursos={cursos}/>
+      ))}
+
+      {/* //!! Codigo Viejo quizas se pueda usar */}
+      {/* <Tabs
         defaultValue="categoria1"
         className="flex-1  mt-4 lg:mt-0 max-w-[1400px] mx-auto"
       >
@@ -145,7 +142,7 @@ const Page = async () => {
             Make changes to your categoria7 here.
           </TabsContent>
         </div>
-      </Tabs>
+      </Tabs> */}
     </main>
   );
 };
