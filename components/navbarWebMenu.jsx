@@ -63,8 +63,8 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
               <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-extrabold text-white">
                 Cursos de Formación
               </h5>
-              <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
-                Modalidades: Online sincronico | Presencial
+              <p className="font-semibold my-4 max-lg:text-center text-orange-500 italic px-2">
+                Modalidades: Online en vivo | Presencial
               </p>
               <div className="grid mr-6">
                 {cursosFormacion.map((cursoFormacion, index) => (
@@ -94,8 +94,8 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
               <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-extrabold text-white">
                 Cursos Especializados
               </h5>
-              <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic px-2">
-                Modalidad: Online asincronico
+              <p className="font-semibold my-4 max-lg:text-center text-orange-500 italic px-2">
+                Modalidad: Online On Demand
               </p>
               <div className="flex flex-col justify-between flex-1">
                 {categoriasOnDemand.map((categoriaOnDemand, index) => (
@@ -127,9 +127,9 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
 
                 
                 {/* fin nuevo dogio */}
-                <MenubarSeparator />
+                
                 <MenubarItem
-                  className="p-4 hover:bg-primary hover:cursor-pointer"
+                  className="p-4 mt-2 hover:bg-primary hover:cursor-pointer"
                   asChild
                 >
                   <Button
