@@ -58,7 +58,7 @@ const Page = () => {
             <div className="flex flex-col justify-center items-center w-full gap-y-20 p-12 min-h-[1500px]: md:min-h-[1100px]:">
               {sobreNosotros.map((article, index) => (
                 <article
-                  className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-4"
+                  className="flex flex-col md:flex-row even:md:flex-row-reverse items-center justify-center gap-12"
                   key={index}
                 >
                   <Image
@@ -66,13 +66,13 @@ const Page = () => {
                     alt="hero image"
                     height={200}
                     width={200}
-                    className="w-full md:w-1/2 rounded-lg"
+                    className="w-full md:w-1/2 rounded-xl"
                   />
                   <div className="md:w-1/2">
-                    <h3 className="text-lg md:text-xl font-semibold">
+                    <h3 className="text-lg md:text-4xl font-extrabold text-idaclass4 mb-6">
                       {article.title}
                     </h3>
-                    <p className="text-pretty md:text-lg">
+                    <p className="text-pretty">
                       {article.paragraph}
                     </p>
                   </div>
