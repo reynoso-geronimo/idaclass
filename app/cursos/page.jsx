@@ -4,7 +4,8 @@ import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
 import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
 import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
 import CursosOnDemandCategoriaBar from "./_components/cursosOnDemandCategoriaBar";
-import CursosOnDemandCategorias from "./_components/CursosOnDemandCategorias";
+import CursosOnDemandCategorias from "./_components/cursosOnDemandCategorias";
+
 
 import { categoriasOnDemand } from "@/lib/constants";
 import { getCursosFromDB } from "../actions";
