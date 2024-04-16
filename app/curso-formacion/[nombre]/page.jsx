@@ -35,7 +35,7 @@ const CursoPage = async ({ params }) => {
     precio,
     frecuencia,
     videoid,
-    acerca,
+    acerca_subtitulo,
     modalidades,
     duracion,
     dedicacion,
@@ -55,7 +55,7 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionAcerca
         duracion={duracion}
         dedicacion={dedicacion}
-        acerca={acerca}
+        acerca_subtitulo={acerca_subtitulo}
         frecuencia={frecuencia}
         modalidades={modalidades}
         nombre={nombre}
