@@ -1,14 +1,10 @@
-"use server";
-
 import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
 import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
 import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
-import CursosOnDemandCategoriaBar from "./_components/cursosOnDemandCategoriaBar";
-import CursosOnDemandCategorias from "./_components/cursosOnDemandCategorias";
-
-
 import { categoriasOnDemand } from "@/lib/constants";
 import { getCursosFromDB } from "../actions";
+import CursosOnDemandCategorias from "./_components/cursosOnDemandCategorias";
+
 
 const Page = async () => {
   const cursos = await getCursosFromDB()
@@ -17,10 +13,8 @@ const Page = async () => {
       <CursosOnDemandHeader />
       <CursosOnDemandCaracteristicas />
       <CursosOnDemandAcerca />
-      <CursosOnDemandCategoriaBar categoriasOnDemand={categoriasOnDemand} />
-      {categoriasOnDemand.map((categoriaOnDemand, index) => (
-        <CursosOnDemandCategorias key={index} categoria={categoriaOnDemand} cursos={cursos}/>
-      ))}
+      <CursosOnDemandCategorias categoriasOnDemand={categoriasOnDemand}  cursos={cursos}/>
+      
 
       {/* //!! Codigo Viejo quizas se pueda usar */}
       {/* <Tabs

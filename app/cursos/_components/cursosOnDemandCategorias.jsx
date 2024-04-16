@@ -1,42 +1,35 @@
-import TituloSeccion from "@/components/ui/titulo-seccion";
+"use client";
+import Link from "next/link";
+import CursosOnDemandCategoria from "./cursosOnDemandCategoria";
+import {  useState } from "react";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import CursoOnDemandCard from "./curso-on-demand-card";
 
-const CursosOnDemandCategorias = ({ categoria, cursos }) => {
+const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
+  const [activo, setActivo] = useState();
+  
+
   return (
-    <section className="relative">
-      <div id={categoria} className="absolute -top-[85px] "/>
-      <TituloSeccion>
-        Categoria <span className="text-idaclass4">{categoria}</span>
-      </TituloSeccion>
-      <Carousel
-        className="container"
-        
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-      >
-        <CarouselContent className="-ml-1">
-          {cursos.map((curso, index) => (
-            <CarouselItem
-              key={index}
-              className="pl-1 md:basis-1/2 lg:basis-1/3"
-            >
-              <CursoOnDemandCard curso={curso} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className={"left-2"} />
-        <CarouselNext className={"right-2"} />
-      </Carousel>
+    <section>
+      <nav className="container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-200 h-[100px] w-full gap-8">
+        {categoriasOnDemand.map((categoriaOnDemand, index) => (
+          <Link
+            key={index}
+            href={`#${categoriaOnDemand}`}
+            className={`${activo===index&&"bg-idaclass4 text-white"} rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full`}
+          >
+            Categoria {categoriaOnDemand}
+          </Link>
+        ))}
+      </nav>
+      {categoriasOnDemand.map((categoriaOnDemand, index) => (
+        <CursosOnDemandCategoria
+          key={index}
+          categoria={categoriaOnDemand}
+          cursos={cursos}
+          index={index}
+          setActivo={setActivo}
+        />
+      ))}
     </section>
   );
 };
