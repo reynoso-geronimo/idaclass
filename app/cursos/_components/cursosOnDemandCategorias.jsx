@@ -10,7 +10,7 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
 
   return (
     <section>
-      <nav className="container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-200 h-[100px] w-full gap-8">
+      <nav className="container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-100 h-[60px] w-full gap-8">
         {categoriasOnDemand.map((categoriaOnDemand, index) => (
           <Link
             key={index}
