@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const CursosOnDemandCategoria = ({ categoria, cursos, index ,setActivo }) => {
 
-  const [ref, inView] = useInView({threshold: 1, rootMargin:"0px" });
+  const [ref, inView] = useInView({threshold: 0.8, rootMargin:"0px" });
 
   useEffect(() => {
     inView && setActivo(index);
