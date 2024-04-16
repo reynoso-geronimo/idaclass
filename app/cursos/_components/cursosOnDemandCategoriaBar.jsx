@@ -11,8 +11,8 @@ const CursosOnDemandCategoriaBar = ({categoriasOnDemand}) => {
        
           <Link
           key={index}
-            href={`/`}
-            className=" rounded-2xl font-bold border-idaclass3 text-idaclass3 border-2 py-2 text-center w-full"
+            href={`#${categoriaOnDemand}`}
+            className=" rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full"
           >
            
                Categoria {" "}

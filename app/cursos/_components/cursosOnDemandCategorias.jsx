@@ -11,12 +11,14 @@ import CursoOnDemandCard from "./curso-on-demand-card";
 
 const CursosOnDemandCategorias = ({ categoria, cursos }) => {
   return (
-    <section className="">
+    <section className="relative">
+      <div id={categoria} className="absolute -top-[85px] "/>
       <TituloSeccion>
         Categoria <span className="text-idaclass4">{categoria}</span>
       </TituloSeccion>
       <Carousel
         className="container"
+        
         opts={{
           align: "start",
           loop: true,
