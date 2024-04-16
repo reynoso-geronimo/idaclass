@@ -22,7 +22,7 @@ const CursosOnDemandCategoria = ({ categoria, cursos, index ,setActivo }) => {
 
   return (
     <section className="relative" ref={ref}>
-      <div id={categoria} className="absolute -top-[85px]" />
+      <div id={categoria} className="absolute -top-[65px]" />
       <TituloSeccion>
         Categoria <span className="text-idaclass4">{categoria}</span>
       </TituloSeccion>
