@@ -56,13 +56,13 @@ const SkillClass = () => {
         className="object-cover -z-10"
       /> */}
       
-      <Badge className="text-lg text-center font-semibold justify-center bg-idaclass w-[26rem] max-w-[70vw]">
+      <Badge className="text-lg text-center font-semibold justify-center bg-idaclass w-[26rem] px-8">
         BONO EXTRA
       </Badge>
-      <h3 className="text-center text-5xl lg:text-6xl font-bold m-4 text-white w-[26rem] max-w-[70vw]">
+      <h3 className="text-center text-5xl lg:text-6xl font-bold m-4 text-white w-[26rem] px-8">
         SkillClass
       </h3>
-      <div className="rounded-3xl overflow-hidden bg-white w-[26rem] max-w-[70vw]">
+      <div className="rounded-3xl overflow-hidden bg-white w-[26rem] px-8">
         <h4 className="text-center text-white bg-idaclass w-full py-2">
           Habilidades Profesionales para el Éxito
         </h4>
