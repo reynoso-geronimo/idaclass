@@ -14,7 +14,7 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
         {categoriasOnDemand.map((categoriaOnDemand, index) => (
           <Link
             onClick={setTimeout(() => {
-              ()=>setActivo(index)
+              setActivo(index)
             }, 500)}
             key={index}
             href={`#${categoriaOnDemand}`}
