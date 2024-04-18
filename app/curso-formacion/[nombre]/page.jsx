@@ -17,12 +17,17 @@ import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendido
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
+import { Op } from "sequelize";
 
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
   const curso = await CursosFormacion.findOne({
     where: { nombre: nombreParseado },
+  });
+  const cursos = await CursosFormacion.findAll({
+    where: { nombre: { [Op.not]: nombreParseado } },
+  
   });
   if (!curso) {
     return <div>Curso no encontrado</div>;
@@ -89,7 +94,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-     <CursoFormacionOtrosCursos cursoActual={nombreParseado}/>
+     <CursoFormacionOtrosCursos cursos={cursos} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
