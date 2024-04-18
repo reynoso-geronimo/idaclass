@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import { YoutubeIcon } from "lucide-react";
 
-const Introvideo = ({videoid = "kfLDLD653zM",texto = "Conoce IdaClass",className,}) => {
+const Introvideo = ({videoid = "PlfXGj4fesw",texto = "Conoce IdaClass",className,}) => {
   return (
     <Dialog>
       <DialogTrigger
