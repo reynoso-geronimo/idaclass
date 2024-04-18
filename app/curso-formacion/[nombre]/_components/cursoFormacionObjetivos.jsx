@@ -51,9 +51,9 @@ const CursoFormacionObjetivos = () => {
           >
             Perfil del <br className="lg:hidden" /> Egresado
           </h3>
-          <Objetivo />
-          <Objetivo />
-          <Objetivo />
+          <Objetivo titulo="Alto perfil profesional:" texto={"Un profesional dotado con el conocimiento mas actualizado en entrenamiento y las ciencias aplicadas .Con un gran  manejo técnico y recursos ilimitados  Certificado bajo  un estándar de  formación profesional , según criterios  internacionales y el aval universitario que le permite distinguirse en el mercado laboral como profesional altamente calificado "}/>
+          <Objetivo titulo="Capacidad de Líderazgo:" texto={"Con habilidades interpersonales para brindar un trato cercano y personalizado a los clientes. Con una sólida base ética y de valores, haciendo énfasis en la inclusión, el respeto y la diversidad. "}/>
+          <Objetivo titulo="Innovador:" texto={"Con habilidades digitales y capacidad de adaptarse a las necesidades cambiantes del mercado y  los clientes Capaz de dar respuesta a la oferta laboral o emprender diversas opciones de negocio y propuestas de servicios actuales para este nuevo mundo"}/>
         </article>
       </div>
     </section>
