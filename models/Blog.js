@@ -11,6 +11,10 @@ const Blog = sequelize.define("blogs", {
         type: DataTypes.STRING,
 
     },
+    subtitulo: {
+        type: DataTypes.STRING,
+
+    },
     introduccion: {
         type: DataTypes.STRING,
 

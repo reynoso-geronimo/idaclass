@@ -46,7 +46,7 @@ const page = async ({ params }) => {
               {post.titulo}
             </h1>
             <h2 className={`${textoEnDegrade} text-lg lg:text-2xl font-bold`}>
-              SUBTITULO
+              {post.subtitulo}
             </h2>
           </div>
           <div className="w-auto flex items-center mt-8 mb-8 gap-2">
