@@ -34,9 +34,9 @@ const cursos = [
 ];
 const OPTIONS = { align: "center" };
 
-const CursoFormacionOtrosCursos = ({cursoActual}) => {
+const CursoFormacionOtrosCursos = ({cursos}) => {
   
-  const cursoFiltrado = cursos.filter(curso => curso.titulo !== cursoActual)
+  
 
   return (
     <section className="container my-12 ">
@@ -45,7 +45,7 @@ const CursoFormacionOtrosCursos = ({cursoActual}) => {
       <div className="flex justify-center gap-4">
         <EmblaCarousel
           options={OPTIONS}
-          slides={cursoFiltrado.map((curso, index) => (
+          slides={cursos.map((curso, index) => (
             <CursoCard key={index} curso={curso}/>
           ))}
         />
@@ -56,17 +56,17 @@ const CursoFormacionOtrosCursos = ({cursoActual}) => {
 
 const CursoCard = ({curso}) => (
   
-  <article className="rounded-2xl flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 gap-6 mx-2">
+  <article className="rounded-2xl flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[34rem] border-2 gap-6 mx-2">
     <Image
-      src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
+      // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
+       src={"/cursosFormacion/cursos/PersonalTrainer.png"}
       alt=""
       fill
       className="object-cover -z-10"
     />
-    <h3 className="font-bold text-3xl">{curso.titulo && curso.titulo}</h3>
+    <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+     {curso.descripcion}
     </p>
     <Button className="w-full text-lg rounded-3xl">Ver curso</Button>
   </article>

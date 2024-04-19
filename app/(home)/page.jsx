@@ -7,7 +7,7 @@ import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
 import CasosExito from "../../components/casos-exito";
 import EquipoProfesional from "../../components/equipo-profesional";
-import Beca from "../../components/beca";
+import BecaAsesorate from "../../components/becaAsesorate";
 import EmpresasPartners from "../../components/empresasParteners";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -47,7 +47,7 @@ export default function Home() {
       <Certificacion />
 
       <EquipoProfesional />
-      <Beca />
+      <BecaAsesorate />
 
       <CasosExito />
 

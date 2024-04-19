@@ -6,7 +6,7 @@ import Image from "next/image";
 import React from "react";
 
 const CursoFormacionAcerca = ({
-  acerca,
+  acerca_subtitulo,
   duracion,
   modalidades,
   dedicacion,
@@ -47,14 +47,9 @@ const CursoFormacionAcerca = ({
                          {acerca} 
                     </p>*/}
 
-          <TituloSeccion className={"max-lg:text-2xl lg:text-left px-0"}>
-            ¡Aprovechá esta oportunidad y alcanzá tu máximo potencial como{` `}
-            <span className="text-idaclass3">{nombre}!</span>
-          </TituloSeccion>
-          <p className="text-center mb-6 lg:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            error, aspernatur dicta molestiae officiis autem culpa, accusantium
-            eligendi praesentium dolorem delectus necessitatibus esse
+          
+          <p className="text-center my-6 lg:text-left">
+            {acerca_subtitulo}
           </p>
         </div>
         <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">

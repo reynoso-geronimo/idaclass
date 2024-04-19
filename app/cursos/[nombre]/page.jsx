@@ -5,7 +5,7 @@ import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
 import CertificacionCursoOnDemand from "./_components/certificacionCursoOnDemand";
 import Link from "next/link";
-import Beca from "@/components/beca";
+import Beca from "@/components/becaAsesorate";
 import CursoOnDemandHeader from "./_components/cursoOnDemandHeader";
 import CursoOnDemandAcerca from "./_components/cursoOnDemand";
 import CursoOnDemandObjetivos from "./_components/cursoOnDemandObjetivos";

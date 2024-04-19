@@ -1,28 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight, MapPin, Plus } from "lucide-react";
+
 import { Separator } from "@/components/ui/separator";
-import TarjetaModalidad from "./_components/tarjeta-modalidad";
-import TituloSeccion from "@/components/ui/titulo-seccion";
+
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
-import Beca from "@/components/beca";
+import BecaAsesorate from "@/components/becaAsesorate";
+
 import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
-import Image from "next/image";
+
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
+import { Op } from "sequelize";
 
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
   const curso = await CursosFormacion.findOne({
     where: { nombre: nombreParseado },
+  });
+  const cursos = await CursosFormacion.findAll({
+    where: { nombre: { [Op.not]: nombreParseado } },
+  
   });
   if (!curso) {
     return <div>Curso no encontrado</div>;
@@ -35,7 +40,7 @@ const CursoPage = async ({ params }) => {
     precio,
     frecuencia,
     videoid,
-    acerca,
+    acerca_subtitulo,
     modalidades,
     duracion,
     dedicacion,
@@ -55,7 +60,7 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionAcerca
         duracion={duracion}
         dedicacion={dedicacion}
-        acerca={acerca}
+        acerca_subtitulo={acerca_subtitulo}
         frecuencia={frecuencia}
         modalidades={modalidades}
         nombre={nombre}
@@ -63,6 +68,7 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionObjetivos />
       <Separator className="my-6" />
+      <BecaAsesorate />
       <CertificacionCursoFormacion />
       <Separator className="my-6" />
       <CursoFormacionContenidoCurso modulos={modulos} />
@@ -73,7 +79,6 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionModalidades/>
 
-      <Beca />
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"
@@ -89,7 +94,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-     <CursoFormacionOtrosCursos cursoActual={nombreParseado}/>
+     <CursoFormacionOtrosCursos cursos={cursos} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
