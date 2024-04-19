@@ -59,6 +59,7 @@ module.exports = {
         idaclass2: "#74d1ea",
         idaclass3: "#1fb3e5",
         idaclass4: "#0088ca",
+        idaclass5: "#1D2F57",
         idaclassGray: "#A59C94",
         idaclassGray2: "#b1b3b3",
       },
