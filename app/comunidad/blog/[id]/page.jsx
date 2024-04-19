@@ -128,7 +128,7 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <div className="w-full lg:w-[320px] max-lg:grid grid-cols-1 md:grid-cols-2">
+        <div className="w-full lg:w-[320px] max-lg:grid grid-cols-1 md:grid-cols-2 py-6 space-y-6">
           <Asesorate sideBar={true}/>
           <Beca sideBar={true}/>
         </div>
