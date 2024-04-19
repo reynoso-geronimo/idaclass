@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const Asesorate = () => {
+const Asesorate = ({sideBar=false}) => {
   return (
-    <article className="w-full lg:w-1/2 flex flex-col justify-end lg:justify-between lg:items-end relative aspect-[9/13] lg:aspect-auto max-lg:max-w-md container py-8 text-white">
+    <article className={`w-full flex flex-col justify-end relative aspect-[9/13] container py-8 text-white ${!sideBar&&"lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md"}`}>
       <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem] lg:leading-10">
         ¿Necesitás <br className="max-lg:hidden"/> ayuda <br  className="lg:hidden"/> o{" "}
         <span className="text-[#22c55e]">
@@ -39,13 +39,13 @@ const Asesorate = () => {
         src={`/assets/asistenciaMobile.png`}
         alt="asistencia"
         fill
-        className="object-cover -z-10 rounded-3xl lg:hidden"
+        className={`${sideBar?"":"lg:hidden"} object-cover -z-10 rounded-3xl object-top`}
       />
       <Image
         src={`/assets/asistenciaWeb.png`}
         alt="asistencia"
         fill
-        className="object-cover -z-10 rounded-3xl max-lg:hidden"
+        className={`${sideBar?"hidden":"max-lg:hidden"} object-cover -z-10 rounded-3xl`}
       />
     </article>
   );

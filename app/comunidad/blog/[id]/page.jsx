@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
 import { ArrowDown, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Asesorate from "@/components/asesorate";
+import Beca from "@/components/beca";
 
 const page = async ({ params }) => {
   const post = await Blog.findByPk(params.id);
@@ -15,7 +17,7 @@ const page = async ({ params }) => {
 
   return (
     <main className="">
-      <div className=" w-full lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-65% lg:from-30% to-transparent lg:container relative text-white">
+      <div className=" w-full lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% to-transparent lg:container relative text-white">
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
             src={"/blog/" + post.foto}
@@ -126,7 +128,10 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <div className="w-80 bg-red-200"></div>
+        <div className="w-full lg:w-[320px] max-lg:grid grid-cols-1 md:grid-cols-2">
+          <Asesorate sideBar={true}/>
+          <Beca sideBar={true}/>
+        </div>
       </div>
     </main>
   );
