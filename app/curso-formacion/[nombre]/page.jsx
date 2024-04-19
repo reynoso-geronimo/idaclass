@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight, MapPin, Plus } from "lucide-react";
+
 import { Separator } from "@/components/ui/separator";
-import TarjetaModalidad from "./_components/tarjeta-modalidad";
-import TituloSeccion from "@/components/ui/titulo-seccion";
+
 import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
-import BecaAsesorate from "@/components/becaAsesorateAsesorate";
+import BecaAsesorate from "@/components/becaAsesorate";
+
 import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
-import Image from "next/image";
+
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
@@ -68,6 +68,7 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionObjetivos />
       <Separator className="my-6" />
+      <BecaAsesorate />
       <CertificacionCursoFormacion />
       <Separator className="my-6" />
       <CursoFormacionContenidoCurso modulos={modulos} />
@@ -78,7 +79,6 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionModalidades/>
 
-      <BecaAsesorate />
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"
