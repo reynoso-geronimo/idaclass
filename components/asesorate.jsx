@@ -11,7 +11,7 @@ const Asesorate = () => {
           tenés <br className="max-lg:hidden"/> alguna <br className="lg:hidden" /> pregunta?
         </span>
       </h3>
-      <p className="my-4 text-sm sm:text-base z-10 text-pretty w-[16rem]">
+      <p className="my-4 text-sm sm:text-base z-10 text-pretty w-[16rem] max-w-[90%]">
         Nuestros asesores están disponibles para escucharte y despejar todas tus
         dudas
       </p>

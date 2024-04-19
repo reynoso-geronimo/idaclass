@@ -8,9 +8,9 @@ const Beca = () => {
   return (
     <article className="w-full lg:w-1/2 flex flex-col justify-end lg:justify-between lg:items-end relative aspect-[9/13] lg:aspect-auto max-lg:max-w-md container py-8 text-white">
     <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem]">
-      Obtén tu <br /> BecaAsesorateClass 40%
+      Obtén tu <br /> BecaClass 40%
     </h3>
-    <p className="my-4 text-sm sm:text-base z-10 text-balanced w-[16rem]">
+    <p className="my-4 text-sm sm:text-base z-10 text-balanced w-[16rem] max-w-[90%]">
       Nuestra misión es abrir las puertas a la educación en Latinoamérica.
       Facilitamos el acceso a la educación de calidad de una forma simple
       y accesible. Accedé ahora a la BecaClass del 40% y avanzá hacia tus
