@@ -8,7 +8,7 @@ import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
-import Beca from "@/components/beca";
+import BecaAsesorate from "@/components/becaAsesorateAsesorate";
 import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
@@ -78,7 +78,7 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionModalidades/>
 
-      <Beca />
+      <BecaAsesorate />
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"
