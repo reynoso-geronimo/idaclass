@@ -8,6 +8,7 @@ import { ArrowDown, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Sidebar from "./_components/sidebar";
 import { getBlogPostFromDb } from "@/app/actions";
+import CursoAsociado from "./_components/cursoAsociado";
 
 
 const page = async ({ params }) => {
@@ -30,7 +31,7 @@ const page = async ({ params }) => {
         <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
           <div className="flex">
             <Badge className={"bg-orange-500 font-normal"}>
-              NO SE QUE VA ACA
+            {post.tag?post.tag:"TAG"}
             </Badge>
             <Badge
               variant={"outline"}
@@ -107,10 +108,10 @@ const page = async ({ params }) => {
       <div className="container flex flex-col lg:flex-row gap-8 mt-12">
         <div className="w-full ">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">
-            <p className="font-bold text-orange-500">Desarollo Personal</p>{" "}
+            <p className="font-bold text-orange-500">{post.tag?post.tag:"TAG"}</p>
             <p className="lg:pl-1">
-              El poder de las emociones en la actividad física y el deporte
-            </p>{" "}
+            {post.titulo}
+            </p>
           </div>
 
           <h2 className="font-bold lg:text-2xl my-8 p-4 text-idaclass5 bg-gray-100 rounded-2xl flex justify-between items-center">
@@ -120,12 +121,11 @@ const page = async ({ params }) => {
             Introduccion
           </h3>
           <p className="text-base">{post.introduccion} </p>
-          {/* <Separator className="bg-gray-400 my-4" />
-        <div className="flex justify-between items-center my-4">
-          <Compartir />
-        </div>
-
-        <Separator className="bg-gray-400 my-4" /> */}
+              
+          <h3 className="font-bold text-2xl my-4 text-idaclass">
+          Capacitación Recomendada
+          </h3>
+          <CursoAsociado curso={post.cursoAsociado?post.cursoAsociado:null}/>
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
