@@ -8,8 +8,8 @@ import EnsenaConNosotros from "@/components/ensenaConNosotros";
 
 const Sidebar = ({ posts }) => {
   return (
-    <div className="w-full lg:w-[330px] max-lg:grid grid-cols-1 md:grid-cols-2 py-6 space-y-6 bg-[#020817] px-8 lg:rounded-2xl">
-      <div className="w-full grid grid-cols-1 mb-4  gap-6">
+    <div className="w-full lg:w-[330px] max-lg:grid grid-cols-1 py-6 space-y-6 bg-[#020817] px-8 lg:rounded-2xl mb-8">
+      <div className="w-full grid grid-cols-1 mb-4 gap-6">
         <h2 className="text-white font-bold text-2xl text-center">
           Otras notas que pueden interesarte
         </h2>
@@ -21,15 +21,23 @@ const Sidebar = ({ posts }) => {
         ¿Te gustó el artículo?
         <Compartir />
       </div>
-      <h2 className="text-white font-bold text-2xl text-center">
-        ¡Estudiá con nosotros!
-      </h2>
-      <EstudiaConNosotros sideBar={true} />
+      <div className="space-y-6">
+        <h2 className="text-white font-bold text-2xl text-center">
+          ¡Estudiá con nosotros!
+        </h2>
+        <EstudiaConNosotros sideBar={true} />
+      </div>
       <Beca sideBar={true} />
-      <h2 className="text-white font-bold text-2xl text-center">¡Enseñá con nosotros!</h2>
-      <EnsenaConNosotros sideBar={true} />
-      <h2 className="text-white font-bold text-2xl text-center">Contacto</h2>
-      <Asesorate sideBar={true} />
+      <div className="space-y-6">
+        <h2 className="text-white font-bold text-2xl text-center">
+          ¡Enseñá con nosotros!
+        </h2>
+        <EnsenaConNosotros sideBar={true} />
+      </div>
+      <div className="space-y-6">
+        <h2 className="text-white font-bold text-2xl text-center">Contacto</h2>
+        <Asesorate sideBar={true} />
+      </div>
     </div>
   );
 };

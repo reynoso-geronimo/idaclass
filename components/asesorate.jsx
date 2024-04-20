@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Asesorate = ({sideBar=false}) => {
   return (
-    <article className={`w-full min-h-[480px] flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${!sideBar&&"lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md"}`}>
-      <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem] lg:leading-10">
+    <article className={`w-full flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${!sideBar?"lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md":"min-h-[430px]"}`}>
+      <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem] lg:leading-8">
         ¿Necesitás <br className="max-lg:hidden"/> ayuda <br  className="lg:hidden"/> o{" "}
         <span className="text-[#22c55e]">
           tenés <br className="max-lg:hidden"/> alguna <br className="lg:hidden" /> pregunta?
