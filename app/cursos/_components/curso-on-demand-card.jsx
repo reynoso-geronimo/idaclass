@@ -38,7 +38,7 @@ const CursoOnDemandCard = ({ curso }) => {
       </CardHeader>
       <CardFooter className="z-10">
         <Button size="sm" className="w-full font-bold rounded-2xl" asChild>
-          <Link href={`/cursos/${curso.id}`}>Ver Curso</Link>
+          <Link href={`/cursos/${curso.nombre}`}>Ver Curso</Link>
         </Button>
       </CardFooter>
     </Card>

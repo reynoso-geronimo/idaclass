@@ -13,13 +13,14 @@ import CursoOnDemandContenidoCurso from "./_components/cursoOnDemandContendidoCu
 import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
 import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
+import Curso from "@/models/Curso";
 
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
-
-  /* //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
-  const curso = await CursosFormacion.findOne({
+  console.log(nombreParseado);
+   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
+  const curso = await Curso.findOne({
     where: { nombre: nombreParseado },
   });
   if (!curso) {
@@ -40,36 +41,8 @@ const CursoPage = async ({ params }) => {
     dedicacion,
     modulos
   } = curso.toJSON();
-  */ 
-  const cursoRelleno = {
-    nombre: "Envejecimiento Activo",
-    descripcion: "Descripción del curso", 
-    imagen: "/path/to/imagen.jpg",
-    precio: 99.99,
-    frecuencia: "2 veces por semana",
-    videoid: "abc123",
-    acerca: "Acerca del curso...",
-    modalidades: "Modalidad Virtual | Curso Asincrónico",
-    duracion: "4 semanas",
-    dedicacion: "10 horas por semana", 
-    modulos: null
-    
-  }
-
-  const {
-    nombre,
-    descripcion,
-    imagen,
-    precio,
-    frecuencia,
-    videoid,
-    acerca,
-    modalidades,
-    duracion,
-    dedicacion,
-    modulos
-  } = cursoRelleno
-
+  
+ 
   return (
     <main className="flex flex-col">
       <CursoOnDemandHeader
@@ -93,7 +66,7 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CertificacionCursoOnDemand />
       <Separator className="my-6" />
-      <CursoOnDemandContenidoCurso modulos={modulos} />
+      {/* <CursoOnDemandContenidoCurso modulos={modulos} /> */}
       <Separator className="my-6" />
 
       <CursoOnDemandRequisitos/>
