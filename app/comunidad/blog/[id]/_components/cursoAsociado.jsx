@@ -7,7 +7,7 @@ import React from "react";
 
 const CursoAsociado = ({ curso }) => {
   return (
-    <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-center container">
+    <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-end max-lg:pb-6 lg:justify-center container">
       <h1 className="font-extrabold text-3xl my-5">
         {curso ? curso.nombre : "NOMBRE "}
       </h1>
@@ -25,7 +25,7 @@ const CursoAsociado = ({ curso }) => {
           {curso ? curso.horas : "150"}{" "} Horas
         </p>
         <Separator />
-        <Button className="font-bold rounded-2xl w-full translate-y-6" asChild>
+        <Button className="font-bold rounded-2xl w-full lg:translate-y-6" asChild>
           {/* //!! REVISAr ESTE VINCULo */ } 
           <Link href={`/cursos/${curso ? curso.id : ""}`}>Mas Informacion</Link>
         </Button>
