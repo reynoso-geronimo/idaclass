@@ -4,32 +4,65 @@ import Link from "next/link";
 
 const EstudiaConNosotros = ({ sideBar = false }) => {
   return (
-    <article
-      className={`w-full min-h-[480px] flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white`}
+       <article
+      className={`w-full flex flex-col relative aspect-[9/13] container px-6 py-8 text-white rounded-2xl overflow-hidden ${
+        !sideBar
+          ? "lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md min-h-[370px] max-lg:min-h-[480px]"
+          :  "min-h-[480px]"
+      }`}
     >
-      <h3 className="text-5xl relative z-10 font-extrabold text-center">
-        Ida<span className="text-idaclass4">Class</span>
-      </h3>
-      <p className={`my-4 font-bold text-lg tracking-tighter text-center z-10`}>¡Aprendé con nosotros!</p>
+      <div
+        className={`z-10 flex flex-col h-full justify-end ${
+          !sideBar && "lg:w-64"
+        }`}
+      >
+        <h3
+          className={`text-5xl relative z-10 font-extrabold ${
+            sideBar ? "text-center" : "text-left"
+          } `}
+        >
+          Ida<span className="text-idaclass4">Class</span>
+        </h3>
+        <p
+          className={`font-bold text-lg tracking-tighter z-10 ${
+            !sideBar ? "text-left mb-12" : "text-center my-4 "
+          }`}
+        >
+          ¡Aprendé con nosotros!
+        </p>
 
-      <div className="space-y-4 z-10 flex flex-col">
-        <Button variant="default" asChild className="rounded-2xl">
-          <Link href="/#Cursos">CURSOS DE FORMACIÓN</Link>
-        </Button>
-        <Button variant="outline" asChild className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl">
-          <Link href="/cursos">CURSOS DE DEMAND</Link>
-        </Button>
-        <Button variant="outline" asChild className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl">
-          <Link href="/comunidad">COMUNIDAD IDACLASS </Link>
-        </Button>
+        <div className="space-y-4 z-10 flex flex-col">
+          <Button variant="default" asChild className="rounded-2xl">
+            <Link href="/#Cursos">CURSOS DE FORMACIÓN</Link>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl"
+          >
+            <Link href="/cursos">CURSOS DE DEMAND</Link>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl"
+          >
+            <Link href="/comunidad">COMUNIDAD IDACLASS </Link>
+          </Button>
+        </div>
       </div>
       <Image
         src={`/assets/aprendeConNosotros.png`}
         alt="asistencia"
         fill
-        className={`object-cover rounded-3xl object-top`}
+        className={`object-cover rounded-3xl object-top ${!sideBar&&"lg:hidden"}`}
       />
-     
+       <Image
+        src={`/assets/aprendeConNosotrosWeb.png`}
+        alt="asistencia"
+        fill
+        className={`object-cover object-top hidden ${!sideBar&&"lg:block"}`}
+      />
     </article>
   );
 };

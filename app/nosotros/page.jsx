@@ -8,6 +8,8 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 import { HeroParallaxNosotros } from "./_components/hero";
 import { HoverEffect } from "@/components/ui/card-hover";
 import Count from "./_components/count";
+import EnsenaConNosotros from "@/components/ensenaConNosotros";
+import EstudiaConNosotros from "@/components/estudiaConNosotros";
 
 export const valores = [
   {
@@ -87,17 +89,9 @@ const Page = () => {
         <HoverEffect items={valores} />
       </section>
       <Partners />
-      <section className="flex flex-col text-center sm:ml-auto sm:mr-24 my-12">
-        <h4 className="text-lg font-semibold">Suscribete al newsletter</h4>
-        <p className="px-4">Ultimas noticias relacionadas al mundo fitness</p>
-        <label htmlFor="email">Ingresa tu E-Mail</label>
-        <input
-          id="email"
-          type="text"
-          placeholder="E-mail"
-          className="border-2 border-idaclass m-4"
-        />
-        <Button className="mx-4 mb-4">Suscribirme</Button>
+      <section className="lg:flex max-lg:flex-col justify-evenly items-stretch container max-lg:space-y-12 gap-6 py-12">
+        <EstudiaConNosotros/>
+        <EnsenaConNosotros/>
       </section>
     </main>
   );
