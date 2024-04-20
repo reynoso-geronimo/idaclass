@@ -29,13 +29,13 @@ const page = async ({ params }) => {
         </div>
         <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
           <div className="flex">
-            <Badge className={"bg-orange-500 font-normal"}>
+            <Badge className={"bg-orange-500 font-normal z-10 hover:bg-orange-500"}>
               {post.tag ? post.tag : "TAG"}
             </Badge>
             <Badge
               variant={"outline"}
               className={
-                "-translate-x-4 pl-4 border-orange-500 italic text-orange-500"
+                "-translate-x-6 pl-6 border-orange-500 italic text-orange-500"
               }
             >
               Publicado{" "}
@@ -72,7 +72,7 @@ const page = async ({ params }) => {
       <div className="container w-full h-80 lg:h-20 relative max-lg:bg-gradient-to-b from-[#01080D] to-[#151C26] text-white flex max-lg:flex-col items-center">
         <h2 className="font-bold text-2xl text-center pt-6 lg:pt-2 pb-2 lg:text-left">
           Sumate a la <br className="lg:hidden" />
-          Comunidad Ida <span className="text-idaclass3">Class</span>
+          Comunidad Ida<span className="text-idaclass3">Class</span>
         </h2>
         <ArrowDown
           className="text-idaclass3 max-lg:mx-auto lg:mx-4 lg:-rotate-90"
