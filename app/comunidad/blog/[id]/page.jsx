@@ -2,16 +2,17 @@ import { Toaster } from "@/components/ui/sonner";
 import Image from "next/image";
 import Blog from "@/models/Blog";
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
-import { Separator } from "@/components/ui/separator";
-import Compartir from "./_components/compartir";
 import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
 import { ArrowDown, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import Asesorate from "@/components/asesorate";
-import Beca from "@/components/beca";
+import Sidebar from "./_components/sidebar";
+import { getBlogPostFromDb } from "@/app/actions";
+
 
 const page = async ({ params }) => {
+  //!! reever esto
+  const posts = await getBlogPostFromDb(3, params.id);
   const post = await Blog.findByPk(params.id);
   const contenido = JSON.parse(post.cuerpo);
 
@@ -103,7 +104,7 @@ const page = async ({ params }) => {
           alt=""
         />
       </div>
-      <div className="container flex flex-col lg:flex-row gap-8">
+      <div className="container flex flex-col lg:flex-row gap-8 mt-12">
         <div className="w-full ">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">
             <p className="font-bold text-orange-500">Desarollo Personal</p>{" "}
@@ -128,10 +129,7 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <div className="w-full lg:w-[320px] max-lg:grid grid-cols-1 md:grid-cols-2 py-6 space-y-6">
-          <Asesorate sideBar={true}/>
-          <Beca sideBar={true}/>
-        </div>
+        <Sidebar posts={posts}/>
       </div>
     </main>
   );

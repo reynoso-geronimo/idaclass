@@ -19,8 +19,8 @@ const Compartir = () => {
   };
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center gap-2 border border-gray-400  p-2 rounded-3xl outline-none">
-        <Share2 /> Compartir
+      <DropdownMenuTrigger className="flex items-center gap-2 bg-idaclass4 text-white font-bold text-sm py-2 px-10 rounded-3xl outline-none">
+        <Share2 fill="white"/> COMPARTIR
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem

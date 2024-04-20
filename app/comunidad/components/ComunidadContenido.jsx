@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Eventos from "./eventos";
+import PostCardSidebar from "./postCardSidebar";
+import PostCard from "./postCard";
 const blogPost = await getBlogPostFromDb(6);
 
 const firstRow = blogPost.slice(0, 3);
@@ -26,30 +28,7 @@ const ComunidadContenido = () => {
           {/* BLOGPOSTS */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
             {firstRow.map((post, index) => (
-              <article
-                className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[520px] mx-auto"
-                key={index}
-              >
-                <Image
-                  src={"/blog/" + post.foto}
-                  width={520}
-                  height={520}
-                  alt="Imagen de Blog"
-                  className="bg-black aspect-video mx-auto text-white"
-                />
-                <div className="px-4 h-36 flex flex-col justify-between py-4 bg-gray-100">
-                  <h5 className="leading-5 font-semibold line-clamp-[3]">
-                    {post.titulo}
-                  </h5>
-                  <Link
-                    href={`comunidad/blog/${post.id}`}
-                    className="text-idaclass3 font-semibold text-sm text-right flex justify-end items-center gap-4"
-                  >
-                    SEGUIR LEYENDO
-                    <ArrowRight className="inline" size={22} strokeWidth={3} />
-                  </Link>
-                </div>
-              </article>
+              <PostCard post={post} key={index} />
             ))}
           </div>
           {/* FIN BLOGPOSTS */}
@@ -71,16 +50,7 @@ const ComunidadContenido = () => {
               <span className="text-idaclass3 ">Class</span>
             </h2>
             {secondRow.map(((post,index) => (
-                <article key={index} className="border-b border-gray-500 flex justify-between items-center p-4 h-full gap-10 overflow-hidden">
-                  <h4 className="line-clamp-[4]">{post.titulo}</h4>
-                  <Link
-                    href={`comunidad/blog/${post.id}`}
-                    className="text-center leading-4 text-idaclass3"
-                  >
-                    SEGUIR <br />
-                    LEYENDO
-                  </Link>
-                </article>
+               <PostCardSidebar post={post} key={index}/>
               ))
             )}
           </div>

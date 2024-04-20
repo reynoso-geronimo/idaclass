@@ -3,6 +3,7 @@
 import Curso from "@/models/Curso";
 import CursosFormacion from "@/models/CursoFormacion";
 import Blog from "@/models/Blog";
+import { Op } from "sequelize";
 
 export async function getCursos() {
   try {
@@ -41,10 +42,10 @@ export async function getCursosFormacionFromDB() {
     console.log(error);
   }
 }
-export async function getBlogPostFromDb(limit){
+export async function getBlogPostFromDb(limit,not){
   
 try {
-  const response = await Blog.findAll({ limit: limit })
+  const response = not? await Blog.findAll({ limit: limit , where: { id: {[Op.not]: not} } }): await Blog.findAll({ limit: limit  })
   const data = response.map(blog => blog.toJSON());
   return data
 } catch (error) {
