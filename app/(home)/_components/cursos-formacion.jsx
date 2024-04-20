@@ -10,7 +10,7 @@ const CursosFormacion = async () => {
   const OPTIONS = { align: "start" };
   return (
     <section className="my-12 sm:container">
-      <TituloSeccion className={`mb-0 px-2`}>Cursos de formación</TituloSeccion>
+      <TituloSeccion className={`mb-0 px-2`} id="Cursos">Cursos de formación</TituloSeccion>
       <h2 className="text-center text-xl px-2 mb-4">
         Sé parte de la nueva generación de entrenadores
         <br />

@@ -23,7 +23,7 @@ const Hero = () => {
             className="rounded-2xl m-4 font-bold w-48 h-10"
             asChild
           >
-            <Link href="/cursos">Ver todos los cursos</Link>
+            <Link href="#Cursos">Ver todos los cursos</Link>
           </Button>
         </div>
         <div className="w-full flex justify-center">
@@ -56,7 +56,7 @@ const Hero = () => {
             potenciar tu éxito en emprendimiento y empleabilidad.
           </h2>
           <Button size="lg" className="rounded-2xl font-bold w-48 h-10" asChild>
-            <Link href="/cursos">Ver todos los cursos</Link>
+            <Link href="#Cursos">Ver todos los cursos</Link>
           </Button>
           <div className=" w-48 flex justify-center font-bold h-10">
             <Introvideo />
