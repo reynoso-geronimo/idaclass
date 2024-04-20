@@ -17,7 +17,7 @@ const PostCard = ({ post }) => {
           {post.titulo}
         </h5>
         <Link
-          href={`comunidad/blog/${post.id}`}
+          href={`/comunidad/blog/${post.id}`}
           className="text-idaclass3 font-semibold text-sm text-right flex justify-end items-center gap-4"
         >
           SEGUIR LEYENDO
