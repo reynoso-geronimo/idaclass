@@ -14,13 +14,13 @@ const EstudiaConNosotros = ({ sideBar = false }) => {
 
       <div className="space-y-4 z-10 flex flex-col">
         <Button variant="default" asChild className="rounded-2xl">
-          <Link href="https://wa.me/+5491135872204">CURSOS DE FORMACIÓN</Link>
+          <Link href="/#Cursos">CURSOS DE FORMACIÓN</Link>
         </Button>
         <Button variant="outline" asChild className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl">
-          <Link href="https://wa.me/+5491135872204">CURSOS DE DEMAND</Link>
+          <Link href="/cursos">CURSOS DE DEMAND</Link>
         </Button>
         <Button variant="outline" asChild className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl">
-          <Link href="https://wa.me/+5491135872204">COMUNIDAD IDACLASS </Link>
+          <Link href="/comunidad">COMUNIDAD IDACLASS </Link>
         </Button>
       </div>
       <Image

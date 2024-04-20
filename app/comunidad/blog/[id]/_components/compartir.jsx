@@ -17,6 +17,7 @@ const Compartir = () => {
     });
     navigator.clipboard.writeText(window.location.href);
   };
+  //!! AREGLAR LOS VINCULOS
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-2 bg-idaclass4 text-white font-bold text-sm py-2 px-10 rounded-3xl outline-none">

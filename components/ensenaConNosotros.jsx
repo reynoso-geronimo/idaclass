@@ -18,7 +18,7 @@ const EnsenaConNosotros = ({ sideBar = false }) => {
       </ul>
 
       <Button variant="default" asChild className="rounded-2xl z-10">
-        <Link href="/">CONTACTOS</Link>
+        <Link href="/">CONTACTANOS</Link>
       </Button>
 
       <Image
