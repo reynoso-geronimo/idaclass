@@ -20,7 +20,7 @@ const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
       <h3 className="font-bold text-2xl my-4 text-idaclass">
         Capacitación Recomendada
       </h3>
-      <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-end max-lg:pb-6 lg:justify-center container">
+      <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-end max-lg:pb-6 lg:justify-center container mb-6">
         <h1 className="font-extrabold text-3xl my-5">
           {curso ? curso.nombre : "NOMBRE"}
         </h1>
@@ -45,17 +45,26 @@ const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
             asChild
           >
             {/* //!! REVISAr ESTE VINCULo */}
-            <Link href={`/cursos/${curso ? curso.id : ""}`}>
+            <Link href={`/cursos/${curso ? curso.nombre : ""}`}>
               Mas Informacion
             </Link>
           </Button>
         </div>
         <Image
-          // src={`/${curso.imagen}`}
-          src={"/"}
-          alt="curso"
+          src={`/cursosOnDemand/cursos/headers/${curso.nombre}Mobile.png`}
           fill
-          className="object-cover bg-black -z-10"
+          priority
+          sizes="100vw"
+          className="object-cover -z-10 object-top lg:hidden"
+          alt=""
+        />
+        <Image
+          src={`/cursosOnDemand/cursos/headers/${curso.nombre}Web.png`}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover -z-10 object-rigth-top max-lg:hidden"
+          alt=""
         />
       </div>
     </>
