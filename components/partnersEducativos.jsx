@@ -79,15 +79,15 @@ const words = `Nuestros Partners en educacion`;
 
 const PartnersEducativos = () => {
   return (
-    <section className="container lg:px-0  text-white py-8 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
-      <div className="w-full lg:w-auto">
+    <section className="container text-white py-8 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
+      <div className="w-full lg:w-[480px]">
         <TextGenerateEffect
           words={words}
-          className={`text-idaclass4 mx-auto lg:text-left lg:pr-4 text-4xl text-center font-extrabold tracking-tight max-w-[350px]`}
+          className={`text-idaclass4 mx-auto lg:text-left lg:px-4 text-4xl text-center font-extrabold tracking-tight max-w-[350px]`}
         />
       </div>
       <Carousel
-        className="w-full lg:w-2/3"
+        className="w-full"
         opts={{
           align: "start",
           loop: true,
