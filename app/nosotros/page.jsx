@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
 import Partners from "@/components/partnersEducativos";
 import { sobreNosotros } from "@/lib/constants";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -79,7 +77,7 @@ const Page = () => {
                     <h3 className="text-lg md:text-4xl font-extrabold text-idaclass4 mb-6">
                       {article.title}
                     </h3>
-                    <p className="text-pretty">{article.paragraph}</p>
+                    {article.paragraph}
                   </div>
                 </article>
               ))}
