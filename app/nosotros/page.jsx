@@ -10,31 +10,36 @@ import { HoverEffect } from "@/components/ui/card-hover";
 import Count from "./_components/count";
 import EnsenaConNosotros from "@/components/ensenaConNosotros";
 import EstudiaConNosotros from "@/components/estudiaConNosotros";
-
-export const valores = [
+ const valores = [
   {
     title: "Innovación",
     description:
       "Abrazamos la tecnología y la innovación en la educación, proporcionando un ambiente de aprendizaje virtual dinámico y accesible.",
     // link: "https://netflix.com",
+    image: `/nosotros/Innovación.png`
   },
   {
     title: "Emprendedurismo",
     description:
       "Fomentamos el espíritu emprendedor en cada uno de nuestros estudiantes. En IdaClass, creemos en el poder de la innovación y la creatividad para transformar el mundo del fitness y el bienestar. ¡Sé valiente, sé audaz, sé emprendedor!",
     // link: "https://netflix.com",
+    image: `/nosotros/Emprendedurismo.png`
   },
   {
     title: "Liderazgo",
     description:
       "En IdaClass, fomentamos el liderazgo en todos los niveles. Nos esforzamos por inspirar a nuestros estudiantes a convertirse en líderes en sus campos, capacitándolos con las habilidades y la confianza necesarias para liderar con éxito en el mundo del fitness y el bienestar.",
     // link: "https://google.com",
+   image: `/nosotros/Liderazgo.png`
+
   },
   {
     title: "Inclusión",
     description:
       "La inclusión es un pilar fundamental de nuestra comunidad en IdaClass. Nos comprometemos a crear un ambiente acogedor y diverso donde cada persona se sienta valorada y respetada. Celebramos la diversidad en todas sus formas y promovemos la igualdad de oportunidades para todos.",
     // link: "https://meta.com",
+   image: `/nosotros/Inclusión.png`
+
   },
 ];
 
@@ -82,8 +87,8 @@ const Page = () => {
           </div>
         </TracingBeam>
       </section>
-      <section className="container flex flex-col items-center bg-slate-220 gap-4 py-12">
-        <h2 className="text-2xl font-bold text-idaclass">Nuestros Valores</h2>
+      <section className="container px-0 flex flex-col items-center bg-slate-220 gap-4 py-12">
+        <h2 className="text-3xl font-extrabold text-idaclass">Nuestros <span className="text-idaclass4">Valores</span></h2>
         <HoverEffect items={valores} />
       </section>
       <Partners />

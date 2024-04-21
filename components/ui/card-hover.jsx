@@ -1,13 +1,10 @@
-
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export const HoverEffect = ({
-  items,
-  className,
-}) => {
+export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -19,7 +16,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-        //   href={itediv}
+          //   href={itediv}
           key={idx}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -43,8 +40,13 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <div className="flex flex-col lg:flex-row items-center gap-4">
+              <Image src={item.image} width={200} height={200} alt="" className="rounded-2xl aspect-square "/>
+              <div>
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
+              </div>
+            </div>
           </Card>
         </div>
       ))}
@@ -52,10 +54,7 @@ export const HoverEffect = ({
   );
 };
 
-export const Card = ({
-  className,
-  children,
-}) => {
+export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
@@ -69,20 +68,19 @@ export const Card = ({
     </div>
   );
 };
-export const CardTitle = ({
-  className,
-  children,
-}) => {
+export const CardTitle = ({ className, children }) => {
   return (
-    <h4 className={cn("text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text font-bold text-2xl tracking-wide mt-4 text", className)}>
+    <h4
+      className={cn(
+        "text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text font-bold text-2xl tracking-wide mt-4 text",
+        className
+      )}
+    >
       {children}
     </h4>
   );
 };
-export const CardDescription = ({
-  className,
-  children,
-}) => {
+export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
