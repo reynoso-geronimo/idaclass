@@ -74,9 +74,7 @@ const Page = () => {
                     <h3 className="text-lg md:text-4xl font-extrabold text-idaclass4 mb-6">
                       {article.title}
                     </h3>
-                    <p className="text-pretty">
-                      {article.paragraph}
-                    </p>
+                    <p className="text-pretty">{article.paragraph}</p>
                   </div>
                 </article>
               ))}
@@ -90,8 +88,17 @@ const Page = () => {
       </section>
       <Partners />
       <section className="lg:flex max-lg:flex-col justify-evenly items-stretch container max-lg:space-y-12 gap-6 py-12">
-        <EstudiaConNosotros/>
-        <EnsenaConNosotros/>
+        <EstudiaConNosotros />
+        <EnsenaConNosotros />
+      </section>
+      <section className="container bg-gradient-to-b from-[#1FB3E5] to-[#0088CA] flex flex-col gap-12 items-center justify-center lg:flex-row  text-white min-h-[264px]">
+        <h1 className="font-bold text-8xl w-full lg:w-[45%] text-center lg:text-right">
+          IdaClass
+        </h1>{" "}
+        <p className="text-2xl font-bold w-full lg:w-[55%]">
+          Transformamos la educación en una puerta abierta hacia un futuro de
+          posibilidades y bienestar.
+        </p>
       </section>
     </main>
   );
