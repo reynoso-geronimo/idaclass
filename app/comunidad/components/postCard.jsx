@@ -14,13 +14,13 @@ const PostCard = ({ post }) => {
         alt="Imagen de Blog"
         className="bg-black aspect-video mx-auto text-white"
       />
-      <div className="px-4 h-36 flex flex-col justify-between py-4 bg-gray-100">
+      <div className="px-4 h-32 flex flex-col justify-between py-4 bg-gray-100">
         <h5 className="leading-5 font-medium line-clamp-[3]">
           {post.titulo}
         </h5>
         <Link
           href={`/comunidad/blog/${post.id}`}
-          className="text-idaclass3 font-semibold text-sm text-right flex justify-end items-center gap-4"
+          className="text-idaclass3 font-bold text-xs text-right flex justify-end items-center gap-4"
         >
           SEGUIR LEYENDO
           <ArrowRight className="inline" size={22} strokeWidth={3} />
