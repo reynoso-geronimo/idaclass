@@ -83,7 +83,7 @@ const PartnersEducativos = () => {
       <div className="w-full lg:w-[480px]">
         <TextGenerateEffect
           words={words}
-          className={`text-idaclass4 mx-auto lg:text-left lg:px-4 text-4xl text-center font-extrabold tracking-tight max-w-[350px]`}
+          className={`text-idaclass4 mx-auto lg:text-left text-4xl text-center font-extrabold tracking-tight max-w-[350px]`}
         />
       </div>
       <Carousel
