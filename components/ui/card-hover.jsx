@@ -41,7 +41,7 @@ export const HoverEffect = ({ items, className }) => {
           </AnimatePresence>
           <Card>
             <div className="flex flex-col lg:flex-row items-center gap-4">
-              <Image src={item.image} width={200} height={200} alt="" className="rounded-2xl aspect-square "/>
+              <Image src={item.image} width={190} height={190} alt="" className="rounded-2xl aspect-square "/>
               <div>
                 <CardTitle>{item.title}</CardTitle>
                 <CardDescription>{item.description}</CardDescription>
@@ -84,7 +84,7 @@ export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-white tracking-wide leading-relaxed text-sm",
+        "mt-6 text-white tracking-wide leading-relaxed text-sm",
         className
       )}
     >
