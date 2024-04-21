@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -41,14 +42,14 @@ const RegisterForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 ">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1">
         <div className="flex max-sm:flex-col max-sm:space-y-4 sm:space-x-4">
           <FormField
             control={form.control}
             name="nombre"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Nombre</FormLabel>
+                <FormLabel className="">Nombre</FormLabel>
                 <FormControl>
                   <Input placeholder="Nombre" {...field} />
                 </FormControl>
@@ -62,7 +63,7 @@ const RegisterForm = () => {
             name="apellido"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white">Apellido</FormLabel>
+                <FormLabel className="">Apellido</FormLabel>
                 <FormControl>
                   <Input placeholder="Apellido" {...field} />
                 </FormControl>
@@ -77,7 +78,7 @@ const RegisterForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Email</FormLabel>
+              <FormLabel className="">Email</FormLabel>
               <FormControl>
                 <Input placeholder="Email"  {...field} />
               </FormControl>
@@ -91,7 +92,7 @@ const RegisterForm = () => {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Contraseña</FormLabel>
+              <FormLabel className="">Contraseña</FormLabel>
               <FormControl>
                 <Input placeholder="*******" type="password" {...field} />
               </FormControl>
@@ -105,7 +106,7 @@ const RegisterForm = () => {
           name="confirm"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white" type="password">
+              <FormLabel className="" type="password">
                 Repite tu contraseña
               </FormLabel>
               <FormControl>
@@ -116,9 +117,11 @@ const RegisterForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
+        <div className="pt-3">
+        <Button type="submit" className="w-full rounded-3xl">
           Registrarme
         </Button>
+        </div>
       </form>
     </Form>
   );

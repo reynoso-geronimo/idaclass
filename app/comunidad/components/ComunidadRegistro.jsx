@@ -1,25 +1,15 @@
 import Image from "next/image";
 import bg from "../../../public/comunidad/ImagendefondoFormulario.png";
 import bgWeb from "../../../public/comunidad/ImagendefondoFormularioWeb.png";
+import RegisterForm from "@/app/signin/_components/registerForm";
 
 const ComunidadRegistro = () => {
   return (
-    <section className="container px-0 my-12 relative min-h-[30rem]">
+    <section className="container px-0 my-12 relative min-h-[32rem]">
       <Image src={bg} alt="" className="object-cover -z-10 max-lg:hidden" />
       <Image src={bgWeb} alt="" className="object-cover -z-10 lg:hidden w-full bg-black"/>
-      <div className="container w-full flex gap-12">
-        {/* <div className="w-full text-white font-bold text-center text-2xl ">
-          <h2 className="mt-8">
-            Registrate para poder ingresar a la <br /> Comunidad Ida
-            <span className="text-idaclass3">
-              Class <ArrowRight className="inline" size={32} strokeWidth={3}/>
-            </span>
-          </h2>
- 
-        </div> */}
-        {/* <div className="w-1/3 ml-auto bg-emerald-200 min-h-[30rem]">
-          <h1>formulario</h1>
-        </div> */}
+      <div className="absolute lg:top-8 top-[35%] right-[50%] translate-x-[50%] bg-gray-100 px-8 py-2 max-w-sm w-full rounded-2xl ">
+      <RegisterForm/>
       </div>
     </section>
   );

@@ -12,11 +12,11 @@ import LoginForm from "./_components/loginForm";
 export default function SignIn() {
   return (
     <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12">
-      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-slate-900 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
+      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-gray-100 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
         <Tabs defaultValue="login">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="login">Ingresar</TabsTrigger>
-            <TabsTrigger value="registro">Crear cuenta</TabsTrigger>
+            <TabsTrigger value="login" className={"rounded-l-3xl"}>Ingresar</TabsTrigger>
+            <TabsTrigger value="registro" className={"rounded-r-3xl"}>Crear cuenta</TabsTrigger>
           </TabsList>
           <TabsContent value="login">
             <LoginForm />
