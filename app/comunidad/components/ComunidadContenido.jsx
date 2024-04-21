@@ -1,7 +1,6 @@
 import { getBlogPostFromDb } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { ArrowRight, CalendarClock, Newspaper } from "lucide-react";
-import Image from "next/image";
+import {  CalendarClock, Newspaper } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Eventos from "./eventos";
