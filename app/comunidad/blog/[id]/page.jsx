@@ -18,7 +18,7 @@ const page = async ({ params }) => {
 
   return (
     <main className="">
-      <div className=" w-full lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% to-transparent lg:container relative text-white">
+      <div className=" w-full lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% lg:container relative text-white">
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
             src={"/blog/" + post.foto}
