@@ -5,9 +5,9 @@ import RegisterForm from "@/app/signin/_components/registerForm";
 
 const ComunidadRegistro = () => {
   return (
-    <section className="container px-0 my-12 relative min-h-[32rem]">
-      <Image src={bg} alt="" className="object-cover -z-10 max-lg:hidden" />
-      <Image src={bgWeb} alt="" className="object-cover -z-10 lg:hidden w-full bg-black"/>
+    <section className="container px-0 my-12 relative min-h-[31rem] bg-[#01080D]">
+      <Image src={bg} alt="" fill className="object-contain object-bottom  max-lg:hidden" />
+      <Image src={bgWeb} alt=""  className="object-cover  lg:hidden w-full"/>
       <div className="absolute lg:top-8 top-[35%] right-[50%] translate-x-[50%] bg-gray-100 px-8 py-2 max-w-sm w-full rounded-2xl ">
       <RegisterForm/>
       </div>
