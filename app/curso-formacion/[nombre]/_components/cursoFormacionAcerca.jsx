@@ -6,12 +6,12 @@ import Image from "next/image";
 import React from "react";
 
 const CursoFormacionAcerca = ({
-  acerca_subtitulo,
+  acerca,
   duracion,
   modalidades,
   dedicacion,
   frecuencia,
-  nombre,
+  
 }) => {
   return (
     <section className="container flex flex-col items-center pt-6">
@@ -49,7 +49,7 @@ const CursoFormacionAcerca = ({
 
           
           <p className="text-center my-6 lg:text-left">
-            {acerca_subtitulo}
+            {acerca}
           </p>
         </div>
         <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">
