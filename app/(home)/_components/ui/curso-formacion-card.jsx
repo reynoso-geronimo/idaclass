@@ -1,58 +1,67 @@
 import { Button } from "@/components/ui/button";
-import { Dot, Clock, TriangleRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+
+import { Clock, TriangleRight, BookOpenIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
   return (
-    <article className="w-[265px] mx-auto bg-gray-100 rounded-2xl min-h-[650px] flex flex-col justify-between border border-1 border-gray-900 text-xs sm:text-sm">
-      <div className="relative h-36 flex flex-col justify-end">
-        <Image
-          className="object-cover rounded-t-2xl"
-          src={`/cursosFormacion/cursos/homeCard/${curso.imagen}`}
-          fill
-          alt="Imagen del curso"
-        />
-        <h3 className="text-center z-10 text-base font-semibold relative -top-28 uppercase text-white  bg-idaclass w-[40%] border border-1 border-black -translate-x-3">
-          70% OFF &#128293;
+    <article className="w-[285px] rounded-2xl mx-auto min-h-[650px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
+      <Image
+        className="object-cover rounded-2xl -z-10 bg-black"
+        src={`/cursosFormacion/cursos/homeCard/${curso.Imagen}`}
+        fill
+        alt="Imagen del curso"
+      />
+      <div className="w-32 absolute top-4 -left-0">
+        <h3 className="text-center z-10 text-base font-semibold uppercase text-white bg-gradient-to-t from-[#0088CA] to-[#1FB3E5] py-1 pr-4 -translate-x-3 rounded-r-lg whitespace-nowrap">
+          &#128293; 70% OFF
         </h3>
         <TriangleRight
           size={50}
           strokeWidth={0}
-          className="-z-10 absolute transform rotate-[30deg] -translate-x-[11px] -translate-y-[91px] "
-          fill="black"
+          className="-z-20 absolute -left-[10px] top-[4px] transform rotate-[30deg]"
+          fill="#3A5DAE"
         />
       </div>
-      <h3 className="px-2 font-bold text-2xl text-center">{curso.nombre}</h3>
-      <p className="px-4 z-10">{curso.contenido}</p>
-      <div className="flex flex-col gap-1 px-2 ">
-        {curso.modulos &&
-          JSON.parse(curso.modulos).map((modulo, index) => (
-            <p key={index} className=" flex items-center gap-1">
-              <Dot color="#3a5dae" className="shrink-0" />
-              {modulo.titulo}
-            </p>
-          ))}
-      </div>
-      <div className="px-2 ml-2">
-        <span className="flex items-center">
-          <Clock className="inline mr-1" size={16} />
-          {curso.duracion} / {curso.frecuencia}
-        </span>
-      </div>
-      <div className="p-4 flex flex-col gap-2">
+
+      <h3 className="font-extrabold text-3xl text-left mb-4 text-white">
+        {curso.nombre}
+      </h3>
+      <p className="text-white">{curso.descripcion}</p>
+      <p className="align-middle">
+        <BookOpenIcon className="inline mr-1 align-middle" size={22} strokeWidth={3} />
+        <span className="font-bold">{curso.contenido}</span> <span>de estudio</span>
+      </p>
+
+      <p className="align-middle">
+        <Clock className="inline mr-1 align-middle pb-0.5" size={22} strokeWidth={3} />
+        <span className="font-bold">{curso.duracion}</span> ({curso.frecuencia})
+      </p>
+
+      <div className="flex flex-col gap-2">
+        <Separator />
         <p>
-          Plan Standard{" "}
-          <span className="line-through decoration-2">U$D 1620 USD</span>
+         <Image src={"/assets/PlanStandard.svg"} width={20} height={20} alt="" className="inline mr-1"/> Plan Standard:{" "}
+          <span className="line-through decoration-2">U$D 1620</span>
         </p>
-        <p>BecaClass + 70 % OFF U$D 486 USD</p>
-        <p className="font-medium">Desde 3 Cuotas de</p>
-        <p className=" text-2xl font-bold mb-0	">U$D 162 USD</p>
+        <p className="font-bold text-orange-500">
+        <Image src={"/assets/PlanBecaClass.svg"} width={20} height={20} alt="" className="inline mr-2"/>
+          BecaClass +70% OFF <span className="text-idaclass3">U$D 486</span>
+        </p>
+
+        <Separator />
+        <div className="text-white">
+          <p className="font-bold text-center">Desde 3 Cuotas de</p>
+          <p className=" text-2xl font-bold text-center">U$D 162 USD</p>
+        </div>
+        <Separator />
         <Button
           asChild
           size="lg"
-          className="my-4 px-2 w-[100%] mx-auto rounded-lg text-xl"
+          className="mt-4 mb-6 px-2 w-[100%] mx-auto rounded-2xl text-xl"
         >
           <Link href={`/curso-formacion/${curso.nombre}`}>Ver Curso</Link>
         </Button>
