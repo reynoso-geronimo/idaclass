@@ -60,7 +60,7 @@
 
 .embla {
   --slide-spacing: 0rem;
-  --slide-size: 300px;
+  --slide-size: auto;
   --slide-height: 19rem;
   padding: 0rem;
 }

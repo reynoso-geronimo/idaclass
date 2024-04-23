@@ -56,7 +56,7 @@ const CursoFormacionOtrosCursos = ({cursoActual}) => {
 
 const CursoCard = ({curso}) => (
   
-  <article className="rounded-2xl flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 gap-6 mx-2">
+  <article className="rounded-2xl w-[300px] flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 gap-6 mx-2">
     <Image
       src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
       alt=""
