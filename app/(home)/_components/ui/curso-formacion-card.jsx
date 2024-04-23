@@ -11,7 +11,7 @@ const CursoFormacionCard = ({ curso }) => {
     <article className="w-[285px] rounded-2xl mx-auto min-h-[650px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
       <Image
         className="object-cover rounded-2xl -z-10 bg-black"
-        src={`/cursosFormacion/cursos/homeCard/${curso.Imagen}`}
+        src={`/cursosFormacion/cursos/headers/${curso.nombre}Mobile.png`}
         fill
         alt="Imagen del curso"
       />
