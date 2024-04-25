@@ -10,13 +10,13 @@ import { ChevronRight, Dot, Plus } from "lucide-react";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import SkillClass from "./skillClass";
 
-const CursoFormacionContenidoCurso = ({ modulos }) => {
+const CursoOnDemandContenidoCurso = ({ modulos=null }) => {
   const contenido = JSON.parse(modulos)
-  console.log(contenido)
+  
  
   return (
     <section className="lg:container">
-      <TituloSeccion>Contenido del curso</TituloSeccion>
+      <TituloSeccion className={"lg:text-6xl font-black"}>Contenido del <span className="text-idaclass3">Curso</span></TituloSeccion>
       {/* <p className="text-center my-4 container">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ea
         possimus, magnam autem quas eos iusto minima animi tempora commodi.
@@ -48,4 +48,4 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
   );
 };
 
-export default CursoFormacionContenidoCurso;
+export default CursoOnDemandContenidoCurso;

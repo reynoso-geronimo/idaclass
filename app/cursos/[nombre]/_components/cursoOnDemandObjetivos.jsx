@@ -1,44 +1,62 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import bgWeb from '../../../../public/cursosFormacion/objetivosBgWeb.png'
-import bgMobile from '../../../../public/cursosFormacion/objetivosBgMobile.png'
-const CursoFormacionObjetivos = () => {
+import bgWeb from "../../../../public/cursosOnDemand/cursos/objetivosBgWeb.png";
+import bgMobile from "../../../../public/cursosOnDemand/cursos/objetivosBgMobile.png";
+import CertificacionCursoOnDemand from "./certificacionCursoOnDemand";
+const CursoOnDemandObjetivos = () => {
   return (
     <section className="">
       <div className="container flex flex-col lg:flex-row lg:pt-8 relative">
-        <Image src={bgWeb} fill className="w-full h-full object-cover object-left -z-10 max-lg:hidden" alt="background" />
-        <Image src={bgMobile} fill className="w-full h-full object-cover object-left -z-10 lg:hidden" alt="background" />
         <Image
-          src={"/cursosFormacion/objetivos.png"}
-          height={1000}
-          width={1000}
+          src={bgWeb}
+          fill
+          className="w-full h-full object-cover object-left -z-10 max-lg:hidden"
+          alt="background"
+        />
+        <Image
+          src={bgMobile}
+          fill
+          className="w-full h-full object-cover object-left -z-10 lg:hidden"
+          alt="background"
+        />
+        <Image
+          src={"/cursosOnDemand/cursos/objetivos.png"}
+          height={5000}
+          width={5000}
           alt=""
-          className="w-full object-contain -translate-y-6 lg:w-1/3"
+          className="w-full object-contain -translate-y-6 lg:w-[45%]"
         />
         <article className="container text-white pb-8 px-4">
           <h3
             className={
-              "max-lg:text-left text-4xl font-extrabold text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text"
+              "max-lg:text-left text-3xl font-extrabold text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text"
             }
           >
             Objetivos <br className="lg:hidden" /> del Curso
           </h3>
-          <Objetivo />
-          <Objetivo />
-          <Objetivo />
+          <Objetivo
+            titulo="Profesional Certificado"
+            texto={
+              "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. "
+            }
+          />
         </article>
         <article className="container text-white pb-8 px-4">
           <h3
             className={
-              "max-lg:text-left text-4xl font-extrabold text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text"
+              "max-lg:text-left text-3xl font-extrabold text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text"
             }
           >
             Perfil del <br className="lg:hidden" /> Egresado
           </h3>
-          <Objetivo />
-          <Objetivo />
-          <Objetivo />
+          <Objetivo
+            titulo="Profesional Certificado"
+            texto={
+              "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo."
+            }
+          />
+          <CertificacionCursoOnDemand/>
         </article>
       </div>
     </section>
@@ -64,4 +82,4 @@ export const Objetivo = ({ titulo = "OBJETIVO", texto }) => {
   );
 };
 
-export default CursoFormacionObjetivos;
+export default CursoOnDemandObjetivos;

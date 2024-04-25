@@ -34,7 +34,7 @@ const cursos = [
 ];
 const OPTIONS = { align: "center" };
 
-const CursoFormacionOtrosCursos = ({cursoActual}) => {
+const CursoOnDemandOtrosCursos = ({cursoActual}) => {
   
   const cursoFiltrado = cursos.filter(curso => curso.titulo !== cursoActual)
 
@@ -72,4 +72,4 @@ const CursoCard = ({curso}) => (
   </article>
 );
 
-export default CursoFormacionOtrosCursos;
+export default CursoOnDemandOtrosCursos;

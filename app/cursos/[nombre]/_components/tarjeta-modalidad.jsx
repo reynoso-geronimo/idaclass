@@ -13,20 +13,10 @@ import Image from "next/image";
 const TarjetaModalidad = ({ modalidad }) => {
   return (
     <div
-      className={`relative w-full  lg:w-[410px] flex justify-center pb-14 ${
+      className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
         modalidad === "ONLINE" ? "pt-[35rem]" : "pt-[20rem]"
       } lg:pt-28`}
     >
-      <Image
-        src={
-          modalidad === "ONLINE"
-            ? "/cursosFormacion/Online.png"
-            : "/cursosFormacion/Presencial.png"
-        }
-        fill
-        className="-z-10 object-cover object-top lg:hidden"
-        alt=""
-      />
       <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-6 ">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
@@ -82,7 +72,12 @@ const TarjetaModalidad = ({ modalidad }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button size="lg" className={`w-full ${modalidad==="ONLINE"?"w-[100%]":"xl:w-[50%]"} rounded-2xl `}>
+          <Button
+            size="lg"
+            className={`w-full ${
+              modalidad === "ONLINE" ? "w-[100%]" : "xl:w-[50%]"
+            } rounded-2xl `}
+          >
             <ArrowRight className="mr-2" />
             INSCRIBIRME AHORA
           </Button>

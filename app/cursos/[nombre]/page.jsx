@@ -15,18 +15,16 @@ import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
 
-
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
   console.log(nombreParseado);
-   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
+  //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
   const curso = await Curso.findOne({
     where: { nombre: nombreParseado },
   });
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-
 
   const {
     nombre,
@@ -39,10 +37,9 @@ const CursoPage = async ({ params }) => {
     modalidades,
     duracion,
     dedicacion,
-    modulos
+    modulos,
   } = curso.toJSON();
-  
- 
+
   return (
     <main className="flex flex-col">
       <CursoOnDemandHeader
@@ -63,16 +60,15 @@ const CursoPage = async ({ params }) => {
       />
       <Separator className="my-6" />
       <CursoOnDemandObjetivos />
+
       <Separator className="my-6" />
-      <CertificacionCursoOnDemand />
-      <Separator className="my-6" />
-      {/* <CursoOnDemandContenidoCurso modulos={modulos} /> */}
+      <CursoOnDemandContenidoCurso modulos={modulos} /> 
       <Separator className="my-6" />
 
-      <CursoOnDemandRequisitos/>
+      <CursoOnDemandRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoOnDemandModalidades/>
+      <CursoOnDemandModalidades />
 
       <Beca />
       <Separator className="my-6" />
@@ -90,7 +86,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-     <CursoOnDemandOtrosCursos cursoActual={nombreParseado}/>
+      <CursoOnDemandOtrosCursos cursoActual={nombreParseado} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}

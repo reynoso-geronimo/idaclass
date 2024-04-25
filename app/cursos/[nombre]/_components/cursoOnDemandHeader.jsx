@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
 
-const CursoFormacionHeader = ({
+const CursoOnDemandHeader = ({
   nombre,
   descripcion,
   modalidades,
@@ -61,4 +61,4 @@ const CursoFormacionHeader = ({
   );
 };
 
-export default CursoFormacionHeader;
+export default CursoOnDemandHeader;
