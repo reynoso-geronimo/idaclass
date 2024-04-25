@@ -13,9 +13,7 @@ import Image from "next/image";
 const TarjetaModalidad = ({ modalidad }) => {
   return (
     <div
-      className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
-        modalidad === "ONLINE" ? "pt-[35rem]" : "pt-[20rem]"
-      } lg:pt-28`}
+      className={`relative w-full  lg:w-[440px] flex justify-center pb-14 lg:pt-28`}
     >
       <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-6 ">
         <CardHeader className="py-0 px-0">

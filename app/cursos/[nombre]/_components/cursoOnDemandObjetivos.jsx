@@ -17,7 +17,7 @@ const CursoOnDemandObjetivos = () => {
         <Image
           src={bgMobile}
           fill
-          className="w-full h-full object-cover object-left -z-10 lg:hidden"
+          className="w-full h-full object-cover object-left-top -z-10 lg:hidden"
           alt="background"
         />
         <Image
@@ -25,9 +25,9 @@ const CursoOnDemandObjetivos = () => {
           height={5000}
           width={5000}
           alt=""
-          className="w-full object-contain -translate-y-6 lg:w-[45%]"
+          className="w-full object-contain lg:w-[45%]"
         />
-        <article className="container text-white pb-8 px-4">
+        <article className="container text-white pb-8 px-4 max-lg:mt-24">
           <h3
             className={
               "max-lg:text-left text-3xl font-extrabold text-transparent bg-gradient-to-b from-idaclass3 to-idaclass4 bg-clip-text"
@@ -56,7 +56,7 @@ const CursoOnDemandObjetivos = () => {
               "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo."
             }
           />
-          <CertificacionCursoOnDemand/>
+          <CertificacionCursoOnDemand />
         </article>
       </div>
     </section>
