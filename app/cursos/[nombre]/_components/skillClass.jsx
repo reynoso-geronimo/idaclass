@@ -63,7 +63,7 @@ const SkillClass = () => {
         SkillClass
       </h3>
       <div className="rounded-3xl overflow-hidden bg-white w-[26rem] max-w-[70vw]">
-        <h4 className="text-center text-white bg-idaclass w-full py-2">
+        <h4 className="text-center text-white bg-idaclass w-full p-2">
           Habilidades Profesionales para el Éxito
         </h4>
         {contenido.map((item, index) => (
