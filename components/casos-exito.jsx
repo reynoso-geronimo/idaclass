@@ -6,6 +6,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const casos = [
   {
@@ -46,12 +47,12 @@ const casos = [
   },
 ];
 
-const CasosExito = ({ titulo = "Historias que inspiran" }) => {
+const CasosExito = ({ titulo = "Historias que inspiran" ,className="bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]"}) => {
   return (
-    <section className="container">
-      <TituloSeccion className={"mb-0"}>{titulo}</TituloSeccion>
-      <h3 className="text-center text-pretty my-2">
-        Se uno de nuestros casos de éxito
+    <section className={cn(`container pb-12`, className)}>
+      <TituloSeccion className={"mb-0 text-white"}>{titulo}</TituloSeccion>
+      <h3 className="text-center text-pretty text-lg lg:text-2xl mt-2 mb-6">
+      ¡Vos también podés ser un caso de éxito gracias a IdaClass!
       </h3>
 
       <Carousel

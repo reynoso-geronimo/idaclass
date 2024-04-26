@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 
 //!!HARDCODEADO CORREGIR
-const cursos = [
+const cursoshard = [
   {
     titulo: "Preparador Fisico",
     descripcion: "Contiene 2 módulos, 6 unidades",
@@ -34,19 +34,17 @@ const cursos = [
 ];
 const OPTIONS = { align: "center" };
 
-const CursoOnDemandOtrosCursos = ({cursoActual}) => {
-  
-  const cursoFiltrado = cursos.filter(curso => curso.titulo !== cursoActual)
 
+
+const CursoOnDemandOtrosCursos = ({ cursos=cursoshard }) => {
   return (
     <section className="container my-12 ">
-      
       <TituloSeccion>Otros cursos que pueden interesarte</TituloSeccion>
       <div className="flex justify-center gap-4">
         <EmblaCarousel
           options={OPTIONS}
-          slides={cursoFiltrado.map((curso, index) => (
-            <CursoCard key={index} curso={curso}/>
+          slides={cursos.map((curso, index) => (
+            <CursoCard key={index} curso={curso} />
           ))}
         />
       </div>
@@ -54,22 +52,20 @@ const CursoOnDemandOtrosCursos = ({cursoActual}) => {
   );
 };
 
-const CursoCard = ({curso}) => (
-  
-  <article className="rounded-2xl w-[300px] flex flex-col items-center overflow-hidden relative text-white p-8 pt-[16rem] border-2 gap-6 mx-2">
+const CursoCard = ({ curso }) => (
+  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[34rem] border-2 gap-6 ">
     <Image
-      src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
+      // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
+      src={`/cursosFormacion/cursos/headers/${curso.nombre}Mobile.png`}
       alt=""
       fill
-      className="object-cover -z-10"
+      className="object-cover -z-10 bg-black"
     />
-    <h3 className="font-bold text-3xl">{curso.titulo && curso.titulo}</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+    <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
+    <p>{curso.descripcion}</p>
     <Button className="w-full text-lg rounded-3xl">Ver curso</Button>
   </article>
 );
+
 
 export default CursoOnDemandOtrosCursos;

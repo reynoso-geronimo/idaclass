@@ -50,19 +50,12 @@ const CursoPage = async ({ params }) => {
         videoid={videoid}
       />
 
-      <CursoOnDemandAcerca
-        duracion={duracion}
-        dedicacion={dedicacion}
-        acerca={acerca}
-        frecuencia={frecuencia}
-        modalidades={modalidades}
-        nombre={nombre}
-      />
+      <CursoOnDemandAcerca acerca={acerca} />
       <Separator className="my-6" />
       <CursoOnDemandObjetivos />
 
       <Separator className="my-6" />
-      <CursoOnDemandContenidoCurso modulos={modulos} /> 
+      <CursoOnDemandContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
 
       <CursoOnDemandRequisitos />
@@ -72,13 +65,12 @@ const CursoPage = async ({ params }) => {
 
       <Beca />
       <Separator className="my-6" />
-      <EquipoProfesional
+      {/* <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
         titulo2Class="text-idaclass4"
         titulo3="que te guiara al exito"
-      />
-      <Separator />
+      /> */}
 
       {/* <TituloSeccion className={""}>
           Casos de éxito de nuestros estudiantes
