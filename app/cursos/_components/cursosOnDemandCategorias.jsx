@@ -1,58 +1,54 @@
 "use client";
 import Link from "next/link";
 import CursosOnDemandCategoria from "./cursosOnDemandCategoria";
-import {  useState } from "react";
-
+import { useState } from "react";
 
 const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
   const [activo, setActivo] = useState();
-  
+
+  // ordenar categoriasOnDemand por cantidad (descendiente)
+  const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
+    const cursosA = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === a));
+    const cursosB = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === b));
+    return cursosB.length - cursosA.length; //  orden descendiente
+  });
 
   return (
     <section>
       <nav className="max-lg:hidden container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-100 h-[60px] w-full gap-8">
-        {categoriasOnDemand.map((categoriaOnDemand, index) => (
-          
+        {sortedCategorias.map((categoriaOnDemand, index) => (
           <Link
-            onClick={()=>{
+            onClick={() => {
               setTimeout(() => {
-                setActivo(index)
-              }, 500)
+                setActivo(index);
+              }, 500);
             }}
             key={index}
             href={`#${categoriaOnDemand}`}
-            className={`${activo===index&&"bg-idaclass4 text-white"} rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full`}
+            className={`${activo === index && "bg-idaclass4 text-white"} rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full`}
           >
             Categoria {categoriaOnDemand}
           </Link>
         ))}
       </nav>
-      {categoriasOnDemand.map((categoria,index) => {
-      
-      // Filtrar cursos de esta categoria
-      const cursosFiltrados = cursos.filter(curso => {
-        return curso.categorias.some(c => c.nombre === categoria)
-      })
-      
-      return (
-        <CursosOnDemandCategoria
-          key={categoria}
-          categoria={categoria}
-          // Pasar solo cursos filtrados
-          index={index}
-          setActivo={setActivo}
-          cursos={cursosFiltrados}  
-        />
-      )
-      
-    })}
+      <div className="flex flex-col">
+        {sortedCategorias.map((categoria, index) => {
+          // Filter courses for this category
+          const cursosFiltrados = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === categoria));
 
-  </section>
-)
-
-}
-
-
-
+          return (
+            <CursosOnDemandCategoria
+              key={categoria}
+              categoria={categoria}
+              index={index}
+              setActivo={setActivo}
+              cursos={cursosFiltrados}
+            />
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 export default CursosOnDemandCategorias;

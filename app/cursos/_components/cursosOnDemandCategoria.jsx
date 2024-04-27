@@ -12,16 +12,27 @@ import CursoOnDemandCard from "./curso-on-demand-card";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const CursosOnDemandCategoria = ({ categoria, cursos, index ,setActivo }) => {
+const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
+  const countCursos = cursos.length;
+  console.log(countCursos);
+  let basis = "1/4";
 
-  const [ref, inView] = useInView({threshold: 0.7, rootMargin:"0px" });
+  if (countCursos === 2) {
+    basis = "lg:basis-1/2";
+  } else if (countCursos === 3) {
+    basis = "lg:basis-1/3";
+  } else if (countCursos >= 4) {
+    basis = "lg:basis-1/4";
+  }
+
+  const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
 
   useEffect(() => {
     inView && setActivo(index);
   }, [inView]);
 
   return (
-    <section className="relative" ref={ref}>
+    <section className={`relative`} ref={ref}>
       <div id={categoria} className="absolute -top-[65px]" />
       <TituloSeccion>
         Categoria <span className="text-idaclass4">{categoria}</span>
@@ -35,10 +46,7 @@ const CursosOnDemandCategoria = ({ categoria, cursos, index ,setActivo }) => {
       >
         <CarouselContent className="-ml-1">
           {cursos.map((curso, index) => (
-            <CarouselItem
-              key={index}
-              className="pl-1 md:basis-1/2 lg:basis-1/3"
-            >
+            <CarouselItem key={index} className={`pl-1 md:basis-1/2 ${basis}`}>
               <CursoOnDemandCard curso={curso} />
             </CarouselItem>
           ))}
