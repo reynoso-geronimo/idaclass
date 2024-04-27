@@ -8,12 +8,22 @@ import CursosOnDemandCategorias from "./_components/cursosOnDemandCategorias";
 
 const Page = async () => {
   const cursos = await getCursosFromDB()
+  const todasCategorias = cursos.map(curso => curso.categorias);
+
+  // Aplanar en un solo array
+  const categorias = todasCategorias.flat();
+
+  // Obtener solo los nombres únicos
+  const CategoriasEspecializacion = [
+    ...new Set(categorias.map(cat => cat.nombre)),
+  ];
+
   return (
     <main>
       <CursosOnDemandHeader />
       <CursosOnDemandCaracteristicas />
       <CursosOnDemandAcerca />
-      <CursosOnDemandCategorias categoriasOnDemand={categoriasOnDemand}  cursos={cursos}/>
+      <CursosOnDemandCategorias categoriasOnDemand={CategoriasEspecializacion}  cursos={cursos}/>
       
 
       {/* //!! Codigo Viejo quizas se pueda usar */}

@@ -12,6 +12,7 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
     <section>
       <nav className="max-lg:hidden container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-100 h-[60px] w-full gap-8">
         {categoriasOnDemand.map((categoriaOnDemand, index) => (
+          
           <Link
             onClick={()=>{
               setTimeout(() => {
@@ -26,17 +27,32 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
           </Link>
         ))}
       </nav>
-      {categoriasOnDemand.map((categoriaOnDemand, index) => (
+      {categoriasOnDemand.map((categoria,index) => {
+      
+      // Filtrar cursos de esta categoria
+      const cursosFiltrados = cursos.filter(curso => {
+        return curso.categorias.some(c => c.nombre === categoria)
+      })
+      
+      return (
         <CursosOnDemandCategoria
-          key={index}
-          categoria={categoriaOnDemand}
-          cursos={cursos}
+          key={categoria}
+          categoria={categoria}
+          // Pasar solo cursos filtrados
           index={index}
           setActivo={setActivo}
+          cursos={cursosFiltrados}  
         />
-      ))}
-    </section>
-  );
-};
+      )
+      
+    })}
+
+  </section>
+)
+
+}
+
+
+
 
 export default CursosOnDemandCategorias;

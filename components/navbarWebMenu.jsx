@@ -1,13 +1,8 @@
 import {
   Menubar,
-  MenubarCheckboxItem,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarSeparator,
-  MenubarShortcut,
   MenubarSub,
   MenubarSubContent,
   MenubarSubTrigger,
@@ -16,12 +11,25 @@ import {
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { categoriasOnDemand } from "@/lib/constants";
 
 const classEscritorio =
   "hover:text-idaclass4 relative after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-idaclass4 after:transition-all after:duration-150 hover:after:w-[70%]";
 
-const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
+const NavbarWebMenu = ({
+  pathname,
+  cursosFormacion,
+  cursosEspecializacion,
+}) => {
+  // Obtener todas las categorías
+  const todasCategorias = cursosEspecializacion.map(curso => curso.categorias);
+
+  // Aplanar en un solo array
+  const categorias = todasCategorias.flat();
+
+  // Obtener solo los nombres únicos
+  const CategoriasEspecializacion = [
+    ...new Set(categorias.map(cat => cat.nombre)),
+  ];
   return (
     <div className="hidden lg:flex justify-around items-stretch gap-8">
       <Link
@@ -98,28 +106,27 @@ const NavbarWebMenu = ({ pathname, cursosFormacion }) => {
                 Modalidad: Online On Demand
               </p>
               <div className="flex flex-col justify-between flex-1">
-                {categoriasOnDemand.map((categoriaOnDemand, index) => (
+                {CategoriasEspecializacion.map((categoriaOnDemand, index) => (
                   <MenubarSub key={index}>
                     <MenubarSubTrigger className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
                       <span className="text-white">Categoria &nbsp; </span>
                       {categoriaOnDemand}
                     </MenubarSubTrigger>
                     <MenubarSubContent className="bg-black text-white font-bold ">
-                      <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
-                        CURSO 1
-                      </MenubarItem>
-                      <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
-                        CURSO 2
-                      </MenubarItem>
-                      <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
-                        CURSO 3
-                      </MenubarItem>
-                      <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
-                        CURSO 4
-                      </MenubarItem>
-                      <MenubarItem className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground">
-                        CURSO 5
-                      </MenubarItem>
+                      {cursosEspecializacion
+                        .filter(curso =>
+                          curso.categorias.some(
+                            cat => cat.nombre === categoriaOnDemand
+                          )
+                        )
+                        .map(curso => (
+                          <MenubarItem
+                            key={index}
+                            className="text-lg font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
+                          >
+                            {curso.nombre}
+                          </MenubarItem>
+                        ))}
                     </MenubarSubContent>
                   </MenubarSub>
                 ))}

@@ -4,6 +4,7 @@ import Curso from "@/models/Curso";
 import CursosFormacion from "@/models/CursoFormacion";
 import Blog from "@/models/Blog";
 import { Op } from "sequelize";
+import Categoria from "@/models/Categoria";
 
 export async function getCursos() {
   try {
@@ -23,7 +24,7 @@ export async function getCursos() {
 }
 export async function getCursosFromDB() {
   try {
-    const response = await Curso.findAll()
+    const response = await Curso.findAll({include: Categoria})
     const data = response.map(curso => curso.toJSON()); 
    
     return data;

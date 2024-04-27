@@ -18,7 +18,7 @@ import {
 import Promobar from "./promobar";
 import NavbarWebMenu from "./navbarWebMenu";
 
-const NavBar = ({ cursosFormacion }) => {
+const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session } = useSession();
 
   const pathname = usePathname().replace(/%20/g, " ");
@@ -35,11 +35,17 @@ const NavBar = ({ cursosFormacion }) => {
             className="w-72 h-[100svh] flex flex-col gap-4 text-base font-semibold"
           >
             <SheetClose asChild>
-            <Link
-                className={`-translate-x-3.5 flex items-center ${pathname === "/" && "text-idaclass4"} `}
+              <Link
+                className={`-translate-x-3.5 flex items-center ${
+                  pathname === "/" && "text-idaclass4"
+                } `}
                 href="/"
               >
-                <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
                 Inicio
               </Link>
             </SheetClose>
@@ -51,13 +57,21 @@ const NavBar = ({ cursosFormacion }) => {
                 } `}
                 href="/nosotros"
               >
-                <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
                 Nosotros
               </Link>
             </SheetClose>
             <Separator />
             <h1 className="-translate-x-3.5 flex items-center  text-idaclass">
-            <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+              <Minus
+                className="rotate-90 -left-3 scale-x-[135%]"
+                size={28}
+                color="#0088ca"
+              />
               Cursos de formación
             </h1>
             {cursosFormacion.map((cursoFormacion, index) => (
@@ -73,14 +87,19 @@ const NavBar = ({ cursosFormacion }) => {
                 </Link>
               </SheetClose>
             ))}
-            <Separator/>
+            <Separator />
             <SheetClose asChild>
               <Link
                 href="/cursos"
                 className={`-translate-x-3.5 flex items-center ${
                   pathname === "/cursos" && "text-idaclass4"
                 } `}
-              ><Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+              >
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
                 Cursos on Demand
               </Link>
             </SheetClose>
@@ -92,7 +111,11 @@ const NavBar = ({ cursosFormacion }) => {
                   pathname === "/comunidad/blog" && "text-idaclass4"
                 } `}
               >
-                <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
                 Comunidad IdaClass
               </Link>
             </SheetClose>
@@ -104,7 +127,11 @@ const NavBar = ({ cursosFormacion }) => {
                   pathname === "/asesorate" && "text-idaclass4"
                 } `}
               >
-                <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca"/>
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
                 Asesórate ya
                 <svg
                   viewBox="0 0 32 32"
@@ -133,6 +160,7 @@ const NavBar = ({ cursosFormacion }) => {
           <NavbarWebMenu
             pathname={pathname}
             cursosFormacion={cursosFormacion}
+            cursosEspecializacion={cursosEspecializacion}
           />
 
           <div className="w-24 flex justify-end">

@@ -14,6 +14,7 @@ import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
 import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
+import Categoria from "@/models/Categoria";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
@@ -21,7 +22,9 @@ const CursoPage = async ({ params }) => {
   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
   const curso = await Curso.findOne({
     where: { nombre: nombreParseado },
+    include: Categoria,
   });
+  console.log(curso.categorias[0]?.nombre);
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
@@ -31,7 +34,6 @@ const CursoPage = async ({ params }) => {
     descripcion,
     imagen,
     precio,
-    frecuencia,
     videoid,
     acerca,
     modalidades,
