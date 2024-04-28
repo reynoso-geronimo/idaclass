@@ -35,7 +35,7 @@ const DynamicCursosOnDemand = dynamic(() => import("./_components/cursos-on-dema
 });
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden flex flex-col">
       <Hero />
       <EmpresasPartners />
       <Intro />
@@ -47,10 +47,10 @@ export default function Home() {
       <Certificacion />
 
       <EquipoProfesional />
-      <BecaAsesorate />
-
+      
       <CasosExito />
 
+      <BecaAsesorate />
       <PartnersEducativos />
 
       <Faq />

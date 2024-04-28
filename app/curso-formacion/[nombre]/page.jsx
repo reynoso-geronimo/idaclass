@@ -19,7 +19,6 @@ import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
 import { Op } from "sequelize";
 
-
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
   const curso = await CursosFormacion.findOne({
@@ -27,7 +26,6 @@ const CursoPage = async ({ params }) => {
   });
   const cursos = await CursosFormacion.findAll({
     where: { nombre: { [Op.not]: nombreParseado } },
-  
   });
   if (!curso) {
     return <div>Curso no encontrado</div>;
@@ -44,7 +42,7 @@ const CursoPage = async ({ params }) => {
     modalidades,
     duracion,
     dedicacion,
-    modulos
+    modulos,
   } = curso.toJSON();
 
   return (
@@ -74,10 +72,10 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
 
-      <CursoFormacionRequisitos/>
+      <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades/>
+      <CursoFormacionModalidades />
 
       <Separator className="my-6" />
       <EquipoProfesional
@@ -86,15 +84,11 @@ const CursoPage = async ({ params }) => {
         titulo2Class="text-idaclass4"
         titulo3="que te guiara al exito"
       />
-      <Separator />
 
-      {/* <TituloSeccion className={""}>
-          Casos de éxito de nuestros estudiantes
-        </TituloSeccion> */}
-      <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
+      <CasosExito  />
 
       <Separator className="my-6" />
-     <CursoFormacionOtrosCursos cursos={cursos} />
+      <CursoFormacionOtrosCursos cursos={cursos} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
