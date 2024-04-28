@@ -89,9 +89,9 @@ const NavbarWebMenu = ({
                         `text-idaclass2`
                       } hover:cursor-pointer  `}
                     >
-                      <div className="">
+                      
                         <p>{cursoFormacion.nombre}</p>
-                      </div>
+                      
                     </Link>
                   </MenubarItem>
                 ))}
@@ -122,9 +122,12 @@ const NavbarWebMenu = ({
                         .map((curso, i) => (
                           <MenubarItem
                             key={i}
+                            asChild
                             className="font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
                           >
+                            <Link href={`/cursos/${curso.nombre}`}>
                             {curso.nombre}
+                            </Link>
                           </MenubarItem>
                         ))}
                     </MenubarSubContent>
