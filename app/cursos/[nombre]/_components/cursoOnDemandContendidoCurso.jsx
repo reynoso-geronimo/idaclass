@@ -1,14 +1,12 @@
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronRight, Dot, Plus } from "lucide-react";
+import { Dot } from "lucide-react";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import SkillClass from "./skillClass";
+import SkillClass from "@/components/skillClass";
 
 const CursoOnDemandContenidoCurso = ({ modulos=null }) => {
   const contenido = JSON.parse(modulos)

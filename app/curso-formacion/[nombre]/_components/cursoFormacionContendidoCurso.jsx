@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { ChevronRight, Dot, Plus } from "lucide-react";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import SkillClass from "./skillClass";
+import SkillClass from "../../../../components/skillClass";
 
 const CursoFormacionContenidoCurso = ({ modulos }) => {
   const contenido = JSON.parse(modulos)
