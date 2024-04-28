@@ -13,7 +13,8 @@ import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
 import SumateComunidad from "./_components/sumateComunidad";
 import { Op } from "sequelize";
-import { getCursoFromDB } from "@/app/actions";
+import { getCursoFromDB, getCursosFromDB } from "@/app/actions";
+
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
@@ -21,9 +22,7 @@ const CursoPage = async ({ params }) => {
   const curso = await getCursoFromDB(nombreParseado);
   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
 
-  const cursos = await Curso.findAll({
-    where: { nombre: { [Op.not]: nombreParseado } },
-  });
+  const cursos = await getCursosFromDB()
 
   if (!curso) {
     return <div>Curso no encontrado</div>;
