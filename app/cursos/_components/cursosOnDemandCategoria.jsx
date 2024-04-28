@@ -51,8 +51,8 @@ const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={"left-2"} />
-        <CarouselNext className={"right-2"} />
+        <CarouselPrevious className={`left-5 h-10 w-10 ${countCursos<=2&&"hidden"}`} />
+        <CarouselNext className={`right-5 h-10 w-10 ${countCursos<=2&&"hidden"}`} />
       </Carousel>
     </section>
   );
