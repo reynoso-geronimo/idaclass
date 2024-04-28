@@ -45,7 +45,7 @@ const contenido = [
     ],
   },
 ];
-const SkillClass = () => {
+const SkillClass = ({titulo="BONO EXTRA"}) => {
   return (
     <section className="relative w-full lg:w-[50%] flex flex-col justify-stretch items-center  lg:rounded-3xl overflow-hidden py-12 px-8 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57]">
      {/* //!!CORREGIR IMAGEN */}
@@ -57,7 +57,7 @@ const SkillClass = () => {
       /> */}
       
       <Badge className="text-lg text-center font-semibold justify-center bg-idaclass w-full lg:w-[26rem]">
-        BONO EXTRA
+       {titulo}
       </Badge>
       <h3 className="text-center text-5xl lg:text-6xl font-bold m-4 text-white w-full lg:w-[26rem]">
         SkillClass

@@ -40,7 +40,7 @@ const CursoOnDemandContenidoCurso = ({ modulos=null }) => {
             </AccordionItem>
           ))}
         </Accordion>):""}
-        <SkillClass />
+        <SkillClass titulo="OPCIONAL"/>
       </div>
     </section>
   );
