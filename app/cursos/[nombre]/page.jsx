@@ -15,6 +15,7 @@ import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
 import Categoria from "@/models/Categoria";
+import SumateComunidad from "./_components/sumateComunidad";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
@@ -81,6 +82,7 @@ const CursoPage = async ({ params }) => {
 
       <Separator className="my-6" />
       <CursoOnDemandOtrosCursos cursoActual={nombreParseado} />
+      <SumateComunidad/>
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
