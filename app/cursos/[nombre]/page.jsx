@@ -16,16 +16,22 @@ import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
 import Categoria from "@/models/Categoria";
 import SumateComunidad from "./_components/sumateComunidad";
+import { Op } from "sequelize";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
-  console.log(nombreParseado);
+
   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
   const curso = await Curso.findOne({
     where: { nombre: nombreParseado },
     include: Categoria,
   });
-  console.log(curso.categorias[0]?.nombre);
+
+
+  const cursos = await Curso.findAll({
+    where: { nombre: { [Op.not]: nombreParseado } },
+  });
+
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
@@ -81,7 +87,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-      <CursoOnDemandOtrosCursos cursoActual={nombreParseado} />
+      <CursoOnDemandOtrosCursos cursos={cursos} />
       <SumateComunidad/>
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">

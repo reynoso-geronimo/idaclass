@@ -32,6 +32,9 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
+
+
+
 export async function getCursosFormacionFromDB() {
   
   try {
