@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-
-import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
-import CertificacionCursoOnDemand from "./_components/certificacionCursoOnDemand";
 import Link from "next/link";
 import Beca from "@/components/becaAsesorate";
 import CursoOnDemandHeader from "./_components/cursoOnDemandHeader";
@@ -14,19 +11,15 @@ import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
 import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import Curso from "@/models/Curso";
-import Categoria from "@/models/Categoria";
 import SumateComunidad from "./_components/sumateComunidad";
 import { Op } from "sequelize";
+import { getCursoFromDB } from "@/app/actions";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = params.nombre.replace(/%20/g, " ");
 
+  const curso = await getCursoFromDB(nombreParseado);
   //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
-  const curso = await Curso.findOne({
-    where: { nombre: nombreParseado },
-    include: Categoria,
-  });
-
 
   const cursos = await Curso.findAll({
     where: { nombre: { [Op.not]: nombreParseado } },
@@ -47,7 +40,7 @@ const CursoPage = async ({ params }) => {
     duracion,
     dedicacion,
     modulos,
-  } = curso.toJSON();
+  } = curso;
 
   return (
     <main className="flex flex-col">
@@ -88,7 +81,7 @@ const CursoPage = async ({ params }) => {
 
       <Separator className="my-6" />
       <CursoOnDemandOtrosCursos cursos={cursos} />
-      <SumateComunidad/>
+      <SumateComunidad />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
