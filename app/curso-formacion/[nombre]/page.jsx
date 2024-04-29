@@ -21,11 +21,11 @@ import {
 const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
-  const cursos = await getOtrosCursosFromacionFromDb(nombreParseado);
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-
+  const cursos = await getOtrosCursosFromacionFromDb(nombreParseado);
+  
   const {
     nombre,
     descripcion,

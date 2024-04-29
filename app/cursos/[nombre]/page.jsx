@@ -13,18 +13,17 @@ import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
 
-
 const CursoPage = async ({ params }) => {
-  const nombreParseado = decodeURI(params.nombre)
+  const nombreParseado = decodeURI(params.nombre);
 
   const curso = await getCursoFromDB(nombreParseado);
- 
-  const cursos = await getCursosPorCategoriaFromDB(curso.categorias[0].id, nombreParseado)
-
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-
+  const cursos = await getCursosPorCategoriaFromDB(
+    curso.categorias[0].id,
+    nombreParseado
+  );
   const {
     nombre,
     descripcion,
