@@ -10,9 +10,7 @@ import CursoOnDemandContenidoCurso from "./_components/cursoOnDemandContendidoCu
 import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
 import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
-import Curso from "@/models/Curso";
 import SumateComunidad from "./_components/sumateComunidad";
-import { Op } from "sequelize";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
 
 
@@ -20,9 +18,7 @@ const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre)
 
   const curso = await getCursoFromDB(nombreParseado);
-  //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
-  console.log(curso);
-  console.log(nombreParseado);
+ 
   const cursos = await getCursosPorCategoriaFromDB(curso.categorias[0].id)
 
   if (!curso) {
