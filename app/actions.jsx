@@ -38,12 +38,27 @@ export async function getCursosPorCategoriaFromDB(categoriaId) {
       include: {
         model: Categoria,
         where: {
-          id: categoriaId,
-        },
-      },
+          id: categoriaId
+        }
+      }
     });
-    console.log(cursos.length);
+    
+    if(cursos.length < 4) {
+      const cursosCategoria1 = await Curso.findAll({
+        include: {
+          model: Categoria, 
+          where: {
+            id: 1
+          }
+        },
+        limit: 4 - cursos.length
+      });
+      
+      cursos.push(...cursosCategoria1);
+    }
+    
     return cursos.map(curso => curso.toJSON());
+    
   } catch (error) {
     console.log(error);
   }
