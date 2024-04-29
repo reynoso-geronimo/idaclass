@@ -20,7 +20,7 @@ import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
 import { Op } from "sequelize";
 
 const CursoPage = async ({ params }) => {
-  const nombreParseado = params.nombre.replace(/%20/g, " ");
+  const nombreParseado = decodeURI(params.nombre)
   const curso = await CursosFormacion.findOne({
     where: { nombre: nombreParseado },
   });
