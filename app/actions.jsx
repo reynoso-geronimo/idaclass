@@ -32,33 +32,33 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
-export async function getCursosPorCategoriaFromDB(categoriaId) {
+export async function getCursosPorCategoriaFromDB(categoriaId , cursoActual) {
   try {
     const cursos = await Curso.findAll({
+      where: { nombre: { [Op.not]: cursoActual } },
       include: {
         model: Categoria,
         where: {
-          id: categoriaId
-        }
-      }
+          id: categoriaId,
+        },
+      },
     });
-    
-    if(cursos.length < 4) {
+
+    if (cursos.length < 4) {
       const cursosCategoria1 = await Curso.findAll({
         include: {
-          model: Categoria, 
+          model: Categoria,
           where: {
-            id: 1
-          }
+            id: 1,
+          },
         },
-        limit: 4 - cursos.length
+        limit: 4 - cursos.length,
       });
-      
+
       cursos.push(...cursosCategoria1);
     }
-    
+
     return cursos.map(curso => curso.toJSON());
-    
   } catch (error) {
     console.log(error);
   }
@@ -81,6 +81,31 @@ export async function getCursoFromDB(nombre) {
 export async function getCursosFormacionFromDB() {
   try {
     const response = await CursosFormacion.findAll();
+    const data = response.map(curso => curso.toJSON());
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getCursoFormacionFromDB(nombre) {
+  try {
+    const response = await CursosFormacion.findOne({
+      where: { nombre: nombre },
+    });
+    const data = response.toJSON();
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function getOtrosCursosFromacionFromDb(nombre) {
+  try {
+    const response = await CursosFormacion.findAll({
+      where: { nombre: { [Op.not]: nombre } },
+    });
     const data = response.map(curso => curso.toJSON());
 
     return data;

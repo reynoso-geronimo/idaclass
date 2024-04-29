@@ -1,32 +1,27 @@
 import { Button } from "@/components/ui/button";
-
 import { Separator } from "@/components/ui/separator";
-
-import CursosFormacion from "@/models/CursoFormacion";
 import EquipoProfesional from "@/components/equipo-profesional";
 import CasosExito from "@/components/casos-exito";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
 import BecaAsesorate from "@/components/becaAsesorate";
-
 import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
-
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
-import { Op } from "sequelize";
+
+import {
+  getCursoFormacionFromDB,
+  getOtrosCursosFromacionFromDb,
+} from "@/app/actions";
 
 const CursoPage = async ({ params }) => {
-  const nombreParseado = decodeURI(params.nombre)
-  const curso = await CursosFormacion.findOne({
-    where: { nombre: nombreParseado },
-  });
-  const cursos = await CursosFormacion.findAll({
-    where: { nombre: { [Op.not]: nombreParseado } },
-  });
+  const nombreParseado = decodeURI(params.nombre);
+  const curso = await getCursoFormacionFromDB(nombreParseado);
+  const cursos = await getOtrosCursosFromacionFromDb(nombreParseado);
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
@@ -43,7 +38,7 @@ const CursoPage = async ({ params }) => {
     duracion,
     dedicacion,
     modulos,
-  } = curso.toJSON();
+  } = curso;
 
   return (
     <main className="flex flex-col">
@@ -85,7 +80,7 @@ const CursoPage = async ({ params }) => {
         titulo3="que te guiara al exito"
       />
 
-      <CasosExito  />
+      <CasosExito />
 
       <Separator className="my-6" />
       <CursoFormacionOtrosCursos cursos={cursos} />

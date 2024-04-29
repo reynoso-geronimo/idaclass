@@ -19,7 +19,7 @@ const CursoPage = async ({ params }) => {
 
   const curso = await getCursoFromDB(nombreParseado);
  
-  const cursos = await getCursosPorCategoriaFromDB(curso.categorias[0].id)
+  const cursos = await getCursosPorCategoriaFromDB(curso.categorias[0].id, nombreParseado)
 
   if (!curso) {
     return <div>Curso no encontrado</div>;
