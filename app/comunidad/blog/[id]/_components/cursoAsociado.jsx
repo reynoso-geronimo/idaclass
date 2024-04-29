@@ -1,16 +1,14 @@
+import { getCursoFromDB } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Curso from "@/models/Curso";
 import { Clock, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
-  //!!CODIGO PARA ENCOTNRAR EL CURSO REVISAR
-  const curso = await Curso.findOne({
-    where: { nombre: cursoAsociado },
-  });
+  
+ const curso = await getCursoFromDB(cursoAsociado)
   if (!curso) {
     return null;
   }
@@ -44,8 +42,8 @@ const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
             className="font-bold rounded-2xl w-full lg:translate-y-6"
             asChild
           >
-            {/* //!! REVISAr ESTE VINCULo */}
-            <Link href={`/cursos/${curso ? curso.nombre : ""}`}>
+        
+            <Link href={`/cursos/${curso && curso.nombre}`}>
               Mas Informacion
             </Link>
           </Button>
