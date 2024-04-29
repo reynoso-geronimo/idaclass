@@ -12,7 +12,7 @@ const CursoFormacionHeader = ({
   return (
     <section className="relative lg:container text-white">
       <div className="px-8 max-lg:min-h-[700px] flex flex-col pb-10 lg:py-20 justify-end lg:justify-center">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8 tracking-tight max-w-32">
+        <h1 className="text-4xl lg:text-5xl font-bold mb-8 tracking-tight max-w-[22rem]">
           {nombre}
         </h1>
         <p className="lg:w-1/2">{descripcion}</p>
