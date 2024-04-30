@@ -27,7 +27,7 @@ const EnsenaConNosotros = ({ sideBar = false }) => {
         </ul>
 
         <Button variant="default" asChild className={`rounded-2xl z-10 ${!sideBar?"mt-8 lg:mt-auto":""}`}>
-          <Link href="/">CONTACTANOS</Link>
+          <Link href="https://www.linkedin.com/company/idaclass/">CONTACTANOS</Link>
         </Button>
       </div>
       <Image
