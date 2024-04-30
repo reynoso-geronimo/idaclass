@@ -113,9 +113,8 @@ const Ventajas = () => {
             </h3>
             <div className="w-full relative aspect-video">
               <div className="max-lg:hidden absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10">
-                <p className="text-lg">
-                  Suma las habilidades necesarias para cumplir todas tus metas y
-                  objetivos profesionales con exito.
+                <p className="text-lg text-left">
+                  Suma las habilidades necesarias para cumplir todas tus metas y objetivos profesionales con exito.
                 </p>
               </div>
               <Image
@@ -131,8 +130,7 @@ const Ventajas = () => {
             </div>
             <div className="lg:hidden my-4 container max-w-2xl">
               <p className="text-lg">
-                Suma las habilidades necesarias para cumplir todas tus metas y
-                objetivos profesionales con exito.
+                Suma las habilidades necesarias para cumplir todas tus metas y objetivos profesionales con exito.
               </p>
             </div>
           </div>
