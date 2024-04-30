@@ -5,7 +5,7 @@ const CursoFormacionRequisitos = () => {
     <section className="flex flex-col lg:flex-row justify-center gap-4 container">
       <article className="w-full rounded-2xl overflow-hidden border-idaclass4 border-2 ">
         <TituloSeccion
-          className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
+          className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
         >
           Requisitos
         </TituloSeccion>
@@ -22,7 +22,7 @@ const CursoFormacionRequisitos = () => {
       </article>
       <article className="w-full rounded-2xl overflow-hidden  border-idaclass4 border-2 ">
         <TituloSeccion
-          className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
+          className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
         >
           A quien va dirigido
         </TituloSeccion>
@@ -37,7 +37,7 @@ const CursoFormacionRequisitos = () => {
 
       <article className="w-full rounded-2xl overflow-hidden  border-idaclass4 border-2 ">
         <TituloSeccion
-          className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
+          className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}
         >
           Potencia tu empleabilidad
         </TituloSeccion>
