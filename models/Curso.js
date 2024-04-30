@@ -31,7 +31,20 @@ const Curso = sequelize.define("curso", {
     modalidad: {
         type: DataTypes.STRING,
         
-    }
+    },
+    objetivo_titulo: {
+        type: DataTypes.STRING
+    },
+    objetivo_texto: {
+        type: DataTypes.STRING
+    },
+    perfil_titulo: {
+        type: DataTypes.STRING
+    },
+    perfil_texto: {
+        type: DataTypes.STRING
+    },
+
     
 }, {
     timestamps: false
