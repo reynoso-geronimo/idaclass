@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+import { Instagram, Quote } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,22 +12,31 @@ const CasoExito = ({
   linkedin,
   pais,
 }) => {
+
+
   return (
-    <div className="bg-gray-800 container px-4 mx-auto py-4 text-white flex flex-col justify-between rounded-3xl max-w-72 lg:max-w-80 aspect-square">
-      <div className="flex gap-1">
-        <Quote className="transform -rotate-180" />
-        <Avatar>
+    <div className="bg-gray-200 container px-4 mx-auto py-4 flex flex-col justify-between rounded-3xl max-w-72 lg:max-w-80 aspect-square">
+      <div className="flex gap-4">
+        <Avatar className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 h-[60px] w-[60px] relative overflow-visible">
           <AvatarImage
-            src={`https://flagcdn.com/${pais}.svg`}
+            src={avatar}
             alt={`${pais ? pais : "argentina"}`}
+            className="rounded-full p-1 bg-gray-200"
           />
           <AvatarFallback className="text-black">{pais}</AvatarFallback>
+          <Image
+            src={`https://flagcdn.com/${pais}.svg`}
+            alt={`${pais ? pais : "argentina"}`}
+            height={24}
+            width={24}
+            className="rounded-full absolute right-0 bottom-0 h-6 w-6"
+          />
         </Avatar>
         <div>
-          <h3 className="text-bold flex items-center gap-1 text-sm lg:text-base">
+          <h3 className="font-bold flex items-center gap-1 text-sm lg:text-xl">
             {nombre ? nombre : "Perez Con Pan"}
           </h3>
-          <p className="text-xs lg:text-sm font-light text-gray-200">
+          <p className="text-xs lg:text-base font-medium text-idaclass">
             {carrera ? carrera : "Preparador Físico"}
           </p>
         </div>
@@ -39,9 +49,9 @@ const CasoExito = ({
 
       <Link
         href={linkedin ? linkedin : "/"}
-        className="text-idaclass3 font-bold ml-auto"
+        className="text-idaclass3 font-bold ml-auto flex items-center gap-2"
       >
-        Ver Perfil
+        <Instagram /> Ver Perfil
       </Link>
     </div>
   );

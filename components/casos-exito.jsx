@@ -22,7 +22,7 @@ const casos = [
     experiencia:
       "Recomiendo absolutamente IdaClass, la experiencia fue muy buena y no solo por los conocimientos técnicos adquiridos sino también por las herramientas extras que me brindo la formación, gracias a las que pude iniciar mi proyecto propio y tener una gran comunidad en redes sociales como influencer fitness.",
     avatar: "",
-    nombre: "Brian Vazquez.",
+    nombre: "Brian Vazquez",
     carrera: "Personal Trainer ",
     linkedin: "https://www.instagram.com/kamikazeprofitness/",
     pais: "uy",
@@ -40,7 +40,7 @@ const casos = [
     experiencia:
       "La experiencia como alumno, EXCELENTE, egresé del prestigioso Instituto en varios cursos con certificación y matricula. Recomiendo para todos aquellos que quieran adquirir conocimientos y en el ámbito de la preparación física y salud. El acompañamiento es permanente de los docentes y directivos. ",
     avatar: "",
-    nombre: "Osvaldo Rubén Contreras.",
+    nombre: "Osvaldo Contreras",
     carrera: "",
     linkedin: "",
     pais: "ar",
