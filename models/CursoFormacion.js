@@ -38,7 +38,43 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     },
     contenido: {
         type: DataTypes.STRING
+    },
+    ojetivo_titulo_uno: {
+        type: DataTypes.STRING
+    },
+    ojetivo_texto_uno: {
+        type: DataTypes.STRING
+    },
+    ojetivo_titulo_dos: {
+        type: DataTypes.STRING
+    },
+    ojetivo_texto_dos: {
+        type: DataTypes.STRING
+    }, ojetivo_titulo_tres: {
+        type: DataTypes.STRING
+    },
+    ojetivo_texto_tres: {
+        type: DataTypes.STRING
+    },
+    perfil_titulo_uno: {
+        type: DataTypes.STRING
+    },
+    perfil_texto_uno: {
+        type: DataTypes.STRING
+    },
+    perfil_titulo_dos: {
+        type: DataTypes.STRING
+    },
+    perfil_texto_dos: {
+        type: DataTypes.STRING
+    },
+    perfil_titulo_tres: {
+        type: DataTypes.STRING
+    },
+    perfil_texto_tres: {
+        type: DataTypes.STRING
     }
+
 
 
 }
@@ -46,7 +82,7 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
         freezeTableName: true,
         timestamps: false,
         createdAt: "created_at",
-        updatedAt:"updated_at"
+        updatedAt: "updated_at"
     }
 )
 export default CursosFormacion;

@@ -25,7 +25,7 @@ const CursoPage = async ({ params }) => {
     return <div>Curso no encontrado</div>;
   }
   const cursos = await getOtrosCursosFromacionFromDb(nombreParseado);
-  
+
   const {
     nombre,
     descripcion,
@@ -38,6 +38,18 @@ const CursoPage = async ({ params }) => {
     duracion,
     dedicacion,
     modulos,
+    ojetivo_titulo_uno,
+    ojetivo_texto_uno,
+    ojetivo_titulo_dos,
+    ojetivo_texto_dos,
+    ojetivo_titulo_tres,
+    ojetivo_texto_tres,
+    perfil_titulo_uno,
+    perfil_texto_uno,
+    perfil_titulo_dos,
+    perfil_texto_dos,
+    perfil_titulo_tres,
+    perfil_texto_tres,
   } = curso;
 
   return (
@@ -59,7 +71,20 @@ const CursoPage = async ({ params }) => {
         nombre={nombre}
       />
       <Separator className="my-6" />
-      <CursoFormacionObjetivos />
+      <CursoFormacionObjetivos
+        ojetivo_titulo_uno={ojetivo_titulo_uno}
+        ojetivo_texto_uno={ojetivo_texto_uno}
+        ojetivo_titulo_dos={ojetivo_titulo_dos}
+        ojetivo_texto_dos={ojetivo_texto_dos}
+        ojetivo_titulo_tres={ojetivo_titulo_tres}
+        ojetivo_texto_tres={ojetivo_texto_tres}
+        perfil_titulo_uno={perfil_titulo_uno}
+        perfil_texto_uno={perfil_texto_uno}
+        perfil_titulo_dos={perfil_titulo_dos}
+        perfil_texto_dos={perfil_texto_dos}
+        perfil_titulo_tres={perfil_titulo_tres}
+        perfil_texto_tres={perfil_texto_tres}
+      />
       <Separator className="my-6" />
       <BecaAsesorate />
       <CertificacionCursoFormacion />
