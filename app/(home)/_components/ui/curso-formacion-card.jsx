@@ -8,14 +8,14 @@ import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
   return (
-    <article className="w-[285px] rounded-2xl mx-3 min-h-[650px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
+    <article className="w-[285px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
       <Image
         className="object-cover rounded-2xl -z-10 bg-black"
         src={`/cursosFormacion/cursos/headers/${curso.nombre}Mobile.png`}
         fill
         alt="Imagen del curso"
       />
-      <div className="w-32 absolute top-4 -left-0">
+      {/* <div className="w-32 absolute top-4 -left-0">
         <h3 className="text-center z-10 text-base font-semibold uppercase text-white bg-gradient-to-t from-[#0088CA] to-[#1FB3E5] py-1 pr-4 -translate-x-3 rounded-r-lg whitespace-nowrap">
           &#128293; 70% OFF
         </h3>
@@ -25,16 +25,16 @@ const CursoFormacionCard = ({ curso }) => {
           className="-z-20 absolute -left-[10px] top-[4px] transform rotate-[30deg]"
           fill="#3A5DAE"
         />
-      </div>
+      </div> */}
 
       <h3 className="font-extrabold text-3xl text-left mb-4 text-white">
         {curso.nombre}
       </h3>
-      <p className="text-white">{curso.descripcion}</p>
+      {/* <p className="text-white">{curso.descripcion}</p>
       <p className="align-middle">
         <BookOpenIcon className="inline mr-1 align-middle" size={22} strokeWidth={3} />
         <span className="font-bold">{curso.contenido}</span> <span>de estudio</span>
-      </p>
+      </p> */}
 
       <p className="align-middle">
         <Clock className="inline mr-1 align-middle pb-0.5" size={22} strokeWidth={3} />
