@@ -12,10 +12,7 @@ import linea from "../../../public/assets/Línea img 3.png";
 
 const areas = [
   { src: `/home/areas/entrenamiento.jpeg`, area: "Entrenamiento" },
-  {
-    src: `/home/areas/desarolloprofesional.jpeg`,
-    area: "Desarrollo Profesional",
-  },
+ 
   { src: `/home/areas/gimnasio.jpeg`, area: "Gimnasio" },
   { src: `/home/areas/nutricion.jpg`, area: "Nutricion" },
 ];
