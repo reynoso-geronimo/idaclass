@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
   const countCursos = cursos.length;
-  console.log(countCursos);
+  //console.log(countCursos);
   let basis = "1/4";
 
   if (countCursos === 2) {

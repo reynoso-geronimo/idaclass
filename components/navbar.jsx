@@ -20,7 +20,7 @@ import NavbarWebMenu from "./navbarWebMenu";
 
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session } = useSession();
-  console.log(session)
+
   
   const pathname = usePathname().replace(/%20/g, " ");
   return (

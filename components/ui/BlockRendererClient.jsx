@@ -30,7 +30,7 @@ export default function BlockRendererClient({ content }) {
           }
         },
         image: ({ image }) => {
-          console.log(image);
+       
           return (
             <Image
               src={image.url}

@@ -12,8 +12,7 @@ import SkillClass from "../../../../components/skillClass";
 
 const CursoFormacionContenidoCurso = ({ modulos }) => {
   const contenido = JSON.parse(modulos)
-  console.log(contenido)
- 
+  //console.log(contenido)
   return (
     <section className="lg:container">
       <TituloSeccion>Contenido del curso</TituloSeccion>
