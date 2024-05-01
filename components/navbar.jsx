@@ -20,6 +20,7 @@ import NavbarWebMenu from "./navbarWebMenu";
 
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session } = useSession();
+  console.log(session)
   
   const pathname = usePathname().replace(/%20/g, " ");
   return (
@@ -167,7 +168,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
             {session && session.user ? (
               <Avatar onClick={() => signOut()} className="cursor-pointer text-black">
                 <AvatarImage src={session.user.image} alt="avatar" />
-                <AvatarFallback>{session.user.name.split(' ').map((n, i) => i < 2 ? n[0] : '').join('')} </AvatarFallback>
+                <AvatarFallback>{session.user.name?.split(' ').map((n, i) => i < 2 ? n[0] : '').join('')||""} </AvatarFallback>
               </Avatar>
             ) : (
               <Button className="rounded-3xl" onClick={() => signIn()}>

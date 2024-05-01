@@ -35,10 +35,11 @@ const handler = NextAuth({
             }
           });
           if (dbUser) {
-            console.log( dbUser.password , credentials.password);
-           if( dbUser.password === credentials.password )
-           dbUser.name = dbUser.username
-            return dbUser
+            console.log(dbUser.password, credentials.password);
+            if (dbUser.password === credentials.password) {
+              dbUser.name = dbUser.username
+              return dbUser
+            }
             // Any object returned will be saved in `user` property of the JWT
 
           } else return null
@@ -59,7 +60,7 @@ const handler = NextAuth({
               family_name: credentials?.family_name,
 
             });
-            user.name=user.username
+            user.name === user.username
             return user
           } else return null
         }

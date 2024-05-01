@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import GoogleIcon from "../../public/assets/google-icon.svg";
 import Image from "next/image";
 import { BackgroundBeams } from "@/components/ui/background-beams";
@@ -8,8 +8,18 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import RegisterForm from "./_components/registerForm";
 import LoginForm from "./_components/loginForm";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function SignIn() {
+  const {data: session} = useSession();
+  const router = useRouter();
+  useEffect(() => {
+    console.log(session);
+    if(session) {
+      router.push('/');
+    }
+  }, [session]);
   return (
     <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12">
       <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-gray-100 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
