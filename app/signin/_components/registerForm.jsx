@@ -147,11 +147,11 @@ const RegisterForm = () => {
             </FormItem>
           )}
         />
-        <div className="pt-3">
+        <div className="">
           <p className="text-destructive font-medium text-sm">
             {error && "Usuario ya registrado"}
           </p>
-          <Button type="submit" className="w-full rounded-3xl">
+          <Button type="submit" className="w-full rounded-3xl mt-3">
             Registrarme
           </Button>
         </div>

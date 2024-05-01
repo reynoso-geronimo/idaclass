@@ -22,7 +22,7 @@ export default function SignIn() {
   }, [session]);
   return (
     <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12">
-      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-4 bg-gray-100 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
+      <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-2 bg-gray-100 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
         <Tabs defaultValue="login">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="login" className={"rounded-l-3xl"}>Ingresar</TabsTrigger>
@@ -40,7 +40,7 @@ export default function SignIn() {
           onClick={() =>
             signIn("google", { callbackUrl: window.location.origin })
           }
-          className="w-full bg-slate-600 rounded-lg"
+          className="w-full bg-slate-600 rounded-3xl"
         >
           <Image
             src={GoogleIcon}
