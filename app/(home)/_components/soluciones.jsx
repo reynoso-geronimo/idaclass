@@ -1,7 +1,7 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 import { soluciones1, soluciones2 } from "../../../lib/constants.js";
-import {  useState } from "react";
+import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image.js";
 
@@ -15,12 +15,21 @@ const Soluciones = () => {
   });
 
   return (
-    <section
-      className=" h-[800px] bg-black text-white relative"
-      
-    >
-      <Image alt="" src="/assets/bg-soluciones.png" fill sizes="50vw" className="object-contain max-lg:hidden"/>
-      <Image alt="" src="/assets/bg-solucionesMobile.png" fill sizes="100vw" className="object-cover lg:hidden"/>
+    <section className=" h-[800px] bg-black text-white relative">
+      <Image
+        alt=""
+        src="/assets/bg-soluciones.png"
+        fill
+        sizes="50vw"
+        className="object-contain max-lg:hidden"
+      />
+      <Image
+        alt=""
+        src="/assets/bg-solucionesMobile.png"
+        fill
+        sizes="100vw"
+        className="object-cover lg:hidden"
+      />
       <div className=" h-full ">
         <div className="flex flex-col justify-around h-full container relative py-6">
           <h3
@@ -29,7 +38,7 @@ const Soluciones = () => {
               inView1 ? `reveal-text` : `opacity-0`
             } max-w-xl text-3xl sm:text-[40px] text-left font-extrabold  mb-4 tracking-tighter text-idaclass3`}
           >
-            <span> Potenciamos tu empleabilidad </span>
+            <span> Potenciamos tus oportunidades laborales</span>
           </h3>
 
           {soluciones1.map(solucion => (
