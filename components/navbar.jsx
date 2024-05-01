@@ -21,7 +21,6 @@ import NavbarWebMenu from "./navbarWebMenu";
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session } = useSession();
 
-  
   const pathname = usePathname().replace(/%20/g, " ");
   return (
     <header className="sticky top-0 z-40 bg-black text-white">
@@ -51,22 +50,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
               </Link>
             </SheetClose>
             <Separator />
-            <SheetClose asChild>
-              <Link
-                className={`-translate-x-3.5 flex items-center ${
-                  pathname === "/nosotros" && "text-idaclass4"
-                } `}
-                href="/nosotros"
-              >
-                <Minus
-                  className="rotate-90 -left-3 scale-x-[135%]"
-                  size={28}
-                  color="#0088ca"
-                />
-                Nosotros
-              </Link>
-            </SheetClose>
-            <Separator />
+
             <h1 className="-translate-x-3.5 flex items-center  text-idaclass">
               <Minus
                 className="rotate-90 -left-3 scale-x-[135%]"
@@ -109,7 +93,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
               <Link
                 href="/comunidad"
                 className={`-translate-x-3.5 flex items-center ${
-                  pathname === "/comunidad/blog" && "text-idaclass4"
+                  pathname.includes("comunidad") && "text-idaclass4"
                 } `}
               >
                 <Minus
@@ -118,6 +102,22 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
                   color="#0088ca"
                 />
                 Comunidad IdaClass
+              </Link>
+            </SheetClose>
+            <Separator />
+            <SheetClose asChild>
+              <Link
+                className={`-translate-x-3.5 flex items-center ${
+                  pathname === "/nosotros" && "text-idaclass4"
+                } `}
+                href="/nosotros"
+              >
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
+                Nosotros
               </Link>
             </SheetClose>
             <Separator />
@@ -166,9 +166,17 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
 
           <div className="w-24 flex justify-end">
             {session && session.user ? (
-              <Avatar onClick={() => signOut()} className="cursor-pointer text-black">
+              <Avatar
+                onClick={() => signOut()}
+                className="cursor-pointer text-black"
+              >
                 <AvatarImage src={session.user.image} alt="avatar" />
-                <AvatarFallback>{session.user.name?.split(' ').map((n, i) => i < 2 ? n[0] : '').join('')||""} </AvatarFallback>
+                <AvatarFallback>
+                  {session.user.name
+                    ?.split(" ")
+                    .map((n, i) => (i < 2 ? n[0] : ""))
+                    .join("") || ""}{" "}
+                </AvatarFallback>
               </Avatar>
             ) : (
               <Button className="rounded-3xl" onClick={() => signIn()}>
