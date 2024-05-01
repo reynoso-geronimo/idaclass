@@ -2,6 +2,7 @@ import User from '@/models/User';
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from "next-auth/providers/credentials";
+const bcrypt = require('bcrypt');
 
 
 const handler = NextAuth({
@@ -35,8 +36,8 @@ const handler = NextAuth({
             }
           });
           if (dbUser) {
-            console.log(dbUser.password, credentials.password);
-            if (dbUser.password === credentials.password) {
+            
+            if (bcrypt.compareSync( credentials.password, dbUser.password)) {
               dbUser.name = dbUser.username
               return dbUser
             }
@@ -52,15 +53,19 @@ const handler = NextAuth({
             }
           });
           if (!dbUser) {
+            const hash = bcrypt.hashSync(credentials.password, 10)
+
+
+
             const user = await User.create({
               email: credentials.email,
               username: credentials.given_name + " " + credentials.family_name,
-              password: credentials.password,
+              password: hash,
               given_name: credentials?.given_name,
               family_name: credentials?.family_name,
 
             });
-            user.name === user.username
+            user.name = user.username
             return user
           } else return null
         }
