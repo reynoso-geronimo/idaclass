@@ -161,7 +161,7 @@ const NavbarWebMenu = ({
       <Link
         href="/comunidad"
         className={`${
-          pathname === "/comunidad/blog" && "after:w-[100%] text-idaclass4"
+          pathname.includes("comunidad") && "after:w-[100%] text-idaclass4"
         } ${classEscritorio}`}
       >
         Comunidad IdaClass
