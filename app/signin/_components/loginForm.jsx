@@ -14,12 +14,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 const formSchema = z.object({
   email: z.string().email({ message: "Ingresa un Email valido" }),
   password: z.string().min(1, { message: "Ingresa tu contraseña" }),
 });
 
 const LoginForm = () => {
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -34,16 +37,23 @@ const LoginForm = () => {
   async function onSubmit(values) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    try {
+      const res = await signIn("credentials", {
+        email: values.email,
+        password: values.password,
+        method:"login",
+        redirect: false,
+      });
 
-    const res = await signIn(
-      "credentials",
-      { username: "jsmith", password: "1234", redirect: false },
-      
-    );
+      if (res.error) {
+        setError(res.error);
+      }
 
-    console.log(res);
-    if (res.error) {
-      setError(res.error);
+      if (res.status === 200) {
+        router.push(router.back());
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 

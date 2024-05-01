@@ -1,14 +1,23 @@
-import sequelize  from "../lib/sequelize";
-import { DataTypes } from "sequelize"; 
+import sequelize from "../lib/sequelize";
+import { DataTypes } from "sequelize";
 
 const User = sequelize.define("up_user", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
-    unsigned: true 
+    unsigned: true
   },
   username: {
+    type: DataTypes.STRING
+  },
+  given_name: {
+    type: DataTypes.STRING
+  },
+  password: {
+    type: DataTypes.STRING
+  },
+  family_name: {
     type: DataTypes.STRING
   },
   email: {
@@ -17,7 +26,7 @@ const User = sequelize.define("up_user", {
   provider: {
     type: DataTypes.STRING
   },
-  
+
 }, {
   timestamps: false
 });

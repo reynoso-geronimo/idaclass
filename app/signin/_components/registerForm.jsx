@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -12,9 +12,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
 const formSchema = z
   .object({
     email: z.string().email({ message: "Ingresa un Email valido" }),
+    nombre: z.string(),
+    apellido: z.string(),
     password: z.string(),
     confirm: z.string(),
   })
@@ -23,12 +29,9 @@ const formSchema = z
     path: ["confirm"], // path of error
   });
 // 2. Define a submit handler.
-function onSubmit(values) {
-  // Do something with the form values.
-  // ✅ This will be type-safe and validated.
-  console.log(values);
-}
+
 const RegisterForm = () => {
+  const router = useRouter();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,7 +42,34 @@ const RegisterForm = () => {
       confirm: "",
     },
   });
+  const [error, setError] = useState(null);
 
+  // 2. Define a submit handler.
+  async function onSubmit(values) {
+    try {
+      // Do something with the form values.
+      // ✅ This will be type-safe and validated.
+
+      const res = await signIn("credentials", {
+        email: values.email,
+        password: values.password,
+        family_name: values.apellido,
+        given_name: values.nombre,
+        username: values.apellido + values.nombre,
+        method: "register",
+        redirect: false,
+      });
+
+      if (res.error) {
+        setError(res.error);
+      }
+      if (res.status === 200) {
+        router.push(router.back());
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-1">
@@ -80,7 +110,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel className="">Email</FormLabel>
               <FormControl>
-                <Input placeholder="Email"  {...field} />
+                <Input placeholder="Email" {...field} />
               </FormControl>
 
               <FormMessage />
@@ -118,9 +148,12 @@ const RegisterForm = () => {
           )}
         />
         <div className="pt-3">
-        <Button type="submit" className="w-full rounded-3xl">
-          Registrarme
-        </Button>
+          <p className="text-destructive font-medium text-sm">
+            {error && "Usuario ya registrado"}
+          </p>
+          <Button type="submit" className="w-full rounded-3xl">
+            Registrarme
+          </Button>
         </div>
       </form>
     </Form>

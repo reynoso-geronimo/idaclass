@@ -22,13 +22,48 @@ const handler = NextAuth({
       //   password: { label: "Password", type: "password" }
       // },
       async authorize(credentials, req) {
+
+        if (!credentials || !credentials.email || !credentials.password) {
+          return null
+
+        }
         // Add logic here to look up the user from the credentials supplied
-        const user = { id: "1", name: "J Smith", email: "reynoso.geronimo@mail.com" }
-        // console.log((credentials));
-        if (!user) {
-          // Any object returned will be saved in `user` property of the JWT
-          return user
-        } else {
+        if (credentials.method === "login") {
+          const dbUser = await User.findOne({
+            where: {
+              email: credentials.email
+            }
+          });
+          if (dbUser) {
+            console.log( dbUser.password , credentials.password);
+           if( dbUser.password === credentials.password )
+           dbUser.name = dbUser.username
+            return dbUser
+            // Any object returned will be saved in `user` property of the JWT
+
+          } else return null
+        }
+
+        if (credentials.method === "register") {
+          const dbUser = await User.findOne({
+            where: {
+              email: credentials.email
+            }
+          });
+          if (!dbUser) {
+            const user = await User.create({
+              email: credentials.email,
+              username: credentials.given_name + " " + credentials.family_name,
+              password: credentials.password,
+              given_name: credentials?.given_name,
+              family_name: credentials?.family_name,
+
+            });
+            user.name=user.username
+            return user
+          } else return null
+        }
+        else {
           // If you return null then an error will be displayed advising the user to check their details.
           return null
 
@@ -41,27 +76,28 @@ const handler = NextAuth({
   }, callbacks: {
     async session({ session }) {
       try {
-        
-      const sessionUser = await User.findOne({ where: { email: session.user.email } });
-      session.user.id = sessionUser.id.toString();
 
-      return session;
+        const sessionUser = await User.findOne({ where: { email: session.user.email } });
+        session.user.id = sessionUser.id.toString();
+
+        return session;
       } catch (error) {
         console.log("Error creando la sesion: ", error.message);
         return error
       }
     },
-    async signIn({ account, profile, user, credentials }) {
+    async signIn({ user, account, profile, email, credentials }) {
+
       if (profile) {
+
         try {
-
           const userExists = await User.findOne({ where: { email: profile.email } });
-
-
           if (!userExists) {
             await User.create({
               email: profile.email,
-              username: profile.name.replace(" ", "").toLowerCase(),
+              username: profile.name,
+              given_name: profile?.given_name,
+              family_name: profile?.family_name,
               provider: account.provider
             });
           }
@@ -73,10 +109,10 @@ const handler = NextAuth({
         }
       }
       if (credentials) {
-        
 
-          return true
-      
+
+        return true
+
       }
     },
   }
