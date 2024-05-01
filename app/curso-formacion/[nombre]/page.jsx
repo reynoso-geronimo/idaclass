@@ -72,6 +72,7 @@ const CursoPage = async ({ params }) => {
       />
       <Separator className="my-6" />
       <CursoFormacionObjetivos
+        nombre={nombre}
         ojetivo_titulo_uno={ojetivo_titulo_uno}
         ojetivo_texto_uno={ojetivo_texto_uno}
         ojetivo_titulo_dos={ojetivo_titulo_dos}

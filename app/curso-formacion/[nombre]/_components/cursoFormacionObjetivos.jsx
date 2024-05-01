@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import bgWeb from "../../../../public/cursosFormacion/objetivosBgWeb.png";
 import bgMobile from "../../../../public/cursosFormacion/objetivosBgMobile.png";
-const CursoFormacionObjetivos = ({ojetivo_titulo_uno, ojetivo_texto_uno, ojetivo_titulo_dos, ojetivo_texto_dos, ojetivo_titulo_tres, ojetivo_texto_tres , perfil_titulo_uno, perfil_texto_uno, perfil_titulo_dos, perfil_texto_dos, perfil_titulo_tres, perfil_texto_tres}) => {
+const CursoFormacionObjetivos = ({nombre, ojetivo_titulo_uno, ojetivo_texto_uno, ojetivo_titulo_dos, ojetivo_texto_dos, ojetivo_titulo_tres, ojetivo_texto_tres , perfil_titulo_uno, perfil_texto_uno, perfil_titulo_dos, perfil_texto_dos, perfil_titulo_tres, perfil_texto_tres}) => {
   return (
     <section className="">
       <div className="container flex flex-col lg:flex-row lg:pt-8 relative">
@@ -20,7 +20,7 @@ const CursoFormacionObjetivos = ({ojetivo_titulo_uno, ojetivo_texto_uno, ojetivo
           alt="background"
         />
         <Image
-          src={"/cursosFormacion/objetivos.png"}
+          src={`/cursosFormacion/cursos/objetivos/${nombre}.png`}
           height={1000}
           width={1000}
           alt=""

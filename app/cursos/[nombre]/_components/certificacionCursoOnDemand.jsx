@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Image from "next/image";
 
 const CertificacionCursoOnDemand = () => {
@@ -13,10 +19,18 @@ const CertificacionCursoOnDemand = () => {
         className="absolute top-6 right-6"
       />
       <span className="lg:text-xl font-medium ">
-        Certificado <br /> IdaClass con  <br /> autenticación QR
+        Certificado <br /> IdaClass con <br /> autenticación QR
       </span>
       {/* MODAL TRIGGER */}
-      <p className="text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
+      <Dialog>
+        <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+          {" "}
+          VER CERTIFICADO
+        </DialogTrigger>
+        <DialogContent>
+          <DialogDescription>CERTIFCIADO</DialogDescription>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

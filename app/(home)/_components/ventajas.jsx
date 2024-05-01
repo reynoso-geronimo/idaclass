@@ -17,7 +17,7 @@ const Ventajas = () => {
 
   return (
     <>
-      <TituloSeccion>Conoce nuestro modelo y sus ventajas</TituloSeccion>
+      <TituloSeccion>¿Por qué elegir IdaClass?</TituloSeccion>
       <section className="w-full flex flex-col items-center gap-10 lg:gap-y-12 container mb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl lg:text-5xl font-bold text-center tracking-tight">
@@ -56,38 +56,34 @@ const Ventajas = () => {
             </div>
 
             <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight">
-              Innovación en la enseñanza
+              La experiencia educativa más avanzada
             </h3>
             <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
-              Aprende en un entorno virtual interactivo <br /> multimodal simple
-              y efectivo.
+              Con el sistema Learning by Doing, nos aseguramos que aprendas con
+              rapidez y efectividad los fundamentos teóricos sin aburrirte,
+              ¡aprenderás como si vieras Netflix!
+            </p>
+            <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
+              Aplicarás los conocimientos desde el primer día y tendrás
+              prácticas reales con alumnos.
             </p>
             <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 text-sm sm:text-base">
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Clases en vivo
               </li>
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Equipo de tutores
+                Contenidos actualizados
               </li>
 
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Trabajo en equipo
+                Plataforma exclusiva
               </li>
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
+              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Auto&shy;evaluaciones
-              </li>
-
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
-                <Dot fill="black " className="shrink-0" />
-                Video lecciones
-              </li>
-              <li className="w-full max-w-48 flex items-center break-words hyphens-auto">
-                <Dot fill="black " className="shrink-0" />
-                Material interactivo
+                Acceso de por vida
               </li>
             </ul>
           </div>
@@ -109,12 +105,14 @@ const Ventajas = () => {
         >
           <div className="w-full lg:w-7/8 text-center">
             <h3 className="text-2xl lg:text-3xl lg:text-right font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
-              Eleva tus habilidades con SkillClass
+              Aprenderás más que fitness
             </h3>
             <div className="w-full relative aspect-video">
               <div className="max-lg:hidden absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10">
                 <p className="text-lg text-left">
-                  Suma las habilidades necesarias para cumplir todas tus metas y objetivos profesionales con exito.
+                  Nos aseguramos de brindarte una formación integral, para que
+                  desarrolles todas las habilidades necesarias para lograr tus
+                  metas profesionales con éxito.
                 </p>
               </div>
               <Image
@@ -130,20 +128,22 @@ const Ventajas = () => {
             </div>
             <div className="lg:hidden my-4 container max-w-2xl">
               <p className="text-lg">
-                Suma las habilidades necesarias para cumplir todas tus metas y objetivos profesionales con exito.
+                Nos aseguramos de brindarte una formación integral, para que
+                desarrolles todas las habilidades necesarias para lograr tus
+                metas profesionales con éxito.
               </p>
             </div>
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
             <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight">
-              Aprender haciendo
+            Programa educativo de prestigio
+
             </h3>
             <p className="text-pretty lg:text-lg ">
-              Avanza con Learning by Doing el método basado en experiencia
-              práctica Aprende y aplica de forma rápida y eficiente desde el
-              primer día.
+            Somos reconocidos como líderes regionales en la industria hacer más de 25 años. Nuestra formación te respaldará con el prestigio de IdaClass y podrás obtener la certificación de mayor reconocimiento y aval internacional.
+
             </p>
-            <ul className="flex flex-col py-2 text-sm sm:text-base">
+            {/* <ul className="flex flex-col py-2 text-sm sm:text-base">
               <li className="flex">
                 <Dot fill="black" /> Practica real con alumnos
               </li>
@@ -155,7 +155,7 @@ const Ventajas = () => {
                 <Dot fill="black" />
                 Desarrolla tus proyectos
               </li>
-            </ul>
+            </ul> */}
 
             <Image
               src={linea}

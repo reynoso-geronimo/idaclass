@@ -4,6 +4,12 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
 
 import Image from "next/image";
@@ -50,7 +56,16 @@ const CertificacionCursoFormacion = () => {
                     Certificado <br /> de Extensión <br /> Universitaria IUYMCA
                   </div>
                   {/* MODAL TRIGGER */}
-                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
+
+                  <Dialog>
+                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                      {" "}
+                      VER CERTIFICADO
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </CarouselItem>
@@ -68,7 +83,15 @@ const CertificacionCursoFormacion = () => {
                     Certificado <br /> IdaClass con <br /> autenticación QR
                   </span>
                   {/* MODAL TRIGGER */}
-                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  <Dialog>
+                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                      {" "}
+                      VER CERTIFICADO
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </CarouselItem>
@@ -86,7 +109,15 @@ const CertificacionCursoFormacion = () => {
                     Extra Certificado de <br /> 4 especializaciones <br />
                   </span>
                   {/* MODAL TRIGGER */}
-                  <p className="max-lg:text-sm text-idaclass3 font-bold">VER CERTIFICADO</p>
+                  <Dialog>
+                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                      {" "}
+                      VER CERTIFICADO
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </CarouselItem>
