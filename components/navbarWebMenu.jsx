@@ -52,7 +52,7 @@ const NavbarWebMenu = ({
       <Menubar className="border-none outline-none bg-transparent">
         <MenubarMenu>
           <MenubarTrigger
-            className={`${classEscritorio} ${
+            className={`pb-[7px] ${classEscritorio} ${
               (pathname.includes("curso-formacion") ||
                 pathname.includes("cursos")) &&
               "after:w-[100%] text-idaclass4"
