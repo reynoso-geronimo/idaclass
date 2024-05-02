@@ -22,12 +22,14 @@ const ComunidadIntro = () => {
           Bolsa de Trabajo <br /> y Pasantías
         </h4>
         <p className="text-sm font-light">
-          Descubre oportunidades emocionantes para dar el siguiente paso en tu
-          carrera. Desde puestos de trabajo hasta experiencias de pasantías,
-          conectamos talento con las mejores oportunidades del sector
+          Accede a nuestra bolsa de trabajo exclusiva y a nuestros convenios
+          para obtener tus primeras experiencias laborales en gimnasios, centros
+          deportivos y personas en búsqueda de profesionales certificados.
+          Conéctate con las mejores oportunidades del sector y da un paso
+          adelante en tu carrera.
         </p>
         <Button className="w-48 mx-auto rounded-3xl mb-0 mt-4" size="sm">
-          ¡UNITE!
+          Conoce las ofertas
         </Button>
       </div>
 
@@ -48,12 +50,13 @@ const ComunidadIntro = () => {
           Mundo de Conocimiento <br /> con nuestro Hub
         </h4>
         <p className="text-sm font-light">
-          Encontrá blogs, notas de interés y contenido exclusivo que te
-          mantendrán a la vanguardia de las últimas tendencias y desarrollo en
-          el ámbito del SportFitness
+          Únete a nuestro Hub y accede a contenido gratuito de alto valor para
+          impulsar tus habilidades. Encontrarás masterclasses, webinars,
+          podcasts, ebooks y más. ¡Descubre todos nuestros recursos gratuitos
+          para potenciar tu camino labora
         </p>
         <Button className="w-48 mx-auto rounded-3xl mb-0 mt-4" size="sm">
-          ¡UNITE!
+          Descubre el Hub
         </Button>
       </div>
 
@@ -72,12 +75,13 @@ const ComunidadIntro = () => {
 
         <h4 className="font-bold text-xl mt-12 mb-4">¡Conectate!</h4>
         <p className="text-sm font-light">
-          Establecé conexiones significativas con expertos, líderes, mentores y
-          profesionales de la Industria. Participá en webinars emocionantes que
-          te brindarán insights valiosos y perspectivas inspiradoras.
+          Amplía tu red de contactos con un espacio exclusivo de networking para
+          conocer expertos, escuchar a líderes de la industria y estar en
+          contacto con toda la comunidad. Encuentra mentores, proveedores y
+          colegas que te acompañen a cumplir tus objetivos.
         </p>
         <Button className="w-48 mx-auto rounded-3xl mb-0 mt-4" size="sm">
-          ¡UNITE!
+          Únete a la comunidad
         </Button>
       </div>
     </section>

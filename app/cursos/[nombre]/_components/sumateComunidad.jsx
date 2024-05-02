@@ -10,7 +10,7 @@ const SumateComunidad = () => {
         <TituloSeccion
           className={"text-4xl lg:text-left lg:text-5xl lg:whitespace-nowrap"}
         >
-          ¡Sumate a la <br className="max-lg:hidden" /> Comunidad{" "}
+          ¡Únete a la <br className="max-lg:hidden" /> Comunidad{" "}
           <span className="text-idaclass4">Class</span>
           <span className="text-idaclass3">era!</span>
         </TituloSeccion>
@@ -23,7 +23,7 @@ const SumateComunidad = () => {
       </div>
       <div className="lg:w-1/3 space-y-8">
         <h3 className="font-bold text-lg lg:text-2xl text-balance">
-          “Conectado para transformar el ecosistema Sport Fitness”
+          “Conectados para transformar el mundo del Sport Fitness”
         </h3>
         <p className=" text-balance">
           La comunidad classera es un espacio diseñado para impulsar todo el
