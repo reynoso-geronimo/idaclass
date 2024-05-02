@@ -27,8 +27,8 @@ const CursosOnDemand = () => {
     <section>
       <TituloSeccion>Cursos especializados</TituloSeccion>
       <h2 className="text-center text-xl px-2 mb-4">
-        100% on Demand, lleva tu carrera a otro nivel, elegi tu area de
-        especializacion
+        Domina las habilidades específicas que necesitas para destacar, con
+        nuestros programas de especialización.
       </h2>
       {width >= 1204 ? (
         <ImagesSlider
@@ -79,13 +79,12 @@ const CursosOnDemand = () => {
             }}
             className="z-50 flex flex-col justify-center items-center"
           ></motion.div>
-           <Link
-              href={"/cursos"}
-              className="flex items-center justify-center bg-idaclass4 py-0.5 w-[70vw] mx-8 h-[40px] rounded-xl font-bold text-xs  text-white absolute bottom-6 z-10"
-            >
-              <ArrowRight className="mr-2" /> ELEGÍ TU CURSO
-            </Link>
-        
+          <Link
+            href={"/cursos"}
+            className="flex items-center justify-center bg-idaclass4 py-0.5 w-[70vw] mx-8 h-[40px] rounded-xl font-bold text-xs  text-white absolute bottom-6 z-10"
+          >
+            <ArrowRight className="mr-2" /> ELEGÍ TU CURSO
+          </Link>
         </ImagesSliderMobile>
       )}
     </section>

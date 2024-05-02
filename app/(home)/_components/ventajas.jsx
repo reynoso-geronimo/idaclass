@@ -140,7 +140,7 @@ const Ventajas = () => {
 
             </h3>
             <p className="text-pretty lg:text-lg ">
-            Somos reconocidos como líderes regionales en la industria hacer más de 25 años. Nuestra formación te respaldará con el prestigio de IdaClass y podrás obtener la certificación de mayor reconocimiento y aval internacional.
+            Somos reconocidos como líderes regionales en la industria hace más de 25 años. Nuestra formación te respaldará con el prestigio de IdaClass y podrás obtener la certificación de mayor reconocimiento y aval internacional.
 
             </p>
             {/* <ul className="flex flex-col py-2 text-sm sm:text-base">

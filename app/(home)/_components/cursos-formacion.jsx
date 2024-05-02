@@ -5,16 +5,16 @@ import { getCursosFormacionFromDB } from "@/app/actions";
 
 const CursosFormacion = async () => {
   const cursosFormacion = await getCursosFormacionFromDB();
-  
 
   const OPTIONS = { align: "start" };
   return (
     <section className="my-12 sm:container">
-      <TituloSeccion className={`mb-0 px-2`} id="Cursos">Cursos de formación</TituloSeccion>
-      <h2 className="text-center text-xl px-2 mb-4">
-        Sé parte de la nueva generación de entrenadores
-        <br />
-        Forja tu camino en el mundo del Sport fitness
+      <TituloSeccion className={`mb-0 px-2`} id="Cursos">
+        Cursos de formación
+      </TituloSeccion>
+      <h2 className="text-center text-xl px-2 mb-4 text-balance">
+        Alcanza tus sueños en el mundo del sport fitness, con nuestras
+        formaciones profesionales.
       </h2>
       <div className="max-w-2xl mx-auto  lg:max-w-full">
         <EmblaCarousel

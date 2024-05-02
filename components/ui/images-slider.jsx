@@ -69,7 +69,7 @@ export const ImagesSlider = ({
     if (autoplay) {
       interval = setInterval(() => {
         handleNext();
-      }, 5000);
+      }, 10000);
     }
 
     return () => {
@@ -195,9 +195,12 @@ export const ImagesSlider = ({
             />
 
             <h3 className="inline text-5xl font-extrabold text-left my-4">
-              {currentIndex === 0 ? "CURSOS" : "Especializate"} <br />
+              {currentIndex === 0 ? "CURSOS" : "Conviértete en especialista"}{" "}
+              <br />
               <span className="text-idaclass4">
-                {currentIndex === 0 ? "On Demand" : "con Nosotros"}
+                {currentIndex === 0
+                  ? "On Demand"
+                  : "y lleva tu carrera a otro nivel"}
               </span>
             </h3>
           </div>
@@ -206,14 +209,7 @@ export const ImagesSlider = ({
               </h3> */}
           {currentIndex === 0 ? (
             <div className="space-y-2 font-semibold text-lg">
-              <p>
-                <Check
-                  className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
-                  strokeWidth={2.5}
-                  size={22}
-                />
-                Aprende a tu ritmo
-              </p>
+             
               <p>
                 <Check
                   className="rounded-full bg-idaclass text-black p-0.5 inline mr-2"
@@ -241,10 +237,7 @@ export const ImagesSlider = ({
             </div>
           ) : (
             <div className="space-y-2 font-semibold">
-              <p className="text-lg">
-                Dominá las habilidades que <br /> necesitás para destacar en tu{" "}
-                <br /> campo con nuestros programas <br /> de especialización.
-              </p>
+              <p className="text-lg">100% online, aprende a tu ritmo.</p>
             </div>
           )}
           <div className="mt-5 relative">
