@@ -1,5 +1,6 @@
 import sequelize from "../lib/sequelize";
 import { DataTypes } from "sequelize";
+import Curso from "./Curso";
 
 const Blog = sequelize.define("blogs", {
     id: {
@@ -37,7 +38,11 @@ const Blog = sequelize.define("blogs", {
     createdAt: "created_at",
     updatedAt: "updated_at",
     freezeTableName: true
-}
-
-)
+})
+Blog.belongsToMany(Curso, {
+    through: 'blogs_categoria_links',
+    foreignKey: 'blog_id',
+    otherKey: 'curso_id',
+    timestamps: false
+})
 export default Blog;
