@@ -6,11 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
+const CursoAsociado = async ({ curso }) => {
   
- const curso = await getCursoFromDB(cursoAsociado)
-  if (!curso) {
-    return null;
+   if (!curso) {
+     return null;
   }
 
   return (
@@ -42,7 +41,6 @@ const CursoAsociado = async ({ cursoAsociado = "Nutricion Deportiva" }) => {
             className="font-bold rounded-2xl w-full lg:translate-y-6"
             asChild
           >
-        
             <Link href={`/cursos/${curso && curso.nombre}`}>
               Mas Informacion
             </Link>

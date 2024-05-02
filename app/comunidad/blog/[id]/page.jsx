@@ -9,11 +9,25 @@ import Link from "next/link";
 import Sidebar from "./_components/sidebar";
 import { getBlogPostFromDb } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
+import Curso from "@/models/Curso";
+import Categoria from "@/models/Categoria";
 
 const page = async ({ params }) => {
-  //!! reever esto
+  //!! reever esto y optimizar codigo
   const posts = await getBlogPostFromDb(3, params.id);
-  const post = await Blog.findByPk(params.id);
+  const post = await Blog.findOne({
+    where: { id: params.id },
+    include: [
+      {
+        model: Curso,
+        as: 'cursos',
+      },
+      {
+        model: Categoria,
+        as: 'categorias',
+      },
+    ],
+  });
   const contenido = JSON.parse(post.cuerpo);
 
   return (
@@ -29,8 +43,10 @@ const page = async ({ params }) => {
         </div>
         <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
           <div className="flex">
-            <Badge className={"bg-orange-500 font-normal z-10 hover:bg-orange-500"}>
-              {post.tag ? post.tag : "TAG"}
+            <Badge
+              className={"bg-orange-500 font-normal z-10 hover:bg-orange-500"}
+            >
+               {post.categorias[0].nombre || " "} 
             </Badge>
             <Badge
               variant={"outline"}
@@ -108,7 +124,7 @@ const page = async ({ params }) => {
         <div className="w-full ">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">
             <p className="font-bold text-orange-500">
-              {post.tag ? post.tag : "TAG"}
+               {post.categorias[0].nombre }
             </p>
             <p className="lg:pl-1">{post.titulo}</p>
           </div>
@@ -122,7 +138,7 @@ const page = async ({ params }) => {
           <p className="text-base">{post.introduccion} </p>
 
           <CursoAsociado
-            curso={post.cursoAsociado ? post.cursoAsociado : null}
+           curso={post.cursos[0] ? post.cursos[0] : null}
           />
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
