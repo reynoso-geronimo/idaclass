@@ -75,7 +75,7 @@ const partners = [
   },
 ];
 
-const words = `Nuestros Partners en educacion`;
+const words = `Nuestros partners en educación`;
 
 const PartnersEducativos = () => {
   return (

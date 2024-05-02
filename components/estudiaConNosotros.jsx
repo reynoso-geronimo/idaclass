@@ -25,12 +25,12 @@ const EstudiaConNosotros = ({ sideBar = false }) => {
         </h3>
         <p
           className={`font-bold text-lg tracking-tighter z-10 ${
-            !sideBar ? "text-left mb-12" : "text-center my-4 "
+            !sideBar ? "text-left" : "text-center my-4 "
           }`}
         >
-          ¡Aprendé con nosotros!
+          Aprende con nosotros
         </p>
-
+          <p className=" mb-12">Descubre todas nuestras propuestas educativas</p>
         <div className="space-y-4 z-10 flex flex-col">
           <Button variant="default" asChild className="rounded-2xl">
             <Link href="/#Cursos">CURSOS DE FORMACIÓN</Link>
@@ -40,7 +40,7 @@ const EstudiaConNosotros = ({ sideBar = false }) => {
             asChild
             className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl"
           >
-            <Link href="/cursos">CURSOS DE DEMAND</Link>
+            <Link href="/cursos">Cursos especializados</Link>
           </Button>
           <Button
             variant="outline"

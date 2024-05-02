@@ -13,34 +13,49 @@ const EnsenaConNosotros = ({ sideBar = false }) => {
     >
       <div
         className={`z-10 flex flex-col h-full ${
-          !sideBar ? "lg:w-64 max-lg:justify-end":" justify-end "
+          !sideBar ? "lg:w-64 max-lg:justify-end" : " justify-end "
         }`}
       >
-        <h3 className={`text-left text-2xl relative z-10 font-extrabold w-[16rem] ${!sideBar&&"mt-10"}`}>
-          Se parte <br />
-          de Ida<span className="text-idaclass4">Class</span>
+        <h3
+          className={`text-left text-2xl relative z-10 font-extrabold w-[16rem] ${
+            !sideBar && "mt-10"
+          }`}
+        >
+          Sé parte de nuestro equipo
         </h3>
-        <ul className={`list-inside list-disc z-10 text-sm space-y-1 ${sideBar?"my-8":"mt-8"}`}>
+        <ul
+          className={`list-inside list-disc z-10 text-base space-y-1 ${
+            sideBar ? "my-8" : "mt-8"
+          }`}
+        >
           <li>Trabaja con nosotros</li>
-          <li>Se uno de nuestros docentes</li>
-          <li>Convertite en Sede</li>
+          <li>Únete como docente</li>
+          <li>Conviértete en sede</li>
         </ul>
 
-        <Button variant="default" asChild className={`rounded-2xl z-10 ${!sideBar?"mt-8 lg:mt-auto":""}`}>
-          <Link href="https://www.linkedin.com/company/idaclass/">CONTACTANOS</Link>
+        <Button
+          variant="default"
+          asChild
+          className={`rounded-2xl z-10 ${!sideBar ? "mt-8 lg:mt-auto" : ""}`}
+        >
+          <Link href="https://www.linkedin.com/company/idaclass/">
+          Envíanos un mensaje
+          </Link>
         </Button>
       </div>
       <Image
         src={`/assets/ensenaConNosotros.png`}
         alt="asistencia"
         fill
-        className={`object-cover rounded-3xl object-top ${!sideBar&&"lg:hidden"}`}
+        className={`object-cover rounded-3xl object-top ${
+          !sideBar && "lg:hidden"
+        }`}
       />
       <Image
         src={`/assets/ensenaConNosotrosWeb.png`}
         alt="asistencia"
         fill
-        className={`object-cover object-top hidden ${!sideBar&&"lg:block"}`}
+        className={`object-cover object-top hidden ${!sideBar && "lg:block"}`}
       />
     </article>
   );

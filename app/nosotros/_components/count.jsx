@@ -7,8 +7,8 @@ const Count = () => {
   return (
     <section className="mb-12 container">
       <TituloSeccion className={"text-pretty"}>
-        Somos la llave para transformar tu pasión por el fitness en una carrera
-        exitosa.
+        Somos la llave para que transformes tu pasión por el fitness en una
+        carrera exitosa
       </TituloSeccion>
       <div className="grid grid-cols-2 gap-16 px-10 mt-8 justify-items-center text-center text-idaclass font-semibold md:flex md:justify-center ">
         <div className="flex flex-col items-center justify-between w-40">
@@ -18,20 +18,20 @@ const Count = () => {
             height={72}
             alt="experiencia"
           />
-          <span >
+          <span>
             <CountUp
               end={25}
               duration={3.75}
               enableScrollSpy={true}
               scrollSpyOnce={true}
               suffix=" "
-              className="text-2xl"
+              className=""
             />
           </span>
           <p className="leading-4">Años de</p>
           <p className="leading-4">experiencia</p>
         </div>
-        <div className="flex flex-col items-center justify-between w-40">
+        <div className="flex flex-col items-center justify-evenly w-40">
           <Image
             src={"/assets/50milcertificados.webp"}
             width={72}
@@ -46,12 +46,12 @@ const Count = () => {
               enableScrollSpy={true}
               scrollSpyOnce={true}
               prefix="+"
-              className="text-2xl pb-20"
+              className=" pb-20"
             />
           </span>
           certificados
         </div>
-        <div className="flex flex-col items-center justify-between w-40 leading-5">
+        <div className="flex flex-col items-center justify-envenly w-40 leading-5">
           <Image
             src={"/assets/estandarformacion.webp"}
             width={72}
@@ -60,7 +60,7 @@ const Count = () => {
           />
           1ra Digital School con estandar de formación
         </div>
-        <div className="flex flex-col items-center justify-between w-40">
+        <div className="flex flex-col items-center justify-envenly w-40">
           <Image
             src={"/assets/empleabilidad.webp"}
             width={72}
@@ -74,7 +74,7 @@ const Count = () => {
               enableScrollSpy={true}
               scrollSpyOnce={true}
               suffix="%"
-              className="text-2xl pb-20"
+              className=" pb-20"
             />
           </span>
           <span>de empleabilidad</span>

@@ -11,9 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TituloSeccion from "./titulo-seccion";
 
-export const HeroParallax = ({
-  products,
-}) => {
+export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
@@ -100,10 +98,12 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 z-10">
       <h1 className="text-5xl md:text-7xl font-bold dark:text-white ">
-        Conoce Nuestra  <span className="text-idaclass">ED</span><span className="text-idaclass4">Tech</span>
+        Conoce <span className="text-idaclass">Ida</span>
+        <span className="text-idaclass4">Class</span>
       </h1>
-      <TituloSeccion className="text-left text-black">
-      Se parte de la revolución educativa Sport Fitness
+      <TituloSeccion className="text-left text-black ">
+        Únete a nuestra EdTech y sé parte de la <br /> revolución educativa
+        Sport Fitness.
       </TituloSeccion>
     </div>
   );
@@ -125,13 +125,13 @@ export const ProductCard = ({ product, translate }) => {
         href={product.link}
         className="block group-hover/product:shadow-2xl "
       > */}
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-contain object-center-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
+      <Image
+        src={product.thumbnail}
+        height="600"
+        width="600"
+        className="object-contain object-center-top absolute h-full w-full inset-0"
+        alt={product.title}
+      />
       {/* </Link> */}
       {/* <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div> */}
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
