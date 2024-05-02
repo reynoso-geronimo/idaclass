@@ -64,7 +64,7 @@ const NavbarWebMenu = ({
             />
           </MenubarTrigger>
           <MenubarContent
-            onCloseAutoFocus={false}
+            onCloseAutoFocus={e => e.preventDefault()}
             align="left"
             className="px-6 pb-4 border-none rounded-b-xl flex  mt-[11px] bg-black text-idaclass3 divide-x-[1px] divide-gray-500 gap-6"
           >
