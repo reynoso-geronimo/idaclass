@@ -97,8 +97,8 @@ const Page = () => {
       <section className="container bg-gradient-to-b from-[#1FB3E5] to-[#0088CA] flex flex-col gap-6 lg:gap-12 items-center justify-center lg:flex-row  text-white min-h-[264px]">
         <h1 className="font-bold text-6xl lg:text-8xl w-full lg:w-[45%] text-center lg:text-right">
           IdaClass
-        </h1>{" "}
-        <p className="text-2xl pb-6 font-bold w-full lg:w-[55%]">
+        </h1>
+        <p className="text-2xl max-lg:pb-6 font-bold w-full lg:w-[55%] lg:translate-y-1.5">
           Transformamos la educación en una puerta abierta hacia un futuro de
           posibilidades y bienestar.
         </p>
