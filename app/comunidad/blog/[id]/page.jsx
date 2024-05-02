@@ -11,6 +11,7 @@ import { getBlogPostFromDb } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
 import Curso from "@/models/Curso";
 import Categoria from "@/models/Categoria";
+import Contenido from "./_components/contenido";
 
 const page = async ({ params }) => {
   //!! reever esto y optimizar codigo
@@ -20,11 +21,11 @@ const page = async ({ params }) => {
     include: [
       {
         model: Curso,
-        as: 'cursos',
+        as: "cursos",
       },
       {
         model: Categoria,
-        as: 'categorias',
+        as: "categorias",
       },
     ],
   });
@@ -46,7 +47,7 @@ const page = async ({ params }) => {
             <Badge
               className={"bg-orange-500 font-normal z-10 hover:bg-orange-500"}
             >
-               {post.categorias[0].nombre || " "} 
+              {post.categorias[0].nombre || " "}
             </Badge>
             <Badge
               variant={"outline"}
@@ -124,22 +125,18 @@ const page = async ({ params }) => {
         <div className="w-full ">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">
             <p className="font-bold text-orange-500">
-               {post.categorias[0].nombre }
+              {post.categorias[0].nombre}
             </p>
             <p className="lg:pl-1">{post.titulo}</p>
           </div>
 
-          <h2 className="font-bold lg:text-2xl my-8 p-4 text-idaclass5 bg-gray-100 rounded-2xl flex justify-between items-center">
-            Contenido del artículo <ChevronDown size={24} strokeWidth={3} />
-          </h2>
+          <Contenido/>
           <h3 className="font-bold text-2xl my-4 text-idaclass">
             Introduccion
           </h3>
           <p className="text-base">{post.introduccion} </p>
 
-          <CursoAsociado
-           curso={post.cursos[0] ? post.cursos[0] : null}
-          />
+          <CursoAsociado curso={post.cursos[0] ? post.cursos[0] : null} />
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>

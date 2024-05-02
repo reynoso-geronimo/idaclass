@@ -18,9 +18,9 @@ const CursoAsociado = async ({ curso }) => {
         Capacitación Recomendada
       </h3>
       <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-end max-lg:pb-6 lg:justify-center container mb-6">
-        <h1 className="font-extrabold text-3xl my-5">
+        <h2 className="font-extrabold text-3xl my-5">
           {curso ? curso.nombre : "NOMBRE"}
-        </h1>
+        </h2>
         <p className="mb-5 lg:max-w-lg">
           {curso ? curso.descripcion : "lorem"}
         </p>
