@@ -27,8 +27,8 @@ const CertificacionCursosEspciealizacion = () => {
           {" "}
           VER CERTIFICADO
         </DialogTrigger>
-        <DialogContent>
-          <DialogDescription>CERTIFCIADO</DialogDescription>
+        <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
+          <DialogDescription><Image src={`/cursosEspecializacion/cursos/certificados/certificado idaclass on demand modelo 1.svg`} alt="certificado" fill className="py-6"/></DialogDescription>
         </DialogContent>
       </Dialog>
     </div>

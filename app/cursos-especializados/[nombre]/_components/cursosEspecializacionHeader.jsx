@@ -17,9 +17,7 @@ const CursosEspciealizacionHeader = ({
           {nombre}
         </h1>
         <p className="lg:w-1/2">{descripcion}</p>
-        <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic">
-          Modalidad: {modalidades}
-        </p>
+        
         <div className="lg:flex lg:justify-center lg:items-center gap-6 lg:w-1/2">
           <Button size="lg" className="font-bold rounded-2xl w-full lg:w-1/2">
             INSCRIBIRME AHORA
@@ -31,7 +29,7 @@ const CursosEspciealizacionHeader = ({
           />
         </div>
         {profesional && (
-          <div className="w-auto py-2 bg-gray-500 bg-opacity-75 border-gray-400 border  rounded-full lg:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
+          <div className="w-auto py-2 bg-gray-500 bg-opacity-50 backdrop-blur-lg border-gray-400 border  rounded-full lg:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
             <Avatar className="h-14 w-14">
               <AvatarImage
                 src={`/profesional/${`profesional.nombre`}.png`}
