@@ -14,11 +14,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Ventajas from "./_components/ventajas";
 
-const DynamiccursosEspecializacion = dynamic(() => import("./_components/cursos-on-demand"), {
+const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-especializacion"), {
   ssr: false,
   loading: () => (
     <div className="text-white pt-[15%] lg:pt-12 container text-center bg-black h-[400px]">
-      <h3 className="text-idaclass3 text-4xl font-bold">CURSOS ON DEMAND</h3>
+      <h3 className="text-idaclass3 text-4xl font-bold">CURSOS ESPECIALIZADOS</h3>
 
       <ul className="list-inside list-disc my-2">
         <li>Estudia a tu ritmo </li>
@@ -43,7 +43,7 @@ export default function Home() {
       {/* <Banderas/> */}
       <Soluciones />
       <CursosFormacion />
-      <DynamiccursosEspecializacion />
+      <DynamicCursosEspecializacion />
       <Certificacion />
 
       <EquipoProfesional />
