@@ -7,9 +7,21 @@ const Hero = () => {
   return (
     <div className=" py-8 lg:py-12">
       <div className="lg:hidden container px-0">
-        <h2 className="max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
-          <span className="text-idaclass4">Estudia, trabaja y emprende </span>{" "}
-          en el mundo del Sport Fitness.
+        <h2 className="relative max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+          <span className="text-white px-3 h-[45px] xl:h-[65px] overflow-hidden text-center w-fit mx-auto flex flex-col -top-[2px] bg-idaclass4 rounded-3xl">
+            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+              Estudia
+            </span>
+            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+              Trabaja
+            </span>
+            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+              Emprende
+            </span>
+          </span>
+          <span className=" ">
+            en el mundo del  Sport Fitness.
+          </span>
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
           Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
@@ -57,7 +69,9 @@ const Hero = () => {
                 Emprende
               </span>
             </span>
-            <span className="ml-[270px] xl:ml-[320px]">en <br /> el mundo del <br /> Sport Fitness.</span>
+            <span className="ml-[270px] xl:ml-[320px]">
+              en <br /> el mundo del <br /> Sport Fitness.
+            </span>
           </h2>
           <h2 className="text-xl xl:text-2xl max-w-[768px] mb-4 text-balance">
             Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
