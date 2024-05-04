@@ -25,7 +25,16 @@ export async function getCursos() {
 }
 export async function getCursosFromDB() {
   try {
-    const response = await Curso.findAll({ include: Categoria });
+    const response = await Curso.findAll({include: [
+      {
+        model: Profesional,
+        as: "profesionals",
+      },
+      {
+        model: Categoria,
+        as: "categorias",
+      },
+    ], });
     const data = response.map(curso => curso.toJSON());
 
     return data;
@@ -47,12 +56,16 @@ export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual) {
 
     if (cursos.length < 4) {
       const cursosCategoria1 = await Curso.findAll({
-        include: {
-          model: Categoria,
-          where: {
-            id: 1,
+        include: [
+          {
+            model: Profesional,
+            as: "profesionals",
           },
-        },
+          {
+            model: Categoria,
+            as: "categorias",
+          },
+        ],
         limit: 4 - cursos.length,
       });
 

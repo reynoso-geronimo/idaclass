@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CursoOnDemandCard = ({ curso }) => {
+  console.log(curso);
   return (
     <Card className={"min-h-[550px] mx-2 relative flex flex-col justify-end text-white rounded-3xl overflow-hidden"}>
       <Image
@@ -28,7 +29,7 @@ const CursoOnDemandCard = ({ curso }) => {
         <CardDescription className="text-white ">{curso.descripcion}</CardDescription>
         <Separator />
         <span className="flex gap-2">
-          <GraduationCap /> <span className="font-bold">Docente:</span> Diego Maradona
+          <GraduationCap /> <span className="font-bold">Docente:</span> {curso.profesionals?.length>0&&curso.profesionals[0].nombre}
         </span>
         <Separator />
         <span className="flex gap-2">
