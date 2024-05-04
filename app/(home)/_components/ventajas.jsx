@@ -18,7 +18,7 @@ const Ventajas = () => {
   return (
     <>
       <TituloSeccion>¿Por qué elegir IdaClass?</TituloSeccion>
-      <section className="w-full flex flex-col items-center gap-10 lg:gap-y-12 container mb-12">
+      <section className="w-full flex flex-col items-center gap-10 lg:gap-y-0 container mb-12">
         {/* <section className="flex flex-wrap justify-center items-center   w-full p-4 ">
         <h1 className="text-4xl lg:text-5xl font-bold text-center tracking-tight">
           Como es nuestro innovador modelo de capacitacion
@@ -40,7 +40,7 @@ const Ventajas = () => {
               alt="Bienvenido"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              style={{ objectFit: "contain" }}
+              className="object-contain lg:mt-12"
             />
           </div>
           <div className="w-full lg:w-1/2 relative overflow-hidden">
@@ -55,10 +55,10 @@ const Ventajas = () => {
               </svg>
             </div>
 
-            <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight">
+            <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight pb-2">
               La experiencia educativa más avanzada
             </h3>
-            <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
+            <p className="text-pretty lg:text-lg text-center lg:text-left">
               Con el sistema Learning by Doing, nos aseguramos que aprendas con
               rapidez y efectividad los fundamentos teóricos sin aburrirte,
               ¡aprenderás como si vieras Netflix!
@@ -135,7 +135,7 @@ const Ventajas = () => {
             </div>
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
-            <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight">
+            <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight pb-2">
             Programa educativo de prestigio
 
             </h3>
