@@ -3,16 +3,16 @@ import { Separator } from "@/components/ui/separator";
 import CasosExito from "@/components/casos-exito";
 import Link from "next/link";
 import Beca from "@/components/becaAsesorate";
-import CursoOnDemandHeader from "./_components/cursoOnDemandHeader";
-import CursoOnDemandAcerca from "./_components/cursoOnDemand";
-import CursoOnDemandObjetivos from "./_components/cursoOnDemandObjetivos";
-import CursoOnDemandContenidoCurso from "./_components/cursoOnDemandContendidoCurso";
-import CursoOnDemandRequisitos from "./_components/cursoOnDemandRequisitos";
-import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
-import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
+import CursosEspciealizacionHeader from "./_components/cursosEspecializacionHeader";
+import CursosEspciealizacionAcerca from "./_components/cursosEspecializacionAcerca";
+import CursosEspciealizacionObjetivos from "./_components/cursosEspecializacionObjetivos";
+import CursosEspciealizacionContenidoCurso from "./_components/cursosEspecializacionContendidoCurso";
+import CursosEspciealizacionRequisitos from "./_components/cursosEspecializacionRequisitos";
+import CursosEspciealizacionModalidades from "./_components/cursosEspecializacionModalidades";
+import CursosEspciealizacionOtrosCursos from "./_components/cursosEspecializacionOtrosCursos";
 import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
-import { profesionales } from "@/lib/constants";
+
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre);
@@ -40,7 +40,7 @@ const CursoPage = async ({ params }) => {
   
   return (
     <main className="flex flex-col">
-      <CursoOnDemandHeader
+      <CursosEspciealizacionHeader
         nombre={nombre}
         descripcion={descripcion}
         imagen={imagen}
@@ -49,18 +49,18 @@ const CursoPage = async ({ params }) => {
         profesional={curso.profesionals[0]}
       />
 
-      <CursoOnDemandAcerca acerca={acerca} />
+      <CursosEspciealizacionAcerca acerca={acerca} />
       <Separator className="my-6" />
-      <CursoOnDemandObjetivos />
+      <CursosEspciealizacionObjetivos />
 
       <Separator className="my-6" />
-      <CursoOnDemandContenidoCurso modulos={modulos} />
+      <CursosEspciealizacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
 
-      <CursoOnDemandRequisitos />
+      <CursosEspciealizacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoOnDemandModalidades />
+      <CursosEspciealizacionModalidades />
 
       <Beca />
       <Separator className="my-6" />
@@ -77,7 +77,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />
-      <CursoOnDemandOtrosCursos cursos={cursos} />
+      <CursosEspciealizacionOtrosCursos cursos={cursos} />
       <SumateComunidad />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">

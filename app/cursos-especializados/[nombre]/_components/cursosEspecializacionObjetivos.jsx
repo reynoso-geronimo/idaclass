@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import bgWeb from "../../../../public/cursosOnDemand/cursos/objetivosBgWeb.png";
-import bgMobile from "../../../../public/cursosOnDemand/cursos/objetivosBgMobile.png";
-import CertificacionCursoOnDemand from "./certificacionCursoOnDemand";
-const CursoOnDemandObjetivos = () => {
+import bgWeb from "../../../../public/cursosEspecializacion/cursos/objetivosBgWeb.png";
+import bgMobile from "../../../../public/cursosEspecializacion/cursos/objetivosBgMobile.png";
+import CertificacionCursosEspciealizacion from "./certificacionCursosEspecializacion";
+const CursosEspciealizacionObjetivos = () => {
   return (
     <section className="">
       <div className="container flex flex-col lg:flex-row lg:pt-8 relative">
@@ -21,7 +21,7 @@ const CursoOnDemandObjetivos = () => {
           alt="background"
         />
         <Image
-          src={"/cursosOnDemand/cursos/objetivos.png"}
+          src={"/cursosEspecializacion/cursos/objetivos.png"}
           height={5000}
           width={5000}
           alt=""
@@ -56,7 +56,7 @@ const CursoOnDemandObjetivos = () => {
               "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo."
             }
           />
-          <CertificacionCursoOnDemand />
+          <CertificacionCursosEspciealizacion />
         </article>
       </div>
     </section>
@@ -82,4 +82,4 @@ export const Objetivo = ({ titulo = "OBJETIVO", texto }) => {
   );
 };
 
-export default CursoOnDemandObjetivos;
+export default CursosEspciealizacionObjetivos;

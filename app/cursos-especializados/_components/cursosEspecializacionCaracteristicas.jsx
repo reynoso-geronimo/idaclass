@@ -4,56 +4,56 @@ import Image from "next/image";
 
 const caracteristicas = [
   {
-    img: "/cursosOnDemand/Modulos.svg",
+    img: "/cursosEspecializacion/Modulos.svg",
     titulo: "Módulos de Aprendizaje",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Instructivos.svg",
+    img: "/cursosEspecializacion/Instructivos.svg",
     titulo: "Videos Instructivos",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Material.svg",
+    img: "/cursosEspecializacion/Material.svg",
     titulo: "Material de Lectura",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Actividades.svg",
+    img: "/cursosEspecializacion/Actividades.svg",
     titulo: "Actividades Prácticas",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Evaluaciones.svg",
+    img: "/cursosEspecializacion/Evaluaciones.svg",
     titulo: "Evaluaciónes y Exámenes",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Recursos.svg",
+    img: "/cursosEspecializacion/Recursos.svg",
     titulo: "Recursos Adicionales",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Acceso.svg",
+    img: "/cursosEspecializacion/Acceso.svg",
     titulo: "Acceso Ilimitado",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
   {
-    img: "/cursosOnDemand/Certificacion.svg",
+    img: "/cursosEspecializacion/Certificacion.svg",
     titulo: "Certificación",
     texto:
       " Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
   },
 ];
 const OPTIONS = { align: "center" };
-const CursosOnDemandCaracteristicas = () => {
+const CursosEspecializacionCaracteristicas = () => {
   return (
     <section className="container mb-8">
       <div className="lg:hidden">
@@ -78,7 +78,7 @@ const CursosOnDemandCaracteristicas = () => {
 };
 
 export const Caracteristica = ({
-  img = "/cursosOnDemand/Modulos.svg",
+  img = "/cursosEspecializacion/Modulos.svg",
   titulo = "Titulo",
   texto = "Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
 }) => (
@@ -89,4 +89,4 @@ export const Caracteristica = ({
   </article>
 );
 
-export default CursosOnDemandCaracteristicas;
+export default CursosEspecializacionCaracteristicas;

@@ -8,7 +8,7 @@ import { Dot } from "lucide-react";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import SkillClass from "@/components/skillClass";
 
-const CursoOnDemandContenidoCurso = ({ modulos=null }) => {
+const CursosEspciealizacionContenidoCurso = ({ modulos=null }) => {
   const contenido = JSON.parse(modulos)
   
  
@@ -46,4 +46,4 @@ const CursoOnDemandContenidoCurso = ({ modulos=null }) => {
   );
 };
 
-export default CursoOnDemandContenidoCurso;
+export default CursosEspciealizacionContenidoCurso;

@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import CursosOnDemandCategoria from "./cursosOnDemandCategoria";
+import CursosEspecializacionCategoria from "./cursosEspecializacionCategoria";
 import { useState } from "react";
 
-const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
+const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
   const [activo, setActivo] = useState();
 
   // ordenar categoriasOnDemand por cantidad (descendiente)
@@ -37,7 +37,7 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
           const cursosFiltrados = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === categoria));
 
           return (
-            <CursosOnDemandCategoria
+            <CursosEspecializacionCategoria
               key={categoria}
               categoria={categoria}
               index={index}
@@ -51,4 +51,4 @@ const CursosOnDemandCategorias = ({ categoriasOnDemand, cursos }) => {
   );
 };
 
-export default CursosOnDemandCategorias;
+export default CursosEspecializacionCategorias;

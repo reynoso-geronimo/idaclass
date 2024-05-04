@@ -9,7 +9,7 @@ import React from "react";
 
 const OPTIONS = { align: "center" };
 
-const CursoOnDemandOtrosCursos = ({ cursos }) => {
+const CursosEspciealizacionOtrosCursos = ({ cursos }) => {
   return (
     <section className="container mb-6 ">
       <div className="flex items-center justify-between">
@@ -48,7 +48,7 @@ const CursoCard = ({ curso }) => (
     </Badge>
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
-      src={`/cursosOnDemand/cursos/headers/${curso.nombre}Mobile.png`}
+      src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
       alt=""
       fill
       className="object-cover -z-10"
@@ -61,4 +61,4 @@ const CursoCard = ({ curso }) => (
   </article>
 );
 
-export default CursoOnDemandOtrosCursos;
+export default CursosEspciealizacionOtrosCursos;

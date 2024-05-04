@@ -8,11 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CursoOnDemandCard from "./curso-on-demand-card";
+import CursoEspecializacionCard from "./cursoEspecializacionCard";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
+const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo }) => {
   const countCursos = cursos.length;
   //console.log(countCursos);
   let basis = "1/4";
@@ -47,7 +47,7 @@ const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
         <CarouselContent className="-ml-1">
           {cursos.map((curso, index) => (
             <CarouselItem key={index} className={`pl-1 md:basis-1/2 ${basis}`}>
-              <CursoOnDemandCard curso={curso} />
+              <CursoEspecializacionCard curso={curso} />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -58,4 +58,4 @@ const CursosOnDemandCategoria = ({ categoria, cursos, index, setActivo }) => {
   );
 };
 
-export default CursosOnDemandCategoria;
+export default CursosEspecializacionCategoria;

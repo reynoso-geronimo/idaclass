@@ -1,9 +1,8 @@
-import CursosOnDemandHeader from "./_components/cursosOnDemandHeader";
-import CursosOnDemandCaracteristicas from "./_components/cursosOnDemandCaracteristicas";
-import CursosOnDemandAcerca from "./_components/cursosOnDemandAcerca";
-import { categoriasOnDemand } from "@/lib/constants";
+import CursosEspecializacionHeader from "./_components/cursosEspecializacionHeader";
+import CursosEspecializacionCaracteristicas from "./_components/cursosEspecializacionCaracteristicas";
+import CursosEspecializacionAcerca from "./_components/cursosEspecializacionAcerca";
 import { getCursosFromDB } from "../actions";
-import CursosOnDemandCategorias from "./_components/cursosOnDemandCategorias";
+import CursosEspecializacionCategorias from "./_components/cursosEspecializacionCategorias";
 
 
 const Page = async () => {
@@ -20,10 +19,10 @@ const Page = async () => {
 
   return (
     <main>
-      <CursosOnDemandHeader />
-      <CursosOnDemandCaracteristicas />
-      <CursosOnDemandAcerca />
-      <CursosOnDemandCategorias categoriasOnDemand={CategoriasEspecializacion}  cursos={cursos}/>
+      <CursosEspecializacionHeader />
+      <CursosEspecializacionCaracteristicas />
+      <CursosEspecializacionAcerca />
+      <CursosEspecializacionCategorias categoriasOnDemand={CategoriasEspecializacion}  cursos={cursos}/>
       
 
       {/* //!! Codigo Viejo quizas se pueda usar */}

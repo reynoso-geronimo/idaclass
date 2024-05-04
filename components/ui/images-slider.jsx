@@ -187,7 +187,7 @@ export const ImagesSlider = ({
 
           <div className="relative">
             <img
-              src="/home/CursosOnDemand/flechitas.svg"
+              src="/home/cursosEspecializacion/flechitas.svg"
               width={90}
               height={120}
               alt="Cursos On Demand"
@@ -248,7 +248,7 @@ export const ImagesSlider = ({
               <ArrowRight className="mr-2" /> ELEGÍ TU CURSO
             </Link>
             <img
-              src="/home/CursosOnDemand/linearecta.png"
+              src="/home/cursosEspecializacion/linearecta.png"
               width={400}
               height={100}
               alt="Cursos On Demand"

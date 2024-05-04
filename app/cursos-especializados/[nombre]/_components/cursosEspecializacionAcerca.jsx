@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import React from "react";
 
-const CursoOnDemandAcerca = ({ acerca = "" }) => {
+const CursosEspciealizacionAcerca = ({ acerca = "" }) => {
   return (
     <div className="container pt-12 flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-[41%] flex flex-col items-center lg:items-start">
@@ -22,7 +22,7 @@ const CursoOnDemandAcerca = ({ acerca = "" }) => {
       <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">
         <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50 lg:w-1/3">
           <Image
-            src="/cursosOnDemand/cursos/CursoAsincronico.svg"
+            src="/cursosEspecializacion/cursos/CursoAsincronico.svg"
             alt=""
             height={70}
             width={70}
@@ -35,7 +35,7 @@ const CursoOnDemandAcerca = ({ acerca = "" }) => {
         </div>
         <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50 lg:w-1/3">
           <Image
-            src="/cursosOnDemand/cursos/MaterialDisponible.svg"
+            src="/cursosEspecializacion/cursos/MaterialDisponible.svg"
             alt=""
             height={70}
             width={70}
@@ -50,7 +50,7 @@ const CursoOnDemandAcerca = ({ acerca = "" }) => {
         </div>
         <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50 lg:w-1/3">
           <Image
-            src="/cursosOnDemand/cursos/MultiPlataforma.svg"
+            src="/cursosEspecializacion/cursos/MultiPlataforma.svg"
             alt=""
             height={70}
             width={70}
@@ -66,4 +66,4 @@ const CursoOnDemandAcerca = ({ acerca = "" }) => {
   );
 };
 
-export default CursoOnDemandAcerca;
+export default CursosEspciealizacionAcerca;

@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import headerWeb from "../../../public/cursosOnDemand/HeaderWeb.png";
-import headerMobile from "../../../public/cursosOnDemand/HeaderMobile.png";
-import vectorWeb from "../../../public/cursosOnDemand/VectorWeb.svg";
-import vectorMobile from "../../../public/cursosOnDemand/VectorMobile.svg";
+import headerWeb from "../../../public/cursosEspecializacion/HeaderWeb.png";
+import headerMobile from "../../../public/cursosEspecializacion/HeaderMobile.png";
+import vectorWeb from "../../../public/cursosEspecializacion/VectorWeb.svg";
+import vectorMobile from "../../../public/cursosEspecializacion/VectorMobile.svg";
 
-const CursosOnDemandHeader = () => {
+const CursosEspecializacionHeader = () => {
   return (
     <header className="container w-full py-8 h-[700px] sm:h-[500px] relative text-white flex flex-col justify-end lg:justify-center overflow-hidden">
       <h1 className="text-4xl sm:text-6xl font-bold">
@@ -53,4 +53,4 @@ const CursosOnDemandHeader = () => {
   );
 };
 
-export default CursosOnDemandHeader;
+export default CursosEspecializacionHeader;

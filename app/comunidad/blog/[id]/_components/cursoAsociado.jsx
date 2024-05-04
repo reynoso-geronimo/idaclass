@@ -47,7 +47,7 @@ const CursoAsociado = async ({ curso }) => {
           </Button>
         </div>
         <Image
-          src={`/cursosOnDemand/cursos/headers/${curso.nombre}Mobile.png`}
+          src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
           fill
           priority
           sizes="100vw"
@@ -55,7 +55,7 @@ const CursoAsociado = async ({ curso }) => {
           alt=""
         />
         <Image
-          src={`/cursosOnDemand/cursos/headers/${curso.nombre}Web.png`}
+          src={`/cursosEspecializacion/cursos/headersWeb/${curso.nombre}.png`}
           fill
           priority
           sizes="100vw"

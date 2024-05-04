@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 
-const CertificacionCursoOnDemand = () => {
+const CertificacionCursosEspciealizacion = () => {
   return (
     <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 mt-8 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
       <Image
@@ -35,4 +35,4 @@ const CertificacionCursoOnDemand = () => {
   );
 };
 
-export default CertificacionCursoOnDemand;
+export default CertificacionCursosEspciealizacion;

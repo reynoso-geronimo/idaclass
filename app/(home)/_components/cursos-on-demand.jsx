@@ -7,19 +7,19 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const CursosOnDemand = () => {
+const cursosEspecializacion = () => {
   const images = [
-    "./home/CursosOnDemand/Img1.png",
-    "./home/CursosOnDemand/Img2.png",
+    "./home/cursosEspecializacion/Img1.png",
+    "./home/cursosEspecializacion/Img2.png",
   ];
 
   //!! ESTO ESTA MAL NO SER HARAGAN Y ARREGLAR
 
   const imagesMobile = [
-    "./home/CursosOnDemand/Img1.png",
-    "./home/CursosOnDemand/Img1.png",
-    "./home/CursosOnDemand/Img2.png",
-    "./home/CursosOnDemand/Img2.png",
+    "./home/cursosEspecializacion/Img1.png",
+    "./home/cursosEspecializacion/Img1.png",
+    "./home/cursosEspecializacion/Img2.png",
+    "./home/cursosEspecializacion/Img2.png",
   ];
 
   const width = window.innerWidth;
@@ -90,4 +90,4 @@ const CursosOnDemand = () => {
     </section>
   );
 };
-export default CursosOnDemand;
+export default cursosEspecializacion;

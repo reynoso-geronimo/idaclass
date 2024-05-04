@@ -1,6 +1,6 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
-const CursoOnDemandRequisitos = () => {
+const CursosEspciealizacionRequisitos = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-center gap-4 container">
       <article className="w-full rounded-2xl overflow-hidden border-idaclass4 border-2 ">
@@ -49,4 +49,4 @@ const CursoOnDemandRequisitos = () => {
   );
 };
 
-export default CursoOnDemandRequisitos;
+export default CursosEspciealizacionRequisitos;

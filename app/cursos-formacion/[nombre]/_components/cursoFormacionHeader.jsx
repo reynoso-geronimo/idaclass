@@ -31,7 +31,7 @@ const CursoFormacionHeader = ({
         </div>
       </div>
       <Image
-        src={`/cursosFormacion/cursos/headers/${nombre}Mobile.png`}
+        src={`/cursosFormacion/cursos/headersMobile/${nombre}.png`}
         fill
         priority
         sizes="100vw"
@@ -39,7 +39,7 @@ const CursoFormacionHeader = ({
         alt=""
       />
       <Image
-       src={`/cursosFormacion/cursos/headers/${nombre}Web.png`}
+       src={`/cursosFormacion/cursos/headersWeb/${nombre}.png`}
         fill
         priority
         sizes="100vw"

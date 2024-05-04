@@ -1,9 +1,9 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
-import imgAcerca from "../../../public/cursosOnDemand/Acerca.png";
-import imgAcercaMobile from "../../../public/cursosOnDemand/AcercaMobile.png";
-import AcercaBg from "../../../public/cursosOnDemand/AcercaBg.png";
-const CursosOnDemandAcerca = () => {
+import imgAcerca from "../../../public/cursosEspecializacion/Acerca.png";
+import imgAcercaMobile from "../../../public/cursosEspecializacion/AcercaMobile.png";
+import AcercaBg from "../../../public/cursosEspecializacion/AcercaBg.png";
+const CursosEspecializacionAcerca = () => {
   return (
     <section className="mx-auto max-w-[1400px] relative text-white flex flex-col lg:flex-row">
       <Image src={AcercaBg} alt="Acerca fondo" className="absolute -z-10 w-full h-full object-cover" />
@@ -39,4 +39,4 @@ const CursosOnDemandAcerca = () => {
   );
 };
 
-export default CursosOnDemandAcerca;
+export default CursosEspecializacionAcerca;

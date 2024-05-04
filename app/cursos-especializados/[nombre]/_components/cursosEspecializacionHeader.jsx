@@ -3,7 +3,7 @@ import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const CursoOnDemandHeader = ({
+const CursosEspciealizacionHeader = ({
   nombre,
   descripcion,
   modalidades,
@@ -47,7 +47,7 @@ const CursoOnDemandHeader = ({
         )}
       </div>
       <Image
-        src={`/cursosOnDemand/cursos/headers/${nombre}Mobile.png`}
+        src={`/cursosEspecializacion/cursos/headersMobile/${nombre}.png`}
         fill
         priority
         sizes="100vw"
@@ -55,7 +55,7 @@ const CursoOnDemandHeader = ({
         alt=""
       />
       <Image
-        src={`/cursosOnDemand/cursos/headers/${nombre}Web.png`}
+        src={`/cursosEspecializacion/cursos/headersWeb/${nombre}.png`}
         fill
         priority
         sizes="100vw"
@@ -66,4 +66,4 @@ const CursoOnDemandHeader = ({
   );
 };
 
-export default CursoOnDemandHeader;
+export default CursosEspciealizacionHeader;
