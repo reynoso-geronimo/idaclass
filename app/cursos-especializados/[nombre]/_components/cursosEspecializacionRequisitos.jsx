@@ -4,7 +4,7 @@ const CursosEspciealizacionRequisitos = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-center gap-4 container">
       <article className="w-full rounded-2xl overflow-hidden border-idaclass4 border-2 ">
-        <TituloSeccion className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
+        <TituloSeccion  className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
           Requisitos
         </TituloSeccion>
         <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly py-4">
@@ -19,7 +19,7 @@ const CursosEspciealizacionRequisitos = () => {
         </ul>
       </article>
       <article className="w-full rounded-2xl overflow-hidden  border-idaclass4 border-2 ">
-      <TituloSeccion className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
+      <TituloSeccion  className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
           A quien va dirigido
         </TituloSeccion>
         <ul className="mx-8 list-outside list-disc flex-1 flex flex-col justify-evenly py-4">
@@ -32,7 +32,7 @@ const CursosEspciealizacionRequisitos = () => {
       </article>
 
       <article className="w-full rounded-2xl overflow-hidden  border-idaclass4 border-2 ">
-      <TituloSeccion className={`py-1 my-0 text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
+      <TituloSeccion  className={`py-1 my-0 text-2xl lg:text-2xl text-white bg-gradient-to-b from-idaclass to-idaclass4`}>
           Potencia tu empleabilidad
         </TituloSeccion>
         <h3 className="text-center py-4 font-bold">
