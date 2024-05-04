@@ -2,6 +2,7 @@ import sequelize from "../lib/sequelize";
 import { DataTypes } from "sequelize";
 import Curso from "./Curso";
 import Categoria from "./Categoria";
+import Profesional from "./Profesional";
 
 const Blog = sequelize.define("blogs", {
     id: {
@@ -13,10 +14,7 @@ const Blog = sequelize.define("blogs", {
         type: DataTypes.STRING,
 
     },
-    tag: {
-        type: DataTypes.STRING,
-
-    },
+    
     subtitulo: {
         type: DataTypes.STRING,
 
@@ -53,4 +51,10 @@ Blog.belongsToMany(Categoria, {
     otherKey: 'categoria_id',
     timestamps: false
 })
+Blog.belongsToMany(Profesional, {
+    through: 'blogs_profesional_links',
+    foreignKey: 'blog_id',
+    otherKey: 'profesional_id',
+    timestamps: false
+});
 export default Blog;

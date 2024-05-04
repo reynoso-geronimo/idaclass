@@ -6,7 +6,7 @@ import Link from "next/link";
 const PostCard = ({ post }) => {
   return (
     <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[520px] mx-auto relative">
-     {post.tag&& <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500`}>{post.tag}</Badge>}
+     { <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500`}> {post.categorias[0].nombre || " "}</Badge>}
       <Image
         src={"/blog/" + post.foto}
         width={520}

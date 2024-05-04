@@ -25,16 +25,18 @@ export async function getCursos() {
 }
 export async function getCursosFromDB() {
   try {
-    const response = await Curso.findAll({include: [
-      {
-        model: Profesional,
-        as: "profesionals",
-      },
-      {
-        model: Categoria,
-        as: "categorias",
-      },
-    ], });
+    const response = await Curso.findAll({
+      include: [
+        {
+          model: Profesional,
+          as: "profesionals",
+        },
+        {
+          model: Categoria,
+          as: "categorias",
+        },
+      ],
+    });
     const data = response.map(curso => curso.toJSON());
 
     return data;
@@ -139,8 +141,33 @@ export async function getOtrosCursosFromacionFromDb(nombre) {
 export async function getBlogPostsFromDb(limit, not) {
   try {
     const response = not
-      ? await Blog.findAll({ limit: limit, where: { id: { [Op.not]: not } } })
-      : await Blog.findAll({ limit: limit });
+      ? await Blog.findAll({
+          limit: limit,
+          where: { id: { [Op.not]: not } },
+          include: [
+            {
+              model: Categoria,
+              as: "categorias",
+            },
+            {
+              model: Profesional,
+              as: "profesionals",
+            },
+          ],
+        })
+      : await Blog.findAll({
+          limit: limit,
+          include: [
+            {
+              model: Categoria,
+              as: "categorias",
+            },
+            {
+              model: Profesional,
+              as: "profesionals",
+            },
+          ],
+        });
     const data = response.map(blog => blog.toJSON());
     return data;
   } catch (error) {
@@ -159,6 +186,10 @@ export async function getBlogPostFromDb(id) {
         {
           model: Categoria,
           as: "categorias",
+        },
+        {
+          model: Profesional,
+          as: "profesionals",
         },
       ],
     });

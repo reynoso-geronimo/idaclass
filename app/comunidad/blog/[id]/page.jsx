@@ -1,6 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
 import Image from "next/image";
-import Blog from "@/models/Blog";
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
@@ -10,6 +9,7 @@ import Sidebar from "./_components/sidebar";
 import { getBlogPostFromDb, getBlogPostsFromDb } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
 import Contenido from "./_components/contenido";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const page = async ({ params }) => {
   const [post, posts] = await Promise.all([
@@ -58,19 +58,22 @@ const page = async ({ params }) => {
               {post.subtitulo}
             </h2>
           </div>
+          {post.profesionals[0] && (
           <div className="w-auto flex items-center mt-8 mb-8 gap-2">
-            <Image
-              src={""}
-              height={60}
-              width={60}
-              className="bg-white rounded-full"
-              alt=""
-            />
+            <Avatar className="h-14 w-14">
+              <AvatarImage
+                src={`/profesional/${`profesional.nombre`}.png`}
+                alt={`profesional.nombre`}
+              />
+              <AvatarFallback>PR</AvatarFallback>
+            </Avatar>
             <div className="pr-2">
-              <p className="font-medium text-sm">Escrtio por:</p>
-              <h2 className="font-bold text-lg">Prof. Relleno Emeritus</h2>
+             <p className="font-medium text-sm">Escrtio por:</p>
+              <h2 className="font-bold text-lg">{post.profesionals[0].nombre}</h2>
+              <p className="font-medium text-sm">{post.profesionals[0].titulo}</p>
             </div>
           </div>
+        )}
         </div>
       </div>
       <div className="container w-full h-80 lg:h-20 relative max-lg:bg-gradient-to-b from-[#01080D] to-[#151C26] text-white flex max-lg:flex-col items-center">
@@ -90,11 +93,12 @@ const page = async ({ params }) => {
         </h3>
         {/* //!! que hacer con este link */}
         <Link
-          href={"/"}
+          href={"/signin"}
           className="w-full flex items-center justify-center rounded-2xl  lg:w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
         >
           ¡UNITE!
         </Link>
+
         <Image
           src={"/blog/bgWeb.png"}
           fill
