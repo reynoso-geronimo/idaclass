@@ -5,6 +5,7 @@ import CursosFormacion from "@/models/CursoFormacion";
 import Blog from "@/models/Blog";
 import { Op } from "sequelize";
 import Categoria from "@/models/Categoria";
+import Profesional from "@/models/Profesional";
 
 export async function getCursos() {
   try {
@@ -68,7 +69,16 @@ export async function getCursoFromDB(nombre) {
   try {
     const response = await Curso.findOne({
       where: { nombre: nombre },
-      include: Categoria,
+      include: [
+        {
+          model: Profesional,
+          as: "profesionals",
+        },
+        {
+          model: Categoria,
+          as: "categorias",
+        },
+      ],
     });
     const data = response.toJSON();
 

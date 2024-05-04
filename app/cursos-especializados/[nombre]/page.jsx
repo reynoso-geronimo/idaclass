@@ -12,6 +12,7 @@ import CursoOnDemandModalidades from "./_components/cursoOnDemandModalidades";
 import CursoOnDemandOtrosCursos from "./_components/cursoOnDemandOtrosCursos";
 import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
+import { profesionales } from "@/lib/constants";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre);
@@ -36,7 +37,7 @@ const CursoPage = async ({ params }) => {
     dedicacion,
     modulos,
   } = curso;
-
+  
   return (
     <main className="flex flex-col">
       <CursoOnDemandHeader
@@ -45,6 +46,7 @@ const CursoPage = async ({ params }) => {
         imagen={imagen}
         modalidades={modalidades}
         videoid={videoid}
+        profesional={curso.profesionals[0]}
       />
 
       <CursoOnDemandAcerca acerca={acerca} />

@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const CursoOnDemandHeader = ({
   nombre,
   descripcion,
   modalidades,
   videoid,
+  profesional,
 }) => {
   return (
     <section className="relative lg:container text-white">
@@ -28,18 +30,21 @@ const CursoOnDemandHeader = ({
             videoid={videoid}
           />
         </div>
-        <div className="w-auto py-2 bg-gray-500 bg-opacity-75 border-gray-400 border  rounded-full lg:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
-          <Image
-            src={""}
-            height={60}
-            width={60}
-            className="bg-white rounded-full"
-          />
-          <div className="pr-2">
-            <h2 className="font-bold text-lg">Prof. Relleno Emeritus</h2>
-            <p className="font-medium text-sm">Vendedor de humo</p>
+        {profesional && (
+          <div className="w-auto py-2 bg-gray-500 bg-opacity-75 border-gray-400 border  rounded-full lg:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
+            <Avatar className="h-14 w-14">
+              <AvatarImage
+                src={`/profesional/${`profesional.nombre`}.png`}
+                alt={`profesional.nombre`}
+              />
+              <AvatarFallback>PR</AvatarFallback>
+            </Avatar>
+            <div className="pr-2">
+              <h2 className="font-bold text-lg">{profesional.nombre}</h2>
+              <p className="font-medium text-sm">{profesional.titulo}</p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <Image
         src={`/cursosOnDemand/cursos/headers/${nombre}Mobile.png`}
