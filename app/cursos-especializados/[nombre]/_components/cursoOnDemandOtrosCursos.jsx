@@ -13,8 +13,21 @@ const CursoOnDemandOtrosCursos = ({ cursos }) => {
   return (
     <section className="container mb-6 ">
       <div className="flex items-center justify-between">
-      <TituloSeccion className={"lg:text-left lg:mx-0 w-fit"}><span className="text-idaclass3">Otros cursos On Demand</span> que pueden interesarte</TituloSeccion>
-      <Link href={"/cursos"} className="font-bold flex items-center gap-1 max-lg:hidden"><ArrowRight className="inline whitespace-nowrap" strokeWidth={3} size={26}/> VER TODOS LOS CURSOS</Link>
+        <TituloSeccion className={"lg:text-left lg:mx-0 w-fit"}>
+          <span className="text-idaclass3">Otros cursos On Demand</span> que
+          pueden interesarte
+        </TituloSeccion>
+        <Link
+          href={"/cursos-especializados"}
+          className="font-bold flex items-center gap-1 max-lg:hidden"
+        >
+          <ArrowRight
+            className="inline whitespace-nowrap"
+            strokeWidth={3}
+            size={26}
+          />{" "}
+          VER TODOS LOS CURSOS
+        </Link>
       </div>
       <div className="flex justify-center gap-4">
         <EmblaCarousel
@@ -29,9 +42,10 @@ const CursoOnDemandOtrosCursos = ({ cursos }) => {
 };
 
 const CursoCard = ({ curso }) => (
-  
   <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[34rem] gap-6 ">
-    <Badge className="bg-orange-500 text-white absolute top-4 -left-2 pl-4">{curso.categorias[0].nombre}</Badge>
+    <Badge className="bg-orange-500 text-white absolute top-4 -left-2 pl-4">
+      {curso.categorias[0].nombre}
+    </Badge>
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
       src={`/cursosOnDemand/cursos/headers/${curso.nombre}Mobile.png`}
@@ -41,7 +55,9 @@ const CursoCard = ({ curso }) => (
     />
     <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
     <p>{curso.descripcion}</p>
-    <Button className="w-full text-lg rounded-3xl">Ver curso</Button>
+    <Button className="w-full text-lg rounded-3xl" asChild>
+      <Link href={`/cursos-especializados/${curso.nombre}`}>Ver curso</Link>
+    </Button>
   </article>
 );
 

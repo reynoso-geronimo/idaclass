@@ -62,9 +62,9 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
             {cursosFormacion.map((cursoFormacion, index) => (
               <SheetClose asChild key={index}>
                 <Link
-                  href={`/curso-formacion/${cursoFormacion.nombre}`}
+                  href={`/cursos-formacion/${cursoFormacion.nombre}`}
                   className={`${
-                    pathname === `/curso-formacion/${cursoFormacion.nombre}` &&
+                    pathname === `/cursos-formacion/${cursoFormacion.nombre}` &&
                     "text-idaclass4"
                   }`}
                 >
@@ -75,7 +75,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="/cursos"
+                href="/cursos-especializados"
                 className={`-translate-x-3.5 flex items-center ${
                   pathname === "/cursos" && "text-idaclass4"
                 } `}
@@ -85,7 +85,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
                   size={28}
                   color="#0088ca"
                 />
-                Cursos on Demand
+                Cursos Espcializados
               </Link>
             </SheetClose>
             <Separator />

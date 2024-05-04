@@ -25,7 +25,7 @@ const DynamicCursosOnDemand = dynamic(() => import("./_components/cursos-on-dema
         <li>Expertos internacionales </li>
         <li>Elije tu area de especializacion</li>
       </ul>
-      <Link href={"/cursos"}>
+      <Link href={"/cursos-especializados"}>
         <Button variants="lg" className="rounded-lg mt-4">
           Ver todos los cursos
         </Button>

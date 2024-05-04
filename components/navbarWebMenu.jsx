@@ -83,10 +83,10 @@ const NavbarWebMenu = ({
                     asChild
                   >
                     <Link
-                      href={`/curso-formacion/${cursoFormacion.nombre}`}
+                      href={`/cursos-formacion/${cursoFormacion.nombre}`}
                       className={`flex  gap-4 ${
                         pathname ===
-                          `/curso-formacion/${cursoFormacion.nombre}` &&
+                          `/cursos-formacion/${cursoFormacion.nombre}` &&
                         `text-idaclass2`
                       } hover:cursor-pointer  `}
                     >
@@ -126,7 +126,7 @@ const NavbarWebMenu = ({
                             asChild
                             className="font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
                           >
-                            <Link href={`/cursos/${curso.nombre}`}>
+                            <Link href={`/cursos-especializados/${curso.nombre}`}>
                             {curso.nombre}
                             </Link>
                           </MenubarItem>
@@ -147,7 +147,7 @@ const NavbarWebMenu = ({
                     className="rounded-2xl text-sm font-bold "
                     asChild
                   >
-                    <Link href="/cursos">
+                    <Link href="/cursos-especializados">
                       <ArrowRight size={22} strokeWidth={3} className="mr-3" />{" "}
                       VER TODOS LOS CURSOS ON DEMAND
                     </Link>

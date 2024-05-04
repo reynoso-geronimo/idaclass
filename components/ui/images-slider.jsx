@@ -242,7 +242,7 @@ export const ImagesSlider = ({
           )}
           <div className="mt-5 relative">
             <Link
-              href={"/cursos"}
+              href={"/cursos-especializados"}
               className="flex items-center bg-idaclass4 py-0.5 px-2 rounded-xl font-bold text-xs w-40"
             >
               <ArrowRight className="mr-2" /> ELEGÍ TU CURSO

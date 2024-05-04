@@ -27,7 +27,7 @@ const Footer = () => {
         <h3 className="text-lg font-bold mt-12 mb-2">Enlaces</h3>
         <Link href="/">Inicio</Link>
         <Link href="/nosotros">Nosotros</Link>
-        <Link href="/cursos">Cursos</Link>
+        <Link href="/cursos-especializados">Cursos</Link>
         <Link href="/comunidad">Comunidad IdaClass</Link>
         <Link href="https://wa.me/+5491135872204">
           Asesórate ya{" "}

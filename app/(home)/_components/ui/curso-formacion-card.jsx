@@ -63,7 +63,7 @@ const CursoFormacionCard = ({ curso }) => {
           size="lg"
           className="mt-4 mb-6 px-2 w-[100%] mx-auto rounded-2xl text-xl"
         >
-          <Link href={`/curso-formacion/${curso.nombre}`}>Ver Curso</Link>
+          <Link href={`/cursos-formacion/${curso.nombre}`}>Ver Curso</Link>
         </Button>
       </div>
     </article>

@@ -32,7 +32,7 @@ const EstudiaConNosotros = ({ sideBar = false }) => {
         </p>
           <p className=" mb-12">Descubre todas nuestras propuestas educativas</p>
         <div className="space-y-4 z-10 flex flex-col">
-          <Button variant="default" asChild className="rounded-2xl">
+          <Button variant="default" asChild className="rounded-2xl capitalize">
             <Link href="/#Cursos">CURSOS DE FORMACIÓN</Link>
           </Button>
           <Button
@@ -40,7 +40,7 @@ const EstudiaConNosotros = ({ sideBar = false }) => {
             asChild
             className="bg-transparent text-idaclass3 border-idaclass3 rounded-2xl"
           >
-            <Link href="/cursos">Cursos especializados</Link>
+            <Link href="/cursos-especializados">CURSOS ESPECIALIZADOS</Link>
           </Button>
           <Button
             variant="outline"
