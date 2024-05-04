@@ -4,31 +4,18 @@ import Blog from "@/models/Blog";
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
-import { ArrowDown, ChevronDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 import Sidebar from "./_components/sidebar";
-import { getBlogPostFromDb } from "@/app/actions";
+import { getBlogPostFromDb, getBlogPostsFromDb } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
-import Curso from "@/models/Curso";
-import Categoria from "@/models/Categoria";
 import Contenido from "./_components/contenido";
 
 const page = async ({ params }) => {
-  //!! reever esto y optimizar codigo
-  const posts = await getBlogPostFromDb(3, params.id);
-  const post = await Blog.findOne({
-    where: { id: params.id },
-    include: [
-      {
-        model: Curso,
-        as: "cursos",
-      },
-      {
-        model: Categoria,
-        as: "categorias",
-      },
-    ],
-  });
+  const [post, posts] = await Promise.all([
+    getBlogPostFromDb(params.id),
+    getBlogPostsFromDb(3, params.id),
+  ]);
   const contenido = JSON.parse(post.cuerpo);
 
   return (
@@ -130,7 +117,7 @@ const page = async ({ params }) => {
             <p className="lg:pl-1">{post.titulo}</p>
           </div>
 
-          <Contenido/>
+          <Contenido />
           <h3 className="font-bold text-2xl my-4 text-idaclass">
             Introduccion
           </h3>

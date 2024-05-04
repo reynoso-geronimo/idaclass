@@ -1,8 +1,8 @@
-import { getBlogPostFromDb } from "../../actions";
+import { getBlogPostsFromDb } from "../../actions";
 import PostCard from "../components/postCard";
 
 const Page = async () => {
-  const blogPost = await getBlogPostFromDb();
+  const blogPost = await getBlogPostsFromDb();
 
   return (
     <main className="flex flex-col items-center  ">

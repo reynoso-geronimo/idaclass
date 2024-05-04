@@ -1,4 +1,4 @@
-import { getBlogPostFromDb } from "@/app/actions";
+import { getBlogPostsFromDb } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import {  CalendarClock, Newspaper } from "lucide-react";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import React from "react";
 import Eventos from "./eventos";
 import PostCardSidebar from "./postCardSidebar";
 import PostCard from "./postCard";
-const blogPost = await getBlogPostFromDb(6);
+const blogPost = await getBlogPostsFromDb(6);
 
 const firstRow = blogPost.slice(0, 3);
 const secondRow = blogPost.slice(3, 6);

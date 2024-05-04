@@ -32,7 +32,7 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
-export async function getCursosPorCategoriaFromDB(categoriaId , cursoActual) {
+export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual) {
   try {
     const cursos = await Curso.findAll({
       where: { nombre: { [Op.not]: cursoActual } },
@@ -113,12 +113,33 @@ export async function getOtrosCursosFromacionFromDb(nombre) {
     console.log(error);
   }
 }
-export async function getBlogPostFromDb(limit, not) {
+export async function getBlogPostsFromDb(limit, not) {
   try {
     const response = not
       ? await Blog.findAll({ limit: limit, where: { id: { [Op.not]: not } } })
       : await Blog.findAll({ limit: limit });
     const data = response.map(blog => blog.toJSON());
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function getBlogPostFromDb(id) {
+  try {
+    const response = await Blog.findOne({
+      where: { id: id },
+      include: [
+        {
+          model: Curso,
+          as: "cursos",
+        },
+        {
+          model: Categoria,
+          as: "categorias",
+        },
+      ],
+    });
+    const data = response.toJSON();
     return data;
   } catch (error) {
     console.log(error);
