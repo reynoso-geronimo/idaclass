@@ -17,12 +17,8 @@ import {
   getCursoFormacionFromDB,
   getOtrosCursosFromacionFromDb,
 } from "@/app/actions";
-import getCountryCodeFromIP from "@/lib/utils";
-
 
 const CursoPage = async ({ params }) => {
-  const pais = await getCountryCodeFromIP()
-  console.log(pais);
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
   if (!curso) {
@@ -99,7 +95,7 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades modalidades={modalidades}/>
+      <CursoFormacionModalidades modalidades={modalidades} />
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"
