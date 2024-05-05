@@ -12,13 +12,15 @@ import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendido
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
-
 import {
   getCursoFormacionFromDB,
   getOtrosCursosFromacionFromDb,
 } from "@/app/actions";
+import getCountryCodeFromIP from "@/lib/utils";
 
 const CursoPage = async ({ params }) => {
+  const pais = await getCountryCodeFromIP();
+  console.log(pais.country)
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
   if (!curso) {
@@ -54,6 +56,7 @@ const CursoPage = async ({ params }) => {
 
   return (
     <main className="flex flex-col">
+      {pais.country}
       <CursoFormacionHeader
         nombre={nombre}
         descripcion={descripcion}
