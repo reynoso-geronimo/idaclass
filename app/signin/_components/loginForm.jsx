@@ -91,7 +91,7 @@ const LoginForm = () => {
         <p className="text-destructive font-medium text-sm">
           {error && "Credenciales incorrectas"}
         </p>
-        <Button type="submit" className="w-full">
+        <Button type="submit" className="w-full rounded-3xl">
           Iniciar Sesion
         </Button>
       </form>
