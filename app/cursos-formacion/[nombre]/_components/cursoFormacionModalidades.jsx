@@ -1,19 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
 import TarjetaModalidad from "./tarjeta-modalidad";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 
-const CursoFormacionModalidades = () => {
+const CursoFormacionModalidades = ({ modalidades }) => {
+  console.log(modalidades);
   return (
-    <section id="inscripcion" className="pt-6 container px-0 ">
-      <div className="flex max-lg:flex-col justify-center items-center lg:items-stretch lg:justify-start relative">
-        <Image
-          src={"/cursosFormacion/modalidadesbg.png"}
-          fill
-          alt=""
-          className="max-lg:hidden object-cover object-right"
-        />
+    <section id="inscripcion" className="container relative">
+      <Image
+        src={"/cursosFormacion/modalidadesbg.png"}
+        fill
+        alt=""
+        className="max-lg:hidden object-cover object-right"
+      />
+      {modalidades === "Online - Presencial" && (
         <div className={"w-full max-w-md lg:max-w-full  absolute top-4  z-10"}>
           <TituloSeccion
             className={"text-center text-white text-balance leading-[50px]"}
@@ -21,14 +20,16 @@ const CursoFormacionModalidades = () => {
             Elegí la modalidad que más se{" "}
             <span className="text-idaclass3">adapte a tus necesidades</span>
           </TituloSeccion>
-
-          {/* <Button size={"sm"}>
-            <MapPin />
-            Ver sedes disponibles{" "}
-          </Button> */}
         </div>
-        <TarjetaModalidad modalidad={"ONLINE"} />
-        <TarjetaModalidad />
+      )}
+
+      <div className="flex w-full justify-center flex-col lg:flex-row lg:w-[54rem]">
+        {modalidades.includes("Online") ? (
+          <TarjetaModalidad modalidad={"ONLINE"} />
+        ) : (
+          ""
+        )}
+        {modalidades.includes("Presencial") && <TarjetaModalidad />}
       </div>
     </section>
   );

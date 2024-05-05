@@ -92,12 +92,10 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
-
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades />
-
+      <CursoFormacionModalidades modalidades={modalidades}/>
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"
@@ -105,9 +103,7 @@ const CursoPage = async ({ params }) => {
         titulo2Class="text-idaclass4"
         titulo3="que te guiara al exito"
       />
-
       <CasosExito />
-
       <Separator className="my-6" />
       <CursoFormacionOtrosCursos cursos={cursos} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
