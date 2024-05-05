@@ -22,8 +22,8 @@ const ComunidadContenido = () => {
         Ratione a eius quidem animi quam eos fuga officia dolore odit, ipsam
         earum debitis rem praesentium vero libero ipsa quaerat?
       </h4>
-      <div className="w-full flex max-lg:flex-col justify-between items-stretch gap-12">
-        <div className="lg:w-9/12">
+      <div className="w-full flex max-lg:flex-col justify-between items-stretch gap-8">
+        <div className="lg:w-9/12 max-lg:max-w-lg mx-auto">
           {/* BLOGPOSTS */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
             {firstRow.map((post, index) => (
@@ -39,7 +39,7 @@ const ComunidadContenido = () => {
 
         {/* SIDEBAR */}
 
-        <div className="bg-black lg:w-3/12  rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px] mx-auto max-w-[520px]">
+        <div className="bg-black w-full lg:w-3/12  rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px] mx-auto max-w-lg">
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2
               className={`text-center py-2 my-0 text-2xl bg-idaclass flex items-center justify-center`}
