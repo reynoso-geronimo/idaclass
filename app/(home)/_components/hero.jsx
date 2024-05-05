@@ -92,7 +92,7 @@ const Hero = () => {
             fill
             priority={true}
             sizes="50vw"
-            className=" object-contain"
+            className=" object-contain scale-110 -translate-y-8"
           />
         </div>
       </div>
