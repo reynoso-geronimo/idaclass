@@ -100,7 +100,7 @@ const CursoPage = async ({ params }) => {
       <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
-        titulo2Class="text-idaclass4"
+        titulo2Class="text-idaclass3"
         titulo3="que te guiara al exito"
       />
       <CasosExito />

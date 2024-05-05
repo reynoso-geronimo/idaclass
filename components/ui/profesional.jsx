@@ -13,7 +13,7 @@ const Profesional = ({ profesional }) => {
           className="object-cover object-top rounded-t-3xl"
         />
       </div>
-      <div className="flex-1 bg-idaclass4 overflow-hidden z-10 rounded-b-3xl p-2">
+      <div className="flex-1 bg-idaclass overflow-hidden z-10 rounded-b-3xl p-2">
         <h3 className="font-medium text-sm">{profesional.nombre}</h3>
         <p className="text-muted text-xs">{profesional.titulo}</p>
       </div>

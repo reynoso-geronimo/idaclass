@@ -40,20 +40,9 @@ const EquipoProfesional = ({
   // }, []);
 
   return (
-    <section className="container px-0 lg:px-0 bg-gradient-to-l from-[#3A5DAE] to-[#12182D] text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row-reverse items-center justify-end relative overflow-hidden">
+    <section className="container px-0 lg:px-0 bg-gradient-to-b lg:bg-gradient-to-l from-[#3A5DAE] from-0% to-[#12182D] text-white  gap-4 lg:gap-12 flex flex-col-reverse lg:flex-row-reverse items-center justify-end relative overflow-hidden">
       <div className="w-full lg:w-1/2 lg:py-12 px-8 lg:px-0">
-        <Carousel
-          className="w-full z-10 relative"
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 3000,
-            }),
-          ]}
-        >
+        <Carousel className="w-full z-10 relative max-lg:mb-6" opts={{align: "start",loop: true,}} plugins={[Autoplay({delay: 3000,})]}>
           <CarouselContent className="-ml-1 lg:h-full ">
             {profesionales.map((profesional, index) => (
               <CarouselItem key={index} className="pl-1 basis-1/8">
@@ -69,7 +58,7 @@ const EquipoProfesional = ({
       </div>
       <div className="w-full lg:w-1/2 text-center flex flex-col justify-end lg:justify-start items-start relative max-lg:overflow-hidden">
       <Image src={lineaA} alt="" className="translate-y-10 max-lg:hidden"/>
-        <h2 className="font-black text-2xl lg:text-3xl w-full lg:max-w-sm z-10 p-8 text-center lg:text-left">{titulo}<br/><span className={titulo2Class}>{titulo2}</span><br/>{titulo3}</h2>
+        <h2 className="font-black text-2xl lg:text-3xl w-full lg:max-w-sm z-10 p-8 max-lg:pb-0 text-center lg:text-left">{titulo}<br/><span className={titulo2Class}>{titulo2}</span><br/>{titulo3}</h2>
         <Image src={lineaB} alt="" className="-translate-y-[5rem] object-right max-lg:hidden scale-125"/>
       </div>
     </section>
