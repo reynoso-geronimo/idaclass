@@ -55,7 +55,7 @@ const CursoFormacionAcerca = ({
         <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">
           <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50">
             <Image
-              src="/cursosFormacion/AprenderHaciendo.png"
+              src="/cursosFormacion/AprenderHaciendo.svg"
               alt=""
               height={70}
               width={70}
@@ -71,7 +71,7 @@ const CursoFormacionAcerca = ({
           </div>
           <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50">
             <Image
-              src="/cursosFormacion/FormacionIntegral.png"
+              src="/cursosFormacion/FormacionIntegral.svg"
               alt=""
               height={70}
               width={70}
@@ -87,7 +87,7 @@ const CursoFormacionAcerca = ({
           </div>
           <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50">
             <Image
-              src="/cursosFormacion/CarreraRentable.png"
+              src="/cursosFormacion/CarreraRentable.svg"
               alt=""
               height={70}
               width={70}
