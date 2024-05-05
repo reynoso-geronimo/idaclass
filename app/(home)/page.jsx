@@ -46,7 +46,12 @@ export default function Home() {
       <DynamicCursosEspecializacion />
       <Certificacion />
 
-      <EquipoProfesional />
+      <EquipoProfesional
+        titulo="Conoce al equipo de"
+        titulo2="Trainers Educativos"
+        titulo2Class="text-idaclass3"
+        titulo3="que te guiara al exito"
+      />
       
       <CasosExito />
 

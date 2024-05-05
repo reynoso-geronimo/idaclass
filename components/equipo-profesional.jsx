@@ -57,9 +57,9 @@ const EquipoProfesional = ({
         </Carousel>
       </div>
       <div className="w-full lg:w-1/2 text-center flex flex-col justify-end lg:justify-start items-start relative max-lg:overflow-hidden">
-      <Image src={lineaA} alt="" className="translate-y-10 max-lg:hidden"/>
-        <h2 className="font-black text-2xl lg:text-3xl w-full lg:max-w-sm z-10 p-8 max-lg:pb-0 text-center lg:text-left">{titulo}<br/><span className={titulo2Class}>{titulo2}</span><br/>{titulo3}</h2>
-        <Image src={lineaB} alt="" className="-translate-y-[5rem] object-right max-lg:hidden scale-125"/>
+      <Image src={lineaA} alt="" className="absolute left-0 -top-10 max-lg:hidden"/>
+        <h2 className="font-black text-2xl lg:text-4xl w-full lg:max-w-md z-10 p-8 max-lg:pb-0 text-center lg:text-left">{titulo}<br/><span className={titulo2Class}>{titulo2}</span><br/>{titulo3}</h2>
+        <Image src={lineaB} alt="" className="absolute left-0 bottom-0 object-right max-lg:hidden scale-125"/>
       </div>
     </section>
   );
