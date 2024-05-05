@@ -15,14 +15,14 @@ import { useEffect } from "react";
 const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo }) => {
   const countCursos = cursos.length;
   //console.log(countCursos);
-  let basis = "1/4";
+  let basis = "lg:basis-1/2";
 
   if (countCursos === 2) {
     basis = "lg:basis-1/2";
   } else if (countCursos === 3) {
     basis = "lg:basis-1/3";
   } else if (countCursos >= 4) {
-    basis = "lg:basis-1/4";
+    basis = "lg:basis-[335px]";
   }
 
   const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
