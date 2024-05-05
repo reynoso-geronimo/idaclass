@@ -21,7 +21,7 @@ const Soluciones = () => {
         src="/assets/bg-soluciones.png"
         fill
         sizes="50vw"
-        className="object-contain max-lg:hidden"
+        className="object-cover 2xl:object-contain  max-lg:hidden"
       />
       <Image
         alt=""
