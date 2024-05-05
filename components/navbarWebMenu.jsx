@@ -65,8 +65,8 @@ const NavbarWebMenu = ({
           </MenubarTrigger>
           <MenubarContent
             onCloseAutoFocus={e => e.preventDefault()}
-            align="left"
-            className="px-6 pb-4 border-none rounded-b-xl flex  mt-[11px] bg-black text-idaclass3 divide-x-[1px] divide-gray-500 gap-6"
+            align="center"
+            className="px-6 pb-4 border-none rounded-b-xl flex  mt-[8px] bg-black text-idaclass3 divide-x-[1px] divide-gray-500 gap-6"
           >
             <div>
               <h5 className="relative flex cursor-default items-center rounded-sm px-2 my-1 text-xl font-extrabold text-white">
@@ -90,9 +90,7 @@ const NavbarWebMenu = ({
                         `text-idaclass2`
                       } hover:cursor-pointer  `}
                     >
-                      
-                        <p>{cursoFormacion.nombre}</p>
-                      
+                      <p>{cursoFormacion.nombre}</p>
                     </Link>
                   </MenubarItem>
                 ))}
@@ -126,8 +124,10 @@ const NavbarWebMenu = ({
                             asChild
                             className="font-bold focus:bg-idaclass4 focus:text-white transition-all cursor-default select-none outline-none focus:bg-primary focus:text-primary-foreground data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
                           >
-                            <Link href={`/cursos-especializados/${curso.nombre}`}>
-                            {curso.nombre}
+                            <Link
+                              href={`/cursos-especializados/${curso.nombre}`}
+                            >
+                              {curso.nombre}
                             </Link>
                           </MenubarItem>
                         ))}
