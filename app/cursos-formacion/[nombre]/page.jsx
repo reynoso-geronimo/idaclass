@@ -17,8 +17,12 @@ import {
   getCursoFormacionFromDB,
   getOtrosCursosFromacionFromDb,
 } from "@/app/actions";
+import getCountryCodeFromIP from "@/lib/utils";
+
 
 const CursoPage = async ({ params }) => {
+  const pais = await getCountryCodeFromIP()
+  console.log(pais);
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
   if (!curso) {
