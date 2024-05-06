@@ -1,7 +1,7 @@
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { BookOpenCheck, Calendar, Clock, Monitor } from "lucide-react";
+import { Calendar, Clock, Monitor } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 

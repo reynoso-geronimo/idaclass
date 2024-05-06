@@ -20,7 +20,7 @@ import getCountryCodeFromIP from "@/lib/utils";
 
 const CursoPage = async ({ params }) => {
   const pais = await getCountryCodeFromIP();
-  console.log(pais.country)
+  console.log(pais.country);
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
   if (!curso) {
@@ -35,7 +35,6 @@ const CursoPage = async ({ params }) => {
     precio,
     frecuencia,
     videoid,
-    acerca,
     acerca_curso,
     modalidades,
     duracion,
@@ -70,7 +69,6 @@ const CursoPage = async ({ params }) => {
         duracion={duracion}
         acerca_curso={contenido}
         dedicacion={dedicacion}
-        acerca={acerca}
         frecuencia={frecuencia}
         modalidades={modalidades}
         nombre={nombre}
