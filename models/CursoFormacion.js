@@ -73,6 +73,10 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     },
     perfil_texto_tres: {
         type: DataTypes.STRING
+    },
+    acerca_curso: {
+        type: DataTypes.TEXT('long'),
+
     }
 
 

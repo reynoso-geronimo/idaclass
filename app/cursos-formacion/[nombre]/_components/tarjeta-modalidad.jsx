@@ -10,7 +10,37 @@ import {
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
+import { MercadoPagoConfig, Preference } from "mercadopago";
+import { redirect } from "next/navigation";
+// Agrega credenciales
+const client = new MercadoPagoConfig({
+  accessToken: process.env.MP_ACCESS_TOKEN,
+});
+
 const TarjetaModalidad = ({ modalidad }) => {
+  async function inscripcion() {
+    "use server";
+    const preference = await new Preference(client).create({
+      body: {
+        payment_methods: {
+          excluded_payment_methods: [],
+          excluded_payment_types: [],
+          installments: 12,
+        },
+        items: [
+          {
+            title: "My product",
+            quantity: 1,
+            unit_price: 2000,
+          },
+        ],
+      },
+    });
+    console.log(preference);
+    console.log(preference.sandbox_init_point);
+    redirect(preference.sandbox_init_point);
+  }
+
   return (
     <div
       className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
@@ -82,15 +112,23 @@ const TarjetaModalidad = ({ modalidad }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button size="lg" className={`w-full ${modalidad==="ONLINE"?"w-[100%]":"xl:w-[50%]"} rounded-2xl `}>
-            <ArrowRight className="mr-2" />
-            INSCRIBIRME AHORA
-          </Button>
+          <form action={inscripcion}>
+            <Button
+              size="lg"
+              className={`w-full ${
+                modalidad === "ONLINE" ? "w-[100%]" : "xl:w-[50%]"
+              } rounded-2xl `}
+            >
+              <ArrowRight className="mr-2" />
+              INSCRIBIRME AHORA
+            </Button>
+          </form>
           {modalidad !== "ONLINE" && (
             <Button
               size="lg"
               variant="outline"
               className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[100%] xl:w-[50%]"
+              type="submit"
             >
               CONSULTAR SEDES
             </Button>

@@ -1,17 +1,15 @@
+import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import TituloSeccion from "@/components/ui/titulo-seccion";
 import { BookOpenCheck, Calendar, Clock, Monitor } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 const CursoFormacionAcerca = ({
-  acerca,
+  acerca_curso,
   duracion,
   modalidades,
-  dedicacion,
   frecuencia,
-  
 }) => {
   return (
     <section className="container flex flex-col items-center pt-6">
@@ -24,10 +22,7 @@ const CursoFormacionAcerca = ({
           <Monitor className="text-idaclass shrink-0" strokeWidth={3} />
           <p className="font-black">MODALIDADES:</p> {modalidades}
         </div>
-        <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
-          <BookOpenCheck className="text-idaclass shrink-0" strokeWidth={3} />
-          <p className="font-black">DEDICACION:</p> {dedicacion}
-        </div>
+
         <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
           <Clock className="text-idaclass shrink-0" strokeWidth={3} />
           <p className="font-black">FRECUENCIA:</p> {frecuencia}
@@ -47,10 +42,9 @@ const CursoFormacionAcerca = ({
                          {acerca} 
                     </p>*/}
 
-          
-          <p className="text-center my-6 lg:text-left">
-            {acerca}
-          </p>
+          <div className="text-center my-6 lg:text-left">
+            <BlockRendererClient content={acerca_curso} />
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">
           <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50">

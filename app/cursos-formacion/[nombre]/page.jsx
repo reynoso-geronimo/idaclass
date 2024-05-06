@@ -36,6 +36,7 @@ const CursoPage = async ({ params }) => {
     frecuencia,
     videoid,
     acerca,
+    acerca_curso,
     modalidades,
     duracion,
     dedicacion,
@@ -53,7 +54,7 @@ const CursoPage = async ({ params }) => {
     perfil_titulo_tres,
     perfil_texto_tres,
   } = curso;
-
+  const contenido = JSON.parse(acerca_curso);
   return (
     <main className="flex flex-col">
       {pais.country}
@@ -67,6 +68,7 @@ const CursoPage = async ({ params }) => {
 
       <CursoFormacionAcerca
         duracion={duracion}
+        acerca_curso={contenido}
         dedicacion={dedicacion}
         acerca={acerca}
         frecuencia={frecuencia}
