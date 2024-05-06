@@ -23,13 +23,13 @@ const CursoFormacionOtrosCursos = ({ cursos }) => {
 };
 
 const CursoCard = ({ curso }) => (
-  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[34rem] border-2 gap-6 ">
+  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[24rem] border-2 gap-6 ">
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
       src={`/cursosFormacion/cursos/headersMobile/${curso.nombre}.png`}
       alt=""
       fill
-      className="object-cover -z-10"
+      className="object-cover object-top -z-10"
     />
     <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
     {/* <p>{curso.descripcion}</p> */}
