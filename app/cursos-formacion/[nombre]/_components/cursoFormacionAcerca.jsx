@@ -13,17 +13,16 @@ const CursoFormacionAcerca = ({
 }) => {
   return (
     <section className="container flex flex-col items-center pt-6">
-      <div className="grid grid-cols-2 gap-y-8 text-center lg:flex lg:justify-center lg:gap-4">
-        <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
+      <div className="w-full flex-wrap gap-y-8 text-center flex justify-evenly lg:justify-center lg:gap-8">
+        <div className="flex w-1/2 lg:w-1/4 xl:w-auto max-xl:flex-col items-center gap-2 shrink-0">
           <Calendar className="text-idaclass" strokeWidth={3} />
           <p className="font-black">DURACION:</p> {duracion}
         </div>
-        <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
+        <div className="flex w-1/2 lg:w-1/4 xl:w-auto max-xl:flex-col items-center gap-2 shrink-0">
           <Monitor className="text-idaclass shrink-0" strokeWidth={3} />
           <p className="font-black">MODALIDADES:</p> {modalidades}
         </div>
-
-        <div className="flex lg:w-1/4 2xl:w-auto max-2xl:flex-col items-center gap-2 shrink-0">
+        <div className="flex w-full lg:w-1/4 xl:w-auto max-xl:flex-col items-center gap-2 shrink-0">
           <Clock className="text-idaclass shrink-0" strokeWidth={3} />
           <p className="font-black">FRECUENCIA:</p> {frecuencia}
         </div>
@@ -33,7 +32,7 @@ const CursoFormacionAcerca = ({
         <div className="lg:w-[41%] flex flex-col items-center lg:items-start">
           <Badge
             variant={"outline"}
-            className="text-base font-bold border-idaclass text-idaclass border-2 h-8  px-8 text-center"
+            className="text-base font-bold border-idaclass text-idaclass border-2 h-8 px-8 text-center"
           >
             Acerca de este curso
           </Badge>
