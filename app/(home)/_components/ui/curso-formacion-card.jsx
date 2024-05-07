@@ -8,7 +8,7 @@ import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
   return (
-    <article className="w-[285px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
+    <article className="w-[290px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
       <Image
         className="object-cover rounded-2xl -z-10 bg-black"
         src={`/cursosFormacion/cursos/headersMobile/${curso.nombre}.png`}
@@ -36,7 +36,7 @@ const CursoFormacionCard = ({ curso }) => {
         <span className="font-bold">{curso.contenido}</span> <span>de estudio</span>
       </p> */}
 
-      <p className="align-middle">
+      <p className="text-pretty">
         <Clock className="inline mr-1 align-middle pb-0.5" size={22} strokeWidth={3} />
         <span className="font-bold">{curso.duracion}</span> ({curso.frecuencia})
       </p>
