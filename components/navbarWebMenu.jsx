@@ -35,7 +35,7 @@ const NavbarWebMenu = ({
       <Link
         href="/"
         className={`${
-          pathname === "/" && "after:w-[100%] text-idaclass4"
+          pathname === "/" && "after:w-[2000px] text-idaclass4"
         } ${classEscritorio}`}
       >
         Inicio
@@ -50,9 +50,9 @@ const NavbarWebMenu = ({
       </Link>
 
       <Menubar className="border-none outline-none bg-transparent">
-        <MenubarMenu className="">
+        <MenubarMenu>
           <MenubarTrigger
-            className={`${classEscritorio} ${
+            className={`flex ${classEscritorio} ${
               (pathname.includes("curso-formacion") ||
                 pathname.includes("cursos")) &&
               "after:w-[100%] text-idaclass4"
@@ -60,7 +60,7 @@ const NavbarWebMenu = ({
           >
             Cursos
             <ChevronDown
-              className={`inline transition-transform duration-200`}
+              className={`transition-transform duration-200`}
             />
           </MenubarTrigger>
           <MenubarContent
