@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import CasosExito from "@/components/casos-exito";
 import Link from "next/link";
-import Beca from "@/components/becaAsesorate";
+import BecaAsesorate from "@/components/becaAsesorate";
 import CursosEspciealizacionHeader from "./_components/cursosEspecializacionHeader";
 import CursosEspciealizacionAcerca from "./_components/cursosEspecializacionAcerca";
 import CursosEspciealizacionObjetivos from "./_components/cursosEspecializacionObjetivos";
@@ -12,7 +12,6 @@ import CursosEspciealizacionModalidades from "./_components/cursosEspecializacio
 import CursosEspciealizacionOtrosCursos from "./_components/cursosEspecializacionOtrosCursos";
 import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
-
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre);
@@ -37,7 +36,7 @@ const CursoPage = async ({ params }) => {
     dedicacion,
     modulos,
   } = curso;
-  
+
   return (
     <main className="flex flex-col">
       <CursosEspciealizacionHeader
@@ -61,9 +60,6 @@ const CursoPage = async ({ params }) => {
       {/* modalidades y pago */}
       <Separator className="my-6" />
       <CursosEspciealizacionModalidades />
-
-      <Beca />
-      <Separator className="my-6" />
       {/* <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
@@ -74,6 +70,8 @@ const CursoPage = async ({ params }) => {
       {/* <TituloSeccion className={""}>
           Casos de éxito de nuestros estudiantes
         </TituloSeccion> */}
+      <BecaAsesorate />
+      <Separator className="my-6" />
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
       <Separator className="my-6" />

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const casos = [
   {
     experiencia:
-      "Fue una gran experiencia, desde el contenido de cada uno de los cursos que realice, sus temas, el material de estudio, la forma de comunicar y explicar da cada uno de los profes, hacía que se entienda muy bien cada tema. Y las plataformas súper sencillas de utilizar.",
+      "“Fue una gran experiencia, desde el contenido de cada uno de los cursos, el material de estudio, la forma de comunicar y explicar da cada uno de los profes. Se entienda muy bien cada tema y las plataformas súper sencillas de utilizar.”",
     avatar: "",
     nombre: "Lucia Kaus",
     carrera: "Personal Trainer ",
@@ -20,7 +20,7 @@ const casos = [
   },
   {
     experiencia:
-      "Recomiendo absolutamente IdaClass, la experiencia fue muy buena y no solo por los conocimientos técnicos adquiridos sino también por las herramientas extras que me brindo la formación, gracias a las que pude iniciar mi proyecto propio y tener una gran comunidad en redes sociales como influencer fitness.",
+      "“Recomiendo absolutamente IdaClass, la experiencia fue muy buena y no solo por los conocimientos técnicos adquiridos sino también por las herramientas extras que me brindo la formación, gracias a las que pude iniciar mi proyecto propio y crear una gran comunidad en redes sociales como influencer fitness.”",
     avatar: "",
     nombre: "Brian Vazquez",
     carrera: "Personal Trainer ",
@@ -29,7 +29,7 @@ const casos = [
   },
   {
     experiencia:
-      "Mi orgullo y admiración para todo este equipo maravilloso! Felíz y agradecida por cumplir mis desafíos a través de esta empresa en el entrenamiento de fitness grupal! Gracias infinitas por tanto! Por capacitarse con compromiso como instructora! ",
+      "“Gracias infinitas por tanto, les agradezco por capacitarme con compromiso como instructora. Feliz y agradecida por cumplir mis desafíos a través de IdaClass.¡Mi orgullo y admiración para todo este equipo maravilloso!”",
     avatar: "",
     nombre: "Diana Tosorini",
     carrera: "Instructora",
@@ -37,8 +37,7 @@ const casos = [
     pais: "ar",
   },
   {
-    experiencia:
-      "La experiencia como alumno, EXCELENTE, egresé del prestigioso Instituto en varios cursos con certificación y matricula. Recomiendo para todos aquellos que quieran adquirir conocimientos y en el ámbito de la preparación física y salud. El acompañamiento es permanente de los docentes y directivos. ",
+    experiencia: "“Egresé con varios cursos con certificación y recomiendo este prestigioso instituto para todos aquellos que quieran adquirir conocimientos sobre preparación física y salud. El acompañamiento de los docentes y directivos es permanente y la experiencia como alumno, EXCELENTE.”",
     avatar: "",
     nombre: "Osvaldo Contreras",
     carrera: "",
@@ -47,12 +46,15 @@ const casos = [
   },
 ];
 
-const CasosExito = ({ titulo = "Historias que inspiran" ,className="bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]"}) => {
+const CasosExito = ({
+  titulo = "Historias que inspiran",
+  className = "bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]",
+}) => {
   return (
     <section className={cn(`container pb-12`, className)}>
       <TituloSeccion className={"mb-0 text-white"}>{titulo}</TituloSeccion>
       <h3 className="text-center text-pretty text-lg lg:text-2xl mt-2 mb-6">
-      ¡Vos también podés ser un caso de éxito gracias a IdaClass!
+        ¡Vos también podés ser un caso de éxito gracias a IdaClass!
       </h3>
 
       <Carousel
@@ -61,18 +63,17 @@ const CasosExito = ({ titulo = "Historias que inspiran" ,className="bg-gradient-
           loop: true,
         }}
       >
-        <CarouselContent >
+        <CarouselContent>
           {casos.map((caso, index) => (
-            <CarouselItem className="basis-1/9 xl:basis-1/4"  key={index}>
-            <CasoExito
-             
-              experiencia={caso.experiencia}
-              avatar={caso.avatar}
-              nombre={caso.nombre}
-              carrera={caso.carrera}
-              linkedin={caso.linkedin}
-              pais={caso.pais}
-            />
+            <CarouselItem className="basis-1/9 xl:basis-1/4" key={index}>
+              <CasoExito
+                experiencia={caso.experiencia}
+                avatar={caso.avatar}
+                nombre={caso.nombre}
+                carrera={caso.carrera}
+                linkedin={caso.linkedin}
+                pais={caso.pais}
+              />
             </CarouselItem>
           ))}
           {/* <CarouselItem className="basis-1/9 xl:basis-1/4">

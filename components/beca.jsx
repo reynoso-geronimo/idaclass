@@ -9,13 +9,10 @@ const Beca = ({sideBar=false}) => {
   return (
     <article className={`w-full flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${!sideBar?"lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md":"min-h-[480px]"}`} >
       <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem]">
-        Obtén tu <br /> BecaClass 40%
+      Obtén una <br /> BecaClass
       </h3>
       <p className={`${!sideBar&&"w-[16rem] max-w-[90%]"} my-4 text-sm z-10 text-balanced `}>
-        Nuestra misión es abrir las puertas a la educación en Latinoamérica.
-        Facilitamos el acceso a la educación de calidad de una forma simple y
-        accesible. Accedé ahora a la BecaClass del 40% y avanzá hacia tus metas
-        profesionales con IdaClass.
+      Nuestra misión es facilitar el acceso a la educación en Latinoamérica. Aplica a una beca de hasta el 40% para acceder a tu próxima formación. Al solicitarla, nuestro departamento académico evaluará tu aplicación y se pondrá en contacto contigo a la brevedad.
       </p>
 
       <Button
@@ -25,7 +22,7 @@ const Beca = ({sideBar=false}) => {
       >
         <Link href="https://wa.me/+5491135872204">
           <div className="flex  items-center gap-1">
-            <ArrowRight /> IMPULSA TU FUTURO
+            <ArrowRight />Aplicar a la BecaClass
           </div>
         </Link>
       </Button>
