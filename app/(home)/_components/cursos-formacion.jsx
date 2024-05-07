@@ -16,14 +16,14 @@ const CursosFormacion = async () => {
         Alcanza tus sueños en el mundo del sport fitness, con nuestras
         formaciones profesionales.
       </h2>
-      <div className="max-w-2xl mx-auto  lg:max-w-full">
+      
         <EmblaCarousel
           options={OPTIONS}
           slides={cursosFormacion.map((curso, index) => (
             <CursoFormacionCard key={index} curso={curso} />
           ))}
         />
-      </div>
+      
     </section>
   );
 };
