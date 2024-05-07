@@ -26,12 +26,12 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
           <Accordion type="single" collapsible className="lg:w-[50%] px-8">
             {JSON.parse(modulos).map((modulo, index) => (
               <AccordionItem value={`item-${index + 1}`} key={index}>
-                <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 text-pretty">
+                <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 text-pretty gap-4">
                   {modulo.titulo}
                 </AccordionTrigger>
                 <AccordionContent className="font-semibold text-sm p-4 ">
                   {modulo.contenido.map((item, index) => (
-                    <p key={index} className="flex items-center mb-4">
+                    <p key={index} className="flex items-center mb-4 mr-8">
                       <Dot className="text-black shrink-0" />
                       {item}
                     </p>
