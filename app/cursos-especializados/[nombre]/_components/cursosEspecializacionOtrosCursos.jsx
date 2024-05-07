@@ -54,7 +54,7 @@ const CursoCard = ({ curso }) => (
       className="object-cover -z-10"
     />
     <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
-    <p>{curso.descripcion}</p>
+    {/* <p>{curso.descripcion}</p> */}
     <Button className="w-full text-lg rounded-3xl" asChild>
       <Link href={`/cursos-especializados/${curso.nombre}`}>Ver curso</Link>
     </Button>
