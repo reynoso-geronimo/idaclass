@@ -42,7 +42,7 @@ const CursosEspciealizacionOtrosCursos = ({ cursos }) => {
 };
 
 const CursoCard = ({ curso }) => (
-  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[34rem] gap-6 ">
+  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[24rem] border-2 gap-6 ">
     <Badge className="bg-orange-500 text-white absolute top-4 -left-2 pl-4">
       {curso.categorias[0].nombre}
     </Badge>
@@ -51,7 +51,7 @@ const CursoCard = ({ curso }) => (
       src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
       alt=""
       fill
-      className="object-cover -z-10"
+      className="object-cover object-top -z-10"
     />
     <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
     {/* <p>{curso.descripcion}</p> */}
