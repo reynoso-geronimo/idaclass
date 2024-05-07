@@ -2,6 +2,7 @@ import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import { Button } from "@/components/ui/button";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const OPTIONS = { align: "center" };
@@ -33,7 +34,9 @@ const CursoCard = ({ curso }) => (
     />
     <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
     {/* <p>{curso.descripcion}</p> */}
-    <Button className="w-full text-lg rounded-3xl">Ver curso</Button>
+    <Button className="w-full text-lg rounded-3xl" asChild>
+      <Link href={`/cursos-formacion/${curso.nombre}`}>Ver curso</Link>
+    </Button>
   </article>
 );
 
