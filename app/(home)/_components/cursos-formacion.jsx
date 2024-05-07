@@ -8,7 +8,7 @@ const CursosFormacion = async () => {
 
   const OPTIONS = { align: "start" };
   return (
-    <section className="my-12 sm:container">
+    <section className="my-12 container">
       <TituloSeccion className={`mb-0 px-2`} id="Cursos">
         Cursos de formación
       </TituloSeccion>
