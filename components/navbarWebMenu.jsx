@@ -34,15 +34,15 @@ const NavbarWebMenu = ({
     <div className="hidden lg:flex justify-around items-center gap-8">
       <Link
         href="/"
-        className={`${
-          pathname === "/" && "after:w-[2000px] text-idaclass4"
+        className={`after:translate-y-1 ${
+          pathname === "/" && "after:w-[100%] text-idaclass4"
         } ${classEscritorio}`}
       >
         Inicio
       </Link>
       <Link
         href="/nosotros"
-        className={`${
+        className={`after:translate-y-1 ${
           pathname === "/nosotros" && "after:w-[100%] text-idaclass4"
         } ${classEscritorio}`}
       >
@@ -52,7 +52,7 @@ const NavbarWebMenu = ({
       <Menubar className="border-none outline-none bg-transparent">
         <MenubarMenu>
           <MenubarTrigger
-            className={`flex ${classEscritorio} ${
+            className={`after:translate-y-1 flex ${classEscritorio} ${
               (pathname.includes("curso-formacion") ||
                 pathname.includes("cursos")) &&
               "after:w-[100%] text-idaclass4"
@@ -161,16 +161,16 @@ const NavbarWebMenu = ({
 
       <Link
         href="/comunidad"
-        className={`${
+        className={`after:translate-y-1 ${
           pathname.includes("comunidad") && "after:w-[100%] text-idaclass4"
         } ${classEscritorio}`}
       >
-        Comunidad IdaClass
+        Comunidad
       </Link>
 
       <Link
         href="https://wa.me/+5491135872204"
-        className={`flex items-start relative pr-8 ${
+        className={`after:translate-y-1 flex items-start relative pr-8 ${
           pathname === "/asesorate" && "after:w-[100%] text-idaclass4"
         } ${classEscritorio} fill-green-500 hover:fill-idaclass4`}
       >
