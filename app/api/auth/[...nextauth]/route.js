@@ -81,18 +81,17 @@ const handler = NextAuth({
     signIn: '/signin'
   }, callbacks: {
     async session({ session }) {
-      if (!session) {
-        try {
-          const sessionUser = await User.findOne({ where: { email: session.user.email } });
-          session.user.id = sessionUser.id.toString();
+      console.log("creando sesion");
+      try {
+        const sessionUser = await User.findOne({ where: { email: session.user.email } });
+        session.user.id = sessionUser.id.toString();
 
-          return session;
-        } catch (error) {
-          console.log("Error creando la sesion: ", error.message);
-          return error
-        }
+        return session;
+      } catch (error) {
+        console.log("Error creando la sesion: ", error.message);
+        return error
       }
-      return session
+
     },
     async signIn({ user, account, profile, email, credentials }) {
 
