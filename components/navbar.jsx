@@ -154,7 +154,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
             width={180}
             height={45}
             priority
-            className="brightness-150 hover:brightness-[100000%] transition-all ease-in duration-200"
+            className="brightness-150 hover:brightness-[100000%] transition-all ease-in-out duration-200"
           />
         </Link>
         <div className="flex items-center justify-end gap-12">
