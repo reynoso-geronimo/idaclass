@@ -11,7 +11,7 @@ const Page = () => {
   }, [session]);
   
    return(
-    <div>
+    <div className="container">
         {session && session.user ? ( user.name) : ("no user")}
     </div>
    )
