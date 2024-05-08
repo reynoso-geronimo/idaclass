@@ -1,15 +1,19 @@
 "use client";
 import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 const Page = () => {
   const { data: session } = useSession();
-  const entries = Object.entries(session?.user) || [];
+
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    session && session.user & setUser((session.user));
+    console.log(user);
+  }, [session]);
   
-{session && session.user?  (
-    <div className="container">
-      {entries.map((data,i) => (
-        <p key={i}>{data}</p>
-      ))}
+   return(
+    <div>
+        {session && session.user ? ( user.name) : ("no user")}
     </div>
-  ):"no user"}
+   )
 };
 export default Page;
