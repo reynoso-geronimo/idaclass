@@ -7,7 +7,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Menu, Minus } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import {
   Sheet,
   SheetClose,
@@ -17,6 +17,7 @@ import {
 
 import Promobar from "./promobar";
 import NavbarWebMenu from "./navbarWebMenu";
+import UserMenu from "./ui/userMenu";
 
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session } = useSession();
@@ -166,18 +167,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
 
           <div className="w-24 flex justify-end">
             {session && session.user ? (
-              <Avatar
-                onClick={() => signOut()}
-                className="cursor-pointer text-black"
-              >
-                <AvatarImage src={session.user.image} alt="avatar" />
-                <AvatarFallback>
-                  {session.user.name
-                    ?.split(" ")
-                    .map((n, i) => (i < 2 ? n[0] : ""))
-                    .join("") || ""}{" "}
-                </AvatarFallback>
-              </Avatar>
+              <UserMenu session={session} signOut={signOut}/>
             ) : (
               <Button className="rounded-3xl" onClick={() => signIn()}>
                 Ingresar
