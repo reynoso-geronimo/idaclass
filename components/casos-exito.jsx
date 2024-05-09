@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const casos = [
   {
     experiencia:
-      "“Fue una gran experiencia, desde el contenido de cada uno de los cursos, el material de estudio, la forma de comunicar y explicar da cada uno de los profes. Se entienda muy bien cada tema y las plataformas súper sencillas de utilizar.”",
+      "“Fue una gran experiencia, desde el contenido de cada uno de los cursos, el material de estudio, la forma de comunicar y explicar da cada uno de los profes. Se entiende muy bien cada tema y las plataformas súper sencillas de utilizar.”",
     avatar: "",
     nombre: "Lucia Kaus",
     carrera: "Personal Trainer ",
@@ -47,7 +47,7 @@ const casos = [
 ];
 
 const CasosExito = ({
-  titulo = "Historias que inspiran",
+  titulo = "Lo que dicen nuestros estudiantes",
   className = "bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]",
 }) => {
   return (

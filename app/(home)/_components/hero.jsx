@@ -36,7 +36,7 @@ const Hero = () => {
           </Button>
         </div>
         <div className="w-full flex justify-center">
-          <Introvideo />
+          <Introvideo texto="Conoce nuestro método"/>
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
@@ -76,11 +76,11 @@ const Hero = () => {
           <h2 className="text-xl xl:text-2xl max-w-[768px] mb-4 text-balance">
             Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
           </h2>
-          <Button size="lg" className="rounded-2xl font-bold w-48 h-10" asChild>
+          <Button size="lg" className="rounded-2xl font-bold w-64 h-10" asChild>
             <Link href="#Cursos">Ver todos los cursos</Link>
           </Button>
-          <div className=" w-48 flex justify-center font-bold h-10">
-            <Introvideo />
+          <div className=" w-64 flex justify-start font-bold h-10">
+            <Introvideo texto="Conoce nuestro método"/>
           </div>
         </div>
 

@@ -78,7 +78,7 @@ const Soluciones = () => {
                     </span>
                   </h5>
                   <p
-                    className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg leading-5 sm:leading-7 ${
+                    className={`text-balance max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg leading-5 sm:leading-7 ${
                       activo == solucion.id && `max-h-40`
                     }`}
                   >
@@ -134,7 +134,7 @@ const Soluciones = () => {
                     </span>
                   </h5>
                   <p
-                    className={`max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg leading-5 sm:leading-7 ${
+                    className={`text-balance max-h-0 overflow-hidden transition-all duration-1000 ease-in-out sm:text-lg leading-5 sm:leading-7 ${
                       activo == solucion.id && `max-h-40`
                     }`}
                   >
