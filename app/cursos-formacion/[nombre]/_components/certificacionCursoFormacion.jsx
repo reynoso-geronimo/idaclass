@@ -16,7 +16,7 @@ import Image from "next/image";
 
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
-const CertificacionCursoFormacion = () => {
+const CertificacionCursoFormacion = ({ nombre }) => {
   return (
     <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
       <div className="w-full lg:w-[25%]">
@@ -59,11 +59,17 @@ const CertificacionCursoFormacion = () => {
 
                   <Dialog>
                     <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
-                      {" "}
                       VER CERTIFICADO
                     </DialogTrigger>
-                    <DialogContent>
-                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
+                      <DialogDescription>
+                        <Image
+                          src={`/cursosFormacion/cursos/diploma-extension/${nombre}.svg`}
+                          alt="certificado"
+                          fill
+                          className="py-6"
+                        />
+                      </DialogDescription>
                     </DialogContent>
                   </Dialog>
                 </div>
@@ -85,11 +91,17 @@ const CertificacionCursoFormacion = () => {
                   {/* MODAL TRIGGER */}
                   <Dialog>
                     <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
-                      {" "}
                       VER CERTIFICADO
                     </DialogTrigger>
-                    <DialogContent>
-                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
+                      <DialogDescription>
+                        <Image
+                          src={`/cursosFormacion/cursos/diploma-ida/${nombre}.svg`}
+                          alt="certificado"
+                          fill
+                          className="py-6"
+                        />
+                      </DialogDescription>
                     </DialogContent>
                   </Dialog>
                 </div>
@@ -111,11 +123,17 @@ const CertificacionCursoFormacion = () => {
                   {/* MODAL TRIGGER */}
                   <Dialog>
                     <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
-                      {" "}
                       VER CERTIFICADO
                     </DialogTrigger>
-                    <DialogContent>
-                      <DialogDescription>CERTIFCIADO</DialogDescription>
+                    <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
+                      <DialogDescription>
+                        <Image
+                          src={`/cursosFormacion/cursos/diploma-extracertificacion/${nombre}.svg`}
+                          alt="certificado"
+                          fill
+                          className="py-6"
+                        />
+                      </DialogDescription>
                     </DialogContent>
                   </Dialog>
                 </div>

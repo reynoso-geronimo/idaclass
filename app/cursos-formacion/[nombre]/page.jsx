@@ -56,11 +56,10 @@ const CursoPage = async ({ params }) => {
   const contenido = JSON.parse(acerca_curso);
   return (
     <main className="flex flex-col">
-      {pais.country}
+      {/* {pais.country} */}
       <CursoFormacionHeader
         nombre={nombre}
         descripcion={descripcion}
-        imagen={imagen}
         modalidades={modalidades}
         videoid={videoid}
       />
@@ -90,7 +89,7 @@ const CursoPage = async ({ params }) => {
         perfil_texto_tres={perfil_texto_tres}
       />
 
-      <CertificacionCursoFormacion />
+      <CertificacionCursoFormacion nombre={nombre}/>
       <Separator className="my-6" />
       <CursoFormacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
