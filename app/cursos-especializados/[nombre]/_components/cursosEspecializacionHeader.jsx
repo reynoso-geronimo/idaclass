@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 
 const CursosEspciealizacionHeader = ({
   nombre,
@@ -17,10 +18,14 @@ const CursosEspciealizacionHeader = ({
           {nombre}
         </h1>
         <p className="lg:w-1/2">{descripcion}</p>
-        
+
         <div className="lg:flex lg:justify-center lg:items-center gap-6 lg:w-1/2">
-          <Button size="lg" className="font-bold rounded-2xl w-full lg:w-1/2">
-            INSCRIBIRME AHORA
+          <Button
+            size="lg"
+            className="font-bold rounded-2xl w-full lg:w-1/2"
+            asChild
+          >
+            <Link href="#inscripcion">INSCRIBIRME AHORA</Link>
           </Button>
           <Introvideo
             className={`flex items-center justify-center max-lg:mt-4 border-idaclass3 text-idaclass3 border-2 w-full h-[44px] lg:w-1/2 transition-none hover:scale-100 hover:drop-shadow-none`}
