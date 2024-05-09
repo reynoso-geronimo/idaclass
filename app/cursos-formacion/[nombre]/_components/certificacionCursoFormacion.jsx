@@ -18,8 +18,8 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CertificacionCursoFormacion = ({ nombre }) => {
   return (
-    <section className="container bg-gray-100 flex flex-col lg:flex-row items-center justify-center py-8">
-      <div className="w-full lg:w-[25%]">
+    <section className="container bg-gray-100 flex flex-col lg:flex-row lg:gap-4 items-center justify-center py-8">
+      <div className="w-full lg:w-[320px]">
         <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
           Certifica tus Conocimientos
         </TituloSeccion>
@@ -27,7 +27,7 @@ const CertificacionCursoFormacion = ({ nombre }) => {
           Accede a la doble <br className="max-lg:hidden" /> titulación
         </h3>
       </div>
-      <div className="w-full lg:w-[75%] relative">
+      <div className="w-full relative">
         <Carousel
           className="w-[100%]"
           opts={{
@@ -37,12 +37,12 @@ const CertificacionCursoFormacion = ({ nombre }) => {
           }}
           plugins={[
             Autoplay({
-              delay: 3000,
+              delay: 2000,
             }),
           ]}
         >
           <CarouselContent className="">
-            <CarouselItem className="basis-2/3 lg:basis-1/3">
+            <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
               <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
@@ -75,7 +75,7 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                 </div>
               </div>
             </CarouselItem>
-            <CarouselItem className="basis-2/3 lg:basis-1/3">
+            <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
               <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
@@ -107,7 +107,7 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                 </div>
               </div>
             </CarouselItem>
-            <CarouselItem className="basis-2/3 lg:basis-1/3">
+            <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
               <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
