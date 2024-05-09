@@ -21,7 +21,7 @@ const Page = async () => {
     <main>
       <CursosEspecializacionHeader />
       <CursosEspecializacionCaracteristicas />
-      <CursosEspecializacionAcerca />
+      {/* <CursosEspecializacionAcerca /> */}
       <CursosEspecializacionCategorias categoriasOnDemand={CategoriasEspecializacion}  cursos={cursos}/>
       
 

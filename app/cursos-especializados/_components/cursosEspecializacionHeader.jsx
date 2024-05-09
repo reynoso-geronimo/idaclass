@@ -3,13 +3,13 @@ import Image from "next/image";
 import headerWeb from "../../../public/cursosEspecializacion/HeaderWeb.png";
 import headerMobile from "../../../public/cursosEspecializacion/HeaderMobile.png";
 import vectorWeb from "../../../public/cursosEspecializacion/VectorWeb.svg";
-import vectorMobile from "../../../public/cursosEspecializacion/VectorMobile.svg";
 
 const CursosEspecializacionHeader = () => {
   return (
     <header className="container w-full py-8 h-[700px] sm:h-[500px] relative text-white flex flex-col justify-end lg:justify-center overflow-hidden">
       <h1 className="text-4xl sm:text-6xl font-bold">
-        Cursos <span className="text-idaclass4 max-sm:block">On Demand</span>
+        Cursos{" "}
+        <span className="text-idaclass4 max-sm:block">especializados</span>
       </h1>
       <div className="flex gap-1 items-center sm:-translate-x-8 relative">
         <h2 className="text-lg sm:text-2xl font-bold shrink-0">
@@ -22,18 +22,15 @@ const CursosEspecializacionHeader = () => {
         />
       </div>
       <p className="sm:max-w-lg my-9">
-        Es nuestro sistema de cursos con videos grabados,{" "}
+        Accede a nuestros cursos grabados, podrás ver los videos cuando y desde
+        donde quieras. Nuestro sistema On Demand es
         <span className="font-bold">
-          para que veas cuándo y desde dónde quieras
+          ideal para personas que quieren aprender en sus ratos libres, y elegir
+          su propio ritmo de aprendizaje.
         </span>
-        . Nuestro sistema On Demand es{" "}
-        <span className="font-bold">
-          ideal para personas que quieren aprender en sus ratos libres
-        </span>
-        , eligiendo su propio ritmo de aprendizaje.
       </p>
       <p className="font-semibold text-sm my-4 max-sm:text-center text-orange-500 italic">
-        Modalidad: Online
+        Modalidad: On Demand (100% online y a tu ritmo).
       </p>
       <Image
         src={headerWeb}
