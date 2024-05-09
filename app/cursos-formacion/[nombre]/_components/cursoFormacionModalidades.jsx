@@ -13,14 +13,14 @@ const CursoFormacionModalidades = ({ modalidades }) => {
         className="max-lg:hidden object-cover object-right"
       />
       {modalidades === "Online - Presencial" && (
-        <div className={"w-full max-w-md lg:max-w-full  absolute top-4  z-10"}>
-          <TituloSeccion
-            className={"text-center text-white text-balance leading-[50px]"}
-          >
-            Elegí la modalidad que más se{" "}
-            <span className="text-idaclass3">adapte a tus necesidades</span>
-          </TituloSeccion>
-        </div>
+        <TituloSeccion
+          className={
+            "z-10 px-0 md:text-3xl text-left lg:text-center text-white leading-[50px] md:leading-[80px] absolute top-4 max-lg:ml-8 lg:right-[50%] lg:translate-x-[50%] max-sm:w-60 max-w-md lg:max-w-max"
+          }
+        >
+          Elegí la modalidad que más se{" "}
+          <span className="text-idaclass3">adapte a tus necesidades</span>
+        </TituloSeccion>
       )}
 
       <div className="flex w-full justify-center flex-col lg:flex-row lg:w-[54rem]">
