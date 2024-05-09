@@ -15,7 +15,7 @@ import Link from "next/link";
 const CursoEspecializacionCard = ({ curso }) => {
   console.log(curso);
   return (
-    <Card className={"text-sm min-h-[480px] mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"}>
+    <Card className={"text-sm min-h-[430px] mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"}>
       <Image
         // src={`/${curso.imagen}`}
         src={`/cursosEspecializacion/cursos/headersWeb/${curso.nombre}.png`}
