@@ -21,9 +21,7 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     frecuencia: {
         type: DataTypes.STRING
     },
-    dedicacion: {
-        type: DataTypes.STRING
-    },
+
     modalidades: {
         type: DataTypes.STRING
     },

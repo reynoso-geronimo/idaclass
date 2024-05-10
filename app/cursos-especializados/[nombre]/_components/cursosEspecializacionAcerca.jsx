@@ -1,8 +1,9 @@
+import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import React from "react";
 
-const CursosEspciealizacionAcerca = ({ acerca = "" }) => {
+const CursosEspciealizacionAcerca = ({ acerca_curso = "" }) => {
   return (
     <div className="container pt-12 flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-[41%] flex flex-col items-center lg:items-start">
@@ -13,11 +14,9 @@ const CursosEspciealizacionAcerca = ({ acerca = "" }) => {
           Acerca de este curso
         </Badge>
 
-        <p className="text-sm font-semibold flex flex-col gap-2 mb-8">
-          {acerca}
-        </p>
-
-        <p className="text-center my-6 lg:text-left">{acerca}</p>
+        <div className="text-center my-6 lg:text-left">
+          <BlockRendererClient content={acerca_curso} />
+        </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 lg:w-[59%]">
         <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50 lg:w-1/3">
@@ -45,7 +44,8 @@ const CursosEspciealizacionAcerca = ({ acerca = "" }) => {
             Material Disponible
           </h4>
           <p>
-            Guías de Estudio. <br /> Biblioteca Online. <br /> Todos los apuntes descargables.
+            Guías de Estudio. <br /> Biblioteca Online. <br /> Todos los apuntes
+            descargables.
           </p>
         </div>
         <div className="border-2 border-idaclass rounded-2xl text-center p-4 bg-gray-50 lg:w-1/3">

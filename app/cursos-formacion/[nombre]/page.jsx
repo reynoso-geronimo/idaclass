@@ -31,7 +31,6 @@ const CursoPage = async ({ params }) => {
   const {
     nombre,
     descripcion,
-    imagen,
     precio,
     frecuencia,
     videoid,

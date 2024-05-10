@@ -27,28 +27,25 @@ const CursoPage = async ({ params }) => {
   const {
     nombre,
     descripcion,
-    imagen,
     precio,
     videoid,
-    acerca,
+    acerca_curso,
     modalidades,
     duracion,
-    dedicacion,
     modulos,
   } = curso;
-
+  const contenido = JSON.parse(acerca_curso);
   return (
     <main className="flex flex-col">
       <CursosEspciealizacionHeader
         nombre={nombre}
         descripcion={descripcion}
-        imagen={imagen}
         modalidades={modalidades}
         videoid={videoid}
         profesional={curso.profesionals[0]}
       />
 
-      <CursosEspciealizacionAcerca acerca={acerca} />
+      <CursosEspciealizacionAcerca acerca_curso={contenido} />
       <Separator className="my-6" />
       <CursosEspciealizacionObjetivos />
 
