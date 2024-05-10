@@ -5,7 +5,15 @@ import { getCursosFormacionFromDB } from "@/app/actions";
 
 const CursosFormacion = async () => {
   const cursosFormacion = await getCursosFormacionFromDB();
-
+  cursosFormacion.sort((a, b) => {
+    if (a.nombre === "Preparación Física Deportiva") {
+      return -1; // Mover este curso al principio del array
+    } else if (b.nombre === "Preparación Física Deportiva") {
+      return 1; // Mover este curso al final del array
+    } else {
+      return 0; // Mantener el orden de los demás cursos
+    }
+  });
   const OPTIONS = { align: "start" };
   return (
     <section className="my-12 container">
