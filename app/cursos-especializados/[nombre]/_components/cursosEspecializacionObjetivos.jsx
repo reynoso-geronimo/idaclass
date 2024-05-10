@@ -4,7 +4,12 @@ import React from "react";
 import bgWeb from "../../../../public/cursosEspecializacion/cursos/objetivosBgWeb.png";
 import bgMobile from "../../../../public/cursosEspecializacion/cursos/objetivosBgMobile.png";
 import CertificacionCursosEspciealizacion from "./certificacionCursosEspecializacion";
-const CursosEspciealizacionObjetivos = () => {
+const CursosEspciealizacionObjetivos = ({
+  objetivo_titulo,
+  objetivo_texto,
+  perfil_texto,
+  perfil_titulo,
+}) => {
   return (
     <section className="">
       <div className="container flex flex-col lg:flex-row lg:pt-8 relative">
@@ -25,7 +30,7 @@ const CursosEspciealizacionObjetivos = () => {
           height={5000}
           width={5000}
           alt=""
-          className="w-full object-contain lg:w-[45%]"
+          className="w-full object-contain lg:w-[45%] max-lg:hidden"
         />
         <article className="container text-white pb-8 px-4 max-lg:mt-24">
           <h3
@@ -36,10 +41,8 @@ const CursosEspciealizacionObjetivos = () => {
             Objetivos <br className="lg:hidden" /> del Curso
           </h3>
           <Objetivo
-            titulo="Profesional Certificado"
-            texto={
-              "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo. "
-            }
+            titulo={objetivo_titulo}
+            texto={objetivo_texto}
           />
         </article>
         <article className="container text-white pb-8 px-4">
@@ -51,10 +54,8 @@ const CursosEspciealizacionObjetivos = () => {
             Perfil del <br className="lg:hidden" /> Egresado
           </h3>
           <Objetivo
-            titulo="Profesional Certificado"
-            texto={
-              "El egresado del curso de Preparador Físico Deportivo se distingue como un profesional certificado y altamente  capacitado en el ámbito del rendimiento deportivo."
-            }
+            titulo={perfil_titulo}
+            texto={perfil_texto}
           />
           <CertificacionCursosEspciealizacion />
         </article>

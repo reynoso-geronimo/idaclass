@@ -24,7 +24,7 @@ const CursoFormacionObjetivos = ({nombre, ojetivo_titulo_uno, ojetivo_texto_uno,
           height={1000}
           width={1000}
           alt=""
-          className="w-full object-contain -translate-y-6 lg:w-1/3"
+          className="w-full object-contain -translate-y-6 lg:w-1/3 max-lg:hidden"
         />
         <article className="container text-white pb-8 px-4">
           <h3

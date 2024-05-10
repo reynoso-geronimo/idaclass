@@ -7,7 +7,6 @@ import Link from "next/link";
 const CursosEspciealizacionHeader = ({
   nombre,
   descripcion,
-  modalidades,
   videoid,
   profesional,
 }) => {
@@ -17,7 +16,7 @@ const CursosEspciealizacionHeader = ({
         <h1 className="text-4xl lg:text-5xl font-bold mb-8 tracking-tight max-w-32">
           {nombre}
         </h1>
-        <p className="lg:w-1/2">{descripcion}</p>
+        <p className="lg:w-1/2 mb-4">{descripcion}</p>
 
         <div className="lg:flex lg:justify-center lg:items-center gap-6 lg:w-1/2">
           <Button

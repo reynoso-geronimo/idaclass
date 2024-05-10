@@ -13,7 +13,9 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
   //console.log(contenido)
   return (
     <section className="lg:container">
-      <TituloSeccion>Contenido del curso</TituloSeccion>
+      <TituloSeccion className={"lg:text-6xl font-black"}>
+        Contenido del <span className="text-idaclass3">Curso</span>
+      </TituloSeccion>
       {/* <p className="text-center my-4 container">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ea
         possimus, magnam autem quas eos iusto minima animi tempora commodi.
@@ -23,7 +25,7 @@ const CursoFormacionContenidoCurso = ({ modulos }) => {
 
       <div className="flex  flex-col items-center lg:items-start lg:flex-row gap-4">
         {contenido !== null ? (
-          <Accordion type="single" collapsible className="lg:w-[50%] px-8">
+          <Accordion type="single" collapsible className="w-full lg:w-[50%] px-8">
             {JSON.parse(modulos).map((modulo, index) => (
               <AccordionItem value={`item-${index + 1}`} key={index}>
                 <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 text-pretty gap-4">
