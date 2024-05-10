@@ -56,34 +56,33 @@ const Ventajas = () => {
             </div>
 
             <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight pb-2">
-              La experiencia educativa más avanzada
+              La experiencia educativa más innovadora
             </h3>
             <p className="text-pretty lg:text-lg text-center lg:text-left">
-              Con el sistema Learning by Doing, nos aseguramos que aprendas con
-              rapidez y efectividad los fundamentos teóricos sin aburrirte,
-              ¡aprenderás como si vieras Netflix!
+              Aprende de forma online, con clases en vivo. A través de nuestra
+              plataforma interactiva, nos aseguramos que aprendas con rapidez y
+              efectividad los fundamentos teóricos sin aburrirte.
             </p>
             <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
-              Aplicarás los conocimientos desde el primer día y tendrás
-              prácticas reales con alumnos.
+              Con el sistema Learning by Doing aplicarás los conocimientos desde
+              el primer día y tendrás prácticas reales con alumnos.
             </p>
             <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 text-sm sm:text-base">
               <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Clases en vivo
+                Trabajos en equipo
               </li>
               <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Contenidos actualizados
-              </li>
-
-              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
-                <Dot fill="black " className="shrink-0" />
-                Plataforma exclusiva
+                Desarrollo de proyectos propios
               </li>
               <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
-                Acceso de por vida
+                Acompañamiento de tutores
+              </li>
+              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
+                <Dot fill="black " className="shrink-0" />
+                Staff de expertos Internacionales
               </li>
             </ul>
           </div>
@@ -136,12 +135,13 @@ const Ventajas = () => {
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
             <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight pb-2">
-            Programa educativo de prestigio
-
+              Programa educativo de prestigio
             </h3>
             <p className="text-pretty lg:text-lg ">
-            Somos reconocidos como líderes regionales en la industria hace más de 25 años. Nuestra formación te respaldará con el prestigio de IdaClass y podrás obtener la certificación de mayor reconocimiento y aval internacional.
-
+              Somos reconocidos como líderes regionales en la industria hace más
+              de 25 años. Nuestra formación te respaldará con el prestigio de
+              IdaClass y podrás obtener la certificación de mayor reconocimiento
+              y aval internacional.
             </p>
             {/* <ul className="flex flex-col py-2 text-sm sm:text-base">
               <li className="flex">
