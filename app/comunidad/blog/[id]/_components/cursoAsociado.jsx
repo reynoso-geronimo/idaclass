@@ -41,7 +41,7 @@ const CursoAsociado = async ({ curso }) => {
             className="font-bold rounded-2xl w-full lg:translate-y-6"
             asChild
           >
-            <Link href={`/cursos/${curso && curso.nombre}`}>
+            <Link href={`/cursos-especializados/${curso && curso.nombre}`}>
               Mas Informacion
             </Link>
           </Button>

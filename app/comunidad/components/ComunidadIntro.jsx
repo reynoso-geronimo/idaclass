@@ -19,7 +19,7 @@ const ComunidadIntro = () => {
         </h3>
 
         <h4 className="font-bold text-xl mt-12 mb-4">
-          Bolsa de Trabajo <br /> y Pasantías
+          Bolsa de empleo <br /> y pasantías
         </h4>
         <p className="text-sm font-light">
           Accede a nuestra bolsa de trabajo exclusiva y a nuestros convenios

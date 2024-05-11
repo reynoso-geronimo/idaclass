@@ -28,12 +28,12 @@ const Sidebar = ({ posts }) => {
         <EstudiaConNosotros sideBar={true} />
       </div>
       <Beca sideBar={true} />
-      <div className="space-y-6">
+      {/* <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">
           ¡Enseñá con nosotros!
         </h2>
         <EnsenaConNosotros sideBar={true} />
-      </div>
+      </div> */}
       <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">Contacto</h2>
         <Asesorate sideBar={true} />

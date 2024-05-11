@@ -182,6 +182,12 @@ export async function getBlogPostFromDb(id) {
         {
           model: Curso,
           as: "cursos",
+          include: [
+            {
+              model: Profesional,
+              as: "profesionals",
+            },
+          ],
         },
         {
           model: Categoria,
