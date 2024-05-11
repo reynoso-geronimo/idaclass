@@ -8,7 +8,6 @@ const CursoFormacionHeader = ({
   descripcion,
   modalidades,
   videoid,
-  
 }) => {
   return (
     <section className="relative lg:container text-white">
@@ -20,15 +19,21 @@ const CursoFormacionHeader = ({
         <p className="font-semibold text-sm my-4 max-lg:text-center text-orange-500 italic">
           Modalidad: {modalidades}
         </p>
-        <div className="lg:flex lg:justify-center lg:items-center gap-6 lg:w-1/2">
-          <Button size="lg" className="font-bold rounded-2xl w-full lg:w-1/2" asChild>
+        <div className="lg:flex lg:justify-start lg:items-center gap-6 lg:w-1/2">
+          <Button
+            size="lg"
+            className="font-bold rounded-2xl w-full lg:w-1/2"
+            asChild
+          >
             <Link href="#inscripcion">INSCRIBIRME AHORA</Link>
           </Button>
-          <Introvideo
-            className={`flex items-center justify-center max-lg:mt-4 border-idaclass3 text-idaclass3 border-2 w-full h-[44px] lg:w-1/2 transition-none hover:scale-100 hover:drop-shadow-none`}
-            texto="VER RESUMEN"
-            videoid={videoid}
-          />
+          {videoid && (
+            <Introvideo
+              className={`flex items-center justify-center max-lg:mt-4 border-idaclass3 text-idaclass3 border-2 w-full h-[44px] lg:w-1/2 transition-none hover:scale-100 hover:drop-shadow-none`}
+              texto="VER RESUMEN"
+              videoid={videoid}
+            />
+          )}
         </div>
       </div>
       <Image
@@ -40,7 +45,7 @@ const CursoFormacionHeader = ({
         alt=""
       />
       <Image
-       src={`/cursosFormacion/cursos/headersWeb/${nombre}.png`}
+        src={`/cursosFormacion/cursos/headersWeb/${nombre}.png`}
         fill
         priority
         sizes="100vw"

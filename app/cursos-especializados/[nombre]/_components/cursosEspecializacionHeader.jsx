@@ -18,7 +18,7 @@ const CursosEspciealizacionHeader = ({
         </h1>
         <p className="lg:w-1/2 mb-4">{descripcion}</p>
 
-        <div className="lg:flex lg:justify-center lg:items-center gap-6 lg:w-1/2">
+        <div className="lg:flex lg:justify-start lg:items-center gap-6 lg:w-1/2">
           <Button
             size="lg"
             className="font-bold rounded-2xl w-full lg:w-1/2"
@@ -26,11 +26,13 @@ const CursosEspciealizacionHeader = ({
           >
             <Link href="#inscripcion">INSCRIBIRME AHORA</Link>
           </Button>
-          <Introvideo
-            className={`flex items-center justify-center max-lg:mt-4 border-idaclass3 text-idaclass3 border-2 w-full h-[44px] lg:w-1/2 transition-none hover:scale-100 hover:drop-shadow-none`}
-            texto="VER RESUMEN"
-            videoid={videoid}
-          />
+          {videoid && (
+            <Introvideo
+              className={`flex items-center justify-center max-lg:mt-4 border-idaclass3 text-idaclass3 border-2 w-full h-[44px] lg:w-1/2 transition-none hover:scale-100 hover:drop-shadow-none`}
+              texto="VER RESUMEN"
+              videoid={videoid}
+            />
+          )}
         </div>
         {profesional && (
           <div className="w-auto py-2 bg-gray-500 bg-opacity-50 backdrop-blur-lg border-gray-400 border  rounded-full lg:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
