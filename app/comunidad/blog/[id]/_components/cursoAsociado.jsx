@@ -1,4 +1,3 @@
-import { getCursoFromDB } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Clock, GraduationCap } from "lucide-react";
