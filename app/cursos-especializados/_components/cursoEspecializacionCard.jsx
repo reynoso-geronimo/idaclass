@@ -33,7 +33,7 @@ const CursoEspecializacionCard = ({ curso }) => {
         </span>
         <Separator />
         <span className="flex gap-2">
-          <Clock /> {curso.horas ? curso.horas : "150 "} Horas
+          <Clock /> {curso.duracion ? curso.duracion : "150 "} Horas
         </span>
         <Separator />
       </CardHeader>

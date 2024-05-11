@@ -7,9 +7,8 @@ import Link from "next/link";
 import React from "react";
 
 const CursoAsociado = async ({ curso }) => {
-  
-   if (!curso) {
-     return null;
+  if (!curso) {
+    return null;
   }
 
   return (
@@ -25,17 +24,28 @@ const CursoAsociado = async ({ curso }) => {
           {curso ? curso.descripcion : "lorem"}
         </p>
         <div className="space-y-3 w-full lg:w-fit">
-          <Separator />
-          <p className="space-x-2">
-            <GraduationCap className="inline" />
-            <span className="font-bo ld">Docente:</span> {curso.profesionals?.length>0&&curso.profesionals[0].nombre}
-          </p>
-          <Separator />
-          <p className="space-x-2">
-            <Clock className="inline" />
-            <span className="font-bold">Horas:</span>{" "}
-            {curso ? curso.horas : "150"} Horas
-          </p>
+          {curso.profesionals?.length > 0 && (
+            <>
+              <Separator />
+              <p className="space-x-2">
+                <GraduationCap className="inline" />
+                <span className="font-bo ld">Docente:</span>{" "}
+                {curso.profesionals[0].nombre}
+              </p>
+            </>
+          )}
+          {
+            curso.duracion && (
+              <>
+                <Separator />
+                <p className="space-x-2">
+                  <Clock className="inline" />
+                  <span className="font-bold">Duracion:</span>{" "}
+                  {curso.duracion} Horas
+                </p>
+              </>
+            )
+          }
           <Separator />
           <Button
             className="font-bold rounded-2xl w-full lg:translate-y-6"
