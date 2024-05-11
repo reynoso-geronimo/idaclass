@@ -10,22 +10,42 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Compartir = () => {
+  const url = window.location.href;
   const copyUrlToClipboard = () => {
     toast("Enlace copiado", {
       description: "Puedes compartirlo desde tu portapapeles",
       duration: 5000,
     });
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(url);
   };
-  //!! AREGLAR LOS VINCULOS
+
+  const shareOnFacebook = () => {
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+      "_blank"
+    );
+  };
+
+  const shareOnLinkedIn = () => {
+    window.open(`https://www.linkedin.com/shareArticle?url=${url}`, "_blank");
+  };
+
+  const shareOnTwitter = () => {
+    const text = "Mira este artículo interesante:";
+    window.open(
+      `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
+      "_blank"
+    );
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-2 bg-idaclass4 text-white font-bold text-sm py-2 px-10 rounded-3xl outline-none">
-        <Share2 fill="white"/> COMPARTIR
+        <Share2 fill="white" /> COMPARTIR
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem
-          className="flex items-center gap-1"
+          className="flex items-center gap-1 cursor-pointer"
           onClick={copyUrlToClipboard}
         >
           <Link
@@ -35,7 +55,10 @@ const Compartir = () => {
           Copiar Enlace
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="flex items-center gap-1">
+        <DropdownMenuItem
+          className="flex items-center gap-1 cursor-pointer"
+          onClick={shareOnFacebook}
+        >
           <Facebook
             className="rounded-full border border-gray-400 p-0.5 "
             size={24}
@@ -43,7 +66,10 @@ const Compartir = () => {
           Facebook
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="flex items-center gap-1">
+        <DropdownMenuItem
+          className="flex items-center gap-1 cursor-pointer"
+          onClick={shareOnLinkedIn}
+        >
           <Linkedin
             className="rounded-full border border-gray-400 p-0.5 "
             size={24}
@@ -51,7 +77,10 @@ const Compartir = () => {
           Linkedin
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="flex items-center gap-1">
+        <DropdownMenuItem
+          className="flex items-center gap-1 cursor-pointer"
+          onClick={shareOnTwitter}
+        >
           <Twitter
             className="rounded-full border border-gray-400 p-0.5 "
             size={24}
