@@ -5,10 +5,12 @@ import Compartir from "./compartir";
 import PostCard from "@/app/comunidad/components/postCard";
 import EstudiaConNosotros from "@/components/estudiaConNosotros";
 import EnsenaConNosotros from "@/components/ensenaConNosotros";
+import CursosSidebar from "./cursosSidebar";
 
-const Sidebar = ({ posts }) => {
+const Sidebar = ({ posts, categoria, curso }) => {
+  
   return (
-    <div className="w-full lg:w-[330px] max-lg:grid grid-cols-1 py-6 space-y-6 bg-[#020817] px-8 lg:rounded-2xl mb-8">
+    <div className="w-full lg:w-[330px] max-lg:grid grid-cols-1 py-6 space-y-6 bg-[#020817] px-4 lg:rounded-2xl mb-8">
       <div className="w-full grid grid-cols-1 mb-4 gap-6">
         <h2 className="text-white font-bold text-2xl text-center">
           Otras notas que pueden interesarte
@@ -34,6 +36,12 @@ const Sidebar = ({ posts }) => {
         </h2>
         <EnsenaConNosotros sideBar={true} />
       </div> */}
+       <div className="space-y-6">
+        <h2 className="text-white font-bold text-2xl text-center">
+          Cursos que podrian interesarte
+        </h2>
+        <CursosSidebar categoria={categoria} curso={curso}/>
+      </div> */
       <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">Contacto</h2>
         <Asesorate sideBar={true} />

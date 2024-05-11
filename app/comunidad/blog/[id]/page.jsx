@@ -99,7 +99,7 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <Sidebar posts={posts} />
+        <Sidebar posts={posts} categoria={post.categorias[0].id || " "} curso={post.cursos[0] ? post.cursos[0].nombre : null}/>
       </div>
     </main>
   );

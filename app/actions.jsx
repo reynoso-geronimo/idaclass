@@ -44,7 +44,7 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
-export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual) {
+export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual, limit=4) {
   try {
     const cursos = await Curso.findAll({
       where: { nombre: { [Op.not]: cursoActual } },
@@ -56,7 +56,7 @@ export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual) {
       },
     });
 
-    if (cursos.length < 4) {
+    if (cursos.length < limit) {
       const cursosCategoria1 = await Curso.findAll({
         include: [
           {
@@ -68,7 +68,7 @@ export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual) {
             as: "categorias",
           },
         ],
-        limit: 4 - cursos.length,
+        limit: limit - cursos.length,
       });
 
       cursos.push(...cursosCategoria1);
