@@ -3,13 +3,12 @@ import Image from "next/image";
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
-import { ArrowDown } from "lucide-react";
-import Link from "next/link";
 import Sidebar from "./_components/sidebar";
 import { getBlogPostFromDb, getBlogPostsFromDb } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
 import Contenido from "./_components/contenido";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import UniteComunidad from "./_components/uniteComunidad";
 
 const page = async ({ params }) => {
   const [post, posts] = await Promise.all([
@@ -20,13 +19,13 @@ const page = async ({ params }) => {
 
   return (
     <main className="">
-      <div className=" w-full lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% lg:container relative text-white">
+      <div className=" w-full pb-8 lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% lg:container relative text-white">
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
             src={"/blog/" + post.foto}
             alt={post.titulo}
             fill
-            className={`object-contain object-top lg:object-cover -z-10`}
+            className={`w-full h-auto object-top lg:object-cover -z-10`}
           />
         </div>
         <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
@@ -59,59 +58,28 @@ const page = async ({ params }) => {
             </h2>
           </div>
           {post.profesionals[0] && (
-          <div className="w-auto flex items-center mt-8 mb-8 gap-2">
-            <Avatar className="h-14 w-14">
-              <AvatarImage
-                src={`/profesional/${`profesional.nombre`}.png`}
-                alt={`profesional.nombre`}
-              />
-              <AvatarFallback>PR</AvatarFallback>
-            </Avatar>
-            <div className="pr-2">
-             <p className="font-medium text-sm">Escrtio por:</p>
-              <h2 className="font-bold text-lg">{post.profesionals[0].nombre}</h2>
-              <p className="font-medium text-sm">{post.profesionals[0].titulo}</p>
+            <div className="w-auto flex items-center gap-2">
+              <Avatar className="h-14 w-14">
+                <AvatarImage
+                  src={`/profesional/${`profesional.nombre`}.png`}
+                  alt={`profesional.nombre`}
+                />
+                <AvatarFallback>PR</AvatarFallback>
+              </Avatar>
+              <div className="pr-2">
+                <p className="font-medium text-sm">Escrtio por:</p>
+                <h2 className="font-bold text-lg">
+                  {post.profesionals[0].nombre}
+                </h2>
+                <p className="font-medium text-sm">
+                  {post.profesionals[0].titulo}
+                </p>
+              </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
       </div>
-      <div className="container w-full h-80 lg:h-20 relative max-lg:bg-gradient-to-b from-[#01080D] to-[#151C26] text-white flex max-lg:flex-col items-center">
-        <h2 className="font-bold text-2xl text-center pt-6 lg:pt-2 pb-2 lg:text-left">
-          Sumate a la <br className="lg:hidden" />
-          Comunidad Ida<span className="text-idaclass3">Class</span>
-        </h2>
-        <ArrowDown
-          className="text-idaclass3 max-lg:mx-auto lg:mx-4 lg:-rotate-90"
-          size={32}
-          strokeWidth={3}
-        />
-        <h3 className="text-sm py-4">
-          Te invitamos a ser parte de esta revolución y{" "}
-          <br className="max-lg:hidden" /> transformar tus aspiraciones en
-          logros tangibles.
-        </h3>
-        {/* //!! que hacer con este link */}
-        <Link
-          href={"/signin"}
-          className="w-full flex items-center justify-center rounded-2xl  lg:w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
-        >
-          ¡UNITE!
-        </Link>
-
-        <Image
-          src={"/blog/bgWeb.png"}
-          fill
-          className="max-lg:hidden -z-10"
-          alt=""
-        />
-        <Image
-          src={"/blog/bgMobile.png"}
-          fill
-          className="lg:hidden object-contain object-right-bottom "
-          alt=""
-        />
-      </div>
+      <UniteComunidad />
       <div className="container flex flex-col lg:flex-row gap-8 mt-12">
         <div className="w-full ">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">

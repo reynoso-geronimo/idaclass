@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Compartir = () => {
-  const url = window.location.href;
+ 
   const copyUrlToClipboard = () => {
+    const url = window.location.href;
     toast("Enlace copiado", {
       description: "Puedes compartirlo desde tu portapapeles",
       duration: 5000,
@@ -20,6 +21,7 @@ const Compartir = () => {
   };
 
   const shareOnFacebook = () => {
+    const url = window.location.href;
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${url}`,
       "_blank"
@@ -27,10 +29,12 @@ const Compartir = () => {
   };
 
   const shareOnLinkedIn = () => {
+    const url = window.location.href;
     window.open(`https://www.linkedin.com/shareArticle?url=${url}`, "_blank");
   };
 
   const shareOnTwitter = () => {
+    const url = window.location.href;
     const text = "Mira este artículo interesante:";
     window.open(
       `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
