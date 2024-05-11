@@ -2,8 +2,7 @@ import TarjetaModalidad from "./tarjeta-modalidad";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 
-const CursoFormacionModalidades = ({ modalidades }) => {
-  console.log(modalidades);
+const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
   return (
     <section id="inscripcion" className="container relative">
       <Image
@@ -25,11 +24,11 @@ const CursoFormacionModalidades = ({ modalidades }) => {
 
       <div className="flex w-full justify-center flex-col lg:flex-row lg:w-[54rem]">
         {modalidades.includes("Online") ? (
-          <TarjetaModalidad modalidad={"ONLINE"} />
+          <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo}/>
         ) : (
           ""
         )}
-        {modalidades.includes("Presencial") && <TarjetaModalidad />}
+        {modalidades.includes("Presencial") && <TarjetaModalidad modalidad={"PRESENCIAL"} nombre={nombre} tipo={tipo}/>}
       </div>
     </section>
   );

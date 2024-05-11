@@ -6,6 +6,8 @@ import Blog from "@/models/Blog";
 import { Op } from "sequelize";
 import Categoria from "@/models/Categoria";
 import Profesional from "@/models/Profesional";
+import { MercadoPagoConfig, Preference } from "mercadopago";
+import { redirect } from "next/navigation";
 
 export async function getCursos() {
   try {
@@ -204,4 +206,38 @@ export async function getBlogPostFromDb(id) {
   } catch (error) {
     console.log(error);
   }
+}
+
+export async function inscripcion(formData) {
+  "use server";
+
+  const client = new MercadoPagoConfig({
+    accessToken: process.env.MP_ACCESS_TOKEN,
+  });
+  
+
+  const preference = await new Preference(client).create({
+    body: {
+      payment_methods: {
+        excluded_payment_methods: [],
+        excluded_payment_types: [],
+        installments: 3,
+      },
+      items: [
+        {
+          title:
+            formData.get("nombre") +
+            " - " +
+            formData.get("modalidad") +
+            " - " +
+            formData.get("tipo"),
+          quantity: 1,
+          unit_price: parseFloat(formData.get("precio")),
+        },
+      ],
+    },
+  });
+  //console.log(preference);
+  //console.log(preference.sandbox_init_point);
+  redirect(preference.sandbox_init_point);
 }

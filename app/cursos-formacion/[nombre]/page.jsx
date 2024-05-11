@@ -95,7 +95,7 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades modalidades={modalidades} />
+      <CursoFormacionModalidades modalidades={modalidades} nombre={nombre} precio={precio} tipo={"CURSO DE FORMACION"}/>
       <Separator className="my-6" />
       <BecaAsesorate />
       <Separator className="my-6" />

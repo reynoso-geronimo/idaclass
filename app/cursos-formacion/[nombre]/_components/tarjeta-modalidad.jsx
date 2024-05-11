@@ -1,3 +1,5 @@
+"use client"
+import { inscripcion } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,40 +9,22 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-import { MercadoPagoConfig, Preference } from "mercadopago";
-import { redirect } from "next/navigation";
-// Agrega credenciales
-const client = new MercadoPagoConfig({
-  accessToken: process.env.MP_ACCESS_TOKEN,
-});
-
-const TarjetaModalidad = ({ modalidad }) => {
-  async function inscripcion() {
-    "use server";
-    const preference = await new Preference(client).create({
-      body: {
-        payment_methods: {
-          excluded_payment_methods: [],
-          excluded_payment_types: [],
-          installments: 12,
-        },
-        items: [
-          {
-            title: "My product",
-            quantity: 1,
-            unit_price: 2000,
-          },
-        ],
-      },
-    });
-    console.log(preference);
-    console.log(preference.sandbox_init_point);
-    redirect(preference.sandbox_init_point);
-  }
-
+const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  const handleSubmit = (formData) => {
+   
+    if (status === "unauthenticated") {
+      router.push("/signin");
+    } else {
+      inscripcion(formData)
+      // Lógica para enviar el formulario de inscripción
+    }
+  };
   return (
     <div
       className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
@@ -113,11 +97,21 @@ const TarjetaModalidad = ({ modalidad }) => {
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
           <form
-            action={inscripcion}
-            className={`${modalidad === "ONLINE" ? "w-[100%]" : "xl:w-[50%]"} `}
+            action={handleSubmit}
+            className={` ${
+              modalidad === "ONLINE" ? "w-[100%]" : "w-full xl:w-[50%]"
+            } `}
           >
+            <input type="text" name="nombre" hidden defaultValue={nombre} />
+            <input
+              type="text"
+              name="modalidad"
+              hidden
+              defaultValue={modalidad}
+            />
+            <input type="number" name="precio" hidden defaultValue={precio} />
+            <input type="text" name="tipo" hidden defaultValue={tipo} />
             <Button size="lg" className={`w-full rounded-2xl`}>
-             
               INSCRIBIRME AHORA
             </Button>
           </form>
