@@ -18,9 +18,10 @@ import {
 import Promobar from "./promobar";
 import NavbarWebMenu from "./navbarWebMenu";
 import UserMenu from "./ui/userMenu";
+import { Skeleton } from "./ui/skeleton";
 
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const pathname = usePathname().replace(/%20/g, " ");
   return (
@@ -166,8 +167,10 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
           />
 
           <div className="w-24 flex justify-end">
-            {session && session.user ? (
-              <UserMenu session={session} signOut={signOut}/>
+            {status === "loading" ? (
+              <Skeleton className={"w-10 h-10 rounded-full"} />
+            ) : session && session.user ? (
+              <UserMenu session={session} signOut={signOut} />
             ) : (
               <Button className="rounded-3xl" onClick={() => signIn()}>
                 Ingresar
