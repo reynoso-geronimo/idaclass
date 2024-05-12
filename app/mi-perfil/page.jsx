@@ -1,6 +1,7 @@
 "use client";
 import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
+import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Avatar } from "@radix-ui/react-avatar";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -15,16 +16,16 @@ const Page = () => {
   }
 
   return (
-    <div className="container">
+    <main className="container mt-8 mb-auto">
       {session && session.user ? (
-        <div className="flex items-center space-x-4">
-          <Avatar className="h-12 w-12 rounded-full">
+        <div className="flex flex-col items-center  space-y-4 container">
+          {/* <Avatar className="h-12 w-12 rounded-full">
             <AvatarImage src={``} alt="imagen de perfil" />
             <AvatarFallback>Ida</AvatarFallback>
-          </Avatar>
-          <div className="space-y-2">
-            <p className="h-4 w-[250px]">{session.user.name}</p>
-          </div>
+          </Avatar> */}
+
+          <p className="text-center h-4 font-extrabold">{session.user.name}</p>
+          <TituloSeccion>MIS CURSOS</TituloSeccion>
         </div>
       ) : (
         <div className="flex items-center space-x-4">
@@ -35,7 +36,7 @@ const Page = () => {
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 export default Page;
