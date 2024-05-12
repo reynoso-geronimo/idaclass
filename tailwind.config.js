@@ -80,15 +80,13 @@ module.exports = {
         },
         'text-animation': {
           '0%': { transform: 'translateY(0)' },
-          '10%': { transform: 'translateY(0)' },
-          '30%': { transform: 'translateY(-5.62rem)' },
-          '40%': { transform: 'translateY(-11.24rem)' },
-          '60%': { transform: 'translateY(-11.24rem)' },
-          '70%': { transform: 'translateY(-5.62rem)' },
-          '80%': { transform: 'translateY(-5.62rem)' },
-          '90%': { transform: 'translateY(0)' },
-          '100%': { transform: 'translateY(0)' },
-        }
+          '17%': { transform: 'translateY(-5.62rem)' },
+          '34%': { transform: 'translateY(-5.62rem)' },
+          '50%': { transform: 'translateY(-11.24rem)' },
+          '67%': { transform: 'translateY(-11.24rem)' },
+          '84%': { transform: 'translateY(-16.86rem)' },
+          '100%': { transform: 'translateY(-16.86rem)' }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

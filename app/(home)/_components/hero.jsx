@@ -18,10 +18,11 @@ const Hero = () => {
             <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
               Emprende
             </span>
+            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+              Estudia
+            </span>
           </span>
-          <span className=" ">
-            en el mundo del  Sport Fitness.
-          </span>
+          <span className=" ">en el mundo del Sport Fitness.</span>
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
           Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
@@ -36,7 +37,7 @@ const Hero = () => {
           </Button>
         </div>
         <div className="w-full flex justify-center">
-          <Introvideo texto="Conoce nuestro método"/>
+          <Introvideo texto="Conoce nuestro método" />
         </div>
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
 
@@ -56,7 +57,7 @@ const Hero = () => {
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
         <div className="w-2/5 flex flex-col justify-around items-start mx-16 pt-16 ">
           <h2 className="relative w-full text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000 ">
-            <span className="text-white px-4 h-[55px] xl:h-[65px] overflow-hidden text-center w-fit flex flex-col absolute -top-[2px] bg-idaclass4 rounded-3xl">
+            <span className="text-white px-4 h-[68px] text-center w-fit flex flex-col overflow-hidden absolute -top-[2px] bg-idaclass4 rounded-3xl">
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
                 Estudia
               </span>
@@ -67,6 +68,9 @@ const Hero = () => {
 
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
                 Emprende
+              </span>
+              <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+                Estudia
               </span>
             </span>
             <span className="ml-[270px] xl:ml-[320px]">
@@ -80,7 +84,7 @@ const Hero = () => {
             <Link href="#Cursos">Ver todos los cursos</Link>
           </Button>
           <div className=" w-64 flex justify-start font-bold h-10">
-            <Introvideo texto="Conoce nuestro método"/>
+            <Introvideo texto="Conoce nuestro método" />
           </div>
         </div>
 
