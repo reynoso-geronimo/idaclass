@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { inscripcion } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,13 +15,17 @@ import { useRouter } from "next/navigation";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
   const { data: session, status } = useSession();
+  console.log(status);
   const router = useRouter();
-  const handleSubmit = (formData) => {
-   
+  const handleSubmit = formData => {
+
     if (status === "unauthenticated") {
       router.push("/signin");
     } else {
-      inscripcion(formData)
+      if (status === "loading") {
+        return
+      }
+      inscripcion(formData);
       // Lógica para enviar el formulario de inscripción
     }
   };
@@ -111,6 +115,9 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
             />
             <input type="number" name="precio" hidden defaultValue={precio} />
             <input type="text" name="tipo" hidden defaultValue={tipo} />
+            <input type="text" name="userName" hidden defaultValue={session?.user?.name} value={session?.user?.name} />
+            <input type="text" name="userId" hidden defaultValue={session?.user?.id} value={session?.user?.id} />
+            <input type="text" name="userEmail" hidden defaultValue={session?.user?.email} value={session?.user?.email} />
             <Button size="lg" className={`w-full rounded-2xl`}>
               INSCRIBIRME AHORA
             </Button>

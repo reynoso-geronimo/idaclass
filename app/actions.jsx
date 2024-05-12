@@ -8,6 +8,8 @@ import Categoria from "@/models/Categoria";
 import Profesional from "@/models/Profesional";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth/next"
+
 
 export async function getCursos() {
   try {
@@ -46,7 +48,11 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
-export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual, limit=4) {
+export async function getCursosPorCategoriaFromDB(
+  categoriaId,
+  cursoActual,
+  limit = 4
+) {
   try {
     const cursos = await Curso.findAll({
       where: { nombre: { [Op.not]: cursoActual } },
@@ -210,11 +216,11 @@ export async function getBlogPostFromDb(id) {
 
 export async function inscripcion(formData) {
   "use server";
+  //console.log(formData);
 
   const client = new MercadoPagoConfig({
     accessToken: process.env.MP_ACCESS_TOKEN,
   });
-  
 
   const preference = await new Preference(client).create({
     body: {
@@ -235,6 +241,17 @@ export async function inscripcion(formData) {
           unit_price: parseFloat(formData.get("precio")),
         },
       ],
+      payer: {
+        userName: formData.get("userName"),
+        userId: formData.get("userId"),
+        email: formData.get("userEmail"),
+      },
+      // back_urls: {
+      //   success: `${process.env.DOMAIN}/`,
+      //   failure: `${process.env.DOMAIN}/`,
+      //   pending: `${process.env.DOMAIN}/`,
+      // },
+      //auto_return: "approved",
     },
   });
   //console.log(preference);

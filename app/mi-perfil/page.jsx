@@ -3,17 +3,22 @@ import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Avatar } from "@radix-ui/react-avatar";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const router = useRouter();
 
-  
+  if (status === "unauthenticated") {
+    router.push("/signin");
+    return;
+  }
 
   return (
     <div className="container">
       {session && session.user ? (
         <div className="flex items-center space-x-4">
-          <Avatar className="h-12 w-12 rounded-full" >
+          <Avatar className="h-12 w-12 rounded-full">
             <AvatarImage src={``} alt="imagen de perfil" />
             <AvatarFallback>Ida</AvatarFallback>
           </Avatar>
