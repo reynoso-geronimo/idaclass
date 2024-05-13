@@ -247,7 +247,7 @@ export async function inscripcion(formData) {
       ],
 
       back_urls: {
-        success: `${process.env.NEXTAUTH_URL}/mi-perfil`,
+        success: `${process.env.MP_BACK_URL}/mi-perfil`,
         //failure: `${process.env.DOMAIN}/`,
         //pending: `${process.env.DOMAIN}/`,
       },
