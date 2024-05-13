@@ -13,23 +13,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CursoEspecializacionCard = ({ curso }) => {
-  console.log(curso);
   return (
-    <Card className={"text-sm min-h-[430px] mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"}>
+    <Card
+      className={
+        "text-sm min-h-[430px] mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"
+      }
+    >
       <Image
         // src={`/${curso.imagen}`}
-        src={`/cursosEspecializacion/cursos/headersWeb/${curso.nombre}.png`}
+        src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
         alt="curso"
         fill
+        quality={100}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="object-cover object-right-top "
       />
-      <CardTitle className="text-white z-10 p-6 pb-0">{curso.nombre ? curso.nombre : "150 "}</CardTitle>
+      <CardTitle className="text-white z-10 p-6 pb-0">
+        {curso.nombre ? curso.nombre : " "}
+      </CardTitle>
       <CardHeader className="flex justify-between z-10 ">
         {/* <CardTitle className="h-12 align-text-bottom">{curso.nombre}</CardTitle> */}
-        <CardDescription className="text-white ">{curso.descripcion}</CardDescription>
+        {/* <CardDescription className="text-white ">{curso.descripcion}</CardDescription> */}
         <Separator />
         <span className="flex gap-2">
-          <GraduationCap /> <span className="font-bold">Docente:</span> {curso.profesionals?.length>0&&curso.profesionals[0].nombre}
+          <GraduationCap /> <span className="font-bold">Docente:</span>{" "}
+          {curso.profesionals?.length > 0 && curso.profesionals[0].nombre}
         </span>
         <Separator />
         <span className="flex gap-2">

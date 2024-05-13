@@ -10,11 +10,26 @@ const CursosEspciealizacionHeader = ({
   videoid,
   profesional,
 }) => {
+  const splitNombreEnDosLineas = nombre => {
+    const palabras = nombre.split(" ");
+    const mitad = Math.ceil(palabras.length / 2);
+    const primeraLinea = palabras.slice(0, mitad).join(" ");
+    const segundaLinea = palabras.slice(mitad).join(" ");
+
+    return (
+      <>
+        {primeraLinea}
+        <br />
+        {segundaLinea}
+      </>
+    );
+  };
+
   return (
     <section className="relative lg:container text-white">
       <div className="px-8 max-lg:min-h-[700px] flex flex-col pb-10 lg:py-20 justify-end lg:justify-center">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8 tracking-tight max-w-32">
-          {nombre}
+        <h1 className="text-4xl lg:text-5xl font-bold mb-8 tracking-tight">
+          {splitNombreEnDosLineas(nombre)}
         </h1>
         <p className="lg:w-1/2 mb-4">{descripcion}</p>
 
