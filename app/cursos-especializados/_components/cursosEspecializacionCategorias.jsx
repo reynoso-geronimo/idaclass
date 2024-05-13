@@ -8,8 +8,12 @@ const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
 
   // ordenar categoriasOnDemand por cantidad (descendiente)
   const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
-    const cursosA = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === a));
-    const cursosB = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === b));
+    const cursosA = cursos.filter(curso =>
+      curso.categorias.some(c => c.nombre === a)
+    );
+    const cursosB = cursos.filter(curso =>
+      curso.categorias.some(c => c.nombre === b)
+    );
     return cursosB.length - cursosA.length; //  orden descendiente
   });
 
@@ -25,16 +29,20 @@ const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
             }}
             key={index}
             href={`#${categoriaOnDemand}`}
-            className={`${activo === index && "bg-idaclass4 text-white"} rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full`}
+            className={`${
+              activo === index && "bg-idaclass4 text-white"
+            } rounded-2xl font-bold border-idaclass4 text-idaclass4 border-2 py-2 text-center w-full`}
           >
             Categoria {categoriaOnDemand}
           </Link>
         ))}
       </nav>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-y-6 2xl:gap-y-16">
         {sortedCategorias.map((categoria, index) => {
           // Filter courses for this category
-          const cursosFiltrados = cursos.filter((curso) => curso.categorias.some((c) => c.nombre === categoria));
+          const cursosFiltrados = cursos.filter(curso =>
+            curso.categorias.some(c => c.nombre === categoria)
+          );
 
           return (
             <CursosEspecializacionCategoria

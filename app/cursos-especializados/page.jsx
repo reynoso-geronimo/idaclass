@@ -18,7 +18,7 @@ const Page = async () => {
   ];
 
   return (
-    <main>
+    <main className="mb-16">
       <CursosEspecializacionHeader />
       <CursosEspecializacionCaracteristicas />
       {/* <CursosEspecializacionAcerca /> */}
