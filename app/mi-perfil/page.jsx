@@ -5,10 +5,23 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Avatar } from "@radix-ui/react-avatar";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { getVentasFromDB } from "../actions";
+import { useEffect, useState } from "react";
 
 const Page = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const [compras, setCompras] = useState([]);
+  useEffect(() => {
+    async function fetchVentas() {
+      if (session && session.user) {
+        const ventas = await getVentasFromDB(session.user.id);
+        setCompras(ventas);
+      }
+    }
+
+    fetchVentas();
+  }, [session]);
 
   if (status === "unauthenticated") {
     router.push("/signin");
@@ -26,6 +39,14 @@ const Page = () => {
 
           <p className="text-center h-4 font-extrabold">{session.user.name}</p>
           <TituloSeccion>MIS CURSOS</TituloSeccion>
+          {compras.map(compra => (
+            <div
+              key={compra.id}
+              className="flex flex-col items-center  space-y-4 container"
+            >
+              <h3>{compra.descripcion}</h3>
+            </div>
+          ))}
         </div>
       ) : (
         <div className="flex flex-col items-center  space-y-4 container">

@@ -1,6 +1,6 @@
 "use server";
-
 import Curso from "@/models/Curso";
+import Venta from "@/models/Venta";
 import CursosFormacion from "@/models/CursoFormacion";
 import Blog from "@/models/Blog";
 import { Op } from "sequelize";
@@ -8,7 +8,6 @@ import Categoria from "@/models/Categoria";
 import Profesional from "@/models/Profesional";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
-import { getServerSession } from "next-auth/next";
 
 export async function getCursos() {
   try {
@@ -247,15 +246,30 @@ export async function inscripcion(formData) {
         },
       ],
 
-      // back_urls: {
-      //   success: `${process.env.DOMAIN}/`,
-      //   failure: `${process.env.DOMAIN}/`,
-      //   pending: `${process.env.DOMAIN}/`,
-      // },
-      //auto_return: "approved",
+      back_urls: {
+        success: `${process.env.NEXTAUTH_URL}/mi-perfil`,
+        //failure: `${process.env.DOMAIN}/`,
+        //pending: `${process.env.DOMAIN}/`,
+      },
+      auto_return: "approved",
     },
   });
   //console.log(preference);
   //console.log(preference.sandbox_init_point);
   redirect(preference.sandbox_init_point);
+}
+
+export async function getVentasFromDB(id) {
+  try {
+    const response = await Venta.findAll({
+      where: {
+        user_id: id,
+      },
+    });
+    const data = response.map(venta => venta.toJSON());
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
