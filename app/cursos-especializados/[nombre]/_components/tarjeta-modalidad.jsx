@@ -72,22 +72,12 @@ const TarjetaModalidad = ({ modalidad }) => {
         <CardFooter className="flex max-xl:flex-col gap-2">
           <Button
             size="lg"
-            className={`w-full ${
-              modalidad === "ONLINE" ? "w-[100%]" : "xl:w-[50%]"
-            } rounded-2xl `}
+            className={`w-full rounded-2xl `}
           >
             <ArrowRight className="mr-2" />
             INSCRIBIRME AHORA
           </Button>
-          {modalidad !== "ONLINE" && (
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[100%] xl:w-[50%]"
-            >
-              CONSULTAR SEDES
-            </Button>
-          )}
+          
         </CardFooter>
       </Card>
     </div>

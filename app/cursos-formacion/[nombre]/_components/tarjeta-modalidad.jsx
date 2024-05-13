@@ -12,6 +12,7 @@ import {
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
   const { data: session, status } = useSession();
@@ -128,8 +129,10 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
               variant="outline"
               className="border-2 border-idaclass4 text-idaclass4 font-bold rounded-2xl w-[100%] xl:w-[50%]"
               type="submit"
+              asChild
             >
-              CONSULTAR SEDES
+             <Link href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}>
+             CONSULTAR SEDES</Link>
             </Button>
           )}
         </CardFooter>
