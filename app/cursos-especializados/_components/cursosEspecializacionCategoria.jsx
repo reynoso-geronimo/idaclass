@@ -51,8 +51,8 @@ const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo })
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={`left-5 h-10 w-10 ${countCursos<=2&&"hidden"}`} />
-        <CarouselNext className={`right-5 h-10 w-10 ${countCursos<=2&&"hidden"}`} />
+        <CarouselPrevious className={`left-5 h-10 w-10 ${countCursos<=2&&"lg:hidden"}`} />
+        <CarouselNext className={`right-5 h-10 w-10 ${countCursos<=2&&"lg:hidden"}`} />
       </Carousel>
     </section>
   );
