@@ -8,14 +8,17 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import RegisterForm from "./_components/registerForm";
 import LoginForm from "./_components/loginForm";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 export default function SignIn() {
   const {data: session} = useSession();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get('callbackUrl');
+
   useEffect(() => {
-    
+    console.log(callbackUrl)
     if(session) {
       router.push('/');
     }
@@ -38,7 +41,7 @@ export default function SignIn() {
         <Separator />
         <Button
           onClick={() =>
-            signIn("google", { callbackUrl: window.location.origin })
+            signIn("google", { callbackUrl:callbackUrl })
           }
           className="w-full bg-slate-600 rounded-3xl"
         >

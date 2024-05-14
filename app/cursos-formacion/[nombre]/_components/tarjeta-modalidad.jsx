@@ -10,18 +10,17 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
   const { data: session, status } = useSession();
-  console.log(status);
   const router = useRouter();
   const handleSubmit = formData => {
 
     if (status === "unauthenticated") {
-      router.push("/signin");
+      signIn()
     } else {
       if (status === "loading") {
         return
