@@ -51,7 +51,7 @@ const CursoPage = async ({ params }) => {
 
       <CursosEspciealizacionAcerca acerca_curso={contenido} />
       <Separator className="my-6" />
-      <CursosEspciealizacionObjetivos  objetivo_titulo={objetivo_titulo} objetivo_texto={objetivo_texto} perfil_texto={perfil_texto} perfil_titulo={perfil_titulo}/> 
+      <CursosEspciealizacionObjetivos nombre={nombre}  objetivo_titulo={objetivo_titulo} objetivo_texto={objetivo_texto} perfil_texto={perfil_texto} perfil_titulo={perfil_titulo}/> 
 
       <Separator className="my-6" />
       <CursosEspciealizacionContenidoCurso modulos={modulos} />

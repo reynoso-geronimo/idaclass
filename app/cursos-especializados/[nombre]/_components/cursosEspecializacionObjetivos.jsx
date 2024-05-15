@@ -5,6 +5,7 @@ import bgWeb from "../../../../public/cursosEspecializacion/cursos/objetivosBgWe
 import bgMobile from "../../../../public/cursosEspecializacion/cursos/objetivosBgMobile.png";
 import CertificacionCursosEspciealizacion from "./certificacionCursosEspecializacion";
 const CursosEspciealizacionObjetivos = ({
+  nombre,
   objetivo_titulo,
   objetivo_texto,
   perfil_texto,
@@ -40,10 +41,7 @@ const CursosEspciealizacionObjetivos = ({
           >
             Objetivos <br className="lg:hidden" /> del Curso
           </h3>
-          <Objetivo
-            titulo={objetivo_titulo}
-            texto={objetivo_texto}
-          />
+          <Objetivo titulo={objetivo_titulo} texto={objetivo_texto} />
         </article>
         <article className="container text-white pb-8 px-4">
           <h3
@@ -53,11 +51,8 @@ const CursosEspciealizacionObjetivos = ({
           >
             Perfil del <br className="lg:hidden" /> Egresado
           </h3>
-          <Objetivo
-            titulo={perfil_titulo}
-            texto={perfil_texto}
-          />
-          <CertificacionCursosEspciealizacion />
+          <Objetivo titulo={perfil_titulo} texto={perfil_texto} />
+          <CertificacionCursosEspciealizacion nombre={nombre} />
         </article>
       </div>
     </section>

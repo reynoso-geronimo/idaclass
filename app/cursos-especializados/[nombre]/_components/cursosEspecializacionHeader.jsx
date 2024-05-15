@@ -70,6 +70,7 @@ const CursosEspciealizacionHeader = ({
         fill
         priority
         sizes="100vw"
+        quality={100}
         className="object-cover -z-10 object-top lg:hidden"
         alt=""
       />

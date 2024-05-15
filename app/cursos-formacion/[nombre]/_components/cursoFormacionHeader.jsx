@@ -56,6 +56,7 @@ const CursoFormacionHeader = ({
         fill
         priority
         sizes="100vw"
+        quality={100}
         className="object-cover -z-10 object-top lg:hidden"
         alt=""
       />
@@ -63,6 +64,7 @@ const CursoFormacionHeader = ({
         src={`/cursosFormacion/cursos/headersWeb/${nombre}.png`}
         fill
         priority
+        quality={100}
         sizes="100vw"
         className="object-cover -z-10 object-rigth-top max-lg:hidden"
         alt=""

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 
-const CertificacionCursosEspciealizacion = () => {
+const CertificacionCursosEspciealizacion = ({nombre}) => {
   return (
     <div className="flex flex-col justify-end gap-2 w-auto h-[180px] py-4 mt-8 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
       <Image
@@ -28,7 +28,7 @@ const CertificacionCursosEspciealizacion = () => {
           VER CERTIFICADO
         </DialogTrigger>
         <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
-          <DialogDescription><Image src={`/cursosEspecializacion/cursos/certificados/certificado idaclass on demand modelo 1.svg`} alt="certificado" fill className="py-6"/></DialogDescription>
+          <DialogDescription><Image src={`/cursosEspecializacion/cursos/certificados/${nombre}.svg`} alt="certificado" fill quality={100} className="py-6"/></DialogDescription>
         </DialogContent>
       </Dialog>
     </div>
