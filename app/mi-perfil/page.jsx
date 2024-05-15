@@ -3,7 +3,7 @@ import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Avatar } from "@radix-ui/react-avatar";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { getVentasFromDB } from "../actions";
 import { useEffect, useState } from "react";
@@ -24,7 +24,7 @@ const Page = () => {
   }, [session]);
 
   if (status === "unauthenticated") {
-    router.push("/signin");
+    signIn()
     return;
   }
 

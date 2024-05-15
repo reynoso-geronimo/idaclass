@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { Button } from "@/components/ui/button";
 
 const UniteComunidad = () => {
   const { data: session } = useSession();
@@ -26,13 +27,13 @@ const UniteComunidad = () => {
             <br className="max-lg:hidden" /> transformar tus aspiraciones en
             logros tangibles.
           </h3>
-        {/*//!!ver que hacer con este vinculo */}
-          <Link
-            href={"/signin"}
+          {/*//!!ver que hacer con este vinculo */}
+          <Button
+            onClick={() => signIn()}
             className="w-full flex items-center justify-center rounded-2xl  lg:w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
           >
             ¡UNITE!
-          </Link>
+          </Button>
         </>
       ) : (
         <>
