@@ -14,7 +14,7 @@ const Blog = sequelize.define("blogs", {
         type: DataTypes.STRING,
 
     },
-    
+
     subtitulo: {
         type: DataTypes.STRING,
 
@@ -44,6 +44,16 @@ Blog.belongsToMany(Curso, {
     otherKey: 'curso_id',
     timestamps: false
 }
+
+)
+Blog.belongsToMany(Curso, {
+    through: 'blogs_cursos_embudo_links',
+    foreignKey: 'blog_id',
+    otherKey: 'curso_id',
+    timestamps: false,
+    as: 'cursosEmbudo'
+}
+
 )
 Blog.belongsToMany(Categoria, {
     through: 'blogs_categoria_links',

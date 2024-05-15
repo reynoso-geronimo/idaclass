@@ -16,7 +16,7 @@ const CursoEspecializacionCard = ({ curso }) => {
   return (
     <Card
       className={
-        "text-sm min-h-[430px] mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"
+        "text-sm min-h-[430px] border-none mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"
       }
     >
       <Image

@@ -203,6 +203,10 @@ export async function getBlogPostFromDb(id) {
           model: Profesional,
           as: "profesionals",
         },
+        {
+          model: Curso,
+          as: "cursosEmbudo",
+        },
       ],
     });
     const data = response.toJSON();

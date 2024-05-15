@@ -80,8 +80,8 @@ const page = async ({ params }) => {
         </div>
       </div>
       <UniteComunidad />
-      <div className="container flex flex-col lg:flex-row gap-8 mt-12">
-        <div className="w-full ">
+      <div className="px-0 container flex flex-col lg:flex-row gap-8 mt-12">
+        <div className="w-full px-8">
           <div className="lg:flex lg:divide-x-[2px] gap-1 pt-2 divide-black">
             <p className="font-bold text-orange-500">
               {post.categorias[0].nombre}
@@ -99,7 +99,7 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <Sidebar posts={posts} categoria={post.categorias[0].id || " "} curso={post.cursos[0] ? post.cursos[0].nombre : null}/>
+        <Sidebar posts={posts} categoria={post.categorias[0].id || " "} curso={post.cursos[0] ? post.cursos[0].nombre : null} cursosEmbudo={post.cursosEmbudo}/>
       </div>
     </main>
   );
