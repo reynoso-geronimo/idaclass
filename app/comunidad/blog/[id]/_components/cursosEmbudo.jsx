@@ -8,7 +8,7 @@ const CursosEmbudo = async ({ cursosEmbudo }) => {
         </h2>
     <div className="space-y-4">
       {cursosEmbudo.map(curso => (
-        <CursoEspecializacionCard key={curso.id} curso={curso}/>
+        <CursoEspecializacionCard key={curso.id} curso={curso} minH="min-h-[340px]" />
       ))}
     </div>
     </>

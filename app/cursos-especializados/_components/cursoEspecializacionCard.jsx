@@ -12,11 +12,11 @@ import { Clock, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CursoEspecializacionCard = ({ curso }) => {
+const CursoEspecializacionCard = ({ curso, minH="min-h-[430px]"}) => {
   return (
     <Card
       className={
-        "text-sm min-h-[430px] border-none mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden"
+        `${minH} text-sm  border-none mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden`
       }
     >
       <Image
