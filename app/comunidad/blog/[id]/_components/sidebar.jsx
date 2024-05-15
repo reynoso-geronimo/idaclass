@@ -1,6 +1,5 @@
 import React from "react";
 import Asesorate from "@/components/asesorate";
-import Beca from "@/components/beca";
 import Compartir from "./compartir";
 import PostCard from "@/app/comunidad/components/postCard";
 import EstudiaConNosotros from "@/components/estudiaConNosotros";
@@ -33,7 +32,6 @@ const Sidebar = ({ posts, categoria, curso, cursosEmbudo }) => {
         </h2>
         <EstudiaConNosotros sideBar={true} />
       </div>
-      <Beca sideBar={true} />
       {/* <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">
           ¡Enseñá con nosotros!
