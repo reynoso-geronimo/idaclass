@@ -53,7 +53,7 @@ const ComunidadIntro = () => {
           Únete a nuestro Hub y accede a contenido gratuito de alto valor para
           impulsar tus habilidades. Encontrarás masterclasses, webinars,
           podcasts, ebooks y más. ¡Descubre todos nuestros recursos gratuitos
-          para potenciar tu camino labora
+          para potenciar tu camino laboral!
         </p>
         <Button className="w-48 mx-auto rounded-3xl mb-0 mt-4" size="sm">
           Descubre el Hub
