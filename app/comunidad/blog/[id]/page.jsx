@@ -19,13 +19,19 @@ const page = async ({ params }) => {
 
   return (
     <main className="">
-      <div className=" w-full pb-8 lg:aspect-[16/7] bg-gradient-to-t lg:bg-gradient-to-r from-[#1E2E57] from-60% md:from-40% lg:from-30% lg:container relative text-white">
+      <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white">
+        <Image
+          src={"/blog/headermobile/" + post.titulo + ".png"}
+          alt={post.titulo}
+          fill
+          className={`w-full h-auto object-top object-cover -z-10 lg:hidden`}
+        />
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
-            src={"/blog/" + post.foto}
+            src={"/blog/headerWeb/" + post.titulo + ".png"}
             alt={post.titulo}
             fill
-            className={`w-full h-auto object-top lg:object-cover -z-10`}
+            className={`w-full h-auto object-top lg:object-cover -z-10 max-lg:hidden`}
           />
         </div>
         <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
@@ -99,7 +105,12 @@ const page = async ({ params }) => {
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
-        <Sidebar posts={posts} categoria={post.categorias[0].id || " "} curso={post.cursos[0] ? post.cursos[0].nombre : null} cursosEmbudo={post.cursosEmbudo}/>
+        <Sidebar
+          posts={posts}
+          categoria={post.categorias[0].id || " "}
+          curso={post.cursos[0] ? post.cursos[0].nombre : null}
+          cursosEmbudo={post.cursosEmbudo}
+        />
       </div>
     </main>
   );

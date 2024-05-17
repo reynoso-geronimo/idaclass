@@ -8,7 +8,7 @@ const PostCard = ({ post }) => {
     <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[520px] mx-auto relative">
      { <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500`}> {post.categorias[0].nombre || " "}</Badge>}
       <Image
-        src={"/blog/" + post.foto}
+        src={"/blog/" + post.titulo + ".png"}
         width={520}
         height={520}
         alt="Imagen de Blog"
