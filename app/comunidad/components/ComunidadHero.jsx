@@ -10,7 +10,7 @@ const ComunidadHero = () => {
         <div className="w-full flex flex-col max-lg:items-center max-lg:text-center">
           <TituloSeccion className={`lg:text-left mb-2 p-0 ml-0`}>
             ¡Únete a la Comunidad <br className="max-lg:hidden" />
-            Comunidad <span className="text-idaclass4">Class</span>
+             <span className="text-idaclass4">Class</span>
             <span className="text-idaclass3">era!</span>
           </TituloSeccion>
           <h3 className="text-base font-semibold mb-4 text-idaclass4 italic">

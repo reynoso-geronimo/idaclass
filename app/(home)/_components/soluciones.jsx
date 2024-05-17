@@ -20,13 +20,15 @@ const Soluciones = () => {
         alt=""
         src="/assets/bg-soluciones.png"
         fill
-        sizes="50vw"
+        quality={100}
+        sizes="100vw"
         className="object-cover 2xl:object-contain  max-lg:hidden"
       />
       <Image
         alt=""
         src="/assets/bg-solucionesMobile.png"
         fill
+        quality={100}
         sizes="100vw"
         className="object-cover lg:hidden"
       />

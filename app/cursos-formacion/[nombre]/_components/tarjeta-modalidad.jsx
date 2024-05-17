@@ -1,5 +1,5 @@
 "use client";
-import { inscripcion } from "@/app/actions";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,25 +10,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
-  const { data: session, status } = useSession();
-  const router = useRouter();
-  const handleSubmit = formData => {
-
-    if (status === "unauthenticated") {
-      signIn()
-    } else {
-      if (status === "loading") {
-        return
-      }
-      inscripcion(formData);
-      // Lógica para enviar el formulario de inscripción
-    }
+  const checkoutParams = {
+    modalidad,
+    nombre,
+    tipo,
   };
+
+  const queryParams = new URLSearchParams(checkoutParams).toString();
+
   return (
     <div
       className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
@@ -100,28 +93,9 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <form
-            action={handleSubmit}
-            className={` ${
-              modalidad === "ONLINE" ? "w-[100%]" : "w-full xl:w-[50%]"
-            } `}
-          >
-            <input type="text" name="nombre" hidden defaultValue={nombre} />
-            <input
-              type="text"
-              name="modalidad"
-              hidden
-              defaultValue={modalidad}
-            />
-            <input type="number" name="precio" hidden defaultValue={precio} />
-            <input type="text" name="tipo" hidden defaultValue={tipo} />
-            <input type="text" name="userName" hidden defaultValue={session?.user?.name} value={session?.user?.name} />
-            <input type="text" name="userId" hidden defaultValue={session?.user?.id} value={session?.user?.id} />
-            <input type="text" name="userEmail" hidden defaultValue={session?.user?.email} value={session?.user?.email} />
-            <Button size="lg" className={`w-full rounded-2xl`}>
-              INSCRIBIRME AHORA
-            </Button>
-          </form>
+          <Button size="lg" className={`w-full rounded-2xl`} asChild>
+            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
+          </Button>
           {modalidad !== "ONLINE" && (
             <Button
               size="lg"
@@ -130,8 +104,11 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
               type="submit"
               asChild
             >
-             <Link href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}>
-             CONSULTAR SEDES</Link>
+              <Link
+                href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}
+              >
+                CONSULTAR SEDES
+              </Link>
             </Button>
           )}
         </CardFooter>

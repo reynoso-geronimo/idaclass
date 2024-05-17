@@ -218,7 +218,7 @@ export async function getBlogPostFromDb(id) {
 
 export async function inscripcion(formData) {
   "use server";
-  //console.log(formData);
+  console.log(formData);
 
   const client = new MercadoPagoConfig({
     accessToken: process.env.MP_ACCESS_TOKEN,
