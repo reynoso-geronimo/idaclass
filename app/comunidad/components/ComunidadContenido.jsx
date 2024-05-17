@@ -1,6 +1,6 @@
 import { getBlogPostsFromDb } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import {  CalendarClock, Newspaper } from "lucide-react";
+import { CalendarClock, Newspaper } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Eventos from "./eventos";
@@ -17,10 +17,9 @@ const ComunidadContenido = () => {
       <TituloSeccion className={`mb-0 px-0`}>
         Accede a contenido exclusivo
       </TituloSeccion>
-      <h4 className="text-center mb-12">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, esse!
-        Ratione a eius quidem animi quam eos fuga officia dolore odit, ipsam
-        earum debitis rem praesentium vero libero ipsa quaerat?
+      <h4 className="text-center font-semibold mb-12 mt-4">
+        Descubre contenido exclusivo y potencia tu conocimiento. Únete a la
+        élite del fitness con nuestros recursos premium.
       </h4>
       <div className="w-full flex max-lg:flex-col justify-between items-stretch gap-8">
         <div className="lg:w-9/12 max-lg:max-w-lg mx-auto">
@@ -48,10 +47,9 @@ const ComunidadContenido = () => {
               Noti
               <span className="text-idaclass3 ">Class</span>
             </h2>
-            {secondRow.map(((post,index) => (
-               <PostCardSidebar post={post} key={index}/>
-              ))
-            )}
+            {secondRow.map((post, index) => (
+              <PostCardSidebar post={post} key={index} />
+            ))}
           </div>
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <h2
