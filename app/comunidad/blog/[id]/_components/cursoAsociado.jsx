@@ -40,7 +40,7 @@ const CursoAsociado = async ({ curso }) => {
                 <p className="space-x-2">
                   <Clock className="inline" />
                   <span className="font-bold">Duracion:</span>{" "}
-                  {curso.duracion} Horas
+                  {curso.duracion}
                 </p>
               </>
             )
@@ -50,13 +50,13 @@ const CursoAsociado = async ({ curso }) => {
             className="font-bold rounded-2xl w-full lg:translate-y-6"
             asChild
           >
-            <Link href={`/cursos-especializados/${curso && curso.nombre}`}>
+            <Link href={`/cursos-formacion/${curso && curso.nombre}`}>
               Mas Informacion
             </Link>
           </Button>
         </div>
         <Image
-          src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
+          src={`/cursosFormacion/cursos/headersMobile/${curso.nombre}.png`}
           fill
           priority
           sizes="100vw"
@@ -64,7 +64,7 @@ const CursoAsociado = async ({ curso }) => {
           alt=""
         />
         <Image
-          src={`/cursosEspecializacion/cursos/headersWeb/${curso.nombre}.png`}
+          src={`/cursosFormacion/cursos/headersWeb/${curso.nombre}.png`}
           fill
           priority
           sizes="100vw"

@@ -1,8 +1,8 @@
 import sequelize from "../lib/sequelize";
 import { DataTypes } from "sequelize";
-import Curso from "./Curso";
 import Categoria from "./Categoria";
 import Profesional from "./Profesional";
+import CursosFormacion from "./CursoFormacion";
 
 const Blog = sequelize.define("blogs", {
     id: {
@@ -31,7 +31,7 @@ const Blog = sequelize.define("blogs", {
         type: DataTypes.TEXT('long'),
 
     },
-    destacada:{
+    destacada: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
     }
@@ -42,18 +42,18 @@ const Blog = sequelize.define("blogs", {
     updatedAt: "updated_at",
     freezeTableName: true
 })
-Blog.belongsToMany(Curso, {
-    through: 'blogs_curso_links',
+Blog.belongsToMany(CursosFormacion, {
+    through: 'blogs_cursos_formacion_links',
     foreignKey: 'blog_id',
-    otherKey: 'curso_id',
+    otherKey: 'cursos_formacion_id',
     timestamps: false
 }
 
 )
-Blog.belongsToMany(Curso, {
+Blog.belongsToMany(CursosFormacion, {
     through: 'blogs_cursos_embudo_links',
     foreignKey: 'blog_id',
-    otherKey: 'curso_id',
+    otherKey: 'cursos_formacion_id',
     timestamps: false,
     as: 'cursosEmbudo'
 }

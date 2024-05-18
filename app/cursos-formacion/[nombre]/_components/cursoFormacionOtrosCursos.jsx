@@ -1,6 +1,7 @@
 import EmblaCarousel from "@/components/ui/EmblaCarousel";
 import { Button } from "@/components/ui/button";
 import TituloSeccion from "@/components/ui/titulo-seccion";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -23,18 +24,23 @@ const CursoFormacionOtrosCursos = ({ cursos }) => {
   );
 };
 
-const CursoCard = ({ curso }) => (
-  <article className="rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[24rem] border-2 gap-6 ">
+export const CursoCard = ({ curso, className }) => (
+  <article
+    className={cn(
+      "rounded-2xl mx-2 w-[285px] flex flex-col items-center justify-end overflow-hidden relative text-white p-8 h-[24rem] gap-6 ",
+      className
+    )}
+  >
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
       src={`/cursosFormacion/cursos/headersMobile/${curso.nombre}.png`}
       alt=""
       fill
-      className="object-cover object-top -z-10"
+      className="object-cover object-top z-0"
     />
-    <h3 className="font-bold text-3xl">{curso.nombre && curso.nombre}</h3>
+    <h3 className="font-bold text-3xl z-10">{curso.nombre && curso.nombre}</h3>
     {/* <p>{curso.descripcion}</p> */}
-    <Button className="w-full text-lg rounded-3xl" asChild>
+    <Button className="w-full text-lg rounded-3xl z-10" asChild>
       <Link href={`/cursos-formacion/${curso.nombre}`}>Ver curso</Link>
     </Button>
   </article>

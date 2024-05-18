@@ -3,7 +3,6 @@ import Asesorate from "@/components/asesorate";
 import Compartir from "./compartir";
 import PostCard from "@/app/comunidad/components/postCard";
 import EstudiaConNosotros from "@/components/estudiaConNosotros";
-import EnsenaConNosotros from "@/components/ensenaConNosotros";
 import CursosSidebar from "./cursosSidebar";
 import CursosEmbudo from "./cursosEmbudo";
 
@@ -32,19 +31,13 @@ const Sidebar = ({ posts, categoria, curso, cursosEmbudo }) => {
         </h2>
         <EstudiaConNosotros sideBar={true} />
       </div>
-      {/* <div className="space-y-6">
-        <h2 className="text-white font-bold text-2xl text-center">
-          ¡Enseñá con nosotros!
-        </h2>
-        <EnsenaConNosotros sideBar={true} />
-      </div> */}
       <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">
           Cursos que podrian interesarte
         </h2>
-        <CursosSidebar categoria={categoria} curso={curso} />
-      </div>{" "}
-      */
+        <CursosSidebar categoria={categoria} />
+      </div>
+
       <div className="space-y-6">
         <h2 className="text-white font-bold text-2xl text-center">Contacto</h2>
         <Asesorate sideBar={true} />

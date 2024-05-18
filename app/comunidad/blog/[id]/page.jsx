@@ -101,14 +101,15 @@ const page = async ({ params }) => {
           </h3>
           <p className="text-base">{post.introduccion} </p>
 
-          <CursoAsociado curso={post.cursos[0] ? post.cursos[0] : null} />
+          <CursoAsociado
+            curso={post.cursos_formacions[0] ? post.cursos_formacions[0] : null}
+          />
           <BlockRendererClient content={contenido} />
           <Toaster richColors position="top-right" />
         </div>
         <Sidebar
           posts={posts}
           categoria={post.categorias[0].id || " "}
-          curso={post.cursos[0] ? post.cursos[0].nombre : null}
           cursosEmbudo={post.cursosEmbudo}
         />
       </div>

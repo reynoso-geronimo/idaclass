@@ -1,16 +1,16 @@
-import CursoEspecializacionCard from "@/app/cursos-especializados/_components/cursoEspecializacionCard";
+import { CursoCard } from "@/app/cursos-formacion/[nombre]/_components/cursoFormacionOtrosCursos";
 
 const CursosEmbudo = async ({ cursosEmbudo }) => {
   return (
     <>
-    <h2 className="text-white font-bold text-2xl text-center">
-         SUPER DUPER EMBUDO
-        </h2>
-    <div className="space-y-4">
-      {cursosEmbudo.map(curso => (
-        <CursoEspecializacionCard key={curso.id} curso={curso} minH="min-h-[340px]" />
-      ))}
-    </div>
+      <h2 className="text-white font-bold text-2xl text-center">
+      Conoce nuestras capacitaciones
+      </h2>
+      <div className="space-y-4">
+        {cursosEmbudo.map(curso => (
+          <CursoCard key={curso.id} curso={curso} className={"w-full"}/>
+        ))}
+      </div>
     </>
   );
 };

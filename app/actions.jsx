@@ -200,14 +200,8 @@ export async function getBlogPostFromDb(id) {
       where: { id: id },
       include: [
         {
-          model: Curso,
-          as: "cursos",
-          include: [
-            {
-              model: Profesional,
-              as: "profesionals",
-            },
-          ],
+          model: CursosFormacion,
+          as: "cursos_formacions",
         },
         {
           model: Categoria,
@@ -218,7 +212,7 @@ export async function getBlogPostFromDb(id) {
           as: "profesionals",
         },
         {
-          model: Curso,
+          model: CursosFormacion,
           as: "cursosEmbudo",
         },
       ],

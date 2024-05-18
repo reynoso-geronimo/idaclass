@@ -2,8 +2,8 @@ import { getCursosPorCategoriaFromDB } from "@/app/actions";
 import Link from "next/link";
 import React from "react";
 
-const CursosSidebar = async ({ curso, categoria }) => {
-  let cursos = await getCursosPorCategoriaFromDB(curso, categoria, 8);
+const CursosSidebar = async ({ categoria }) => {
+  let cursos = await getCursosPorCategoriaFromDB(null, categoria, 8);
 
   cursos.sort((a, b) => a.nombre.length - b.nombre.length);
   return (
@@ -13,7 +13,9 @@ const CursosSidebar = async ({ curso, categoria }) => {
           key={curso.id}
           className={`border-2 py-1 px-1.5 border-idaclass3  rounded-full w-fit order-${curso.nombre.length}`}
         >
-          <Link href={`/cursos-especializados/${curso.nombre}`}>{curso.nombre}</Link>
+          <Link href={`/cursos-especializados/${curso.nombre}`}>
+            {curso.nombre}
+          </Link>
         </div>
       ))}
     </div>
