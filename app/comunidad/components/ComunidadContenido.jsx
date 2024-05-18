@@ -29,9 +29,9 @@ const ComunidadContenido = () => {
         élite del fitness con nuestros recursos premium.
       </h4>
       <div className="w-full flex max-lg:flex-col justify-between items-stretch gap-8">
-        <div className="lg:w-9/12 max-lg:max-w-lg mx-auto">
+        <div className="lg:w-9/12 max-lg:max-w-lg mx-auto space-y-6">
           {/* BLOGPOSTS */}
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10">
             {blogPostDescatado.map((post, index) => (
               <PostCard post={post} key={index} />
             ))}
