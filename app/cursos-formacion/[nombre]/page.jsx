@@ -88,14 +88,19 @@ const CursoPage = async ({ params }) => {
         perfil_texto_tres={perfil_texto_tres}
       />
 
-      <CertificacionCursoFormacion nombre={nombre}/>
+      <CertificacionCursoFormacion nombre={nombre} />
       <Separator className="my-6" />
       <CursoFormacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades modalidades={modalidades} nombre={nombre} precio={precio} tipo={"CURSO DE FORMACION"}/>
+      <CursoFormacionModalidades
+        modalidades={modalidades}
+        nombre={nombre}
+        precio={precio}
+        tipo={"CURSO DE FORMACION"}
+      />
       <Separator className="my-6" />
       <BecaAsesorate />
       <Separator className="my-6" />

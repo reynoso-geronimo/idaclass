@@ -1,3 +1,5 @@
+"use client"
+import useIsMobile from "@/app/hooks/UseIsMobile";
 import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
@@ -23,7 +25,7 @@ const CursoFormacionHeader = ({
       </>
     );
   };
-
+  const isMobile = useIsMobile();
   return (
     <section className="relative lg:container text-white">
       <div className="px-8 max-lg:min-h-[700px] flex flex-col pb-10 lg:py-20 justify-end lg:justify-center">
@@ -52,21 +54,12 @@ const CursoFormacionHeader = ({
         </div>
       </div>
       <Image
-        src={`/cursosFormacion/cursos/headersMobile/${nombre}.png`}
+        src={`/cursosFormacion/cursos/${isMobile ? 'headersMobile' : 'headersWeb'}/${nombre}.png`}
         fill
         priority
         sizes="100vw"
         quality={100}
-        className="object-cover -z-10 object-top lg:hidden"
-        alt=""
-      />
-      <Image
-        src={`/cursosFormacion/cursos/headersWeb/${nombre}.png`}
-        fill
-        priority
-        quality={100}
-        sizes="100vw"
-        className="object-cover -z-10 object-rigth-top max-lg:hidden"
+        className={`object-cover -z-10 ${isMobile ? 'object-top' : 'object-right-top'}`}
         alt=""
       />
     </section>
