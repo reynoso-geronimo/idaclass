@@ -30,6 +30,10 @@ const Blog = sequelize.define("blogs", {
     cuerpo: {
         type: DataTypes.TEXT('long'),
 
+    },
+    destacada:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
     }
 
 }, {

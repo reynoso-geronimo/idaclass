@@ -8,6 +8,7 @@ import Categoria from "@/models/Categoria";
 import Profesional from "@/models/Profesional";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
+import Evento from "@/models/Evento";
 
 export async function getCursos() {
   try {
@@ -144,36 +145,49 @@ export async function getOtrosCursosFromacionFromDb(nombre) {
     console.log(error);
   }
 }
-export async function getBlogPostsFromDb(limit, not) {
+export const getBlogPostsFromDb = async (limit, not, noDestacada) => {
+  const query = {
+    limit: limit,
+    include: [
+      { model: Categoria, as: "categorias" },
+      { model: Profesional, as: "profesionals" },
+    ],
+    where: {},
+  };
+
+  if (not) {
+    query.where.id = { [Op.not]: not };
+  }
+
+  if (noDestacada) {
+    query.where.destacada = false;
+  }
+
   try {
-    const response = not
-      ? await Blog.findAll({
-          limit: limit,
-          where: { id: { [Op.not]: not } },
-          include: [
-            {
-              model: Categoria,
-              as: "categorias",
-            },
-            {
-              model: Profesional,
-              as: "profesionals",
-            },
-          ],
-        })
-      : await Blog.findAll({
-          limit: limit,
-          include: [
-            {
-              model: Categoria,
-              as: "categorias",
-            },
-            {
-              model: Profesional,
-              as: "profesionals",
-            },
-          ],
-        });
+    const response = await Blog.findAll(query);
+
+    return response.map(blog => blog.toJSON());
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+export async function getBlogPostsDestacadosFromDb(limit = 3) {
+  try {
+    const response = await Blog.findAll({
+      where: { destacada: true },
+      limit: limit,
+      include: [
+        {
+          model: Categoria,
+          as: "categorias",
+        },
+        {
+          model: Profesional,
+          as: "profesionals",
+        },
+      ],
+    });
     const data = response.map(blog => blog.toJSON());
     return data;
   } catch (error) {
@@ -215,6 +229,26 @@ export async function getBlogPostFromDb(id) {
     console.log(error);
   }
 }
+
+export const getEventosFromDb = async (limit, not) => {
+  const query = {
+    limit: limit,
+    include: [{ model: Profesional, as: "profesionals" }],
+  };
+
+  if (not) {
+    query.where.id = { [Op.not]: not };
+  }
+
+  try {
+    const response = await Evento.findAll(query);
+
+    return response.map(evento => evento.toJSON());
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
 
 export async function inscripcion(formData) {
   "use server";

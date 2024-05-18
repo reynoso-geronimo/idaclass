@@ -1,16 +1,23 @@
-import { getBlogPostsFromDb } from "@/app/actions";
+import {
+  getBlogPostsDestacadosFromDb,
+  getBlogPostsFromDb,
+  getEventosFromDb,
+} from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { CalendarClock, Newspaper } from "lucide-react";
+import { ArrowBigRight, CalendarClock, Newspaper } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import Eventos from "./eventos";
-import PostCardSidebar from "./postCardSidebar";
+
 import PostCard from "./postCard";
-const blogPost = await getBlogPostsFromDb(6);
+import CardSidebar from "./cardSidebar";
 
-const firstRow = blogPost.slice(0, 3);
-const secondRow = blogPost.slice(3, 6);
+const blogPosts = await getBlogPostsFromDb(3, null, true);
+const blogPostDescatado = await getBlogPostsDestacadosFromDb(3);
+const eventos = await getEventosFromDb(5);
 
+const firstRow = eventos.slice(0, 2);
+const secondRow = eventos.slice(2, 5);
 const ComunidadContenido = () => {
   return (
     <section className="container">
@@ -25,14 +32,14 @@ const ComunidadContenido = () => {
         <div className="lg:w-9/12 max-lg:max-w-lg mx-auto">
           {/* BLOGPOSTS */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 mb-4">
-            {firstRow.map((post, index) => (
+            {blogPostDescatado.map((post, index) => (
               <PostCard post={post} key={index} />
             ))}
           </div>
           {/* FIN BLOGPOSTS */}
           {/* EVENTOs */}
 
-          <Eventos />
+          <Eventos eventos={firstRow} />
           {/* FIN EVENTOS */}
         </div>
 
@@ -40,15 +47,20 @@ const ComunidadContenido = () => {
 
         <div className="bg-black w-full lg:w-3/12  rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px] mx-auto max-w-lg">
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
-            <h2
-              className={`text-center py-2 my-0 text-2xl bg-idaclass flex items-center justify-center`}
+            <Link
+              href={"/comunidad/blog/"}
+              className={`text-center py-2 my-0 text-2xl bg-idaclass3 xl flex items-center justify-center`}
             >
-              <Newspaper className="inline mr-2" strokeWidth={2.5} size={26} />
-              Noti
-              <span className="text-idaclass3 ">Class</span>
-            </h2>
-            {secondRow.map((post, index) => (
-              <PostCardSidebar post={post} key={index} />
+              Otras notas
+              <ArrowBigRight className=" mr-2" strokeWidth={2.5} size={32} />
+            </Link>
+            {blogPosts.map((post, index) => (
+              <CardSidebar
+                CardSidebar
+                post={post}
+                key={index}
+                href={"comunidad/blog/"}
+              />
             ))}
           </div>
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
@@ -62,27 +74,9 @@ const ComunidadContenido = () => {
               />
               Agenda de <span className="text-idaclass3">&#160;Eventos</span>
             </h2>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo del evento</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo del evento</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
-            <article className="border-b border-gray-500 flex justify-between items-center p-4 h-full">
-              <h4>Titulo del evento</h4>{" "}
-              <Link href={"/"} className="text-center leading-4 text-idaclass3">
-                SEGUIR <br />
-                LEYENDO
-              </Link>
-            </article>
+            {secondRow.map((evento, index) => (
+              <CardSidebar CardSidebar evento={evento} key={index} />
+            ))}
           </div>
         </div>
 
