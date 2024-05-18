@@ -20,6 +20,7 @@ const NavbarWebMenu = ({
   cursosFormacion,
   cursosEspecializacion,
 }) => {
+  console.log(pathname);
   // Obtener todas las categorías
   const todasCategorias = cursosEspecializacion.map(curso => curso.categorias);
 

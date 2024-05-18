@@ -23,7 +23,7 @@ import { Skeleton } from "./ui/skeleton";
 const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session, status } = useSession();
 
-  const pathname = usePathname().replace(/%20/g, " ");
+  const pathname = decodeURIComponent(usePathname());
   return (
     <header className="sticky top-0 z-40 bg-black text-white">
       {/* <Promobar /> */}
@@ -79,7 +79,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
               <Link
                 href="/cursos-especializados"
                 className={`-translate-x-3.5 flex items-center ${
-                  pathname === "/cursos" && "text-idaclass4"
+                  pathname.includes("cursos-especializados")&& "text-idaclass4"
                 } `}
               >
                 <Minus
@@ -87,7 +87,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
                   size={28}
                   color="#0088ca"
                 />
-                Cursos Espcializados
+                Cursos Especializados
               </Link>
             </SheetClose>
             <Separator />
