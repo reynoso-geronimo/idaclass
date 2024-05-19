@@ -81,10 +81,18 @@ const handler = NextAuth({
     signIn: '/signin'
   }, callbacks: {
     async session({ session }) {
-      console.log("creando sesion");
+
       try {
         const sessionUser = await User.findOne({ where: { email: session.user.email } });
-        session.user.id = sessionUser.id.toString();
+        session.user = {
+          id: sessionUser.id,
+          name: sessionUser.username,
+          email: sessionUser.email,
+          image: sessionUser.image,
+          given_name: sessionUser.given_name,
+          family_name: sessionUser.family_name,
+
+        }
 
         return session;
       } catch (error) {
