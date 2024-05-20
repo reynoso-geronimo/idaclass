@@ -80,11 +80,11 @@ module.exports = {
         },
         'text-animation': {
           '0%': { transform: 'translateY(0)' },
-          '17%': { transform: 'translateY(-5.62rem)' },
+          '17%': { transform: 'translateY(0)' },
           '34%': { transform: 'translateY(-5.62rem)' },
-          '50%': { transform: 'translateY(-11.24rem)' },
+          '50%': { transform: 'translateY(-5.62rem)' },
           '67%': { transform: 'translateY(-11.24rem)' },
-          '84%': { transform: 'translateY(-16.86rem)' },
+          '84%': { transform: 'translateY(-11.24rem)' },
           '100%': { transform: 'translateY(-16.86rem)' }
         },
       },

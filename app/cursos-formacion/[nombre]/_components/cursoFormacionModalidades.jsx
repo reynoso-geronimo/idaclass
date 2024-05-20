@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
   return (
-    <section id="inscripcion" className="container relative">
+    <section id="inscripcion" className="container px-0 relative">
       <Image
         src={"/cursosFormacion/modalidadesbg.png"}
         fill
@@ -14,7 +14,7 @@ const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
       {modalidades === "Online - Presencial" && (
         <TituloSeccion
           className={
-            "z-10 px-0 md:text-3xl text-left lg:text-center text-white leading-[50px] md:leading-[80px] absolute top-4 max-lg:ml-8 lg:right-[50%] lg:translate-x-[50%] max-sm:w-60 max-w-md lg:max-w-max"
+            "z-10 px-0 md:text-3xl text-left lg:text-center text-white leading-[50px] md:leading-[80px] absolute top-4 max-lg:ml-8 lg:right-[50%] lg:translate-x-[50%] max-sm:w-64 max-w-md lg:max-w-max"
           }
         >
           Elegí la modalidad que más se{" "}

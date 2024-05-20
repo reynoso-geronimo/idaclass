@@ -25,7 +25,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
   return (
     <div
       className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
-        modalidad === "ONLINE" ? "pt-[35rem]" : "pt-[20rem]"
+        modalidad === "ONLINE" ? "pt-[28rem]" : "pt-[20rem]"
       } lg:pt-28`}
     >
       <Image
