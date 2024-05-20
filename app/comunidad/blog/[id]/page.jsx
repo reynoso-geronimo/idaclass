@@ -4,7 +4,7 @@ import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import { Badge } from "@/components/ui/badge";
 import { textoEnDegrade } from "@/lib/constants";
 import Sidebar from "./_components/sidebar";
-import { getBlogPostFromDb, getBlogPostsFromDb } from "@/app/actions";
+import { getBlogPostFromDB, getBlogPostsFromDB } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
 import Contenido from "./_components/contenido";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -12,8 +12,8 @@ import UniteComunidad from "./_components/uniteComunidad";
 
 const page = async ({ params }) => {
   const [post, posts] = await Promise.all([
-    getBlogPostFromDb(params.id),
-    getBlogPostsFromDb(3, params.id),
+    getBlogPostFromDB(params.id),
+    getBlogPostsFromDB(3, params.id),
   ]);
   const contenido = JSON.parse(post.cuerpo);
 

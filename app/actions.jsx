@@ -133,7 +133,7 @@ export async function getCursoFormacionFromDB(nombre) {
     console.log(error);
   }
 }
-export async function getOtrosCursosFromacionFromDb(nombre) {
+export async function getOtrosCursosFromacionFromDB(nombre) {
   try {
     const response = await CursosFormacion.findAll({
       where: { nombre: { [Op.not]: nombre } },
@@ -145,7 +145,7 @@ export async function getOtrosCursosFromacionFromDb(nombre) {
     console.log(error);
   }
 }
-export const getBlogPostsFromDb = async (limit, not, noDestacada) => {
+export const getBlogPostsFromDB = async (limit, not, noDestacada) => {
   const query = {
     limit: limit,
     include: [
@@ -172,7 +172,7 @@ export const getBlogPostsFromDb = async (limit, not, noDestacada) => {
     throw error;
   }
 };
-export async function getBlogPostsDestacadosFromDb(limit = 3) {
+export async function getBlogPostsDestacadosFromDB(limit = 3) {
   try {
     const response = await Blog.findAll({
       where: { destacada: true },
@@ -194,7 +194,7 @@ export async function getBlogPostsDestacadosFromDb(limit = 3) {
     console.log(error);
   }
 }
-export async function getBlogPostFromDb(id) {
+export async function getBlogPostFromDB(id) {
   try {
     const response = await Blog.findOne({
       where: { id: id },
@@ -224,7 +224,7 @@ export async function getBlogPostFromDb(id) {
   }
 }
 
-export const getEventosFromDb = async (limit, not) => {
+export const getEventosFromDB = async (limit, not) => {
   const query = {
     limit: limit,
     include: [{ model: Profesional, as: "profesionals" }],

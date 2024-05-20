@@ -1,7 +1,7 @@
 import {
-  getBlogPostsDestacadosFromDb,
-  getBlogPostsFromDb,
-  getEventosFromDb,
+  getBlogPostsDestacadosFromDB,
+  getBlogPostsFromDB,
+  getEventosFromDB,
 } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { ArrowBigRight, CalendarClock, Newspaper } from "lucide-react";
@@ -12,9 +12,9 @@ import Eventos from "./eventos";
 import PostCard from "./postCard";
 import CardSidebar from "./cardSidebar";
 
-const blogPosts = await getBlogPostsFromDb(3, null, true);
-const blogPostDescatado = await getBlogPostsDestacadosFromDb(3);
-const eventos = await getEventosFromDb(5);
+const blogPosts = await getBlogPostsFromDB(3, null, true);
+const blogPostDescatado = await getBlogPostsDestacadosFromDB(3);
+const eventos = await getEventosFromDB(5);
 
 const firstRow = eventos.slice(0, 2);
 const secondRow = eventos.slice(2, 5);

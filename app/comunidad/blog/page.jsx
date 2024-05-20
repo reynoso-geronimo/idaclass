@@ -1,9 +1,9 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { getBlogPostsFromDb } from "../../actions";
+import { getBlogPostsFromDB } from "../../actions";
 import PostCard from "../components/postCard";
 
 const Page = async () => {
-  const blogPost = await getBlogPostsFromDb();
+  const blogPost = await getBlogPostsFromDB();
 
   return (
     <main className="flex flex-col items-center  ">

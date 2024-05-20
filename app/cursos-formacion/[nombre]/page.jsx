@@ -14,7 +14,7 @@ import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
 import {
   getCursoFormacionFromDB,
-  getOtrosCursosFromacionFromDb,
+  getOtrosCursosFromacionFromDB,
 } from "@/app/actions";
 import getCountryCodeFromIP from "@/lib/utils";
 
@@ -26,7 +26,7 @@ const CursoPage = async ({ params }) => {
   if (!curso) {
     return <div>Curso no encontrado</div>;
   }
-  const cursos = await getOtrosCursosFromacionFromDb(nombreParseado);
+  const cursos = await getOtrosCursosFromacionFromDB(nombreParseado);
 
   const {
     nombre,
