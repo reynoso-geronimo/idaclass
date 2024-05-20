@@ -19,7 +19,16 @@ import { Input } from "@/components/ui/input";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { useEffect } from "react";
 import Loading from "../loading";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+const getPaymentOptionStyles = (value, option) => {
+  const isSelected = value === option;
+  const baseStyles =
+    "border-2 font-black rounded-2xl transition-all w-full flex items-center justify-center cursor-pointer";
+  const selectedStyles = "bg-idaclass3 border-idaclass4 text-white p-4";
+  const unselectedStyles = "bg-gray-400 text-black border-idaclassGray2 p-3";
 
+  return `${baseStyles} ${isSelected ? selectedStyles : unselectedStyles}`;
+};
 const formSchema = z.object({
   telefono: z.coerce.number().min(2, {
     message: "Ingresa tu telefono",
@@ -64,7 +73,7 @@ const CheckoutPage = () => {
     return <Loading />;
   } else {
     return (
-      <div className="container flex flex-col justify-center items-center gap-2">
+      <main className="container flex flex-col justify-center items-center gap-2 mb-8">
         <div className="container flex flex-col justify-center items-center gap-2">
           <TituloSeccion>RESUMEN DE TU COMPRA</TituloSeccion>
           <h2>{tipo}</h2>
@@ -137,14 +146,57 @@ const CheckoutPage = () => {
                   </FormItem>
                 )}
               />
-
-              <Button type="submit" className="w-full">
+              <FormField
+                control={form.control}
+                name="type"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Elige un medio de pago</FormLabel>
+                    <FormControl>
+                      <RadioGroup
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                        className="flex justify-evenly items-center h-16"
+                      >
+                        <FormItem className="w-full">
+                          <FormControl>
+                            <RadioGroupItem value="mercadopago" hidden />
+                          </FormControl>
+                          <FormLabel
+                            className={getPaymentOptionStyles(
+                              field.value,
+                              "mercadopago"
+                            )}
+                          >
+                            Mercadopago
+                          </FormLabel>
+                        </FormItem>
+                        <FormItem className="w-full">
+                          <FormControl>
+                            <RadioGroupItem value="paypal" hidden />
+                          </FormControl>
+                          <FormLabel
+                            className={getPaymentOptionStyles(
+                              field.value,
+                              "paypal"
+                            )}
+                          >
+                            Paypal
+                          </FormLabel>
+                        </FormItem>
+                      </RadioGroup>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button type="submit" className="w-full rounded-2xl">
                 Inscribirme
               </Button>
             </form>
           </Form>
         </div>
-      </div>
+      </main>
     );
   }
 };
