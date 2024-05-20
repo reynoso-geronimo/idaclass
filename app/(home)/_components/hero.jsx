@@ -2,8 +2,7 @@ import Link from "next/link";
 import Introvideo from "@/components/ui/introvideo";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FlipWords } from "@/components/ui/flip-words";
-const words = ["Estudia", "Trabaja", "Emprende"];
+
 const Hero = () => {
   return (
     <div className=" py-8 lg:py-12">
@@ -58,17 +57,25 @@ const Hero = () => {
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
         <div className="w-2/5 flex flex-col justify-around items-start mx-16 pt-16 ">
           <h2 className="relative w-full text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000 ">
-            <span
-              className={
-                "w-[19rem] text-center bg-idaclass3 rounded-3xl text-white mr-1"
-              }
-            >
-              <FlipWords
-                words={words}
-                className={"w-[16rem] xl:w-[19rem] text-center  text-white"}
-              />
+            <span className="text-white px-4 h-[55px] xl:h-[68px] text-center w-fit flex flex-col overflow-hidden absolute -top-[2px] bg-idaclass4 rounded-3xl">
+              <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+                Estudia
+              </span>
+
+              <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+                Trabaja
+              </span>
+
+              <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+                Emprende
+              </span>
+              <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
+                Estudia
+              </span>
             </span>
-            en <br /> el mundo del <br /> Sport Fitness.
+            <span className="ml-[270px] xl:ml-[320px]">
+              en <br /> el mundo del <br /> Sport Fitness.
+            </span>
           </h2>
           <h2 className="text-xl xl:text-2xl max-w-[768px] mb-4 text-balance">
             Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
