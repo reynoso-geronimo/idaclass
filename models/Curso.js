@@ -26,15 +26,11 @@ const Curso = sequelize.define("curso", {
     modulos: {
         type: DataTypes.TEXT
     },
-    objetivo_titulo: {
-        type: DataTypes.STRING
-    },
+
     objetivo_texto: {
         type: DataTypes.STRING
     },
-    perfil_titulo: {
-        type: DataTypes.STRING
-    },
+
     perfil_texto: {
         type: DataTypes.STRING
     },

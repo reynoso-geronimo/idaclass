@@ -6,10 +6,9 @@ import bgMobile from "../../../../public/cursosEspecializacion/cursos/objetivosB
 import CertificacionCursosEspciealizacion from "./certificacionCursosEspecializacion";
 const CursosEspciealizacionObjetivos = ({
   nombre,
-  objetivo_titulo,
+
   objetivo_texto,
   perfil_texto,
-  perfil_titulo,
 }) => {
   return (
     <section className="">
@@ -41,7 +40,7 @@ const CursosEspciealizacionObjetivos = ({
           >
             Objetivos <br className="lg:hidden" /> del Curso
           </h3>
-          <Objetivo titulo={objetivo_titulo} texto={objetivo_texto} />
+          <Objetivo texto={objetivo_texto} />
         </article>
         <article className="container text-white pb-8 px-4">
           <h3
@@ -51,7 +50,7 @@ const CursosEspciealizacionObjetivos = ({
           >
             Perfil del <br className="lg:hidden" /> Egresado
           </h3>
-          <Objetivo titulo={perfil_titulo} texto={perfil_texto} />
+          <Objetivo texto={perfil_texto} />
           <CertificacionCursosEspciealizacion nombre={nombre} />
         </article>
       </div>
@@ -59,21 +58,10 @@ const CursosEspciealizacionObjetivos = ({
   );
 };
 
-export const Objetivo = ({ titulo = "OBJETIVO", texto }) => {
+export const Objetivo = ({ texto }) => {
   return (
-    <div className="bg-[#111827]">
-      <h4 className="font-bold text-lg flex items-center gap-2 py-5">
-        <Check
-          className="rounded-full bg-idaclass3 text-black p-0.5"
-          strokeWidth={2.5}
-        />
-        {titulo}
-      </h4>
-      <p>
-        {texto
-          ? texto
-          : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil, sequilaborum dolorum obcaecati recusandae voluptate repellendus tempora modiomnis eos suscipit cupiditate impedit facilis ipsum? Similique ipsumprovident quas."}
-      </p>
+    <div className="bg-[#111827] mt-4">
+      <p>{texto && texto}</p>
     </div>
   );
 };
