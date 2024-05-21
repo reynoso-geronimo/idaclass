@@ -74,7 +74,7 @@ export const Objetivo = ({ titulo = "OBJETIVO", texto }) => {
     <div className="bg-[#111827]">
       <h4 className="font-bold text-lg flex items-center gap-2 py-5">
         <Check
-          className="rounded-full bg-idaclass3 text-black p-0.5"
+          className="rounded-full bg-idaclass3 text-black p-0.5 shrink-0"
           strokeWidth={2.5}
         />
         {titulo}
