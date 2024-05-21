@@ -36,6 +36,7 @@ const CursosEspecializacionHeader = () => {
         src={headerWeb}
         alt=""
         fill
+        priority
         className="object-cover max-sm:hidden -z-10"
         placeholder="blur"
       />
@@ -43,6 +44,7 @@ const CursosEspecializacionHeader = () => {
         src={headerMobile}
         alt=""
         fill
+        priority
         className="object-cover object-top sm:hidden -z-10"
         placeholder="blur"
       />

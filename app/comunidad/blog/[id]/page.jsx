@@ -24,6 +24,7 @@ const page = async ({ params }) => {
           src={`/blog/headerMobile/${post.titulo}.png`}
           alt={post.titulo}
           fill
+          priority
           className={`w-full h-auto object-top object-cover -z-10 lg:hidden`}
         />
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
@@ -31,6 +32,7 @@ const page = async ({ params }) => {
             src={`/blog/headerWeb/${post.titulo}.png`}
             alt={post.titulo}
             fill
+            priority
             className={`w-full h-auto object-top lg:object-cover -z-10 max-lg:hidden`}
           />
         </div>
