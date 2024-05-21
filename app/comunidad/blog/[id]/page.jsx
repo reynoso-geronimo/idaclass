@@ -21,14 +21,14 @@ const page = async ({ params }) => {
     <main className="">
       <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white">
         <Image
-          src={"/blog/headermobile/" + post.titulo + ".png"}
+          src={`/blog/headerMobile/${post.titulo}.png`}
           alt={post.titulo}
           fill
           className={`w-full h-auto object-top object-cover -z-10 lg:hidden`}
         />
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
-            src={"/blog/headerWeb/" + post.titulo + ".png"}
+            src={`/blog/headerWeb/${post.titulo}.png`}
             alt={post.titulo}
             fill
             className={`w-full h-auto object-top lg:object-cover -z-10 max-lg:hidden`}
