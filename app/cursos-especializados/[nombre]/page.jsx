@@ -33,10 +33,9 @@ const CursoPage = async ({ params }) => {
     modalidades,
     duracion,
     modulos,
-    objetivo_titulo,
     objetivo_texto,
-    perfil_titulo,
     perfil_texto,
+    dirigido,
   } = curso;
   const contenido = JSON.parse(acerca_curso);
   return (
@@ -51,13 +50,17 @@ const CursoPage = async ({ params }) => {
 
       <CursosEspciealizacionAcerca acerca_curso={contenido} />
       <Separator className="my-6" />
-      <CursosEspciealizacionObjetivos nombre={nombre}  objetivo_titulo={objetivo_titulo} objetivo_texto={objetivo_texto} perfil_texto={perfil_texto} perfil_titulo={perfil_titulo}/> 
+      <CursosEspciealizacionObjetivos
+        nombre={nombre}
+        objetivo_texto={objetivo_texto}
+        perfil_texto={perfil_texto}
+      />
 
       <Separator className="my-6" />
       <CursosEspciealizacionContenidoCurso modulos={modulos} />
       <Separator className="my-6" />
 
-      <CursosEspciealizacionRequisitos />
+      <CursosEspciealizacionRequisitos dirigido={dirigido} />
       {/* modalidades y pago */}
       <Separator className="my-6" />
       <CursosEspciealizacionModalidades />
