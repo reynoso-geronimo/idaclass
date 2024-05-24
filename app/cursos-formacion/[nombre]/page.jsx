@@ -5,7 +5,6 @@ import CasosExito from "@/components/casos-exito";
 import CertificacionCursoFormacion from "./_components/certificacionCursoFormacion";
 import Link from "next/link";
 import BecaAsesorate from "@/components/becaAsesorate";
-import CursoFormacionHeader from "./_components/cursoFormacionHeader";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
 import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
@@ -17,6 +16,7 @@ import {
   getOtrosCursosFromacionFromDB,
 } from "@/app/actions";
 import getCountryCodeFromIP from "@/lib/utils";
+import CursoHeader from "@/components/cursos/CursosHeader";
 
 const CursoPage = async ({ params }) => {
   const pais = await getCountryCodeFromIP();
@@ -56,11 +56,12 @@ const CursoPage = async ({ params }) => {
   return (
     <main className="flex flex-col">
       {/* {pais.country} */}
-      <CursoFormacionHeader
+      <CursoHeader
         nombre={nombre}
         descripcion={descripcion}
         modalidades={modalidades}
         videoid={videoid}
+        tipo={"formacion"}
       />
 
       <CursoFormacionAcerca

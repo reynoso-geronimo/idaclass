@@ -3,7 +3,6 @@ import { Separator } from "@/components/ui/separator";
 import CasosExito from "@/components/casos-exito";
 import Link from "next/link";
 import BecaAsesorate from "@/components/becaAsesorate";
-import CursosEspciealizacionHeader from "./_components/cursosEspecializacionHeader";
 import CursosEspciealizacionAcerca from "./_components/cursosEspecializacionAcerca";
 import CursosEspciealizacionObjetivos from "./_components/cursosEspecializacionObjetivos";
 import CursosEspciealizacionContenidoCurso from "./_components/cursosEspecializacionContendidoCurso";
@@ -12,6 +11,7 @@ import CursosEspciealizacionModalidades from "./_components/cursosEspecializacio
 import CursosEspciealizacionOtrosCursos from "./_components/cursosEspecializacionOtrosCursos";
 import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
+import CursoHeader from "@/components/cursos/CursosHeader";
 
 const CursoPage = async ({ params }) => {
   const nombreParseado = decodeURI(params.nombre);
@@ -40,12 +40,13 @@ const CursoPage = async ({ params }) => {
   const contenido = JSON.parse(acerca_curso);
   return (
     <main className="flex flex-col">
-      <CursosEspciealizacionHeader
+      <CursoHeader
         nombre={nombre}
         descripcion={descripcion}
         modalidades={modalidades}
         videoid={videoid}
         profesional={curso.profesionals[0]}
+        tipo="especializacion"
       />
 
       <CursosEspciealizacionAcerca acerca_curso={contenido} />
