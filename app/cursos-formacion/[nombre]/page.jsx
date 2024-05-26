@@ -7,7 +7,7 @@ import Link from "next/link";
 import BecaAsesorate from "@/components/becaAsesorate";
 import CursoFormacionAcerca from "./_components/cursoFormacionAcerca";
 import CursoFormacionObjetivos from "./_components/cursoFormacionObjetivos";
-import CursoFormacionContenidoCurso from "./_components/cursoFormacionContendidoCurso";
+import CursosContenido from "@/components/cursos/CursoContenido";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
@@ -91,7 +91,7 @@ const CursoPage = async ({ params }) => {
 
       <CertificacionCursoFormacion nombre={nombre} />
       <Separator className="my-6" />
-      <CursoFormacionContenidoCurso modulos={modulos} />
+      <CursosContenido modulos={modulos} />
       <Separator className="my-6" />
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}

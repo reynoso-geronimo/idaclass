@@ -5,7 +5,7 @@ import Link from "next/link";
 import BecaAsesorate from "@/components/becaAsesorate";
 import CursosEspciealizacionAcerca from "./_components/cursosEspecializacionAcerca";
 import CursosEspciealizacionObjetivos from "./_components/cursosEspecializacionObjetivos";
-import CursosEspciealizacionContenidoCurso from "./_components/cursosEspecializacionContendidoCurso";
+import CursosContenido from "@/components/cursos/CursoContenido";
 import CursosEspciealizacionRequisitos from "./_components/cursosEspecializacionRequisitos";
 import CursosEspciealizacionModalidades from "./_components/cursosEspecializacionModalidades";
 import CursosEspciealizacionOtrosCursos from "./_components/cursosEspecializacionOtrosCursos";
@@ -58,7 +58,7 @@ const CursoPage = async ({ params }) => {
       />
 
       <Separator className="my-6" />
-      <CursosEspciealizacionContenidoCurso modulos={modulos} />
+      <CursosContenido modulos={modulos} tituloSkicclass={"OPCIONAL"}/>
       <Separator className="my-6" />
 
       <CursosEspciealizacionRequisitos dirigido={dirigido} />
