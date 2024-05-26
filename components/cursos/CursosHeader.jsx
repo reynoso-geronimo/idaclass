@@ -26,10 +26,16 @@ const CursoHeader = ({
       </>
     );
   };
-
   const headerPath =
     tipo === "formacion" ? "cursosFormacion" : "cursosEspecializacion";
 
+  // Construir rutas de importación dinámicas
+  const headerMobileImagePath = `/${headerPath}/cursos/headersMobile/${nombre}.png`;
+  const headerWebImagePath = `/${headerPath}/cursos/headersWeb/${nombre}.png`;
+
+  // Importar imágenes dinámicamente
+  const headerMobileImage = require(`../../public${headerMobileImagePath}`);
+  const headerWebImage = require(`../../public${headerWebImagePath}`);
   return (
     <section className="relative md:container text-white">
       <div className="px-8 max-md:min-h-[700px] flex flex-col pb-10 md:py-20 justify-end md:justify-center">
@@ -75,7 +81,8 @@ const CursoHeader = ({
         )}
       </div>
       <Image
-        src={`/${headerPath}/cursos/headersMobile/${nombre}.png`}
+        src={headerMobileImage}
+        placeholder="blur"
         fill
         priority
         sizes="100vw"
@@ -84,7 +91,8 @@ const CursoHeader = ({
         alt=""
       />
       <Image
-        src={`/${headerPath}/cursos/headersWeb/${nombre}.png`}
+        src={headerWebImage}
+        placeholder="blur"
         fill
         priority
         sizes="100vw"
