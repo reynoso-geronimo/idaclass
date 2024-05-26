@@ -15,14 +15,14 @@ const Soluciones = () => {
   });
 
   return (
-    <section className=" h-[800px] bg-black text-white relative">
+    <section className=" h-[800px] bg-black text-white relative container px-0">
       <Image
         alt=""
         src="/assets/bg-soluciones.png"
         fill
         quality={100}
         sizes="100vw"
-        className="object-cover 2xl:object-contain  max-lg:hidden"
+        className="object-cover  max-lg:hidden"
       />
       <Image
         alt=""
