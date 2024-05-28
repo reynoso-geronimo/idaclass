@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className=" py-8 lg:py-12">
       <div className="lg:hidden container px-0">
-        <h2 className="relative max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000">
+        <h2 className="relative max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter">
           <span className="text-white px-3 h-[45px] xl:h-[65px] overflow-hidden text-center w-fit mx-auto flex flex-col -top-[2px] bg-idaclass4 rounded-3xl">
             <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
               Estudia
@@ -56,7 +56,7 @@ const Hero = () => {
 
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
         <div className="w-2/5 flex flex-col justify-around items-start mx-16 pt-16 ">
-          <h2 className="relative w-full text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter animate-in slide-in-from-right fade-in-25 duration-1000 ">
+          <h2 className="relative w-full text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter">
             <span className="text-white px-4 h-[55px] xl:h-[68px] text-center w-fit flex flex-col overflow-hidden absolute -top-[2px] bg-idaclass4 rounded-3xl">
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
                 Estudia
