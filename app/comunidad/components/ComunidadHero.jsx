@@ -2,7 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import Introvideo from "@/components/ui/introvideo";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
-
+import HeaderWeb from "@/./public/comunidad/Header.png"
+import HeaderMobile from "@/./public/comunidad/HeaderMobile.png"
 const ComunidadHero = () => {
   return (
     <section className="">
@@ -37,14 +38,18 @@ const ComunidadHero = () => {
         </div>
 
         <Image
-          src={"/comunidad/Header.png"}
+          src={HeaderWeb}
           fill
+          priority
+          placeholder="blur"
           className="object-cover -z-10 max-lg:hidden"
           alt=""
         />
         <Image
-          src={"/comunidad/HeaderMobile.png"}
+          src={HeaderMobile}
           fill
+          priority
+          placeholder="blur"
           className="object-cover object-bottom -z-10 lg:hidden"
           alt=""
         />
