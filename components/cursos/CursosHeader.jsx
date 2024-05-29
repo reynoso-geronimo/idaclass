@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import Introvideo from "@/components/ui/introvideo";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import useIsMobile from "@/app/hooks/UseIsMobile";
 
 const CursoHeader = ({
   nombre,
@@ -18,7 +19,6 @@ const CursoHeader = ({
     const mitad = Math.ceil(palabras.length / 2);
     const primeraLinea = palabras.slice(0, mitad).join(" ");
     const segundaLinea = palabras.slice(mitad).join(" ");
-
     return (
       <>
         {primeraLinea}
@@ -27,16 +27,15 @@ const CursoHeader = ({
       </>
     );
   };
+  const isMobile = useIsMobile();
   const headerPath =
     tipo === "formacion" ? "cursosFormacion" : "cursosEspecializacion";
+  const headerImagePath = isMobile
+    ? `/${headerPath}/cursos/headersMobile/${nombre}.png`
+    : `/${headerPath}/cursos/headersWeb/${nombre}.png`;
+  // Importar imagen dinámicamente
+  const headerImage = require(`../../public${headerImagePath}`);
 
-  // Construir rutas de importación dinámicas
-  const headerMobileImagePath = `/${headerPath}/cursos/headersMobile/${nombre}.png`;
-  const headerWebImagePath = `/${headerPath}/cursos/headersWeb/${nombre}.png`;
-
-  // Importar imágenes dinámicamente
-  const headerMobileImage = require(`../../public${headerMobileImagePath}`);
-  const headerWebImage = require(`../../public${headerWebImagePath}`);
   return (
     <section className="relative md:container text-white">
       <div className="px-8 max-md:min-h-[700px] flex flex-col pb-10 md:py-20 justify-end md:justify-center">
@@ -82,22 +81,15 @@ const CursoHeader = ({
         )}
       </div>
       <Image
-        src={headerMobileImage}
+        src={headerImage}
         placeholder="blur"
         fill
         priority
         sizes="100vw"
         quality={100}
-        className="object-cover -z-10 object-top md:hidden"
-        alt=""
-      />
-      <Image
-        src={headerWebImage}
-        placeholder="blur"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover -z-10 object-rigth-top max-md:hidden"
+        className={`object-cover -z-10 ${
+          isMobile ? "object-top" : "object-rigth-top"
+        }`}
         alt=""
       />
     </section>
