@@ -88,7 +88,7 @@ const CursoHeader = ({
         sizes="100vw"
         quality={100}
         className={`object-cover -z-10 ${
-          isMobile ? "object-top" : "object-rigth-top"
+          isMobile ? "object-top" : "object-right-top"
         }`}
         alt=""
       />
