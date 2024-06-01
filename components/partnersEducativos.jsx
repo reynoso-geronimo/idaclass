@@ -11,37 +11,7 @@ import Image from "next/image";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const partners = [
-  {
-    src: "/Aletic.png",
-    alt: "logo",
-  },
-
-  {
-    src: "/Graciela.jpeg",
-    alt: "logo",
-  },
-  {
-    src: "/gymPeru.png",
-    alt: "logo",
-  },
-
-  {
-    src: "/NeurofitRosario.jpg",
-    alt: "logo",
-  },
-  {
-    src: "/ENERGYM.jpg",
-    alt: "Energym",
-  },
-  {
-    src: "/fitzone.png",
-    alt: "fitzone",
-  },
-  ,
-  {
-    src: "/ViloGymVicente.jpg",
-    alt: "ViloGymVicente",
-  },
+  
   {
     src: "/Aletic.png",
     alt: "logo",
