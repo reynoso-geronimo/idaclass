@@ -55,9 +55,10 @@ const EmpresasPartners = () => {
             <div className="p-1 flex items-center justify-center relative w-32 h-20">
               <Image
                 src={`/empresasPartners${partner.src}`}
-                fill
+                width={128}
+                height={80}
                 alt="logo"
-                className=" rounded-xl object-contain"
+                className="max-h-20 w-auto"
               />
             </div>
           </CarouselItem>
