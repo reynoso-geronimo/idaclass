@@ -69,8 +69,8 @@ const page = async ({ params }) => {
             <div className="w-auto flex items-center gap-2">
               <Avatar className="h-14 w-14">
                 <AvatarImage
-                  src={`/profesional/${`profesional.nombre`}.png`}
-                  alt={`profesional.nombre`}
+                  src={`/profesional/${post.profesionals[0].nombre}.png`}
+                  alt={`${post.profesionals[0].nombre}`}
                 />
                 <AvatarFallback>PR</AvatarFallback>
               </Avatar>
