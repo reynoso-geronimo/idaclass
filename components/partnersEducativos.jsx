@@ -61,7 +61,7 @@ const partners = [
     alt: "logo",
   },
   {
-    src: "/ENERGYM.jpg",
+    src: "/ENERGYM.png",
     alt: "Energym",
   },
   {

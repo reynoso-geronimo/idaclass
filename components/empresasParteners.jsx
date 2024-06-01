@@ -17,7 +17,7 @@ const partners = [
     alt: "logo",
   },
   {
-    src: "/LogorepresentantePeru.jpeg",
+    src: "/LogorepresentantePeru.png",
     alt: "logo",
   },
   {
@@ -37,7 +37,7 @@ const partners = [
 const EmpresasPartners = () => {
   return (
     <Carousel
-      className="container max-w-[720px] flex justify-center grayscale pb-4"
+      className="container max-w-4xl flex justify-center grayscale pb-4"
       opts={{
         align: "center",
         loop: true,
@@ -52,13 +52,12 @@ const EmpresasPartners = () => {
       <CarouselContent className="-ml-1 lg:h-full ">
         {partners.map((partner, index) => (
           <CarouselItem key={index} className="pl-1 basis-1/8">
-            <div className="p-1 flex aspect-square items-center justify-center  relative w-20 sm:w-24">
+            <div className="p-1 flex items-center justify-center relative w-32 h-20">
               <Image
                 src={`/empresasPartners${partner.src}`}
-                width={96}
-                height={96}
+                fill
                 alt="logo"
-                className=" rounded-xl cover"
+                className=" rounded-xl object-contain"
               />
             </div>
           </CarouselItem>
