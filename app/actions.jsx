@@ -243,6 +243,23 @@ export const getEventosFromDB = async (limit, not) => {
     throw error;
   }
 };
+export async function getEventoFromDB(id) {
+  try {
+    const response = await Evento.findOne({
+      where: { id: id },
+      include: [
+        {
+          model: Profesional,
+          as: "profesionals",
+        },
+      ],
+    });
+    const data = response.toJSON();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export async function inscripcion(formData) {
   "use server";

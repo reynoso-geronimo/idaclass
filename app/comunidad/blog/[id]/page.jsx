@@ -8,7 +8,8 @@ import { getBlogPostFromDB, getBlogPostsFromDB } from "@/app/actions";
 import CursoAsociado from "./_components/cursoAsociado";
 import Contenido from "./_components/contenido";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import UniteComunidad from "./_components/uniteComunidad";
+import UniteComunidad from "../../components/uniteComunidad";
+
 
 const page = async ({ params }) => {
   const [post, posts] = await Promise.all([

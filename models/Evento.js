@@ -20,22 +20,11 @@ const Evento = sequelize.define("eventos", {
         type: DataTypes.DATE,
         allowNull: true,
     },
-    created_at: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    updated_at: {
-        type: DataTypes.DATE,
-        allowNull: true,
-    },
-    created_by_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
-    updated_by_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-    },
+    cuerpo: {
+        type: DataTypes.TEXT('long'),
+
+    }
+
 }, {
     timestamps: false,
     freezeTableName: true,

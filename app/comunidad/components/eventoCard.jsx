@@ -49,7 +49,7 @@ const EventoCard = ({ evento }) => {
             Coordina: {evento?.profesionals[0].nombre}
           </p>
           <Link
-            href={``}
+           href={`/comunidad/evento/${evento.id}`}
             className=" font-semibold text-right flex gap-2 items-center text-xs"
           >
             VER MÁS
