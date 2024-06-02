@@ -5,7 +5,9 @@ import { useState } from "react";
 
 const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
   const [activo, setActivo] = useState();
-
+  const indexActivo = useCallback((value) => {
+    setActivo(value);
+  }, [])
   // ordenar categoriasOnDemand por cantidad (descendiente)
   const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
     const blogPostsA = blogPosts.filter(curso =>
@@ -49,7 +51,7 @@ const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
               key={categoria}
               categoria={categoria}
               index={index}
-              setActivo={setActivo}
+              setActivo={indexActivo}
               blogPosts={blogPostsFiltrados}
             />
           );

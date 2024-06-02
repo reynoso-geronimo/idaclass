@@ -29,7 +29,7 @@ const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
 
   useEffect(() => {
     inView && setActivo(index);
-  }, [inView]);
+  });
 
   return (
     <section className={`relative`} ref={ref}>
