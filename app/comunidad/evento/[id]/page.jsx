@@ -1,7 +1,10 @@
+import Image from "next/image";
 import BlockRendererClient from "@/components/ui/BlockRendererClient";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import UniteComunidad from "../../components/uniteComunidad";
 import { getEventoFromDB } from "@/app/actions";
-
+import { CalendarDaysIcon, Clock } from "lucide-react";
 
 import EventoHeader from "./components/EventoHeader";
 
