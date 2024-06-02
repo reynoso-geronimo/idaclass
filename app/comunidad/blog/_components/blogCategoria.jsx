@@ -8,21 +8,21 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CursoEspecializacionCard from "./cursoEspecializacionCard";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import PostCard from "../../components/postCard";
 
-const BlogCategoria = ({ categoria, cursos, index, setActivo }) => {
-  const countCursos = cursos.length;
-  //console.log(countCursos);
-  let basis = "lg:basis-1/2";
+const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
+  const countblogPosts = blogPosts.length;
+  //console.log(countblogPosts);
+  let basis = "basis-full";
 
-  if (countCursos === 2) {
-    basis = "lg:basis-1/2";
-  } else if (countCursos === 3) {
-    basis = "lg:basis-1/3";
-  } else if (countCursos >= 4) {
-    basis = "lg:basis-[335px]";
+  if (countblogPosts === 2) {
+    basis = "md:basis-1/2";
+  } else if (countblogPosts === 3) {
+    basis = "md:basis-1/3";
+  } else if (countblogPosts >= 4) {
+    basis = "md:basis-[335px]";
   }
 
   const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
@@ -40,19 +40,19 @@ const BlogCategoria = ({ categoria, cursos, index, setActivo }) => {
       <Carousel
         className="container"
         opts={{
-          align: "start",
+          align: "center",
           loop: true,
         }}
       >
         <CarouselContent className="-ml-1">
-          {cursos.map((curso, index) => (
-            <CarouselItem key={index} className={`pl-1 md:basis-1/2 ${basis}`}>
-              <CursoEspecializacionCard curso={curso} />
+          {blogPosts.map((post, index) => (
+            <CarouselItem key={index} className={`pl-1 ${basis}`}>
+               <PostCard post={post} key={index} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={`left-5 h-10 w-10 ${countCursos<=2&&"lg:hidden"}`} />
-        <CarouselNext className={`right-5 h-10 w-10 ${countCursos<=2&&"lg:hidden"}`} />
+        <CarouselPrevious className={`left-5 h-10 w-10 ${countblogPosts<=2&&"lg:hidden"}`} />
+        <CarouselNext className={`right-5 h-10 w-10 ${countblogPosts<=2&&"lg:hidden"}`} />
       </Carousel>
     </section>
   );

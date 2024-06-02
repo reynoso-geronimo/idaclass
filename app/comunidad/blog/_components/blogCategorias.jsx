@@ -3,18 +3,18 @@ import Link from "next/link";
 import BlogCategoria from "./blogCategoria";
 import { useState } from "react";
 
-const BlogCategorias = ({ categoriasOnDemand, cursos }) => {
+const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
   const [activo, setActivo] = useState();
 
   // ordenar categoriasOnDemand por cantidad (descendiente)
   const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
-    const cursosA = cursos.filter(curso =>
+    const blogPostsA = blogPosts.filter(curso =>
       curso.categorias.some(c => c.nombre === a)
     );
-    const cursosB = cursos.filter(curso =>
+    const blogPostsB = blogPosts.filter(curso =>
       curso.categorias.some(c => c.nombre === b)
     );
-    return cursosB.length - cursosA.length; //  orden descendiente
+    return blogPostsB.length - blogPostsA.length; //  orden descendiente
   });
 
   return (
@@ -40,7 +40,7 @@ const BlogCategorias = ({ categoriasOnDemand, cursos }) => {
       <div className="flex flex-col gap-y-6 2xl:gap-y-16">
         {sortedCategorias.map((categoria, index) => {
           // Filter courses for this category
-          const cursosFiltrados = cursos.filter(curso =>
+          const blogPostsFiltrados = blogPosts.filter(curso =>
             curso.categorias.some(c => c.nombre === categoria)
           );
 
@@ -50,7 +50,7 @@ const BlogCategorias = ({ categoriasOnDemand, cursos }) => {
               categoria={categoria}
               index={index}
               setActivo={setActivo}
-              cursos={cursosFiltrados}
+              blogPosts={blogPostsFiltrados}
             />
           );
         })}

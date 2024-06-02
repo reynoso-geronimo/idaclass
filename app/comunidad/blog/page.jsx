@@ -1,19 +1,23 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { getBlogPostsFromDB } from "../../actions";
 import PostCard from "../components/postCard";
+import BlogCategorias from "./_components/blogCategorias";
 
 const Page = async () => {
-  const blogPost = await getBlogPostsFromDB();
+  const blogPosts = await getBlogPostsFromDB();
+  const todasCategorias = blogPosts.map(blog => blog.categorias);
 
+  // Aplanar en un solo array
+  const categorias = todasCategorias.flat();
+
+  // Obtener solo los nombres únicos
+  const categoriasBlog = [
+    ...new Set(categorias.map(cat => cat.nombre)),
+  ];
   return (
-    <main className="flex flex-col items-center  ">
-     
-      <TituloSeccion>Nuestros Articulos</TituloSeccion>
-     <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-10 my-12 container ">
-            {blogPost.map((post, index) => (
-              <PostCard post={post} key={index} />
-            ))}
-          </div>
+    <main className="mb-16">
+     <BlogCategorias categoriasOnDemand={categoriasBlog}  blogPosts={blogPosts}/>
+      
 
     </main>
   );
