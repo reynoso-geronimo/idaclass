@@ -45,11 +45,11 @@ const ComunidadContenido = () => {
 
         {/* SIDEBAR */}
 
-        <div className="bg-black w-full lg:w-3/12  rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px] mx-auto max-w-lg">
+        <div className="bg-black w-full lg:w-3/12 rounded-3xl overflow-hidden flex flex-col lg:min-h-[650px] mx-auto max-w-lg">
           <div className="h-1/2 flex flex-col justify-between text-white text-xs font-semibold">
             <Link
               href={"/comunidad/blog/"}
-              className={`text-center py-2 my-0 text-2xl bg-idaclass3 xl flex items-center justify-center`}
+              className={`text-center py-2 my-0 text-2xl bg-idaclass3 flex items-center justify-center`}
             >
               Otras notas
               <ArrowBigRight className=" mr-2" strokeWidth={2.5} size={32} />
