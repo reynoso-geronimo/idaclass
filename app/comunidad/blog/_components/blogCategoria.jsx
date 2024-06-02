@@ -11,6 +11,7 @@ import {
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import PostCard from "../../components/postCard";
+import { Separator } from "@/components/ui/separator";
 
 const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
   const countblogPosts = blogPosts.length;
@@ -25,7 +26,7 @@ const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
     basis = "md:basis-[335px]";
   }
 
-  const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
+  const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "-300px" });
 
   useEffect(() => {
     inView && setActivo(index);
@@ -46,14 +47,19 @@ const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
       >
         <CarouselContent className="-ml-1">
           {blogPosts.map((post, index) => (
-            <CarouselItem key={index} className={`pl-1 ${basis}`}>
-               <PostCard post={post} key={index} />
+            <CarouselItem key={index} className={`pl-1 ${basis} md:mx-4`}>
+              <PostCard post={post} key={index} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className={`left-5 h-10 w-10 ${countblogPosts<=2&&"lg:hidden"}`} />
-        <CarouselNext className={`right-5 h-10 w-10 ${countblogPosts<=2&&"lg:hidden"}`} />
+        <CarouselPrevious
+          className={`left-5 h-10 w-10 ${countblogPosts <= 2 && "lg:hidden"}`}
+        />
+        <CarouselNext
+          className={`right-5 h-10 w-10 ${countblogPosts <= 2 && "lg:hidden"}`}
+        />
       </Carousel>
+      <Separator className="mt-12" />
     </section>
   );
 };

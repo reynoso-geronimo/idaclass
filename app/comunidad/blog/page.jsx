@@ -1,6 +1,4 @@
-import TituloSeccion from "@/components/ui/titulo-seccion";
 import { getBlogPostsFromDB } from "../../actions";
-import PostCard from "../components/postCard";
 import BlogCategorias from "./_components/blogCategorias";
 
 const Page = async () => {
@@ -11,14 +9,13 @@ const Page = async () => {
   const categorias = todasCategorias.flat();
 
   // Obtener solo los nombres únicos
-  const categoriasBlog = [
-    ...new Set(categorias.map(cat => cat.nombre)),
-  ];
+  const categoriasBlog = [...new Set(categorias.map(cat => cat.nombre))];
   return (
-    <main className="mb-16">
-     <BlogCategorias categoriasOnDemand={categoriasBlog}  blogPosts={blogPosts}/>
-      
-
+    <main className="mb-16 container">
+      <BlogCategorias
+        categoriasOnDemand={categoriasBlog}
+        blogPosts={blogPosts}
+      />
     </main>
   );
 };

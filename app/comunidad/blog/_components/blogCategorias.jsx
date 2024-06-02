@@ -25,7 +25,7 @@ const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
             onClick={() => {
               setTimeout(() => {
                 setActivo(index);
-              }, 500);
+              }, 800);
             }}
             key={index}
             href={`#${categoriaOnDemand}`}
@@ -37,7 +37,7 @@ const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
           </Link>
         ))}
       </nav>
-      <div className="flex flex-col gap-y-6 2xl:gap-y-16">
+      <div className="flex flex-col gap-y-6 2xl:gap-y-16 mt-12">
         {sortedCategorias.map((categoria, index) => {
           // Filter courses for this category
           const blogPostsFiltrados = blogPosts.filter(curso =>
