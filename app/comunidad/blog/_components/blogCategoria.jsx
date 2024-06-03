@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import PostCard from "../../components/postCard";
 import { Separator } from "@/components/ui/separator";
 
-const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
+const BlogCategoria = ({ categoria, blogPosts, index, setActivo, freezeInView }) => {
   const countblogPosts = blogPosts.length;
   //console.log(countblogPosts);
   let basis = "basis-full";
@@ -29,7 +29,10 @@ const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
   const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
 
   useEffect(() => {
-    inView && setActivo(index);
+     if(inView &&!freezeInView) {
+      setActivo(index);
+      
+    }
   }, [inView]);
 
   return (

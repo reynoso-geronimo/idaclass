@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
   const [activo, setActivo] = useState();
-
+  const [freezeInView, setFreezeInView] = useState(false)
   // ordenar categoriasOnDemand por cantidad (descendiente)
   const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
     const blogPostsA = blogPosts.filter(curso =>
@@ -23,8 +23,10 @@ const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
         {sortedCategorias.map((categoriaOnDemand, index) => (
           <Link
             onClick={() => {
+              setFreezeInView(true)
+              setActivo(index);
               setTimeout(() => {
-                setActivo(index);
+                setFreezeInView(false)
               }, 800);
             }}
             key={index}
@@ -51,6 +53,7 @@ const BlogCategorias = ({ categoriasOnDemand, blogPosts }) => {
               index={index}
               setActivo={setActivo}
               blogPosts={blogPostsFiltrados}
+              freezeInView={freezeInView}
             />
           );
         })}
