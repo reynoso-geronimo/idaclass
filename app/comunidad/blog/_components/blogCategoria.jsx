@@ -26,7 +26,7 @@ const BlogCategoria = ({ categoria, blogPosts, index, setActivo }) => {
     basis = "md:basis-[335px]";
   }
 
-  const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "-300px" });
+  const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
 
   useEffect(() => {
     inView && setActivo(index);
