@@ -12,7 +12,7 @@ const page = async ({ params }) => {
     <main className="">
      <EventoHeader evento={evento}/>
       <UniteComunidad />
-      <div className="px-0 container flex flex-col lg:flex-row gap-8 mt-12">
+      <div className="container mt-12">
         <BlockRendererClient content={contenido} />
       </div>
     </main>
