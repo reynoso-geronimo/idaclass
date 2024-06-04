@@ -4,8 +4,9 @@ import CursosEspecializacionCategoria from "./cursosEspecializacionCategoria";
 import { useState } from "react";
 
 const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
+  
+  const [freezeInView, setFreezeInView] = useState(false)
   const [activo, setActivo] = useState();
-
   // ordenar categoriasOnDemand por cantidad (descendiente)
   const sortedCategorias = categoriasOnDemand.slice().sort((a, b) => {
     const cursosA = cursos.filter(curso =>
@@ -22,11 +23,13 @@ const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
       <nav className="max-lg:hidden container sticky top-[64px] z-50 flex items-center justify-evenly bg-gray-100 h-[60px] w-full gap-8">
         {sortedCategorias.map((categoriaOnDemand, index) => (
           <Link
-            onClick={() => {
-              setTimeout(() => {
-                setActivo(index);
-              }, 500);
-            }}
+          onClick={() => {
+            setFreezeInView(true)
+            setActivo(index);
+            setTimeout(() => {
+              setFreezeInView(false)
+            }, 800);
+          }}
             key={index}
             href={`#${categoriaOnDemand}`}
             className={`${
@@ -51,6 +54,7 @@ const CursosEspecializacionCategorias = ({ categoriasOnDemand, cursos }) => {
               index={index}
               setActivo={setActivo}
               cursos={cursosFiltrados}
+              freezeInView={freezeInView}
             />
           );
         })}

@@ -12,7 +12,7 @@ import CursoEspecializacionCard from "./cursoEspecializacionCard";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo }) => {
+const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo, freezeInView }) => {
   const countCursos = cursos.length;
   //console.log(countCursos);
   let basis = "lg:basis-1/2";
@@ -28,8 +28,11 @@ const CursosEspecializacionCategoria = ({ categoria, cursos, index, setActivo })
   const [ref, inView] = useInView({ threshold: 0.7, rootMargin: "0px" });
 
   useEffect(() => {
-    inView && setActivo(index);
-  }, [inView]);
+    if(inView &&!freezeInView) {
+     setActivo(index);
+     
+   }
+ }, [inView]);
 
   return (
     <section className={`relative`} ref={ref}>

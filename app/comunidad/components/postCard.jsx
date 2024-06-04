@@ -8,18 +8,18 @@ const PostCard = ({ post }) => {
     <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[420px] mx-auto relative">
       {
         <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500`}>
-          {" "}
           {post.categorias[0].nombre || " "}
         </Badge>
       }
+      <div className="relative aspect-video w-full">
       <Image
         src={"/blog/cards/" + post.titulo + ".png"}
-        width={520}
-        height={520}
         quality={100}
+        fill
         alt="Imagen de Blog"
-        className="bg-black aspect-video text-white"
+        className="bg-black text-white object-cover -z-10"
       />
+      </div>
       <div className="px-4 h-32 flex flex-col justify-between py-4 bg-gray-100">
         <h5 className="leading-5 font-medium line-clamp-[3]">{post.titulo}</h5>
         <Link
