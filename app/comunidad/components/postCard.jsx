@@ -5,22 +5,22 @@ import Link from "next/link";
 
 const PostCard = ({ post }) => {
   return (
-    <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden max-w-[420px] mx-auto relative">
+    <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden w-full max-w-[420px] mx-auto relative">
       {
-        <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500`}>
+        <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500 z-10`}>
           {post.categorias[0].nombre || " "}
         </Badge>
       }
       <div className="relative aspect-video w-full">
-      <Image
-        src={"/blog/cards/" + post.titulo + ".png"}
-        quality={100}
-        fill
-        alt="Imagen de Blog"
-        className="bg-black text-white object-cover -z-10"
-      />
+        <Image
+          src={`/blog/cards/${post.titulo}.png`}
+          quality={100}
+          fill
+          alt="Imagen de Blog"
+          className="text-white object-cover"
+        />
       </div>
-      <div className="px-4 h-32 flex flex-col justify-between py-4 bg-gray-100">
+      <div className="px-4 h-32 flex flex-col justify-between py-4 bg-gray-100 z-10">
         <h5 className="leading-5 font-medium line-clamp-[3]">{post.titulo}</h5>
         <Link
           href={`/comunidad/blog/${post.id}`}

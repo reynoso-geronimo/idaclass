@@ -1,15 +1,16 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-const Asesorate = ({ sideBar = false }) => {
+const Asesorate = ({ sideBar = false , className}) => {
   return (
     <article
-      className={`w-full flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${
+      className={cn(`w-full flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${
         !sideBar
           ? "lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md"
           : "min-h-[430px]"
-      }`}
+      }`, className)}
     >
       <h3 className="text-left text-2xl p-0 m-0 relative z-10 font-extrabold w-[16rem] lg:leading-8">
         ¿Quieres <br /><span className="text-green-500">saber más?</span>
