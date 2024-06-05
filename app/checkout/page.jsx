@@ -31,13 +31,17 @@ const getPaymentOptionStyles = (value, option) => {
 };
 const formSchema = z.object({
   telefono: z.coerce.number().min(2, {
-    message: "Ingresa tu telefono",
+    message: "Este campo es obligatorio",
     required_error: "Ingresa tu telefono",
+    invalid_type_error: "Ingresa un telefono valido",
   }),
-  dob: z.string().date({}),
+  dob: z
+    .string()
+    .datetime({ message: "Ingresa tu fecha de nacimiento" }),
   dni: z.coerce.number().min(2, {
-    message: "Ingresa tu DNI/RUT/CI",
+    message: "Este campo es obligatorio",
     required_error: "Ingresa tu DNI/RUT/CI",
+    invalid_type_error: "Ingrea un numero valido",
   }),
 });
 
@@ -112,7 +116,7 @@ const CheckoutPage = () => {
                   <FormItem>
                     <FormLabel>Telefono</FormLabel>
                     <FormControl>
-                      <Input {...field} type="tel" />
+                      <Input {...field} type="number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
