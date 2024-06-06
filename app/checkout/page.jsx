@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-
 import {
   Form,
   FormControl,
@@ -35,9 +34,7 @@ const formSchema = z.object({
     required_error: "Ingresa tu telefono",
     invalid_type_error: "Ingresa un telefono valido",
   }),
-  dob: z
-    .string()
-    .datetime({ message: "Ingresa tu fecha de nacimiento" }),
+  dob: z.string().date({ message: "Ingresa tu fecha de nacimiento" }),
   dni: z.coerce.number().min(2, {
     message: "Este campo es obligatorio",
     required_error: "Ingresa tu DNI/RUT/CI",
@@ -46,6 +43,7 @@ const formSchema = z.object({
 });
 
 const CheckoutPage = () => {
+  const { data: session, status } = useSession();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -54,13 +52,15 @@ const CheckoutPage = () => {
       dni: "",
     },
   });
-
+  const user = {
+    userName: session?.user?.name,
+    userId: session?.user?.id,
+    email: session?.user?.email,
+  };
   const searchParams = useSearchParams();
   const modalidad = searchParams.get("modalidad");
   const nombre = searchParams.get("nombre");
   const tipo = searchParams.get("tipo");
-
-  const { data: session, status } = useSession();
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -69,8 +69,7 @@ const CheckoutPage = () => {
   }, [status]);
 
   const onSubmit = formData => {
-    //inscripcion(formData);
-    console.log(formData);
+    inscripcion(formData , user, tipo, nombre, modalidad);
   };
 
   if (status === "loading" || status === "unauthenticated") {

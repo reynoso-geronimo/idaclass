@@ -261,7 +261,7 @@ export async function getEventoFromDB(id) {
   }
 }
 
-export async function inscripcion(formData) {
+export async function inscripcion(formData, user, tipo, nombre, modalidad) {
   "use server";
   console.log(formData);
 
@@ -272,9 +272,9 @@ export async function inscripcion(formData) {
   const preference = await new Preference(client).create({
     body: {
       metadata: {
-        userName: formData.get("userName"),
-        userId: formData.get("userId"),
-        email: formData.get("userEmail"),
+        userName: user.userName,
+        userId: user.userId,
+        email: user.email,
       },
 
       payment_methods: {
@@ -284,14 +284,9 @@ export async function inscripcion(formData) {
       },
       items: [
         {
-          title:
-            formData.get("nombre") +
-            " - " +
-            formData.get("modalidad") +
-            " - " +
-            formData.get("tipo"),
+          title: nombre + " - " + modalidad + " - " + tipo,
           quantity: 1,
-          unit_price: parseFloat(formData.get("precio")),
+          unit_price: parseFloat(50000),
         },
       ],
 
