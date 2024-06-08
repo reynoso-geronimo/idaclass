@@ -103,7 +103,7 @@ const CursoPage = async ({ params }) => {
         tipo={"CURSO DE FORMACION"}
       />
       <Separator className="my-6" />
-      <BecaAsesorate />
+   {/*    <BecaAsesorate /> */}
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"

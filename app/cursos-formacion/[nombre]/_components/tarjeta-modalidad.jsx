@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
 
 import Link from "next/link";
 
@@ -24,21 +23,11 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
 
   return (
     <div
-      className={`relative w-full  lg:w-[440px] flex justify-center pb-14 ${
-        modalidad === "ONLINE" ? "pt-[28rem]" : "pt-[20rem]"
+      className={`relative w-full lg:w-1/3 flex justify-center pb-14  ${
+        modalidad === "ONLINE" ? "pt-[16rem]" : ""
       } lg:pt-28`}
     >
-      <Image
-        src={
-          modalidad === "ONLINE"
-            ? "/cursosFormacion/Online.png"
-            : "/cursosFormacion/Presencial.png"
-        }
-        fill
-        className="-z-10 object-cover object-top lg:hidden"
-        alt=""
-      />
-      <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-6 ">
+      <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
             <p className="bg-idaclass text-white py-2 text-center w-full text-lg">
@@ -93,7 +82,13 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, precio = 50000 }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button size="lg" className={`w-full rounded-2xl ${modalidad!=="ONLINE"&&"xl:w-1/2"}`} asChild>
+          <Button
+            size="lg"
+            className={`w-full rounded-2xl ${
+              modalidad !== "ONLINE" && "xl:w-1/2"
+            }`}
+            asChild
+          >
             <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
           </Button>
           {modalidad !== "ONLINE" && (

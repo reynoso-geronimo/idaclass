@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,15 +9,25 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 
-const TarjetaModalidad = ({ modalidad }) => {
+import Link from "next/link";
+
+const TarjetaModalidad = ({ modalidad="ONLINE", nombre, tipo="CURSO DE ESPECIALIZACION", precio = 50000 }) => {
+  const checkoutParams = {
+    modalidad,
+    nombre,
+    tipo,
+  };
+
+  const queryParams = new URLSearchParams(checkoutParams).toString();
+
   return (
     <div
-      className={`relative w-full  lg:w-[440px] flex justify-center pb-14 lg:pt-28`}
+      className={`relative w-full lg:w-1/3 flex justify-center pb-14  ${
+        modalidad === "ONLINE" ? "pt-[16rem]" : ""
+      } lg:pt-28`}
     >
-      <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl mx-6 ">
+      <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
             <p className="bg-idaclass text-white py-2 text-center w-full text-lg">
@@ -70,14 +82,9 @@ const TarjetaModalidad = ({ modalidad }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button
-            size="lg"
-            className={`w-full rounded-2xl `}
-          >
-            <ArrowRight className="mr-2" />
-            INSCRIBIRME AHORA
+          <Button size="lg" className={`w-full rounded-2xl`} asChild>
+            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
           </Button>
-          
         </CardFooter>
       </Card>
     </div>

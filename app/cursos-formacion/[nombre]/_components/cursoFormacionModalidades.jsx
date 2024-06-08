@@ -1,12 +1,16 @@
+import AsesorateModalidad from "@/components/asesorateModalidad";
 import TarjetaModalidad from "./tarjeta-modalidad";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 
 const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
   return (
-    <section id="inscripcion" className="container px-0 relative">
+    <section
+      id="inscripcion"
+      className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] "
+    >
       <Image
-        src={"/cursosFormacion/modalidadesbg.png"}
+        src={"/cursosFormacion/modalidadesbg2.png"}
         fill
         alt=""
         className="max-lg:hidden object-cover object-right"
@@ -22,13 +26,20 @@ const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
         </TituloSeccion>
       )}
 
-      <div className="flex w-full justify-center flex-col lg:flex-row lg:w-[54rem]">
+      <div className="flex w-full justify-center items-stretch flex-col lg:flex-row lg:gap-4">
         {modalidades.includes("Online") ? (
-          <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo}/>
+          <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo} />
         ) : (
           ""
         )}
-        {modalidades.includes("Presencial") && <TarjetaModalidad modalidad={"PRESENCIAL"} nombre={nombre} tipo={tipo}/>}
+        {modalidades.includes("Presencial") && (
+          <TarjetaModalidad
+            modalidad={"PRESENCIAL"}
+            nombre={nombre}
+            tipo={tipo}
+          />
+        )}
+        <AsesorateModalidad className="lg:mt-28 mb-12 lg:w-[440px]" />
       </div>
     </section>
   );

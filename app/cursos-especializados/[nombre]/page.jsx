@@ -64,7 +64,7 @@ const CursoPage = async ({ params }) => {
       <CursosEspciealizacionRequisitos dirigido={dirigido} />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursosEspciealizacionModalidades />
+      <CursosEspciealizacionModalidades nombre={nombre}/>
       {/* <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
@@ -75,7 +75,7 @@ const CursoPage = async ({ params }) => {
       {/* <TituloSeccion className={""}>
           Casos de éxito de nuestros estudiantes
         </TituloSeccion> */}
-      <BecaAsesorate />
+      {/* <BecaAsesorate /> */}
       <Separator className="my-6" />
       <CasosExito titulo={`Casos de éxito de nuestros estudiantes`} />
 
