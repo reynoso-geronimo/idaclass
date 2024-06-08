@@ -21,6 +21,11 @@ const Venta = sequelize.define('ventas', {
         allowNull: true,
         unique: true
     },
+    payment_id_paypal: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        unique: true
+    },
     user_id: {
         type: DataTypes.INTEGER,
         allowNull: true

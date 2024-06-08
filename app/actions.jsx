@@ -9,6 +9,7 @@ import Profesional from "@/models/Profesional";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
 import Evento from "@/models/Evento";
+import checkoutNodeJssdk from '@paypal/checkout-server-sdk'
 
 export async function getCursos() {
   try {
@@ -261,7 +262,7 @@ export async function getEventoFromDB(id) {
   }
 }
 
-export async function inscripcion(formData, user, tipo, nombre, modalidad) {
+export async function inscripcion(formData, user, tipo, nombre, modalidad , monto) {
   "use server";
   console.log(formData);
 
@@ -286,7 +287,7 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad) {
         {
           title: nombre + " - " + modalidad + " - " + tipo,
           quantity: 1,
-          unit_price: parseFloat(50000),
+          unit_price: parseFloat(monto),
         },
       ],
 
@@ -298,7 +299,7 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad) {
       auto_return: "approved",
     },
   });
-  //console.log(preference);
+  console.log(preference);
   //console.log(preference.sandbox_init_point);
   redirect(preference.sandbox_init_point);
 }
@@ -317,3 +318,4 @@ export async function getVentasFromDB(id) {
     console.log(error);
   }
 }
+

@@ -1,4 +1,5 @@
 "use client";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useSearchParams } from "next/navigation";
 import { inscripcion } from "@/app/actions";
 import { signIn, useSession } from "next-auth/react";
@@ -19,7 +20,8 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import { useEffect } from "react";
 import Loading from "../loading";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-const getPaymentOptionStyles = (value, option) => {
+import Image from "next/image";
+/* const getPaymentOptionStyles = (value, option) => {
   const isSelected = value === option;
   const baseStyles =
     "border-2 font-black rounded-2xl transition-all w-full flex items-center justify-center cursor-pointer";
@@ -27,14 +29,22 @@ const getPaymentOptionStyles = (value, option) => {
   const unselectedStyles = "bg-gray-400 text-black border-idaclassGray2 p-3";
 
   return `${baseStyles} ${isSelected ? selectedStyles : unselectedStyles}`;
-};
+}; */
+
+
+const monto = 50000
 const formSchema = z.object({
+  direccion: z.string().min(2, {
+    message: "Este campo es obligatorio",
+    required_error: "Ingresa tu direccion",
+    invalid_type_error: "Ingresa una direccion valida",
+  }),
   telefono: z.coerce.number().min(2, {
     message: "Este campo es obligatorio",
     required_error: "Ingresa tu telefono",
     invalid_type_error: "Ingresa un telefono valido",
   }),
-  dob: z.string().date({ message: "Ingresa tu fecha de nacimiento" }),
+  dob: z.string().date("Ingresa tu fecha de nacimiento"),
   dni: z.coerce.number().min(2, {
     message: "Este campo es obligatorio",
     required_error: "Ingresa tu DNI/RUT/CI",
@@ -47,6 +57,7 @@ const CheckoutPage = () => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      direccion: "",
       telefono: "",
       dob: "",
       dni: "",
@@ -69,7 +80,7 @@ const CheckoutPage = () => {
   }, [status]);
 
   const onSubmit = formData => {
-    inscripcion(formData , user, tipo, nombre, modalidad);
+    inscripcion(formData, user, tipo, nombre, modalidad, monto);
   };
 
   if (status === "loading" || status === "unauthenticated") {
@@ -143,13 +154,13 @@ const CheckoutPage = () => {
                   <FormItem>
                     <FormLabel>Fecha de nacimiento </FormLabel>
                     <FormControl>
-                      <Input {...field} type="date" />
+                      <Input {...field} type="date" className="flex justify-between w-full"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <FormField
+              {/*   <FormField
                 control={form.control}
                 name="type"
                 render={({ field }) => (
@@ -192,11 +203,72 @@ const CheckoutPage = () => {
                     <FormMessage />
                   </FormItem>
                 )}
-              />
-              <Button type="submit" className="w-full rounded-2xl">
-                Inscribirme
+              /> */}
+              <Button
+                type="submit"
+                className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
+                disabled={!form.formState.isValid}
+              >
+                <Image
+                  src={`/assets/mp-icon.svg`}
+                  width={30}
+                  height={30}
+                  alt="mercadopago"
+                />
+                Mercadopago
               </Button>
             </form>
+            <PayPalScriptProvider
+              options={{
+                "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
+                currency: "USD",
+                intent: "capture",
+              }}
+
+              //deferLoading={true}
+            >
+              <PayPalButtons
+                style={{
+                  layout: "horizontal",
+                  size: "responsive",
+                  shape: "rect",
+                  height: 40,
+                }}
+                disabled={!form.formState.isValid}
+                createOrder={async () => {
+                  const res = await fetch("api/paypal", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      ammount: monto,
+                      description: tipo + " " + nombre + " " + modalidad,
+                    }),
+                  });
+                  const order = await res.json();
+
+                  return order.id;
+                }}
+                onApprove={async (data, actions) => {
+                  actions.order.capture();
+
+                  await fetch("/paypalpayment/", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      paymentID: data.orderID,
+                      descripcion: ` ${nombre} - ${modalidad} - ${tipo}`,
+                      monto: monto ,
+                      user_id: user.userId,
+                    }),
+                  });
+                }}
+                /*onCancel={() => {}} */
+              />
+            </PayPalScriptProvider>
           </Form>
         </div>
       </main>
