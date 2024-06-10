@@ -102,8 +102,8 @@ const CheckoutPage = () => {
             {...form}
             className="container flex flex-col justify-center items-center gap-2"
           >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 lg:flex space-x-8">
-              <div className="lg:w-1/2">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 space-x-8">
+              <div className="">
                 <FormField
                   control={form.control}
                   name="pais"
@@ -246,7 +246,7 @@ const CheckoutPage = () => {
                 )}
               /> */}
               </div>
-              <div className="space-y-4 lg:w-1/2">
+              <div className="space-y-4  sticky top-0">
                 <Button
                   type="submit"
                   className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
