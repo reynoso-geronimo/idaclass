@@ -67,20 +67,20 @@ const Ventajas = () => {
               Con el sistema Learning by Doing aplicarás los conocimientos desde
               el primer día y tendrás prácticas reales con alumnos.
             </p>
-            <ul className="lg:w-2/3 grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 text-sm sm:text-base">
-              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
+            <ul className="font-bold grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 gap-y-4 text-sm sm:text-base ">
+              <li className="w-full  flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Trabajos en equipo
               </li>
-              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
+              <li className="w-full  flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Desarrollo de proyectos propios
               </li>
-              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
+              <li className="w-full  flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Acompañamiento de tutores
               </li>
-              <li className="w-full max-w-56 flex items-center break-words hyphens-auto">
+              <li className="w-full  flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Staff de expertos Internacionales
               </li>
