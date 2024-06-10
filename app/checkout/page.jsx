@@ -31,8 +31,7 @@ import Image from "next/image";
   return `${baseStyles} ${isSelected ? selectedStyles : unselectedStyles}`;
 }; */
 
-
-const monto = 50000
+const monto = 50000;
 const formSchema = z.object({
   direccion: z.string().min(2, {
     message: "Este campo es obligatorio",
@@ -103,64 +102,106 @@ const CheckoutPage = () => {
             {...form}
             className="container flex flex-col justify-center items-center gap-2"
           >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <FormField
-                control={form.control}
-                name="direccion"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Dirección completa (calle y nro) y localidad:
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} type="text" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="telefono"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Telefono</FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="dni"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Número de DNI/RUT/CI (Nro de Identidad de tu país):
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} type="number" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="dob"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Fecha de nacimiento </FormLabel>
-                    <FormControl>
-                      <Input {...field} type="date" className="flex justify-between w-full"/>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/*   <FormField
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 lg:flex space-x-8">
+              <div className="lg:w-1/2">
+                <FormField
+                  control={form.control}
+                  name="pais"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Pais</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="text" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="estadoprovincia"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Estado / Provincia</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="text" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="localidad"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Localidad</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="text" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="direccion"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Dirección completa (calle y nro)</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="text" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="telefono"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Telefono</FormLabel>
+                      <FormControl>
+                        <Input {...field} type="number" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="dni"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>
+                        Número de DNI/RUT/CI (Nro de Identidad de tu país):
+                      </FormLabel>
+                      <FormControl>
+                        <Input {...field} type="number" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="dob"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Fecha de nacimiento </FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="date"
+                          className="flex justify-between w-full"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                {/*   <FormField
                 control={form.control}
                 name="type"
                 render={({ field }) => (
@@ -204,71 +245,74 @@ const CheckoutPage = () => {
                   </FormItem>
                 )}
               /> */}
-              <Button
-                type="submit"
-                className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
-                disabled={!form.formState.isValid}
-              >
-                <Image
-                  src={`/assets/mp-icon.svg`}
-                  width={30}
-                  height={30}
-                  alt="mercadopago"
-                />
-                Mercadopago
-              </Button>
+              </div>
+              <div className="space-y-4 lg:w-1/2">
+                <Button
+                  type="submit"
+                  className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
+                  disabled={!form.formState.isValid}
+                >
+                  <Image
+                    src={`/assets/mp-icon.svg`}
+                    width={30}
+                    height={30}
+                    alt="mercadopago"
+                  />
+                  Mercadopago
+                </Button>
+                <PayPalScriptProvider
+                  options={{
+                    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
+                    currency: "USD",
+                    intent: "capture",
+                  }}
+
+                  //deferLoading={true}
+                >
+                  <PayPalButtons
+                    style={{
+                      layout: "horizontal",
+                      size: "responsive",
+                      shape: "rect",
+                      height: 40,
+                    }}
+                    disabled={!form.formState.isValid}
+                    createOrder={async () => {
+                      const res = await fetch("api/paypal", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          ammount: monto,
+                          description: tipo + " " + nombre + " " + modalidad,
+                        }),
+                      });
+                      const order = await res.json();
+
+                      return order.id;
+                    }}
+                    onApprove={async (data, actions) => {
+                      actions.order.capture();
+
+                      await fetch("/paypalpayment/", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                          paymentID: data.orderID,
+                          descripcion: ` ${nombre} - ${modalidad} - ${tipo}`,
+                          monto: monto,
+                          user_id: user.userId,
+                        }),
+                      });
+                    }}
+                    /*onCancel={() => {}} */
+                  />
+                </PayPalScriptProvider>
+              </div>
             </form>
-            <PayPalScriptProvider
-              options={{
-                "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
-                currency: "USD",
-                intent: "capture",
-              }}
-
-              //deferLoading={true}
-            >
-              <PayPalButtons
-                style={{
-                  layout: "horizontal",
-                  size: "responsive",
-                  shape: "rect",
-                  height: 40,
-                }}
-                disabled={!form.formState.isValid}
-                createOrder={async () => {
-                  const res = await fetch("api/paypal", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                      ammount: monto,
-                      description: tipo + " " + nombre + " " + modalidad,
-                    }),
-                  });
-                  const order = await res.json();
-
-                  return order.id;
-                }}
-                onApprove={async (data, actions) => {
-                  actions.order.capture();
-
-                  await fetch("/paypalpayment/", {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                      paymentID: data.orderID,
-                      descripcion: ` ${nombre} - ${modalidad} - ${tipo}`,
-                      monto: monto ,
-                      user_id: user.userId,
-                    }),
-                  });
-                }}
-                /*onCancel={() => {}} */
-              />
-            </PayPalScriptProvider>
           </Form>
         </div>
       </main>
