@@ -39,6 +39,8 @@ const handler = NextAuth({
 
             if (bcrypt.compareSync(credentials.password, dbUser.password)) {
               dbUser.name = dbUser.username
+              given_name = dbUser.given_name
+              family_name = dbUser.family_name
               return dbUser
             }
             // Any object returned will be saved in `user` property of the JWT

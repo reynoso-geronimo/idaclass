@@ -14,12 +14,13 @@ const User = sequelize.define("up_user", {
   given_name: {
     type: DataTypes.STRING
   },
-  password: {
-    type: DataTypes.STRING
-  },
   family_name: {
     type: DataTypes.STRING
   },
+  password: {
+    type: DataTypes.STRING
+  },
+
   email: {
     type: DataTypes.STRING
   },
