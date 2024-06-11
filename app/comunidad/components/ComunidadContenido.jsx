@@ -75,7 +75,7 @@ const ComunidadContenido = () => {
               Agenda de <span className="text-idaclass3">&#160;Eventos</span>
             </h2>
             {secondRow.map((evento, index) => (
-              <CardSidebar CardSidebar evento={evento} key={index} />
+              <CardSidebar CardSidebar post={evento} key={index} href={"comunidad/evento/"} />
             ))}
           </div>
         </div>

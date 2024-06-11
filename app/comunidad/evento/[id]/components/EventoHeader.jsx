@@ -9,10 +9,11 @@ const EventoHeader = ({evento}) => {
     const [imgError, setImgError] = useState(false)
 
   return (
-    <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white">
+    <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white bg-gradient-to-r from-idaclass5">
       <Image
         loader={({ src }) => src}
-        src={`/Evento/headerMobile/${evento.titulo}.png`}
+        quality={100}
+        src={`/eventos/${evento.titulo}.png`}
         alt={evento.titulo}
         fill
         priority
@@ -26,9 +27,10 @@ const EventoHeader = ({evento}) => {
       <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
         <Image
           loader={({ src }) => src}
-          src={`/Evento/headerWeb/${evento.titulo}.png`}
+          src={`/eventos/${evento.titulo}.png`}
           alt={evento.titulo}
           fill
+          quality={100}
           priority
           onError={e => {
             e.target.id = "/assets/logoIdaClassAlt2.svg";

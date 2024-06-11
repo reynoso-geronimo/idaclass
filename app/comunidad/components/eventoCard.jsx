@@ -13,10 +13,10 @@ const EventoCard = ({ evento }) => {
 
   return (
     <article className="w-full lg:w-1/2  rounded-3xl overflow-hidden text-white mx-auto flex flex-col">
-      <div className="w-full mx-auto relative flex flex-col items-start justify-between gap-8 p-4 flex-1 ">
+      <div className="w-full mx-auto relative flex flex-col items-start justify-between gap-4 p-4 flex-1 bg-gradient-to-r from-idaclass5">
         <Image
           loader={({ src }) => src}
-          src={"/"}
+          src={`/eventos/${evento.titulo}.png`}
           alt="evento"
           fill
           onError={(e) => {
@@ -28,7 +28,7 @@ const EventoCard = ({ evento }) => {
           quality={100}
           className={`${imgError?"object-scale-down object-right":"object-cover"} -z-10 bg-black`}
         />
-        <h2 className="text-4xl font-black mt-8">{evento?.clasificacion}</h2>
+        <h2 className="text-4xl font-black mt-4">{evento?.clasificacion}</h2>
         <div className="max-w-[50%]">
           <Separator />
           <h2 className="font-bold text-lg py-2 w-full">{evento?.titulo}</h2>

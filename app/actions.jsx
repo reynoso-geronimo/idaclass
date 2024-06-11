@@ -229,6 +229,7 @@ export const getEventosFromDB = async (limit, not) => {
   const query = {
     limit: limit,
     include: [{ model: Profesional, as: "profesionals" }],
+    order: [['fecha', 'ASC']], // Ordenar por fecha ascendente
   };
 
   if (not) {
@@ -236,9 +237,30 @@ export const getEventosFromDB = async (limit, not) => {
   }
 
   try {
-    const response = await Evento.findAll(query);
+    const today = new Date(); // Obtener la fecha actual
+    const response = await Evento.findAll({
+      ...query,
+      where: {
+        ...query.where,
+        fecha: {
+          [Op.gte]: today, // Filtrar eventos con fecha mayor o igual a hoy
+        },
+      },
+    });
 
-    return response.map(evento => evento.toJSON());
+    const futureEvents = response.map(evento => evento.toJSON());
+
+    const pastEvents = await Evento.findAll({
+      ...query,
+      where: {
+        ...query.where,
+        fecha: {
+          [Op.lt]: today, // Filtrar eventos con fecha menor a hoy
+        },
+      },
+    });
+
+    return [...futureEvents, ...pastEvents.map(evento => evento.toJSON())];
   } catch (error) {
     console.error(error);
     throw error;
