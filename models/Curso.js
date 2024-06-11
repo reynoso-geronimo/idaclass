@@ -20,6 +20,12 @@ const Curso = sequelize.define("curso", {
     precio: {
         type: DataTypes.INTEGER,
     },
+    precio_bo: {
+        type: DataTypes.INTEGER,
+    },
+    precio_uy: {
+        type: DataTypes.INTEGER,
+    },
     videoid: {
         type: DataTypes.STRING
     },
