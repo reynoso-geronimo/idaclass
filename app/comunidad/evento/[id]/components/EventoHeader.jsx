@@ -9,7 +9,7 @@ const EventoHeader = ({evento}) => {
     const [imgError, setImgError] = useState(false)
 
   return (
-    <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white bg-gradient-to-r from-idaclass5">
+    <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white bg-gradient-to-t lg:bg-gradient-to-r from-idaclass5">
       <Image
         loader={({ src }) => src}
         quality={100}
@@ -22,7 +22,7 @@ const EventoHeader = ({evento}) => {
           e.target.srcset = "/assets/logoIdaClassAlt2.svg";
           setImgError(true);
         }}
-        className={`${imgError?"object-scale-down object-top pt-24":"object-top object-cover "} -z-10 lg:hidden bg-black`}
+        className={`${imgError?"object-scale-down object-top pt-24":"object-top object-scale-down "} -z-10 lg:hidden bg-black`}
       />
       <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
         <Image
