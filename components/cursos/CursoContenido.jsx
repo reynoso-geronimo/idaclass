@@ -8,7 +8,7 @@ import {
   import TituloSeccion from "@/components/ui/titulo-seccion";
   import SkillClass from "@/components/cursos/skillClass";
   
-  const CursosContenido = ({ modulos = null,tituloSkicclass }) => {
+  const CursosContenido = ({ modulos = null,incluyteSkillClass ,tituloSkicclass }) => {
     const contenido = JSON.parse(modulos);
   
     return (
@@ -23,9 +23,9 @@ import {
           iure.
         </p> */}
   
-        <div className="flex  flex-col items-center lg:items-start lg:flex-row gap-4">
+        <div className="flex  flex-col items-center justify-center lg:items-start lg:flex-row gap-4">
           {contenido !== null ? (
-            <Accordion type="single" collapsible className="w-full lg:w-[50%] px-8">
+            <Accordion type="single" collapsible className={`w-full ${incluyteSkillClass&&"mx-auto"} lg:w-1/2 px-8`}>
               {JSON.parse(modulos).map((modulo, index) => (
                 <AccordionItem value={`item-${index + 1}`} key={index}>
                   <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 text-pretty gap-4">
@@ -45,7 +45,7 @@ import {
           ) : (
             ""
           )}
-          <SkillClass titulo={tituloSkicclass} />
+         {incluyteSkillClass && <SkillClass />}
         </div>
       </section>
     );
