@@ -29,7 +29,7 @@ const User = sequelize.define("up_user", {
   pais: {
     type: DataTypes.STRING
   },
-  estadoProvincia: {
+  estado_provincia: {
     type: DataTypes.STRING
   },
   localidad: {
