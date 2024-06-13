@@ -20,14 +20,33 @@ const User = sequelize.define("up_user", {
   password: {
     type: DataTypes.STRING
   },
-
   email: {
     type: DataTypes.STRING
   },
   provider: {
     type: DataTypes.STRING
   },
-
+  pais: {
+    type: DataTypes.STRING
+  },
+  estadoProvincia: {
+    type: DataTypes.STRING
+  },
+  localidad: {
+    type: DataTypes.STRING
+  },
+  direccion: {
+    type: DataTypes.STRING
+  },
+  telefono: {
+    type: DataTypes.INTEGER
+  },
+  dni: {
+    type: DataTypes.INTEGER
+  },
+  dob: {
+    type: DataTypes.DATE
+  }
 }, {
   timestamps: false
 });
