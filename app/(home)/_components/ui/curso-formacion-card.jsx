@@ -7,6 +7,13 @@ import Link from "next/link";
 import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
+
+  const precio = curso.precio ? curso.precio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
+  const descuento = curso.descuento || 0;
+  const cuotas  = curso.cuotas || 1;
+  const precioBeca = curso.precio ? Math.round(curso.precio - curso.precio * descuento / 100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
+  const cuotaPrecio = curso.precio ? (Math.floor(((curso.precio /7)-((curso.precio /7)*25/100))/100)*100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
+  
   return (
     <article className="w-[290px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
       <Image
@@ -45,17 +52,17 @@ const CursoFormacionCard = ({ curso }) => {
         <Separator />
         <p>
          <Image src={"/assets/PlanStandard.svg"} width={20} height={20} alt="" className="inline mr-1"/> Plan Standard:{" "}
-          <span className="line-through decoration-2">U$D 1620</span>
+          <span className="line-through decoration-2">$ {precio}</span>
         </p>
         <p className="font-bold text-orange-500">
         <Image src={"/assets/PlanBecaClass.svg"} width={20} height={20} alt="" className="inline mr-2"/>
-          BecaClass +70% OFF <span className="text-idaclass3">U$D 486</span>
+          BecaClass +{descuento}% OFF <span className="text-idaclass3">$ {precioBeca}</span>
         </p>
 
         <Separator />
         <div className="text-white">
-          <p className="font-bold text-center">Desde 3 Cuotas de</p>
-          <p className=" text-2xl font-bold text-center">U$D 162 USD</p>
+          <p className="font-bold text-center">Desde {cuotas} Cuotas de</p>
+          <p className=" text-2xl font-bold text-center">$ {cuotaPrecio}</p>
         </div>
         <Separator />
         <Button

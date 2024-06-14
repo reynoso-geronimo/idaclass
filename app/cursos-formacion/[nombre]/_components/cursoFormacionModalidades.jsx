@@ -3,12 +3,12 @@ import TarjetaModalidad from "./tarjeta-modalidad";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Image from "next/image";
 
-const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
+const CursoFormacionModalidades = ({ modalidades, nombre, tipo, curso }) => {
   return (
     <section
       id="inscripcion"
       className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] "
-    >
+    > 
       <Image
         src={"/cursosFormacion/modalidadesbg2.png"}
         fill
@@ -28,7 +28,7 @@ const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
 
       <div className="flex w-full justify-center items-stretch flex-col lg:flex-row lg:gap-4">
         {modalidades.includes("Online") ? (
-          <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo} />
+          <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo} curso={curso}/>
         ) : (
           ""
         )}
@@ -37,6 +37,7 @@ const CursoFormacionModalidades = ({ modalidades, nombre, tipo }) => {
             modalidad={"PRESENCIAL"}
             nombre={nombre}
             tipo={tipo}
+            curso={curso}
           />
         )}
         <AsesorateModalidad className="lg:mt-28 mb-12 lg:w-[440px]" />

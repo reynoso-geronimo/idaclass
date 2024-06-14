@@ -31,7 +31,6 @@ const CursoPage = async ({ params }) => {
   const {
     nombre,
     descripcion,
-    precio,
     frecuencia,
     videoid,
     acerca_curso,
@@ -56,6 +55,7 @@ const CursoPage = async ({ params }) => {
   return (
     <main className="flex flex-col">
       {/* {pais.country} */}
+     
       <CursoHeader
         nombre={nombre}
         descripcion={descripcion}
@@ -98,8 +98,9 @@ const CursoPage = async ({ params }) => {
       <Separator className="my-6" />
       <CursoFormacionModalidades
         modalidades={modalidades}
+        curso={curso}
         nombre={nombre}
-        precio={precio}
+        
         tipo={"CURSO DE FORMACION"}
       />
       <Separator className="my-6" />

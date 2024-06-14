@@ -21,6 +21,12 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     frecuencia: {
         type: DataTypes.STRING
     },
+    descuento: {
+        type: DataTypes.INTEGER
+    },
+    cuotas:{
+        type: DataTypes.INTEGER
+    },
     precio: {
         type: DataTypes.INTEGER,
     },
@@ -28,6 +34,15 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
         type: DataTypes.INTEGER,
     },
     precio_uy: {
+        type: DataTypes.INTEGER,
+    },
+    precio_presencial: {
+        type: DataTypes.INTEGER,
+    },
+    precio_presencial_bo: {
+        type: DataTypes.INTEGER,
+    },
+    precio_presencial_uy: {
         type: DataTypes.INTEGER,
     },
     modalidades: {
