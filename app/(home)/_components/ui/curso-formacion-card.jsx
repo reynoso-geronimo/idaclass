@@ -12,7 +12,7 @@ const CursoFormacionCard = ({ curso }) => {
   const descuento = curso.descuento || 0;
   const cuotas  = curso.cuotas || 1;
   const precioBeca = curso.precio ? Math.round(curso.precio - curso.precio * descuento / 100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
-  const cuotaPrecio = curso.precio ? (Math.floor(((curso.precio /7)-((curso.precio /7)*25/100))/100)*100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
+  const cuotaPrecio = curso.precio ? (Math.floor(((curso.precio /cuotas)-((curso.precio /cuotas)*25/100))/100)*100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
   
   return (
     <article className="w-[290px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
