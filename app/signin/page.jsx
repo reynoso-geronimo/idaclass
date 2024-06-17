@@ -18,7 +18,7 @@ export default function SignIn() {
   const callbackUrl = searchParams.get('callbackUrl');
 
   useEffect(() => {
-    console.log(callbackUrl)
+    //console.log(callbackUrl)
     if(session) {
       router.push('/');
     }

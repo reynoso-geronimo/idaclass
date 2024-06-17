@@ -13,7 +13,7 @@ export async function POST(request) {
         monto: body.monto,
         user_id: body.user_id,
     }
-    console.log(pago);
+    
     try {
         // Crear una nueva venta
         await Venta.create({ ...pago })

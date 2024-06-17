@@ -6,7 +6,7 @@ const client = new paypal.core.PayPalHttpClient(enviroment)
 
 export async function POST(req) {
     const body = await req.json()
-    console.log(body);
+    
     const request = new paypal.orders.OrdersCreateRequest()
 
     request.requestBody({

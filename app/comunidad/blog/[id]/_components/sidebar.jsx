@@ -8,7 +8,7 @@ import CursosEmbudo from "./cursosEmbudo";
 
 const Sidebar = ({ posts, categoria, curso, cursosEmbudo }) => {
   cursosEmbudo.forEach(curso => {
-    console.log(curso.nombre);
+   
   });
   return (
     <div className="w-full lg:w-[330px] max-lg:grid grid-cols-1 py-6 space-y-6 bg-[#020817] px-8 lg:px-4 lg:rounded-2xl mb-8">

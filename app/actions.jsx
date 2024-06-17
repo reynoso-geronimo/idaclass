@@ -124,8 +124,7 @@ export async function getCursosFormacionFromDB() {
 }
 
 export async function getCursoFormacionFromDB(nombre) {
-  console.log(nombre);
-  console.log("fetching");
+
   try {
     const response = await CursosFormacion.findOne({
       where: { nombre: nombre },
