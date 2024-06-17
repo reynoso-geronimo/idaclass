@@ -128,11 +128,12 @@ const CheckoutPage = () => {
       setPrecioTotal(precioBeca);
       setPrecioCuotas(cuotaPrecio);
       setMonto(parseInt(precioBeca));
+      setLoading(false)
     };
     tipo === "CURSO DE FORMACION"
       ? fecthCurso(getCursoFormacionFromDB)
       : fecthCurso(getCursoFromDB);
-      setLoading(false)
+     
   }, [status]);
 
   useEffect(() => {
@@ -147,7 +148,7 @@ const CheckoutPage = () => {
     inscripcion(formData, user, tipo, nombre, modalidad, monto);
   };
 
-  if (status === "loading" || status === "unauthenticated") {
+  if (status === "loading" || status === "unauthenticated" || loading) {
     return <Loading />;
   } else {
     return (
