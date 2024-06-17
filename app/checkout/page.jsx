@@ -30,8 +30,10 @@ const getPaymentOptionStyles = (value, option) => {
   const isSelected = value === option;
   const baseStyles =
     "border-2 text-center leading-1  rounded-2xl transition-all w-full flex items-center justify-center cursor-pointer";
-  const selectedStyles = "bg-idaclass3 border-idaclass2 text-white p-2 font-black";
-  const unselectedStyles = "bg-gray-400 text-white border-gray-500 p-1 font-bold";
+  const selectedStyles =
+    "bg-idaclass3 border-idaclass2 text-white p-2 font-black";
+  const unselectedStyles =
+    "bg-gray-400 text-white border-gray-500 p-1 font-bold";
 
   return `${baseStyles} ${isSelected ? selectedStyles : unselectedStyles}`;
 };
@@ -86,7 +88,7 @@ const CheckoutPage = () => {
       telefono: "",
       dob: "",
       dni: "",
-      
+      pagoModalidad: "Pago total",
     },
   });
   const user = {
@@ -107,7 +109,7 @@ const CheckoutPage = () => {
     if (status === "unauthenticated") {
       signIn();
     }
-  
+
     form.setValue("direccion", session?.user?.direccion);
     form.setValue("telefono", session?.user?.telefono);
     form.setValue("pais", session?.user?.pais);
@@ -128,12 +130,11 @@ const CheckoutPage = () => {
       setPrecioTotal(precioBeca);
       setPrecioCuotas(cuotaPrecio);
       setMonto(parseInt(precioBeca));
-      setLoading(false)
+      setLoading(false);
     };
     tipo === "CURSO DE FORMACION"
       ? fecthCurso(getCursoFormacionFromDB)
       : fecthCurso(getCursoFromDB);
-     
   }, [status]);
 
   useEffect(() => {
@@ -273,7 +274,9 @@ const CheckoutPage = () => {
                     name="pagoModalidad"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Elige una forma de pago</FormLabel>
+                        {tipo === "CURSO DE FORMACION" && (
+                          <FormLabel>Elige una forma de pago</FormLabel>
+                        )}
                         <FormControl>
                           <RadioGroup
                             onValueChange={field.onChange}
@@ -294,20 +297,31 @@ const CheckoutPage = () => {
                                 {precioTotal?.toLocaleString()}
                               </FormLabel>
                             </FormItem>
-                            <FormItem className="w-full">
-                              <FormControl>
-                                <RadioGroupItem value="Pago en cuotas" hidden />
-                              </FormControl>
-                              <FormLabel
-                                className={getPaymentOptionStyles(
-                                  field.value,
-                                  "Pago en cuotas"
-                                )}
-                              >
-                                {curso?.cuotas } cuotas de <br />${" "}
-                                {precioCuotas?.toLocaleString()}
-                              </FormLabel>
-                            </FormItem>
+                            {tipo === "CURSO DE FORMACION" && (
+                              <FormItem className="w-full">
+                                <FormControl>
+                                  <RadioGroupItem
+                                    value="Pago en cuotas"
+                                    hidden
+                                    disabled={
+                                      tipo !== "CURSO DE FORMACION"
+                                        ? true
+                                        : false
+                                    }
+                                  />
+                                </FormControl>
+
+                                <FormLabel
+                                  className={getPaymentOptionStyles(
+                                    field.value,
+                                    "Pago en cuotas"
+                                  )}
+                                >
+                                  {curso?.cuotas} cuotas de <br />${" "}
+                                  {precioCuotas?.toLocaleString()}
+                                </FormLabel>
+                              </FormItem>
+                            )}
                           </RadioGroup>
                         </FormControl>
                         <FormMessage />
@@ -320,7 +334,7 @@ const CheckoutPage = () => {
                 <Button
                   type="submit"
                   className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
-                  disabled={precioTotal==0}
+                  disabled={monto == 0}
                 >
                   <Image
                     src={`/assets/mp-icon.svg`}
@@ -346,7 +360,7 @@ const CheckoutPage = () => {
                       shape: "rect",
                       height: 40,
                     }}
-                    disabled={precioTotal==0}
+                    disabled={monto == 0}
                     createOrder={async () => {
                       const res = await fetch("api/paypal", {
                         method: "POST",
