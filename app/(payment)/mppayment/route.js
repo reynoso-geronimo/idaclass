@@ -21,9 +21,9 @@ export async function POST(request) {
             descripcion: payment.description,
             monto: payment.transaction_amount,
             user_id: payment.metadata.user_id,
-            pago_modalidad: payment.metadata.pagoModalidad
+            pago_modalidad: payment.metadata.pago_modalidad
         })
-        console.log(Venta)
+
 
         // Asociar la venta con el usuario
 

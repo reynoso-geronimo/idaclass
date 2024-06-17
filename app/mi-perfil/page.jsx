@@ -16,6 +16,7 @@ const Page = () => {
     async function fetchVentas() {
       if (session && session.user) {
         const ventas = await getVentasFromDB(session.user.id);
+        console.log(ventas);
         setCompras(ventas);
       }
     }
@@ -42,9 +43,10 @@ const Page = () => {
           {compras.map(compra => (
             <div
               key={compra.id}
-              className="flex flex-col items-center  space-y-4 container"
+              className="flex flex-col items-center container"
             >
               <h3>{compra.descripcion}</h3>
+              <h2>{compra.pago_modalidad}</h2>
             </div>
           ))}
         </div>
