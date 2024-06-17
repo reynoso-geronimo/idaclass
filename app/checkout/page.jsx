@@ -1,7 +1,14 @@
 "use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useSearchParams } from "next/navigation";
-import { inscripcion } from "@/app/actions";
+import {
+  getCursoFormacionFromDB,
+  getCursoFromDB,
+  inscripcion,
+} from "@/app/actions";
+import { calcularPreciosCurso } from "@/lib/utils";
 import { signIn, useSession } from "next-auth/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -15,39 +22,55 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import { useEffect } from "react";
 import Loading from "../loading";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import Image from "next/image";
-/* const getPaymentOptionStyles = (value, option) => {
+const getPaymentOptionStyles = (value, option) => {
   const isSelected = value === option;
   const baseStyles =
-    "border-2 font-black rounded-2xl transition-all w-full flex items-center justify-center cursor-pointer";
-  const selectedStyles = "bg-idaclass3 border-idaclass4 text-white p-4";
-  const unselectedStyles = "bg-gray-400 text-black border-idaclassGray2 p-3";
+    "border-2 text-center leading-1  rounded-2xl transition-all w-full flex items-center justify-center cursor-pointer";
+  const selectedStyles = "bg-idaclass3 border-idaclass2 text-white p-2 font-black";
+  const unselectedStyles = "bg-gray-400 text-white border-gray-500 p-1 font-bold";
 
   return `${baseStyles} ${isSelected ? selectedStyles : unselectedStyles}`;
-}; */
+};
 
-const monto = 50000;
 const formSchema = z.object({
   direccion: z.string().min(2, {
     message: "Este campo es obligatorio",
-    required_error: "Ingresa tu direccion",
-    invalid_type_error: "Ingresa una direccion valida",
+    required_error: "Ingresa tu dirección",
+    invalid_type_error: "Ingresa una dirección válida",
   }),
   telefono: z.coerce.number().min(2, {
     message: "Este campo es obligatorio",
-    required_error: "Ingresa tu telefono",
-    invalid_type_error: "Ingresa un telefono valido",
+    required_error: "Ingresa tu teléfono",
+    invalid_type_error: "Ingresa un número de teléfono válido",
   }),
   dob: z.string().date("Ingresa tu fecha de nacimiento"),
   dni: z.coerce.number().min(2, {
     message: "Este campo es obligatorio",
     required_error: "Ingresa tu DNI/RUT/CI",
-    invalid_type_error: "Ingrea un numero valido",
+    invalid_type_error: "Ingresa un número de identificación válido",
+  }),
+  pais: z.string().min(2, {
+    message: "Este campo es obligatorio",
+    required_error: "Ingresa tu país",
+    invalid_type_error: "Ingresa un nombre de país válido",
+  }),
+  estadoprovincia: z.string().min(2, {
+    message: "Este campo es obligatorio",
+    required_error: "Ingresa tu estado/provincia",
+    invalid_type_error: "Ingresa un nombre de estado/provincia válido",
+  }),
+  localidad: z.string().min(2, {
+    message: "Este campo es obligatorio",
+    required_error: "Ingresa tu localidad",
+    invalid_type_error: "Ingresa un nombre de localidad válido",
+  }),
+  pagoModalidad: z.enum(["Pago total", "Pago en cuotas"], {
+    required_error: "Selecciona una forma de pago",
+    invalid_type_error: "Selecciona una forma de pago válida",
   }),
 });
 
@@ -56,10 +79,14 @@ const CheckoutPage = () => {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      pais: "",
+      estadoprovincia: "",
+      localidad: "",
       direccion: "",
       telefono: "",
       dob: "",
       dni: "",
+      
     },
   });
   const user = {
@@ -71,12 +98,50 @@ const CheckoutPage = () => {
   const modalidad = searchParams.get("modalidad");
   const nombre = searchParams.get("nombre");
   const tipo = searchParams.get("tipo");
-
+  const [curso, setCurso] = useState();
+  const [monto, setMonto] = useState();
+  const [precioTotal, setPrecioTotal] = useState(0);
+  const [precioCuotas, setPrecioCuotas] = useState(0);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (status === "unauthenticated") {
       signIn();
     }
+  
+    form.setValue("direccion", session?.user?.direccion);
+    form.setValue("telefono", session?.user?.telefono);
+    form.setValue("pais", session?.user?.pais);
+    form.setValue("estadoprovincia", session?.user?.estado_provincia);
+    form.setValue("localidad", session?.user?.localidad);
+    form.setValue("dob", session?.user?.dob);
+    form.setValue("dni", session?.user?.dni);
+
+    const fecthCurso = async cb => {
+      const getCurso = await cb(nombre);
+      setCurso(getCurso);
+      const { precioBeca, cuotaPrecio } = calcularPreciosCurso(
+        getCurso.precio,
+        getCurso.descuento,
+        getCurso.cuotas
+      );
+
+      setPrecioTotal(precioBeca);
+      setPrecioCuotas(cuotaPrecio);
+      setMonto(parseInt(precioBeca));
+    };
+    tipo === "CURSO DE FORMACION"
+      ? fecthCurso(getCursoFormacionFromDB)
+      : fecthCurso(getCursoFromDB);
+      setLoading(false)
   }, [status]);
+
+  useEffect(() => {
+    setMonto(
+      form.getValues().pagoModalidad === "Pago total"
+        ? parseInt(precioTotal)
+        : parseInt(precioCuotas)
+    );
+  }, [form.getValues().pagoModalidad]);
 
   const onSubmit = formData => {
     inscripcion(formData, user, tipo, nombre, modalidad, monto);
@@ -102,7 +167,7 @@ const CheckoutPage = () => {
             {...form}
             className="container flex flex-col justify-center items-center gap-2"
           >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 space-x-8">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <div className="">
                 <FormField
                   control={form.control}
@@ -201,56 +266,60 @@ const CheckoutPage = () => {
                     </FormItem>
                   )}
                 />
-                {/*   <FormField
-                control={form.control}
-                name="type"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Elige un medio de pago</FormLabel>
-                    <FormControl>
-                      <RadioGroup
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        className="flex justify-evenly items-center h-16"
-                      >
-                        <FormItem className="w-full">
-                          <FormControl>
-                            <RadioGroupItem value="mercadopago" hidden />
-                          </FormControl>
-                          <FormLabel
-                            className={getPaymentOptionStyles(
-                              field.value,
-                              "mercadopago"
-                            )}
+                {
+                  <FormField
+                    control={form.control}
+                    name="pagoModalidad"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Elige una forma de pago</FormLabel>
+                        <FormControl>
+                          <RadioGroup
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                            className="flex justify-evenly items-center h-16"
                           >
-                            Mercadopago
-                          </FormLabel>
-                        </FormItem>
-                        <FormItem className="w-full">
-                          <FormControl>
-                            <RadioGroupItem value="paypal" hidden />
-                          </FormControl>
-                          <FormLabel
-                            className={getPaymentOptionStyles(
-                              field.value,
-                              "paypal"
-                            )}
-                          >
-                            Paypal
-                          </FormLabel>
-                        </FormItem>
-                      </RadioGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              /> */}
+                            <FormItem className="w-full">
+                              <FormControl>
+                                <RadioGroupItem value="Pago total" hidden />
+                              </FormControl>
+                              <FormLabel
+                                className={getPaymentOptionStyles(
+                                  field.value,
+                                  "Pago total"
+                                )}
+                              >
+                                1 pago de <br /> ${" "}
+                                {precioTotal?.toLocaleString()}
+                              </FormLabel>
+                            </FormItem>
+                            <FormItem className="w-full">
+                              <FormControl>
+                                <RadioGroupItem value="Pago en cuotas" hidden />
+                              </FormControl>
+                              <FormLabel
+                                className={getPaymentOptionStyles(
+                                  field.value,
+                                  "Pago en cuotas"
+                                )}
+                              >
+                                {curso?.cuotas } cuotas de <br />${" "}
+                                {precioCuotas?.toLocaleString()}
+                              </FormLabel>
+                            </FormItem>
+                          </RadioGroup>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                }
               </div>
-              <div className="space-y-4  sticky top-0">
+              <div className="space-y-4">
                 <Button
                   type="submit"
                   className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
-                  disabled={!form.formState.isValid}
+                  disabled={precioTotal==0}
                 >
                   <Image
                     src={`/assets/mp-icon.svg`}
@@ -276,7 +345,7 @@ const CheckoutPage = () => {
                       shape: "rect",
                       height: 40,
                     }}
-                    disabled={!form.formState.isValid}
+                    disabled={precioTotal==0}
                     createOrder={async () => {
                       const res = await fetch("api/paypal", {
                         method: "POST",
@@ -303,6 +372,7 @@ const CheckoutPage = () => {
                         body: JSON.stringify({
                           paymentID: data.orderID,
                           descripcion: ` ${nombre} - ${modalidad} - ${tipo}`,
+
                           monto: monto,
                           user_id: user.userId,
                         }),

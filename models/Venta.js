@@ -10,25 +10,25 @@ const Venta = sequelize.define('ventas', {
     },
     descripcion: {
         type: DataTypes.STRING,
-        allowNull: true
     },
     monto: {
         type: DataTypes.DECIMAL(10, 2),
-        allowNull: true
+    },
+    pago_modalidad: {
+        type: DataTypes.STRING,
     },
     payment_id: {
         type: DataTypes.BIGINT,
-        allowNull: true,
+
         unique: true
     },
     payment_id_paypal: {
         type: DataTypes.STRING,
-        allowNull: true,
+
         unique: true
     },
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: true
     }
 
 }, {

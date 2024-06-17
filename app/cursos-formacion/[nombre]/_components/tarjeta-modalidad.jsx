@@ -9,15 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { calcularPreciosCurso } from "@/lib/utils";
 
 import Link from "next/link";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
-  const precio = modalidad==="ONLINE"?curso.precio:curso.precio_presencial
-  const descuento = curso.descuento || 0;
-  const cuotas  = curso.cuotas || 1;
-  const precioBeca =  Math.round(precio - precio * descuento / 100)
-  const cuotaPrecio = Math.floor(((precio /7)-((precio /7)*25/100))/100)*100
+
+  const { precio, precio_presencial , descuento, cuotas } = curso;
+  const { precioBeca, cuotaPrecio } = modalidad==="ONLINE"?calcularPreciosCurso(precio, descuento, cuotas):calcularPreciosCurso(precio_presencial, descuento, cuotas);
   const checkoutParams = {
     modalidad,
     nombre,

@@ -1,18 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { calcularPreciosCurso } from "@/lib/utils";
 
-import { Clock, TriangleRight, BookOpenIcon } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const CursoFormacionCard = ({ curso }) => {
 
-  const precio = curso.precio ? curso.precio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
-  const descuento = curso.descuento || 0;
-  const cuotas  = curso.cuotas || 1;
-  const precioBeca = curso.precio ? Math.round(curso.precio - curso.precio * descuento / 100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
-  const cuotaPrecio = curso.precio ? (Math.floor(((curso.precio /cuotas)-((curso.precio /cuotas)*25/100))/100)*100).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) : 'N/A';
+  const { precio, descuento, cuotas } = curso;
+  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(precio, descuento, cuotas);
   
   return (
     <article className="w-[290px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
@@ -52,17 +50,17 @@ const CursoFormacionCard = ({ curso }) => {
         <Separator />
         <p>
          <Image src={"/assets/PlanStandard.svg"} width={20} height={20} alt="" className="inline mr-1"/> Plan Standard:{" "}
-          <span className="line-through decoration-2">$ {precio}</span>
+          <span className="line-through decoration-2">$ {precio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
         </p>
         <p className="font-bold text-orange-500">
         <Image src={"/assets/PlanBecaClass.svg"} width={20} height={20} alt="" className="inline mr-2"/>
-          BecaClass +{descuento}% OFF <span className="text-idaclass3">$ {precioBeca}</span>
+          BecaClass +{descuento}% OFF <span className="text-idaclass3">$ {precioBeca.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
         </p>
 
         <Separator />
         <div className="text-white">
           <p className="font-bold text-center">Desde {cuotas} Cuotas de</p>
-          <p className=" text-2xl font-bold text-center">$ {cuotaPrecio}</p>
+          <p className=" text-2xl font-bold text-center">$ {cuotaPrecio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
         </div>
         <Separator />
         <Button

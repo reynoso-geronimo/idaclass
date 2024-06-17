@@ -39,8 +39,15 @@ const handler = NextAuth({
 
             if (bcrypt.compareSync(credentials.password, dbUser.password)) {
               dbUser.name = dbUser.username
-              given_name = dbUser.given_name
-              family_name = dbUser.family_name
+              dbUser.given_name = dbUser.given_name
+              dbUser.family_name = dbUser.family_name
+              dbUser.pais = dbUser.pais
+              dbUser.estado_provincia = dbUser.estado_provincia
+              dbUser.localidad = dbUser.localidad
+              dbUser.direccion = dbUser.direccion
+              dbUser.telefono = dbUser.telefono
+              dbUser.dni = dbUser.dni
+              dbUser.dob = dbUser.dni
               return dbUser
             }
             // Any object returned will be saved in `user` property of the JWT
@@ -93,7 +100,13 @@ const handler = NextAuth({
           image: sessionUser.image,
           given_name: sessionUser.given_name,
           family_name: sessionUser.family_name,
-
+          pais: sessionUser.pais,
+          estado_provincia: sessionUser.estado_provincia,
+          localidad: sessionUser.localidad,
+          direccion: sessionUser.direccion,
+          telefono: sessionUser.telefono,
+          dni: sessionUser.dni,
+          dob: sessionUser.dob,
         }
 
         return session;

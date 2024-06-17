@@ -9,7 +9,8 @@ import Profesional from "@/models/Profesional";
 import { MercadoPagoConfig, Preference } from "mercadopago";
 import { redirect } from "next/navigation";
 import Evento from "@/models/Evento";
-import checkoutNodeJssdk from '@paypal/checkout-server-sdk'
+import checkoutNodeJssdk from "@paypal/checkout-server-sdk";
+import User from "@/models/User";
 
 export async function getCursos() {
   try {
@@ -123,6 +124,8 @@ export async function getCursosFormacionFromDB() {
 }
 
 export async function getCursoFormacionFromDB(nombre) {
+  console.log(nombre);
+  console.log("fetching");
   try {
     const response = await CursosFormacion.findOne({
       where: { nombre: nombre },
@@ -229,7 +232,7 @@ export const getEventosFromDB = async (limit, not) => {
   const query = {
     limit: limit,
     include: [{ model: Profesional, as: "profesionals" }],
-    order: [['fecha', 'ASC']], // Ordenar por fecha ascendente
+    order: [["fecha", "ASC"]], // Ordenar por fecha ascendente
   };
 
   if (not) {
@@ -284,9 +287,30 @@ export async function getEventoFromDB(id) {
   }
 }
 
-export async function inscripcion(formData, user, tipo, nombre, modalidad , monto) {
-  "use server";
-  console.log(formData);
+export async function inscripcion(
+  formData,
+  user,
+  tipo,
+  nombre,
+  modalidad,
+  monto
+) {
+  await User.update(
+    {
+      pais: formData.pais,
+      estado_provincia: formData.estadoprovincia,
+      localidad: formData.localidad,
+      direccion: formData.direccion,
+      telefono: formData.telefono,
+      dni: formData.dni,
+      dob: new Date(formData.dob),
+    },
+    {
+      where: {
+        id: user.userId,
+      },
+    }
+  );
 
   const client = new MercadoPagoConfig({
     accessToken: process.env.MP_ACCESS_TOKEN,
@@ -298,12 +322,13 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad , mont
         userName: user.userName,
         userId: user.userId,
         email: user.email,
+        pagoModalidad: formData.pagoModalidad,
       },
 
       payment_methods: {
         excluded_payment_methods: [],
         excluded_payment_types: [],
-        installments: 3,
+        installments: 1,
       },
       items: [
         {
@@ -321,7 +346,7 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad , mont
       auto_return: "approved",
     },
   });
-  console.log(preference);
+  //console.log(preference);
   //console.log(preference.sandbox_init_point);
   redirect(preference.sandbox_init_point);
 }
@@ -340,4 +365,3 @@ export async function getVentasFromDB(id) {
     console.log(error);
   }
 }
-
