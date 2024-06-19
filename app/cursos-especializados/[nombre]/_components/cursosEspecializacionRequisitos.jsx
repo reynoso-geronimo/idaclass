@@ -12,14 +12,8 @@ const CursosEspciealizacionRequisitos = ({ dirigido }) => {
           Requisitos
         </TituloSeccion>
         <ul className="text-sm mx-8 list-inside list-disc flex-1 flex flex-col justify-evenly py-4">
-          <li>Mayor de 18 años o 16 con autorizacion de mayor responsable</li>
+          <li>Mayor de 18 años o 16 con autorización de mayor responsable.</li>
           <li>Completar formulario de inscripción</li>
-          <li>Apto médico (solo modalidad presencial).</li>
-          <li>
-            Certificado de escolaridad secundaria completa (solamente aquellas
-            personas que deseen adquirir la Extensión Universitaria que
-            proporciona IUYMCA).
-          </li>
         </ul>
       </article>
       <article className="w-full rounded-2xl overflow-hidden  border-idaclass4 border-2 ">
@@ -54,7 +48,6 @@ const CursosEspciealizacionRequisitos = ({ dirigido }) => {
         </h3>
         <ul className="text-sm mx-8 list-inside list-disc flex-1 flex flex-col justify-evenly pb-4">
           <li>Bolsa de trabajo</li>
-          <li>Pasantias</li>
           <li>Red de Networking</li>
           <li>Eventos con expertos internacionales</li>
         </ul>

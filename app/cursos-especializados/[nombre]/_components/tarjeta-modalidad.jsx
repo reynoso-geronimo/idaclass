@@ -12,7 +12,12 @@ import {
 
 import Link from "next/link";
 
-const TarjetaModalidad = ({ modalidad="ONLINE", nombre, tipo="CURSO DE ESPECIALIZACION", precio = 50000 }) => {
+const TarjetaModalidad = ({
+  modalidad = "ONLINE",
+  nombre,
+  tipo = "CURSO DE ESPECIALIZACION",
+  precio = 50000,
+}) => {
   const checkoutParams = {
     modalidad,
     nombre,
@@ -34,7 +39,7 @@ const TarjetaModalidad = ({ modalidad="ONLINE", nombre, tipo="CURSO DE ESPECIALI
               Incluye BecaClass
             </p>
             {modalidad === "ONLINE" ? (
-              <p className="text-center font-black py-5">Modalidad Online</p>
+              <p className="text-center font-black py-5"> Modalidad On Demand</p>
             ) : (
               <p className="text-center font-black py-5">
                 Modalidad Presencial
@@ -47,27 +52,17 @@ const TarjetaModalidad = ({ modalidad="ONLINE", nombre, tipo="CURSO DE ESPECIALI
         <CardContent className="px-0">
           {modalidad === "ONLINE" ? (
             <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
-              <li>Clases online en vivo (2h. semanales)</li>
-              <li>Grabación de las clases en vivo</li>
-              <li>Tutorias con staff trainer educativos</li>
-              <li>Video resumenes y materiales descargable</li>
-              <li>Contenido teorico interactivo</li>
+              <li>Material descargable</li>
+              <li>Contenido teórico interactivo</li>
               <li>Autoevaluaciones</li>
-              <li>Doble titulacion bonificada</li>
-              <li>4 cursos complementarios (SkillClass)</li>
               <li>Acceso a webinars con expertos</li>
+              <li>
+                Certificado con número único de matrícula con autenticación QR
+              </li>
+              <li>Acceso exclusivo a comunidad</li>
             </ul>
           ) : (
-            <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
-              <li>Clases presenciales (3h. cada 15 dias)</li>
-              <li>Tutorias con staff trainer educativos</li>
-              <li>Video resumenes y materiales descargable</li>
-              <li>Contenido teorico interactivo</li>
-              <li>Autoevaluaciones</li>
-              <li>Doble titulacion bonificada</li>
-              <li>4 cursos complementarios (skillClass)</li>
-              <li>Acceso a webinars con expertos</li>
-            </ul>
+            ""
           )}
           <p className="text-center text-idaclass font-semibold border-y-2 border-idaclass py-2">
             Plan Standard
