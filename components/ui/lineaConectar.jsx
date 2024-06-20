@@ -1,5 +1,5 @@
 import Image from "next/image";
-import linea from "../../public/assets/Linea  img 4.png";
+import linea from "../../public/assets/Linea img 4.png";
 import { cn } from "@/lib/utils";
 const LineaConectar = ({ className, dir }) => {
   return (

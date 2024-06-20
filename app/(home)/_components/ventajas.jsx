@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Dot } from "lucide-react";
-import linea from "../../../public/assets/Linea  img 1.png";
+import linea from "../../../public/assets/Linea img 1.png";
 
 const Ventajas = () => {
   const [ref1, inView1] = useInView({
