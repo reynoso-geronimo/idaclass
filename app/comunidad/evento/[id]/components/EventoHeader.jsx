@@ -1,12 +1,12 @@
-"use client"
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDaysIcon, Clock } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const EventoHeader = ({evento}) => {
-    const [imgError, setImgError] = useState(false)
+const EventoHeader = ({ evento }) => {
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white bg-gradient-to-t lg:bg-gradient-to-r from-idaclass5">
@@ -22,7 +22,11 @@ const EventoHeader = ({evento}) => {
           e.target.srcset = "/assets/logoIdaClassAlt2.svg";
           setImgError(true);
         }}
-        className={`${imgError?"object-scale-down object-top pt-24":"object-top object-scale-down "} -z-10 lg:hidden bg-black`}
+        className={`${
+          imgError
+            ? "object-scale-down object-top pt-24"
+            : "object-top object-scale-down "
+        } -z-10 lg:hidden bg-black`}
       />
       <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
         <Image
@@ -37,20 +41,23 @@ const EventoHeader = ({evento}) => {
             e.target.srcset = "/assets/logoIdaClassAlt2.svg";
             setImgError(true);
           }}
-          className={`${imgError?"object-scale-down object-center":"w-full h-auto object-top lg:object-cover "} -z-10 max-lg:hidden bg-black`}
+          className={`${
+            imgError
+              ? "object-scale-down object-center"
+              : "w-full h-auto object-top lg:object-cover "
+          } -z-10 max-lg:hidden bg-black`}
         />
       </div>
       <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container">
         <div className="flex">
-          <Badge className={" font-normal z-10 hover:"}>{evento.clasificacion}</Badge>
           <Badge
+            className={"z-10 bg-orange-500 text-white flex items-center justify-center gap-2 py-2 px-4 font-bold text-lg"}
             variant={"outline"}
-            className={
-              "-translate-x-6 pl-8 pr-2 italic text-white border-idaclass3 flex items-center gap-2"
-            }
           >
+            {evento.clasificacion.toUpperCase()}
             <CalendarDaysIcon />
-            {new Date(evento?.fecha).toLocaleDateString()} <Clock />
+            {new Date(evento?.fecha).toLocaleDateString()}
+            <Clock />
             {new Date(evento?.fecha).toLocaleTimeString([], {
               hour: "2-digit",
               minute: "2-digit",
