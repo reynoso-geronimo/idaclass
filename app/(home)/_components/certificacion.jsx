@@ -1,7 +1,7 @@
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import cert1 from "../../../public/certi/diplomas.jpg";
 import medalla from "../../../public/certi/SelloCalidad.png";
-import linea from "../../../public/assets/Línea img 4.png";
+import linea from "../../../public/assets/Linea  img 4.png";
 import Image from "next/image";
 import { Dot } from "lucide-react";
 const partners = [

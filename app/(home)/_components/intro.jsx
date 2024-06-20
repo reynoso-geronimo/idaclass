@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import linea from "../../../public/assets/Línea img 3.png";
+import linea from "../../../public/assets/Linea  img 3.png";
 
 const areas = [
   { src: `/home/areas/entrenamiento.jpeg`, area: "Entrenamiento" },
