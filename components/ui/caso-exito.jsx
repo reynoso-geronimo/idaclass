@@ -19,18 +19,18 @@ const CasoExito = ({
       <div className="flex gap-4">
         <Avatar className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 h-[60px] w-[60px] relative overflow-visible">
           <AvatarImage
-            src={avatar}
+            src={`https://flagcdn.com/${pais}.svg`}
             alt={`${pais ? pais : "argentina"}`}
-            className="rounded-full p-1 bg-gray-200"
+            className="rounded-full p-1 bg-gray-200 w-full h-auto"
           />
           <AvatarFallback className="text-black">{pais}</AvatarFallback>
-          <Image
+         {/*  <Image
             src={`https://flagcdn.com/${pais}.svg`}
             alt={`${pais ? pais : "argentina"}`}
             height={24}
             width={24}
             className="rounded-full absolute right-0 bottom-0 h-6 w-6"
-          />
+          /> */}
         </Avatar>
         <div>
           <h3 className="font-bold flex items-center gap-1 text-sm lg:text-xl">
