@@ -21,7 +21,7 @@ const CursoEspecializacionCard = ({ curso, minH="min-h-[430px]"}) => {
     >
       <Image
         // src={`/${curso.imagen}`}
-        src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
+        src={`/cursosEspecializacion/cursos/headersMobile/${curso.id}.png`}
         alt="curso"
         fill
         quality={100}

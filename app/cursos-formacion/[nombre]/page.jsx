@@ -29,6 +29,7 @@ const CursoPage = async ({ params }) => {
   const cursos = await getOtrosCursosFromacionFromDB(nombreParseado);
 
   const {
+    id,
     nombre,
     descripcion,
     frecuencia,
@@ -58,6 +59,7 @@ const CursoPage = async ({ params }) => {
      
       <CursoHeader
         nombre={nombre}
+        id={id}
         descripcion={descripcion}
         modalidades={modalidades}
         videoid={videoid}
@@ -74,7 +76,7 @@ const CursoPage = async ({ params }) => {
       />
       <Separator className="my-6" />
       <CursoFormacionObjetivos
-        nombre={nombre}
+        id={id}
         ojetivo_titulo_uno={ojetivo_titulo_uno}
         ojetivo_texto_uno={ojetivo_texto_uno}
         ojetivo_titulo_dos={ojetivo_titulo_dos}

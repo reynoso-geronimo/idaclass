@@ -13,7 +13,7 @@ const EventoHeader = ({ evento }) => {
       <Image
         loader={({ src }) => src}
         quality={100}
-        src={`/eventos/${evento.titulo}.png`}
+        src={`/eventos/${evento.id}.png`}
         alt={evento.titulo}
         fill
         priority
@@ -31,7 +31,7 @@ const EventoHeader = ({ evento }) => {
       <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
         <Image
           loader={({ src }) => src}
-          src={`/eventos/${evento.titulo}.png`}
+          src={`/eventos/${evento.id}.png`}
           alt={evento.titulo}
           fill
           quality={100}

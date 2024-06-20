@@ -4,7 +4,8 @@ import React from "react";
 import bgWeb from "../../../../public/cursosFormacion/objetivosBgWeb.png";
 import bgMobile from "../../../../public/cursosFormacion/objetivosBgMobile.png";
 const CursoFormacionObjetivos = ({
-  nombre,
+  id,
+
   ojetivo_titulo_uno,
   ojetivo_texto_uno,
   ojetivo_titulo_dos,
@@ -34,7 +35,7 @@ const CursoFormacionObjetivos = ({
           alt="background"
         />
         <Image
-          src={`/cursosFormacion/cursos/objetivos/${nombre}.png`}
+          src={`/cursosFormacion/cursos/objetivos/${id}.png`}
           height={1000}
           width={1000}
           alt=""

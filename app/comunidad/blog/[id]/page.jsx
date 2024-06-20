@@ -22,7 +22,7 @@ const page = async ({ params }) => {
     <main className="">
       <div className=" w-full pb-8 lg:aspect-[16/7] lg:container relative text-white">
         <Image
-          src={`/blog/headerMobile/${post.titulo}.png`}
+          src={`/blog/headerMobile/${post.id}.png`}
           alt={post.titulo}
           fill
           priority
@@ -30,7 +30,7 @@ const page = async ({ params }) => {
         />
         <div className="max-lg:relative  w-[100vw] max-lg:aspect-video">
           <Image
-            src={`/blog/headerWeb/${post.titulo}.png`}
+            src={`/blog/headerWeb/${post.id}.png`}
             alt={post.titulo}
             fill
             priority

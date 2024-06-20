@@ -16,7 +16,7 @@ const EventoCard = ({ evento }) => {
       <div className="w-full mx-auto relative flex flex-col items-start justify-between gap-4 p-4 flex-1 bg-gradient-to-r from-idaclass5">
         <Image
           loader={({ src }) => src}
-          src={`/eventos/${evento.titulo}.png`}
+          src={`/eventos/${evento.id}.png`}
           alt="evento"
           fill
           onError={(e) => {

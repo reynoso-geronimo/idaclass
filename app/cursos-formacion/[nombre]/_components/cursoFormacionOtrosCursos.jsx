@@ -33,7 +33,7 @@ export const CursoCard = ({ curso, className }) => (
   >
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
-      src={`/cursosFormacion/cursos/headersMobile/${curso.nombre}.png`}
+      src={`/cursosFormacion/cursos/headersMobile/${curso.id}.png`}
       alt=""
       fill
       className="object-cover object-top z-0"

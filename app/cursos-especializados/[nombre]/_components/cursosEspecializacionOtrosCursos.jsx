@@ -48,7 +48,7 @@ const CursoCard = ({ curso }) => (
     </Badge>
     <Image
       // src={curso.imagen?curso.imagen:"/cursosFormacion/cursos/PersonalTrainer.png"}
-      src={`/cursosEspecializacion/cursos/headersMobile/${curso.nombre}.png`}
+      src={`/cursosEspecializacion/cursos/headersMobile/${curso.id}.png`}
       alt=""
       fill
       className="object-cover object-top -z-10"

@@ -7,6 +7,7 @@ import Link from "next/link";
 import useIsMobile from "@/app/hooks/UseIsMobile";
 
 const CursoHeader = ({
+  id,
   nombre,
   descripcion,
   videoid,
@@ -31,8 +32,8 @@ const CursoHeader = ({
   const headerPath =
     tipo === "formacion" ? "cursosFormacion" : "cursosEspecializacion";
   const headerImagePath = isMobile
-    ? `/${headerPath}/cursos/headersMobile/${nombre}.png`
-    : `/${headerPath}/cursos/headersWeb/${nombre}.png`;
+    ? `/${headerPath}/cursos/headersMobile/${id}.png`
+    : `/${headerPath}/cursos/headersWeb/${id}.png`;
   // Importar imagen dinámicamente
   const headerImage = require(`../../public${headerImagePath}`);
 

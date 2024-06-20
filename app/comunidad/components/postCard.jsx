@@ -13,7 +13,7 @@ const PostCard = ({ post }) => {
       }
       <div className="relative aspect-video w-full">
         <Image
-          src={`/blog/cards/${post.titulo}.png`}
+          src={`/blog/cards/${post.id}.png`}
           quality={100}
           fill
           alt="Imagen de Blog"

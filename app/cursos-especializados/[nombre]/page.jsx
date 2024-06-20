@@ -25,6 +25,7 @@ const CursoPage = async ({ params }) => {
     nombreParseado
   );
   const {
+    id,
     nombre,
     descripcion,
     precio,
@@ -41,6 +42,7 @@ const CursoPage = async ({ params }) => {
   return (
     <main className="flex flex-col">
       <CursoHeader
+        id={id}
         nombre={nombre}
         descripcion={descripcion}
         modalidades={modalidades}
