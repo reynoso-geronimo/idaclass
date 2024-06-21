@@ -24,7 +24,7 @@ export default function SignIn() {
     }
   }, [session]);
   return (
-    <main className="min-h-[645px] bg-neutral-950 relative flex flex-col justify-start py-12">
+    <main className="min-h-[645px] bg-neutral-950 relative flex flex-1 flex-col justify-start py-12">
       <div className="container py-4 flex flex-col border-2 border-idaclass3 space-y-2 bg-gray-100 rounded-lg shadow-lg z-10 w-[28rem] max-w-[90vw]">
         <Tabs defaultValue="login">
           <TabsList className="grid w-full grid-cols-2">
