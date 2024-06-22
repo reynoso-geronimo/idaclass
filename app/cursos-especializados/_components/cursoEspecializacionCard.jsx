@@ -35,12 +35,12 @@ const CursoEspecializacionCard = ({ curso, minH="min-h-[430px]"}) => {
         {/* <CardTitle className="h-12 align-text-bottom">{curso.nombre}</CardTitle> */}
         {/* <CardDescription className="text-white ">{curso.descripcion}</CardDescription> */}
         <Separator />
-        <span className="flex gap-2">
+        <span className="flex gap-2 items-center">
           <GraduationCap /> <span className="font-bold">Docente:</span>{" "}
           {curso.profesionals?.length > 0 && curso.profesionals[0].nombre}
         </span>
         <Separator />
-        <span className="flex gap-2">
+        <span className="flex gap-2 items-center">
           <Clock /> {curso.duracion ? curso.duracion : "150 "} Horas
         </span>
         <Separator />
