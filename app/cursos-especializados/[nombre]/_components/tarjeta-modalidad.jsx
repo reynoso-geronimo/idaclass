@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { calcularPreciosCurso } from "@/lib/utils";
 
 import Link from "next/link";
 
@@ -16,8 +17,15 @@ const TarjetaModalidad = ({
   modalidad = "ONLINE",
   nombre,
   tipo = "CURSO DE ESPECIALIZACION",
-  precio = 50000,
+  curso,
 }) => {
+  const { precio, descuento, cuotas } = curso;
+  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(
+    precio,
+    descuento,
+    cuotas
+  );
+
   const checkoutParams = {
     modalidad,
     nombre,
@@ -39,7 +47,10 @@ const TarjetaModalidad = ({
               Incluye BecaClass
             </p>
             {modalidad === "ONLINE" ? (
-              <p className="text-center font-black py-5"> Modalidad On Demand</p>
+              <p className="text-center font-black py-5">
+                {" "}
+                Modalidad On Demand
+              </p>
             ) : (
               <p className="text-center font-black py-5">
                 Modalidad Presencial
@@ -66,14 +77,25 @@ const TarjetaModalidad = ({
           )}
           <p className="text-center text-idaclass font-semibold border-y-2 border-idaclass py-2">
             Plan Standard
-            <span className="line-through decoration-2"> U$D 1620 USD</span>
+            <span className="line-through decoration-2">
+              {" "}
+              ${" "}
+              {precio.toLocaleString("es-AR", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
+            </span>
           </p>
           <p className="text-center text-idaclass font-semibold border-b-2 border-idaclass py-2">
-            BecaClass + 70 % OFF U$D 486 USD
+            BecaClass + {descuento}% OFF
           </p>
-          <p className="font-bold pt-6 pb-2 text-center">Desde 3 Cuotas de</p>
+          <p className="font-bold pt-6 pb-2 text-center">Desde</p>
           <p className=" text-3xl font-extrabold mb-0 text-center">
-            U$D 162 USD
+            ${" "}
+            {precioBeca.toLocaleString("es-AR", {
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">

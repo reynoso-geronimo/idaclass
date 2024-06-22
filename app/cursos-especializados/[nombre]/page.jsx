@@ -28,7 +28,6 @@ const CursoPage = async ({ params }) => {
     id,
     nombre,
     descripcion,
-    precio,
     videoid,
     acerca_curso,
     modalidades,
@@ -66,7 +65,7 @@ const CursoPage = async ({ params }) => {
       <CursosEspciealizacionRequisitos dirigido={dirigido} />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursosEspciealizacionModalidades nombre={nombre}/>
+      <CursosEspciealizacionModalidades nombre={nombre} curso={curso} />
       {/* <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
