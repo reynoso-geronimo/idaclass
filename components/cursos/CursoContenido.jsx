@@ -9,7 +9,7 @@ import {
   import SkillClass from "@/components/cursos/skillClass";
   
   const CursosContenido = ({ modulos = null,incluyteSkillClass ,tituloSkicclass }) => {
-    const contenido = JSON.parse(modulos);
+    const contenido = process.env.dev === true ? JSON.parse(modulos):modulos;
   
     return (
       <section className="lg:container">
@@ -26,7 +26,7 @@ import {
         <div className="flex  flex-col items-center justify-center lg:items-start lg:flex-row gap-4">
           {contenido !== null ? (
             <Accordion type="single" collapsible className={`w-full ${incluyteSkillClass&&"mx-auto"} lg:w-1/2 px-8`}>
-              {JSON.parse(modulos).map((modulo, index) => (
+              {(modulos).map((modulo, index) => (
                 <AccordionItem value={`item-${index + 1}`} key={index}>
                   <AccordionTrigger className="font-bold text-sm md:text-xl text-left px-4 text-pretty gap-4">
                     {modulo.titulo}

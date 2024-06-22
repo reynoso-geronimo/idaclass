@@ -38,7 +38,7 @@ const CursoPage = async ({ params }) => {
     perfil_texto,
     dirigido,
   } = curso;
-  const contenido = JSON.parse(acerca_curso);
+  const contenido = process.env.dev === true ? JSON.parse(acerca_curso):acerca_curso;
   return (
     <main className="flex flex-col">
       <CursoHeader

@@ -52,11 +52,13 @@ const CursoPage = async ({ params }) => {
     perfil_titulo_tres,
     perfil_texto_tres,
   } = curso;
-  const contenido = JSON.parse(acerca_curso);
+
+  const contenido =
+    process.env.dev === true ? JSON.parse(acerca_curso) : acerca_curso;
   return (
     <main className="flex flex-col">
       {/* {pais.country} */}
-     
+
       <CursoHeader
         nombre={nombre}
         id={id}
@@ -93,7 +95,7 @@ const CursoPage = async ({ params }) => {
 
       <CertificacionCursoFormacion nombre={nombre} />
       <Separator className="my-6" />
-      <CursosContenido modulos={modulos} incluyteSkillClass={true}/>
+      <CursosContenido modulos={modulos} incluyteSkillClass={true} />
       <Separator className="my-6" />
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
@@ -102,11 +104,10 @@ const CursoPage = async ({ params }) => {
         modalidades={modalidades}
         curso={curso}
         nombre={nombre}
-        
         tipo={"CURSO DE FORMACION"}
       />
       <Separator className="my-6" />
-   {/*    <BecaAsesorate /> */}
+      {/*    <BecaAsesorate /> */}
       <Separator className="my-6" />
       <EquipoProfesional
         titulo="Conoce al equipo de"

@@ -10,13 +10,13 @@ import Contenido from "./_components/contenido";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import UniteComunidad from "../../components/uniteComunidad";
 
-
 const page = async ({ params }) => {
   const [post, posts] = await Promise.all([
     getBlogPostFromDB(params.id),
     getBlogPostsFromDB(3, params.id),
   ]);
-  const contenido = JSON.parse(post.cuerpo);
+  const contenido =
+    process.env.dev === true ? JSON.parse(post.cuerpo) : post.cuerpo;
 
   return (
     <main className="">
