@@ -12,12 +12,10 @@ import { Clock, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CursoEspecializacionCard = ({ curso, minH="min-h-[430px]"}) => {
+const CursoEspecializacionCard = ({ curso, minH = "min-h-[430px]" }) => {
   return (
     <Card
-      className={
-        `${minH} 2xl:h-[550px] text-sm  border-none mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden`
-      }
+      className={`${minH} 2xl:h-[550px] text-sm  border-none mx-2 relative flex flex-col justify-end bg-black text-white rounded-3xl overflow-hidden`}
     >
       <Image
         // src={`/${curso.imagen}`}
@@ -36,8 +34,11 @@ const CursoEspecializacionCard = ({ curso, minH="min-h-[430px]"}) => {
         {/* <CardDescription className="text-white ">{curso.descripcion}</CardDescription> */}
         <Separator />
         <span className="flex gap-2 items-center">
-          <GraduationCap /> <span className="font-bold">Docente:</span>{" "}
-          {curso.profesionals?.length > 0 && curso.profesionals[0].nombre}
+          <GraduationCap />{" "}
+          <p>
+            <span className="font-bold">Docente:</span>{" "}
+            {curso.profesionals?.length > 0 && curso.profesionals[0].nombre}
+          </p>
         </span>
         <Separator />
         <span className="flex gap-2 items-center">

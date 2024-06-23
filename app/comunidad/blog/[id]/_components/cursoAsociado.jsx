@@ -28,7 +28,7 @@ const CursoAsociado = async ({ curso }) => {
               <Separator />
               <p className="space-x-2">
                 <GraduationCap className="inline" />
-                <span className="font-bo ld">Docente:</span>{" "}
+                <span className="font-bold">Docente:</span>{" "}
                 {curso.profesionals[0].nombre}
               </p>
             </>
