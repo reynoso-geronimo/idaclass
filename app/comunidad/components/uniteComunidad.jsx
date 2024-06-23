@@ -30,7 +30,7 @@ const UniteComunidad = () => {
           {/*//!!ver que hacer con este vinculo */}
           <Button
             onClick={() => signIn()}
-            className="w-full flex items-center justify-center rounded-2xl  lg:w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
+            className="z-10 flex items-center justify-center rounded-2xl w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
           >
             ¡UNITE!
           </Button>
@@ -47,7 +47,7 @@ const UniteComunidad = () => {
           />
           <Link
             href={"/comunidad"}
-            className="w-full flex items-center justify-center rounded-2xl  lg:w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
+            className="z-10 flex items-center justify-center rounded-2xl w-52 py-2.5 lg:mx-4 text-center bg-idaclass4 text-white font-bold text-sm"
           >
             Comunidad
           </Link>
