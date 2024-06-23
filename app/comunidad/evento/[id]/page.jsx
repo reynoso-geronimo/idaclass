@@ -3,6 +3,8 @@ import UniteComunidad from "../../components/uniteComunidad";
 import { getEventoFromDB } from "@/app/actions";
 
 import EventoHeader from "./components/EventoHeader";
+import EventoBeneficios from "./components/EventoBeneficios";
+import Oradores from "./components/Oradores";
 
 const page = async ({ params }) => {
   const [evento] = await Promise.all([getEventoFromDB(params.id)]);
@@ -15,6 +17,8 @@ const page = async ({ params }) => {
       <div className="container mt-12">
         <BlockRendererClient content={contenido} />
       </div>
+      <EventoBeneficios />
+      {evento.oradores?.length > 0 && <Oradores oradores={evento.oradores} />}
     </main>
   );
 };

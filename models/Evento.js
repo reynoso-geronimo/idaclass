@@ -12,6 +12,10 @@ const Evento = sequelize.define("eventos", {
         type: DataTypes.STRING,
         allowNull: true,
     },
+    subtitulo: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
     clasificacion: {
         type: DataTypes.STRING,
         allowNull: true,

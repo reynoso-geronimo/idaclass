@@ -12,7 +12,7 @@ const CursoAsociado = async ({ curso }) => {
 
   return (
     <>
-      <h3 className="font-bold text-2xl my-4 text-idaclass">
+      <h3 className="font-extrabold text-3xl my-4 text-idaclass">
         Capacitación Recomendada
       </h3>
       <div className="min-h-[480px] relative text-white rounded-3xl overflow-hidden flex flex-col justify-end max-lg:pb-6 lg:justify-center container mb-6">

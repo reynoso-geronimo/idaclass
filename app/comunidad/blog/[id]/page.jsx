@@ -99,8 +99,8 @@ const page = async ({ params }) => {
           </div>
 
           <Contenido />
-          <h3 className="font-bold text-2xl my-4 text-idaclass">
-            Introduccion
+          <h3 className="font-extrabold text-3xl my-4 text-idaclass">
+            Introducción
           </h3>
           <p className="text-base">{post.introduccion} </p>
 
