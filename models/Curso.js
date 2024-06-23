@@ -63,7 +63,7 @@ Curso.belongsToMany(Categoria, {
     timestamps: false
 });
 Curso.belongsToMany(Profesional, {
-    through: 'cursos_profesional_links',
+    through: 'cursos_profesionals_links',
     foreignKey: 'curso_id',
     otherKey: 'profesional_id',
     timestamps: false

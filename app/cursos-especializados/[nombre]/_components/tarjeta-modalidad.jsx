@@ -80,7 +80,7 @@ const TarjetaModalidad = ({
             <span className="line-through decoration-2">
               {" "}
               ${" "}
-              {precio.toLocaleString("es-AR", {
+              {precio?.toLocaleString("es-AR", {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
               })}
@@ -92,7 +92,7 @@ const TarjetaModalidad = ({
           <p className="font-bold pt-6 pb-2 text-center">Desde</p>
           <p className=" text-3xl font-extrabold mb-0 text-center">
             ${" "}
-            {precioBeca.toLocaleString("es-AR", {
+            {precioBeca?.toLocaleString("es-AR", {
               minimumFractionDigits: 0,
               maximumFractionDigits: 0,
             })}

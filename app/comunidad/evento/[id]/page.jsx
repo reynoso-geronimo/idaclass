@@ -7,7 +7,7 @@ import EventoHeader from "./components/EventoHeader";
 const page = async ({ params }) => {
   const [evento] = await Promise.all([getEventoFromDB(params.id)]);
   const contenido =
-    process.env.dev === true ? JSON.parse(evento.cuerpo) : evento.cuerpo;
+    process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
   return (
     <main className="">
       <EventoHeader evento={evento} />

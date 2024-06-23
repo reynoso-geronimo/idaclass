@@ -54,7 +54,7 @@ const CursoPage = async ({ params }) => {
   } = curso;
 
   const contenido =
-    process.env.dev === true ? JSON.parse(acerca_curso) : acerca_curso;
+    process.env.dev === "true" ? JSON.parse(acerca_curso) : acerca_curso;
   return (
     <main className="flex flex-col">
       {/* {pais.country} */}

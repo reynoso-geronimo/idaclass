@@ -16,7 +16,7 @@ const page = async ({ params }) => {
     getBlogPostsFromDB(3, params.id),
   ]);
   const contenido =
-    process.env.dev === true ? JSON.parse(post.cuerpo) : post.cuerpo;
+    process.env.dev === "true" ? JSON.parse(post.cuerpo) : post.cuerpo;
 
   return (
     <main className="">

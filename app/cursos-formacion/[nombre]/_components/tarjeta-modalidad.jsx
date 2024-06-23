@@ -75,14 +75,14 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
           )}
           <p className="text-center text-idaclass font-semibold border-y-2 border-idaclass py-2">
             Plan Standard
-            <span className="line-through decoration-2"> $ {precio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }</span>
+            <span className="line-through decoration-2"> $ {precio?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }</span>
           </p>
           <p className="text-center text-idaclass font-semibold border-b-2 border-idaclass py-2">
-            BecaClass + {descuento}% OFF $ {precioBeca.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }
+            BecaClass + {descuento}% OFF $ {precioBeca?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }
           </p>
           <p className="font-bold pt-6 pb-2 text-center">Desde {cuotas} Cuotas de</p>
           <p className=" text-3xl font-extrabold mb-0 text-center">
-            $ {cuotaPrecio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }
+            $ {cuotaPrecio?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) }
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">

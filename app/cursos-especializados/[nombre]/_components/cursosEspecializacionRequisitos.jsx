@@ -2,7 +2,7 @@ import BlockRendererClient from "@/components/ui/BlockRendererClient";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CursosEspciealizacionRequisitos = ({ dirigido }) => {
-  const content = process.env.dev === true ? JSON.parse(dirigido) : dirigido;
+  const content = process.env.dev === "true" ? JSON.parse(dirigido) : dirigido;
   return (
     <section className="flex flex-col lg:flex-row justify-center gap-4 container">
       <article className="w-full rounded-2xl overflow-hidden border-idaclass4 border-2 ">

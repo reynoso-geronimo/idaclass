@@ -50,17 +50,17 @@ const CursoFormacionCard = ({ curso }) => {
         <Separator />
         <p>
          <Image src={"/assets/PlanStandard.svg"} width={20} height={20} alt="" className="inline mr-1"/> Plan Standard:{" "}
-          <span className="line-through decoration-2">$ {precio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
+          <span className="line-through decoration-2">$ {precio?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
         </p>
         <p className="font-bold text-orange-500">
         <Image src={"/assets/PlanBecaClass.svg"} width={20} height={20} alt="" className="inline mr-2"/>
-          BecaClass +{descuento}% OFF <span className="text-idaclass3">$ {precioBeca.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
+          BecaClass +{descuento}% OFF <span className="text-idaclass3">$ {precioBeca?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</span>
         </p>
 
         <Separator />
         <div className="text-white">
           <p className="font-bold text-center">Desde {cuotas} Cuotas de</p>
-          <p className=" text-2xl font-bold text-center">$ {cuotaPrecio.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
+          <p className=" text-2xl font-bold text-center">$ {cuotaPrecio?.toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</p>
         </div>
         <Separator />
         <Button

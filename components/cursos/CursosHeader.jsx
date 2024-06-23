@@ -11,7 +11,7 @@ const CursoHeader = ({
   nombre,
   descripcion,
   videoid,
-  profesional,
+  profesionals,
   modalidades,
   tipo, // Nuevo prop para diferenciar entre formación y especialización
 }) => {
@@ -65,21 +65,27 @@ const CursoHeader = ({
             />
           )}
         </div>
-        {profesional && (
-          <div className="w-auto py-2 bg-gray-500 bg-opacity-50 backdrop-blur-md border-gray-400 border  rounded-full md:absolute right-16 bottom-16 flex items-center px-2 gap-2 mt-8">
-            <Avatar className="h-14 w-14">
-              <AvatarImage
-                src={`/profesional/${profesional.nombre}.png`}
-                alt={profesional.nombre}
-              />
-              <AvatarFallback>PR</AvatarFallback>
-            </Avatar>
-            <div className="pr-2">
-              <h2 className="font-bold text-md">{profesional.nombre}</h2>
-              <p className="font-medium text-sm">{profesional.titulo}</p>
-            </div>
-          </div>
-        )}
+        <div className="md:absolute right-16 bottom-16 mt-8 space-y-2">
+          {profesionals?.length > 0 &&
+            profesionals.map((profesional, index) => (
+              <div
+                key={index}
+                className="w-auto py-2 bg-gray-500 bg-opacity-50 backdrop-blur-md border-gray-400 border  rounded-full  flex items-center px-2 gap-2"
+              >
+                <Avatar className="h-14 w-14">
+                  <AvatarImage
+                    src={`/profesional/${profesional.nombre}.png`}
+                    alt={profesional.nombre}
+                  />
+                  <AvatarFallback>PR</AvatarFallback>
+                </Avatar>
+                <div className="pr-2">
+                  <h2 className="font-bold text-md">{profesional.nombre}</h2>
+                  <p className="font-medium text-sm">{profesional.titulo}</p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
       <Image
         src={headerImage}
