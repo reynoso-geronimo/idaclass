@@ -95,7 +95,7 @@ const CursoPage = async ({ params }) => {
 
       <CertificacionCursoFormacion nombre={nombre} />
       <Separator className="my-6" />
-      <CursosContenido modulos={modulos} incluyteSkillClass={true} />
+      <CursosContenido modulos={modulos} incluyeSkillClass={true} />
       <Separator className="my-6" />
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
