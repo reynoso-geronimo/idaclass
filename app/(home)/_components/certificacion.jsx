@@ -23,7 +23,7 @@ const Certificacion = () => {
       </TituloSeccion>
       <h2 className="text-lg container text-center text-balance my-4">
         Somos la primera academia digital con estándar de formación y los
-        pioneros en contar con normas de código y ética y profesional,
+        pioneros en contar con normas de código y ética profesional,
         garantizándote una formación de calidad.
       </h2>
       <div className="container w-full px-0 relative text-white min-h-[310px] lg:min-h-[600px]">

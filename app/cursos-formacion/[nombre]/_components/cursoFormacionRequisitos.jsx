@@ -8,7 +8,7 @@ const CursoFormacionRequisitos = () => {
           Requisitos
         </TituloSeccion>
         <ul className="text-sm mx-8 list-inside list-disc flex-1 flex flex-col justify-evenly py-4">
-          <li>Mayor de 18 años o 16 con autorizacion de mayor responsable</li>
+          <li>Mayor de 18 años o 16 con autorización de mayor responsable</li>
           <li>Completar formulario de inscripción</li>
           <li>Apto médico (solo modalidad presencial).</li>
           <li>
@@ -36,7 +36,7 @@ const CursoFormacionRequisitos = () => {
           Potencia tu empleabilidad
         </TituloSeccion>
         <h3 className="text-center py-4 font-bold">
-          Accede a recursos y herramientas para tu exito
+          Accede a recursos y herramientas para tu éxito
         </h3>
         <ul className="text-sm mx-8 list-inside list-disc flex-1 flex flex-col justify-evenly pb-4">
           <li>Bolsa de trabajo</li>

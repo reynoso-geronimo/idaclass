@@ -17,7 +17,7 @@ import lineaB from "../public/equipo-profesional/LineaB.svg";
 import Image from "next/image";
 const EquipoProfesional = ({
   titulo = " Conoce al equipo",
-  titulo2 = "que te guiara al éxito",
+  titulo2 = "que te guiará al éxito",
   titulo2Class = "",
   titulo3,
 }) => {

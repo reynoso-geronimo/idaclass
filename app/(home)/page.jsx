@@ -24,7 +24,7 @@ const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-
       <ul className="list-inside list-disc my-2">
         <li>Estudia a tu ritmo </li>
         <li>Expertos internacionales </li>
-        <li>Elije tu area de especializacion</li>
+        <li>Elije tu area de especialización</li>
       </ul>
       <Link href={"/cursos-especializados"}>
         <Button variants="lg" className="rounded-lg mt-4">
@@ -51,7 +51,7 @@ export default function Home() {
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
         titulo2Class="text-idaclass3"
-        titulo3="que te guiara al exito"
+        titulo3="que te guiará al éxito"
       />
       
       <CasosExito />

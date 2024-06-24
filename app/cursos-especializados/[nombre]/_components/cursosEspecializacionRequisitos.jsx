@@ -44,7 +44,7 @@ const CursosEspciealizacionRequisitos = ({ dirigido }) => {
           Potencia tu empleabilidad
         </TituloSeccion>
         <h3 className="text-center py-4 font-bold">
-          Accede a recursos y herramientas para tu exito
+          Accede a recursos y herramientas para tu éxito
         </h3>
         <ul className="text-sm mx-8 list-inside list-disc flex-1 flex flex-col justify-evenly pb-4">
           <li>Bolsa de trabajo</li>

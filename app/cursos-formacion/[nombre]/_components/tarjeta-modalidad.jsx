@@ -53,22 +53,22 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
               <li>Clases online en vivo (2h. semanales)</li>
               <li>Grabación de las clases en vivo</li>
-              <li>Tutorias con staff trainer educativos</li>
-              <li>Video resumenes y materiales descargable</li>
-              <li>Contenido teorico interactivo</li>
+              <li>Tutorías con staff trainer educativos</li>
+              <li>Video resúmenes y materiales descargable</li>
+              <li>Contenido teórico interactivo</li>
               <li>Autoevaluaciones</li>
-              <li>Doble titulacion bonificada</li>
+              <li>Doble titulación bonificada</li>
               <li>4 cursos complementarios (SkillClass)</li>
               <li>Acceso a webinars con expertos</li>
             </ul>
           ) : (
             <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
-              <li>Clases presenciales (3h. cada 15 dias)</li>
-              <li>Tutorias con staff trainer educativos</li>
-              <li>Video resumenes y materiales descargable</li>
-              <li>Contenido teorico interactivo</li>
+              <li>Clases presenciales (3h. cada 15 días)</li>
+              <li>Tutorías con staff trainer educativos</li>
+              <li>Video resúmenes y materiales descargable</li>
+              <li>Contenido teórico interactivo</li>
               <li>Autoevaluaciones</li>
-              <li>Doble titulacion bonificada</li>
+              <li>Doble titulación bonificada</li>
               <li>4 cursos complementarios (skillClass)</li>
               <li>Acceso a webinars con expertos</li>
             </ul>

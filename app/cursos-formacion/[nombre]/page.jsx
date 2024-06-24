@@ -113,7 +113,7 @@ const CursoPage = async ({ params }) => {
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
         titulo2Class="text-idaclass3"
-        titulo3="que te guiara al exito"
+        titulo3="que te guiará al éxito"
       />
       <CasosExito />
       <Separator className="my-6" />
