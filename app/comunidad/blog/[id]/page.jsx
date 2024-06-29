@@ -62,13 +62,13 @@ const page = async ({ params }) => {
             <h1 className="font-black text-4xl lg:text-5xl text-pretty">
               {post.titulo}
             </h1>
-            <h2 className={`${textoEnDegrade} text-lg lg:text-2xl font-bold`}>
+            <h2 className={`${textoEnDegrade} text-lg lg:text-2xl font-bold text-balance`}>
               {post.subtitulo}
             </h2>
           </div>
           {post.profesionals[0] && (
             <div className="w-auto flex items-center gap-2">
-              <Avatar className="h-14 w-14">
+              <Avatar className="h-16 w-16 xl:h-20 xl:w-20">
                 <AvatarImage
                   src={`/profesional/${post.profesionals[0].nombre}.png`}
                   alt={`${post.profesionals[0].nombre}`}

@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
+  
   return (
     <article className=" rounded-b-2xl rounded-t-3xl overflow-hidden w-full max-w-[420px] mx-auto relative">
       {
         <Badge className={`absolute top-4 -left-4 pl-6 bg-orange-500 z-10`}>
-          {post.categorias[0].nombre || " "}
+          {post.categorias[0]?.nombre || " "}
         </Badge>
       }
       <div className="relative aspect-video w-full">
