@@ -11,6 +11,10 @@ const Speaker = sequelize.define('speakers', {
   },
   titulo: {
     type: DataTypes.STRING
+  },
+  bio: {
+    type: DataTypes.TEXT('long')
+
   }
 }, {
   freezeTableName: true,

@@ -1,6 +1,7 @@
 import sequelize from "../lib/sequelize";
 import { DataTypes } from "sequelize";
 import Profesional from "./Profesional";
+import Speaker from "./Speaker";
 
 const Evento = sequelize.define("eventos", {
     id: {
@@ -39,4 +40,11 @@ Evento.belongsToMany(Profesional, {
     otherKey: 'profesional_id',
     timestamps: false
 });
+Evento.belongsToMany(Speaker, {
+    through: 'eventos_speakers_links',
+    foreignKey: 'evento_id',
+    otherKey: 'speaker_id',
+    timestamps: false
+});
+
 export default Evento;

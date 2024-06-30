@@ -11,6 +11,7 @@ import { redirect } from "next/navigation";
 import Evento from "@/models/Evento";
 import checkoutNodeJssdk from "@paypal/checkout-server-sdk";
 import User from "@/models/User";
+import Speaker from "@/models/Speaker";
 
 export async function getCursos() {
   try {
@@ -277,6 +278,10 @@ export async function getEventoFromDB(id) {
           model: Profesional,
           as: "profesionals",
         },
+        {
+          model: Speaker,
+          as: "speakers",
+        }
       ],
     });
     const data = response.toJSON();

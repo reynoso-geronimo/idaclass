@@ -7,7 +7,8 @@ import EventoBeneficios from "./components/EventoBeneficios";
 import Oradores from "./components/Oradores";
 
 const page = async ({ params }) => {
-  const [evento] = await Promise.all([getEventoFromDB(params.id)]);
+  const evento = await getEventoFromDB(params.id);
+ 
   const contenido =
     process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
   return (
@@ -18,7 +19,7 @@ const page = async ({ params }) => {
         <BlockRendererClient content={contenido} />
       </div>
       <EventoBeneficios />
-      {evento.oradores?.length > 0 && <Oradores oradores={evento.oradores} />}
+      {evento.speakers?.length > 0 && <Oradores oradores={evento.speakers} />}
     </main>
   );
 };

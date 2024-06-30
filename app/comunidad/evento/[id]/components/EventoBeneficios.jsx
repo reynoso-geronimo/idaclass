@@ -4,52 +4,19 @@ import Image from "next/image";
 
 const caracteristicas = [
   {
-    img: "/cursosEspecializacion/Modulos.svg",
-    titulo: "Módulos de Aprendizaje",
-    texto:
-      "Los cursos están divididos en secciones con diferentes enfoques del tema principal. Cada una trata un aspecto específico para facilitar el aprendizaje.",
+    img: "/eventos/assets/Herramientas Digitales.svg",
+    titulo: "Herramientas Digitales",
+    texto:"Aprende a utilizar herramientas digitales para optimizar tu negocio"
   },
   {
-    img: "/cursosEspecializacion/Instructivos.svg",
-    titulo: "Videos Instructivos",
-    texto:
-      "Encontrarás videos dinámicos y entretenidos que explicarán los conceptos de forma visual y simple..",
+    img: "/eventos/assets/Visibilidad.svg",
+    titulo: "Visibilidad Online",
+    texto:"Incrementa tu visibilidad online y atrae más clientes"
   },
   {
-    img: "/cursosEspecializacion/Material.svg",
-    titulo: "Material de Lectura",
-    texto:
-      "Tendrás material detallado para complementar los módulos de aprendizaje y obtener una comprensión profunda del tema, a tu propio ritmo.",
-  },
-  {
-    img: "/cursosEspecializacion/Actividades.svg",
-    titulo: "Actividades Prácticas",
-    texto:
-      "Ejercicios interactivos, proyectos prácticos o casos de estudio que te permitirán aplicar lo que han aprendido en situaciones reales.",
-  },
-  {
-    img: "/cursosEspecializacion/Evaluaciones.svg",
-    titulo: "Evaluaciónes y Exámenes",
-    texto:
-      "Están diseñados para medir la comprensión del material y proporcionarte retroalimentación útil para mejorar tu aprendizaje.",
-  },
-  {
-    img: "/cursosEspecializacion/Recursos.svg",
-    titulo: "Recursos Adicionales",
-    texto:
-      "Tendrás disponibles recursos adicionales para enriquecer tu experiencia. Encontrarás libros recomendados, conferencias grabadas, artículos, etc.",
-  },
-  {
-    img: "/cursosEspecializacion/Acceso.svg",
-    titulo: "Acceso Ilimitado",
-    texto:
-      "Tendrás acceso de por vida. Podrás hacerlo a tu ritmo y volver a revisar el material del curso todas las veces que lo necesites.",
-  },
-  {
-    img: "/cursosEspecializacion/Certificacion.svg",
-    titulo: "Certificación",
-    texto:
-      "Podrás validar tus estudios con una certificación reconocida por IdaClass, con autenticación QR exclusiva..",
+    img: "/eventos/assets/Contacto.svg",
+    titulo: "Contacto",
+    texto:"Conéctate con otros profesionales del sector Fitness"
   },
 ];
 const OPTIONS = { align: "center" };
@@ -65,9 +32,9 @@ const EventoBeneficios = () => {
         />
       </div>
       <TituloSeccion className={"text-white"}>
-        Beneficios de asistir al Webinar
+        Que aprenderás
       </TituloSeccion>
-      <div className="grid grid-cols-4 gap-x-6 gap-y-6 max-lg:hidden justify-items-center">
+      <div className="flex gap-x-6 gap-y-6 max-lg:hidden justify-items-center">
         {caracteristicas.map(caracteristica => (
           <Caracteristica key={caracteristica.titulo} {...caracteristica} />
         ))}
