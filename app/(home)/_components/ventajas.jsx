@@ -69,13 +69,12 @@ const Ventajas = () => {
             </h3>
             <p className="text-pretty lg:text-lg text-center lg:text-left">
               Aprende de forma online con clases en vivo con nuestra plataforma
-              multimodal e interactiva .A traves del método Learning by Doing
-              aplicaras lo aprendido desde el primer día con prácticas reales,
-              garantizando una formación rápida, efectiva y entretenida
+              multimodal e interactiva.
             </p>
             <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
-              Con el sistema Learning by Doing aplicarás los conocimientos desde
-              el primer día y tendrás prácticas reales con alumnos.
+              A traves del método Learning by Doing aplicaras lo aprendido desde
+              el primer día con prácticas reales, garantizando una formación
+              rápida, efectiva y entretenida
             </p>
             <ul className="font-bold grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 gap-y-4 text-sm sm:text-base ">
               <li className="w-full  flex items-center break-words hyphens-auto">
@@ -167,18 +166,18 @@ const Ventajas = () => {
                 Desarrolla tus proyectos
               </li>
             </ul> */}
-             <div className="flex gap-4">
-            {partners.map((partner, index) => (
-              <Image
-                key={index}
-                src={`/empresasPartners${partner.src}`}
-                width={190}
-                height={190}
-                alt="logo"
-                className=" rounded-xl object-contain aspect-video p-2 bg-white"
-              />
-            ))}
-          </div>
+            <div className="flex gap-4">
+              {partners.map((partner, index) => (
+                <Image
+                  key={index}
+                  src={`/empresasPartners${partner.src}`}
+                  width={190}
+                  height={190}
+                  alt="logo"
+                  className=" rounded-xl object-contain aspect-video p-2 bg-white"
+                />
+              ))}
+            </div>
             <Image
               src={linea}
               alt="linea"
