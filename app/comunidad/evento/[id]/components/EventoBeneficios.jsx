@@ -11,7 +11,7 @@ const caracteristicas = [
   },
   {
     img: "/eventos/assets/Visibilidad.svg",
-    titulo: "Estrategias de Marketing Digita",
+    titulo: "Estrategias de Marketing Digital",
     texto: "Descubre cómo implementar estrategias de marketing digital efectivas para aumentar tu visibilidad y atraer más clientes",
   },
   {
