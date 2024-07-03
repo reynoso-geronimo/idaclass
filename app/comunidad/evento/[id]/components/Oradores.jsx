@@ -4,7 +4,7 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 const Oradores = ({ oradores }) => {
   return (
     <section>
-      <TituloSeccion className={"mb-4"}>
+      <TituloSeccion className={"mb-4 px-8"}>
         Conoce a los oradores expertos que te guiaran al éxito
       </TituloSeccion>
       <h2 className="text-center container">
@@ -26,7 +26,7 @@ const Orador = ({ orador }) => {
   return (
     <article className="bg-idaclass5 flex flex-col justify-start xl:flex-row p-4 rounded-xl gap-4">
       <div className="bg-white w-full h-36 xl:w-52 xl:h-72 shrink-0 rounded-xl mt-0 flex items-center justify-center p-4 xl:my-auto">
-        <Avatar className="xl:w-full xl:h-auto w-auto h-full">
+        <Avatar className="xl:w-full xl:h-auto w-auto h-full aspect-square">
           <AvatarImage
             src={`/speakers/${orador.nombre}.png`}
             alt={`${orador.nombre}`}

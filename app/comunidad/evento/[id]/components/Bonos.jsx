@@ -45,7 +45,7 @@ const Bonos = () => {
 };
 
 export const Bono = ({ img = "/cursosEspecializacion/Modulos.svg" }) => (
-  <article className="relative w-[440px] h-[300px]">
+  <article className="relative w-[440px] max-w-[70vw] mx-4 h-[300px]">
     <Image src={img} alt={""} fill className="object-contain" />
   </article>
 );

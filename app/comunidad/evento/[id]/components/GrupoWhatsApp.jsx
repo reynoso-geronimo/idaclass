@@ -7,7 +7,7 @@ const GrupoWhatsApp = ({ sideBar = false,linkGrupo="", className }) => {
   return (
     <article
       className={cn(
-        `w-full flex flex-col justify-end relative aspect-[9/13] container px-6 py-8 text-white ${
+        `w-full flex flex-col justify-end relative aspect-[9/13] max-w-[70vw] container px-6 py-8 text-white ${
           !sideBar
             ? "lg:items-end lg:w-1/2 lg:aspect-auto lg:justify-between max-lg:max-w-md"
             : "min-h-[430px]"
