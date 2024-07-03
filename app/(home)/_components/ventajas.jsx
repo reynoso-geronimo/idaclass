@@ -4,7 +4,16 @@ import { useInView } from "react-intersection-observer";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import { Dot } from "lucide-react";
 import linea from "../../../public/assets/Linea img 1.png";
-
+const partners = [
+  {
+    src: "/COALICIONUNIVERSIDADESYMCA.jpg",
+    alt: "logo",
+  },
+  {
+    src: "/Logo_instituto-leyenda-red.png",
+    alt: "logo",
+  },
+];
 const Ventajas = () => {
   const [ref1, inView1] = useInView({
     triggerOnce: true,
@@ -59,9 +68,10 @@ const Ventajas = () => {
               La experiencia educativa más innovadora
             </h3>
             <p className="text-pretty lg:text-lg text-center lg:text-left">
-              Aprende de forma online, con clases en vivo. A través de nuestra
-              plataforma interactiva, nos aseguramos que aprendas con rapidez y
-              efectividad los fundamentos teóricos sin aburrirte.
+              Aprende de forma online con clases en vivo con nuestra plataforma
+              multimodal e interactiva .A traves del método Learning by Doing
+              aplicaras lo aprendido desde el primer día con prácticas reales,
+              garantizando una formación rápida, efectiva y entretenida
             </p>
             <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
               Con el sistema Learning by Doing aplicarás los conocimientos desde
@@ -109,9 +119,9 @@ const Ventajas = () => {
             <div className="w-full relative aspect-video">
               <div className="max-lg:hidden absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10">
                 <p className="text-lg text-left">
-                  Nos aseguramos de brindarte una formación integral, para que
-                  desarrolles todas las habilidades necesarias para lograr tus
-                  metas profesionales con éxito.
+                  Recibe una formación integral. Desarrolla todas las
+                  habilidades necesarias para lograr tus metas profesionales con
+                  éxito.
                 </p>
               </div>
               <Image
@@ -138,10 +148,11 @@ const Ventajas = () => {
               Programa educativo de prestigio
             </h3>
             <p className="text-pretty lg:text-lg ">
-              Somos reconocidos como líderes regionales en la industria hace más
-              de 25 años. Nuestra formación te respaldará con el prestigio de
-              IdaClass y podrás obtener la certificación de mayor reconocimiento
-              y aval internacional.
+              Asegura tu éxito y destaca en la Industria Fitness. Respalda tu
+              carrera con nuestros 25 años de experiencia. Estudia en IdaClass y
+              obtén una Certificación de Extensión Universitaria con
+              reconocimiento y aval internacional, asegurando tu éxito
+              profesional.
             </p>
             {/* <ul className="flex flex-col py-2 text-sm sm:text-base">
               <li className="flex">
@@ -156,7 +167,18 @@ const Ventajas = () => {
                 Desarrolla tus proyectos
               </li>
             </ul> */}
-
+             <div className="flex gap-4">
+            {partners.map((partner, index) => (
+              <Image
+                key={index}
+                src={`/empresasPartners${partner.src}`}
+                width={190}
+                height={190}
+                alt="logo"
+                className=" rounded-xl object-contain aspect-video p-2 bg-white"
+              />
+            ))}
+          </div>
             <Image
               src={linea}
               alt="linea"
