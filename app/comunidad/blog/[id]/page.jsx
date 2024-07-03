@@ -76,7 +76,7 @@ const page = async ({ params }) => {
                 <AvatarFallback>PR</AvatarFallback>
               </Avatar>
               <div className="pr-2">
-                <p className="font-medium text-sm">Escrtio por:</p>
+                <p className="font-medium text-sm">Escrito por:</p>
                 <h2 className="font-bold text-lg">
                   {post.profesionals[0].nombre}
                 </h2>
