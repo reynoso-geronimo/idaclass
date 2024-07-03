@@ -6,18 +6,24 @@ const caracteristicas = [
   {
     img: "/eventos/assets/Herramientas Digitales.svg",
     titulo: "Herramientas Digitales",
-    texto:"Aprende a utilizar herramientas digitales para optimizar tu negocio"
+    texto:
+      "Aprende sobre las  herramientas digitales más avanzadas para optimizar tu práctica y gestión de clientes.",
   },
   {
     img: "/eventos/assets/Visibilidad.svg",
-    titulo: "Visibilidad Online",
-    texto:"Incrementa tu visibilidad online y atrae más clientes"
+    titulo: "Estrategias de Marketing Digita",
+    texto: "Descubre cómo implementar estrategias de marketing digital efectivas para aumentar tu visibilidad y atraer más clientes",
   },
   {
     img: "/eventos/assets/Contacto.svg",
-    titulo: "Contacto",
-    texto:"Conéctate con otros profesionales del sector Fitness"
+    titulo: "Gestión de Redes Sociales",
+    texto: "Domina las redes sociales para construir una presencia online fuerte y conectar con tu audiencia de manera efectiva.",
   },
+  {
+    img:"/eventos/assets/Comunicacion.svg",
+    titulo:"Mejora de la Comunicación",
+    texto:"Desarrolla habilidades de comunicación digital que te permitan interactuar y motivar a tus clientes de forma más eficiente."
+  }
 ];
 const OPTIONS = { align: "center" };
 const EventoBeneficios = () => {
@@ -31,9 +37,7 @@ const EventoBeneficios = () => {
           ))}
         />
       </div>
-      <TituloSeccion className={"text-white"}>
-        Que aprenderás
-      </TituloSeccion>
+      <TituloSeccion className={"text-white"}>Que aprenderás</TituloSeccion>
       <div className="flex gap-x-6 gap-y-6 max-lg:hidden justify-items-center">
         {caracteristicas.map(caracteristica => (
           <Caracteristica key={caracteristica.titulo} {...caracteristica} />

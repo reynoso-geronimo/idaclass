@@ -5,7 +5,7 @@ const Oradores = ({ oradores }) => {
   return (
     <section>
       <TituloSeccion className={"mb-4"}>
-        ¿Quiénes dan este Webinar?
+        Conoce a los oradores expertos que te guiaran al éxito
       </TituloSeccion>
       <h2 className="text-center container">
         Nuestros profesionales con mejor calificación del sector fitness de
