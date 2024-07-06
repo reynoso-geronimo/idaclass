@@ -168,6 +168,13 @@ const NavbarWebMenu = ({
       >
         Comunidad
       </Link>
+      
+      <Link
+        href="https://campus-idaclassacademy.com/"
+        className={`after:translate-y-1 ${classEscritorio}`}
+      >
+        Ir al Campus
+      </Link>
 
       <Link
         href="https://wa.me/+5491135872204"

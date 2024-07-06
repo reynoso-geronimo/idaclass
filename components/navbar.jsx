@@ -52,7 +52,20 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
               </Link>
             </SheetClose>
             <Separator />
-
+            <SheetClose asChild>
+              <Link
+                className={`-translate-x-3.5 flex items-center `}
+                href="https://campus-idaclassacademy.com/"
+              >
+                <Minus
+                  className="rotate-90 -left-3 scale-x-[135%]"
+                  size={28}
+                  color="#0088ca"
+                />
+                Ir al Campus
+              </Link>
+            </SheetClose>
+            <Separator />
             <h1 className="-translate-x-3.5 flex items-center  text-idaclass">
               <Minus
                 className="rotate-90 -left-3 scale-x-[135%]"
@@ -79,7 +92,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
               <Link
                 href="/cursos-especializados"
                 className={`-translate-x-3.5 flex items-center ${
-                  pathname.includes("cursos-especializados")&& "text-idaclass4"
+                  pathname.includes("cursos-especializados") && "text-idaclass4"
                 } `}
               >
                 <Minus
