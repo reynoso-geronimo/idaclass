@@ -100,7 +100,8 @@ const TarjetaModalidad = ({
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
           <Button size="lg" className={`w-full rounded-2xl`} asChild>
-            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
+           {/*  <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link> */}
+           <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link>
           </Button>
         </CardFooter>
       </Card>
