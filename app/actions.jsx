@@ -352,7 +352,8 @@ export async function inscripcion(
   });
   //console.log(preference);
   //console.log(preference.sandbox_init_point);
-  redirect(preference.sandbox_init_point);
+  redirect(preference.init_point);
+  //redirect(preference.sandbox_init_point);
 }
 
 export async function getVentasFromDB(id) {
@@ -367,5 +368,15 @@ export async function getVentasFromDB(id) {
     return data;
   } catch (error) {
     console.log(error);
+  }
+}
+
+export async function getAllUsers(){
+  try {
+    const response = await User.findAll();
+    const data = response.map(user => user.toJSON());
+    return data
+  } catch (error) {
+    console.log(error);    
   }
 }

@@ -112,8 +112,8 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             }`}
             asChild
           >
-            {/*  <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link> */}
-            <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link>
+             <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link> 
+           {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
           </Button>
           {modalidad !== "ONLINE" && (
             <Button
