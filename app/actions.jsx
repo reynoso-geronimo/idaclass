@@ -370,6 +370,17 @@ export async function getVentasFromDB(id) {
     console.log(error);
   }
 }
+export async function getAllVentasFromDB() {
+  try {
+    const response = await Venta.findAll();
+    const data = response.map(venta => venta.toJSON());
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 
 export async function getAllUsers(){
   try {

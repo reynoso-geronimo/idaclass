@@ -19,6 +19,7 @@ import {
 import { useState } from "react";
 import { DataTableViewOptions } from "./data-table-view-options";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 
 export function DataTable({
@@ -51,6 +52,9 @@ export function DataTable({
         Get Share Link
       </Button> */}
       <DataTableViewOptions table={table} />
+
+      <Button variant="link"><Link href="/backoffice">USUARIOS</Link> </Button>
+      <Button variant="link"><Link href="/backoffice/sales">VENTAS</Link> </Button>
 
      </div>
       <div className="rounded-md border">

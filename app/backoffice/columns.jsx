@@ -17,12 +17,7 @@ export const columns = [
       <DataTableColumnHeader column={column} title="Nombre completo" />
     ),
   },
-  {
-    accessorKey: "pais",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="País" />
-    ),
-  },
+  
   {
     accessorKey: "email",
     header: ({ column }) => (
@@ -41,4 +36,29 @@ export const columns = [
       <DataTableColumnHeader column={column} title="DNI" />
     ),
   },
+  {
+    accessorKey: "pais",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="País" />
+    ),
+  },
+  {
+    accessorKey: "estado_provincia",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="estado_provincia" />
+    ),
+  },
+  {
+    accessorKey: "localidad",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="localidad" />
+    ),
+  },
+  {
+    accessorKey: "direccion",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="direccion" />
+    ),
+  },
+
 ]
