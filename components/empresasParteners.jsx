@@ -8,14 +8,14 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const partners = [
-  {
+ /*  {
     src: "/COALICIONUNIVERSIDADESYMCA.jpg",
     alt: "logo",
   },
   {
     src: "/Logo_instituto-leyenda-red.png",
     alt: "logo",
-  },
+  }, */
   {
     src: "/LogorepresentantePeru.png",
     alt: "logo",

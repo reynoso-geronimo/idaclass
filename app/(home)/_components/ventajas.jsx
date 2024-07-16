@@ -166,7 +166,7 @@ const Ventajas = () => {
                 Desarrolla tus proyectos
               </li>
             </ul> */}
-            <div className="flex gap-2 container justify-center pb-4">
+   {/*          <div className="flex gap-2 container justify-center pb-4">
               {partners.map((partner, index) => (
                 <Image
                   key={index}
@@ -177,7 +177,7 @@ const Ventajas = () => {
                   className="w-1/2 rounded-xl object-contain object-left aspect-video p-2 bg-white"
                 />
               ))}
-            </div>
+            </div> */}
             <Image
               src={linea}
               alt="linea"

@@ -28,7 +28,7 @@ const Certificacion = () => {
       </h2>
       <div className="container w-full px-0 relative text-white min-h-[310px] lg:min-h-[600px]">
         <Image src={cert1} alt="certificado" className="object-cover" fill />
-        <div className="absolute -top-2 right-10 z-10 lg:hidden">
+        {/*    <div className="absolute -top-2 right-10 z-10 lg:hidden">
           <h5 className="text-2xl text-idaclass3 font-semibold lg:mt-12 my-4 text-center">
             Nos avalan
           </h5>
@@ -44,7 +44,7 @@ const Certificacion = () => {
               ></Image>
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="absolute w-full top-0 right-0 flex justify-end text-white ">
           <div className="flex flex-col justify-center max-lg:hidden">
             <h5 className="text-2xl text-idaclass3 font-semibold">
@@ -62,7 +62,8 @@ const Certificacion = () => {
             className="w-36 lg:w-1/5 max-lg:absolute top-[190px] right-[38px]"
           />
         </div>
-        <div className="absolute bottom-12 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
+        <div className="absolute bottom-32 w-[420px] right-0 z-10 flex items-center flex-col px-4 mr-8 max-lg:hidden">
+          {/* bottom-12 con las imagenes de la universidad */}
           <h5 className="text-2xl text-idaclass3 font-semibold">
             Doble titulación
           </h5>
@@ -71,7 +72,7 @@ const Certificacion = () => {
             certificado de IdaClass, con autenticación QR exclusiva, y los 4
             certificados correspondientes a las especializaciones.
           </p>
-          <h5 className="text-2xl text-idaclass3 font-semibold mt-12 mb-4">
+          {/*   <h5 className="text-2xl text-idaclass3 font-semibold mt-12 mb-4">
             Nos avalan
           </h5>
           <div className="flex gap-4">
@@ -85,7 +86,7 @@ const Certificacion = () => {
                 className=" rounded-xl object-contain aspect-video p-2 bg-white"
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
