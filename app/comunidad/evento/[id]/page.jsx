@@ -21,7 +21,7 @@ const page = async ({ params }) => {
         <div>
           <BlockRendererClient content={contenido} />
         </div>
-        <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.linkGrupo||""}/>
+        <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.walink||""}/>
       </div>
       <EventoBeneficios />
       <Bonos/>

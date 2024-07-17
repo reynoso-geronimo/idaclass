@@ -11,7 +11,7 @@ const Oradores = ({ oradores }) => {
         Nuestros profesionales con mejor calificación del sector fitness de
         Latinoamérica
       </h2>
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
+      <div className={`container grid grid-cols-1 gap-4 my-12 ${oradores.length > 1? "md:grid-cols-2" : " max-w-lg"}`}>
         {oradores.length > 0 &&
           oradores.map(orador => <Orador key={orador} orador={orador} />)}
       </div>

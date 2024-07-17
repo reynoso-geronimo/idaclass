@@ -1,5 +1,4 @@
 import EmpresasPartners from "../../components/empresasParteners";
-
 import ComunidadHero from "./components/ComunidadHero";
 import ComunidadIntro from "./components/ComunidadIntro";
 import ComunidadRegistro from "./components/ComunidadRegistro";
@@ -36,7 +35,7 @@ const preguntas = [
   {
     pregunta: "¿Tiene un costo unirse a la comunidad?",
     respuesta:
-      "Unirse a la comunidad NO tiene ningún costo de membresia o inscripción es libre y gratuita",
+      "Unirse a la comunidad NO tiene ningún costo de membresía o inscripción es libre y gratuita",
   },
   {
     pregunta: "¿Cómo puedo unirme a la comunidad de IdaClass?",

@@ -34,7 +34,7 @@ const GrupoWhatsApp = ({ sideBar = false,linkGrupo="", className }) => {
         } px-2 w-full z-10 rounded-2xl bg-green-500 `}
         asChild
       >
-        <Link href={linkGrupo} id="wa">
+        <Link href={linkGrupo} id="wa" target="_blank">
           <div className="flex font-bold items-center gap-1">
             <svg viewBox="0 0 32 32" className="h-8 w-8">
               <path

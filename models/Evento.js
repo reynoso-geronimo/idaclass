@@ -21,6 +21,10 @@ const Evento = sequelize.define("eventos", {
         type: DataTypes.STRING,
         allowNull: true,
     },
+    walink: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
     fecha: {
         type: DataTypes.DATE,
         allowNull: true,

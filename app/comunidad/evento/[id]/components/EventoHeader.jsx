@@ -9,7 +9,7 @@ const EventoHeader = ({ evento }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className=" w-full py-12 lg:min-h-fit lg:container relative text-white bg-gradient-to-t lg:bg-gradient-to-r lg:from-[25%] from-idaclass5 ">
+    <div className=" w-full py-12 lg:min-h-fit lg:container relative text-white bg-gradient-to-t from-[70%] lg:bg-gradient-to-r lg:from-[35%] from-idaclass5 ">
       <div className="lg:hidden h-56 w-full">
       <Image
         loader={({ src }) => src}
@@ -47,7 +47,7 @@ const EventoHeader = ({ evento }) => {
             imgError
               ? "object-scale-down object-center"
               : "w-auto h-auto object-right-top lg:object-contain "
-          } -z-10 max-lg:hidden bg-black`}
+          } -z-10 max-lg:hidden `}
         />
       </div>
       <div className="w-full max-w-xl flex flex-col h-full justify-start gap-4 lg:justify-evenly lg:ml-0 container ">
