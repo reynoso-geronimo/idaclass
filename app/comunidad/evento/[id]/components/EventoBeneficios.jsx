@@ -50,7 +50,7 @@ const EventoBeneficios = () => {
 export const Caracteristica = ({
   img = "/cursosEspecializacion/Modulos.svg",
   titulo = "Titulo",
-  texto = "Los cursos se dividen en módulos o secciones que cubean diferentes aspectos del tema principal.",
+  texto = "Los cursos se dividen en módulos o secciones que cubren diferentes aspectos del tema principal.",
 }) => (
   <article className="mx-4 max-lg:h-[250px] container py-3 w-[280px] lg:w-full bg-gray-100 rounded-3xl text-center flex flex-col justify-start items-center gap-3">
     <Image src={img} alt={titulo} width={64} height={64} />
