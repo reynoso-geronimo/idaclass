@@ -6,7 +6,9 @@ import EventoBeneficios from "./components/EventoBeneficios";
 import Oradores from "./components/Oradores";
 import GrupoWhatsApp from "./components/GrupoWhatsApp";
 import Bonos from "./components/Bonos";
-export const revalidate = 3600
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+export const revalidate = 3600;
 
 const page = async ({ params }) => {
   const evento = await getEventoFromDB(params.id);
@@ -16,15 +18,26 @@ const page = async ({ params }) => {
   return (
     <main className="">
       <EventoHeader evento={evento} />
-     {/*  <UniteComunidad /> */}
+      {/*  <UniteComunidad /> */}
+      <div className="container flex justify-center mt-12 lg:hidden">
+        <Button className="bg-emerald-500 rounded-2xl font-bold text-xl  text-balance  py-6 ">
+          <Link href={"#wa"}>
+           Quiero inscribirme
+          </Link>
+        </Button>
+      </div>
       <div className="container my-12 flex flex-col lg:flex-row gap-x-20 gap-y-4">
         <div>
           <BlockRendererClient content={contenido} />
         </div>
-        <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.walink||""}/>
+        <GrupoWhatsApp
+          className={"lg:h-[30rem] w-96"}
+          sideBar={true}
+          linkGrupo={evento?.walink || ""}
+        />
       </div>
-{/*       <EventoBeneficios /> */}
-      <Bonos/>
+      {/*       <EventoBeneficios /> */}
+      <Bonos />
       {evento.speakers?.length > 0 && <Oradores oradores={evento.speakers} />}
     </main>
   );
