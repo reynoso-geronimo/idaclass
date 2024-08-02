@@ -32,6 +32,9 @@ const Evento = sequelize.define("eventos", {
     cuerpo: {
         type: DataTypes.TEXT('long'),
 
+    },
+    video_link: {
+        type: DataTypes.STRING
     }
 
 }, {

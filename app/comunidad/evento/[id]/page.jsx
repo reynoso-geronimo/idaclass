@@ -8,33 +8,30 @@ import GrupoWhatsApp from "./components/GrupoWhatsApp";
 import Bonos from "./components/Bonos";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-export const revalidate = 3600;
+import RegisterToView from "./components/RegisterToView";
+export const revalidate = 360;
 
 const page = async ({ params }) => {
   const evento = await getEventoFromDB(params.id);
 
-  const contenido =
-    process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
-  return (
+  const contenido = process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
+
+  return evento.video_link ? (
+   <RegisterToView videoid={evento?.video_link} />
+  ) : (
     <main className="">
       <EventoHeader evento={evento} />
       {/*  <UniteComunidad /> */}
       <div className="container flex justify-center mt-12 lg:hidden">
         <Button className="bg-emerald-500 rounded-2xl font-bold text-xl  text-balance  py-6 ">
-          <Link href={"#wa"}>
-           Quiero inscribirme
-          </Link>
+          <Link href={"#wa"}>Quiero inscribirme</Link>
         </Button>
       </div>
       <div className="container my-12 flex flex-col lg:flex-row gap-x-20 gap-y-4">
         <div>
           <BlockRendererClient content={contenido} />
         </div>
-        <GrupoWhatsApp
-          className={"lg:h-[30rem] w-96"}
-          sideBar={true}
-          linkGrupo={evento?.walink || ""}
-        />
+        <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.walink || ""} />
       </div>
       {/*       <EventoBeneficios /> */}
       <Bonos />
