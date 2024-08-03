@@ -17,7 +17,10 @@ const page = async ({ params }) => {
   const contenido = process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
 
   return evento.video_link ? (
+  <>
+    <EventoHeader evento={evento} />
    <RegisterToView videoid={evento?.video_link} />
+  </>
   ) : (
     <main className="">
       <EventoHeader evento={evento} />

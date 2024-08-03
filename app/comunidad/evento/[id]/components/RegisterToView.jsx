@@ -13,10 +13,11 @@ import { YouTubeEmbed } from "@next/third-parties/google";
 const RegisterToView = ({ videoid = "AYJx_xLi8KE" }) => {
   const { data: session } = useSession();
   return (
-    <div className="min-h-dvh relative flex flex-col items-center justify-center gap-4">
+    <div className="relative flex flex-col items-center justify-center gap-4 pb-8">
       {!session?.user ? (
         <>
-          <TituloSeccion>Regístrate o inicia ingresa para acceder a la grabación</TituloSeccion>
+          <TituloSeccion className={`mb-0`}>Revive la clase</TituloSeccion>
+          <TituloSeccion className={`mt-0`}>Regístrate o inicia ingresa para acceder a la grabación</TituloSeccion>
           <div className=" bg-gray-100 px-8 py-2 max-w-sm w-full rounded-2xl ">
             <RegisterForm />
             <Button
