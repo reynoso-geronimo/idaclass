@@ -232,7 +232,7 @@ export const getEventosFromDB = async (limit, not) => {
   const query = {
     limit: limit,
     include: [{ model: Profesional, as: "profesionals" }],
-    order: [["fecha", "ASC"]], // Ordenar por fecha ascendente
+    order: [["fecha", "DESC"]], // Ordenar por fecha ascendente
   };
 
   if (not) {

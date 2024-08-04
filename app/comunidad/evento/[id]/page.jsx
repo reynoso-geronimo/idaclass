@@ -16,28 +16,37 @@ const page = async ({ params }) => {
 
   const contenido = process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
 
-  return evento.video_link ? (
-  <>
-    <EventoHeader evento={evento} />
-   <RegisterToView videoid={evento?.video_link} />
-  </>
-  ) : (
+  return (
     <main className="">
       <EventoHeader evento={evento} />
       {/*  <UniteComunidad /> */}
-      <div className="container flex justify-center mt-12 lg:hidden">
-        <Button className="bg-emerald-500 rounded-2xl font-bold text-xl  text-balance  py-6 ">
-          <Link href={"#wa"}>Quiero inscribirme</Link>
-        </Button>
+      <div className="container flex justify-center mt-12 ">
+        {evento?.video_link ? (
+          <Button className="bg-emerald-500 rounded-2xl font-bold text-xl  text-balance  py-6 ">
+            <Link href={"#video"}>Revive la clase</Link>
+          </Button>
+        ) : (
+          <Button className="bg-emerald-500 rounded-2xl font-bold text-xl  text-balance  py-6 lg:hidden">
+            <Link href={"#wa"}>Quiero inscribirme</Link>
+          </Button>
+        )}
       </div>
       <div className="container my-12 flex flex-col lg:flex-row gap-x-20 gap-y-4">
         <div>
           <BlockRendererClient content={contenido} />
         </div>
-        <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.walink || ""} />
+        {!evento?.video_link && (
+          <GrupoWhatsApp className={"lg:h-[30rem] w-96"} sideBar={true} linkGrupo={evento?.walink || ""} />
+        )}
       </div>
+      {evento?.video_link && (
+        <div id="video">
+          <RegisterToView videoid={evento?.video_link} />
+        </div>
+      )}
+
       {/*       <EventoBeneficios /> */}
-      <Bonos />
+      {!evento?.video_link && <Bonos />}
       {evento.speakers?.length > 0 && <Oradores oradores={evento.speakers} />}
     </main>
   );

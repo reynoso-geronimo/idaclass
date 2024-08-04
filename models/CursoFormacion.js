@@ -30,6 +30,9 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     precio: {
         type: DataTypes.INTEGER,
     },
+    precio_usd: {
+        type: DataTypes.INTEGER,
+    },
     precio_bo: {
         type: DataTypes.INTEGER,
     },

@@ -1,23 +1,28 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { calcularPreciosCurso } from "@/lib/utils";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import getCountryCodeFromIP, { calcularPreciosCurso } from "@/lib/utils";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
-  const { precio, precio_presencial, descuento, cuotas } = curso;
+  const { precio, precio_presencial, precio_usd, descuento, cuotas } = curso;
+  const [countryCode, setCountryCode] = useState(null);
+  useEffect(() => {
+    async function fetchCountryCode() {
+      const code = await getCountryCodeFromIP();
+      setCountryCode(code.country);
+    }
+    fetchCountryCode();
+  }, []);
+
+  const displayPrice = countryCode === "AR" ? precio : precio_usd;
+  
   const { precioBeca, cuotaPrecio } =
     modalidad === "ONLINE"
-      ? calcularPreciosCurso(precio, descuento, cuotas)
+      ? calcularPreciosCurso(displayPrice, descuento, cuotas)
       : calcularPreciosCurso(precio_presencial, descuento, cuotas);
   const checkoutParams = {
     modalidad,
@@ -36,15 +41,11 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
       <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
-            <p className="bg-idaclass text-white py-2 text-center w-full text-lg">
-              Incluye BecaClass
-            </p>
+            <p className="bg-idaclass text-white py-2 text-center w-full text-lg">Incluye BecaClass</p>
             {modalidad === "ONLINE" ? (
               <p className="text-center font-black py-5">Modalidad Online</p>
             ) : (
-              <p className="text-center font-black py-5">
-                Modalidad Presencial
-              </p>
+              <p className="text-center font-black py-5">Modalidad Presencial</p>
             )}
           </CardTitle>
           <CardDescription className="font-bold text-white text-lg"></CardDescription>
@@ -80,7 +81,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             <span className="line-through decoration-2">
               {" "}
               ${" "}
-              {precio?.toLocaleString("es-AR", {
+              {displayPrice?.toLocaleString("es-AR", {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
               })}
@@ -93,9 +94,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
               maximumFractionDigits: 0,
             })}
           </p>
-          <p className="font-bold pt-6 pb-2 text-center">
-            Desde {cuotas} Cuotas de
-          </p>
+          <p className="font-bold pt-6 pb-2 text-center">Desde {cuotas} Cuotas de</p>
           <p className=" text-3xl font-extrabold mb-0 text-center">
             ${" "}
             {cuotaPrecio?.toLocaleString("es-AR", {
@@ -105,15 +104,9 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button
-            size="lg"
-            className={`w-full rounded-2xl ${
-              modalidad !== "ONLINE" && "xl:w-1/2"
-            }`}
-            asChild
-          >
-             <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link> 
-           {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
+          <Button size="lg" className={`w-full rounded-2xl ${modalidad !== "ONLINE" && "xl:w-1/2"}`} asChild>
+            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
+            {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
           </Button>
           {modalidad !== "ONLINE" && (
             <Button
@@ -123,9 +116,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
               type="submit"
               asChild
             >
-              <Link
-                href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}
-              >
+              <Link href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}>
                 CONSULTAR SEDES
               </Link>
             </Button>

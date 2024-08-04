@@ -20,7 +20,7 @@ import CursoHeader from "@/components/cursos/CursosHeader";
 
 const CursoPage = async ({ params }) => {
   const pais = await getCountryCodeFromIP();
-  //console.log(pais.country);
+  console.log(pais.country);
   const nombreParseado = decodeURI(params.nombre);
   const curso = await getCursoFormacionFromDB(nombreParseado);
   if (!curso) {
