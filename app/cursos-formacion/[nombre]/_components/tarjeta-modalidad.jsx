@@ -19,7 +19,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
   }, []);
 
   const displayPrice = countryCode === "AR" ? precio : precio_usd;
-  
+
   const { precioBeca, cuotaPrecio } =
     modalidad === "ONLINE"
       ? calcularPreciosCurso(displayPrice, descuento, cuotas)
@@ -81,10 +81,15 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             <span className="line-through decoration-2">
               {" "}
               ${" "}
-              {displayPrice?.toLocaleString("es-AR", {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-              })}
+              {modalidad === "ONLINE"
+                ? displayPrice?.toLocaleString("es-AR", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })
+                : precio_presencial?.toLocaleString("es-AR", {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })}
             </span>
           </p>
           <p className="text-center text-idaclass font-semibold border-b-2 border-idaclass py-2">

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import getCountryCodeFromIP, { calcularPreciosCurso } from "@/lib/utils";
@@ -21,7 +21,7 @@ const CursoFormacionCard = ({ curso }) => {
 
   const displayPrice = countryCode === "AR" ? precio : precio_usd;
 
-  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(displayPrice, descuento, cuotas , true);
+  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(displayPrice, descuento, cuotas, countryCode!=="AR"?true:false);
 
   return (
     <article className="w-[290px] rounded-2xl mx-3 min-h-[550px] flex flex-col justify-end text-xs sm:text-sm relative text-[#C2C2C2] px-4 gap-4">
@@ -76,7 +76,8 @@ const CursoFormacionCard = ({ curso }) => {
         <div className="text-white">
           <p className="font-bold text-center">Desde {cuotas} Cuotas de</p>
           <p className=" text-2xl font-bold text-center">
-           {countryCode ==="AR"?"$":"$USD"} {cuotaPrecio?.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+            {countryCode === "AR" ? "$" : "$USD"}{" "}
+            {cuotaPrecio?.toLocaleString("es-AR", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
           </p>
         </div>
         <Separator />
