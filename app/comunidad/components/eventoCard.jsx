@@ -28,7 +28,7 @@ const EventoCard = ({ evento }) => {
           quality={100}
           className={`${imgError?"object-scale-down object-right":"object-cover"} -z-10 bg-black`}
         />
-        <h2 className="text-4xl font-black mt-4">{evento?.clasificacion}</h2>
+        <h2 className="text-4xl font-black mt-4 max-w-32">{evento?.clasificacion}</h2>
         <div className="max-w-[50%]">
           <Separator />
           <h2 className="font-bold text-lg py-2 w-full">{evento?.titulo}</h2>
