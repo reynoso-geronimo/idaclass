@@ -12,6 +12,7 @@ import Evento from "@/models/Evento";
 import checkoutNodeJssdk from "@paypal/checkout-server-sdk";
 import User from "@/models/User";
 import Speaker from "@/models/Speaker";
+import Contacto from "@/models/Contacto";
 
 export async function getCursos() {
   try {
@@ -50,11 +51,7 @@ export async function getCursosFromDB() {
     console.log(error);
   }
 }
-export async function getCursosPorCategoriaFromDB(
-  categoriaId,
-  cursoActual,
-  limit = 4
-) {
+export async function getCursosPorCategoriaFromDB(categoriaId, cursoActual, limit = 4) {
   try {
     const cursos = await Curso.findAll({
       where: { nombre: { [Op.not]: cursoActual } },
@@ -125,7 +122,6 @@ export async function getCursosFormacionFromDB() {
 }
 
 export async function getCursoFormacionFromDB(nombre) {
-
   try {
     const response = await CursosFormacion.findOne({
       where: { nombre: nombre },
@@ -281,7 +277,7 @@ export async function getEventoFromDB(id) {
         {
           model: Speaker,
           as: "speakers",
-        }
+        },
       ],
     });
     const data = response.toJSON();
@@ -291,14 +287,7 @@ export async function getEventoFromDB(id) {
   }
 }
 
-export async function inscripcion(
-  formData,
-  user,
-  tipo,
-  nombre,
-  modalidad,
-  monto
-) {
+export async function inscripcion(formData, user, tipo, nombre, modalidad, monto) {
   await User.update(
     {
       pais: formData.pais,
@@ -381,13 +370,29 @@ export async function getAllVentasFromDB() {
   }
 }
 
-
-export async function getAllUsers(){
+export async function getAllUsers() {
   try {
     const response = await User.findAll();
     const data = response.map(user => user.toJSON());
-    return data
+    return data;
   } catch (error) {
-    console.log(error);    
+    console.log(error);
+  }
+}
+
+export async function createContacto(formData) {
+  try {
+    await Contacto.create({
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      telefono: formData.telefono,
+      email: formData.email,
+      curso: formData.curso,
+    });
+
+    return "success";
+  } catch (error) {
+    console.error("Error creating contacto:", error);
+    throw error;
   }
 }
