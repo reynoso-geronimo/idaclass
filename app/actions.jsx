@@ -332,7 +332,7 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad, monto
       ],
 
       back_urls: {
-        success: `${process.env.MP_BACK_URL}/mi-perfil`,
+        success: `${process.env.MP_BACK_URL}/gracias-compra`,
         //failure: `${process.env.DOMAIN}/`,
         //pending: `${process.env.DOMAIN}/`,
       },

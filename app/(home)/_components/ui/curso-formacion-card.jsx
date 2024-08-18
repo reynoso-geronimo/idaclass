@@ -15,6 +15,7 @@ const CursoFormacionCard = ({ curso }) => {
     async function fetchCountryCode() {
       const code = await getCountryCodeFromIP();
       setCountryCode(code.country);
+      console.log(code.country);
     }
     fetchCountryCode();
   }, []);

@@ -100,7 +100,7 @@ const CheckoutPage = () => {
   const [paypalKey, setPaypalKey] = useState(0);
   useEffect(() => {
     setPaypalKey(prevKey => prevKey + 1);
-  }, [montoUSD]);
+  }, [montoUSD , countryCode]);
   useEffect(() => {
     if (status === "unauthenticated") {
       signIn();
@@ -116,7 +116,9 @@ const CheckoutPage = () => {
 
     async function fetchCountryCode() {
       const code = await getCountryCodeFromIP();
+      
       setCountryCode(code.country);
+      console.log(code.country);
     }
     fetchCountryCode();
 
@@ -145,7 +147,7 @@ const CheckoutPage = () => {
     setMontoUSD(form.getValues().pagoModalidad === "Pago total" ? parseInt(precioTotalUSD) : parseInt(precioCuotasUSD));
 
     console.log(`${form.getValues().pagoModalidad} ${monto}`);
-  }, [form.getValues().pagoModalidad]);
+  }, [form.getValues().pagoModalidad], countryCode);
 
   const onSubmit = formData => {
     inscripcion(formData, user, tipo, nombre, modalidad, monto);
