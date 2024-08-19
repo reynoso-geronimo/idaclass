@@ -2,7 +2,7 @@ import React from 'react'
 import { DataTable } from './data-table'
 import { getAllUsers } from '../actions';
 import { columns } from './columns';
-
+export const revalidate = 1
 
 const page =async () => {
   const users = await  getAllUsers()
