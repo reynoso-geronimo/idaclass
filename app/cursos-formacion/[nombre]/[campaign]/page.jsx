@@ -115,7 +115,7 @@ const CursoPage = async ({ params }) => {
       <CasosExito />
       <Separator className="my-6" />
       <CursoFormacionOtrosCursos cursos={cursos} />
-      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
+      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-50 flex justify-around items-center gap-2">
         <p className="text-white max-sm:text-xs">
           + de 50.0000 certificados otorgados{" "}
         </p>
