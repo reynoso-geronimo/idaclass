@@ -1,9 +1,9 @@
-import { getAllVentasFromDB } from "@/app/actions";
+import { getAllContactosFromDB } from "@/app/actions";
 import { DataTable } from "../data-table";
 import { columns } from "./columns";
 export const revalidate = 1;
 const page = async () => {
-  const Contacto = await getAllVentasFromDB();
+  const Contacto = await getAllContactosFromDB();
   console.log(Contacto);
   return (
     <main className="container">
