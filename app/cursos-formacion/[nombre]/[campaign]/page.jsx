@@ -96,7 +96,13 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades modalidades={modalidades} curso={curso} nombre={nombre} tipo={"CURSO DE FORMACION"} campaign={true} />
+      <CursoFormacionModalidades
+        modalidades={modalidades}
+        curso={curso}
+        nombre={nombre}
+        tipo={"CURSO DE FORMACION"}
+        campaign={true}
+      />
       <Separator className="my-6" />
       {/*    <BecaAsesorate /> */}
       <Separator className="my-6" />
@@ -109,7 +115,17 @@ const CursoPage = async ({ params }) => {
       <CasosExito />
       <Separator className="my-6" />
       <CursoFormacionOtrosCursos cursos={cursos} />
-  
+      <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
+        <p className="text-white max-sm:text-xs">
+          + de 50.0000 certificados otorgados{" "}
+        </p>
+        <div className="flex gap-12 items-center">
+          <Link href="#inscripcion">
+            <Button>Inscribirme ahora</Button>
+          </Link>
+        
+        </div>
+      </div>
     </main>
   );
 };
