@@ -1,0 +1,15 @@
+import { getAllVentasFromDB } from "@/app/actions";
+import { DataTable } from "../data-table";
+import { columns } from "./columns";
+export const revalidate = 1;
+const page = async () => {
+  const Contacto = await getAllVentasFromDB();
+  console.log(Contacto);
+  return (
+    <main className="container">
+      <DataTable columns={columns} data={Contacto} />
+    </main>
+  );
+};
+
+export default page;

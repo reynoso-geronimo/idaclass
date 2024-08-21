@@ -396,3 +396,13 @@ export async function createContacto(formData) {
     throw error;
   }
 }
+export async function getAllContactosFromDB() {
+  try {
+    const response = await Contacto.findAll();
+    const data = response.map(contacto => contacto.toJSON());
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}

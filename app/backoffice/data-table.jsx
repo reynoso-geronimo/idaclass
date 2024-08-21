@@ -55,6 +55,7 @@ export function DataTable({
 
       <Button variant="link"><Link href="/backoffice">USUARIOS</Link> </Button>
       <Button variant="link"><Link href="/backoffice/sales">VENTAS</Link> </Button>
+      <Button variant="link"><Link href="/backoffice/sales">CAMPAÑA</Link> </Button>
 
      </div>
       <div className="rounded-md border">
