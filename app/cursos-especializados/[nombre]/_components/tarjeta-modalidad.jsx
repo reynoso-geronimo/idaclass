@@ -1,30 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { calcularPreciosCurso } from "@/lib/utils";
 
 import Link from "next/link";
 
-const TarjetaModalidad = ({
-  modalidad = "ONLINE",
-  nombre,
-  tipo = "CURSO DE ESPECIALIZACION",
-  curso,
-}) => {
+const TarjetaModalidad = ({ modalidad = "ONLINE", nombre, tipo = "CURSO DE ESPECIALIZACION", curso }) => {
   const { precio, descuento, cuotas } = curso;
-  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(
-    precio,
-    descuento,
-    cuotas
-  );
+  const { precioBeca, cuotaPrecio } = calcularPreciosCurso(precio, descuento, cuotas);
 
   const checkoutParams = {
     modalidad,
@@ -43,18 +27,13 @@ const TarjetaModalidad = ({
       <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
-            <p className="bg-idaclass text-white py-2 text-center w-full text-lg">
+            <p id="inscripcion" className="bg-idaclass text-white py-2 text-center w-full text-lg">
               Incluye BecaClass
             </p>
             {modalidad === "ONLINE" ? (
-              <p className="text-center font-black py-5">
-                {" "}
-                Modalidad On Demand
-              </p>
+              <p className="text-center font-black py-5">Modalidad On Demand</p>
             ) : (
-              <p className="text-center font-black py-5">
-                Modalidad Presencial
-              </p>
+              <p className="text-center font-black py-5">Modalidad Presencial</p>
             )}
           </CardTitle>
           <CardDescription className="font-bold text-white text-lg"></CardDescription>
@@ -67,9 +46,7 @@ const TarjetaModalidad = ({
               <li>Contenido teórico interactivo</li>
               <li>Autoevaluaciones</li>
               <li>Acceso a webinars con expertos</li>
-              <li>
-                Certificado con número único de matrícula con autenticación QR
-              </li>
+              <li>Certificado con número único de matrícula con autenticación QR</li>
               <li>Acceso exclusivo a comunidad</li>
             </ul>
           ) : (
@@ -100,8 +77,8 @@ const TarjetaModalidad = ({
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
           <Button size="lg" className={`w-full rounded-2xl`} asChild>
-             <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link> 
-          {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
+            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
+            {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
           </Button>
         </CardFooter>
       </Card>

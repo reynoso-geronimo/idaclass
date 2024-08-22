@@ -41,7 +41,9 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
       <Card className="border-none w-full max-w-sm flex flex-col justify-between overflow-hidden rounded-3xl">
         <CardHeader className="py-0 px-0">
           <CardTitle className="font-bold ">
-            <p className="bg-idaclass text-white py-2 text-center w-full text-lg">Incluye BecaClass</p>
+            <p id="inscripcion" className="bg-idaclass text-white py-2 text-center w-full text-lg">
+              Incluye BecaClass
+            </p>
             {modalidad === "ONLINE" ? (
               <p className="text-center font-black py-5">Modalidad Online</p>
             ) : (

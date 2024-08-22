@@ -5,10 +5,7 @@ import Image from "next/image";
 
 const CursosEspciealizacionModalidades = ({ nombre, tipo, curso }) => {
   return (
-    <section
-      id="inscripcion"
-      className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] w-full"
-    >
+    <section className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] w-full">
       <Image
         src={"/cursosFormacion/modalidadesbg2.png"}
         fill
@@ -25,12 +22,7 @@ const CursosEspciealizacionModalidades = ({ nombre, tipo, curso }) => {
       </TituloSeccion>
 
       <div className="flex w-full items-stretch justify-center flex-col lg:flex-row lg:gap-4">
-        <TarjetaModalidad
-          modalidad={"ONLINE"}
-          nombre={nombre}
-          tipo={tipo}
-          curso={curso}
-        />
+        <TarjetaModalidad modalidad={"ONLINE"} nombre={nombre} tipo={tipo} curso={curso} />
 
         <AsesorateModalidad className="lg:mt-28 mb-12 lg:w-[440px]" />
       </div>

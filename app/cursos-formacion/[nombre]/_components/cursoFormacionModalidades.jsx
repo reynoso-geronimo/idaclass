@@ -6,7 +6,7 @@ import CampaignForm from "./campaignForm";
 
 const CursoFormacionModalidades = ({ modalidades, nombre, tipo, curso, campaign }) => {
   return (
-    <section id="inscripcion" className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] ">
+    <section className="container relative max-lg:bg-gradient-to-b from-[#12182D] to-[#1C2C53] ">
       <Image
         src={"/cursosFormacion/modalidadesbg2.png"}
         fill
@@ -32,7 +32,7 @@ const CursoFormacionModalidades = ({ modalidades, nombre, tipo, curso, campaign 
         {modalidades.includes("Presencial") && (
           <TarjetaModalidad modalidad={"PRESENCIAL"} nombre={nombre} tipo={tipo} curso={curso} />
         )}
-        {campaign ? <CampaignForm nombre={nombre}/> : <AsesorateModalidad className="lg:mt-28 mb-12 lg:w-[440px]" />}
+        {campaign ? <CampaignForm nombre={nombre} /> : <AsesorateModalidad className="lg:mt-28 mb-12 lg:w-[440px]" />}
       </div>
     </section>
   );
