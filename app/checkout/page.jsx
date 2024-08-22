@@ -125,7 +125,7 @@ const CheckoutPage = () => {
     const fetchCurso = async cb => {
       const getCurso = await cb(nombre);
       setCurso(getCurso);
-      const precioARG = calcularPreciosCurso(getCurso.precio, getCurso.descuento, getCurso.cuotas);
+      const precioARG = calcularPreciosCurso(modalidad==="ONLINE"?getCurso.precio:getCurso.precio_presencial, getCurso.descuento, getCurso.cuotas);
       const precioUSD = calcularPreciosCurso(getCurso.precio_usd, getCurso.descuento, getCurso.cuotas, true);
       console.log(getCurso);
       setPrecioTotal(precioARG.precioBeca);
