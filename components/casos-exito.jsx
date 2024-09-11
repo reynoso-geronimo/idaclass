@@ -1,11 +1,7 @@
 import React from "react";
 import CasoExito from "./ui/caso-exito";
 import TituloSeccion from "@/components/ui/titulo-seccion";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const casos = [
@@ -37,7 +33,8 @@ const casos = [
     pais: "ar",
   },
   {
-    experiencia: "“Egresé con varios cursos con certificación y recomiendo este prestigioso instituto para todos aquellos que quieran adquirir conocimientos sobre preparación física y salud. El acompañamiento de los docentes y directivos es permanente y la experiencia como alumno, EXCELENTE.”",
+    experiencia:
+      "“Egresé con varios cursos con certificación y recomiendo este prestigioso instituto para todos aquellos que quieran adquirir conocimientos sobre preparación física y salud. El acompañamiento de los docentes y directivos es permanente y la experiencia como alumno, EXCELENTE.”",
     avatar: "",
     nombre: "Osvaldo Contreras",
     carrera: "",
@@ -46,14 +43,16 @@ const casos = [
   },
 ];
 
-const CasosExito = ({
-  titulo = "Lo que dicen nuestros estudiantes",
-  className = "bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]",
-}) => {
+const CasosExito = ({ titulo = "Lo que dicen nuestros estudiantes", className, variant = "default" }) => {
   return (
-    <section className={cn(`container pb-12`, className)}>
-      <TituloSeccion className={"mb-0 text-white"}>{titulo}</TituloSeccion>
-      <h3 className="text-center text-pretty text-lg lg:text-2xl mt-2 mb-6">
+    <section className={cn(`container pb-12`, variant === "default" && "bg-gradient-to-b from-[#0088CA] to-[#1FB3E5]")}>
+      <TituloSeccion className={cn("mb-0", variant === "default" ? "text-white":"text-idaclass5")}>{titulo}</TituloSeccion>
+      <h3
+        className={cn(
+          variant === "secondary" && "text-idaclass font-bold",
+          "text-center text-pretty text-lg lg:text-2xl mt-2 mb-6"
+        )}
+      >
         ¡Vos también podés ser un caso de éxito gracias a IdaClass!
       </h3>
 
