@@ -15,18 +15,22 @@ import CasosExito from "@/components/casos-exito";
 import CursosContenido from "../components/CursosContenido";
 import { getCursoFormacionFromDB } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
+import Header from "../components/Header";
+import Link from "next/link";
 
 const page = async () => {
   const curso = await getCursoFormacionFromDB("Personal Trainer");
   return (
     <main className="flex flex-col justify-start grow">
-      <div className="bg-[#3A5DAE] text-white font-bold py-4 mt-0 flex flex-col sm:flex-row justify-center items-center gap-4 sticky top-0 z-50">
+      <div className="bg-[#3A5DAE] text-white font-bold py-4 mt-0 flex flex-col sm:flex-row justify-center items-center sticky top-0 z-50">
         <div className="flex items-center justify-center max-sm:max-w-80">
-          <p className="text-3xl">🔥</p>
-          <p>Inscribite hoy y accede al 40% descuento con nuestra BecaClass</p>
+          <Header />
         </div>
-        <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit">
-          COMIENZA HOY
+        <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
+          <Link href="#form">COMIENZA HOY</Link>
+        </Button>
+          <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
+          <Link href="#form-lg">COMIENZA HOY</Link>
         </Button>
       </div>
       <section className="w-full relative text-white lg:hidden">
@@ -52,7 +56,10 @@ const page = async () => {
             Conviértete en <br />
             Personal Trainer
           </h1>
-          <h2 className="text-xl font-bold text-idaclass relative">Transforma tu pasión en una carrera de éxito<Image src={Flecha} alt="" className="absolute -right-8 bottom-0 rotate-12" height={54} width={165}/></h2>
+          <h2 className="text-xl font-bold text-idaclass relative">
+            Transforma tu pasión en una carrera de éxito
+            <Image src={Flecha} alt="" className="absolute -right-8 bottom-0 rotate-12" height={54} width={165} />
+          </h2>
           <ul className="space-y-8 my-12">
             <li className="flex items-center gap-2">
               <Check className="bg-idaclass rounded-full text-white p-0.5" />
@@ -72,7 +79,9 @@ const page = async () => {
             </li>
           </ul>
         </div>
-        <CampaignForm />
+        <div id="form-lg"/>
+       <CampaignForm  nombre={"Personal Trainer"}/>
+       
       </section>
 
       <ul className="px-4 space-y-8 my-12 lg:hidden">
@@ -93,8 +102,8 @@ const page = async () => {
           Conviértete en tu propio jefe
         </li>
       </ul>
-      <div className="lg:hidden">
-        <CampaignForm />
+      <div className="lg:hidden" id="form">
+        <CampaignForm  nombre={"Personal Trainer"}/>
       </div>
       <section className="container p-4 space-y-4">
         <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
@@ -117,7 +126,7 @@ const page = async () => {
           <span className="font-bold">
             respaldado por 25 años de trayectoria y con más de 50.000 certificados en Latinoamérica.
           </span>{" "}
-          Acede a la Certificación de extensión universitaria.
+          Accede a la Certificación de extensión universitaria.
         </p>
       </section>
 
@@ -135,7 +144,7 @@ const page = async () => {
               <span className="font-bold">
                 respaldado por 25 años de trayectoria y con más de 50.000 certificados en Latinoamérica.
               </span>{" "}
-              Acede a la Certificación de extensión universitaria.
+              Accede a la Certificación de extensión universitaria.
             </p>
           </div>
           <div className="relative">
@@ -169,7 +178,7 @@ const page = async () => {
               <AccordionContent className=" lg:max-w-80 ">
                 <p className="text-center text-pretty">
                   Lo que te permite aclarar tus dudas al instante. Con nuestra plataforma podrás acceder al material de
-                  estudio de forma sencilla, trabajaras en equipo y desarrollar proyectos propios con el apoyo de tus
+                  estudio de forma sencilla, trabajarás en equipo y desarrollarás proyectos propios, con el apoyo de tus
                   compañeros y tutores.
                 </p>
               </AccordionContent>
@@ -213,8 +222,11 @@ const page = async () => {
             </AccordionItem>
           </Accordion>
 
-          <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit">
-            INSCRIBIRME AHORA
+          <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
+            <Link href="#form"> INSCRIBIRME AHORA </Link>
+          </Button>
+          <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
+            <Link href="#form-lg"> INSCRIBIRME AHORA </Link>
           </Button>
         </div>
       </section>
@@ -267,7 +279,7 @@ const page = async () => {
             equipo se podrá en contacto contigo a la brevedad.
           </p>
         </div>
-        <div className="lg:w-1/3"> 
+        <div className="lg:w-1/3">
           <CampaignForm short={true} />
         </div>
       </section>
