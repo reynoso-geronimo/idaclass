@@ -177,7 +177,7 @@ const CampaignForm = ({ nombre, short = false }) => {
               )}
             />
           ))}
-          <Button type="submit" className="w-full rounded-full bg-green-500 bg-green-500/50">
+          <Button type="submit" className="w-full rounded-full bg-green-500 hover:bg-green-400">
             {short ? "QUIERO QUE ME ASESOREN" : "QUIERO INSCRIBIRME"}
           </Button>
         </form>
