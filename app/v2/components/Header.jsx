@@ -9,7 +9,7 @@ const Header = () => {
     const handleScroll = () => {
       if (window.scrollY >= 100) {
         setIsScrolled(true);
-      } else {
+      } else if (window.scrollY <= 0) {
         setIsScrolled(false);
       }
     };

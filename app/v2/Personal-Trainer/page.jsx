@@ -27,10 +27,10 @@ const page = async () => {
           <Header />
         </div>
         <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
-          <Link href="#form">COMIENZA HOY</Link>
+          <Link href="#form">QUIERO INSCRIBIRME</Link>
         </Button>
-          <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
-          <Link href="#form-lg">COMIENZA HOY</Link>
+        <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
+          <Link href="#form-lg">QUIERO INSCRIBIRME</Link>
         </Button>
       </div>
       <section className="w-full relative text-white lg:hidden">
@@ -44,10 +44,13 @@ const page = async () => {
           <h2 className="text-sm">Transforma tu pasión en una carrera de éxito</h2>
         </div>
       </section>
-      <section className="w-full flex justify-between gap-24 relative max-lg:hidden container mt-12">
-        <div className="h-[480px] w-[400px] relative object-cover rounded-3xl overflow-hidden border-idaclass4 border-2">
-          <Image src={PersonalTrainer} alt="Personal Trainer" fill className="object-cover" />
-        </div>
+      <section className="w-full flex justify-between gap-4 relative max-lg:hidden container mt-12">
+        <Image
+          src={PersonalTrainer}
+          alt="Personal Trainer"
+          className="object-cover object-top w-[380px] h-[500px] rounded-3xl"
+        />
+
         <div className="space-y-2">
           <Badge variant={"outline"} className={"border-orange-500 border-2 text-orange-500 py-1.5"}>
             CURSO ONLINE
@@ -58,7 +61,7 @@ const page = async () => {
           </h1>
           <h2 className="text-xl font-bold text-idaclass relative">
             Transforma tu pasión en una carrera de éxito
-            <Image src={Flecha} alt="" className="absolute -right-8 bottom-0 rotate-12" height={54} width={165} />
+            <Image src={Flecha} alt="" className="absolute -right-8 -bottom-8 rotate-12" height={54} width={165} />
           </h2>
           <ul className="space-y-8 my-12">
             <li className="flex items-center gap-2">
@@ -79,9 +82,10 @@ const page = async () => {
             </li>
           </ul>
         </div>
-        <div id="form-lg"/>
-       <CampaignForm  nombre={"Personal Trainer"}/>
-       
+        <div id="form-lg" />
+        <div className="w-[300px]">
+          <CampaignForm nombre={"Personal Trainer"} />
+        </div>
       </section>
 
       <ul className="px-4 space-y-8 my-12 lg:hidden">
@@ -103,7 +107,7 @@ const page = async () => {
         </li>
       </ul>
       <div className="lg:hidden" id="form">
-        <CampaignForm  nombre={"Personal Trainer"}/>
+        <CampaignForm nombre={"Personal Trainer"} />
       </div>
       <section className="container p-4 space-y-4">
         <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
@@ -223,10 +227,10 @@ const page = async () => {
           </Accordion>
 
           <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
-            <Link href="#form"> INSCRIBIRME AHORA </Link>
+            <Link href="#form"> QUIERO INSCRIBIRME </Link>
           </Button>
           <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
-            <Link href="#form-lg"> INSCRIBIRME AHORA </Link>
+            <Link href="#form-lg"> QUIERO INSCRIBIRME </Link>
           </Button>
         </div>
       </section>
