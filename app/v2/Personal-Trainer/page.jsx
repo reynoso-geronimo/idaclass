@@ -283,7 +283,7 @@ const page = async () => {
             equipo se podrá en contacto contigo a la brevedad.
           </p>
         </div>
-        <div className="lg:w-1/3">
+        <div className="lg:w-1/4">
           <CampaignForm short={true} />
         </div>
       </section>
