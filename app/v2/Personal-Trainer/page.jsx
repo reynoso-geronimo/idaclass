@@ -248,7 +248,7 @@ const page = async () => {
       </section>
 
       <section className="p-4 space-y-6 bg-gray-200 max-lg:hidden">
-        <div className="max-w-3xl mx-auto flex flex-col ">
+        <div className="max-w-4xl mx-auto flex flex-col ">
           <h2 className={"text-idaclass5 text-3xl font-black  "}>
             🎁 Recibe tu
             <span className={"text-idaclass text-3xl font-black  "}> Beneficio Exclusivo</span>
@@ -272,7 +272,7 @@ const page = async () => {
         <Image src={Contenidos} alt="skillclass" className="w-1/3 object-contain" />
       </section>
       <section className="px-4 space-y-2 lg:flex justify-center items-center lg:bg-gray-200 mt-12">
-        <div className="lg:w-1/2 lg:space-y-12">
+        <div className="lg:w-1/2 max-w-3xl lg:space-y-12">
           <h2 className={"text-idaclass5 text-3xl lg:text-5xl font-black text-center px-4 text-pretty lg:text-left"}>
             ¡No estás solo!
             <br />
