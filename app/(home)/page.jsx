@@ -38,12 +38,12 @@ export default function Home() {
   return (
     <main className="overflow-hidden flex flex-col">
       <Hero />
-      <EmpresasPartners />
+      <PartnersEducativos />
       <Intro />
       <Ventajas />
+      <CursosFormacion />
       {/* <Banderas/> */}
       <Soluciones />
-      <CursosFormacion />
       <DynamicCursosEspecializacion />
       <Certificacion />
 
@@ -57,7 +57,7 @@ export default function Home() {
       <CasosExito />
 
       <BecaAsesorate />
-      <PartnersEducativos />
+      <EmpresasPartners />
 
       <Faq preguntas={preguntas}/>
     </main>

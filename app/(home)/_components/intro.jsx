@@ -1,11 +1,7 @@
 "use client";
 import { ArrowUp } from "lucide-react";
 import React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import linea from "../../../public/assets/Linea img 3.png";
@@ -21,25 +17,17 @@ const Intro = () => {
     <section className="container lg:px-0 bg-black text-white py-8 gap-12 flex flex-col lg:flex-row items-center justify-end relative overflow-hidden">
       <div className="w-full lg:w-auto text-center lg:text-left">
         <h2 className="font-semibold text-3xl lg:max-w-md text-balance">
-          Convierte tu pasión en tu profesión y logra expandirte
-          internacionalmente
+          IdaClass el mejor lugar para tu formación profesional
           <p className="whitespace-nowrap inline">
-            <ArrowUp
-              className="text-idaclass4 scale-y-125 inline"
-              strokeWidth={4}
-            />
+            <ArrowUp className="text-idaclass4 scale-y-125 inline" strokeWidth={4} />
           </p>
         </h2>
         <p className="text-sm py-2 lg:max-w-sm">
-          Con nuestros cursos podrás abrir camino a tus sueños laborales. Gana
-          dinero haciendo lo que amas, en cualquier parte del mundo.
+          Únete a la comunidad educativa más grande de Latinoamérica y accede docentes altamente calificados, una
+          plataforma digital innovadora y una Red de gimnasios para una experiencia práctica real.
         </p>
         <div className="-translate-x-[27px] lg:absolute bottom-10 left-7 w-full">
-          <Image
-            src={linea}
-            alt="linea"
-            className="absolute -translate-x-[8%] -translate-y-[55%] scale-[150%] "
-          />
+          <Image src={linea} alt="linea" className="absolute -translate-x-[8%] -translate-y-[55%] scale-[150%] " />
         </div>
       </div>
       <div className="w-full lg:w-1/2">

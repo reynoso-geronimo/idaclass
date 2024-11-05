@@ -1,6 +1,5 @@
-import sequelize from "../lib/sequelize";
 import { DataTypes } from "sequelize";
-
+import sequelize from "../lib/sequelize.js";
 
 const Venta = sequelize.define('ventas', {
     id: {
@@ -39,5 +38,4 @@ const Venta = sequelize.define('ventas', {
 
 // Asociaciones (si es necesario)
 
-
-module.exports = Venta
+export default Venta

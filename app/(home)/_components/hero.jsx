@@ -8,31 +8,27 @@ const Hero = () => {
     <div className=" py-8 lg:py-12">
       <div className="lg:hidden container px-0">
         <h2 className="relative max-w-sm mx-auto px-2 pb-2 text-center text-4xl font-bold tracking-tighter">
-          <span className="text-white px-3 h-[45px] xl:h-[65px] overflow-hidden text-center w-fit mx-auto flex flex-col -top-[2px] bg-idaclass4 rounded-3xl">
+          <span className="text-white px-3 h-[45px] xl:h-[65px] overflow-hidden text-center w-fit mx-auto flex flex-col -top-[2px] bg-idaclass4 rounded-3xl tracking-tighter">
             <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-              Estudia
+              Lanza tu carrera
+            </span>
+            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem] whitespace-nowrap">
+              Genera más ingresos
             </span>
             <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-              Trabaja
+              Asegura tu futuro
             </span>
             <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-              Emprende
-            </span>
-            <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-              Estudia
+              Lanza tu carrera
             </span>
           </span>
-          <span className=" ">en el mundo del Sport Fitness.</span>
+          <span className=" ">Sé el entrenador que todos quieren tener</span>
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
-          Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
+          Únete a la nueva generación del fitness y obtén la habilidades para triunfar en el mundo laboral
         </h3>
         <div className="flex justify-center w-full">
-          <Button
-            size="lg"
-            className="rounded-2xl m-4 font-bold w-48 h-10"
-            asChild
-          >
+          <Button size="lg" className="rounded-2xl m-4 font-bold w-48 h-10" asChild>
             <Link href="#Cursos">Ver todos los cursos</Link>
           </Button>
         </div>
@@ -55,30 +51,31 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:flex  mb-4 gap-4 container px-0 overflow-hidden">
-        <div className="w-2/5 flex flex-col justify-around items-start mx-16 pt-16 ">
-          <h2 className="relative w-full text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 tracking-tighter">
-            <span className="text-white px-4 h-[55px] xl:h-[68px] text-center w-fit flex flex-col overflow-hidden absolute -top-[2px] bg-idaclass4 rounded-3xl">
+        <div className="w-1/2 flex flex-col justify-around items-start mx-16 pt-16 ">
+          <h2 className="relative w-full text-5xl font-extrabold mb-4 tracking-tighter">
+            <span className="text-white px-4 h-[55px] text-center w-fit flex flex-col overflow-hidden absolute -top-[2px] bg-idaclass4 rounded-3xl -translate-y-1">
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-                Estudia
+                Lanza tu carrera
               </span>
 
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-                Trabaja
+                Genera más ingresos
               </span>
 
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-                Emprende
+                Asegura tu futuro
               </span>
               <span className="inline-block animate-text-animation py-[0.15rem] h-[2.81rem] mb-[2.81rem]">
-                Estudia
+                Lanza tu carrera
               </span>
             </span>
             <span className="ml-[270px] xl:ml-[320px]">
-              en <br /> el mundo del <br /> Sport Fitness.
+              <br /> Sé el entrenador que <br />
+              todos quieren tener
             </span>
           </h2>
           <h2 className="text-xl xl:text-2xl max-w-[768px] mb-4 text-balance">
-            Transforma tu vida y alcanza el éxito como entrenador, con IdaClass.
+            Únete a la nueva generación del fitness y obtén la habilidades para triunfar en el mundo laboral
           </h2>
           <Button size="lg" className="rounded-2xl font-bold w-64 h-10" asChild>
             <Link href="#Cursos">Ver todos los cursos</Link>
@@ -89,7 +86,7 @@ const Hero = () => {
         </div>
 
         {/* <EmblaCarousel slides={images} options={OPTIONS} /> */}
-        <div className="w-3/5 z-10 aspect-video relative">
+        <div className="w-1/2 z-10 aspect-video relative">
           <Image
             src={`/home/HeaderWeb.png`}
             alt="Bienvenido"

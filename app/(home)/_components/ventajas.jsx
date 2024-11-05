@@ -52,8 +52,8 @@ const Ventajas = () => {
               className="object-contain lg:mt-12"
             />
           </div>
-          <div className="w-full lg:w-1/2 relative overflow-hidden">
-            <div className="absolute right-6 lg:right-[35%] bottom-8 rotate-[90deg]">
+          <div className="w-full lg:w-1/2 min-h-44 relative overflow-hidden">
+            <div className="absolute right-6 lg:right-[35%] bottom-8 lg:bottom-6 rotate-[90deg]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.769"
@@ -65,18 +65,16 @@ const Ventajas = () => {
             </div>
 
             <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold  text-idaclass tracking-tight pb-2">
-              La experiencia educativa más innovadora
+              Impulsamos tu Carrera en Tiempo Récord
             </h3>
             <p className="text-pretty lg:text-lg text-center lg:text-left">
-              Aprende de forma online con clases en vivo con nuestra plataforma
-              multimodal e interactiva.
+              Nuestros cursos cortos se enfocan en experiencias prácticas y clases en vivo. Trabaja en gimnasios,
+              estudios de fitness, o como entrenador independiente en solo unos meses.
             </p>
-            <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
-              A traves del método Learning by Doing aplicaras lo aprendido desde
-              el primer día con prácticas reales, garantizando una formación
-              rápida, efectiva y entretenida
-            </p>
-            <ul className="font-bold grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 gap-y-4 text-sm sm:text-base ">
+            {/* <p className="text-pretty lg:text-lg text-center lg:text-left mb-4">
+              Trabaja en gimnasios, estudios de fitness, o como entrenador independiente en solo unos meses.
+            </p> */}
+            {/*  <ul className="font-bold grid grid-cols-2 justify-items-center lg:justify-items-start gap-x-0 gap-y-4 text-sm sm:text-base ">
               <li className="w-full  flex items-center break-words hyphens-auto">
                 <Dot fill="black " className="shrink-0" />
                 Trabajos en equipo
@@ -93,14 +91,10 @@ const Ventajas = () => {
                 <Dot fill="black " className="shrink-0" />
                 Staff de expertos Internacionales
               </li>
-            </ul>
+            </ul> */}
           </div>
 
-          <Image
-            src={linea}
-            alt="linea"
-            className="absolute -right-44 lg:-right-10 -bottom-12 scale-150"
-          />
+          <Image src={linea} alt="linea" className="absolute -right-44 lg:-right-10 -bottom-12 lg:bottom-0 scale-150" />
         </article>
 
         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
@@ -112,15 +106,14 @@ const Ventajas = () => {
           }`}
         >
           <div className="w-full lg:w-7/8 text-center">
-            <h3 className="text-2xl lg:text-3xl lg:text-right font-extrabold text-idaclass tracking-tight lg:mt-4 px-2">
-              Aprenderás más que fitness
+            <h3 className="text-2xl lg:text-3xl lg:text-right font-extrabold text-idaclass tracking-tight px-2">
+              Conéctate con oportunidades
             </h3>
             <div className="w-full relative aspect-video">
-              <div className="max-lg:hidden absolute top-0 lg:top-6 right-0 w-[45%] h-[30%] text-black z-10">
-                <p className="text-lg text-left">
-                  Recibe una formación integral. Desarrolla todas las
-                  habilidades necesarias para lograr tus metas profesionales con
-                  éxito.
+              <div className="max-lg:hidden absolute top-0 lg:top-0 xl:top-4 right-0 w-[45%] h-[30%] text-black z-10">
+                <p className="text-lg text-left leading-tight">
+                  Nuestra formación integral te permitirá captar clientes, generar ingresos y construir una sólida
+                  reputación, mientras te destacas como profesional.
                 </p>
               </div>
               <Image
@@ -136,22 +129,24 @@ const Ventajas = () => {
             </div>
             <div className="lg:hidden my-4 container max-w-2xl">
               <p className="text-lg">
-                Nos aseguramos de brindarte una formación integral, para que
-                desarrolles todas las habilidades necesarias para lograr tus
-                metas profesionales con éxito.
+                Nos aseguramos de brindarte una formación integral, para que desarrolles todas las habilidades
+                necesarias para lograr tus metas profesionales con éxito.
               </p>
             </div>
           </div>
           <div className="pb-12 lg:w-4/5 relative overflow-hidden">
             <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight pb-2">
-              Programa educativo de prestigio
+              Elige la modalidad que más te conviene
             </h3>
             <p className="text-pretty lg:text-lg ">
-              Asegura tu éxito y destaca en la Industria Fitness. Respalda tu
-              carrera con nuestros 25 años de experiencia. Estudia en IdaClass y
-              obtén una Certificación de Extensión Universitaria con
-              reconocimiento y aval internacional, asegurando tu éxito
-              profesional.
+              <span className="font-semibold">Presencial en Gimnasios:</span> Aprende en vivo en los mejores gimnasios
+              de la red, con acceso directo a equipos, entrenamientos reales y el apoyo de nuestro staff de Trainers
+              Educativos.
+              <br />
+              <br />
+              <span className="font-semibold"> Online con Clases en Vivo:</span> Estudia desde cualquier lugar y
+              dispositivo, accediendo a nuestra plataforma multimodal e interactiva con videos, resúmenes y
+              autoevaluaciones.
             </p>
             {/* <ul className="flex flex-col py-2 text-sm sm:text-base">
               <li className="flex">
@@ -166,7 +161,7 @@ const Ventajas = () => {
                 Desarrolla tus proyectos
               </li>
             </ul> */}
-   {/*          <div className="flex gap-2 container justify-center pb-4">
+            {/*          <div className="flex gap-2 container justify-center pb-4">
               {partners.map((partner, index) => (
                 <Image
                   key={index}
@@ -178,11 +173,7 @@ const Ventajas = () => {
                 />
               ))}
             </div> */}
-            <Image
-              src={linea}
-              alt="linea"
-              className="lg:hidden absolute -right-44 -bottom-4 scale-150"
-            />
+            <Image src={linea} alt="linea" className="lg:hidden absolute -right-44 -bottom-4 scale-150" />
           </div>
         </article>
 
