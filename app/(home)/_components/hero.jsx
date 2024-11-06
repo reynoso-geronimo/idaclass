@@ -25,7 +25,7 @@ const Hero = () => {
           <span className=" ">Sé el entrenador que todos quieren tener</span>
         </h2>
         <h3 className="mx-auto max-w-lg px-2 text-pretty  text-center">
-          Únete a la nueva generación del fitness y obtén la habilidades para triunfar en el mundo laboral
+          Únete a la nueva generación del fitness y obtén las habilidades para triunfar en el mundo laboral
         </h3>
         <div className="flex justify-center w-full">
           <Button size="lg" className="rounded-2xl m-4 font-bold w-48 h-10" asChild>
@@ -75,7 +75,7 @@ const Hero = () => {
             </span>
           </h2>
           <h2 className="text-xl xl:text-2xl max-w-[768px] mb-4 text-balance">
-            Únete a la nueva generación del fitness y obtén la habilidades para triunfar en el mundo laboral
+            Únete a la nueva generación del fitness y obtén las habilidades para triunfar en el mundo laboral
           </h2>
           <Button size="lg" className="rounded-2xl font-bold w-64 h-10" asChild>
             <Link href="#Cursos">Ver todos los cursos</Link>
