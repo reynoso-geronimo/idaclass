@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,18 +12,13 @@ const Footer = () => {
   return (
     <footer className="bg-black w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center pt-8 pb-2 text-white text-center">
       <section className="flex flex-col items-center">
-        <Image
-          src={`/assets/idaclass.logo.webp`}
-          alt="logo"
-          width={200}
-          height={50}
-        />
+        <Image src={`/assets/idaclass.logo.webp`} alt="logo" width={200} height={50} />
         <p className="mt-6">Plataforma de cursos E-learning</p>
         <p>para la formación de profesionales.</p>
-        <a
-          href="mailto:hola@idaclassacademy.com"
-          className="text-xl font-bold mt-12"
-        >
+        <a href="tel:+5491150272529" className="text-xl font-bold mt-6">
+          +54 9 11 5027 2529
+        </a>
+        <a href="mailto:hola@idaclassacademy.com" className="text-xl font-bold mt-6">
           hola@idaclassacademy.com
         </a>
       </section>
@@ -51,9 +46,7 @@ const Footer = () => {
           <InstagramIcon />
           <YoutubeIcon />
         </div>
-        <p className="text-xs">
-          Idaclass Academy© Todos los derechos reservados
-        </p>
+        <p className="text-xs">Idaclass Academy© Todos los derechos reservados</p>
       </section>
     </footer>
   );
