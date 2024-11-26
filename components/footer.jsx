@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="mailto:hola@idaclassacademy.com" className="text-xl font-bold mt-6">
           hola@idaclassacademy.com
         </a>
-        <p>600 CLEVELAND STREET STE 393 OFFICE 54, Clearwater, FL, United States.</p>
+        <p className="text-sm mt-6">Avenida Santa Fe 530 , Bella Vista , Buenos Aires , Argentina</p>
       </section>
       <section className="flex flex-col gap-2">
         <h3 className="text-lg font-bold mt-12 mb-2">Enlaces</h3>
