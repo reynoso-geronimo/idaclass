@@ -36,7 +36,7 @@ const page = async () => {
       <section className="w-full relative text-white lg:hidden">
         <Image src={PersonalTrainer} alt="Personal Trainer" className="w-full h-auto object-cover" />
         <div className="absolute bottom-10 left-8 space-y-2">
-          <Badge className={"bg-orange-500 border border-white py-1.5"}>CURSO ONLINE</Badge>
+          <Badge className={"bg-orange-500 border border-white py-1.5"}>CURSO PRESENCIAL</Badge>
           <h1 className="text-4xl font-black">
             Conviértete en <br />
             Personal Trainer
