@@ -53,7 +53,7 @@ const page = async () => {
 
         <div className="space-y-2">
           <Badge variant={"outline"} className={"border-orange-500 border-2 text-orange-500 py-1.5"}>
-            CURSO ONLINE
+            CURSO PRESENCIAL
           </Badge>
           <h1 className="text-4xl font-black text-idaclass5">
             Conviértete en <br />
