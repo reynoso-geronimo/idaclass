@@ -100,7 +100,7 @@ const CheckoutPage = () => {
   const [paypalKey, setPaypalKey] = useState(0);
   useEffect(() => {
     setPaypalKey(prevKey => prevKey + 1);
-  }, [montoUSD , countryCode]);
+  }, [montoUSD, countryCode]);
   useEffect(() => {
     if (status === "unauthenticated") {
       signIn();
@@ -116,7 +116,7 @@ const CheckoutPage = () => {
 
     async function fetchCountryCode() {
       const code = await getCountryCodeFromIP();
-      
+
       setCountryCode(code.country);
       console.log(code.country);
     }
@@ -125,7 +125,12 @@ const CheckoutPage = () => {
     const fetchCurso = async cb => {
       const getCurso = await cb(nombre);
       setCurso(getCurso);
-      const precioARG = calcularPreciosCurso(modalidad==="ONLINE"?getCurso.precio:getCurso.precio_presencial, getCurso.descuento, getCurso.cuotas);
+      const precioARG = calcularPreciosCurso(
+        modalidad === "ONLINE" ? getCurso.precio : getCurso.precio_presencial,
+        modalidad === "ONLINE" ? getCurso.descuento : 25,
+        getCurso.cuotas,
+        true
+      );
       const precioUSD = calcularPreciosCurso(getCurso.precio_usd, getCurso.descuento, getCurso.cuotas, true);
       console.log(getCurso);
       setPrecioTotal(precioARG.precioBeca);
@@ -142,12 +147,18 @@ const CheckoutPage = () => {
     console.log(countryCode);
   }, [status]);
 
-  useEffect(() => {
-    setMonto(form.getValues().pagoModalidad === "Pago total" ? parseInt(precioTotal) : parseInt(precioCuotas));
-    setMontoUSD(form.getValues().pagoModalidad === "Pago total" ? parseInt(precioTotalUSD) : parseInt(precioCuotasUSD));
+  useEffect(
+    () => {
+      setMonto(form.getValues().pagoModalidad === "Pago total" ? parseInt(precioTotal) : parseInt(precioCuotas));
+      setMontoUSD(
+        form.getValues().pagoModalidad === "Pago total" ? parseInt(precioTotalUSD) : parseInt(precioCuotasUSD)
+      );
 
-    console.log(`${form.getValues().pagoModalidad} ${monto}`);
-  }, [form.getValues().pagoModalidad], countryCode);
+      console.log(`${form.getValues().pagoModalidad} ${monto}`);
+    },
+    [form.getValues().pagoModalidad],
+    countryCode
+  );
 
   const onSubmit = formData => {
     inscripcion(formData, user, tipo, nombre, modalidad, monto);

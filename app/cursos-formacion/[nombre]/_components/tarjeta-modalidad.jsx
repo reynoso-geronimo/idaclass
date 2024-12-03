@@ -23,7 +23,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
   const { precioBeca, cuotaPrecio } =
     modalidad === "ONLINE"
       ? calcularPreciosCurso(displayPrice, descuento, cuotas)
-      : calcularPreciosCurso(precio_presencial, descuento, cuotas);
+      : calcularPreciosCurso(precio_presencial, 25, cuotas);
   const checkoutParams = {
     modalidad,
     nombre,
@@ -68,7 +68,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             </ul>
           ) : (
             <ul className="list-disc list-inside pb-6 text-sm px-6 min-h-[210px]">
-              <li>Clases presenciales (3h. cada 15 días)</li>
+              <li>Clases presenciales (2h. semanales)</li>
               <li>Tutorías con staff trainer educativos</li>
               <li>Video resúmenes y materiales descargable</li>
               <li>Contenido teórico interactivo</li>
@@ -95,7 +95,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
             </span>
           </p>
           <p className="text-center text-idaclass font-semibold border-b-2 border-idaclass py-2">
-            BecaClass + {descuento}% OFF ${" "}
+            BecaClass {modalidad === "ONLINE" ? descuento : 25}% OFF ${" "}
             {precioBeca?.toLocaleString("es-AR", {
               minimumFractionDigits: 0,
               maximumFractionDigits: 0,
