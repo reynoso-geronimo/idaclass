@@ -388,6 +388,11 @@ export async function createContacto(formData) {
       telefono: formData.telefono,
       email: formData.email,
       curso: formData.curso,
+      utm_source: formData.utm_source,
+      utm_medium: formData.utm_medium,
+      utm_campaign: formData.utm_campaign,
+      utm_term: formData.utm_term,
+      utm_content: formData.utm_content,
     });
 
     return "success";

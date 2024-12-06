@@ -46,7 +46,7 @@ export function DataTable({
      console.log(row.original);
     }) */
   return (
-    <main className="container">
+    <main className="px-8 mx-auto">
      <div className="flex gap-2 my-2">
     {/*  <Button variant="outline" size="sm" className="ml-auto h-8 flex">
         Get Share Link

@@ -15,61 +15,8 @@ import { Button } from "@/components/ui/button";
 import Ventajas from "./_components/ventajas";
 import Faq from "@/components/ui/faq";
 import Sedes from "@/components/ui/sedes";
+import Sede from "@/models/Sede";
 
-const dummyLocations = {
-  CABA: [
-    {
-      name: "Vita Sports",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Parque Patricios, Av. Entre Ríos 1893",
-      hours: "Domingos cada 15 días de 14:30hs a 18:30hs",
-    },
-    {
-      name: "Fitness Center",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Caballito, Av. Rivadavia 5989",
-      hours: "Sábados 15 a 17hs",
-    },
-  ],
-  "ZONA NORTE": [
-    {
-      name: "Center Fit",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "San Miguel, Domingo Palacios Sarmiento 1729",
-      hours: "Sábados 13 a 15hs",
-    },
-    {
-      name: "Kingdom",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Palomares, Av. Presidente Perón 2348",
-      hours: "Sábados 16:30 a 17hs (PB) / de 13 a 15hs (Funcional)",
-    },
-  ],
-  "ZONA OESTE": [
-    {
-      name: "West Gym",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Morón, Av. Rivadavia 18100",
-      hours: "Lunes a Viernes 8 a 22hs",
-    },
-  ],
-  "ZONA SUR": [
-    {
-      name: "South Fitness",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Lomas de Zamora, Hipólito Yrigoyen 8230",
-      hours: "Martes y Jueves 18 a 20hs",
-    },
-  ],
-  INTERIOR: [
-    {
-      name: "Central Gym",
-      logo: "/placeholder.svg?height=48&width=48",
-      address: "Córdoba, Av. Colón 5050",
-      hours: "Lunes, Miércoles y Viernes 9 a 11hs",
-    },
-  ],
-};
 const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-especializacion"), {
   ssr: false,
   loading: () => (
@@ -89,7 +36,9 @@ const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-
     </div>
   ),
 });
-export default function Home() {
+export default async function Home() {
+ 
+
   return (
     <main className="overflow-hidden flex flex-col">
       <Hero />
@@ -100,7 +49,7 @@ export default function Home() {
       {/* <Banderas/> */}
       <Soluciones />
       <DynamicCursosEspecializacion />
-     {/*  <Sedes locations={dummyLocations} showHours={false} showButton={false} title="Encuentra tu sede más cercana" /> */}
+
       <Certificacion />
 
       <EquipoProfesional

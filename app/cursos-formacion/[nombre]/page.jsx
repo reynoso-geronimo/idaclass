@@ -11,12 +11,13 @@ import CursosContenido from "@/components/cursos/CursoContenido";
 import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
-import {
-  getCursoFormacionFromDB,
-  getOtrosCursosFromacionFromDB,
-} from "@/app/actions";
+import { getCursoFormacionFromDB, getOtrosCursosFromacionFromDB } from "@/app/actions";
 import getCountryCodeFromIP from "@/lib/utils";
 import CursoHeader from "@/components/cursos/CursosHeader";
+import Sedes from "@/components/ui/sedes";
+import { Sede } from "@/models/assosiations";
+import { Horario } from "@/models/assosiations";
+import { CursosFormacion } from "@/models/assosiations";
 
 const CursoPage = async ({ params }) => {
   const pais = await getCountryCodeFromIP();
@@ -53,8 +54,22 @@ const CursoPage = async ({ params }) => {
     perfil_texto_tres,
   } = curso;
 
-  const contenido =
-    process.env.dev === "true" ? JSON.parse(acerca_curso) : acerca_curso;
+  const sedesWithSchedules = await Sede.findAll({
+    include: [
+      {
+        model: Horario,
+        required: true,
+        include: [
+          {
+            model: CursosFormacion,
+            where: { id: curso.id },
+            required: true,
+          },
+        ],
+      },
+    ],
+  });
+  const contenido = process.env.dev === "true" ? JSON.parse(acerca_curso) : acerca_curso;
   return (
     <main className="flex flex-col">
       {/* {pais.country} */}
@@ -100,42 +115,40 @@ const CursoPage = async ({ params }) => {
       <CursoFormacionRequisitos />
       {/* modalidades y pago */}
       <Separator className="my-6" />
-      <CursoFormacionModalidades
-        modalidades={modalidades}
-        curso={curso}
-        nombre={nombre}
-        tipo={"CURSO DE FORMACION"}
-      />
+      <CursoFormacionModalidades modalidades={modalidades} curso={curso} nombre={nombre} tipo={"CURSO DE FORMACION"} />
+     {/*  {sedesWithSchedules.length > 0 && (
+        <>
+          <Separator className="my-6" />
+          <Sedes
+            locations={sedesWithSchedules}
+            showHours={true}
+            showButton={true}
+            title="Sedes disponibles para este curso"
+          />
+        </>
+      )} */}
       <Separator className="my-6" />
       {/*    <BecaAsesorate /> */}
-      <Separator className="my-6" />
+
       <EquipoProfesional
         titulo="Conoce al equipo de"
         titulo2="Trainers Educativos"
         titulo2Class="text-idaclass3"
         titulo3="que te guiará al éxito"
       />
+      <Separator className="my-6" />
       <CasosExito />
       <Separator className="my-6" />
       <CursoFormacionOtrosCursos cursos={cursos} />
       <div className="w-full sticky bottom-0 text-center p-4 text-primary bg-black z-20 flex justify-around items-center gap-2">
-        <p className="text-white max-sm:text-xs">
-          + de 50.0000 certificados otorgados{" "}
-        </p>
+        <p className="text-white max-sm:text-xs">+ de 50.0000 certificados otorgados </p>
         <div className="flex gap-12 items-center">
           <Link href="#inscripcion">
             <Button>Inscribirme ahora</Button>
           </Link>
           <Link href="https://wa.me/+5491135872204">
             <div className="max-lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 48 48"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path
                   fill="#fff"
                   d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"

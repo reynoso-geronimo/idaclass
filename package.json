@@ -34,6 +34,7 @@
     "embla-carousel-autoplay": "^8.0.0-rc15",
     "embla-carousel-react": "^8.0.0-rc15",
     "framer-motion": "^11.0.6",
+    "googleapis": "^144.0.0",
     "lucide-react": "^0.298.0",
     "mercadopago": "^2.0.9",
     "mysql2": "^3.6.5",
