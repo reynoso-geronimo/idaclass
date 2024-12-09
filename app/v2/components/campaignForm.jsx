@@ -177,7 +177,11 @@ const CampaignForm = ({ nombre, short = false }) => {
               )}
             />
           ))}
-          <Button type="submit" className="w-full rounded-full bg-green-500 hover:bg-green-400">
+          <Button
+            type="submit"
+            className="w-full rounded-full bg-green-500 hover:bg-green-400"
+            disabled={!form.formState.isValid}
+          >
             {short ? "QUIERO QUE ME ASESOREN" : "QUIERO INSCRIBIRME"}
           </Button>
         </form>
