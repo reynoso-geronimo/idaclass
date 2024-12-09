@@ -17,6 +17,7 @@ import { getCursoFormacionFromDB } from "@/app/actions";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Header from "../components/Header";
 import Link from "next/link";
+import CursoFormacionModalidades from "@/app/cursos-formacion/[nombre]/_components/cursoFormacionModalidades";
 
 const page = async () => {
   const curso = await getCursoFormacionFromDB("Personal Trainer");
@@ -271,7 +272,7 @@ const page = async () => {
         <CursosContenido modulos={curso.modulos} />
         <Image src={Contenidos} alt="skillclass" className="w-1/3 object-contain" />
       </section>
-     {/*  <section className="px-4 space-y-2 lg:flex justify-center items-center lg:bg-gray-200 mt-12">
+      {/*  <section className="px-4 space-y-2 lg:flex justify-center items-center lg:bg-gray-200 mt-12">
         <div className="lg:w-1/2 max-w-3xl lg:space-y-12">
           <h2 className={"text-idaclass5 text-3xl lg:text-5xl font-black text-center px-4 text-pretty lg:text-left"}>
             ¡No estás solo!
@@ -287,6 +288,8 @@ const page = async () => {
           <CampaignForm short={true} />
         </div>
       </section> */}
+      <CursoFormacionModalidades modalidades={"Online - Presencial"} curso={curso} nombre={curso.nombre} tipo={"CURSO DE FORMACION"} />
+
       <CasosExito variant={"secondary"} />
     </main>
   );
