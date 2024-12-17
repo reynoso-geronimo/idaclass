@@ -62,6 +62,7 @@ const CursoPage = async ({ params }) => {
         include: [
           {
             model: CursosFormacion,
+            through: "horarios_cursos_formacion_links",
             where: { id: curso.id },
             required: true,
           },
@@ -116,7 +117,7 @@ const CursoPage = async ({ params }) => {
       {/* modalidades y pago */}
       <Separator className="my-6" />
       <CursoFormacionModalidades modalidades={modalidades} curso={curso} nombre={nombre} tipo={"CURSO DE FORMACION"} />
-     {/*  {sedesWithSchedules.length > 0 && (
+      {/*  {sedesWithSchedules.length > 0 && (
         <>
           <Separator className="my-6" />
           <Sedes

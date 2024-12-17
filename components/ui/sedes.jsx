@@ -34,16 +34,25 @@ export default function Sedes({
                 <div key={location.id} className="grid grid-cols-1 gap-2 md:gap-8 items-center justify-center">
                   <div className="flex justify-between w-full gap-4">
                     <div className="flex items-center gap-4">
+                      {location.imagen && (
+                        <Image
+                          src={`/sedes/${location.imagen}`}
+                          alt={location.nombre}
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                      )}
                       <div className="space-y-1 flex flex-col">
                         <h3 className="font-medium md:text-lg">{location.nombre}</h3>
                         <span className="text-xs md:text-sm text-muted-foreground">{location.direccion}</span>
                       </div>
                     </div>
-                    <div>
+                    <div className="flex items-center justify-center shrink-0">
                       {showHours &&
                         location.horarios &&
                         location.horarios.map(horario => (
-                          <span key={horario.id} className="text-lg">
+                          <span key={horario.id} className="text-xs lg:text-lg">
                             {horario.dia} - {horario.hora.slice(0, 5)}
                           </span>
                         ))}

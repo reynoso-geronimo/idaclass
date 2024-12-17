@@ -9,6 +9,7 @@ import Bonos from "./components/Bonos";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import RegisterToView from "./components/RegisterToView";
+import CampaignForm from "@/app/v2/components/campaignForm";
 export const revalidate = 360;
 
 const page = async ({ params }) => {

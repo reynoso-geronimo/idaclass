@@ -11,6 +11,9 @@ const Sede = sequelize.define('sedes', {
     nombre: {
         type: DataTypes.STRING
     },
+    imagen: {
+        type: DataTypes.STRING
+    },
     direccion: {
         type: DataTypes.STRING
     },
