@@ -1,14 +1,16 @@
-import { MapPin, Instagram } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { Separator } from "./separator";
 
 export default function Sedes({
   locations,
   showHours = false,
-  showButton = false,
   title = "Encontrá la sede mas cercana a tu domicilio",
+  modalidad,
+  nombre,
+  tipo,
 }) {
   // Group locations by zona
   const groupedLocations = locations.reduce((acc, location) => {
@@ -19,10 +21,9 @@ export default function Sedes({
     acc[zona].push(location);
     return acc;
   }, {});
-  console.log(groupedLocations);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full max-w-4xl mx-auto p-4" id="sedes">
       <h1 className="text-2xl font-bold mb-6 text-[#1a237e]">{title}</h1>
 
       <Accordion type="single" collapsible className="w-full space-y-4">
@@ -30,60 +31,66 @@ export default function Sedes({
           <AccordionItem key={zone} value={zone} className="border rounded-lg px-4">
             <AccordionTrigger className="text-base font-medium py-4">{zone}</AccordionTrigger>
             <AccordionContent className="space-y-4 pb-4">
-              {places.map(location => (
-                <div key={location.id} className="grid grid-cols-1 gap-2 md:gap-8 items-center justify-center">
-                  <div className="flex justify-between w-full gap-4">
-                    <div className="flex items-center gap-4">
-                      {location.imagen && (
-                        <Image
-                          src={`/sedes/${location.imagen}`}
-                          alt={location.nombre}
-                          width={80}
-                          height={80}
-                          className="object-contain"
-                        />
-                      )}
-                      <div className="space-y-1 flex flex-col">
-                        <h3 className="font-medium md:text-lg">{location.nombre}</h3>
-                        <span className="text-xs md:text-sm text-muted-foreground">{location.direccion}</span>
+              {places.map(location => {
+                const checkoutParams = {
+                  modalidad,
+                  nombre,
+                  tipo,
+                  sede: location.nombre,
+                };
+
+                const queryParams = new URLSearchParams(checkoutParams).toString();
+
+                return (
+                  <div key={location.id} className="flex flex-col items-center justify-center gap-y-2">
+                    <div className="flex gap-4 w-full">
+                      <div className="flex flex-wrap items-start gap-4 md:gap-4 w-full">
+                        {location.imagen && (
+                          <Image
+                            src={`/sedes/${location.imagen}`}
+                            alt={location.nombre}
+                            width={80}
+                            height={80}
+                            className="object-contain"
+                          />
+                        )}
+                        <div className="space-y-1 flex flex-col justify-center max-md:items-center place-self-center">
+                          <h3 className="font-medium md:text-lg ">{location.nombre}</h3>
+                          <span className="max-md:hidden text-xs md:text-sm text-muted-foreground">
+                            {location.direccion}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="max-md:hidden flex items-center justify-center shrink-0">
+                        {showHours &&
+                          location.horarios &&
+                          location.horarios.map(horario => (
+                            <span key={horario.id} className="text-lg">
+                              {horario.dia} - {horario.hora.slice(0, 5)}
+                            </span>
+                          ))}
+                      </div>
+
+                      <div className="flex items-center justify-end">
+                        <Button className="rounded bg-green-500 hover:bg-green-400">
+                          <Link href={`/checkout?${queryParams}`}>Elegir sede</Link>
+                        </Button>
                       </div>
                     </div>
-                    <div className="flex items-center justify-center shrink-0">
+                    <div className="w-full md:hidden shrink-0">
                       {showHours &&
                         location.horarios &&
                         location.horarios.map(horario => (
-                          <span key={horario.id} className="text-xs lg:text-lg">
+                          <span key={horario.id}>
                             {horario.dia} - {horario.hora.slice(0, 5)}
                           </span>
                         ))}
                     </div>
-                    {/*  <div className="flex flex-col md:flex-row items-center justify-evenly gap-4 md:gap-12">
-                      {location.linkmaps && (
-                        <Link href={location.linkmaps} target="_blank">
-                          <Image
-                            src="/assets/google-maps.svg"
-                            height={32}
-                            width={32}
-                            className="rounded-full border"
-                            alt="Maps"
-                          />
-                        </Link>
-                      )}
-                      {location.linkredes && (
-                        <Link href={location.linkredes} target="_blank">
-                          <Image
-                            src="/assets/instagram-icon.svg"
-                            height={32}
-                            width={32}
-                            className="rounded-full border"
-                            alt="Instagram"
-                          />
-                        </Link>
-                      )}
-                    </div> */}
+                    <span className="md:hidden text-sm text-muted-foreground w-full ">{location.direccion}</span>
+                    <Separator />
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </AccordionContent>
           </AccordionItem>
         ))}

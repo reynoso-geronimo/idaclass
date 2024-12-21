@@ -123,7 +123,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
               type="submit"
               asChild
             >
-              <Link href={`https://wa.me/5491135872204/?text=Quisiera conocer las sedes presenciales de ${nombre}`}>
+              <Link href={`#sedes`}>
                 CONSULTAR SEDES
               </Link>
             </Button>

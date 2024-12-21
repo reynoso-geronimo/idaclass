@@ -84,7 +84,10 @@ const CheckoutPage = () => {
     email: session?.user?.email,
   };
   const searchParams = useSearchParams();
-  const modalidad = searchParams.get("modalidad");
+  const modalidad = `${searchParams.get("modalidad")}${
+    searchParams.get("sede") ? ` - ${searchParams.get("sede")}` : ""
+  }`;
+
   const nombre = searchParams.get("nombre");
   const tipo = searchParams.get("tipo");
   const [curso, setCurso] = useState();
