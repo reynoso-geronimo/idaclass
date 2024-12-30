@@ -18,9 +18,30 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 import Header from "../components/Header";
 import Link from "next/link";
 import CursoFormacionModalidades from "@/app/cursos-formacion/[nombre]/_components/cursoFormacionModalidades";
+import { Separator } from "@/components/ui/separator";
+import Sedes from "@/components/ui/sedes";
+import { Sede } from "@/models/assosiations";
+import { Horario } from "@/models/assosiations";
+import { CursosFormacion } from "@/models/assosiations";
 
 const page = async () => {
   const curso = await getCursoFormacionFromDB("Personal Trainer");
+  const sedesWithSchedules = await Sede.findAll({
+    include: [
+      {
+        model: Horario,
+        required: true,
+        include: [
+          {
+            model: CursosFormacion,
+            through: "horarios_cursos_formacion_links",
+            where: { id: 1 },
+            required: true,
+          },
+        ],
+      },
+    ],
+  });
   return (
     <main className="flex flex-col justify-start grow">
       <div className="bg-[#3A5DAE] text-white font-bold py-4 mt-0 flex flex-col sm:flex-row justify-center items-center sticky top-0 z-50">
@@ -288,7 +309,25 @@ const page = async () => {
           <CampaignForm short={true} />
         </div>
       </section> */}
-      <CursoFormacionModalidades modalidades={"Online - Presencial"} curso={curso} nombre={curso.nombre} tipo={"CURSO DE FORMACION"} />
+      <CursoFormacionModalidades
+        modalidades={"Online - Presencial"}
+        curso={curso}
+        nombre={curso.nombre}
+        tipo={"CURSO DE FORMACION"}
+      />
+      {sedesWithSchedules.length > 0 && (
+        <>
+          <Separator className="my-6" />
+          <Sedes
+            locations={sedesWithSchedules}
+            showHours={true}
+            title="Sedes disponibles para este curso"
+            modalidad={"PRESENCIAL"}
+            nombre={"Personal Trainer"}
+            tipo={"CURSO DE FORMACION"}
+          />
+        </>
+      )}
 
       <CasosExito variant={"secondary"} />
     </main>
