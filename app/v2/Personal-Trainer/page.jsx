@@ -63,7 +63,9 @@ const page = async () => {
             Conviértete en <br />
             Personal Trainer
           </h1>
-          <h2 className="text-sm">Transforma tu pasión en una carrera de éxito</h2>
+          <h2 className="text-sm" style={{ textShadow: "-0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000" }}>
+  Transforma tu pasión en una carrera de éxito
+</h2>
         </div>
       </section>
       <section className="w-full flex justify-between gap-4 relative max-lg:hidden container mt-12">

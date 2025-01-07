@@ -63,7 +63,12 @@ const page = async () => {
             Conviértete en <br />
             Personal Trainer
           </h1>
-          <h2 className="text-sm">Transforma tu pasión en una carrera de éxito</h2>
+          <h2
+            className="text-sm"
+            style={{ textShadow: "-0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000" }}
+          >
+            Transforma tu pasión en una carrera de éxito
+          </h2>
         </div>
       </section>
       <section className="w-full flex justify-between gap-4 relative max-lg:hidden container mt-12">
@@ -131,7 +136,7 @@ const page = async () => {
       </ul>
 
       <div className="lg:hidden" id="form">
-      <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto mb-4" />
+        <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto mb-4" />
         <CampaignForm nombre={"Personal Trainer"} />
       </div>
       <section className="container p-4 space-y-4">
