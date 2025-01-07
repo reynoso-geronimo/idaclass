@@ -103,7 +103,7 @@ const page = async () => {
               Conviértete en tu propio jefe
             </li>
           </ul>
-          <Image src={"/sedes/bethel.jpg"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto" />
+          <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto" />
         </div>
         <div id="form-lg" />
         <div className="w-[300px]">
@@ -131,7 +131,7 @@ const page = async () => {
       </ul>
 
       <div className="lg:hidden" id="form">
-      <Image src={"/sedes/bethel.jpg"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto mb-4" />
+      <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto mb-4" />
         <CampaignForm nombre={"Personal Trainer"} />
       </div>
       <section className="container p-4 space-y-4">
@@ -322,7 +322,7 @@ const page = async () => {
         <TarjetaModalidad />
         <div className="space-y-6 text-white z-10 pb-6">
           <h3 className="text-4xl text-center font-semibold italic">Sede exclusiva Uruguay</h3>
-          <Image src={"/sedes/bethel.jpg"} height={500} width={500} alt="Uruguay" className="rounded-3xl" />
+          <Image src={"/sedes/BETHEL.JPG"} height={500} width={500} alt="Uruguay" className="rounded-3xl" />
           <p className="lg:text-lg ">
             <MapPin className="inline mr-2 size-7" />
             <span className="font-bold"> Dirección :</span> Cuneo Perinetti, 1331, Montevideo, Uruguay
