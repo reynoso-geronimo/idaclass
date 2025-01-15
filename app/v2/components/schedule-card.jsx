@@ -17,7 +17,7 @@ export function ScheduleCard() {
           <h3 className="font-semibold text-center lg:text-xl">Fecha de inicio:</h3>
           <div className="flex items-center justify-center space-x-2 p-2 lg:p-4 rounded-lg bg-secondary lg:text-lg">
             <CalendarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
-            <span className="text-sm lg:text-base">Sábado 15 y Martes 18 de febrero</span>
+            <span className="text-sm lg:text-base">Sábado 15 y Martes 18 de Marzo</span>
           </div>
         </div>
       </CardContent>
