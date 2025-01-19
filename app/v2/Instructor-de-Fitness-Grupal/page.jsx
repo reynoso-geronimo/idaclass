@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import PersonalTrainer from "../../../public/v2/Instructor-de-Fitness-Grupal.jpg";
 import Certificados from "../../../public/v2/certificados.png";
@@ -7,7 +8,7 @@ import Contenidos from "../../../public/v2/ContenidosAlt.jpg";
 import Flecha from "../../../public/v2/Flecha.png";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
+import { BatteryCharging, Check, ChevronDown, ChevronUp, ListChecks } from "lucide-react";
 import CampaignForm from "../components/campaignForm";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import CasosExito from "@/components/casos-exito";
@@ -18,7 +19,9 @@ import Header from "../components/Header";
 import Link from "next/link";
 import CursoFormacionModalidades from "@/app/cursos-formacion/[nombre]/_components/cursoFormacionModalidades";
 import { ScheduleCard } from "../components/schedule-card";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { BookOpen, Dumbbell, Music, Bike, Zap } from "lucide-react";
+import { useState } from "react";
 const curso = {
   nombre: "Instructor de Fitness Grupal",
   modulos: [
@@ -85,7 +88,56 @@ const curso = {
   ],
 };
 
-const page = async () => {
+const courseContent = [
+  {
+    title: "Dominio del conteo musical y técnicas de motivación grupal",
+    description:
+      "Aprende a sincronizar tus clases con la música y mantener a tus alumnos motivados durante toda la sesión.",
+  },
+  {
+    title: "Metodologías personalizadas según la intensidad y nivel de tus alumnos",
+    description:
+      "Desarrolla la habilidad de adaptar tus clases a diferentes niveles de condición física y experiencia.",
+  },
+  {
+    title: "Planificación y dirección de sesiones completas",
+    description:
+      "Domina la estructura de una clase efectiva, incluyendo entrada en calor, parte principal y vuelta a la calma.",
+  },
+];
+const techniques = [
+  {
+    name: "Fitness de Combate: Euforia®",
+    description: "Perfecto para mejorar el cardio y la resistencia",
+    icon: Zap,
+    color: "bg-red-500",
+  },
+  {
+    name: "Localizada con Barras: Fortaleza®",
+    description: "La combinación ideal para tonificar y fortalecer",
+    icon: Dumbbell,
+    color: "bg-blue-500",
+  },
+  {
+    name: "Localizada / funcional: Energia®",
+    description: "Sesiones dirigidas a tonificar de forma integral y aeróbica",
+    icon: BatteryCharging,
+    color: "bg-green-500",
+  },
+  {
+    name: "Ciclismo Interior: Sprint Cycle®",
+    description: "Ciclismo de interior energía y cardio al ritmo de la música",
+    icon: Bike,
+    color: "bg-yellow-500",
+  },
+];
+
+const Page = () => {
+  const [expandedSection, setExpandedSection] = useState();
+  const toggleSection = section => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
   return (
     <main className="flex flex-col justify-start grow">
       <div className="bg-[#3A5DAE] text-white font-bold py-4 mt-0 flex flex-col sm:flex-row justify-center items-center sticky top-0 z-50">
@@ -160,34 +212,122 @@ const page = async () => {
         <CampaignForm nombre={"Instructor de Fitness Grupal"} />
       </div>
 
-      <section className="container p-4 space-y-4">
-        <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
-        <p className="text-pretty text-center">
-          Esta formación de 6 meses te prepara para liderar las clases grupales más demandadas en gimnasios, combinando
-          sólidas bases técnicas, teóricas y habilidades prácticas.
-        </p>
-        <div className="space-y-4">
-          <p className="font-bold">En el curso, aprenderás:</p>
-          <ul className="space-y-2">
-            <li>• Dominio del conteo musical y técnicas de motivación grupal</li>
-            <li>• Metodologías personalizadas según la intensidad y nivel de tus alumnos</li>
-            <li>
-              • Habilidad para planificar y dirigir sesiones completas que incluyan entrada en calor, parte principal y
-              vuelta a la calma
-            </li>
-          </ul>
-        </div>
-      </section>
+      <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center justify-center py-12">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-5xl font-black text-center mb-8 text-gray-800 leading-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Transforma tu pasión en una carrera exitosa
+          </motion.h2>
 
-      <section className="container p-4 space-y-4">
-        <h3 className="font-bold">Abordarás las cuatro técnicas más solicitadas:</h3>
-        <ul className="space-y-4">
-          <li>• Fitness de Combate: Euforia®, perfecto para mejorar el cardio y la resistencia</li>
-          <li>• Localizada con Barras: Fortaleza® La combinación ideal para tonificar y fortalecer</li>
-          <li>• Localizada / funcional: Energia® Sesiones dirigidas a tonificar de forma integral y aeróbica</li>
-          <li>• Ciclismo Interior: Sprint Cycle® Ciclismo de interior energía y cardio al ritmo de la música</li>
-        </ul>
-      </section>
+          <motion.p
+            className="text-xl text-center mb-12 max-w-3xl mx-auto text-gray-600"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Nuestro curso de 6 meses te preparará para liderar las clases grupales más demandadas en gimnasios,
+            combinando sólidas bases técnicas, teóricas y habilidades prácticas esenciales.
+          </motion.p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <h3 className="text-2xl font-bold mb-6 flex items-center text-gray-800">
+                <BookOpen className="mr-3 text-blue-500" size={28} />
+                En el curso, dominarás:
+              </h3>
+              <div className="space-y-4">
+                {courseContent.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  >
+                    <button
+                      onClick={() => toggleSection(`content-${index}`)}
+                      className="flex justify-between items-center w-full text-left focus:outline-none"
+                      aria-expanded={expandedSection === `content-${index}`}
+                    >
+                      <h4 className="font-semibold text-gray-800">{item.title}</h4>
+                      {expandedSection === `content-${index}` ? (
+                        <ChevronUp className="text-blue-500" />
+                      ) : (
+                        <ChevronDown className="text-blue-500" />
+                      )}
+                    </button>
+                    <AnimatePresence>
+                      {expandedSection === `content-${index}` && (
+                        <motion.p
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="mt-2 text-gray-600"
+                        >
+                          {item.description}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <h3 className="text-2xl font-bold mb-6 flex items-center text-gray-800">
+                <ListChecks className="mr-3 text-blue-500" size={28} />
+                Domina las cuatro técnicas más solicitadas:
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {techniques.map((technique, index) => (
+                  <motion.div
+                    key={index}
+                    className={`${technique.color} rounded-lg p-4 text-white shadow-md transform transition-all duration-300 hover:scale-105`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
+                  >
+                    <div className="flex items-center mb-2">
+                      <technique.icon className="mr-2 flex-shrink-0" size={24} />
+                      <h4 className="font-semibold">{technique.name}</h4>
+                    </div>
+                    <p className="text-sm">{technique.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/*    <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+          >
+            <a
+              href="#enroll"
+              className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
+            >
+              ¡Inscríbete ahora y comienza tu carrera!
+            </a>
+          </motion.div> */}
+        </div>
+      </div>
       <section className="p-4 bg-gray-200 space-y-4 lg:hidden">
         <h2 className={"text-idaclass5 text-3xl font-black text-center px-4"}>
           🎓 Obtén <br /> Certificación:
@@ -356,4 +496,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;
