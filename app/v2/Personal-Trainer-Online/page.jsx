@@ -44,16 +44,16 @@ const page = async () => {
     ],
   });
   return (
-    <main className="flex flex-col justify-start grow">
+    <main className="flex flex-col justify-start grow !scroll-pt-24">
       <div className="bg-[#3A5DAE] text-white font-bold py-4 mt-0 flex flex-col sm:flex-row justify-center items-center sticky top-0 z-50">
         <div className="flex items-center justify-center max-sm:max-w-80">
           <Header />
         </div>
         <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
-          <Link href="#form">QUIERO INSCRIBIRME</Link>
+          <Link href="#inscripcion">QUIERO INSCRIBIRME</Link>
         </Button>
         <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
-          <Link href="#form-lg">QUIERO INSCRIBIRME</Link>
+          <Link href="#inscripcion">QUIERO INSCRIBIRME</Link>
         </Button>
       </div>
       <section className="w-full relative text-white lg:hidden">
@@ -111,8 +111,10 @@ const page = async () => {
           </ul>
         </div>
         <div id="form-lg" />
-        <div className="w-[300px]">
-          <CampaignForm nombre={"Personal Trainer"} />
+        <div className="w-[300px] flex mt-24 justify-center">
+          <Button size="lg" className="w-full text-3xl font-black h-20">
+            <Link href="#inscripcion">Inscribirme</Link>
+          </Button>
         </div>
       </section>
 
@@ -134,8 +136,10 @@ const page = async () => {
           Conviértete en tu propio jefe
         </li>
       </ul>
-      <div className="lg:hidden" id="form">
-        <CampaignForm nombre={"Personal Trainer"} />
+      <div className="lg:hidden container flex justify-center" id="form">
+        <Button size="lg" className="w-full text-3xl font-black h-16">
+          <Link href="#inscripcion">Inscribirme</Link>
+        </Button>
       </div>
       <section className="container p-4 space-y-4">
         <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
@@ -255,10 +259,10 @@ const page = async () => {
           </Accordion>
 
           <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit lg:hidden">
-            <Link href="#form"> QUIERO INSCRIBIRME </Link>
+            <Link href="#inscripcion"> QUIERO INSCRIBIRME </Link>
           </Button>
           <Button size="sm" className="bg-green-500 hover:bg-green-500/50 rounded-3xl w-fit max-lg:hidden">
-            <Link href="#form-lg"> QUIERO INSCRIBIRME </Link>
+            <Link href="#inscripcion"> QUIERO INSCRIBIRME </Link>
           </Button>
         </div>
       </section>
