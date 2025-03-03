@@ -55,9 +55,9 @@ const page = async () => {
           <Link href="#form-lg">QUIERO INSCRIBIRME</Link>
         </Button>
       </div>
-      <section className="w-full relative text-white lg:hidden">
-        <Image src={PersonalTrainer} alt="Personal Trainer" className="w-full h-auto object-cover" />
-        <div className="absolute bottom-10 left-8 space-y-2">
+      <section className="relative w-full text-white lg:hidden">
+        <Image src={PersonalTrainer} alt="Personal Trainer" className="object-cover w-full h-auto" />
+        <div className="absolute space-y-2 bottom-10 left-8">
           <Badge className={"bg-orange-500 border border-white py-1.5"}>CURSO PRESENCIAL</Badge>
           <h1 className="text-4xl font-black">
             Conviértete en <br />
@@ -71,7 +71,7 @@ const page = async () => {
           </h2>
         </div>
       </section>
-      <section className="w-full flex justify-between gap-4 relative max-lg:hidden container mt-12">
+      <section className="container relative flex justify-between w-full gap-4 mt-12 max-lg:hidden">
         <Image
           src={PersonalTrainer}
           alt="Personal Trainer"
@@ -86,11 +86,11 @@ const page = async () => {
             Conviértete en <br />
             Personal Trainer
           </h1>
-          <h2 className="text-xl font-bold text-idaclass relative">
+          <h2 className="relative text-xl font-bold text-idaclass">
             Transforma tu pasión en una carrera de éxito
             <Image src={Flecha} alt="" className="absolute -right-8 -bottom-8 rotate-12" height={54} width={165} />
           </h2>
-          <ul className="space-y-8 my-12">
+          <ul className="my-12 space-y-8">
             <li className="flex items-center gap-2">
               <Check className="bg-idaclass rounded-full text-white p-0.5" />
               Obtén tu certificado y destácate
@@ -108,7 +108,7 @@ const page = async () => {
               Conviértete en tu propio jefe
             </li>
           </ul>
-          <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto" />
+          <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="mx-auto rounded-3xl" />
         </div>
         <div id="form-lg" />
         <div className="w-[300px]">
@@ -116,7 +116,7 @@ const page = async () => {
         </div>
       </section>
 
-      <ul className="px-4 space-y-8 my-12 lg:hidden">
+      <ul className="px-4 my-12 space-y-8 lg:hidden">
         <li className="flex items-center gap-2">
           <Check className="bg-idaclass rounded-full text-white p-0.5" />
           Obtén tu certificado y destácate
@@ -136,27 +136,35 @@ const page = async () => {
       </ul>
 
       <div className="lg:hidden" id="form">
-        <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="rounded-3xl mx-auto mb-4" />
+        <Image src={"/sedes/BETHEL.JPG"} height={400} width={400} alt="Uruguay" className="mx-auto mb-4 rounded-3xl" />
         <CampaignForm nombre={"Personal Trainer"} />
       </div>
       <section className="container p-4 space-y-4">
         <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
-        <p className="text-pretty text-center">
+        <p className="text-center text-pretty">
           En el curso de Personal Trainer de Idaclass, aprenderás a diseñar entrenamientos personalizados, comprenderás
           la anatomía y fisiología del cuerpo, dominarás técnicas de entrenamiento funcional, HIIT y nutrición para el
           fitness. Además, estarás preparado para trabajar en gimnasios o de forma independiente, aplicando todo lo
           aprendido desde el primer día.
         </p>
+        <div className="relative isolate z-[1] size-full aspect-video max-w-2xl mx-auto overflow-hidden rounded-2xl border-2 border-white">
+          <iframe
+            src={"https://youtube.com/embed/IzlOOhNzGF4"}
+            className="size-full rounded-2xl"
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
       </section>
-      <section className="p-4 bg-gray-200 space-y-4 lg:hidden">
+      <section className="p-4 space-y-4 bg-gray-200 lg:hidden">
         <h2 className={"text-idaclass5 text-3xl font-black text-center px-4"}>
           🎓 Obtén <br /> Certificación:
         </h2>
         <h2 className={"text-idaclass text-3xl font-black text-center px-4"}>impulsa tu carrera</h2>
-        <h3 className="text-idaclass font-bold text-center">Este curso brinda 4 certificados:</h3>
-        <Image src={Certificados} alt="Certificados" className="w-full h-auto object-cover" />
+        <h3 className="font-bold text-center text-idaclass">Este curso brinda 4 certificados:</h3>
+        <Image src={Certificados} alt="Certificados" className="object-cover w-full h-auto" />
         <p className="text-center">
-          <span className="text-idaclass font-bold">Obtén tu certificado IdaClass</span>{" "}
+          <span className="font-bold text-idaclass">Obtén tu certificado IdaClass</span>{" "}
           <span className="font-bold">
             respaldado por 25 años de trayectoria y con más de 50.000 certificados en Latinoamérica.
           </span>{" "}
@@ -164,17 +172,17 @@ const page = async () => {
         </p>
       </section>
 
-      <section className=" bg-gray-200 space-y-4 max-lg:hidden">
-        <div className="flex container justify-around grow h-full">
-          <div className="w-1/2 flex flex-col justify-around">
+      <section className="space-y-4 bg-gray-200  max-lg:hidden">
+        <div className="container flex justify-around h-full grow">
+          <div className="flex flex-col justify-around w-1/2">
             <div>
               <h2 className={"text-idaclass5 text-3xl font-black  px-4"}>🎓 Obtén Certificación:</h2>
               <h2 className={"text-idaclass text-3xl font-black px-4"}>impulsa tu carrera</h2>
-              <h3 className="text-idaclass font-bold px-4">Este curso brinda 4 certificados:</h3>
+              <h3 className="px-4 font-bold text-idaclass">Este curso brinda 4 certificados:</h3>
             </div>
-            <Image src={Certificados} alt="Certificados" className="w-full h-auto object-cover" quality={100} />
+            <Image src={Certificados} alt="Certificados" className="object-cover w-full h-auto" quality={100} />
             <p className="">
-              <span className="text-idaclass font-bold">Obtén tu certificado IdaClass</span>{" "}
+              <span className="font-bold text-idaclass">Obtén tu certificado IdaClass</span>{" "}
               <span className="font-bold">
                 respaldado por 25 años de trayectoria y con más de 50.000 certificados en Latinoamérica.
               </span>{" "}
@@ -191,25 +199,25 @@ const page = async () => {
         <h2 className={"text-idaclass5 text-3xl font-black text-center px-4"}>
           ¿Cómo te ayudamos a cumplir tus objetivos?
         </h2>
-        <div className="px-4 flex flex-col items-center gap-4 ">
+        <div className="flex flex-col items-center gap-4 px-4 ">
           <Accordion
             type="single"
             collapsible
-            className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-center"
+            className="flex flex-col items-center justify-center w-full lg:flex-row lg:justify-center"
           >
             <AccordionItem value="item-1">
-              <AccordionTrigger className="w-full flex items-center justify-center" arrow={false}>
-                <div className="flex flex-col lg:min-w-80 items-center justify-center gap-2 ">
-                  <div className="bg-orange-500 rounded-full font-semibold flex items-center justify-center text-white size-7 text-center">
+              <AccordionTrigger className="flex items-center justify-center w-full" arrow={false}>
+                <div className="flex flex-col items-center justify-center gap-2 lg:min-w-80 ">
+                  <div className="flex items-center justify-center font-semibold text-center text-white bg-orange-500 rounded-full size-7">
                     1
                   </div>
-                  <h1 className="text-idaclass font-bold text-lg text-center">
+                  <h1 className="text-lg font-bold text-center text-idaclass">
                     Te brindamos clases <br />
                     en vivo con expertos
                   </h1>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className=" lg:max-w-80 ">
+              <AccordionContent className=" lg:max-w-80">
                 <p className="text-center text-pretty">
                   Lo que te permite aclarar tus dudas al instante. Con nuestra plataforma podrás acceder al material de
                   estudio de forma sencilla, trabajarás en equipo y desarrollarás proyectos propios, con el apoyo de tus
@@ -218,18 +226,18 @@ const page = async () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="w-full flex items-center justify-center" arrow={false}>
-                <div className="flex flex-col lg:min-w-80 items-center justify-center gap-2 ">
-                  <div className="bg-orange-500 rounded-full font-semibold flex items-center justify-center text-white size-7 text-center">
+              <AccordionTrigger className="flex items-center justify-center w-full" arrow={false}>
+                <div className="flex flex-col items-center justify-center gap-2 lg:min-w-80 ">
+                  <div className="flex items-center justify-center font-semibold text-center text-white bg-orange-500 rounded-full size-7">
                     2
                   </div>
-                  <h1 className="text-idaclass font-bold text-lg text-center">
+                  <h1 className="text-lg font-bold text-center text-idaclass">
                     Te ayudamos a alcanzar <br />
                     tus metas profesionales
                   </h1>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className=" lg:max-w-80 ">
+              <AccordionContent className=" lg:max-w-80">
                 <p className="text-center text-pretty">
                   Te equipamos con todas las habilidades claves para alcanzar tus metas profesionales, crear tu marca
                   personal hasta atraer a tus primeros clientes y convertirte en un experto en el manejo de clientes.
@@ -237,17 +245,17 @@ const page = async () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="w-full flex items-center justify-center" arrow={false}>
-                <div className="flex flex-col lg:min-w-80 items-center justify-center gap-2 ">
-                  <div className="bg-orange-500 rounded-full font-semibold flex items-center justify-center text-white size-7 text-center">
+              <AccordionTrigger className="flex items-center justify-center w-full" arrow={false}>
+                <div className="flex flex-col items-center justify-center gap-2 lg:min-w-80 ">
+                  <div className="flex items-center justify-center font-semibold text-center text-white bg-orange-500 rounded-full size-7">
                     3
                   </div>
-                  <h1 className="text-idaclass font-bold text-lg text-center">
+                  <h1 className="text-lg font-bold text-center text-idaclass">
                     Te preparamos para tu trabajo <br /> soñado desde el primer dia
                   </h1>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className=" lg:max-w-80 ">
+              <AccordionContent className=" lg:max-w-80">
                 <p className="text-center text-pretty">
                   Con prácticas laborales reales y acceso a nuestra bolsa de empleo, te asesoramos para que emprendas o
                   empieces a trabajar de inmediato. ¡Todo lo que necesitas para lanzarte al éxito!
@@ -274,11 +282,11 @@ const page = async () => {
           haciendo lo que amas:
         </p>
 
-        <Image src={Skillclass} alt="skillclass" className="w-full h-auto object-cover" />
+        <Image src={Skillclass} alt="skillclass" className="object-cover w-full h-auto" />
       </section>
 
       <section className="p-4 space-y-6 bg-gray-200 max-lg:hidden">
-        <div className="max-w-4xl mx-auto flex flex-col ">
+        <div className="flex flex-col max-w-4xl mx-auto ">
           <h2 className={"text-idaclass5 text-3xl font-black  "}>
             🎁 Recibe tu
             <span className={"text-idaclass text-3xl font-black  "}> Beneficio Exclusivo</span>
@@ -296,13 +304,13 @@ const page = async () => {
       <section className="lg:hidden">
         <CursosContenido modulos={curso.modulos} />
       </section>
-      <section className="max-lg:hidden container flex flex-wrap items-center justify-center gap-x-24 mb-12 ">
+      <section className="container flex flex-wrap items-center justify-center mb-12 max-lg:hidden gap-x-24 ">
         <TituloSeccion className={"w-full"}>Programa de Estudio</TituloSeccion>
         <CursosContenido modulos={curso.modulos} />
-        <Image src={Contenidos} alt="skillclass" className="w-1/3 object-contain" />
+        <Image src={Contenidos} alt="skillclass" className="object-contain w-1/3" />
       </section>
-      {/*  <section className="px-4 space-y-2 lg:flex justify-center items-center lg:bg-gray-200 mt-12">
-        <div className="lg:w-1/2 max-w-3xl lg:space-y-12">
+      {/*  <section className="items-center justify-center px-4 mt-12 space-y-2 lg:flex lg:bg-gray-200">
+        <div className="max-w-3xl lg:w-1/2 lg:space-y-12">
           <h2 className={"text-idaclass5 text-3xl lg:text-5xl font-black text-center px-4 text-pretty lg:text-left"}>
             ¡No estás solo!
             <br />
@@ -322,11 +330,11 @@ const page = async () => {
           src={"/cursosFormacion/modalidadesbg2.png"}
           fill
           alt=""
-          className="max-lg:hidden object-cover object-right"
+          className="object-cover object-right max-lg:hidden"
         />
         <TarjetaModalidad />
-        <div className="space-y-6 text-white z-10 pb-6">
-          <h3 className="text-4xl text-center font-semibold italic">Sede exclusiva Uruguay</h3>
+        <div className="z-10 pb-6 space-y-6 text-white">
+          <h3 className="text-4xl italic font-semibold text-center">Sede exclusiva Uruguay</h3>
           <Image src={"/sedes/BETHEL.JPG"} height={500} width={500} alt="Uruguay" className="rounded-3xl" />
           <p className="lg:text-lg ">
             <MapPin className="inline mr-2 size-7" />

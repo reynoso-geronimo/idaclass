@@ -55,7 +55,7 @@ const page = async () => {
           <Link href="#inscripcion">QUIERO INSCRIBIRME</Link>
         </Button>
       </div>
-      <section className="relative w-full text-white lg:hidden">
+      <section className="relative w-full text-white lg:hidden ">
         <Image src={PersonalTrainer} alt="Personal Trainer" className="object-cover w-full h-auto" />
         <div className="absolute space-y-2 bottom-10 left-8">
           <Badge className={"bg-orange-500 border border-white py-1.5"}>CURSO ONLINE</Badge>
@@ -75,10 +75,10 @@ const page = async () => {
         <Image
           src={PersonalTrainer}
           alt="Personal Trainer"
-          className="object-cover object-top w-[380px] h-[500px] rounded-3xl"
+          className="object-cover object-top w-1/4 rounded-3xl shrink"
         />
 
-        <div className="space-y-2">
+        <div className="w-1/2 space-y-2">
           <Badge variant={"outline"} className={"border-orange-500 border-2 text-orange-500 py-1.5"}>
             CURSO ONLINE
           </Badge>
@@ -110,10 +110,18 @@ const page = async () => {
           </ul>
         </div>
         <div id="form-lg" />
-        <div className="w-[300px] flex mt-24 justify-center">
+        <div className="flex flex-col justify-center w-1/3 gap-4 shrink-0">
           <Button size="lg" className="w-full h-20 text-3xl font-black">
             <Link href="#inscripcion">Inscribirme</Link>
           </Button>
+          <div className="relative isolate z-[1] aspect-video w-full mx-auto overflow-hidden rounded-2xl border-2 border-white">
+            <iframe
+              src={"https://youtube.com/embed/IzlOOhNzGF4"}
+              className="size-full rounded-2xl"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -135,10 +143,18 @@ const page = async () => {
           Conviértete en tu propio jefe
         </li>
       </ul>
-      <div className="container flex justify-center lg:hidden" id="form">
+      <div className="container flex flex-col justify-center gap-4 lg:hidden" id="form">
         <Button size="lg" className="w-full h-16 text-3xl font-black">
           <Link href="#inscripcion">Inscribirme</Link>
         </Button>
+        <div className="relative isolate z-[1] aspect-video w-full mx-auto overflow-hidden rounded-2xl border-2 border-white">
+          <iframe
+            src={"https://youtube.com/embed/IzlOOhNzGF4"}
+            className="size-full rounded-2xl"
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
       </div>
       <section className="container p-4 space-y-4">
         <h2 className={"text-idaclass5 text-4xl font-black text-center px-4"}>¿Qué aprenderás en este curso?</h2>
