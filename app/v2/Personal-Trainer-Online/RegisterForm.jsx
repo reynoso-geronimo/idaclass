@@ -57,6 +57,11 @@ const RegisterForm = () => {
         apellido: values.apellido,
         email: values.email,
         telefono: values.telefono,
+        utm_source: values.utm_source || "",
+        utm_medium: values.utm_medium || "",
+        utm_campaign: values.utm_campaign || "",
+        utm_term: values.utm_term || "",
+        utm_content: values.utm_content || "",
       };
 
       await createContacto(campaignData);
