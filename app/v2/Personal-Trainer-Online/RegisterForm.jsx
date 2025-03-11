@@ -60,7 +60,7 @@ const RegisterForm = () => {
   }, [session]);
 
   async function onSubmit(values) {
-    console.log('Form values:', values);
+   
     try {
       // Handle campaign registration here
       const campaignData = {
