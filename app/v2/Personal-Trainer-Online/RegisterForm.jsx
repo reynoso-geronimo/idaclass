@@ -60,6 +60,7 @@ const RegisterForm = () => {
   }, [session]);
 
   async function onSubmit(values) {
+    console.log('Form values:', values);
     try {
       // Handle campaign registration here
       const campaignData = {
@@ -67,6 +68,7 @@ const RegisterForm = () => {
         apellido: values.apellido,
         email: values.email,
         telefono: values.telefono,
+        curso: "Personal Trainer Online",
         utm_source: values.utm_source || "",
         utm_medium: values.utm_medium || "",
         utm_campaign: values.utm_campaign || "",
