@@ -15,6 +15,11 @@ const formSchema = z.object({
   nombre: z.string().min(1, { message: "Nombre es requerido" }),
   apellido: z.string().min(1, { message: "Apellido es requerido" }),
   telefono: z.string().min(8, { message: "Teléfono debe tener al menos 8 dígitos" }),
+  utm_source: z.string().optional(),
+  utm_medium: z.string().optional(),
+  utm_campaign: z.string().optional(),
+  utm_term: z.string().optional(),
+  utm_content: z.string().optional()
 });
 
 const RegisterForm = () => {
@@ -25,6 +30,11 @@ const RegisterForm = () => {
       apellido: "",
       email: "",
       telefono: "",
+      utm_source: "",
+      utm_medium: "",
+      utm_campaign: "",
+      utm_term: "",
+      utm_content: ""
     },
   });
   const [error, setError] = useState(null);
