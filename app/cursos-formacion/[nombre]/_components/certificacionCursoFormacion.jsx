@@ -18,16 +18,16 @@ import TituloSeccion from "@/components/ui/titulo-seccion";
 
 const CertificacionCursoFormacion = ({ nombre }) => {
   return (
-    <section className="container bg-gray-100 flex flex-col lg:flex-row lg:gap-4 items-center justify-center py-8">
+    <section className="container flex flex-col items-center justify-center py-8 bg-gray-100 lg:flex-row lg:gap-4">
       <div className="w-full lg:w-[320px]">
-        <TituloSeccion className="max-w-xs max-lg:text-2xl font-black mb-1 lg:text-left lg:ml-0 px-0">
+        <TituloSeccion className="max-w-xs px-0 mb-1 font-black max-lg:text-2xl lg:text-left lg:ml-0">
           Certifica tus Conocimientos
         </TituloSeccion>
-        <h3 className="text-center lg:text-left font-bold text-lg lg:text-xl text-idaclass4 mb-4">
+        <h3 className="mb-4 text-lg font-bold text-center lg:text-left lg:text-xl text-idaclass4">
           Accede a la doble <br className="max-lg:hidden" /> titulación
         </h3>
       </div>
-      <div className="w-full relative">
+      <div className="relative w-full">
         <Carousel
           className="w-[100%]"
           opts={{
@@ -42,7 +42,7 @@ const CertificacionCursoFormacion = ({ nombre }) => {
           ]}
         >
           <CarouselContent className="">
-            <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
+           {/*  <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
               <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
                   <Image
@@ -52,13 +52,12 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <div className="lg:text-xl font-medium">
+                  <div className="font-medium lg:text-xl">
                     Certificado <br /> de Extensión <br /> Universitaria IUYMCA
                   </div>
-                  {/* MODAL TRIGGER */}
-
+            
                   <Dialog>
-                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                    <DialogTrigger className="font-bold text-left max-lg:text-sm text-idaclass3">
                       VER CERTIFICADO
                     </DialogTrigger>
                     <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
@@ -74,7 +73,7 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                   </Dialog>
                 </div>
               </div>
-            </CarouselItem>
+            </CarouselItem> */}
             <CarouselItem className="max-sm:basis-[260px] basis-[320px] xl:basis-1/3">
               <div className="">
                 <div className="flex flex-col justify-end gap-2 w-auto max-[20rem] h-[180px] py-4 max-sm:px-3 px-6 bg-gradient-to-t from-[#3A5DAE] to-[#1D2F57] rounded-3xl text-white relative">
@@ -85,12 +84,12 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <span className="lg:text-xl font-medium ">
+                  <span className="font-medium lg:text-xl ">
                     Certificado <br /> IdaClass con <br /> autenticación QR
                   </span>
                   {/* MODAL TRIGGER */}
                   <Dialog>
-                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                    <DialogTrigger className="font-bold text-left max-lg:text-sm text-idaclass3">
                       VER CERTIFICADO
                     </DialogTrigger>
                     <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">
@@ -117,12 +116,12 @@ const CertificacionCursoFormacion = ({ nombre }) => {
                     alt="certificado"
                     className="absolute top-6 right-6"
                   />
-                  <span className="lg:text-xl font-medium ">
+                  <span className="font-medium lg:text-xl ">
                     Extra Certificado de <br /> 4 especializaciones <br />
                   </span>
                   {/* MODAL TRIGGER */}
                   <Dialog>
-                    <DialogTrigger className="max-lg:text-sm text-idaclass3 font-bold text-left">
+                    <DialogTrigger className="font-bold text-left max-lg:text-sm text-idaclass3">
                       VER CERTIFICADO
                     </DialogTrigger>
                     <DialogContent className="aspect-video bg-opacity-45 bg-black border-none backdrop-blur-md w-[60rem] max-w-[90vw]">

@@ -21,15 +21,15 @@ const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-
   ssr: false,
   loading: () => (
     <div className="text-white pt-[15%] lg:pt-12 container text-center bg-black h-[400px]">
-      <h3 className="text-idaclass3 text-4xl font-bold">CURSOS ESPECIALIZADOS</h3>
+      <h3 className="text-4xl font-bold text-idaclass3">CURSOS ESPECIALIZADOS</h3>
 
-      <ul className="list-inside list-disc my-2">
+      <ul className="my-2 list-disc list-inside">
         <li>Estudia a tu ritmo </li>
         <li>Expertos internacionales </li>
         <li>Elije tu area de especialización</li>
       </ul>
       <Link href={"/cursos-especializados"}>
-        <Button variants="lg" className="rounded-lg mt-4">
+        <Button variants="lg" className="mt-4 rounded-lg">
           Ver todos los cursos
         </Button>
       </Link>
@@ -40,7 +40,7 @@ export default async function Home() {
  
 
   return (
-    <main className="overflow-hidden flex flex-col">
+    <main className="flex flex-col overflow-hidden">
       <Hero />
       <PartnersEducativos />
       <Intro />
@@ -116,10 +116,10 @@ const preguntas = [
             <strong>Reconocimiento en el sector:</strong> Con más de 25 años de experiencia, nuestra certificación te
             destaca en el mercado laboral, tanto a nivel nacional como internacional.
           </li>
-          <li>
+        {/*   <li>
             <strong>Aval internacional:</strong> Respaldada por la universidad IUYMCA, presente en más de 100 países,
             nuestra certificación abre puertas en todo el mundo.
-          </li>
+          </li> */}
           <li>
             <strong>Certificación múltiple:</strong> Puedes obtener múltiples certificaciones según el programa que
             elijas, enriqueciendo tu CV.
@@ -162,7 +162,7 @@ const preguntas = [
       </div>
     ),
   },
-  {
+  /* {
     pregunta: (
       <p>¿Es obligatorio tener nivel secundario o educación media finalizados para realizar estas formaciones?</p>
     ),
@@ -172,7 +172,7 @@ const preguntas = [
         secundario o educación media aprobados y presentar los documentos que lo comprueben.
       </p>
     ),
-  },
+  }, */
   {
     pregunta: <p>¿Cuál es el porcentaje mínimo de asistencia?</p>,
     respuesta: (
