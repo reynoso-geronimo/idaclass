@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import Image from "next/image"
 
 export default function Testimoniales() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -98,10 +99,12 @@ export default function Testimoniales() {
               >
                 <CardContent className="p-8 space-y-6">
                   <div className="flex items-start space-x-4">
-                    <img
+                                        <Image
                       src={testimonial.avatar || "/placeholder.svg"}
                       alt={testimonial.name}
-                      className="flex-shrink-0 object-cover w-16 h-16 rounded-full"
+                      width={64}
+                      height={64}
+                      className="flex-shrink-0 object-cover rounded-full"
                     />
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
@@ -116,7 +119,7 @@ export default function Testimoniales() {
                       />
                     ))}
                   </div>
-                  <p className="text-base font-medium leading-relaxed text-gray-700">"{testimonial.text}"</p>
+                                    <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
                 </CardContent>
               </Card>
             ))}
@@ -134,10 +137,12 @@ export default function Testimoniales() {
                     <Card className="transition-shadow duration-300 bg-white border-0 shadow-md hover:shadow-lg rounded-3xl">
                       <CardContent className="p-8 space-y-6">
                         <div className="flex items-start space-x-4">
-                          <img
+                                                    <Image
                             src={testimonial.avatar || "/placeholder.svg"}
                             alt={testimonial.name}
-                            className="flex-shrink-0 object-cover w-16 h-16 rounded-full"
+                            width={64}
+                            height={64}
+                            className="flex-shrink-0 object-cover rounded-full"
                           />
                           <div className="flex-1">
                             <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
@@ -152,7 +157,7 @@ export default function Testimoniales() {
                             />
                           ))}
                         </div>
-                        <p className="text-base font-medium leading-relaxed text-gray-700">"{testimonial.text}"</p>
+                                          <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
                       </CardContent>
                     </Card>
                   </div>
