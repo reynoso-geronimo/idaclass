@@ -9,7 +9,7 @@ export default function Trainers() {
     {
       id: 1,
       name: "Juan Ariel Tejera",
-      role: "Personal Trainer",
+      role: "Magister en Alto Rendimiento Deportivo",
       image: "/v3/docentes/Ariel Tejera.jpg",
       social: {
         linkedin: "#",
@@ -20,7 +20,7 @@ export default function Trainers() {
     {
       id: 2,
       name: "Fernanda Garat",
-      role: "Personal Trainer",
+      role: "Lic. en Nutrición",
       image: "/v3/docentes/Fernanda Garat.jpg",
       social: {
         linkedin: "#",
@@ -30,8 +30,8 @@ export default function Trainers() {
     },
     {
       id: 3,
-      name: "Florencia Scarmato",
-      role: "Personal Trainer",
+      name: "Florencia Scarmano",
+      role: "Profesora Nacional de Educación Física",
       image: "/v3/docentes/Florencia Scarmato.jpg",
       social: {
         linkedin: "#",
@@ -42,7 +42,7 @@ export default function Trainers() {
     {
       id: 4,
       name: "Juan Manuel Renda",
-      role: "Personal Trainer",
+      role: "Lic. en Kinesiología y Fisiatría Magíster en Educación Física",
       image: "/v3/docentes/Juan Manuel Renda.jpg",
       social: {
         linkedin: "#",
@@ -53,7 +53,7 @@ export default function Trainers() {
     {
       id: 5,
       name: "Marcelo Ducca",
-      role: "Personal Trainer",
+      role: "Lic. en Educación Física",
       image: "/v3/docentes/Marcelo Ducca.jpg",
       social: {
         linkedin: "#",
@@ -64,7 +64,7 @@ export default function Trainers() {
     {
       id: 6,
       name: "Pablo Pascualini",
-      role: "Personal Trainer",
+      role: "Lic. en Educación Física",
       image: "/v3/docentes/Pablo Pascualini.jpg",
       social: {
         linkedin: "#",

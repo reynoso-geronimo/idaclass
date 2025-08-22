@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import Image from "next/image"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Testimoniales() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -17,6 +18,7 @@ export default function Testimoniales() {
       rating: 5,
       text: "Una gran experiencia, desde el contenido hasta la plataforma.",
       avatar: "/placeholder.svg?height=60&width=60",
+      pais: "ar",
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ export default function Testimoniales() {
       rating: 5,
       text: "Herramientas que me permitieron iniciar mi proyecto propio y crear una comunidad en redes sociales.",
       avatar: "/placeholder.svg?height=60&width=60",
+      pais: "uy",
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ export default function Testimoniales() {
       rating: 5,
       text: "Gracias por capacitarme con compromiso como instructora.",
       avatar: "/placeholder.svg?height=60&width=60",
+      pais: "ar",
     },
     {
       id: 4,
@@ -41,6 +45,7 @@ export default function Testimoniales() {
       rating: 5,
       text: "Recomiendo este prestigioso instituto para adquirir conocimientos sobre preparación física y salud.",
       avatar: "/placeholder.svg?height=60&width=60",
+      pais: "ar",
     },
   ]
 
@@ -81,7 +86,7 @@ export default function Testimoniales() {
         {/* Header */}
         <div className="mb-16 space-y-6 text-left">
           <h2 className="text-4xl font-bold text-gray-900 lg:text-5xl">
-            ¿Qué dicen <span className="text-cyan-400">nuestros<br/>alumnos?</span>
+            ¿Qué dicen <span className="text-cyan-400">nuestros<br />alumnos?</span>
           </h2>
           <p className="max-w-3xl text-lg lg:text-xl">
             Experiencias reales, resultados reales, de quienes ya completaron el curso y comenzaron su carrera.
@@ -99,13 +104,29 @@ export default function Testimoniales() {
               >
                 <CardContent className="p-8 space-y-6">
                   <div className="flex items-start space-x-4">
-                                        <Image
-                      src={testimonial.avatar || "/placeholder.svg"}
+                   {/*  <Image
+                      src={`https://flagcdn.com/${testimonial.pais}.svg`}
+
                       alt={testimonial.name}
                       width={64}
                       height={64}
-                      className="flex-shrink-0 object-cover rounded-full"
-                    />
+                      className="flex aspect-square object-cover rounded-full"
+                    /> */}
+                    <Avatar className="p-1 h-[60px] w-[60px] relative overflow-visible">
+                              <AvatarImage
+                                src={`https://flagcdn.com/${testimonial.pais}.svg`}
+                                alt={`${testimonial.pais ? testimonial.pais : "argentina"}`}
+                                className="rounded-full p-1 bg-gray-200 w-full h-auto"
+                              />
+                              <AvatarFallback className="text-black">{testimonial.pais}</AvatarFallback>
+                             {/*  <Image
+                                src={`https://flagcdn.com/${pais}.svg`}
+                                alt={`${pais ? pais : "argentina"}`}
+                                height={24}
+                                width={24}
+                                className="rounded-full absolute right-0 bottom-0 h-6 w-6"
+                              /> */}
+                            </Avatar>
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-gray-900">{testimonial.name}</h3>
                       <p className="mt-1 text-sm text-gray-500">{testimonial.date}</p>
@@ -119,7 +140,7 @@ export default function Testimoniales() {
                       />
                     ))}
                   </div>
-                                    <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
+                  <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
                 </CardContent>
               </Card>
             ))}
@@ -137,7 +158,7 @@ export default function Testimoniales() {
                     <Card className="transition-shadow duration-300 bg-white border-0 shadow-md hover:shadow-lg rounded-3xl">
                       <CardContent className="p-8 space-y-6">
                         <div className="flex items-start space-x-4">
-                                                    <Image
+                          <Image
                             src={testimonial.avatar || "/placeholder.svg"}
                             alt={testimonial.name}
                             width={64}
@@ -157,7 +178,7 @@ export default function Testimoniales() {
                             />
                           ))}
                         </div>
-                                          <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
+                        <p className="text-base font-medium leading-relaxed text-gray-700">&quot;{testimonial.text}&quot;</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -177,9 +198,8 @@ export default function Testimoniales() {
                   <button
                     key={i}
                     onClick={() => goToSlide(i)}
-                    className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                      i === currentSlide ? "bg-cyan-400 scale-110" : "bg-gray-300 hover:bg-gray-400"
-                    }`}
+                    className={`w-4 h-4 rounded-full transition-all duration-300 ${i === currentSlide ? "bg-cyan-400 scale-110" : "bg-gray-300 hover:bg-gray-400"
+                      }`}
                   />
                 ))}
               </div>

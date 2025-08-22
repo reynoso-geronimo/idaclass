@@ -20,7 +20,8 @@ const page = () => {
       <Programa />
       <Testimoniales />
       <Certificacion />
-      <div className="container flex flex-wrap items-stretch justify-center gap-12 mb-12">
+      <div className="container flex flex-wrap items-stretch justify-center gap-12 mb-12"
+      id="form">
         <OfertaExclusiva  />  <RegisterForm/></div>
       
       <FechasHorarios />

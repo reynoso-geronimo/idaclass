@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Certificacion() {
   const benefits = [
@@ -72,6 +73,7 @@ export default function Certificacion() {
 
               {/* CTA Button */}
               <div className="pt-4">
+                <Link href="#form">
                 <Button
                   size="lg"
                   className="px-8 py-4 text-lg text-black font-semibold transition-all duration-300 rounded-full shadow-xl bg-gradient-to-r from-[#22B0E6] to-[#3A5DAE] hover:shadow-2xl hover:scale-105"
@@ -79,6 +81,7 @@ export default function Certificacion() {
                   Comprar curso
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

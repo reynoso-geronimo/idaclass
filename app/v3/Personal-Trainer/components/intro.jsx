@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dumbbell, ClipboardCheck, Heart, FolderCheck, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function FitnessCourse() {
   const features = [
@@ -60,7 +61,7 @@ export default function FitnessCourse() {
           <p className="max-w-2xl mx-auto text-lg font-medium text-gray-800 md:text-xl">
             Todo esto y más en un curso que te prepara para vivir del fitness
           </p>
-
+          <Link href="#form">
           <Button
             size="lg"
             className="px-8 py-4 text-lg font-semibold text-white transition-all duration-300 bg-black rounded-full shadow-xl hover:bg-gray-800 hover:shadow-2xl hover:scale-105"
@@ -68,6 +69,7 @@ export default function FitnessCourse() {
             ¡Quiero inscribirme!
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
+          </Link>
         </div>
       </div>
     </div>

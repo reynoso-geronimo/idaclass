@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Programa() {
   const units = [
@@ -94,12 +95,13 @@ export default function Programa() {
               <p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
                 Con clases en vivo (2 horas semanales), grabaciones disponibles, tutorías y materiales descargables.
               </p>
-
               <Button
                 size="lg"
                 className="px-8 py-4 text-lg font-semibold text-black transition-all duration-300 rounded-full shadow-xl bg-gradient-to-r from-[#22B0E6] to-[#3A5DAE] hover:bg-cyan-600 hover:shadow-2xl hover:scale-105"
               >
+              <Link href="#form">
                 Comprar curso
+              </Link>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>

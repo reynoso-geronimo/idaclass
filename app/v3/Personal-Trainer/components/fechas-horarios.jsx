@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function FechasHorarios() {
   const cursos = [
@@ -75,7 +76,7 @@ export default function FechasHorarios() {
                       <span className="text-xl">🔥</span>
                     </div>
                   )}
-
+                  <Link href="#form">
                   <Button
                     className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-full text-base md:text-lg font-medium transition-colors duration-200"
                     disabled={curso.estado === "agotado"}
@@ -83,6 +84,7 @@ export default function FechasHorarios() {
                     Comprar curso
                     <span className="ml-2">→</span>
                   </Button>
+                  </Link>
                 </div>
               </div>
             </Card>

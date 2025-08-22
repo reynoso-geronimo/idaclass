@@ -19,7 +19,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
   const { data: session, status } = useSession();
 
   const pathname = decodeURIComponent(usePathname());
-  if (pathname.includes("v2")) return null;
+  if (pathname.includes("v2") || pathname.includes("v3")) return null;
   return (
     <header className="sticky top-0 z-40 bg-black text-white">
       {/* <Promobar /> */}

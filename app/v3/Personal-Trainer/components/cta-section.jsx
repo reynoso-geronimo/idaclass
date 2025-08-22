@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CtaSection() {
   return (
@@ -19,9 +20,12 @@ export default function CtaSection() {
         <Button
           size="lg"
           className="px-10 py-6 text-xl font-semibold text-black transition-all duration-300 bg-white rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl hover:scale-105"
+          asChild
         >
+        <Link href="#form" >
           ¡Inscribirme ahora!
           <ArrowRight className="w-6 h-6 ml-3" />
+        </Link>
         </Button>
       </div>
     </div>

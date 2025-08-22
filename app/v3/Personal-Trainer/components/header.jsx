@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import StatisticsCard from "./statistics-card";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -21,9 +22,11 @@ const Header = () => {
         <h3 className="text-md">Doble certificación con aval internacional</h3>
         <h3 className="text-md">Clases en vivo + materiales grabados</h3>
         <h3 className="text-md">Práctica real y desarrollo de proyectos propios</h3>
+        <Link href="#form">
         <Badge className="flex gap-2 px-4 py-1.5 text-lg bg-black hover:bg-black/80 w-fit">
           Comprar Curso <ArrowRight size={18} />
         </Badge>
+        </Link>
       </div>
       <div className="relative hidden md:block">
         <Image src="/v3/header-desktop.png" alt="Personal Trainer" width={600} height={600} />

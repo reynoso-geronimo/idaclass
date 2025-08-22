@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = decodeURIComponent(usePathname());
-  if (pathname.includes("v2")) return null;
+  if (pathname.includes("v2") || pathname.includes("v3")) return null;
   return (
     <footer className="bg-black w-full flex flex-col md:flex-row flex-wrap justify-evenly items-center pt-8 pb-2 text-white text-center">
       <section className="flex flex-col items-center">
