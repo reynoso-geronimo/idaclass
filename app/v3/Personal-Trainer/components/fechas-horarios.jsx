@@ -6,24 +6,24 @@ export default function FechasHorarios() {
   const cursos = [
     {
       id: 1,
-      fechaInicio: "04/08/2025",
+      fechaInicio: "06/10/2025",
       horarios: "Lunes de 20 a 22hs",
       estado: "agotado",
       lugares: null,
     },
     {
       id: 2,
-      fechaInicio: "09/08/2025",
+      fechaInicio: "04/10/2025",
       horarios: "Sábados 19:00 a 21:00 hs",
       estado: "disponible",
       lugares: 9,
     },
     {
       id: 3,
-      fechaInicio: "12/08/2025",
+      fechaInicio: "07/10/2025",
       horarios: "Martes 9:00 a 11:00 hs",
       estado: "disponible",
-      lugares: 9,
+      lugares: 5,
     },
   ]
 
@@ -67,10 +67,10 @@ export default function FechasHorarios() {
                 {/* Status and Button */}
                 <div className="flex flex-col items-center md:items-end gap-3 md:gap-4">
                   {curso.estado === "agotado" ? (
-                    <span className="text-lg md:text-xl font-medium text-gray-700">Agotado</span>
+                    <span className="text-lg md:text-xl font-bold text-red-600">Agotado</span>
                   ) : (
                     <div className="flex items-center gap-2">
-                      <span className="text-lg md:text-xl font-medium text-gray-700">
+                      <span className="text-lg md:text-xl font-bold text-red-600">
                         Quedan {curso.lugares} lugares
                       </span>
                       <span className="text-xl">🔥</span>
