@@ -10,9 +10,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import RegisterToView from "./components/RegisterToView";
 import CampaignForm from "@/app/v2/components/campaignForm";
+import { redirect } from "next/navigation";
 export const revalidate = 360;
 
 const page = async ({ params }) => {
+  if (params.id === '9') {
+    redirect('/comunidad/Transforma-Tu-Pasion-en-Profesion-de-Impacto');
+  }
+
   const evento = await getEventoFromDB(params.id);
 
   const contenido = process.env.dev === "true" ? JSON.parse(evento.cuerpo) : evento.cuerpo;
