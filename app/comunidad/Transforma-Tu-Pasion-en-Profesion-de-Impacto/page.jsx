@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { z } from 'zod'
 
 const heroStats = [
   { icon: '🎯', value: '2,847', label: 'Ya Registrados' },
@@ -133,7 +134,112 @@ const faqItems = [
   },
 ]
 
+const registroSchema = z.object({
+  nombre: z.string().min(2, 'Ingresa al menos 2 caracteres'),
+  apellido: z.string().min(2, 'Ingresa al menos 2 caracteres'),
+  email: z.string().email('Ingresa un email válido'),
+})
+
 const Page = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', email: '' })
+  const [formErrors, setFormErrors] = useState({ nombre: '', apellido: '', email: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const handleChange = evt => {
+    const { name, value } = evt.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    setFormErrors(prev => ({ ...prev, [name]: '' }))
+    setSubmitError('')
+  }
+
+  const handleSubmit = async evt => {
+    evt.preventDefault()
+    setSubmitError('')
+    setSubmitSuccess(false)
+    
+    const result = registroSchema.safeParse(formData)
+
+    if (!result.success) {
+      const fieldErrors = { nombre: '', apellido: '', email: '' }
+      result.error.errors.forEach(err => {
+        const fieldName = err.path[0]
+        if (fieldName in fieldErrors) {
+          fieldErrors[fieldName] = err.message
+        }
+      })
+      setFormErrors(fieldErrors)
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/registro-evento', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(result.data),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        if (response.status === 409) {
+          setSubmitError('Este email ya está registrado. Revisa tu correo para el acceso al evento.')
+        } else if (data.details) {
+          // Si hay errores de validación del servidor
+          const fieldErrors = { nombre: '', apellido: '', email: '' }
+          data.details.forEach(err => {
+            const fieldName = err.path[0]
+            if (fieldName in fieldErrors) {
+              fieldErrors[fieldName] = err.message
+            }
+          })
+          setFormErrors(fieldErrors)
+        } else {
+          setSubmitError(data.error || 'Error al registrar. Por favor intenta nuevamente.')
+        }
+        setIsSubmitting(false)
+        return
+      }
+
+      // Éxito
+      setSubmitSuccess(true)
+      setFormData({ nombre: '', apellido: '', email: '' })
+      
+      // Cerrar el diálogo después de 2 segundos
+      setTimeout(() => {
+        setIsDialogOpen(false)
+        setSubmitSuccess(false)
+      }, 2000)
+
+    } catch (error) {
+      console.error('Error al enviar formulario:', error)
+      setSubmitError('Error de conexión. Por favor intenta nuevamente.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const resetForm = () => {
+    setFormData({ nombre: '', apellido: '', email: '' })
+    setFormErrors({ nombre: '', apellido: '', email: '' })
+    setSubmitError('')
+    setSubmitSuccess(false)
+  }
+
+  const openDialog = () => {
+    resetForm()
+    setIsDialogOpen(true)
+  }
+  const closeDialog = () => {
+    setIsDialogOpen(false)
+    setTimeout(() => resetForm(), 300) // Reset después de la animación
+  }
   useEffect(() => {
     const fadeEls = Array.from(document.querySelectorAll('.js-fade'))
     const faqToggles = Array.from(document.querySelectorAll('.js-faq-toggle'))
@@ -231,12 +337,13 @@ const Page = () => {
             ))}
           </div>
           <div className="mt-10 flex items-center flex-wrap justify-center gap-4">
-            <a
-              href="#registro"
+            <button
+              type="button"
+              onClick={openDialog}
               className="rounded-full bg-idaclass4 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-idaclass4/30 transition hover:-translate-y-0.5 hover:bg-idaclass3"
             >
               Asegura tu lugar ahora
-            </a>
+            </button>
             <span className="text-sm text-slate-200">✓ Acceso 100% Gratuito · ✓ Certificado de Participación · ✓ Becas Exclusivas</span>
           </div>
         </div>
@@ -446,12 +553,13 @@ const Page = () => {
             <span className="font-semibold">Regístrate ahora y sé parte del movimiento más grande de la industria fitness.</span>
           </p>
           <div className="mt-8 flex flex-col items-center gap-4">
-            <a
-              href="#registro"
+            <button
+              type="button"
+              onClick={openDialog}
               className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-idaclass4 shadow-xl shadow-black/20 transition hover:-translate-y-0.5"
             >
               Asegura tu Lugar - 100% Gratis
-            </a>
+            </button>
             <div className="rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur">
               ✓ Acceso Completo | ✓ Certificado Digital | ✓ Becas en Vivo | ✓ Q&A Exclusivo
             </div>
@@ -479,6 +587,121 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      {isDialogOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={closeDialog} />
+          <div className="relative z-10 w-full max-w-lg rounded-2xl bg-white p-8 text-slate-900 shadow-2xl">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass4">Regístrate</p>
+                <h3 className="mt-2 text-2xl font-bold text-idaclass5">Reserva tu lugar ahora</h3>
+                <p className="mt-1 text-sm text-slate-600">Completa tus datos y te enviaremos el acceso al streaming.</p>
+              </div>
+              <button
+                type="button"
+                onClick={closeDialog}
+                className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-600 hover:bg-slate-200"
+                aria-label="Cerrar formulario de registro"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+              <div>
+                <label className="text-sm font-semibold text-slate-800" htmlFor="nombre">
+                  Nombre
+                </label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  required
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  className={`mt-2 w-full rounded-xl border bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-idaclass4 focus:outline-none focus:ring-2 focus:ring-idaclass4/30 ${
+                    formErrors.nombre ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-200'
+                  }`}
+                  placeholder="Tu nombre"
+                />
+                {formErrors.nombre && <p className="mt-1 text-xs text-red-500">{formErrors.nombre}</p>}
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-slate-800" htmlFor="apellido">
+                  Apellido
+                </label>
+                <input
+                  id="apellido"
+                  name="apellido"
+                  type="text"
+                  required
+                  value={formData.apellido}
+                  onChange={handleChange}
+                  className={`mt-2 w-full rounded-xl border bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-idaclass4 focus:outline-none focus:ring-2 focus:ring-idaclass4/30 ${
+                    formErrors.apellido ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-200'
+                  }`}
+                  placeholder="Tu apellido"
+                />
+                {formErrors.apellido && <p className="mt-1 text-xs text-red-500">{formErrors.apellido}</p>}
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-slate-800" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`mt-2 w-full rounded-xl border bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-idaclass4 focus:outline-none focus:ring-2 focus:ring-idaclass4/30 ${
+                    formErrors.email ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-200'
+                  }`}
+                  placeholder="tu@email.com"
+                />
+                {formErrors.email && <p className="mt-1 text-xs text-red-500">{formErrors.email}</p>}
+              </div>
+              
+              {submitSuccess && (
+                <div className="rounded-xl bg-green-50 border border-green-200 p-4 text-center">
+                  <p className="text-sm font-semibold text-green-800">✓ ¡Registro exitoso!</p>
+                  <p className="text-xs text-green-600 mt-1">Te enviaremos el acceso al streaming a tu email.</p>
+                </div>
+              )}
+              
+              {submitError && (
+                <div className="rounded-xl bg-red-50 border border-red-200 p-4">
+                  <p className="text-sm font-semibold text-red-800">Error</p>
+                  <p className="text-xs text-red-600 mt-1">{submitError}</p>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting || submitSuccess}
+                className="flex w-full items-center justify-center rounded-full bg-idaclass4 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-idaclass4/30 transition hover:-translate-y-0.5 hover:bg-idaclass3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Procesando...
+                  </>
+                ) : submitSuccess ? (
+                  '✓ Registrado'
+                ) : (
+                  'Enviar y recibir acceso'
+                )}
+              </button>
+              <p className="text-center text-xs text-slate-500">Tus datos están protegidos. Solo los usaremos para enviarte la información del evento.</p>
+            </form>
+          </div>
+        </div>
+      )}
 
      {/*  <footer className="border-t border-slate-800 bg-slate-950 px-4 py-10 text-center text-slate-200">
         <div className="text-3xl font-semibold tracking-widest text-idaclass4">
