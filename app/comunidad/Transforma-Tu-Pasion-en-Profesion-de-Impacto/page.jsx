@@ -4,31 +4,31 @@ import React, { useEffect, useState } from 'react'
 import { z } from 'zod'
 
 const heroStats = [
-  { icon: '🎯', value: '2,847', label: 'Ya Registrados' },
-  { icon: '🌎', value: '40+', label: 'Sedes Confirmadas' },
-  { icon: '🏆', value: '12+', label: 'Empresas Aliadas' },
+  { icon: '🎯', value: '506', label: 'Ya Registrados' },
+  { icon: '🌎', value: '30+', label: 'Sedes Confirmadas' },
+  { icon: '🏆', value: '10+', label: 'Empresas Top Aliadas' },
 ]
 
 const pillars = [
   {
     icon: '💼',
     title: 'Oportunidades Reales',
-    text: 'Casos de éxito reales de profesionales que transformaron su pasión en carreras rentables. Conoce las rutas probadas hacia el éxito.',
+    text: 'Descubre cómo personal trainers construyeron carreras rentables transformando vidas. Estrategias, resultados medibles, caminos que funcionan.',
   },
   {
     icon: '🤝',
-    title: 'Respaldo Global',
-    text: 'Formación avalada por las empresas líderes del sector. Tu certificación tiene el respaldo de toda la industria unida.',
+    title: 'Metodo probado',
+    text: '+ 80 % de empleabilidad formación que garantiza conocimiento, experiencia y resultado',
   },
   {
     icon: '📈',
-    title: 'Crecimiento Sin Riesgo',
-    text: 'Aprende de los errores de otros. Estrategias validadas que minimizan el fracaso y aceleran tu desarrollo profesional.',
+    title: 'Crecimiento acelerado',
+    text: 'Estrategias validadas, descubre el camino más directo hacia tu desarrollo profesional con métodos que funcionan desde el día 1.',
   },
   {
     icon: '🌟',
-    title: 'Comunidad Activa',
-    text: 'Más fuerte juntos. Accede a una red de 40+ gimnasios y profesionales comprometidos con tu éxito mutuo.',
+    title: 'Red de oportunidades',
+    text: 'Se parte del ecosistema donde 30+ gimnasios, empresas líderes y expertos colaboran activamente para tu inserción profesional. Tu red se construye mientras estudias.',
   },
 ]
 
@@ -316,7 +316,7 @@ const Page = () => {
             Transforma Tu Pasión en <span className="text-idaclass2">Profesión de Impacto</span>
           </h1>
           <p className="js-fade mb-8 max-w-3xl text-lg text-slate-200 opacity-0 transition duration-700 md:text-xl">
-            Únete al movimiento que está redefiniendo los estándares educativos del fitness.{' '}
+            Se parte del movimiento que está revolucionando el fitness.{' '}
             <span className="font-semibold text-white">Descubre cómo convertir tu pasión en una carrera que transforma vidas.</span>
           </p>
           <p className="js-fade mb-8 text-xl font-semibold text-idaclass2 opacity-0 transition duration-700">
@@ -344,12 +344,13 @@ const Page = () => {
             >
               Asegura tu lugar ahora
             </button>
-            <span className="text-sm text-slate-200">✓ Acceso 100% Gratuito · ✓ Certificado de Participación · ✓ Becas Exclusivas</span>
+            <span className="text-sm text-slate-200">✓ Acceso 100% Gratuito · ✓ Beneficios Exclusivos · ✓ Becas </span>
           </div>
         </div>
       </section>
 
       <section className="bg-slate-50 text-slate-900">
+      <h2 className="pt-6 text-4xl font-bold md:text-5xl mx-auto text-center">Estas en el momento perfecto</h2>
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 md:grid-cols-2">
           {pillars.map(pillar => (
             <article
@@ -358,13 +359,13 @@ const Page = () => {
             >
               <div className="mb-4 text-4xl">{pillar.icon}</div>
               <h3 className="mb-3 text-2xl font-bold text-idaclass5">{pillar.title}</h3>
-              <p className="text-slate-600">{pillar.text}</p>
+              <p className="text-slate-600 text-pretty">{pillar.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-950">
+{/*       <section className="relative overflow-hidden bg-slate-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,136,202,0.18),transparent_45%)]" />
         <div className="relative mx-auto max-w-6xl px-4 py-16">
           <div className="text-center">
@@ -377,6 +378,79 @@ const Page = () => {
                 <div className="mb-3 text-4xl drop-shadow">{item.icon}</div>
                 <h3 className="mb-2 text-xl font-semibold text-idaclass2">{item.title}</h3>
                 <p className="text-sm text-slate-200">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      
+      <section className="relative overflow-hidden bg-slate-950">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,136,202,0.18),transparent_45%)]" />
+        <div className="mx-auto max-w-6xl px-4 py-16">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2 text-center">Respaldo global</p>
+        <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl text-center">Toda la Industria Unida Por Primera Vez</h2>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-white">
+            30+ gimnasios, empresas líderes, casos de éxito comprobados y la nueva generación de entrenadores revelando lo que funciona HOY en el mercado
+            fitness.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: '🏋️',
+                title: 'Red de Gimnasios',
+                items: ['+30 Sedes Confirmadas','Pasantía y Práctica Real', 'Inserción Laboral Garantizada'],
+              },
+              {
+                icon: '🏢',
+                title: 'Empresas Aliadas',
+                items: ['Marcas Top del Sector', 'Equipamiento y Accesorios', 'Beneficios Exclusivos'],
+              },
+              {
+                icon: '🎯',
+                title: 'Casos de Éxito',
+                items: [ 'Transformaciones Reales', 'Modelos de Negocio Validados', 'Números y Estrategias'],
+              },
+              {
+                icon: '⚡',
+                title: 'Nueva Generación',
+                items: ['Influencers del Fitness', 'Marketing Digital Fitness', 'Nichos en Crecimiento'],
+              },
+            ].map(block => (
+              <article key={block.title} className="rounded-2xl border border-idaclass4/30 bg-white/5 p-6 backdrop-blur">
+                <div className="mb-3 text-4xl drop-shadow">{block.icon}</div>
+                <h3 className="mb-2 text-xl font-semibold text-idaclass2">{block.title}</h3>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {block.items.map(item => (
+                    <li key={item} className="flex gap-2 text-slate-200">
+                      <span className="text-idaclass4">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <p className="mx-auto mt-10 max-w-3xl text-center text-base text-slate-200">
+            <span className="font-semibold text-idaclass2">Esto es histórico:</span> Por primera vez, toda la cadena de valor del fitness (gimnasios, marcas,
+            educadores, profesionales) se sienta en la misma mesa para compartir conocimiento sin competencia.{' '}
+            <span className="font-semibold text-slate-200">Solo colaboración.</span>
+          </p>
+        </div>
+      </section>
+      <section className="bg-slate-900 text-slate-100">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2">Programa del evento</p>
+          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 9 de Enero</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {expectItems.map(item => (
+              <article
+                key={item.number}
+                className="js-fade rounded-2xl border border-idaclass4/30 bg-white/5 p-6 opacity-0 transition duration-700 hover:-translate-y-1 hover:border-idaclass4/60 hover:bg-white/10"
+              >
+                <div className="text-5xl font-bold text-idaclass2">{item.number}</div>
+                <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm text-slate-200">{item.text}</p>
               </article>
             ))}
           </div>
@@ -400,7 +474,7 @@ const Page = () => {
             “Tu pasión te transforma. Tu formación cambia vidas.”
           </blockquote>
           <p className="text-lg text-slate-200">
-            Por eso convocamos a <span className="font-semibold text-white">40+ gimnasios</span>, <span className="font-semibold text-white">empresas líderes</span>,{' '}
+            Por eso convocamos a <span className="font-semibold text-white">30+ gimnasios</span>, <span className="font-semibold text-white">empresas líderes</span>,{' '}
             <span className="font-semibold text-white">casos de éxito reales</span> y la <span className="font-semibold text-white">nueva generación de entrenadores</span> para crear algo
             inédito: <span className="font-semibold text-white">un movimiento donde el éxito individual alimenta el crecimiento colectivo</span>.
           </p>
@@ -422,77 +496,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50 text-slate-900">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-idaclass4">Respaldo global</p>
-          <h2 className="mt-3 text-center text-4xl font-bold text-idaclass5 md:text-5xl">Toda la Industria Unida Por Primera Vez</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-slate-600">
-            40+ gimnasios, empresas líderes, casos de éxito comprobados y la nueva generación de entrenadores revelando lo que funciona HOY en el mercado
-            fitness.
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: '🏋️',
-                title: 'Red de Gimnasios',
-                items: ['+40 Sedes Confirmadas', 'Presencia en Toda Latinoamérica', 'Oportunidades de Práctica Real', 'Inserción Laboral Garantizada'],
-              },
-              {
-                icon: '🏢',
-                title: 'Empresas Aliadas',
-                items: ['Marcas Top del Sector', 'Equipamiento y Tecnología', 'Certificaciones Avaladas', 'Beneficios Exclusivos'],
-              },
-              {
-                icon: '🎯',
-                title: 'Casos de Éxito',
-                items: ['Emprendedores Rentables', 'Transformaciones Reales', 'Modelos de Negocio Validados', 'Números y Estrategias'],
-              },
-              {
-                icon: '⚡',
-                title: 'Nueva Generación',
-                items: ['Influencers del Fitness', 'Tendencias Emergentes', 'Marketing Digital Fitness', 'Nichos en Crecimiento'],
-              },
-            ].map(block => (
-              <article key={block.title} className="rounded-2xl border border-idaclass4/20 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="mb-3 text-3xl">{block.icon}</div>
-                <h3 className="mb-3 text-lg font-semibold text-idaclass5">{block.title}</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {block.items.map(item => (
-                    <li key={item} className="flex gap-2">
-                      <span className="text-idaclass4">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-          <p className="mx-auto mt-10 max-w-3xl text-center text-base text-slate-600">
-            <span className="font-semibold text-idaclass4">Esto es histórico:</span> Por primera vez, toda la cadena de valor del fitness (gimnasios, marcas,
-            educadores, profesionales) se sienta en la misma mesa para compartir conocimiento sin competencia.{' '}
-            <span className="font-semibold text-slate-900">Solo colaboración.</span>
-          </p>
-        </div>
-      </section>
 
-      <section className="bg-slate-900 text-slate-100">
-        <div className="mx-auto max-w-6xl px-4 py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2">Programa del evento</p>
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 9 de Enero</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {expectItems.map(item => (
-              <article
-                key={item.number}
-                className="js-fade rounded-2xl border border-idaclass4/30 bg-white/5 p-6 opacity-0 transition duration-700 hover:-translate-y-1 hover:border-idaclass4/60 hover:bg-white/10"
-              >
-                <div className="text-5xl font-bold text-idaclass2">{item.number}</div>
-                <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm text-slate-200">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-idaclass5/70 to-slate-950 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(116,209,234,0.16),transparent_55%),radial-gradient(circle_at_80%_50%,rgba(0,136,202,0.12),transparent_55%)]" />
@@ -501,9 +505,9 @@ const Page = () => {
           <h2 className="mt-4 text-4xl font-bold md:text-5xl">Miles Ya Decidieron. ¿Y Tú?</h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             {[
-              { value: '2,847', label: 'Profesionales Registrados' },
-              { value: '40+', label: 'Gimnasios Confirmados' },
-              { value: '12+', label: 'Empresas Participantes' },
+              { value: '506', label: 'Profesionales Registrados' },
+              { value: '30+', label: 'Gimnasios Confirmados' },
+              { value: '10+', label: 'Empresas Participantes' },
             ].map(item => (
               <div key={item.label} className="rounded-2xl border border-idaclass4/30 bg-white/5 p-6 backdrop-blur">
                 <div className="text-4xl font-bold text-idaclass2">{item.value}</div>
@@ -514,8 +518,8 @@ const Page = () => {
           <p className="mt-8 text-lg text-slate-200">
             Mientras lees esto, instructores en gimnasios, entrenadores personales, y emprendedores fitness están asegurando su lugar en el movimiento que definirá 2026.
           </p>
-          <div className="mt-6 rounded-xl border-l-4 border-idaclass4 bg-white/5 p-6 text-left text-base text-slate-100">
-            <span className="font-semibold text-white">No es FOMO. Es inteligencia de mercado.</span> Quienes llegan primero a las nuevas oportunidades, las capitalizan.
+          <div className="mt-6 rounded-xl border-l-4 border-idaclass4 bg-white/5 p-6 text-left text-slate-100 text-xl">
+           Quienes llegan primero a las nuevas oportunidades, las capitalizan.
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {fomoTestimonials.map(item => (
@@ -532,7 +536,7 @@ const Page = () => {
         <div className="mx-auto grid max-w-5xl gap-6 px-4 py-16 sm:grid-cols-2">
           {[
             { value: '25', label: 'Años de Trayectoria' },
-            { value: '40+', label: 'Gimnasios Asociados' },
+            { value: '30+', label: 'Gimnasios Asociados' },
             { value: '10.26%', label: 'Crecimiento Anual del Sector' },
             { value: '100%', label: 'Gratuito y Accesible' },
           ].map(item => (
