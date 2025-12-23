@@ -6,6 +6,7 @@ const registroSchema = z.object({
   nombre: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
   apellido: z.string().min(2, 'El apellido debe tener al menos 2 caracteres'),
   email: z.string().email('Debe ser un email válido'),
+  telefono: z.string().min(8, 'El teléfono debe tener al menos 8 caracteres').regex(/^[0-9+\-\s()]+$/, 'El teléfono solo puede contener números y caracteres permitidos'),
 });
 
 export async function POST(request) {
@@ -26,7 +27,7 @@ export async function POST(request) {
       );
     }
 
-    const { nombre, apellido, email } = validation.data;
+    const { nombre, apellido, email, telefono } = validation.data;
 
     // Verificar si el email ya existe
     const existeRegistro = await RegistroEvento.findOne({ 
@@ -48,6 +49,7 @@ export async function POST(request) {
       nombre: nombre.trim(),
       apellido: apellido.trim(),
       email: email.toLowerCase().trim(),
+      telefono: telefono.trim(),
     });
 
     return NextResponse.json(
@@ -58,7 +60,8 @@ export async function POST(request) {
           id: nuevoRegistro.id,
           nombre: nuevoRegistro.nombre,
           apellido: nuevoRegistro.apellido,
-          email: nuevoRegistro.email
+          email: nuevoRegistro.email,
+          telefono: nuevoRegistro.telefono
         }
       },
       { status: 201 }

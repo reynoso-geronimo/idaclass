@@ -138,12 +138,13 @@ const registroSchema = z.object({
   nombre: z.string().min(2, 'Ingresa al menos 2 caracteres'),
   apellido: z.string().min(2, 'Ingresa al menos 2 caracteres'),
   email: z.string().email('Ingresa un email válido'),
+  telefono: z.string().min(8, 'Ingresa un teléfono válido').regex(/^[0-9+\-\s()]+$/, 'El teléfono solo puede contener números y caracteres permitidos'),
 })
 
 const Page = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const [formData, setFormData] = useState({ nombre: '', apellido: '', email: '' })
-  const [formErrors, setFormErrors] = useState({ nombre: '', apellido: '', email: '' })
+  const [formData, setFormData] = useState({ nombre: '', apellido: '', email: '', telefono: '' })
+  const [formErrors, setFormErrors] = useState({ nombre: '', apellido: '', email: '', telefono: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
   const [submitSuccess, setSubmitSuccess] = useState(false)
@@ -163,7 +164,7 @@ const Page = () => {
     const result = registroSchema.safeParse(formData)
 
     if (!result.success) {
-      const fieldErrors = { nombre: '', apellido: '', email: '' }
+      const fieldErrors = { nombre: '', apellido: '', email: '', telefono: '' }
       result.error.errors.forEach(err => {
         const fieldName = err.path[0]
         if (fieldName in fieldErrors) {
@@ -192,7 +193,7 @@ const Page = () => {
           setSubmitError('Este email ya está registrado. Revisa tu correo para el acceso al evento.')
         } else if (data.details) {
           // Si hay errores de validación del servidor
-          const fieldErrors = { nombre: '', apellido: '', email: '' }
+          const fieldErrors = { nombre: '', apellido: '', email: '', telefono: '' }
           data.details.forEach(err => {
             const fieldName = err.path[0]
             if (fieldName in fieldErrors) {
@@ -209,7 +210,7 @@ const Page = () => {
 
       // Éxito
       setSubmitSuccess(true)
-      setFormData({ nombre: '', apellido: '', email: '' })
+      setFormData({ nombre: '', apellido: '', email: '', telefono: '' })
       
       // Cerrar el diálogo después de 2 segundos
       setTimeout(() => {
@@ -226,8 +227,8 @@ const Page = () => {
   }
 
   const resetForm = () => {
-    setFormData({ nombre: '', apellido: '', email: '' })
-    setFormErrors({ nombre: '', apellido: '', email: '' })
+    setFormData({ nombre: '', apellido: '', email: '', telefono: '' })
+    setFormErrors({ nombre: '', apellido: '', email: '', telefono: '' })
     setSubmitError('')
     setSubmitSuccess(false)
   }
@@ -666,6 +667,24 @@ const Page = () => {
                   placeholder="tu@email.com"
                 />
                 {formErrors.email && <p className="mt-1 text-xs text-red-500">{formErrors.email}</p>}
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-slate-800" htmlFor="telefono">
+                  Teléfono
+                </label>
+                <input
+                  id="telefono"
+                  name="telefono"
+                  type="tel"
+                  required
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  className={`mt-2 w-full rounded-xl border bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-idaclass4 focus:outline-none focus:ring-2 focus:ring-idaclass4/30 ${
+                    formErrors.telefono ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-200'
+                  }`}
+                  placeholder="+54 9 11 1234-5678"
+                />
+                {formErrors.telefono && <p className="mt-1 text-xs text-red-500">{formErrors.telefono}</p>}
               </div>
               
               {submitSuccess && (

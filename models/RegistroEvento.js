@@ -20,6 +20,10 @@ const RegistroEvento = sequelize.define('registros_evento', {
         allowNull: false,
         unique: true
     },
+    telefono: {
+        type: DataTypes.STRING(20),
+        allowNull: false
+    },
     created_at: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
