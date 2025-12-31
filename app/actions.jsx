@@ -13,6 +13,7 @@ import checkoutNodeJssdk from "@paypal/checkout-server-sdk";
 import User from "@/models/User";
 import Speaker from "@/models/Speaker";
 import Contacto from "@/models/Contacto";
+import RegistroEvento from "@/models/RegistroEvento";
 
 export async function getCursos() {
   try {
@@ -405,6 +406,19 @@ export async function getAllContactosFromDB() {
   try {
     const response = await Contacto.findAll();
     const data = response.map(contacto => contacto.toJSON());
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getAllRegistrosEventoFromDB() {
+  try {
+    const response = await RegistroEvento.findAll({
+      order: [['created_at', 'DESC']]
+    });
+    const data = response.map(registro => registro.toJSON());
 
     return data;
   } catch (error) {

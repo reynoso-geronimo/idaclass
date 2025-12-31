@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react'
 import { z } from 'zod'
+import { PhoneInput } from '@/components/ui/phone-input'
+import { cn } from '@/lib/utils'
 
 const heroStats = [
   { icon: '🎯', value: '506', label: 'Ya Registrados' },
@@ -138,7 +140,7 @@ const registroSchema = z.object({
   nombre: z.string().min(2, 'Ingresa al menos 2 caracteres'),
   apellido: z.string().min(2, 'Ingresa al menos 2 caracteres'),
   email: z.string().email('Ingresa un email válido'),
-  telefono: z.string().min(8, 'Ingresa un teléfono válido').regex(/^[0-9+\-\s()]+$/, 'El teléfono solo puede contener números y caracteres permitidos'),
+  telefono: z.string().min(8, 'Ingresa un teléfono válido'),
 })
 
 const Page = () => {
@@ -153,6 +155,12 @@ const Page = () => {
     const { name, value } = evt.target
     setFormData(prev => ({ ...prev, [name]: value }))
     setFormErrors(prev => ({ ...prev, [name]: '' }))
+    setSubmitError('')
+  }
+
+  const handlePhoneChange = (value) => {
+    setFormData(prev => ({ ...prev, telefono: value || '' }))
+    setFormErrors(prev => ({ ...prev, telefono: '' }))
     setSubmitError('')
   }
 
@@ -672,18 +680,16 @@ const Page = () => {
                 <label className="text-sm font-semibold text-slate-800" htmlFor="telefono">
                   Teléfono
                 </label>
-                <input
-                  id="telefono"
-                  name="telefono"
-                  type="tel"
-                  required
-                  value={formData.telefono}
-                  onChange={handleChange}
-                  className={`mt-2 w-full rounded-xl border bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-idaclass4 focus:outline-none focus:ring-2 focus:ring-idaclass4/30 ${
-                    formErrors.telefono ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-slate-200'
-                  }`}
-                  placeholder="+54 9 11 1234-5678"
-                />
+                <div className="mt-2">
+                  <PhoneInput
+                    defaultCountry="AR"
+                    value={formData.telefono}
+                    onChange={handlePhoneChange}
+                    className={cn(
+                      formErrors.telefono && '[&_input]:border-red-400 [&_input]:focus:border-red-500 [&_button]:border-red-400'
+                    )}
+                  />
+                </div>
                 {formErrors.telefono && <p className="mt-1 text-xs text-red-500">{formErrors.telefono}</p>}
               </div>
               

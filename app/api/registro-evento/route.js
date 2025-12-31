@@ -6,7 +6,7 @@ const registroSchema = z.object({
   nombre: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
   apellido: z.string().min(2, 'El apellido debe tener al menos 2 caracteres'),
   email: z.string().email('Debe ser un email válido'),
-  telefono: z.string().min(8, 'El teléfono debe tener al menos 8 caracteres').regex(/^[0-9+\-\s()]+$/, 'El teléfono solo puede contener números y caracteres permitidos'),
+  telefono: z.string().min(8, 'El teléfono debe tener al menos 8 caracteres'),
 });
 
 export async function POST(request) {
