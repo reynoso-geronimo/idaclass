@@ -44,11 +44,11 @@ const TarjetaModalidad = () => {
         <CardFooter className="flex max-xl:flex-col gap-2">
           <Button size="lg" className={`w-full rounded-2xl max-lg:hidden`} asChild>
             <Link href={`#form-lg`}>INSCRIBIRME AHORA</Link>
-            {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
+            {/*  <Link href="https://wa.me/+5491152594355">INSCRIBIRME AHORA</Link> */}
           </Button>
           <Button size="lg" className={`w-full rounded-2xl lg:hidden`} asChild>
             <Link href={`#form`}>INSCRIBIRME AHORA</Link>
-            {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
+            {/*  <Link href="https://wa.me/+5491152594355">INSCRIBIRME AHORA</Link> */}
           </Button>
         </CardFooter>
       </Card>

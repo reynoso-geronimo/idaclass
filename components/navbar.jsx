@@ -92,7 +92,7 @@ const NavBar = ({ cursosFormacion, cursosEspecializacion }) => {
             <Separator />
             <SheetClose asChild>
               <Link
-                href="https://wa.me/+5491135872204"
+                href="https://wa.me/+5491152594355"
                 className={`-translate-x-3.5 flex items-center ${pathname === "/asesorate" && "text-idaclass4"} `}
               >
                 <Minus className="rotate-90 -left-3 scale-x-[135%]" size={28} color="#0088ca" />

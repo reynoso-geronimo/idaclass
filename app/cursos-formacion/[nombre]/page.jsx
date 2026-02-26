@@ -149,7 +149,7 @@ const CursoPage = async ({ params }) => {
           <Link href="#inscripcion">
             <Button>Inscribirme ahora</Button>
           </Link>
-          <Link href="https://wa.me/+5491135872204">
+          <Link href="https://wa.me/+5491152594355">
             <div className="max-lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                 <path

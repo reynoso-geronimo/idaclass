@@ -20,7 +20,7 @@ const Beca = ({sideBar=false}) => {
         className={`${!sideBar&&"lg:w-[16rem]"} px-2 w-full z-10 rounded-2xl `}
         asChild
       >
-        <Link href="https://wa.me/+5491135872204">
+        <Link href="https://wa.me/+5491152594355">
           <div className="flex  items-center gap-1">
             <ArrowRight />Aplicar a la BecaClass
           </div>

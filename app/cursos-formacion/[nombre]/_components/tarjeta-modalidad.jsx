@@ -113,7 +113,7 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
         <CardFooter className="flex max-xl:flex-col gap-2">
           <Button size="lg" className={`w-full rounded-2xl ${modalidad !== "ONLINE" && "xl:w-1/2"}`} asChild>
             <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
-            {/*  <Link href="https://wa.me/+5491135872204">INSCRIBIRME AHORA</Link> */}
+            {/*  <Link href="https://wa.me/+5491152594355">INSCRIBIRME AHORA</Link> */}
           </Button>
           {modalidad !== "ONLINE" && (
             <Button

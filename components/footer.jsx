@@ -15,8 +15,8 @@ const Footer = () => {
         <Image src={`/assets/idaclass.logo.webp`} alt="logo" width={200} height={50} />
         <p className="mt-6">Plataforma de cursos E-learning</p>
         <p>para la formación de profesionales.</p>
-        <a href="tel:+5491150272529" className="text-xl font-bold mt-6">
-          +54 9 11 5027 2529
+        <a href="tel:+5491152594355" className="text-xl font-bold mt-6">
+          +54 9 11 5259 4355
         </a>
         <a href="mailto:hola@idaclassacademy.com" className="text-xl font-bold mt-6">
           hola@idaclassacademy.com
@@ -29,7 +29,7 @@ const Footer = () => {
         <Link href="/nosotros">Nosotros</Link>
         <Link href="/cursos-especializados">Cursos</Link>
         <Link href="/comunidad">Comunidad IdaClass</Link>
-        <Link href="https://wa.me/+5491135872204">
+        <Link href="https://wa.me/+5491152594355">
           Asesórate ya{" "}
           <svg viewBox="0 0 32 32" className="h-8 w-8 inline fill-green-500">
             <path

@@ -177,7 +177,7 @@ const NavbarWebMenu = ({
       </Link>
 
       <Link
-        href="https://wa.me/+5491135872204"
+        href="https://wa.me/+5491152594355"
         className={`after:translate-y-1 flex items-start relative pr-8 ${
           pathname === "/asesorate" && "after:w-[100%] text-idaclass4"
         } ${classEscritorio} fill-green-500 hover:fill-idaclass4`}
