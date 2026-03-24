@@ -60,7 +60,9 @@ const RegisterForm = () => {
   }, [session]);
 
   async function onSubmit(values) {
-   
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "form_submit_attempt" });
+
     try {
       // Handle campaign registration here
       const campaignData = {
@@ -76,7 +78,10 @@ const RegisterForm = () => {
         utm_content: values.utm_content || "",
       };
 
-      await createContacto(campaignData);
+      const contacto = await createContacto(campaignData);
+      if (contacto === "success") {
+        window.dataLayer.push({ event: "form_submit_success" });
+      }
 
       // Add campaign registration API call here if needed
       const res = await signIn("credentials", {

@@ -145,6 +145,8 @@ const Page = () => {
       return
     }
 
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "form_submit_attempt" });
     setIsSubmitting(true)
 
     try {
@@ -179,6 +181,7 @@ const Page = () => {
       }
 
       // Éxito
+      window.dataLayer.push({ event: "form_submit_success" });
       setSubmitSuccess(true)
       setFormData({ nombre: '', apellido: '', email: '', telefono: '' })
       

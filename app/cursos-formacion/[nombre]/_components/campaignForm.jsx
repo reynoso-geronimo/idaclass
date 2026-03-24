@@ -61,10 +61,12 @@ const CampaignForm = ({ nombre }) => {
   });
 
   async function onSubmit(values) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "form_submit_attempt" });
+
     const contacto = await createContacto(values);
     if (contacto === "success") {
+      window.dataLayer.push({ event: "form_submit_success" });
       setOpen(true);
       form.reset();
     }
