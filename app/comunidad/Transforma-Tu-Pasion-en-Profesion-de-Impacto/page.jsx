@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { z } from 'zod'
 import { PhoneInput } from '@/components/ui/phone-input'
 import { cn } from '@/lib/utils'
+import { Instagram } from 'lucide-react'
 
 const heroStats = [
   { icon: '🎯', value: '60', label: 'Minutos de Contenido' },
@@ -13,24 +14,24 @@ const heroStats = [
 
 const pillars = [
   {
-    icon: '💼',
-    title: 'La Oportunidad Real',
-    text: 'El Fitness está explotando. Este streaming te muestra qué funciona y qué no. Cómo destacar con una estrategia clara.',
+    icon: '⚠️',
+    title: 'Las dietas de Instagram que destruyen tu metabolismo',
+    text: 'Déficit extremo, suplementos sin respaldo y macros copiados de alguien que no te conoce. Seguirlas no es disciplina — es jugarle en contra a tu propio cuerpo sin saberlo.',
   },
   {
-    icon: '🤝',
-    title: 'Sin Filtros',
-    text: 'Te mostramos casos reales de dos entrenadores que hoy viven de esto. Escuchá historias reales, datos concretos y vivencias sin marketing "vendehumo".',
+    icon: '🚨',
+    title: 'Las rutinas de gym que te van a lesionar',
+    text: 'Los ejercicios más populares de Instagram son también los más lesivos cuando no hay supervisión profesional. El problema no es el ejercicio. Es hacerlo sin quien sepa las consecuencias.',
   },
   {
-    icon: '📈',
-    title: 'Datos NO opinion',
-    text: 'Vas a ver como generan ingresos, cantidad de clientes, horas de trabajo y desafíos reales. No promesas. No teoría.',
+    icon: '❌',
+    title: 'Cualquiera puede llamarse personal trainer. No cualquiera sabe serlo.',
+    text: 'Certificaciones express. Y alguien ya está cobrando por entrenar personas. Lo que no sabe ese trainer lo paga el alumno — con su cuerpo.',
   },
   {
-    icon: '🌟',
-    title: 'Preguntas claves',
-    text: 'Respondemos todo: desde "¿cuánto se tarda en conseguir el primer cliente? ¿es posible vivir de esto?" hasta como superar los retos que muchos no te cuentan.',
+    icon: '👥',
+    title: 'Influencers fitness: millones de seguidores, cero responsabilidad',
+    text: 'Millones de seguidores no equivalen a un título. Ni a evidencia. La diferencia entre consejo viral y consejo profesional no se ve en el video — se ve en el consultorio.',
   },
 ]
 
@@ -284,16 +285,16 @@ const Page = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(116,209,234,0.15),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(0,136,202,0.25),transparent_45%)]" />
         <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center px-4 py-20 text-center">
           <div className="mb-4 inline-flex items-center rounded-full border border-idaclass4/60 bg-idaclass4/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-idaclass2">
-            🔴 En Vivo · 20 de Febrero 2026
+            🔴 En Vivo · 31 de Marzo 2026
           </div>
           <h1 className="js-fade mb-6 max-w-4xl text-4xl font-bold leading-tight text-white opacity-0 transition duration-700 md:text-6xl lg:text-7xl">
-            Transforma tu pasión en una <span className="text-idaclass2">carrera de impacto</span>
+          Sin filtro Fitness <span className="text-idaclass2">lo que nadie se anima a decir</span>
           </h1>
           <p className="js-fade mb-8 max-w-3xl text-lg text-slate-200 opacity-0 transition duration-700 md:text-xl">
-            Descubre 1 hora lo que a muchos les lleva años: cómo transformar vidas y construir una carrera real en el fitness. Desafíos, estrategias, propuesta, mejores prácticas. Sin teoría. Solo la verdad que nadie te cuenta.
+          La verdad del entrenamiento, las lesiones, la mala alimentación y el negocio del fitness. Dicha en voz alta. Por primera vez. Descubre las claves para entrenar saludable sin lesionar y buena alimentación
           </p>
           <p className="js-fade mb-4 text-xl font-semibold text-idaclass2 opacity-0 transition duration-700">
-            📅 20 de Febrero 19 hs a 20 hs arg. 👉 60 minutos de contenido exclusivo en vivo.
+            📅 31 de Marzo 18 hs a 19 hs arg. 👉 60 minutos de contenido exclusivo en vivo.
           </p>
           <p className="js-fade mb-8 max-w-3xl text-base text-slate-300 opacity-0 transition duration-700">
             Dirigido a <span className="font-semibold text-white">Entrenadores, amantes del fitness y futuros profesionales.</span>
@@ -328,7 +329,10 @@ const Page = () => {
       </section>
 
       <section className="bg-slate-50 text-slate-900">
-      <h2 className="pt-6 text-4xl font-bold md:text-5xl mx-auto text-center">Estas en el momento perfecto</h2>
+      <h2 className="pt-6 text-4xl font-bold md:text-5xl mx-auto text-center">El problema</h2>
+      <h3 className="text-2xl font-bold md:text-3xl mx-auto text-center mt-2 text-idaclass4 "><Instagram className='size-7 mb-1 inline-block text-pink-600' /> El fitness de instagram te miente todos los días.</h3>
+      <p className="text-slate-600 text-pretty text-center mx-auto max-w-3xl mt-2"> Miles de personas entrenan, hacen dieta, pagan trainers y no obtienen los resultados que les prometieron. No es falta de voluntad. Es información diseñada para venderte más — no para que mejores de verdad.
+      </p>
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 md:grid-cols-2">
           {pillars.map(pillar => (
             <article
@@ -345,12 +349,13 @@ const Page = () => {
 
       <section className="bg-slate-950 text-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2 text-center">Historias reales</p>
-          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl text-center">Dos Historias Reales, Una Conversación Honesta</h2>
+          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-idaclass2 text-center">Episodio 3</p>
+          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl text-center">HABLAMOS DE LO QUE NADIE DICE.
+          </h2>
           <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-slate-200">
-            Un entrenador online independiente que construyó su carrera por fuera de IdaClass. Un docente que se formó con nosotros y hoy transforma vidas. Ambos comparten sus números, sus errores y sus estrategias sin filtro.
+          Si te gusta la polémica y no quieres más mentiras,  quédate. En este episodio tres profesionales de la ostia para romper mitos, mostrar el lado oscuro del fitness y traer claridad real. Sin humo y sin filtro.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+         {/*  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: '🏋️',
@@ -386,14 +391,147 @@ const Page = () => {
                 </ul>
               </article>
             ))}
-          </div>
-          <p className="mx-auto mt-10 max-w-3xl text-center text-base text-slate-200">
+          </div> */}
+         {/*  <p className="mx-auto mt-10 max-w-3xl text-center text-base text-slate-200">
             Esto es diferente: por primera vez, vas a ver la vida real de un entrenador sin marketing, sin exageraciones, sin pitch de ventas. Solo dos personas que ya están del otro lado, dispuestas a responder TODO.
+          </p> */}
+        </div>
+      </section>
+      {/* SOLUCIÓN */}
+      <section className="bg-slate-900 text-slate-100">
+        <div className="mx-auto max-w-4xl px-4 py-18 md:py-24">
+          <p className="flex items-center gap-2 text-3xl font-bold uppercase tracking-widest text-idaclass2 mb-5">
+            <span className="block w-6 h-0.5 bg-idaclass2"></span>
+            La solución
           </p>
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6 max-w-3xl">
+            Tres voces.<br />Tres ángulos.<br /><span className="text-idaclass2">Una verdad.</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl mb-4">
+            Un episodio donde tres profesionales con título real — desde la kinesiología, la nutrición y 25 años de formación de trainers — dicen en voz alta lo que el fitness de redes se calla.
+          </p>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl">
+            No es un webinar de ventas. No hay pitch de cursos. Es una mesa de debate real, con tensión real, donde cada mito que te vendieron se destruye con ciencia y con los casos que llegan al consultorio semana a semana.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-700/30 border border-slate-700/30 rounded mt-14 overflow-hidden">
+            {[
+              { n: '25', l: 'Años formando' },
+              { n: '50K', l: 'Graduados LATAM' },
+              { n: '863K', l: 'Seguidores combinados' },
+              { n: '60', l: 'Min. sin comerciales' },
+            ].map(stat => (
+              <div key={stat.l} className="bg-slate-900 px-4 md:px-6 py-7 md:py-8 text-center">
+                <div className="text-3xl md:text-5xl font-black text-slate-100 leading-tight mb-2">{stat.n}</div>
+                <div className="text-xs md:text-sm font-semibold uppercase tracking-wider text-slate-400">{stat.l}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-slate-900 text-slate-100">
+      {/* DIVISOR */}
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent"></div>
+
+      {/* INVITADOS */}
+      <section className="bg-slate-950 text-slate-100">
+        <div className="mx-auto max-w-4xl px-4 py-18 md:py-24">
+          <p className="flex items-center gap-2 text-3xl font-bold uppercase tracking-widest text-idaclass2 mb-5">
+            <span className="block w-6 h-0.5 bg-idaclass2"></span>
+            Los invitados
+          </p>
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6">
+            Quiénes van<br /><span className="italic text-idaclass2">a decirlo.</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl mb-12">
+            La regla del episodio: los tres pueden estar en desacuerdo. Los tres tienen razón desde su ángulo. Esa tensión ES el programa.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                rol: 'Voz del cuerpo',
+                nombre: 'Natalia Di Meglio',
+                cred: 'Lic. en Kinesiología · Quiropráctica',
+                ig: '@kinesiofitarg · 273K Instagram',
+                frase: 'Yo los veo cuando ya están lesionados. Hoy vamos a ver por qué llegan ahí.',
+              },
+              {
+                rol: 'Voz del combustible',
+                nombre: 'Gabriela Di Meglio',
+                cred: 'Lic. en Nutrición · Prof. Nac. Ed. Física',
+                ig: '@kinesiofitarg · 590K TikTok',
+                frase: 'Podés entrenar perfecto. Si comés según lo que te dijo el influencer, ese esfuerzo sirve a medias.',
+              },
+              {
+                rol: 'Voz de la formación',
+                nombre: 'Leandro Sosa',
+                cred: 'Prof. de educación física, docente idaclass, culturista natural · 25 años formando · 50.000 graduados',
+                ig: '@profesorlean',
+                frase: 'Esto no es un secreto. Es lo que se aprende cuando alguien te forma en serio.',
+              },
+            ].map(invitado => (
+              <div
+                key={invitado.nombre}
+                className="bg-slate-800 border border-slate-700/50 rounded p-7 relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-idaclass2"></div>
+                <p className="text-xs font-bold uppercase tracking-widest text-idaclass2 mb-2">{invitado.rol}</p>
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-1">{invitado.nombre}</h3>
+                <p className="text-xs text-gray-300 mb-1">{invitado.cred}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-4">{invitado.ig}</p>
+                <p className="text-sm text-gray-300 italic leading-relaxed border-t border-slate-700/50 pt-4">{invitado.frase}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEMAS EXPLOSIVOS */}
+      <section className="bg-slate-950 text-slate-100">
+        <div className="mx-auto max-w-4xl px-4 py-18 md:py-24">
+          <p className="flex items-center gap-2 text-3xl font-bold uppercase tracking-widest text-idaclass2 mb-5">
+            <span className="block w-6 h-0.5 bg-idaclass2"></span>
+            Lo que vamos a decir
+          </p>
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6 max-w-3xl">
+            Los temas que el<br />fitness <span className="italic text-idaclass2">evita.</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl mb-10">
+            Cada bloque del episodio es una verdad que circula poco. Y que cambia la forma en que entrenás, comés y elegís a quien te guía.
+          </p>
+
+          <div className="space-y-0 divide-y divide-slate-700/50">
+            {[
+              'La gran mentira del fitness — lo que muchos trainers repiten y está mal',
+              'Los 5 ejercicios que más lesionan en el gym',
+              'Influencers fitness vs ciencia — el debate definitivo',
+              '¿Todos pueden ser personal trainer? La respuesta incómoda',
+              'Descenso de peso: la industria que te miente para venderte más',
+              'Errores de entrenamiento que destruyen rodillas y articulaciones',
+              'El negocio oculto del fitness — lo que los gimnasios no quieren decir',
+              '¿Crossfit rompe cuerpos? Cómo se lesiona la mayoría de la gente',
+            ].map((tema, idx) => (
+              <div
+                key={idx}
+                className="flex items-center justify-between gap-4 py-4 group hover:pl-2 transition-all"
+              >
+                <span className="text-xs font-bold text-idaclass2 min-w-8 tabular-nums">
+                  {String(idx + 1).padStart(2, '0')}
+                </span>
+                <span className="text-sm md:text-base font-bold uppercase tracking-tight text-slate-100 flex-1 leading-snug">
+                  {tema}
+                </span>
+                {/* <span className="text-slate-600 group-hover:text-idaclass2 group-hover:translate-x-1 transition-all text-lg">
+                  →
+                </span> */}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+{/*       <section className="bg-slate-900 text-slate-100">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2">La verdad sin filtros</p>
           <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">La Verdad Que Nadie Te Cuenta Sobre ser Entrenador</h2>
@@ -408,7 +546,7 @@ const Page = () => {
               IdaClass Academy lleva 25 años formando entrenadores que realmente trabajan. Sabemos qué funciona y qué no. Por eso creamos este streaming: para mostrarte la realidad sin filtros, sin promesas mágicas, sin pitch de ventas.
             </p>
             <p className="font-semibold text-white">
-              Este 20 de Febrero descubre:
+              Este 31 de Marzo descubre:
             </p>
             <ul className="space-y-3 text-slate-200">
               {[
@@ -425,12 +563,12 @@ const Page = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
-<section className="bg-slate-900 text-slate-100">
+{/* <section className="bg-slate-900 text-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2">Programa del evento</p>
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 20 de Febrero</h2>
+          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 31 de Marzo</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {expectItems.map(item => (
               <article
@@ -445,7 +583,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-
+ */}
 
 
 
@@ -469,7 +607,7 @@ const Page = () => {
       <section id="registro" className="relative overflow-hidden bg-gradient-to-br from-idaclass5 via-idaclass4 to-idaclass3 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.08),transparent_40%)]" />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">El 20 de Febrero, Todo Cambia</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">El 31 de Marzo, Todo Cambia</h2>
           <p className="mt-4 text-lg text-white/90">
             No dejes que tu pasión se quede en el gimnasio. Conviértela en la carrera que transforma tu vida y la de miles de personas.{' '}
             <span className="font-semibold">Regístrate ahora y sé parte del movimiento más grande de la industria fitness.</span>
@@ -518,7 +656,7 @@ const Page = () => {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass4">Regístrate</p>
                 <h3 className="mt-2 text-2xl font-bold text-idaclass5">Reservá tu lugar ahora</h3>
-                <p className="mt-1 text-sm text-slate-600">Completa tus datos y te enviaremos el acceso al streaming del 20 de Febrero.</p>
+                <p className="mt-1 text-sm text-slate-600">Completa tus datos y te enviaremos el acceso al streaming del 31 de Marzo.</p>
               </div>
               <button
                 type="button"
@@ -640,6 +778,7 @@ const Page = () => {
           </div>
         </div>
       )}
+
 
      {/*  <footer className="border-t border-slate-800 bg-slate-950 px-4 py-10 text-center text-slate-200">
         <div className="text-3xl font-semibold tracking-widest text-idaclass4">
