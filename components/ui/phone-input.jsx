@@ -25,6 +25,14 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
 
 const PhoneInput = React.forwardRef(({ className, onChange, value, ...props }, ref) => {
+  const handleChange = (val) => {
+    // Convertir +54 a +549 para Argentina (números celulares)
+    if (val && val.startsWith('+54') && !val.startsWith('+549')) {
+      val = '+549' + val.substring(3)
+    }
+    onChange?.(val || "")
+  }
+
   return (
     <RPNInput.default
       ref={ref}
@@ -34,7 +42,7 @@ const PhoneInput = React.forwardRef(({ className, onChange, value, ...props }, r
       inputComponent={InputComponent}
       smartCaret={false}
       value={value || undefined}
-      onChange={(value) => onChange?.(value || "")}
+      onChange={handleChange}
       labels={es}
       {...props}
     />
