@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 import { Instagram } from 'lucide-react'
 
 const heroStats = [
-  { icon: '🎯', value: '60', label: 'Minutos de Contenido' },
+  { icon: '🎯', value: '120', label: 'Minutos de Contenido' },
   { icon: '🌎', value: '100%', label: 'Gratuito' },
   { icon: '🏆', value: 'En Vivo', label: 'Q&A Interactivo' },
 ]
@@ -15,23 +15,23 @@ const heroStats = [
 const pillars = [
   {
     icon: '⚠️',
-    title: 'Las dietas de Instagram que destruyen tu metabolismo',
-    text: 'Déficit extremo, suplementos sin respaldo y macros copiados de alguien que no te conoce. Seguirlas no es disciplina — es jugarle en contra a tu propio cuerpo sin saberlo.',
+    title: 'El fitness creció. Los profesionales, no',
+    text: 'Cada vez hay más gimnasios, más entrenadores y más contenido pero menos  profesionales y gimnasios que entiendan cómo capitalizarlo.',
   },
   {
     icon: '🚨',
-    title: 'Las rutinas de gym que te van a lesionar',
-    text: 'Los ejercicios más populares de Instagram son también los más lesivos cuando no hay supervisión profesional. El problema no es el ejercicio. Es hacerlo sin quien sepa las consecuencias.',
+    title: 'Te certificaron. Nadie te enseñó a cobrar',
+    text: 'Te enseñan a entrenar pero no a generar ingresos, retener clientes ni construir una carrera y negocio rentable.',
   },
   {
     icon: '❌',
-    title: 'Cualquiera puede llamarse personal trainer. No cualquiera sabe serlo.',
-    text: 'Certificaciones express. Y alguien ya está cobrando por entrenar personas. Lo que no sabe ese trainer lo paga el alumno — con su cuerpo.',
+    title: 'Más herramientas que nunca. Menos que saben usarlas.',
+    text: 'Falta de adaptación al nuevo ecosistema fitness, entender las estrategias y herramientas para diferenciarse.',
   },
   {
     icon: '👥',
-    title: 'Influencers fitness: millones de seguidores, cero responsabilidad',
-    text: 'Millones de seguidores no equivalen a un título. Ni a evidencia. La diferencia entre consejo viral y consejo profesional no se ve en el video — se ve en el consultorio.',
+    title: 'El cliente evolucionó. La formación se quedó en 2010.',
+    text: 'El cliente cambió pero el sistema sigue formando perfiles que ya no funcionan.Seguimos aplicando modelos obsoletos que excluyen.',
   },
 ]
 
@@ -71,7 +71,7 @@ const expectItems = [
 const faqItems = [
   {
     q: '¿Para quién es este evento?',
-    a: 'Dirigido a Entrenadores, amantes del fitness y futuros profesionales. Si querés descubrir cómo transformar vidas y construir una carrera real en el fitness, este streaming es para vos.',
+    a: 'Dirigido a dueños de gimnasio entrenadores y amantes del fitness. Si querés descubrir cómo transformar vidas y construir una carrera real en el fitness, este streaming es para vos.',
   },
   {
     q: '¿Cuál es el costo del evento?',
@@ -79,7 +79,7 @@ const faqItems = [
   },
   {
     q: '¿Qué incluye el acceso al streaming?',
-    a: '60 minutos de contenido exclusivo en vivo con casos reales de entrenadores, datos concretos sobre ingresos y clientes, sesión de Q&A en tiempo real, testimonios sin filtros y estrategias reales que funcionan. Todo sin marketing ni promesas vacías.',
+    a: '2 horas de contenido exclusivo en vivo con casos reales de entrenadores, datos concretos sobre ingresos y clientes, sesión de Q&A en tiempo real, testimonios sin filtros y estrategias reales que funcionan. Todo sin marketing ni promesas vacías.',
   },
   {
     q: '¿Podré hacer preguntas durante el evento?',
@@ -285,19 +285,19 @@ const Page = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(116,209,234,0.15),transparent_45%),radial-gradient(circle_at_80%_30%,rgba(0,136,202,0.25),transparent_45%)]" />
         <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center px-4 py-20 text-center">
           <div className="mb-4 inline-flex items-center rounded-full border border-idaclass4/60 bg-idaclass4/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-idaclass2">
-            🔴 En Vivo · 31 de Marzo 2026
+            🔴 En Vivo · 24  de Abril 2026
           </div>
           <h1 className="js-fade mb-6 max-w-4xl text-4xl font-bold leading-tight text-white opacity-0 transition duration-700 md:text-6xl lg:text-7xl">
-          Sin filtro Fitness <span className="text-idaclass2">lo que nadie se anima a decir</span>
+          Como la <span className="text-idaclass2">dominar </span>industria fitness este 2026
           </h1>
           <p className="js-fade mb-8 max-w-3xl text-lg text-slate-200 opacity-0 transition duration-700 md:text-xl">
-          La verdad del entrenamiento, las lesiones, la mala alimentación y el negocio del fitness. Dicha en voz alta. Por primera vez. Descubre las claves para entrenar saludable sin lesionar y buena alimentación
+          El fitness cambió para siempre.Nuevos clientes, nuevas reglas y nuevas oportunidades. En este episodio vas a entender cómo funciona realmente la industria hoy para posicionarse y crecer de verdad.
           </p>
           <p className="js-fade mb-4 text-xl font-semibold text-idaclass2 opacity-0 transition duration-700">
-            📅 31 de Marzo 18 hs a 19 hs arg. 👉 60 minutos de contenido exclusivo en vivo.
+            📅 24  de Abril 18 hs a 20 hs arg. 👉 2 horas de contenido exclusivo en vivo.
           </p>
           <p className="js-fade mb-8 max-w-3xl text-base text-slate-300 opacity-0 transition duration-700">
-            Dirigido a <span className="font-semibold text-white">Entrenadores, amantes del fitness y futuros profesionales.</span>
+            Dirigido a <span className="font-semibold text-white">dueños de gimnasio entrenadores y amantes del fitness.</span>
             <br />
             <span className="text-idaclass2">Acceso 100% Gratuito · Contenido real · Q&A en vivo</span>
           </p>
@@ -330,9 +330,8 @@ const Page = () => {
 
       <section className="bg-slate-50 text-slate-900">
       <h2 className="pt-6 text-4xl font-bold md:text-5xl mx-auto text-center">El problema</h2>
-      <h3 className="text-2xl font-bold md:text-3xl mx-auto text-center mt-2 text-idaclass4 "><Instagram className='size-7 mb-1 inline-block text-pink-600' /> El fitness de instagram te miente todos los días.</h3>
-      <p className="text-slate-600 text-pretty text-center mx-auto max-w-3xl mt-2"> Miles de personas entrenan, hacen dieta, pagan trainers y no obtienen los resultados que les prometieron. No es falta de voluntad. Es información diseñada para venderte más — no para que mejores de verdad.
-      </p>
+      <h3 className="text-2xl font-bold md:text-3xl mx-auto text-center mt-2 text-idaclass4 ">La industria explota. ¿Vos estas preparado para ganar?</h3>
+      <p className="text-slate-600 text-pretty text-center mx-auto max-w-3xl mt-2">El fitness crece pero la mayoría no logra vivir de esto. Mientras algunos se estancan, otros están creciendo y escalando en la industria. Entiende el nuevo ecosistema y posiciónate del lado que gana.</p>
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-16 md:grid-cols-2">
           {pillars.map(pillar => (
             <article
@@ -353,7 +352,7 @@ const Page = () => {
           <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl text-center">HABLAMOS DE LO QUE NADIE DICE.
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-slate-200">
-          Si te gusta la polémica y no quieres más mentiras,  quédate. En este episodio tres profesionales de la ostia para romper mitos, mostrar el lado oscuro del fitness y traer claridad real. Sin humo y sin filtro.
+          Una conversación que va a cambiar tu forma de ver el fitness .Conoce las nuevas Tendencias, profesiones y cómo destacar y  vivir del fitness en 2026.
           </p>
          {/*  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -405,13 +404,14 @@ const Page = () => {
             La solución
           </p>
           <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-6 max-w-3xl">
-            Tres voces.<br />Tres ángulos.<br /><span className="text-idaclass2">Una verdad.</span>
+          1 enfoque 360 grados.<br />4 miradas diferentes.<br /><span className="text-idaclass2">1 nueva realidad.</span>
           </h2>
           <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl mb-4">
-            Un episodio donde tres profesionales con título real — desde la kinesiología, la nutrición y 25 años de formación de trainers — dicen en voz alta lo que el fitness de redes se calla.
+          Un episodio donde vas a entender el nuevo fitness como lo ven realmente los principales refentes del sector, dueños de gimnasio entrenadores, consultores y empresarios.
+         
           </p>
           <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-2xl">
-            No es un webinar de ventas. No hay pitch de cursos. Es una mesa de debate real, con tensión real, donde cada mito que te vendieron se destruye con ciencia y con los casos que llegan al consultorio semana a semana.
+          Es una conversación que te muestra cómo funciona el negocio de verdad.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-700/30 border border-slate-700/30 rounded mt-14 overflow-hidden">
@@ -419,7 +419,7 @@ const Page = () => {
               { n: '25', l: 'Años formando' },
               { n: '50K', l: 'Graduados LATAM' },
               { n: '863K', l: 'Seguidores combinados' },
-              { n: '60', l: 'Min. sin comerciales' },
+              { n: '120', l: 'Min. sin comerciales' },
             ].map(stat => (
               <div key={stat.l} className="bg-slate-900 px-4 md:px-6 py-7 md:py-8 text-center">
                 <div className="text-3xl md:text-5xl font-black text-slate-100 leading-tight mb-2">{stat.n}</div>
@@ -447,28 +447,35 @@ const Page = () => {
             La regla del episodio: los tres pueden estar en desacuerdo. Los tres tienen razón desde su ángulo. Esa tensión ES el programa.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             {[
               {
-                rol: 'Voz del cuerpo',
-                nombre: 'Natalia Di Meglio',
-                cred: 'Lic. en Kinesiología · Quiropráctica',
-                ig: '@kinesiofitarg · 273K Instagram',
-                frase: 'Yo los veo cuando ya están lesionados. Hoy vamos a ver por qué llegan ahí.',
+                rol: 'Visión de la industria',
+                nombre: 'Melanie Rodriguez',
+                cred: 'Cámara de Gimnasios',
+                ig: '',
+                frase: '“El fitness crece, es importante conocer nuevas necesidades.”',
               },
               {
-                rol: 'Voz del combustible',
-                nombre: 'Gabriela Di Meglio',
-                cred: 'Lic. en Nutrición · Prof. Nac. Ed. Física',
-                ig: '@kinesiofitarg · 590K TikTok',
-                frase: 'Podés entrenar perfecto. Si comés según lo que te dijo el influencer, ese esfuerzo sirve a medias.',
+                rol: 'Visión del negocio',
+                nombre: 'Gustavo Miranda',
+                cred: 'Ceo Mir',
+                ig: '',
+                frase: '“No contrato entrenadores… contrato resultados.” Conocer el mercado marca la diferencia.',
               },
               {
-                rol: 'Voz de la formación',
-                nombre: 'Leandro Sosa',
-                cred: 'Prof. de educación física, docente idaclass, culturista natural · 25 años formando · 50.000 graduados',
-                ig: '@profesorlean',
-                frase: 'Esto no es un secreto. Es lo que se aprende cuando alguien te forma en serio.',
+                rol: 'Visión educativa',
+                nombre: 'Julio Anghilante',
+                cred: 'Director de IdaClass',
+                ig: '',
+                frase: '“El problema no es el alumno… es cómo lo están formando.”',
+              },
+              {
+                rol: 'Visión 360',
+                nombre: 'Ruben  Gonzales',
+                cred: 'Hernan Fernandez Vila RG Consulting',
+                ig: '',
+                frase: '“La capacitación integral como diferencial.”',
               },
             ].map(invitado => (
               <div
@@ -503,14 +510,14 @@ const Page = () => {
 
           <div className="space-y-0 divide-y divide-slate-700/50">
             {[
-              'La gran mentira del fitness — lo que muchos trainers repiten y está mal',
-              'Los 5 ejercicios que más lesionan en el gym',
-              'Influencers fitness vs ciencia — el debate definitivo',
-              '¿Todos pueden ser personal trainer? La respuesta incómoda',
-              'Descenso de peso: la industria que te miente para venderte más',
-              'Errores de entrenamiento que destruyen rodillas y articulaciones',
-              'El negocio oculto del fitness — lo que los gimnasios no quieren decir',
-              '¿Crossfit rompe cuerpos? Cómo se lesiona la mayoría de la gente',
+              'Cómo funciona el nuevo ecosistema fitness',
+              'Qué cambió en el cliente y por qué eso lo cambia todo',
+              'El perfil profesional que hoy genera ingresos',
+              'Qué buscan realmente los gimnasios',
+              'Cómo usar la tecnología a tu favor',
+              'Dónde están las oportunidades reales de negocio',
+              'Qué errores te dejan afuera del mercado',
+              'Cómo empezar o escalar en la industria hoy',
             ].map((tema, idx) => (
               <div
                 key={idx}
@@ -546,7 +553,7 @@ const Page = () => {
               IdaClass Academy lleva 25 años formando entrenadores que realmente trabajan. Sabemos qué funciona y qué no. Por eso creamos este streaming: para mostrarte la realidad sin filtros, sin promesas mágicas, sin pitch de ventas.
             </p>
             <p className="font-semibold text-white">
-              Este 31 de Marzo descubre:
+              Este 24  de Abril descubre:
             </p>
             <ul className="space-y-3 text-slate-200">
               {[
@@ -568,7 +575,7 @@ const Page = () => {
 {/* <section className="bg-slate-900 text-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass2">Programa del evento</p>
-          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 31 de Marzo</h2>
+          <h2 className="mt-3 text-4xl font-bold md:text-5xl">Lo Que Vas a Descubrir el 24  de Abril</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {expectItems.map(item => (
               <article
@@ -607,7 +614,7 @@ const Page = () => {
       <section id="registro" className="relative overflow-hidden bg-gradient-to-br from-idaclass5 via-idaclass4 to-idaclass3 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.08),transparent_40%)]" />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">El 31 de Marzo, Todo Cambia</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">El 24  de Abril, Todo Cambia</h2>
           <p className="mt-4 text-lg text-white/90">
             No dejes que tu pasión se quede en el gimnasio. Conviértela en la carrera que transforma tu vida y la de miles de personas.{' '}
             <span className="font-semibold">Regístrate ahora y sé parte del movimiento más grande de la industria fitness.</span>
@@ -656,7 +663,7 @@ const Page = () => {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass4">Regístrate</p>
                 <h3 className="mt-2 text-2xl font-bold text-idaclass5">Reservá tu lugar ahora</h3>
-                <p className="mt-1 text-sm text-slate-600">Completa tus datos y te enviaremos el acceso al streaming del 31 de Marzo.</p>
+                <p className="mt-1 text-sm text-slate-600">Completa tus datos y te enviaremos el acceso al streaming del 24  de Abril.</p>
               </div>
               <button
                 type="button"
