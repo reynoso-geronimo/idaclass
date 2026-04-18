@@ -5,6 +5,7 @@ import { z } from 'zod'
 import { PhoneInput } from '@/components/ui/phone-input'
 import { cn } from '@/lib/utils'
 import { Instagram } from 'lucide-react'
+import Image from 'next/image'
 
 const heroStats = [
   { icon: '🎯', value: '120', label: 'Minutos de Contenido' },
@@ -288,7 +289,7 @@ const Page = () => {
             🔴 En Vivo · 24  de Abril 2026
           </div>
           <h1 className="js-fade mb-6 max-w-4xl text-4xl font-bold leading-tight text-white opacity-0 transition duration-700 md:text-6xl lg:text-7xl">
-          Como la <span className="text-idaclass2">dominar </span>industria fitness este 2026
+          Como <span className="text-idaclass2">dominar </span>la industria fitness este 2026
           </h1>
           <p className="js-fade mb-8 max-w-3xl text-lg text-slate-200 opacity-0 transition duration-700 md:text-xl">
           El fitness cambió para siempre.Nuevos clientes, nuevas reglas y nuevas oportunidades. En este episodio vas a entender cómo funciona realmente la industria hoy para posicionarse y crecer de verdad.
@@ -296,6 +297,7 @@ const Page = () => {
           <p className="js-fade mb-4 text-xl font-semibold text-idaclass2 opacity-0 transition duration-700">
             📅 24  de Abril 18 hs a 20 hs arg. 👉 2 horas de contenido exclusivo en vivo.
           </p>
+                 <Image src='/stream/marcas.png' height={125} width={540} alt='sponsors'/> 
           <p className="js-fade mb-8 max-w-3xl text-base text-slate-300 opacity-0 transition duration-700">
             Dirigido a <span className="font-semibold text-white">dueños de gimnasio entrenadores y amantes del fitness.</span>
             <br />
