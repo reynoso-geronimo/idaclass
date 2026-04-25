@@ -44,7 +44,7 @@ export default function Sedes({
                 return (
                   <div key={location.id} className="flex flex-col items-center justify-center gap-y-2">
                     <div className="flex gap-4 w-full">
-                      <div className="flex flex-wrap items-start gap-4 md:gap-4 w-full">
+                      <div className="flex max-sm:flex-wrap items-center gap-4 md:gap-4 w-full">
                         {location.imagen && (
                           <Image
                             src={`/sedes/${location.imagen}`}
@@ -61,7 +61,7 @@ export default function Sedes({
                           </span>
                         </div>
                       </div>
-                      <div className="max-md:hidden flex items-center justify-center shrink-0">
+                      <div className="max-md:hidden flex flex-col items-center justify-center shrink-0">
                         {showHours &&
                           location.horarios &&
                           location.horarios.map(horario => (
