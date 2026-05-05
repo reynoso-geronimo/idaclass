@@ -68,6 +68,10 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        barlow: ["var(--font-barlow)", "sans-serif"],
+        "barlow-c": ["var(--font-barlow-condensed)", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -87,13 +91,30 @@ module.exports = {
           '84%': { transform: 'translateY(-11.24rem)' },
           '100%': { transform: 'translateY(-16.86rem)' }
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "expo-blink": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.25" },
+        },
+        "pop-in": {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        "expo-spin": {
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         'text-animation': 'text-animation 8s infinite',
-
-
+        "fade-up": "fade-up 0.5s cubic-bezier(0.22,1,0.36,1) both",
+        "expo-blink": "expo-blink 1.6s infinite",
+        "pop-in": "pop-in 0.55s cubic-bezier(0.34,1.56,0.64,1) both",
+        "expo-spin": "expo-spin 5s linear infinite",
       },
 
     },

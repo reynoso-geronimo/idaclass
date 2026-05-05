@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const Contacto = () => {
   const pathname = decodeURIComponent(usePathname());
-  if (pathname.includes("v2")) return null;
+  if (pathname.includes("v2") || pathname.includes("landingfitnessnegocios")) return null;
   return (
     <Link
       href="https://wa.me/+5491152594355"

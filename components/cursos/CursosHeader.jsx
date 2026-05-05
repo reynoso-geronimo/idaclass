@@ -31,11 +31,13 @@ const CursoHeader = ({
   const isMobile = useIsMobile();
   const headerPath =
     tipo === "formacion" ? "cursosFormacion" : "cursosEspecializacion";
-  const headerImagePath = isMobile
-    ? `/${headerPath}/cursos/headersMobile/${id}.png`
-    : `/${headerPath}/cursos/headersWeb/${id}.png`;
-  // Importar imagen dinámicamente
-  const headerImage = require(`../../public${headerImagePath}`);
+  const subdir = isMobile ? "headersMobile" : "headersWeb";
+  // Importar imagen dinámicamente — la prefija estática evita que webpack
+  // arrastre archivos no-PNG (e.g. videos) al contexto dinámico.
+  const headerImage =
+    headerPath === "cursosFormacion"
+      ? require(`../../public/cursosFormacion/cursos/${subdir}/${id}.png`)
+      : require(`../../public/cursosEspecializacion/cursos/${subdir}/${id}.png`);
 
   return (
     <section className="relative md:container text-white">

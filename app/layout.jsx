@@ -1,10 +1,22 @@
 import Script from 'next/script'
-import { Inter } from "next/font/google";
+import { Inter, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProviderSession  from "./providers/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800", "900"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
 
 export const metadata = {
   title: "IdaClass Academy",
@@ -29,7 +41,7 @@ export default async function RootLayout({ children}) {
             })(window,document,'script','dataLayer','GTM-5N87Z2KL');
           `}
         </Script>
-      <body className={`${inter.className} min-h-screen flex flex-col justify-between`}>
+      <body className={`${inter.className} ${barlow.variable} ${barlowCondensed.variable} min-h-screen flex flex-col justify-between`}>
       <ProviderSession>
         <NavBar cursosFormacion={cursosFormacion} cursosEspecializacion={cursosEspecializacion}/>
         <noscript>
