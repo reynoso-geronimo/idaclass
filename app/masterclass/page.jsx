@@ -225,7 +225,7 @@ const Page = () => {
         <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center px-4 py-20 text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-idaclass4/60 bg-idaclass4/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-idaclass2">
             <span className="h-2 w-2 animate-pulse rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]" />
-            En Vivo · 4 de Junio 2026
+            En Vivo · 5 de Junio 2026
           </div>
           <h1 className="js-fade mb-6 max-w-4xl text-4xl font-bold leading-tight text-white opacity-0 transition duration-700 md:text-6xl lg:text-7xl">
             Aprendé las claves para el <span className="text-idaclass2">descenso de peso sostenible.</span>
@@ -235,7 +235,7 @@ const Page = () => {
             sin atajos ni improvisación.
           </p>
           <p className="js-fade mb-6 text-xl font-semibold text-idaclass2 opacity-0 transition duration-700">
-            📅 4 de Junio · 18 a 20 hs arg. 👉 1 hora de contenido exclusivo en vivo.
+            📅 5 de Junio · 19 hs (Arg). 👉 1 hora de contenido exclusivo en vivo.
           </p>
 
           <p className="js-fade mb-8 max-w-3xl text-base text-slate-300 opacity-0 transition duration-700">
@@ -487,7 +487,7 @@ const Page = () => {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.08),transparent_40%)]" />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center">
-          <h2 className="text-4xl font-bold md:text-5xl">El 4 de Junio, todo cambia.</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">El 5 de Junio, todo cambia.</h2>
           <p className="mt-4 text-lg text-white/90">
             Una hora de contenido exclusivo en vivo con Gabriela Di Meglio para transformar cómo entendés y aplicás el
             descenso de peso. <span className="font-semibold">Reservá tu lugar y sumate al cambio.</span>
@@ -541,7 +541,7 @@ const Page = () => {
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-idaclass4">Registrate</p>
                 <h3 className="mt-2 text-2xl font-bold text-idaclass5">Reservá tu lugar ahora</h3>
                 <p className="mt-1 text-sm text-slate-600">
-                  Completá tus datos y te enviamos el acceso al streaming del 4 de Junio.
+                  Completá tus datos y te enviamos el acceso al streaming del 5 de Junio.
                 </p>
               </div>
               <button
