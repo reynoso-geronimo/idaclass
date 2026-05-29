@@ -29,22 +29,8 @@ export async function POST(request) {
 
     const { nombre, apellido, email, telefono } = validation.data;
 
-    // Verificar si el email ya existe
-    const existeRegistro = await RegistroEvento.findOne({ 
-      where: { email: email.toLowerCase().trim() } 
-    });
-
-    if (existeRegistro) {
-      return NextResponse.json(
-        { 
-          success: false, 
-          error: 'Este email ya está registrado' 
-        },
-        { status: 409 }
-      );
-    }
-
-    // Crear el registro
+    // Nota: permitimos múltiples registros con el mismo email
+    // (un mismo asistente puede anotarse a distintos eventos).
     const nuevoRegistro = await RegistroEvento.create({
       nombre: nombre.trim(),
       apellido: apellido.trim(),

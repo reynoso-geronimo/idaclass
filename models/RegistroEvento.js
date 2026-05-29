@@ -17,8 +17,7 @@ const RegistroEvento = sequelize.define('registros_evento', {
     },
     email: {
         type: DataTypes.STRING(190),
-        allowNull: false,
-        unique: true
+        allowNull: false
     },
     telefono: {
         type: DataTypes.STRING(20),

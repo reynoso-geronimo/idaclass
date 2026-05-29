@@ -8,14 +8,12 @@ const SHEET_TAB = {
   gym: "duenos",
   coord: "coordinadores",
   stu: "personal_trainers",
-  masterclass: "masterclass_descenso_peso",
 };
 
 const COLUMN_ORDER = {
   gym: ["timestamp", "nombre", "gimnasio", "whatsapp", "provincia"],
   coord: ["timestamp", "nombre", "gimnasio", "whatsapp", "tamanoEquipo", "areaPrioritaria"],
   stu: ["timestamp", "nombre", "whatsapp", "modalidad", "inicio"],
-  masterclass: ["timestamp", "nombre", "apellido", "email", "telefono"],
 };
 
 export async function POST(req) {

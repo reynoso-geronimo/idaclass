@@ -126,10 +126,10 @@ const Page = () => {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/landing-fitness-negocios', {
+      const response = await fetch('/api/registro-evento', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ profile: 'masterclass', ...result.data }),
+        body: JSON.stringify(result.data),
       })
 
       if (!response.ok) {
