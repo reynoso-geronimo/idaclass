@@ -329,8 +329,7 @@ const CheckoutPage = () => {
                       className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
                       disabled={monto == 0}
                     >
-                      <Image src={`/assets/mp-icon.svg`} width={30} height={30} alt="mercadopago" />
-                      Mercadopago
+                      Pagar con Nave
                     </Button>
                   )}
                   {countryCode !== "AR" && (

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useSearchParams } from "next/navigation";
 import { getCursoFormacionFromDB, getCursoFromDB, inscripcion } from "@/app/actions";
@@ -328,8 +327,7 @@ const CheckoutPage = () => {
                     className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
                     disabled={monto == 0}
                   >
-                    <Image src={`/assets/mp-icon.svg`} width={30} height={30} alt="mercadopago" />
-                    Mercadopago
+                    Pagar con Nave
                   </Button>
                 )}
                 {countryCode !== "AR" && (

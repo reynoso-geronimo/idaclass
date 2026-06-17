@@ -14,6 +14,8 @@ import User from "@/models/User";
 import Speaker from "@/models/Speaker";
 import Contacto from "@/models/Contacto";
 import RegistroEvento from "@/models/RegistroEvento";
+import { createNavePaymentRequest } from "@/lib/nave";
+import { randomUUID } from "crypto";
 
 export async function getCursos() {
   try {
@@ -289,6 +291,64 @@ export async function getEventoFromDB(id) {
 }
 
 export async function inscripcion(formData, user, tipo, nombre, modalidad, monto) {
+  await User.update(
+    {
+      pais: formData.pais,
+      estado_provincia: formData.estadoprovincia,
+      localidad: formData.localidad,
+      direccion: formData.direccion,
+      telefono: formData.telefono,
+      dni: formData.dni,
+      dob: new Date(formData.dob),
+    },
+    {
+      where: {
+        id: user.userId,
+      },
+    }
+  );
+
+  // external_payment_id: identificador propio que Nave devuelve en la notificación
+  // (máximo 36 caracteres; un UUID ocupa exactamente 36).
+  const externalPaymentId = randomUUID();
+
+  let checkoutUrl;
+  try {
+    const paymentRequest = await createNavePaymentRequest({
+      externalPaymentId,
+      amount: monto,
+      // El nombre y la descripción del producto viajan en la notificación y nos
+      // permiten reconstruir la venta en el webhook (descripción => pago_modalidad).
+      productName: `${nombre} - ${modalidad} - ${tipo}`,
+      productDescription: formData.pagoModalidad,
+      buyer: {
+        user_id: String(user.userId),
+        name: user.userName,
+        user_email: user.email,
+        doc_type: "DNI",
+        doc_number: formData.dni ? String(formData.dni) : undefined,
+        billing_address: {
+          street_1: formData.direccion,
+          city: formData.localidad,
+          region: formData.estadoprovincia,
+          country: "AR",
+        },
+      },
+      callbackUrl: `${process.env.NAVE_BACK_URL || process.env.NEXTAUTH_URL}/gracias-compra`,
+    });
+    checkoutUrl = paymentRequest.checkout_url;
+  } catch (error) {
+    console.error("Error creando la intención de pago en Nave:", error);
+    throw error;
+  }
+
+  // redirect() debe ejecutarse fuera del try/catch: lanza internamente NEXT_REDIRECT.
+  redirect(checkoutUrl);
+}
+
+// Integración anterior con MercadoPago. Se mantiene inactiva (reemplazada por Nave
+// en inscripcion()). Conservada para poder revertir el cambio si fuese necesario.
+export async function inscripcionMP(formData, user, tipo, nombre, modalidad, monto) {
   await User.update(
     {
       pais: formData.pais,
