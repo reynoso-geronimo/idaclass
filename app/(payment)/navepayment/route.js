@@ -25,22 +25,37 @@ export async function POST(request) {
     if (payment?.status?.name === "APPROVED") {
       const transaction = payment.transactions?.[0] || {};
       const product = transaction.products?.[0] || {};
-      const monto = transaction.total_amount?.value ?? transaction.amount?.value;
+      const montoRaw = transaction.total_amount?.value ?? transaction.amount?.value;
+      const monto = montoRaw != null ? Number(montoRaw) : null;
       const userId = parseInt(payment.buyer?.user_id, 10);
 
-      // Idempotencia: Nave puede notificar el mismo pago más de una vez.
-      const existente = await Venta.findOne({
-        where: { payment_id_nave: payment.id },
-      });
+      // Un pago APPROVED sin importe o sin descripción es una respuesta anómala:
+      // no grabamos una venta corrupta; devolvemos 500 para que Nave reintente.
+      if (monto == null || Number.isNaN(monto) || !product.name) {
+        console.error("Pago Nave APPROVED con datos insuficientes:", payment.id, { monto: montoRaw, product });
+        return Response.json({ success: false }, { status: 500 });
+      }
 
-      if (!existente) {
+      if (Number.isNaN(userId)) {
+        console.error("Pago Nave APPROVED sin buyer.user_id: la venta quedará sin usuario asociado:", payment.id);
+      }
+
+      try {
         await Venta.create({
           payment_id_nave: payment.id,
           descripcion: product.name,
-          monto: monto,
+          monto,
           user_id: Number.isNaN(userId) ? null : userId,
           pago_modalidad: product.description || null,
         });
+      } catch (error) {
+        // Idempotencia: Nave puede notificar el mismo pago varias veces (incluso en paralelo).
+        // La constraint única de payment_id_nave evita el duplicado de forma atómica; si salta,
+        // la venta ya estaba registrada y lo tratamos como éxito.
+        if (error?.name === "SequelizeUniqueConstraintError") {
+          return Response.json({ success: true });
+        }
+        throw error;
       }
     }
 

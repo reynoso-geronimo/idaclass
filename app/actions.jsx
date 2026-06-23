@@ -336,6 +336,9 @@ export async function inscripcion(formData, user, tipo, nombre, modalidad, monto
       },
       callbackUrl: `${process.env.NAVE_BACK_URL || process.env.NEXTAUTH_URL}/gracias-compra`,
     });
+    if (!paymentRequest?.checkout_url) {
+      throw new Error("Nave no devolvió checkout_url: " + JSON.stringify(paymentRequest));
+    }
     checkoutUrl = paymentRequest.checkout_url;
   } catch (error) {
     console.error("Error creando la intención de pago en Nave:", error);
