@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useSearchParams } from "next/navigation";
 import { getCursoFormacionFromDB, getCursoFromDB, inscripcion } from "@/app/actions";
@@ -100,6 +102,7 @@ const CheckoutPage = () => {
 
   const [countryCode, setCountryCode] = useState(null);
   const [paypalKey, setPaypalKey] = useState(0);
+  const [isPaying, setIsPaying] = useState(false);
   useEffect(() => {
     setPaypalKey(prevKey => prevKey + 1);
   }, [montoUSD, countryCode]);
@@ -162,8 +165,17 @@ const CheckoutPage = () => {
     countryCode
   );
 
-  const onSubmit = formData => {
-    inscripcion(formData, user, tipo, nombre, modalidad, monto);
+  const onSubmit = async formData => {
+    setIsPaying(true);
+    try {
+      await inscripcion(formData, user, tipo, nombre, modalidad, monto);
+      // Si todo va bien, inscripcion() redirige al checkout de Nave y se desmonta esta vista.
+    } catch (error) {
+      // El server action lanza si Nave falla (ej. 503). Reseteamos para permitir reintentar.
+      console.error("No se pudo iniciar el pago con Nave:", error);
+      toast.error("No pudimos iniciar el pago. Probá de nuevo en unos minutos.");
+      setIsPaying(false);
+    }
   };
 
   if (status === "loading" || status === "unauthenticated" || loading) {
@@ -325,9 +337,16 @@ const CheckoutPage = () => {
                   <Button
                     type="submit"
                     className="w-full rounded-lg flex justify-center gap-6 items-center font-bold"
-                    disabled={monto == 0}
+                    disabled={monto == 0 || isPaying}
                   >
-                    Pagar con Nave
+                    {isPaying ? (
+                      <>
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                        Procesando...
+                      </>
+                    ) : (
+                      "Pagar con Nave"
+                    )}
                   </Button>
                 )}
                 {countryCode !== "AR" && (

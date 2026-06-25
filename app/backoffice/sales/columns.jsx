@@ -42,6 +42,24 @@ export const columns = [
     ),
   },
   {
+    accessorKey: "payment_id_nave",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="payment_id_Nave" />
+    ),
+  },
+  {
+    accessorKey: "external_payment_id",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="external_payment_id" />
+    ),
+  },
+  {
+    accessorKey: "payment_code",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="payment_code_Nave" />
+    ),
+  },
+  {
     accessorKey: "user_id",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="user_id" />

@@ -31,6 +31,12 @@ const Venta = sequelize.define('ventas', {
 
         unique: true
     },
+    external_payment_id: {
+        type: DataTypes.STRING,
+    },
+    payment_code: {
+        type: DataTypes.STRING,
+    },
     user_id: {
         type: DataTypes.INTEGER,
     }

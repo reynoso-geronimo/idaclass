@@ -43,6 +43,8 @@ export async function POST(request) {
       try {
         await Venta.create({
           payment_id_nave: payment.id,
+          external_payment_id: payment.external_payment_id ?? body.external_payment_id ?? null,
+          payment_code: payment.payment_code ?? null,
           descripcion: product.name,
           monto,
           user_id: Number.isNaN(userId) ? null : userId,

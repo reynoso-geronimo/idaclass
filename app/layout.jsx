@@ -3,6 +3,7 @@ import { Inter, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/sonner";
 import ProviderSession  from "./providers/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 const barlow = Barlow({
@@ -53,6 +54,7 @@ export default async function RootLayout({ children}) {
        <Contacto/>
         <Footer />
         </ProviderSession>
+        <Toaster richColors />
       </body>
     </html>
   );

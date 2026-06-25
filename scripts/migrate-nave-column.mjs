@@ -1,4 +1,4 @@
-// Migración puntual: agrega la columna payment_id_nave a la tabla `ventas`.
+// Migración puntual: garantiza las columnas de Nave en la tabla `ventas` (idempotente).
 // Uso: node scripts/migrate-nave-column.mjs   (lee las credenciales desde .env)
 import { readFileSync } from "fs";
 import mysql from "mysql2/promise";
@@ -33,13 +33,22 @@ const conn = await mysql.createConnection({
   port: Number(env.DB_PORT) || 3306,
 });
 
+// Columnas a garantizar en la tabla ventas (nombre + DDL). Constantes del código, no input.
+const columnas = [
+  { name: "payment_id_nave", ddl: "VARCHAR(255) NULL UNIQUE" },
+  { name: "external_payment_id", ddl: "VARCHAR(255) NULL" },
+  { name: "payment_code", ddl: "VARCHAR(255) NULL" },
+];
+
 try {
-  const [cols] = await conn.query("SHOW COLUMNS FROM ventas LIKE 'payment_id_nave'");
-  if (cols.length === 0) {
-    await conn.query("ALTER TABLE ventas ADD COLUMN payment_id_nave VARCHAR(255) NULL UNIQUE");
-    console.log("OK: columna payment_id_nave agregada a la tabla ventas.");
-  } else {
-    console.log("OK: la columna payment_id_nave ya existia, no se hizo ningun cambio.");
+  for (const col of columnas) {
+    const [rows] = await conn.query("SHOW COLUMNS FROM ventas LIKE ?", [col.name]);
+    if (rows.length === 0) {
+      await conn.query(`ALTER TABLE ventas ADD COLUMN ${col.name} ${col.ddl}`);
+      console.log(`OK: columna ${col.name} agregada.`);
+    } else {
+      console.log(`OK: la columna ${col.name} ya existia, sin cambios.`);
+    }
   }
   const [desc] = await conn.query("SHOW COLUMNS FROM ventas");
   console.log("Columnas actuales en ventas:", desc.map(c => c.Field).join(", "));
