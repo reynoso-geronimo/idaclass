@@ -49,7 +49,8 @@ export const hipertrofiaConfig = {
       ],
       ctas: {
         primary: { label: 'Asegurar mi cupo gratuito' },
-        secondary: { label: 'Ver adelanto (0:45)', href: '#adelanto' },
+        // "Ver adelanto" aparece SOLO cuando cargás `embedUrl`; abre el video en un diálogo (modal).
+        secondary: { label: 'Ver adelanto (0:45)' /* , embedUrl: 'https://www.youtube.com/embed/XXXXXXXXXXX' */ },
       },
       note: '60 min de contenido avanzado, sin rodeos · Cupos limitados por soporte técnico de la sala virtual',
       countdown: {
@@ -109,14 +110,6 @@ export const hipertrofiaConfig = {
       ],
       bridge:
         '**Por eso existe este episodio.** En esta hora vas a entender qué es realmente el RIR, cuándo (y si) conviene entrenar al fallo, y cómo salir del estancamiento sin adivinar — 30 años de trinchera de Ariel Couceiro González, bajados a un criterio simple que podés aplicar el lunes.',
-    },
-
-    {
-      type: 'video',
-      eyebrow: 'Adelanto',
-      title: 'Mirá 45 segundos de lo que se viene',
-      // embedUrl: 'https://www.youtube.com/embed/XXXXXXXXXXX', // al ponerlo, aparece el player con botón de play
-      caption: 'Adelanto próximamente',
     },
 
     {
