@@ -50,7 +50,8 @@ export const hipertrofiaConfig = {
       ctas: {
         primary: { label: 'Asegurar mi cupo gratuito' },
         // "Ver adelanto" aparece SOLO cuando cargás `embedUrl`; abre el video en un diálogo (modal).
-        secondary: { label: 'Ver adelanto (0:45)' /* , embedUrl: 'https://www.youtube.com/embed/XXXXXXXXXXX' */ },
+        // La duración real ponela en el label cuando tengas el clip (ej: 'Ver adelanto (1:12)').
+        secondary: { label: 'Ver adelanto' /* , embedUrl: 'https://www.youtube.com/embed/XXXXXXXXXXX' */ },
       },
       note: '60 min de contenido avanzado, sin rodeos · Cupos limitados por soporte técnico de la sala virtual',
       countdown: {
