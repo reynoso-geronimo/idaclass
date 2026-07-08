@@ -33,12 +33,14 @@ export const hipertrofiaConfig = {
       title: 'Hipertrofia real: **programá como un experto**, no como influencer de Instagram',
       subtitle:
         'La diferencia entre seguir una rutina y programar hipertrofia — explicada por **Ariel Couceiro González**, creador del método Entrenamiento Inteligente.',
-      image: {
-        desktop: '/landings/hero-desktop.jpg', // ≥768px
-        mobile: '/landings/hero-mobile.jpeg', // <768px
-        alt: 'Entrenamiento personalizado en grupo con coach de IdaClass Academy',
-        position: '64% 22%', // foco del recorte (object-position); ajustable
-      },
+      // Imagen del hero desactivada por ahora → se muestra el fondo azul oscuro (fallback).
+      // Descomentá para reactivar la foto (los archivos siguen en /public/landings).
+      // image: {
+      //   desktop: '/landings/hero-desktop.jpg', // ≥768px
+      //   mobile: '/landings/hero-mobile.jpeg',  // <768px
+      //   alt: 'Entrenamiento personalizado en grupo con coach de IdaClass Academy',
+      //   position: '64% 22%',
+      // },
       datetime: [
         { label: 'Día', value: 'Viernes 17 de julio', icon: 'calendar', highlight: true },
         { label: 'Horario', value: '18:00 hs (ARG)', icon: 'clock', highlight: true },

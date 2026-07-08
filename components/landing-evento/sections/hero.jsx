@@ -118,7 +118,8 @@ export default function Hero({
             />
           </picture>
         ) : (
-          <div className="h-full w-full bg-le-graphite-2" />
+          // Sin imagen: fondo azul oscuro (glow navy + acento sobre el fondo base).
+          <div className="h-full w-full bg-le-bg bg-[radial-gradient(circle_at_75%_40%,rgba(53,102,175,0.55),transparent_60%),radial-gradient(circle_at_28%_82%,rgb(var(--evt-accent-rgb)/0.16),transparent_55%)]" />
         )}
         <div
           className="absolute inset-0"
