@@ -24,6 +24,24 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.3rem;
+
+    /* ===== Landing de eventos reutilizable (paleta por defecto) ===== */
+    /* Sobrescribí estas vars en el wrapper de <LandingEvento> vía config.theme
+       para cambiar la marca sin tocar componentes. --evt-accent-rgb es un
+       triplete R G B para poder aplicar transparencias: rgb(var(--evt-accent-rgb)/0.12) */
+    --evt-bg: #0a0c10;
+    --evt-graphite: #14171d;
+    --evt-graphite-2: #1c2027;
+    --evt-fg: #f4f7fa;
+    --evt-muted: #98a2af;
+    --evt-line: #262b33;
+    --evt-accent: #1cb1e5;
+    --evt-accent-rgb: 28 177 229;
+    --evt-accent-strong: #0286c8;
+    --evt-navy: #3566af;
+    --evt-success: #4cc38a;
+    --evt-danger: #e0596b;
+    --evt-on-accent: #04202c;
   }
 
   .dark {

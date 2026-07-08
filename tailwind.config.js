@@ -62,6 +62,23 @@ module.exports = {
         idaclass5: "#1D2F57",
         idaclassGray: "#A59C94",
         idaclassGray2: "#b1b3b3",
+        // Landing de eventos reutilizable ("landing-evento"). Temeable por evento
+        // sobrescribiendo las CSS vars --evt-* en el wrapper raíz de <LandingEvento>.
+        // Los valores fuente viven en globals.css :root.
+        le: {
+          bg: "var(--evt-bg)",
+          graphite: "var(--evt-graphite)",
+          "graphite-2": "var(--evt-graphite-2)",
+          fg: "var(--evt-fg)",
+          muted: "var(--evt-muted)",
+          line: "var(--evt-line)",
+          accent: "var(--evt-accent)",
+          "accent-strong": "var(--evt-accent-strong)",
+          navy: "var(--evt-navy)",
+          success: "var(--evt-success)",
+          danger: "var(--evt-danger)",
+          "on-accent": "var(--evt-on-accent)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
