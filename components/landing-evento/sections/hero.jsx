@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { useCountdown, pad2 } from '../lib/use-countdown'
 import { Container, CtaButton } from '../lib/primitives'
 import { renderRich, hasContent } from '../lib/rich-text'
@@ -96,6 +98,7 @@ export default function Hero({
   countdownTo,
   registerHref = '#inscripcion',
 }) {
+  const [adelantoOpen, setAdelantoOpen] = useState(false)
   if (!hasContent(title)) return null
 
   return (
@@ -191,13 +194,18 @@ export default function Hero({
                     {ctas.primary.label}
                   </CtaButton>
                 )}
-                {hasContent(ctas?.secondary?.label) && (
-                  <CtaButton href={ctas.secondary.href || '#adelanto'} variant="ghost">
+                {/* "Ver adelanto": solo si hay video (embedUrl). Abre el clip en un diálogo. */}
+                {hasContent(ctas?.secondary?.label) && hasContent(ctas?.secondary?.embedUrl) && (
+                  <button
+                    type="button"
+                    onClick={() => setAdelantoOpen(true)}
+                    className="inline-flex items-center justify-center gap-2 rounded-sm border border-le-line bg-transparent px-6 py-4 font-barlow-c text-sm font-semibold uppercase tracking-wide text-le-fg transition hover:border-le-accent"
+                  >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                     {ctas.secondary.label}
-                  </CtaButton>
+                  </button>
                 )}
               </div>
               {hasContent(note) && <p className="mt-2 text-[12.5px] text-le-muted">{note}</p>}
@@ -207,6 +215,26 @@ export default function Hero({
               <CountdownCard label={countdown.label} spots={countdown.spots} countdownTo={countdownTo} />
             )}
           </div>
+
+          {/* Diálogo del adelanto: el iframe se monta recién al abrir. */}
+          {hasContent(ctas?.secondary?.embedUrl) && (
+            <Dialog open={adelantoOpen} onOpenChange={setAdelantoOpen}>
+              <DialogContent className="max-w-3xl overflow-hidden border-le-line bg-le-bg p-0">
+                <DialogTitle className="sr-only">{ctas.secondary.label || 'Adelanto'}</DialogTitle>
+                <div className="aspect-video w-full">
+                  {adelantoOpen && (
+                    <iframe
+                      src={`${ctas.secondary.embedUrl}${ctas.secondary.embedUrl.includes('?') ? '&' : '?'}autoplay=1`}
+                      title={ctas.secondary.label || 'Adelanto'}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="h-full w-full"
+                    />
+                  )}
+                </div>
+              </DialogContent>
+            </Dialog>
+          )}
         </div>
       </Container>
     </section>
