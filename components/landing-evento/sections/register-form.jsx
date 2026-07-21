@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { z } from 'zod'
+import { isValidPhoneNumber } from 'react-phone-number-input'
 import { PhoneInput } from '@/components/ui/phone-input'
 import { cn } from '@/lib/utils'
 import { Container } from '../lib/primitives'
@@ -23,7 +24,12 @@ const schema = z.object({
   nombre: z.string().min(2, 'Ingresá al menos 2 caracteres'),
   apellido: z.string().min(2, 'Ingresá al menos 2 caracteres'),
   email: z.string().email('Ingresá un email válido'),
-  telefono: z.string().min(8, 'Ingresá un teléfono válido'),
+  // El PhoneInput guarda el valor en E.164 (+549…); isValidPhoneNumber (libphonenumber-js)
+  // valida estructura + longitud según el país, para que el WhatsApp de automatización llegue.
+  telefono: z
+    .string()
+    .min(1, 'Ingresá tu número de WhatsApp')
+    .refine((v) => isValidPhoneNumber(v), 'Ingresá un número de WhatsApp válido'),
 })
 
 function WhatsAppIcon() {
