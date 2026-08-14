@@ -1,4 +1,5 @@
 import { hipertrofiaConfig } from './hipertrofia'
+import { suplementacionConfig } from './suplementacion'
 
 /**
  * Registro de eventos. Agregá una landing nueva creando su config y sumándola acá:
@@ -8,6 +9,7 @@ import { hipertrofiaConfig } from './hipertrofia'
  */
 export const EVENTOS = {
   hipertrofia: hipertrofiaConfig,
+  suplementacion: suplementacionConfig,
 }
 
 export function getEvento(slug) {

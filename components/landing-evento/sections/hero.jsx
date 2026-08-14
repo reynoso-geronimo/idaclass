@@ -135,14 +135,27 @@ export default function Hero({
 
       <Container className="relative z-[1] pb-12 pt-28">
         <div className="max-w-[600px]">
+          {/* `badge.size: 'lg'` agranda el antetítulo (pastilla + texto) cuando el evento lo pide. */}
           {hasContent(badge) && (
-            <div className="mb-[18px] inline-flex items-center gap-2.5 rounded-full border border-le-accent bg-[rgb(var(--evt-accent-rgb)/0.12)] px-3.5 py-[7px]">
+            <div
+              className={`mb-[18px] inline-flex items-center gap-2.5 rounded-full border border-le-accent bg-[rgb(var(--evt-accent-rgb)/0.12)] ${
+                badge.size === 'lg' ? 'px-4 py-2' : 'px-3.5 py-[7px]'
+              }`}
+            >
               {badge.num && (
-                <span className="rounded-sm bg-le-accent px-[7px] py-0.5 font-mono text-[11px] font-bold text-le-on-accent">
+                <span
+                  className={`rounded-sm bg-le-accent px-[7px] py-0.5 font-mono ${
+                    badge.size === 'lg' ? 'text-[13px]' : 'text-[11px]'
+                  } font-bold text-le-on-accent`}
+                >
                   {badge.num}
                 </span>
               )}
-              <span className="font-mono text-[11.5px] font-bold uppercase tracking-[0.07em] text-le-accent">
+              <span
+                className={`font-mono ${
+                  badge.size === 'lg' ? 'text-[13px] md:text-[15px]' : 'text-[11.5px]'
+                } font-bold uppercase tracking-[0.07em] text-le-accent`}
+              >
                 {badge.label}
               </span>
             </div>

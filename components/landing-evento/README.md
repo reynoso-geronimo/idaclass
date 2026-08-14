@@ -102,6 +102,19 @@ La pantalla de "gracias" (`thankyou`) soporta acciones tipo `link` y `share`
 (WhatsApp con mensaje pre-armado, `{nombre}` se reemplaza) y un link de Google
 Calendar armado desde `thankyou.calendar`.
 
+## Opciones puntuales de algunas secciones
+
+Todas son opcionales; si no las cargás, la sección se ve como siempre.
+
+- `hero.badge.size: 'lg'` — agranda el antetítulo (la pastilla del ciclo/episodio).
+  Sin `badge.num`, la pastilla se muestra solo con el texto de `badge.label`.
+- `problem.listTitle` — título que se muestra arriba de la lista de dolores
+  (útil cuando el documento trae "el problema" y "los puntos de dolor" separados).
+- `footer.claim`, `footer.eventLine`, `footer.contact` (`{ title, text, email, phone }`),
+  `footer.links` (`[{ label, href }]`) y `footer.cta` — arman el footer ampliado
+  (marca + contacto + enlaces + CTA) arriba de la línea de copyright (`footer.text`).
+  Con solo `brand` y `text` el footer sigue siendo la barra simple de una fila.
+
 ## Estructura
 
 ```

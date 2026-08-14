@@ -32,7 +32,7 @@ function ContrastCol({ data, tone }) {
   )
 }
 
-export default function Problem({ eyebrow, title, intro, contrast, list, bridge, image }) {
+export default function Problem({ eyebrow, title, intro, contrast, listTitle, list, bridge, image }) {
   if (!hasContent(title) && !hasContent(list)) return null
 
   return (
@@ -71,6 +71,11 @@ export default function Problem({ eyebrow, title, intro, contrast, list, bridge,
 
           {/* Lista de dolores + puente */}
           <div>
+            {hasContent(listTitle) && (
+              <h3 className="mb-5 font-barlow-c text-xl font-bold uppercase leading-tight text-le-fg md:text-[22px]">
+                {renderRich(listTitle)}
+              </h3>
+            )}
             {hasContent(list) && (
               <div className="flex flex-col gap-3.5">
                 {list.map((item, i) => (
