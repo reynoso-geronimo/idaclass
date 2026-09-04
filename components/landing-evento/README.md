@@ -108,6 +108,11 @@ Todas son opcionales; si no las cargás, la sección se ve como siempre.
 
 - `hero.badge.size: 'lg'` — agranda el antetítulo (la pastilla del ciclo/episodio).
   Sin `badge.num`, la pastilla se muestra solo con el texto de `badge.label`.
+- `speaker.items` — array de oradores (una ficha por item) cuando el evento tiene
+  más de un expositor. Cada item toma las mismas props que la ficha simple
+  (`kicker`, `name`, `role`, `bio`, `bullets`, `tags`, `stats`, `photo`).
+  Si no cargás `items`, la sección sigue funcionando con las props sueltas
+  (`{ type: 'speaker', name, role, ... }`). También acepta `intro` en el encabezado.
 - `problem.listTitle` — título que se muestra arriba de la lista de dolores
   (útil cuando el documento trae "el problema" y "los puntos de dolor" separados).
 - `footer.claim`, `footer.eventLine`, `footer.contact` (`{ title, text, email, phone }`),
