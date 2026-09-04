@@ -1,5 +1,6 @@
 import { hipertrofiaConfig } from './hipertrofia'
 import { suplementacionConfig } from './suplementacion'
+import { hyroxAdultosMayoresConfig } from './hyrox-adultos-mayores'
 
 /**
  * Registro de eventos. Agregá una landing nueva creando su config y sumándola acá:
@@ -10,6 +11,7 @@ import { suplementacionConfig } from './suplementacion'
 export const EVENTOS = {
   hipertrofia: hipertrofiaConfig,
   suplementacion: suplementacionConfig,
+  'hyrox-adultos-mayores': hyroxAdultosMayoresConfig,
 }
 
 export function getEvento(slug) {
