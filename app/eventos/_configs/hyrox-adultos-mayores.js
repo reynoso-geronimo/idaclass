@@ -165,7 +165,7 @@ export const hyroxAdultosMayoresConfig = {
             'Aporte en vivo: una mirada práctica sobre la evolución del entrenamiento híbrido y cómo aplicarlo para captar atletas y clientes de alto rendimiento.',
           ],
           tags: ['HYROX', 'CrossFit', 'Entrenamiento híbrido', 'Fuerza y resistencia', 'Rendimiento funcional'],
-          photo: { src: '/landings/angel-ferrando.jpg', badge: 'Expositor' },
+          photo: { src: '/landings/angel-ferrando-v2.jpg', badge: 'Expositor' },
         },
         {
           kicker: 'Adultos mayores & longevidad',
