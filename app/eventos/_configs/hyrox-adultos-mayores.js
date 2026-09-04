@@ -10,6 +10,9 @@
  * Fecha confirmada: jueves 10/09, 14:00 hs (ARG). Aparece en los 6 lugares
  * marcados con `// FECHA` — si cambia, tocá solo esos.
  *
+ * Duración: 2 horas. Además del chip marcado con `// DURACION`, se menciona en
+ * `problem.bridge`, `agenda.intro` y `register.sideIntro`.
+ *
  * PENDIENTE: los testimonios. El doc los dejaba "reservados para maquetar"; los de
  * abajo son de referencia y hay que reemplazarlos por testimonios reales antes de publicar.
  */
@@ -46,7 +49,7 @@ export const hyroxAdultosMayoresConfig = {
       datetime: [
         { label: 'Fecha', value: 'Jueves 10 de septiembre', icon: 'calendar', highlight: true }, // FECHA
         { label: 'Horario', value: '14:00 hs (ARG)', icon: 'clock', highlight: true }, // FECHA
-        { label: 'Duración', value: '90 minutos', icon: 'duration' },
+        { label: 'Duración', value: '2 horas', icon: 'duration' }, // DURACION
         { label: 'Modalidad', value: '100% online en vivo' },
         { label: 'Acceso', value: 'Gratis vía YouTube', icon: 'shield' },
       ],
@@ -113,7 +116,7 @@ export const hyroxAdultosMayoresConfig = {
         'Te preocupa que, cuando estas disciplinas sean masivas en tu ciudad, **otros profesionales ya estén varios pasos adelante**.',
       ],
       bridge:
-        '🚨 **El problema no es que estas oportunidades estén llegando. El problema es llegar tarde a ellas.** Por eso existe este episodio: 90 minutos con dos especialistas para entender qué hay detrás de cada disciplina y cómo convertirlas en una ventaja profesional concreta.',
+        '🚨 **El problema no es que estas oportunidades estén llegando. El problema es llegar tarde a ellas.** Por eso existe este episodio: 2 horas con dos especialistas para entender qué hay detrás de cada disciplina y cómo convertirlas en una ventaja profesional concreta.',
     },
 
     {
@@ -204,7 +207,7 @@ export const hyroxAdultosMayoresConfig = {
       type: 'agenda',
       eyebrow: 'Mapa de la charla',
       title: 'Así vamos a recorrer la transmisión',
-      intro: 'Una hoja de ruta clara para extraer el máximo valor aplicable de los 90 minutos.',
+      intro: 'Una hoja de ruta clara para extraer el máximo valor aplicable de las 2 horas.',
       items: [
         {
           title: 'El nuevo mapa del fitness global',
@@ -289,7 +292,7 @@ export const hyroxAdultosMayoresConfig = {
       sideEyebrow: 'Club de Expertos | IdaClass Academy',
       sideTitle: 'Reservá tu lugar gratis y anticipate al futuro del fitness',
       sideIntro:
-        'Un evento en vivo de 90 minutos para entender y aprovechar dos de las transformaciones más rentables de la industria.',
+        'Un evento en vivo de 2 horas para entender y aprovechar dos de las transformaciones más rentables de la industria.',
       benefits: [
         'Streaming online 100% en vivo',
         'Conversación directa con 2 especialistas referentes',
