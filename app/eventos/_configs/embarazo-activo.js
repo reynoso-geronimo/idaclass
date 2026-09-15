@@ -13,11 +13,9 @@
  * Duración: 60 min. Además del chip marcado con `// DURACION`, se menciona en
  * `hero.note`, `problem.bridge`, `agenda.intro` y `register.sideIntro`.
  *
- * PENDIENTE — IMÁGENES (ver bloques marcados `// TODO FOTO`):
- *   1. Foto de la Dra. Mariela Villar Heidelberger → /public/landings/mariela-villar.jpg
- *      Mientras tanto, la ficha usa el fallback de iniciales ("MV").
- *   2. Logos de la sección `partners` (bloque comentado abajo): faltan Embarazo Activo,
- *      IdaClass Academy y Activedemy. Solo tenemos RG Consulting Group (/landings/logo-1.jpeg).
+ * PENDIENTE — IMÁGENES (ver bloque marcado `// TODO FOTO`): falta el logo de Activedemy
+ * en la sección `partners`. Ya están la foto de Mariela Villar y los logos de Embarazo
+ * Activo, Post Parto Activo y RG Consulting Group.
  *
  * PENDIENTE — TESTIMONIOS: los 3 de abajo salen del doc, pero el propio doc los marca
  * como contenido de relleno. Reemplazar por testimonios reales antes de publicar.
@@ -70,20 +68,18 @@ export const embarazoActivoConfig = {
       },
     },
 
-    // TODO FOTO — Sección "Acompañan". El doc pide 4 marcas: Embarazo Activo,
-    // RG Consulting Group, IdaClass Academy y Activedemy. En /public/landings solo
-    // está RG Consulting Group (logo-1.jpeg), así que la sección queda oculta hasta
-    // tener los 3 logos faltantes. Descomentá cuando estén los archivos.
-    // {
-    //   type: 'partners',
-    //   label: 'Acompañan:',
-    //   logos: [
-    //     { src: '/landings/logo-embarazo-activo.png', alt: 'Embarazo Activo' },
-    //     { src: '/landings/logo-1.jpeg', alt: 'RG Consulting Group' },
-    //     { src: '/landings/logo-idaclass.png', alt: 'IdaClass Academy' },
-    //     { src: '/landings/logo-activedemy.png', alt: 'Activedemy' },
-    //   ],
-    // },
+    {
+      type: 'partners',
+      label: 'Acompañan:',
+      // TODO FOTO — falta el logo de Activedemy (la plataforma donde se cursa). El de
+      // IdaClass Academy no hace falta acá: ya está en el topbar. Cuando llegue el
+      // archivo, guardalo en /public/landings/logo-activedemy.png y sumalo al array.
+      logos: [
+        { src: '/landings/logo-embarazo-activo.png', alt: 'Embarazo Activo' },
+        { src: '/landings/logo-postparto-activo.png', alt: 'Post Parto Activo' },
+        { src: '/landings/logo-1.jpeg', alt: 'RG Consulting Group' },
+      ],
+    },
 
     {
       type: 'stats',
@@ -183,10 +179,7 @@ export const embarazoActivoConfig = {
         { value: '2008', label: 'Fundación de Embarazo Activo' },
         { value: '3', label: 'Avales internacionales' },
       ],
-      // TODO FOTO — falta la foto de la Dra. Mariela Villar Heidelberger.
-      // Cuando esté, guardala en /public/landings/mariela-villar.jpg y cambiá esta
-      // línea por: photo: { src: '/landings/mariela-villar.jpg', badge: 'Expositora' }
-      photo: { initials: 'MV', badge: 'Expositora' },
+      photo: { src: '/landings/mariela-villar.jpg', badge: 'Expositora' },
     },
 
     {
