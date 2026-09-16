@@ -44,7 +44,7 @@ export const embarazoActivoConfig = {
       badge: { num: 'EP. 03', label: 'Club de Expertos · IdaClass Academy' },
       live: 'En vivo y 100% online vía YouTube · Acceso exclusivo con registro',
       title:
-        'Embarazo Activo: aprendé a entrenar embarazadas y posparto con **criterio clínico**, no por instinto',
+        'Embarazo Activo: aprendé a entrenar embarazadas y posparto con **criterio**, no por instinto',
       subtitle:
         'La diferencia entre "adaptar un poco la rutina" y **prescribir ejercicio seguro** en cada trimestre y en la recuperación postparto — explicada por el equipo docente de **Embarazo Activo**, referente internacional en la especialidad con aval triple americano (ACSM, AFAA, NASM).',
       // Imagen del hero desactivada → se muestra el fondo azul oscuro (fallback),
