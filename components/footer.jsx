@@ -15,13 +15,9 @@ const Footer = () => {
         <Image src={`/assets/idaclass.logo.webp`} alt="logo" width={200} height={50} />
         <p className="mt-6">Plataforma de cursos E-learning</p>
         <p>para la formación de profesionales.</p>
-        <a href="tel:+5491152594355" className="text-xl font-bold mt-6">
-          +54 9 11 5259 4355
-        </a>
         <a href="mailto:hola@idaclassacademy.com" className="text-xl font-bold mt-6">
           hola@idaclassacademy.com
         </a>
-        <p className="text-sm mt-6">Avenida Santa Fe 530 , Bella Vista , Buenos Aires , Argentina</p>
       </section>
       <section className="flex flex-col gap-2">
         <h3 className="text-lg font-bold mt-12 mb-2">Enlaces</h3>
