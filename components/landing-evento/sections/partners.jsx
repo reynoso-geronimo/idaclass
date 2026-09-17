@@ -1,6 +1,17 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Container } from '../lib/primitives'
 import { hasContent } from '../lib/rich-text'
+
+// Separación entre logos. Tiene que coincidir con gap-[22px] / pr-[22px] de abajo,
+// porque se usa para medir si el set entra en el ancho disponible.
+const GAP = 22
+
+// Segundos que tarda un logo en recorrer la franja (velocidad constante:
+// la duración total escala con la cantidad de logos).
+const SECONDS_PER_LOGO = 4.5
 
 // Un logo (imagen en tarjeta blanca, imagen "onDark" sin tarjeta, o texto).
 function Logo({ logo }) {
@@ -27,32 +38,51 @@ function Logo({ logo }) {
   )
 }
 
-// Segundos que tarda un logo en recorrer la franja, a velocidad constante
-// (la duración total escala con la cantidad de logos de la mitad de la pista).
-const SECONDS_PER_LOGO = 4.5
-
 /**
- * Franja "Acompañan": label fijo + carrusel infinito de logos.
+ * Franja "Acompañan": label fijo + logos.
  *
- * Es un marquee CSS puro: el set de logos se repite hasta cubrir el ancho
- * (`copies`) y se renderiza dos veces; la pista se desplaza -50% en loop, así
- * la segunda copia entra justo donde termina la primera y no hay costura.
- * Se pausa al pasar el mouse. Con `prefers-reduced-motion` queda estático,
- * con scroll horizontal y sin la copia duplicada.
+ * Si los logos entran en el ancho disponible se muestran fijos, como una fila
+ * normal. Solo cuando no caben pasan a carrusel: un marquee CSS con el set
+ * duplicado que se desplaza -50% en loop. No tiene costura porque cada mitad
+ * lleva el gap como padding derecho, así la unión entre copias mide igual que
+ * el gap interno. Se pausa con el mouse; con prefers-reduced-motion queda
+ * estático con scroll horizontal y sin la copia duplicada.
+ *
+ * La decisión se toma midiendo en el cliente (ResizeObserver) y se recalcula al
+ * cambiar el ancho o cuando cargan las imágenes. En SSR arranca fijo.
  *
  * `duration` (segundos) permite pisar la velocidad por evento.
  */
 export default function Partners({ label, logos, duration }) {
+  const wrapRef = useRef(null) // área disponible para los logos (a la derecha del label)
+  const setRef = useRef(null) // primer set de logos, esté o no duplicado
+  const [overflow, setOverflow] = useState(false)
+  const count = logos?.length ?? 0
+
+  useEffect(() => {
+    const wrap = wrapRef.current
+    if (!wrap || !count || typeof ResizeObserver === 'undefined') return
+
+    const measure = () => {
+      const list = setRef.current
+      if (!list) return
+      const items = Array.from(list.children).slice(0, count)
+      const setWidth = items.reduce((w, el) => w + el.getBoundingClientRect().width, 0) + GAP * (count - 1)
+      setOverflow(setWidth > wrap.clientWidth + 1)
+    }
+
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(wrap)
+    if (setRef.current) ro.observe(setRef.current)
+    return () => ro.disconnect()
+    // `overflow` va en deps para re-observar el <ul> nuevo cuando cambia de modo.
+  }, [count, overflow])
+
   if (!hasContent(logos)) return null
 
-  // Al menos 6 logos por mitad para que la pista supere el ancho del contenedor.
-  const copies = Math.max(2, Math.ceil(6 / logos.length))
-  const half = Array.from({ length: copies }, () => logos).flat()
-  const seconds = duration || Math.round(half.length * SECONDS_PER_LOGO)
-
-  // Cada mitad lleva el gap como padding derecho para que la unión entre copias
-  // mida lo mismo que el gap interno (si no, el loop "salta" medio gap).
-  const halfClass = 'flex items-center gap-[22px] pr-[22px] motion-reduce:pr-0'
+  const seconds = duration || Math.round(count * SECONDS_PER_LOGO)
+  const rowClass = 'flex items-center gap-[22px]'
 
   return (
     <div className="border-b border-le-line bg-le-graphite py-[22px]">
@@ -62,22 +92,38 @@ export default function Partners({ label, logos, duration }) {
             {label}
           </span>
         )}
-        <div className="relative min-w-0 flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)] motion-reduce:overflow-x-auto motion-reduce:[mask-image:none]">
-          <div
-            className="flex w-max animate-le-marquee hover:[animation-play-state:paused] motion-reduce:animate-none"
-            style={{ '--le-marquee-duration': `${seconds}s` }}
-          >
-            <ul className={halfClass}>
-              {half.map((logo, i) => (
+
+        <div
+          ref={wrapRef}
+          className={`relative min-w-0 flex-1 overflow-hidden ${
+            overflow
+              ? '[mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)] motion-reduce:overflow-x-auto motion-reduce:[mask-image:none]'
+              : ''
+          }`}
+        >
+          {overflow ? (
+            <div
+              className="flex w-max animate-le-marquee hover:[animation-play-state:paused] motion-reduce:animate-none"
+              style={{ '--le-marquee-duration': `${seconds}s` }}
+            >
+              <ul ref={setRef} className={`${rowClass} pr-[22px] motion-reduce:pr-0`}>
+                {logos.map((logo, i) => (
+                  <Logo key={i} logo={logo} />
+                ))}
+              </ul>
+              <ul className={`${rowClass} pr-[22px] motion-reduce:hidden`} aria-hidden>
+                {logos.map((logo, i) => (
+                  <Logo key={i} logo={logo} />
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <ul ref={setRef} className={rowClass}>
+              {logos.map((logo, i) => (
                 <Logo key={i} logo={logo} />
               ))}
             </ul>
-            <ul className={`${halfClass} motion-reduce:hidden`} aria-hidden>
-              {half.map((logo, i) => (
-                <Logo key={i} logo={logo} />
-              ))}
-            </ul>
-          </div>
+          )}
         </div>
       </Container>
     </div>

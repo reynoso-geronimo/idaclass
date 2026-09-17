@@ -121,10 +121,11 @@ Todas son opcionales; si no las cargás, la sección se ve como siempre.
   (`kicker`, `name`, `role`, `bio`, `bullets`, `tags`, `stats`, `photo`).
   Si no cargás `items`, la sección sigue funcionando con las props sueltas
   (`{ type: 'speaker', name, role, ... }`). También acepta `intro` en el encabezado.
-- `partners` — los logos corren en un carrusel infinito (marquee CSS, se pausa con
-  el mouse y queda estático con `prefers-reduced-motion`). Con pocos logos el set
-  se repite solo hasta cubrir el ancho. `partners.duration` (segundos) pisa la
-  velocidad por evento; por defecto ~4,5 s por logo.
+- `partners` — si los logos entran en el ancho se muestran fijos; si no caben
+  (típicamente en mobile) pasan solos a carrusel infinito (marquee CSS, se pausa
+  con el mouse y queda estático con `prefers-reduced-motion`). La decisión se
+  recalcula al cambiar el ancho. `partners.duration` (segundos) pisa la velocidad
+  del carrusel por evento; por defecto ~4,5 s por logo.
 - `problem.listTitle` — título que se muestra arriba de la lista de dolores
   (útil cuando el documento trae "el problema" y "los puntos de dolor" separados).
 - `footer.claim`, `footer.eventLine`, `footer.contact` (`{ title, text, email, phone }`),
