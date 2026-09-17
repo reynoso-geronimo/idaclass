@@ -123,6 +123,11 @@ module.exports = {
         "expo-spin": {
           to: { transform: "rotate(360deg)" },
         },
+        // Marquee infinito (landing-evento/partners): la pista trae el set de logos
+        // dos veces y se desplaza media pista, así el loop no tiene costura.
+        "le-marquee": {
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -132,6 +137,7 @@ module.exports = {
         "expo-blink": "expo-blink 1.6s infinite",
         "pop-in": "pop-in 0.55s cubic-bezier(0.34,1.56,0.64,1) both",
         "expo-spin": "expo-spin 5s linear infinite",
+        "le-marquee": "le-marquee var(--le-marquee-duration, 30s) linear infinite",
       },
 
     },

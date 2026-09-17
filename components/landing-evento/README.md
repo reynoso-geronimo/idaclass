@@ -108,11 +108,23 @@ Todas son opcionales; si no las cargás, la sección se ve como siempre.
 
 - `hero.badge.size: 'lg'` — agranda el antetítulo (la pastilla del ciclo/episodio).
   Sin `badge.num`, la pastilla se muestra solo con el texto de `badge.label`.
+- `hero.image` — además de cambiar el fondo, decide el layout del hero:
+  - **con imagen**: todo apilado en una columna a la izquierda sobre la foto
+    (antetítulo, título, bajada, pastillas de fecha, CTA, countdown). Diseño original.
+  - **sin imagen + `countdown`**: dos columnas en ≥1024px. Izquierda solo el relato
+    (antetítulo, título, bajada); derecha un **panel de inscripción** que junta el
+    countdown, los cupos, la fecha/horario (`datetime` como filas) y el CTA con su
+    `note`. En mobile el panel se apila debajo de la bajada.
+  - **sin imagen ni `countdown`**: todo apilado en una columna centrada y más ancha.
 - `speaker.items` — array de oradores (una ficha por item) cuando el evento tiene
   más de un expositor. Cada item toma las mismas props que la ficha simple
   (`kicker`, `name`, `role`, `bio`, `bullets`, `tags`, `stats`, `photo`).
   Si no cargás `items`, la sección sigue funcionando con las props sueltas
   (`{ type: 'speaker', name, role, ... }`). También acepta `intro` en el encabezado.
+- `partners` — los logos corren en un carrusel infinito (marquee CSS, se pausa con
+  el mouse y queda estático con `prefers-reduced-motion`). Con pocos logos el set
+  se repite solo hasta cubrir el ancho. `partners.duration` (segundos) pisa la
+  velocidad por evento; por defecto ~4,5 s por logo.
 - `problem.listTitle` — título que se muestra arriba de la lista de dolores
   (útil cuando el documento trae "el problema" y "los puntos de dolor" separados).
 - `footer.claim`, `footer.eventLine`, `footer.contact` (`{ title, text, email, phone }`),
