@@ -23,20 +23,23 @@ export default function Testimonials({ eyebrow, title, items }) {
                 </div>
               )}
               <p className="text-[13.8px] leading-relaxed text-[#cbd3dc]">{renderRich(t.quote)}</p>
-              <div className="mt-[18px] flex items-center gap-2.5">
-                {t.avatar && (
-                  <Image src={t.avatar} alt={t.name || ''} width={38} height={38} unoptimized className="h-[38px] w-[38px] rounded-full object-cover" />
-                )}
-                <div className="leading-tight">
-                  {t.name && <div className="text-[13px] font-bold text-le-fg">{t.name}</div>}
-                  {t.role && (
-                    <div className="font-mono text-[11.5px] uppercase tracking-[0.04em] text-le-muted">
-                      <span className="text-le-accent">— </span>
-                      {t.role}
-                    </div>
+              {/* Sin autor (frases de comunidad) no se deja la fila vacía al pie de la tarjeta. */}
+              {(t.avatar || t.name || t.role) && (
+                <div className="mt-[18px] flex items-center gap-2.5">
+                  {t.avatar && (
+                    <Image src={t.avatar} alt={t.name || ''} width={38} height={38} unoptimized className="h-[38px] w-[38px] rounded-full object-cover" />
                   )}
+                  <div className="leading-tight">
+                    {t.name && <div className="text-[13px] font-bold text-le-fg">{t.name}</div>}
+                    {t.role && (
+                      <div className="font-mono text-[11.5px] uppercase tracking-[0.04em] text-le-muted">
+                        <span className="text-le-accent">— </span>
+                        {t.role}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </article>
           ))}
         </Reveal>

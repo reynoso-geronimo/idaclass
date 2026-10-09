@@ -128,10 +128,38 @@ Todas son opcionales; si no las cargás, la sección se ve como siempre.
   del carrusel por evento; por defecto ~4,5 s por logo.
 - `problem.listTitle` — título que se muestra arriba de la lista de dolores
   (útil cuando el documento trae "el problema" y "los puntos de dolor" separados).
+- `problem.contrast.bad/good.items` — convierte cada columna del "VS" en una lista
+  (✕ en `bad`, ✓ en `good`) para comparar punto por punto; `icon`, `title` y `text`
+  pasan a ser opcionales. Si además no cargás `list`/`listTitle` (ni `image`), el
+  contraste ocupa todo el ancho y el `bridge` va debajo en un recuadro.
+- `outcomes.intro` — bajada bajo el título de los pilares.
+- `urgency.steps` — cadena de pasos numerados con flechas
+  (`['Señales', 'Oportunidades', 'Negocio', 'Acción']`); el último se resalta. En
+  fila desde 1024px, apilada debajo.
+- `hero.datetime[].icon: 'video'` — ícono de transmisión (además de `calendar`,
+  `clock`, `duration` y `shield`).
+- `testimonials.items[]` sin `name`/`role`/`avatar` — la tarjeta muestra solo la
+  frase (sirve para "voces de la comunidad" sin atribución).
 - `footer.claim`, `footer.eventLine`, `footer.contact` (`{ title, text, email, phone }`),
   `footer.links` (`[{ label, href }]`) y `footer.cta` — arman el footer ampliado
   (marca + contacto + enlaces + CTA) arriba de la línea de copyright (`footer.text`).
   Con solo `brand` y `text` el footer sigue siendo la barra simple de una fila.
+  Los `links` externos (`http…`, ej. Instagram o un canal de WhatsApp) abren en otra pestaña.
+
+## Secciones para programas sin orador
+
+Para eventos que no siguen el formato "Club de Expertos" (ej. `fitness-negocio-stream`,
+que dirigen dos organizaciones) hay tres secciones más. Como todas, se ocultan solas
+si les falta el contenido esencial.
+
+- `audience` — "para quién es": `{ eyebrow, title, intro, items: [{ title, text, tag? }], quote? }`.
+  Tarjetas numeradas solas (01, 02…; `tag` pisa el número) y una frase de cierre.
+- `hosts` — "quiénes organizan": `{ eyebrow, title, intro, items: [{ logo: { src, alt }, kicker, name, text }], highlight?: { label, text } }`.
+  Una tarjeta por organización con su logo en tarjeta blanca; con dos, las une un
+  "+" en desktop. `highlight` destaca una pregunta o idea central al pie. Para
+  personas seguí usando `speaker`.
+- `closing` — cierre con CTA final antes del footer: `{ eyebrow, title, text, cta: { label, href? }, meta }`.
+  `meta` es la línea de datos del evento ("28 de octubre · 14:30 hs · Online").
 
 ## Estructura
 
@@ -148,8 +176,9 @@ components/landing-evento/
     calendar.js            Google Calendar + WhatsApp share URLs
     theme.js               config.theme -> CSS vars --evt-*
   sections/                topbar, hero, partners, stats, problem, video,
-                           outcomes, speaker, agenda, testimonials, urgency,
-                           register-form, faq, footer, sticky-cta
+                           outcomes, audience, speaker, hosts, agenda,
+                           testimonials, urgency, register-form, faq,
+                           closing, footer, sticky-cta
 ```
 
 ## Imágenes

@@ -30,6 +30,12 @@ const ICONS = {
     </>
   ),
   shield: <path d="M4 6L12 3L20 6V11C20 16 16.5 19.5 12 21C7.5 19.5 4 16 4 11V6Z" strokeWidth="1.8" strokeLinejoin="round" />,
+  video: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" strokeWidth="1.8" />
+      <path d="M10 9.2V14.8L14.8 12L10 9.2Z" strokeWidth="1.6" strokeLinejoin="round" />
+    </>
+  ),
 }
 
 function PillIcon({ icon }) {
