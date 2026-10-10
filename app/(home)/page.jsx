@@ -9,33 +9,12 @@ import CasosExito from "../../components/casos-exito";
 import EquipoProfesional from "../../components/equipo-profesional";
 import BecaAsesorate from "../../components/becaAsesorate";
 import EmpresasPartners from "../../components/empresasParteners";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import DynamicCursosEspecializacion from "./_components/cursos-especializacion-dynamic";
 import Ventajas from "./_components/ventajas";
 import Faq from "@/components/ui/faq";
 import Sedes from "@/components/ui/sedes";
 import Sede from "@/models/Sede";
 
-const DynamicCursosEspecializacion = dynamic(() => import("./_components/cursos-especializacion"), {
-  ssr: false,
-  loading: () => (
-    <div className="text-white pt-[15%] lg:pt-12 container text-center bg-black h-[400px]">
-      <h3 className="text-4xl font-bold text-idaclass3">CURSOS ESPECIALIZADOS</h3>
-
-      <ul className="my-2 list-disc list-inside">
-        <li>Estudia a tu ritmo </li>
-        <li>Expertos internacionales </li>
-        <li>Elije tu area de especialización</li>
-      </ul>
-      <Link href={"/cursos-especializados"}>
-        <Button variants="lg" className="mt-4 rounded-lg">
-          Ver todos los cursos
-        </Button>
-      </Link>
-    </div>
-  ),
-});
 export default async function Home() {
  
 

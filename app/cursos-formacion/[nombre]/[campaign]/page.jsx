@@ -15,7 +15,8 @@ import { getCursoFormacionFromDB, getOtrosCursosFromacionFromDB } from "@/app/ac
 import getCountryCodeFromIP from "@/lib/utils";
 import CursoHeader from "@/components/cursos/CursosHeader";
 
-const CursoPage = async ({ params }) => {
+const CursoPage = async props => {
+  const params = await props.params;
   const pais = await getCountryCodeFromIP();
   console.log(pais.country);
   const nombreParseado = decodeURI(params.nombre);
