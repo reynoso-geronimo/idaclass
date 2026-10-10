@@ -7,7 +7,8 @@ export function generateStaticParams() {
   return Object.keys(EVENTOS).map((slug) => ({ slug }))
 }
 
-export function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const config = getEvento(params.slug)
   if (!config?.meta) return {}
   return {
@@ -17,7 +18,8 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function EventoPage({ params }) {
+export default async function EventoPage(props) {
+  const params = await props.params;
   const config = getEvento(params.slug)
   if (!config) notFound()
   return <LandingEvento config={config} />

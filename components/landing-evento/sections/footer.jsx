@@ -47,7 +47,12 @@ export default function Footer({
   return (
     <footer className="border-t border-le-line bg-le-bg py-11">
       <Container>
-        <div className="mb-9 grid gap-8 border-b border-le-line pb-9 md:grid-cols-[1.2fr_1fr_auto] md:gap-10">
+        {/* Sin `contact` quedan dos columnas, así los enlaces llegan al borde derecho. */}
+        <div
+          className={`mb-9 grid gap-8 border-b border-le-line pb-9 ${
+            hasContent(contact) ? 'md:grid-cols-[1.2fr_1fr_auto]' : 'md:grid-cols-[1fr_auto]'
+          } md:gap-10`}
+        >
           {/* Marca + claim + fecha del evento */}
           <div>
             {hasContent(brand) && (
@@ -91,11 +96,20 @@ export default function Footer({
             )}
             {hasContent(links) && (
               <nav className="flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-le-muted md:justify-end">
-                {links.map((l, i) => (
-                  <a key={i} href={l.href} className="transition hover:text-le-accent">
-                    {l.label}
-                  </a>
-                ))}
+                {links.map((l, i) => {
+                  // Links externos (redes, canales) abren en otra pestaña para no sacar a la gente de la landing.
+                  const external = /^https?:\/\//.test(l.href || '')
+                  return (
+                    <a
+                      key={i}
+                      href={l.href}
+                      className="transition hover:text-le-accent"
+                      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    >
+                      {l.label}
+                    </a>
+                  )
+                })}
               </nav>
             )}
           </div>

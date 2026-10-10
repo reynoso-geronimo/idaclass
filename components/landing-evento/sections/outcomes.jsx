@@ -2,15 +2,15 @@ import { Container, SectionHead } from '../lib/primitives'
 import { Reveal } from '../lib/reveal'
 import { renderRich, hasContent } from '../lib/rich-text'
 
-/** Grilla de "pilares" / lo que te llevás. `bonus` es un puente opcional al pie. */
-export default function Outcomes({ eyebrow, title, cards, bonus }) {
+/** Grilla de "pilares" / lo que te llevás. `intro` va bajo el título; `bonus` es un puente opcional al pie. */
+export default function Outcomes({ eyebrow, title, intro, cards, bonus }) {
   if (!hasContent(cards)) return null
 
   return (
     <section id="logras" className="border-y border-le-line bg-le-graphite py-20 md:py-24">
       <Container>
         <Reveal>
-          <SectionHead eyebrow={eyebrow} title={title} center />
+          <SectionHead eyebrow={eyebrow} title={title} intro={intro} center />
         </Reveal>
 
         <Reveal className="grid gap-4 md:grid-cols-2">

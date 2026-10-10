@@ -3,9 +3,14 @@
   "configurations": [
     {
       "name": "idaclass-dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "runtimeExecutable": "C:\\Users\\geron\\AppData\\Roaming\\fnm\\aliases\\default\\node.exe",
+      "runtimeArgs": [
+        "node_modules/next/dist/bin/next",
+        "dev",
+        "-p",
+        "3002"
+      ],
+      "port": 3002
     }
   ]
 }

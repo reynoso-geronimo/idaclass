@@ -31,8 +31,9 @@ import { getCursosFormacionFromDB, getCursosFromDB } from "@/app/actions";
 export default async function RootLayout({ children}) {
   const cursosFormacion = await getCursosFormacionFromDB()
   const cursosEspecializacion = await  getCursosFromDB()
+  // data-scroll-behavior: Next.js 16 ya no anula `scroll-behavior: smooth` al navegar; este atributo conserva el comportamiento anterior.
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-20">
+    <html lang="en" className="scroll-smooth scroll-pt-20" data-scroll-behavior="smooth">
       <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

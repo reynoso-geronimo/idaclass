@@ -2,6 +2,7 @@ import { hipertrofiaConfig } from './hipertrofia'
 import { suplementacionConfig } from './suplementacion'
 import { hyroxAdultosMayoresConfig } from './hyrox-adultos-mayores'
 import { embarazoActivoConfig } from './embarazo-activo'
+import { fitnessNegocioStreamConfig } from './fitness-negocio-stream'
 
 /**
  * Registro de eventos. Agregá una landing nueva creando su config y sumándola acá:
@@ -14,6 +15,7 @@ export const EVENTOS = {
   suplementacion: suplementacionConfig,
   'hyrox-adultos-mayores': hyroxAdultosMayoresConfig,
   'embarazo-activo': embarazoActivoConfig,
+  'fitness-negocio-stream': fitnessNegocioStreamConfig,
 }
 
 export function getEvento(slug) {

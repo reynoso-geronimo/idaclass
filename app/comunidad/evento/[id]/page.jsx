@@ -13,7 +13,8 @@ import CampaignForm from "@/app/v2/components/campaignForm";
 import { redirect } from "next/navigation";
 export const revalidate = 360;
 
-const page = async ({ params }) => {
+const page = async props => {
+  const params = await props.params;
   if (params.id === '9') {
     redirect('/comunidad/Transforma-Tu-Pasion-en-Profesion-de-Impacto');
   }

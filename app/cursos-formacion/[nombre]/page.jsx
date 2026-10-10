@@ -19,7 +19,8 @@ import { Sede } from "@/models/assosiations";
 import { Horario } from "@/models/assosiations";
 import { CursosFormacion } from "@/models/assosiations";
 
-const CursoPage = async ({ params }) => {
+const CursoPage = async props => {
+  const params = await props.params;
   const pais = await getCountryCodeFromIP();
   console.log(pais.country);
   const nombreParseado = decodeURI(params.nombre);

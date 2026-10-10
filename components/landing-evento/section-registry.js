@@ -5,12 +5,15 @@ import Stats from './sections/stats'
 import Problem from './sections/problem'
 import Video from './sections/video'
 import Outcomes from './sections/outcomes'
+import Audience from './sections/audience'
 import Speaker from './sections/speaker'
+import Hosts from './sections/hosts'
 import Agenda from './sections/agenda'
 import Testimonials from './sections/testimonials'
 import Urgency from './sections/urgency'
 import RegisterForm from './sections/register-form'
 import Faq from './sections/faq'
+import Closing from './sections/closing'
 import Footer from './sections/footer'
 import StickyCta from './sections/sticky-cta'
 
@@ -28,12 +31,15 @@ export const SECTION_REGISTRY = {
   problem: Problem,
   video: Video,
   outcomes: Outcomes,
+  audience: Audience,
   speaker: Speaker,
+  hosts: Hosts,
   agenda: Agenda,
   testimonials: Testimonials,
   urgency: Urgency,
   register: RegisterForm,
   faq: Faq,
+  closing: Closing,
   footer: Footer,
   'sticky-cta': StickyCta,
 }

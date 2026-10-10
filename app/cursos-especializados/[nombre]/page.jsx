@@ -13,7 +13,8 @@ import SumateComunidad from "./_components/sumateComunidad";
 import { getCursoFromDB, getCursosPorCategoriaFromDB } from "@/app/actions";
 import CursoHeader from "@/components/cursos/CursosHeader";
 
-const CursoPage = async ({ params }) => {
+const CursoPage = async props => {
+  const params = await props.params;
   const nombreParseado = decodeURI(params.nombre);
 
   const curso = await getCursoFromDB(nombreParseado);
