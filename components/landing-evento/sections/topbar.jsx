@@ -5,11 +5,22 @@ import { useCountdown } from '../lib/use-countdown'
 import { Container, CtaButton } from '../lib/primitives'
 import { hasContent } from '../lib/rich-text'
 
-/** Logotipo textual "Ida<Class> Academy" o imagen si `logo.src`. */
+/** Logotipo textual "Ida<Class> Academy" o imagen si `logo.src` (alto en px con `logo.height`, 28 por defecto). */
 function Logo({ logo }) {
   if (!logo) return null
   if (logo.src) {
-    return <Image src={logo.src} alt={logo.alt || 'Logo'} width={140} height={28} unoptimized className="h-7 w-auto" />
+    const height = logo.height || 28
+    return (
+      <Image
+        src={logo.src}
+        alt={logo.alt || 'Logo'}
+        width={140}
+        height={height}
+        unoptimized
+        className="w-auto"
+        style={{ height }}
+      />
+    )
   }
   return (
     <span className="font-barlow-c text-[17px] font-bold tracking-tight text-le-fg">
