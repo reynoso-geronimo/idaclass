@@ -46,10 +46,15 @@ export const fitnessNegocioStreamConfig = {
   sections: [
     {
       type: 'topbar',
-      // Logo nuevo en versión para fondo oscuro: el mismo PNG con "Academy" en blanco (el
-      // original lo trae en azul oscuro y sobre esta barra no se leía). Va como imagen y no
-      // como logotipo de texto porque el de texto pinta "Class" con el color de acento.
-      logo: { src: '/landings/logo-idaclass-academy-fondo-oscuro.png', alt: 'IdaClass Academy' },
+      // Logo del stream (STREAM · Fitness + Negocios) en versión para fondo oscuro: el
+      // original trae el texto en azul marino sobre blanco y en esta barra no se leía, así
+      // que va con fondo transparente y el texto en blanco. Sin la línea "Powered by", que
+      // a este tamaño no se lee. Más alto que el default (28px) para que "STREAM" se lea.
+      logo: {
+        src: '/landings/logo-fitness-negocios-stream-fondo-oscuro.png',
+        alt: 'Stream Fitness + Negocios',
+        height: 40,
+      },
       series: 'Evento online gratis · 28 de octubre · 14:30 hs (ARG)', // FECHA
       cta: { label: 'Reservar mi lugar' },
     },
