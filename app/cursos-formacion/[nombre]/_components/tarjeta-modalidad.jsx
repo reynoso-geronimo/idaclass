@@ -2,13 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import getCountryCodeFromIP, { calcularPreciosCurso } from "@/lib/utils";
+import getCountryCodeFromIP, { avisoInscripcion, calcularPreciosCurso } from "@/lib/utils";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
   const { precio, precio_presencial, precio_usd, descuento, cuotas } = curso;
+  // Si Operaciones cargó un aviso en Strapi para esta modalidad, la inscripción está cerrada.
+  const aviso = avisoInscripcion(curso, modalidad);
   const [countryCode, setCountryCode] = useState(null);
   useEffect(() => {
     async function fetchCountryCode() {
@@ -111,11 +113,21 @@ const TarjetaModalidad = ({ modalidad, nombre, tipo, curso }) => {
           </p>
         </CardContent>
         <CardFooter className="flex max-xl:flex-col gap-2">
-          <Button size="lg" className={`w-full rounded-2xl ${modalidad !== "ONLINE" && "xl:w-1/2"}`} asChild>
-            <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
-            {/*  <Link href="https://wa.me/+5491152594355">INSCRIBIRME AHORA</Link> */}
-          </Button>
-          {modalidad !== "ONLINE" && (
+          {aviso ? (
+            <Button
+              size="lg"
+              disabled
+              className="w-full h-auto py-3 rounded-2xl whitespace-normal text-center uppercase bg-neutral-500 text-white disabled:opacity-100"
+            >
+              {aviso}
+            </Button>
+          ) : (
+            <Button size="lg" className={`w-full rounded-2xl ${modalidad !== "ONLINE" && "xl:w-1/2"}`} asChild>
+              <Link href={`/checkout?${queryParams}`}>INSCRIBIRME AHORA</Link>
+              {/*  <Link href="https://wa.me/+5491152594355">INSCRIBIRME AHORA</Link> */}
+            </Button>
+          )}
+          {modalidad !== "ONLINE" && !aviso && (
             <Button
               size="lg"
               variant="outline"

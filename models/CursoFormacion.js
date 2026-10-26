@@ -33,6 +33,13 @@ const CursosFormacion = sequelize.define("cursos_formacions", {
     precio_usd: {
         type: DataTypes.INTEGER,
     },
+    // Avisos de inscripción cerrada, cargados desde Strapi (avisoInscripcionOnline / avisoInscripcionPresencial).
+    aviso_inscripcion_online: {
+        type: DataTypes.STRING,
+    },
+    aviso_inscripcion_presencial: {
+        type: DataTypes.STRING,
+    },
     precio_bo: {
         type: DataTypes.INTEGER,
     },
