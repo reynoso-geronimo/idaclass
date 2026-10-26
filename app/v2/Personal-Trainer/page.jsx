@@ -14,6 +14,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import CasosExito from "@/components/casos-exito";
 import CursosContenido from "../components/CursosContenido";
 import { getCursoFormacionFromDB } from "@/app/actions";
+import { avisoInscripcion } from "@/lib/utils";
 import TituloSeccion from "@/components/ui/titulo-seccion";
 import Header from "../components/Header";
 import Link from "next/link";
@@ -338,6 +339,7 @@ const page = async () => {
             modalidad={"PRESENCIAL"}
             nombre={"Personal Trainer"}
             tipo={"CURSO DE FORMACION"}
+            inscripcionCerrada={Boolean(avisoInscripcion(curso, "PRESENCIAL"))}
           />
         </>
       )}

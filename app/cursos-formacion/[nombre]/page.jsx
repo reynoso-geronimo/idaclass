@@ -12,7 +12,7 @@ import CursoFormacionRequisitos from "./_components/cursoFormacionRequisitos";
 import CursoFormacionModalidades from "./_components/cursoFormacionModalidades";
 import CursoFormacionOtrosCursos from "./_components/cursoFormacionOtrosCursos";
 import { getCursoFormacionFromDB, getOtrosCursosFromacionFromDB } from "@/app/actions";
-import getCountryCodeFromIP from "@/lib/utils";
+import getCountryCodeFromIP, { avisoInscripcion } from "@/lib/utils";
 import CursoHeader from "@/components/cursos/CursosHeader";
 import Sedes from "@/components/ui/sedes";
 import { Sede } from "@/models/assosiations";
@@ -128,6 +128,7 @@ const CursoPage = async props => {
             modalidad={"PRESENCIAL"}
             nombre={nombre}
             tipo={"CURSO DE FORMACION"}
+            inscripcionCerrada={Boolean(avisoInscripcion(curso, "PRESENCIAL"))}
           />
         </>
       )}

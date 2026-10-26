@@ -11,6 +11,8 @@ export default function Sedes({
   modalidad,
   nombre,
   tipo,
+  // true cuando la inscripción presencial está cerrada: se ocultan los botones "Elegir sede".
+  inscripcionCerrada = false,
 }) {
   // Group locations by zona
   const groupedLocations = locations.reduce((acc, location) => {
@@ -71,11 +73,13 @@ export default function Sedes({
                           ))}
                       </div>
 
-                      <div className="flex items-center justify-end">
-                        <Button className="rounded bg-green-500 hover:bg-green-400">
-                          <Link href={`/checkout?${queryParams}`}>Elegir sede</Link>
-                        </Button>
-                      </div>
+                      {!inscripcionCerrada && (
+                        <div className="flex items-center justify-end">
+                          <Button className="rounded bg-green-500 hover:bg-green-400">
+                            <Link href={`/checkout?${queryParams}`}>Elegir sede</Link>
+                          </Button>
+                        </div>
+                      )}
                     </div>
                     <div className="w-full md:hidden shrink-0">
                       {showHours &&
