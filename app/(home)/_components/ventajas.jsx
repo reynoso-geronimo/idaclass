@@ -99,81 +99,34 @@ const Ventajas = () => {
 
         {/* .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */}
 
+        {/* Sin el bloque de modalidades, el texto ocupa la columna libre y la imagen va al costado (zigzag con el artículo de arriba). */}
         <article
           ref={ref2}
-          className={`relative flex flex-col-reverse lg:flex-row even:lg:flex-row-reverse items-center justify-evenly gap-4 transition-all duration-1000 ${
+          className={`w-full relative flex flex-col-reverse lg:flex-row items-center justify-evenly gap-4 transition-all duration-1000 ${
             inView2 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-full lg:w-7/8 text-center">
-            <h3 className="text-2xl lg:text-3xl lg:text-right font-extrabold text-idaclass tracking-tight px-2">
+          <div className="w-full lg:w-1/2 relative overflow-hidden lg:pl-8">
+            <h3 className="text-2xl text-center lg:text-left lg:text-3xl font-extrabold text-idaclass tracking-tight pb-2">
               Conéctate con oportunidades
             </h3>
-            <div className="w-full relative aspect-video">
-              <div className="max-lg:hidden absolute top-0 lg:top-0 xl:top-4 right-0 w-[45%] h-[30%] text-black z-10">
-                <p className="text-lg text-left leading-tight">
-                  Nuestra formación integral te permitirá captar clientes, generar ingresos y construir una sólida
-                  reputación, mientras te destacas como profesional.
-                </p>
-              </div>
-              <Image
-                src={`/home/IdaClass Web Img 4.jpg`}
-                alt=""
-                fill
-                sizes="(min-width: 808px) 50vw, 100vw"
-                style={{
-                  objectFit: "cover", // cover, contain, none
-                }}
-                className="-z-10 rounded-2xl"
-              />
-            </div>
-            <div className="lg:hidden my-4 container max-w-2xl">
-              <p className="text-lg">
-                Nos aseguramos de brindarte una formación integral, para que desarrolles todas las habilidades
-                necesarias para lograr tus metas profesionales con éxito.
-              </p>
-            </div>
-          </div>
-          <div className="pb-12 lg:w-4/5 relative overflow-hidden">
-            <h3 className="text-left lg:text-left text-2xl lg:text-3xl font-extrabold text-idaclass tracking-tight pb-2">
-              Elige la modalidad que más te conviene
-            </h3>
-            <p className="text-pretty lg:text-lg ">
-              <span className="font-semibold">Presencial en Gimnasios:</span> Aprende en vivo en los mejores gimnasios
-              de la red, con acceso directo a equipos, entrenamientos reales y el apoyo de nuestro staff de Trainers
-              Educativos.
-              <br />
-              <br />
-              <span className="font-semibold"> Online con Clases en Vivo:</span> Estudia desde cualquier lugar y
-              dispositivo, accediendo a nuestra plataforma multimodal e interactiva con videos, resúmenes y
-              autoevaluaciones.
+            <p className="max-lg:hidden text-pretty lg:text-lg text-left">
+              Nuestra formación integral te permitirá captar clientes, generar ingresos y construir una sólida
+              reputación, mientras te destacas como profesional.
             </p>
-            {/* <ul className="flex flex-col py-2 text-sm sm:text-base">
-              <li className="flex">
-                <Dot fill="black" /> Practica real con alumnos
-              </li>
-              <li className="flex">
-                <Dot fill="black" />
-                Trabajos en equipo
-              </li>
-              <li className="flex">
-                <Dot fill="black" />
-                Desarrolla tus proyectos
-              </li>
-            </ul> */}
-            {/*          <div className="flex gap-2 container justify-center pb-4">
-              {partners.map((partner, index) => (
-                <Image
-                  key={index}
-                  src={`/empresasPartners${partner.src}`}
-                  width={190}
-                  height={190}
-                  alt="logo"
-                  className="w-1/2 rounded-xl object-contain object-left aspect-video p-2 bg-white"
-                />
-              ))}
-            </div> */}
-            <Image src={linea} alt="linea" className="lg:hidden absolute -right-44 -bottom-4 scale-150" />
+            <p className="lg:hidden text-pretty text-lg text-center max-w-2xl mx-auto">
+              Nos aseguramos de brindarte una formación integral, para que desarrolles todas las habilidades necesarias
+              para lograr tus metas profesionales con éxito.
+            </p>
+          </div>
+          <div className="w-full lg:w-1/2 relative aspect-video">
+            <Image
+              src={`/home/IdaClass Web Img 4.jpg`}
+              alt="SkillClass: 4 cursos extras de marketing, ventas, comunicación y liderazgo"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-contain"
+            />
           </div>
         </article>
 

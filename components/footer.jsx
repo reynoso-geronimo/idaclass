@@ -6,6 +6,12 @@ import { Separator } from "./ui/separator";
 import { FacebookIcon, InstagramIcon, YoutubeIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 
+const redesSociales = [
+  { nombre: "Facebook", href: "https://www.facebook.com/share/1CLVuyMB4h/?mibextid=wwXIfr", Icono: FacebookIcon },
+  { nombre: "Instagram", href: "https://www.instagram.com/idaclass_oficial/", Icono: InstagramIcon },
+  { nombre: "YouTube", href: "https://www.youtube.com/@IdaClass", Icono: YoutubeIcon },
+];
+
 const Footer = () => {
   const pathname = decodeURIComponent(usePathname());
   if (pathname.includes("v2") || pathname.includes("v3") || pathname.includes("landingfitnessnegocios") || pathname.includes("masterclass") || pathname.includes("eventos")) return null;
@@ -39,9 +45,18 @@ const Footer = () => {
       <section className="w-full mt-6">
         <Separator className="h-[1px]  bg-gray-500" />
         <div className="flex justify-center gap-4 my-4">
-          <FacebookIcon />
-          <InstagramIcon />
-          <YoutubeIcon />
+          {redesSociales.map(({ nombre, href, Icono }) => (
+            <a
+              key={nombre}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`IdaClass en ${nombre}`}
+              className="transition-colors hover:text-idaclass3"
+            >
+              <Icono aria-hidden="true" />
+            </a>
+          ))}
         </div>
         <p className="text-xs">Idaclass Academy© Todos los derechos reservados</p>
       </section>
