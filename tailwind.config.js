@@ -65,6 +65,16 @@ module.exports = {
         // Landing de eventos reutilizable ("landing-evento"). Temeable por evento
         // sobrescribiendo las CSS vars --evt-* en el wrapper raíz de <LandingEvento>.
         // Los valores fuente viven en globals.css :root.
+        // Landing "Sede Oficial IdaClass 2027" (app/sedes-oficiales), colores del mockup.
+        so: {
+          navy: "#022637",
+          cyan: "#12b9ec",
+          "cyan-dark": "#079bc8",
+          ink: "#102a38",
+          muted: "#60727d",
+          line: "#dce8ed",
+          pale: "#f3f8fa",
+        },
         le: {
           bg: "var(--evt-bg)",
           graphite: "var(--evt-graphite)",
@@ -88,6 +98,8 @@ module.exports = {
       fontFamily: {
         barlow: ["var(--font-barlow)", "sans-serif"],
         "barlow-c": ["var(--font-barlow-condensed)", "sans-serif"],
+        // --font-montserrat lo define next/font en app/sedes-oficiales/page.jsx.
+        montserrat: ["Gotham", "var(--font-montserrat)", "Montserrat", "Arial", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
