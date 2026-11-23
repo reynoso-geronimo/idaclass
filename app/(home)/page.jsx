@@ -1,13 +1,15 @@
 import Hero from "./_components/hero";
 import CursosFormacion from "./_components/cursos-formacion";
-import Certificacion from "@/app/v3/Personal-Trainer/components/certificacion";
-import RedSedes from "./_components/red-sedes";
+import Certificacion from "./_components/certificacion";
+import PartnersEducativos from "@/components/partnersEducativos";
 
 import Soluciones from "./_components/soluciones";
 import Intro from "./_components/intro";
 import CasosExito from "../../components/casos-exito";
 import EquipoProfesional from "../../components/equipo-profesional";
-import ProgramaPersonalTrainer from "./_components/programa-personal-trainer";
+import BecaAsesorate from "../../components/becaAsesorate";
+import EmpresasPartners from "../../components/empresasParteners";
+import DynamicCursosEspecializacion from "./_components/cursos-especializacion-dynamic";
 import Ventajas from "./_components/ventajas";
 import Faq from "@/components/ui/faq";
 import Sedes from "@/components/ui/sedes";
@@ -19,19 +21,15 @@ export default async function Home() {
   return (
     <main className="flex flex-col overflow-hidden">
       <Hero />
-      <RedSedes />
+      <PartnersEducativos />
       <Intro />
       <Ventajas />
-      {/* Los 4 desplegables van donde estaba "Cursos de formación", que pasa a ocupar su lugar anterior. */}
-      <Soluciones />
-      {/* "Cursos de formación" oculto por ahora a pedido de Operaciones (2026-11-12). Al volver a mostrarlo,
-          el botón del hero puede volver a apuntar a su ancla #Cursos. */}
-      {/* <CursosFormacion /> */}
+      <CursosFormacion />
       {/* <Banderas/> */}
-      <ProgramaPersonalTrainer />
+      <Soluciones />
+      <DynamicCursosEspecializacion />
 
-      {/* Mismo bloque de certificados que la landing de Personal Trainer; el botón lleva a su formulario. */}
-      <Certificacion ctaHref="/v3/Personal-Trainer#form" className="max-lg:pt-36" />
+      <Certificacion />
 
       <EquipoProfesional
         titulo="Conoce al equipo de"
@@ -41,6 +39,9 @@ export default async function Home() {
       />
 
       <CasosExito />
+
+      <BecaAsesorate />
+      <EmpresasPartners />
 
       <Faq preguntas={preguntas} />
     </main>

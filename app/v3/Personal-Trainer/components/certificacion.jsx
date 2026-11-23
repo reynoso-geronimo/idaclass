@@ -3,11 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
-// También se usa en el home, donde el botón apunta al formulario de esta landing (ctaHref)
-// y className le da más aire arriba en mobile, porque ahí el certificado sobresale de la tarjeta.
-export default function Certificacion({ ctaHref = "#form", className }) {
+export default function Certificacion() {
   const benefits = [
     "Certificación IdaClass con autenticación QR.",
     "Certificación de extensión universitaria.",
@@ -21,7 +18,7 @@ export default function Certificacion({ ctaHref = "#form", className }) {
   ];
 
   return (
-    <div className={cn("px-6 py-16", className)}>
+    <div className="px-6 py-16">
       <div className="mx-auto max-w-7xl">
         <div className="p-8 bg-gradient-to-br from-[#22B0E633] to-[#22B0E633]/20 rounded-3xl lg:p-12">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
@@ -76,7 +73,7 @@ export default function Certificacion({ ctaHref = "#form", className }) {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <Link href={ctaHref}>
+                <Link href="#form">
                 <Button
                   size="lg"
                   className="px-8 py-4 text-lg text-black font-semibold transition-all duration-300 rounded-full shadow-xl bg-gradient-to-r from-[#22B0E6] to-[#3A5DAE] hover:shadow-2xl hover:scale-105"
